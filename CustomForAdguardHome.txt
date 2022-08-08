@@ -1,0 +1,13 @@
+!
+! LINE廣告阻擋
+||a.line.me^
+!
+! 特別阻擋Gitkraken更新
+127.0.0.1 release.gitkraken.com
+!
+! Dcard廣告
+||bilanx.dcard.tw^
+!
+! 避免Youtube歷史觀看不同步
+@@||s.youtube.com^
+@@||*.video-stats.l.google.com^
