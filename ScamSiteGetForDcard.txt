@@ -53,3 +53,10 @@
 ||80w19v.cn^
 #其他詐騙
 ||*gov.me^
+#Line 登入詐騙
+||pdpdsum.com^
+#加密貨幣詐騙
+||huayangs.net^
+||txnnezsf.com^
+#蝦皮詐騙 https://www.dcard.tw/f/buyonline/p/239616871
+||kajs32332.com^
