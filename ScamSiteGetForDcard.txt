@@ -1,0 +1,55 @@
+# 資料來自Dcard文章
+# 2022/08/13 1:00 Update
+# 想詐騙遊戲的網址
+||7wtv.com^
+||bhmtsff.com^
+#詐騙約會網站
+||wfamilygo.com^
+#詐騙防疫網址
+||*gov.xyz^
+||segov.tw^
+||*gov.com^
+||wsflggov.tw^
+||bhnaku.xyz^
+#詐騙旋轉拍賣 https://www.dcard.tw/f/buyonline/p/239656198
+||tw-carousel*.com^
+#詐騙蝦皮 https://www.dcard.tw/f/buyonline/p/239628821
+||shzpee-tw.com^
+#詐騙蝦皮
+||*xakcqzj.cn^
+||*.bar^
+||shopee-*.tw
+#詐騙賺錢網站 https://www.dcard.tw/f/mood/p/239453488
+||ebuy8899.com^
+#詐騙賺錢網站 https://www.dcard.tw/f/mood/p/239453488
+||*hotshop.com^
+#順億賣場 https://www.dcard.tw/f/mood/p/239453488
+||*-tw.shop^
+#瘋狂購 https://www.dcard.tw/f/mood/p/239453488
+||crazygostore-tw.com^
+#詐騙虛擬貨幣 https://www.dcard.tw/f/mood/p/239658656
+||bakkttw.com^
+#apple登入詐騙 https://www.dcard.tw/f/talk/p/239489528
+||qevbc.com^
+#超商詐騙 https://www.dcard.tw/f/persona_drmessage/p/239654358
+||cablebewilder.online^^
+#郵局詐騙 https://www.dcard.tw/f/talk/p/239664296
+||postchunghwa.com^
+#詐騙約會 https://www.dcard.tw/f/anti_fraud/p/239651272
+||lovedatetw.com^
+#詐騙中油 https://www.dcard.tw/f/mood/p/239670990
+||perchintimidation.fun^
+#問題網站
+||chartoo.com^
+#詐騙蝦皮,專屬大陸域名 https://www.dcard.tw/f/buyonline/p/239586106
+||*.icu^
+#詐騙信貸 https://www.dcard.tw/f/money/p/239532865
+||*.ayju.tw^
+#包裹詐騙
+||webspace.re^
+#身分詐騙 https://www.dcard.tw/f/life_in_europe/p/239469431
+||preview-domain.com^
+#長榮詐騙 https://www.dcard.tw/f/persona_mygopen/p/239645405
+||80w19v.cn^
+#其他詐騙
+||*gov.me^
