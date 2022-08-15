@@ -1,5 +1,5 @@
 # 資料來自Dcard文章
-# 2022/08/13 1:00 Update
+# 2022/08/15 21:00 Update
 # 想詐騙遊戲的網址
 ||7wtv.com^
 ||bhmtsff.com^
@@ -60,7 +60,17 @@
 ||txnnezsf.com^
 #蝦皮詐騙 https://www.dcard.tw/f/buyonline/p/239616871
 ||kajs32332.com^
-#購物詐騙 https://www.dcard.tw/f/buyonline/p/239681612?cid=B24EBBF7-3847-488E-BD37-375C35CA1DA5$important
+#購物詐騙 https://www.dcard.tw/f/buyonline/p/239681612?cid=B24EBBF7-3847-488E-BD37-375C35CA1DA5
 ||alsoall.com^
 #旋轉詐騙 https://www.dcard.tw/f/buyonline/p/239698401
 ||tw-carousell.tw^
+#賭博
+||gdf999.*^
+||fa888.tw^
+||wof888.blogspot.com^
+||hoin1799.com^
+||1768hi.com^
+||r83ihk.com^
+||weshare.hk^
+||weshare.org^
+||1711hy.com^
