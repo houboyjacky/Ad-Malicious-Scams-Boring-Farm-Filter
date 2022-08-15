@@ -1,11 +1,14 @@
-Content_Farm 內容農場  
+內容農場  
+台灣反詐騙   
   
 根據自身經驗來建立過濾  
   
 20220815 Update  
  == 移除Dcard無用阻擋  
  == 加入Dcard詐騙網址  
- == 
+ == 新增165與Dcard名單  
+ == 解放MOPTT與Twitter短連結無法使用  
+ == 重新排序名單與簡易化規則  
   
 20220813 Update  
  == 加入 Global-Anti-Scam-Org-全球反詐騙組織  
