@@ -1,5 +1,5 @@
-! 民眾通報假投資(博弈)詐騙網站 https://165.npa.gov.tw/#/article/news/555
-! 2022/08/16 22:00 Update
+! 民眾通報假投資(博弈)詐騙網站 https://165.npa.gov.tw
+! 2022/08/16 22:15 Update
 ||0204net.com^
 ||03107111.com^
 ||05566tyc.com^
@@ -268,7 +268,6 @@
 ||al-fykj.com^
 ||ali888999.com^
 ||alicfu.com^
-||aliyuncs.com^
 ||alksg.com^
 ||allh5.com^
 ||allianceex.cc^
@@ -339,7 +338,6 @@
 ||appdd.me^
 ||appdonw.net^
 ||appk56728.xyz^
-||apple.com^
 ||appleapp2.com^
 ||apppgem.com^
 ||apps00.net^
@@ -890,7 +888,6 @@
 ||coinx.live^
 ||cokr.cc^
 ||com.login^
-||com.tw^
 ||comepchome.com^
 ||commerceptt.com^
 ||companyghi.com^
