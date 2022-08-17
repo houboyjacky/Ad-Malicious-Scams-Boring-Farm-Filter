@@ -1,9 +1,4 @@
-!
-! LINE廣告阻擋
-||a.line.me^
-!
-! 特別阻擋Gitkraken更新
-127.0.0.1 release.gitkraken.com
+! 自訂允許清單
 !
 ! 避免Youtube歷史觀看不同步
 @@||s.youtube.com^
@@ -14,3 +9,4 @@
 !
 ! Twitter短連結無法使用
 @@||t.co^
+!

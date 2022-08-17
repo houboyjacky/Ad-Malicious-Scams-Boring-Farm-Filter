@@ -1,18 +1,13 @@
 # 資料來自Dcard文章
 # 2022/08/15 21:00 Update
-# 想詐騙遊戲的網址
-||7wtv.com^
-||bhmtsff.com^
-#詐騙約會網站
-||wfamilygo.com^
-#詐騙防疫網址
-||*gov.xyz^
-||segov.tw^
-||*gov.com^
-||wsflggov.tw^
+#詐騙封鎖 https://www.dcard.tw/f/persona_drmessage/p/239646609
+/[a-z0-9]+gov.tw/
+/[a-z0-9]+gov.xyz/
+/[a-z0-9]+gov.com/
+/[a-z0-9]+gov.me/
 ||bhnaku.xyz^
 #詐騙旋轉拍賣 https://www.dcard.tw/f/buyonline/p/239656198
-||tw-carousel*.com^
+/tw-carousel[a-z0-9]+.com/
 #詐騙蝦皮 https://www.dcard.tw/f/buyonline/p/239628821
 ||shzpee-tw.com^
 #詐騙蝦皮
@@ -32,7 +27,7 @@
 #apple登入詐騙 https://www.dcard.tw/f/talk/p/239489528
 ||qevbc.com^
 #超商詐騙 https://www.dcard.tw/f/persona_drmessage/p/239654358
-||cablebewilder.online^^
+||cablebewilder.online^
 #郵局詐騙 https://www.dcard.tw/f/talk/p/239664296
 ||postchunghwa.com^
 #詐騙約會 https://www.dcard.tw/f/anti_fraud/p/239651272
@@ -51,28 +46,13 @@
 ||preview-domain.com^
 #長榮詐騙 https://www.dcard.tw/f/persona_mygopen/p/239645405
 ||80w19v.cn^
-#其他詐騙
-||*gov.me^
-#Line 登入詐騙
-||pdpdsum.com^
-#加密貨幣詐騙
-||huayangs.net^
-||txnnezsf.com^
 #蝦皮詐騙 https://www.dcard.tw/f/buyonline/p/239616871
 ||kajs32332.com^
 #購物詐騙 https://www.dcard.tw/f/buyonline/p/239681612?cid=B24EBBF7-3847-488E-BD37-375C35CA1DA5
 ||alsoall.com^
 #旋轉詐騙 https://www.dcard.tw/f/buyonline/p/239698401
-||tw-carousell.tw^
-#賭博
-||gdf999.*^
-||fa888.tw^
-||wof888.blogspot.com^
-||hoin1799.com^
-||1768hi.com^
-||r83ihk.com^
-||weshare.hk^
-||weshare.org^
-||1711hy.com^
+/tw-carousel[a-z0-9]+.tw/
 #旋轉拍賣詐騙 https://www.dcard.tw/f/buyonline/p/239716333
 ||carousell.tw.cn^
+#郵局包裹詐騙 https://www.dcard.tw/f/talk/p/239664296
+||postchunghwa.com^
