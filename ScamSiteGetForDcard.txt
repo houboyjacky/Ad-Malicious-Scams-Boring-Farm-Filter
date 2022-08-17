@@ -28,8 +28,6 @@
 ||qevbc.com^
 #超商詐騙 https://www.dcard.tw/f/persona_drmessage/p/239654358
 ||cablebewilder.online^
-#郵局詐騙 https://www.dcard.tw/f/talk/p/239664296
-||postchunghwa.com^
 #詐騙約會 https://www.dcard.tw/f/anti_fraud/p/239651272
 ||lovedatetw.com^
 #詐騙中油 https://www.dcard.tw/f/mood/p/239670990
@@ -55,4 +53,20 @@
 #旋轉拍賣詐騙 https://www.dcard.tw/f/buyonline/p/239716333
 ||carousell.tw.cn^
 #郵局包裹詐騙 https://www.dcard.tw/f/talk/p/239664296
+/chung[-]?hwa[-]?[.]*.[.]*/
 ||postchunghwa.com^
+#兼職詐騙 https://www.dcard.tw/f/job/p/239716653
+||91baowu.com^
+#投資詐騙 https://www.dcard.tw/f/stock/p/239714070
+||stablesign.xyz^
+#交友詐騙 https://www.dcard.tw/f/rainbow/p/239710224
+||ismax.shop^
+#投資詐騙 https://www.dcard.tw/f/money/p/239709438
+||ebdlj.com^
+||ebcfinanaitw.com^
+#投資詐騙 https://www.dcard.tw/f/mood/p/239705352
+||intofuture01.com^
+# 汽車詐騙 https://www.dcard.tw/f/anti_fraud/p/239701552
+||ddb80.com^
+# 紓困補貼詐騙 https://www.dcard.tw/f/anti_fraud/p/239699738
+||weishenl.com
