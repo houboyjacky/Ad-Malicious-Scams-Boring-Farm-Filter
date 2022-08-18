@@ -1,13 +1,24 @@
 # 資料來自Dcard文章
 # 2022/08/15 21:00 Update
-#詐騙封鎖 https://www.dcard.tw/f/persona_drmessage/p/239646609
+#詐騙個資 https://www.dcard.tw/f/persona_drmessage/p/239646609
 /[a-z0-9]+gov.tw/
 /[a-z0-9]+gov.xyz/
 /[a-z0-9]+gov.com/
 /[a-z0-9]+gov.me/
 ||bhnaku.xyz^
-#詐騙旋轉拍賣 https://www.dcard.tw/f/buyonline/p/239656198
-/tw-carousel[a-z0-9]+.com/
+!
+! 旋轉詐騙一覽
+#旋轉詐騙 https://www.dcard.tw/f/buyonline/p/239656198
+/tw[-]?carousel[a-z0-9]+.com/
+/carousel[a-z0-9]+[-]?tw.com/
+#旋轉詐騙 https://www.dcard.tw/f/buyonline/p/239698401
+/tw[-]?carousel[a-z0-9]+.tw/
+#旋轉詐騙 https://www.dcard.tw/f/buyonline/p/239705847
+/tw[-]?carousel[a-z0-9]+.xyz/
+/carousel[a-z0-9]+[-]?tw.xyz/
+#旋轉拍賣詐騙 https://www.dcard.tw/f/buyonline/p/239716333
+||carousell.tw.cn^
+!
 #詐騙蝦皮 https://www.dcard.tw/f/buyonline/p/239628821
 ||shzpee-tw.com^
 #詐騙蝦皮
@@ -48,10 +59,6 @@
 ||kajs32332.com^
 #購物詐騙 https://www.dcard.tw/f/buyonline/p/239681612?cid=B24EBBF7-3847-488E-BD37-375C35CA1DA5
 ||alsoall.com^
-#旋轉詐騙 https://www.dcard.tw/f/buyonline/p/239698401
-/tw-carousel[a-z0-9]+.tw/
-#旋轉拍賣詐騙 https://www.dcard.tw/f/buyonline/p/239716333
-||carousell.tw.cn^
 #郵局包裹詐騙 https://www.dcard.tw/f/talk/p/239664296
 /chung[-]?hwa[-]?[.]*.[.]*/
 ||postchunghwa.com^
