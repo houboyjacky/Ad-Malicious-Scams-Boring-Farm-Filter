@@ -76,4 +76,11 @@
 # 汽車詐騙 https://www.dcard.tw/f/anti_fraud/p/239701552
 ||ddb80.com^
 # 紓困補貼詐騙 https://www.dcard.tw/f/anti_fraud/p/239699738
-||weishenl.com
+||weishenl.com^
+# 詐騙FB帳號密碼搶奪粉絲團 https://www.dcard.tw/f/persona_drmessage/p/239555838
+||ldp.page^
+/reactivate-page-[a-z0-9]+.click/
+/pageverification[a-z0-9]+.co.vu/
+||pagesinforverifications.*
+/successfull-[a-z0-9]+.online/
+/metoocofstimrgpaged-[a-z0-9]+.online/
