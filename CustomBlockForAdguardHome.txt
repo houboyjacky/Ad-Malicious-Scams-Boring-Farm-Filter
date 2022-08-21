@@ -39,7 +39,7 @@
 ! 廣告來源(與Line Today綁定，暫不考慮啟用)
 !||obs.line-scdn.net^
 ! 廣告來源(源自於obs.line-scdn.net DNS回應，讓Line Today可運作，但官方帳號按鈕失效，暫不考慮開放所有人啟用)
-!||cac-obs.line-scdn.net.line-zero.akadns.net^$ctag=user_admin
+||cac-obs.line-scdn.net.line-zero.akadns.net^$ctag=user_admin
 ! 廣告來源(針對桌面APP，暫不有問題)
 ||obs.line-apps.com^
 ! LINE 不確定 故不啟用
