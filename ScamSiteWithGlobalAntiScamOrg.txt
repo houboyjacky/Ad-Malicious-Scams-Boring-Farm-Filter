@@ -105,7 +105,7 @@
 ||2gclk2.cn^
 ||2kh2k.cn^
 ||2m9oxf6h.com^
-||2okextw.*^
+/2okextw.[a-z]+/
 ||3001553.com^
 ||302316.com^
 ||30lv.xyz^
@@ -237,14 +237,14 @@
 ||7892109.com^
 ||7895652.com^
 ||7898265.com^
-||78ex*.*^
+/78ex*.[a-z]+/
 ||78fc0uj.com^
 ||792.com^
 ||793715.com^
 ||793716.com^
 ||793717.com^
 ||7c9911t38.com^
-||7ebit*.*^
+/7ebit*.[a-z]+/
 ||7j777.net^
 ||7kzyw.cn^
 ||7oheye.cn^
@@ -333,7 +333,7 @@
 ||9k9k.com^
 ||9t70j8p7.xyz^
 ||9x2e.xyz^
-||a16z*.*^
+/a16z*.[a-z]+/
 ||a1s2d1a231z.xyz^
 ||a3gamesbar.net^
 ||a4bfgh.link^
@@ -344,7 +344,7 @@
 ||aaa1788.com^
 ||aaaa1gy6hw-banyoudao.com^
 ||aa-diantou.com^
-||aaex.*^
+/aaex.[a-z]+/
 ||aaexchain.com^
 ||aafg8.com^
 ||aag7a.com^
@@ -359,7 +359,7 @@
 ||aava5defi.xyz^
 ||aavadefi.com^
 ||aava-migning.xyz^
-||aave-*.*^
+/aave-*.[a-z]+/
 ||aave3.live^
 ||aavedefi.live^
 ||aavedefi.org^
@@ -519,7 +519,7 @@
 ||airways-courier.com^
 ||airwaysdeliverycompany.com^
 ||aishang33.com^
-||aitechstock.*^
+/aitechstock.[a-z]+/
 ||aitoapp.com^
 ||aiubs.net^
 ||aiyoubet1435.com^
@@ -629,7 +629,7 @@
 ||ammmine.org^
 ||ammomobility.com^
 ||ammprotocol.net^
-||ammuni.*^
+/ammuni.[a-z]+/
 ||ammuplan.com^
 ||ams1659.xyz^
 ||ams198.net^
@@ -663,8 +663,8 @@
 ||anderfix.com^
 ||anderfx.com^
 ||anding9.com^
-||aner.platforms.*^
-||anewfujing.newfujing.com^
+/aner.platforms.[a-z]+/
+||newfujing.com^
 ||anewwayoffriday.com^
 ||angel0857.net^
 ||ang-exchange.com^
@@ -1499,7 +1499,7 @@
 ||bitsovip.com^
 ||bitsovp.com^
 ||bitssd.net^
-||bitstamp.*^
+/bitstamp.[a-z]+/
 ||bitstamp-btc.com^
 ||bitstampcoinwins.com^
 ||bitstampnd.info^
@@ -2238,7 +2238,7 @@
 ||classroome*.xyz^
 ||clearingfalcon.com^
 ||clearsky.cyou^
-||clear-skys.*^
+/clear-skys.[a-z]+/
 ||clf99.net^
 ||clicktrades.com^
 ||clikeyou.com^
@@ -2866,7 +2866,7 @@
 ||dapp-airdrop.com^
 ||dappas.me^
 ||dappeplus.com^
-||dapp-eth.*^
+/dapp-eth.[a-z]+/
 ||dappeth.info^
 ||dapp-eth.pw^
 ||dapps-eth.net^
@@ -2964,13 +2964,8 @@
 ||defi2.fun^
 ||defi20.ai^
 ||defi-aavev3.info^
-||defi-ai.*^
-||defi-cloud.cloud^
-||defi-cloud.co^
-||defi-cloud.live^
-||defi-cloud.org^
-||defi-cloud.vip^
-||deficloud182.xyz^
+/defi-ai.[a-z]+/
+/defi[-]?cloud.[a-z0-9]+/
 ||defi-coin.cc^
 ||defiearn-vip.com^
 ||defi-eth.co^
@@ -2979,13 +2974,10 @@
 ||defi-farmer.info^
 ||defifinanceo.com^
 ||defiflexpool.com^
-||defiflexpool-vip-a.com^
-||defiflexpool-vip-b.com^
-||defiflexpool-vip-c.com^
-||defiflexpool-vip-s.com^
+/defiflexpool-vip-[a-z].com/
 ||defiguid.com^
 ||defiing.net^
-||defi-lp.*^
+/defi-lp.[a-z]+/
 ||defi-mining.cc^
 ||defimining-eth.vip^
 ||defimoney.info^
@@ -4833,7 +4825,7 @@
 ||h5.pfidcfly.cc^
 ||h5.pfidcret.com^
 ||h5.pnccolo.ren^
-||h5.pncinc.*^
+/h5.pncinc.[a-z]+/
 ||h5.ptelnc.live^
 ||h5.sqg.life^
 ||h5.square9*.xyz^
@@ -7836,7 +7828,7 @@
 ||ronbink.com^
 ||ronexcoin.com^
 ||ronghejt668.com^
-||ronghui*.*^
+/ronghui*.[a-z]+/
 ||rongjiusc.cn^
 ||rongxin888.cc^
 ||roomeel.com^
@@ -7934,7 +7926,7 @@
 ||sandboxbit.com^
 ||sandwind.xyz^
 ||sandwindax.com^
-||sandwindfx.*^
+/sandwindfx.[a-z]+/
 ||sanliglobalsl.com^
 ||sanliglow.com^
 ||sanqiing.com^
@@ -8391,7 +8383,7 @@
 ||suntoncapital.com^
 ||suntonfx.work^
 ||suntonfx.world^
-||suntonth.*^
+/suntonth.[a-z]+/
 ||suntradeinvestments.com^
 ||supaytw.com^
 ||supaytws.com^
@@ -8555,7 +8547,7 @@
 ||testflighting.com^
 ||tether-coin.vip^
 ||tether-defi.net^
-||tether-ether.*^
+/tether-ether.[a-z]+/
 ||tether-hgl.co^
 ||tetherminning.com^
 ||tetherteda.com^
@@ -8971,7 +8963,7 @@
 ||tzhui.com^
 ||tzhuitw.com^
 ||tznnhf.cn^
-||u2e-free.*^
+/u2e-free.[a-z]+/
 ||u3gc.xyz^
 ||u8581321.live^
 ||u88c.xyz^

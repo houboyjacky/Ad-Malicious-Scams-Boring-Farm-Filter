@@ -22,15 +22,15 @@
 #詐騙蝦皮 https://www.dcard.tw/f/buyonline/p/239628821
 ||shzpee-tw.com^
 #詐騙蝦皮
-||*xakcqzj.cn^
+/[a-z0-9]+xakcqzj.cn/
 ||*.bar^
-||shopee-*.tw
+/shopee-[a-z0-9]+.tw/
 #詐騙賺錢網站 https://www.dcard.tw/f/mood/p/239453488
 ||ebuy8899.com^
 #詐騙賺錢網站 https://www.dcard.tw/f/mood/p/239453488
-||*hotshop.com^
+||[a-z0-9]+hotshop.com^
 #順億賣場 https://www.dcard.tw/f/mood/p/239453488
-||*-tw.shop^
+||[a-z0-9]+-tw.shop^
 #瘋狂購 https://www.dcard.tw/f/mood/p/239453488
 ||crazygostore-tw.com^
 #詐騙虛擬貨幣 https://www.dcard.tw/f/mood/p/239658656
@@ -48,7 +48,7 @@
 #詐騙蝦皮,專屬大陸域名 https://www.dcard.tw/f/buyonline/p/239586106
 ||*.icu^
 #詐騙信貸 https://www.dcard.tw/f/money/p/239532865
-||*.ayju.tw^
+||[a-z0-9]+.ayju.tw^
 #包裹詐騙
 ||webspace.re^
 #身分詐騙 https://www.dcard.tw/f/life_in_europe/p/239469431

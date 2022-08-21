@@ -26,11 +26,8 @@
 ||168yy.live^
 ||17collaborate.xyz^
 ||17kshop.com^
-||17play*.com^
-||17-play*.com^
-||17play275.com^
-||17shop*.com^
-||17shoply.com^
+/17[-]?play[a-z0-9]*.com/
+/17shop[a-z0-9]*.com/
 ||17sr.bet^
 ||180.215.194.35^
 ||1815566.com^
@@ -55,7 +52,7 @@
 ||2345179.com^
 ||2345cps.com^
 ||2345cts.com^
-||24pchome*.com^
+/24pchome[a-z0-9]*.com/
 ||24pcshop.com^
 ||25square.top^
 ||268cpxz.com^
@@ -161,7 +158,7 @@
 ||88sa36.net^
 ||8bito.com^
 ||8cky.xyz^
-||8legend.*^
+/8legend.[a-z]+/
 ||8net.co^
 ||900256.com^
 ||90nn.xyz^
@@ -325,7 +322,7 @@
 ||ansk.tw^
 ||anti178.com^
 ||antinss.com^
-||antsforex*.com^
+/antsforex[a-z0-9]*.com/
 ||anygaladay.com^
 ||anyinglobal.com^
 ||anyingouji.com^
@@ -735,7 +732,7 @@
 ||bxt66.com^
 ||by-bit.me^
 ||bycmqy.com^
-||bycp*.com^
+/bycp[a-z0-9]*.com/
 ||byjrcf.com^
 ||byjrhk.com^
 ||bzkey5757.com^
@@ -746,7 +743,7 @@
 ||cableoc.com^
 ||caifuguoji.xyz^
 ||caifuxt.xyz^
-||caifuyiha*.club^
+/caifuyiha[a-z0-9]*.club/
 ||cail888.net^
 ||cajdydinje.com^
 ||cali1356a.net^
@@ -755,7 +752,7 @@
 ||calibet.com^
 ||cap1688.com^
 ||cap96.com^
-||capita*.com^
+/capita[a-z0-9]*.com/
 ||capittari.com^
 ||cardgame0808.com^
 ||cardgame3.com^
@@ -765,9 +762,7 @@
 ||carrefourstoreing.com^
 ||carryforextw.com^
 ||carryuu.com^
-||casave100.com^
-||casave200.com^
-||casave300.com^
+||casave[0-9]+00.com^
 ||catkou.top^
 ||cav567.xyz^
 ||cbbw6t.cn^
@@ -798,7 +793,7 @@
 ||chaojixsl.com^
 ||chaoxie.shop^
 ||charitablego.com^
-||charterprime*.com^
+/charterprime[a-z0-9]*.com/
 ||chcura.com^
 ||chenxiaodao.com^
 ||chilize.me^
@@ -818,11 +813,11 @@
 ||cjqm8.com^
 ||cjtzapp.com^
 ||clearsky.cyou^
-||clear-skys.*^
+/clear-skys.[a-z]+/
 ||clf99.net^
 ||climp688.com^
 ||climptw.com^
-||climpup*.com^
+/climpup[a-z0-9]*.com/
 ||clip168.com^
 ||clipp001.com^
 ||cliup01.com^
@@ -865,7 +860,7 @@
 ||coinbene.shop^
 ||coinbott.com^
 ||coincasso-ex.com^
-||coincheck.*^
+/coincheck.[a-z]+/
 ||coincheck66.xyz^
 ||coincheckex.com^
 ||coincomex.com^
@@ -962,7 +957,7 @@
 ||currencytaiwan.com^
 ||cuw-invest.com^
 ||cvfxtv.com^
-||cwgforexp*.com^
+/cwgforexp[a-z0-9]*.com/
 ||cwis.net^
 ||cwis88.net^
 ||cxmtradingtw.com^
@@ -999,7 +994,7 @@
 ||dazdsp.com^
 ||db9988.net^
 ||dba-corps.com^
-||dbgmarke*.com^
+/dbgmarke[a-z0-9]*.com/
 ||dbs1785.com^
 ||dbscww.cn^
 ||dcmforexs.com^
@@ -1012,7 +1007,7 @@
 ||decodesfxs.com^
 ||deeplwallet.com^
 ||deers56.com^
-||defiflexpool-vip-*.com^
+/defiflexpool-vip-[a-z0-9]*.com/
 ||defi-mining.cc^
 ||defitw700.com^
 ||deribitgl.buzz^
@@ -1034,7 +1029,7 @@
 ||dgfexok.com^
 ||dgnew168.com^
 ||dh6.ink^
-||diamond*.com^
+/diamond[a-z0-9]*.com/
 ||diaodl.xyz^
 ||didjjx.co^
 ||didjjx.vip^
@@ -1067,7 +1062,7 @@
 ||dofas.net^
 ||dogfex.com^
 ||don9f.com^
-||dongsen*.com^
+/dongsen[a-z0-9]*.com/
 ||dongsglobal.com^
 ||dongshen.co^
 ||donnls.com^
@@ -1079,9 +1074,7 @@
 ||dovbs.com^
 ||down.wmc520com^
 ||downios01.om^
-||downloadbc1.com^
-||downloadc*.com^
-||downloadgiochipc.com^
+/download[a-z0-9]*.com/
 ||downloadkhfnbc03.xyz^
 ||dqyapj.cn^
 ||draxcv.com^
@@ -1098,8 +1091,7 @@
 ||dsffx.cn^
 ||dsfsdgdsh.com^
 ||dsgg897.com^
-||dsglobalyl.com^
-||dsglobalyll.com^
+/dsglobalyl[l]?.com/
 ||dsjrhk.com^
 ||dsndfbxsa.xyz^
 ||dso-fx.com^
@@ -1113,9 +1105,7 @@
 ||dtrich88.com^
 ||dws66.com^
 ||dxecg.com^
-||dxm5888.com^
-||dxm6886.com^
-||dxm9988.com^
+||dxm[0-9]*.com^
 ||dy00.xyz^
 ||dy125.xyz^
 ||dydx-vip-defi.com^
@@ -1237,7 +1227,7 @@
 ||fannasia.com^
 ||farreachf.com^
 ||fasc.cc^
-||fasonlacrm.*^
+/fasonlacrm.[a-z]+/
 ||fay1182.com^
 ||fb197.com^
 ||fbfih.xyz^
@@ -1247,7 +1237,7 @@
 ||fbs-market.com^
 ||fcaox.com^
 ||fcdvip.com^
-||fchange*.xyz^
+/fchange[a-z0-9]*.xyz/
 ||fclubexchange.com^
 ||fcnwod.com^
 ||fcnwodd.com^
@@ -1260,8 +1250,7 @@
 ||feimaglobal.com^
 ||feiyakp.com^
 ||fengfgc.com^
-||ferrari88.net^
-||ferrari888.net^
+/ferrari[0-9]*.net/
 ||fesod.cn^
 ||fexglobag.buzz^
 ||fexglobarf.com^
@@ -1283,9 +1272,9 @@
 ||figfqep.cn^
 ||fimey.xyz^
 ||fin2cn.cn^
-||financesnew.*^
+/financesnew.[a-z]+/
 ||financespro.info^
-||financia1*.com^
+/financia1[a-z0-9]*.com/
 ||find526.xyz^
 ||finechk.com^
 ||finigm.com^
@@ -1294,8 +1283,8 @@
 ||finteckh.com^
 ||finvizw.com^
 ||fit.im^
-||fitbelaepro*.com^
-||fitbelaepro.*^
+/fitbelaepro[a-z0-9]*.com/
+/fitbelaepro.[a-z]+/
 ||fizoption.com^
 ||fjjiajiale.cn^
 ||fk3366.com^
@@ -1415,7 +1404,7 @@
 ||fxc777.net^
 ||fxcap888.com^
 ||fxcapitalex.com^
-||fxcm*.com^
+/fxcm[a-z0-9]*.com/
 ||fxd20pro.com^
 ||fxddtwff.com^
 ||fx-glenber.com^
@@ -1423,7 +1412,7 @@
 ||fxmcoins.com^
 ||fxopen.tw^
 ||fxopentw.com^
-||fxprimus*.com^
+/fxprimus[a-z0-9]*.com/
 ||fxpromx.com^
 ||fxprotw.com^
 ||fxr-fin.com^
@@ -1435,7 +1424,7 @@
 ||fxtmtw.com^
 ||fxtppks.com^
 ||fxtrad-hk.com^
-||fxtradin*.com^
+/fxtradin[a-z0-9]*.com/
 ||fxtrotrade.com^
 ||fxtrotrade.net^
 ||fxtrotradeze.com^
@@ -1462,7 +1451,7 @@
 ||gameboy666.xyz^
 ||gamocv.com^
 ||gaom9.com^
-||gaosheng*.com^
+/gaosheng[a-z0-9]*.com/
 ||gardala.com^
 ||gardalas.com^
 ||garntrade.com^
@@ -1554,7 +1543,7 @@
 ||gliccash8.com^
 ||globalcapitalgroup.cc^
 ||globalcapitalgrp.co^
-||global-exp*rade.com^
+/global-exp[a-z0-9]+rade.com/
 ||globalinternational.vin^
 ||globalpaymentsex.com^
 ||global-tradbemax.net^
@@ -1604,8 +1593,7 @@
 ||goldenstore.vip^
 ||goldenyuu.com^
 ||goldexchangetw.com^
-||goldmansachs.cool^
-||goldmansachs1869.*^
+/goldmansachs[0-9]*.[a-z]+/
 ||goldnsa.com^
 ||goldnsales.com^
 ||goldsstar.com^
@@ -1883,9 +1871,9 @@
 ||idealkinder.net^
 ||idealkinding.com^
 ||idealkinds.com^
-||idfpower*.com^
+/idfpower[a-z0-9]*.com/
 ||idfpowercb.cc^
-||idgcapital*.com^
+/idgcapital[a-z0-9]*.com/
 ||ids888.xyz^
 ||idskc9bt.cn^
 ||idskr.com^
@@ -1900,7 +1888,7 @@
 ||igex-ex.com^
 ||ig-jingxcn.com^
 ||iglk.info^
-||igmark*.com^
+/igmark[a-z0-9]*.com/
 ||ihopfist.com^
 ||ihopfister.com^
 ||ihopfister.net^
@@ -2166,7 +2154,7 @@
 ||kglefman.com^
 ||kgs-tw.com^
 ||kimbe777.net^
-||kimomi.*^
+/kimomi.[a-z]+/
 ||kin569.co^
 ||king56.net^
 ||king76.net^
@@ -2190,7 +2178,7 @@
 ||kodakby.com^
 ||komitdi.com^
 ||konanos.com^
-||kpcb*.com^
+/kpcb[a-z0-9]*.com/
 ||kqkq123.com^
 ||krakencoin.live^
 ||krakenscoin.com^
@@ -2625,7 +2613,7 @@
 ||oamdiap.vip^
 ||oanda.me^
 ||oandartw.com^
-||oandg*.com^
+/oandg[a-z0-9]*.com/
 ||oandtrade.com^
 ||oasis66.com^
 ||ob123.xyz^
@@ -2638,7 +2626,7 @@
 ||odi68.com^
 ||odin188.com^
 ||odin68.com^
-||odintw*.com^
+/odintw[a-z0-9]*.com/
 ||odn688.com^
 ||odzsgtw.com^
 ||oecdf.com^
@@ -2810,8 +2798,8 @@
 ||qasbcxc.com^
 ||qbt8306.com^
 ||qby3967.com^
-||qeic*w.net^
-||qfii*.com^
+/qeic[a-z0-9]+w.net/
+/qfii[a-z0-9]*.com/
 ||qfii80.com^
 ||qflitw168.com^
 ||qgc5769.com^
@@ -2949,7 +2937,7 @@
 ||saexvi.vip^
 ||safety613.xyz^
 ||saignaltrade.online^
-||saintrich*.com^
+/saintrich[a-z0-9]*.com/
 ||sal-mining.tools^
 ||saltff.com^
 ||sanliglobalsl.com^
@@ -3044,9 +3032,7 @@
 ||shopeeshopping.info^
 ||shopeeshopping.net^
 ||shopeez.cn^
-||shoppingmall*.xyz^
-||shoppingmall77.xyz^
-||shoppingmall99.xyz^
+/shoppingmall[0-9]*.xyz/
 ||shoppingpchome.com^
 ||shopptw.com^
 ||shopsvip.link^
@@ -3055,7 +3041,7 @@
 ||shuyaou.com^
 ||sia-inv.co^
 ||sia-invest.vip^
-||sichcapital*x.com^
+/sichcapital[a-z0-9]+x.com/
 ||sichcapitalua.com^
 ||sidhqhakh.xyz^
 ||sign233.com^
@@ -3121,7 +3107,7 @@
 ||starkj88.com^
 ||starlux.live^
 ||stbit.com^
-||stepup*.com^
+/stepup[a-z0-9]*.com/
 ||stepup127.com^
 ||ster58.net^
 ||stonex9.com^
@@ -3460,7 +3446,7 @@
 ||vertexxs.com^
 ||vetifx.net^
 ||viictec.com^
-||vip*fx.com^
+/vip[a-z0-9]+fx.com/
 ||vip8wp.cn^
 ||vipaitechstock.com^
 ||vipctrader.com^
@@ -3511,7 +3497,7 @@
 ||walletcoines.com^
 ||wallvn.com^
 ||wamne.com^
-||wandataw*.com^
+/wandataw[a-z0-9]*.com/
 ||wandataw.com^
 ||wandataw667.com^
 ||wangwangqiandai.cn^
@@ -3539,7 +3525,7 @@
 ||weijiao112.xyz^
 ||weins80.com^
 ||weipinhuis.com^
-||weisen*.com^
+/weisen[a-z0-9]*.com/
 ||wekcit.com^
 ||welfu.org^
 ||wellfu.org^
@@ -3580,13 +3566,13 @@
 ||wns7728.com^
 ||wns9168.com^
 ||wns999.xyz^
-||wnsr*.com^
+/wnsr[a-z0-9]*.com/
 ||wokaai.com^
 ||wootrade.com^
 ||woprad.com^
 ||work4bit.com^
 ||work4bit.org^
-||worldfistw.*^
+/worldfistw.[a-z]+/
 ||wortad.com^
 ||wotrad.com^
 ||wpp3.com^
@@ -3660,7 +3646,7 @@
 ||xpj80808.com^
 ||xpjy12059.xyz^
 ||xpjyl5566.xyz^
-||xpromarkets.*^
+/xpromarkets.[a-z]+/
 ||xqyxkb.com^
 ||xrx66.com^
 ||xs888.xyz^
@@ -3669,7 +3655,7 @@
 ||xtrade.tw^
 ||xts.group^
 ||xu1688.net^
-||xw*vv.xyz^
+/xw[a-z0-9]+vv.xyz/
 ||xwde16.com^
 ||xxcravaes.com^
 ||xxhzyz.com^
@@ -3722,7 +3708,7 @@
 ||yhks.app^
 ||yig8866.com^
 ||yingshinfa.net^
-||yinhe*.com^
+/yinhe[a-z0-9]*.com/
 ||yiwubbs.cn^
 ||yizikaijzen.xyz^
 ||ylc6166.com^
@@ -3742,7 +3728,7 @@
 ||yourctc.com^
 ||youtaosc.vip^
 ||youtubewatchs.com^
-||ypscsho*tw.com^
+/ypscsho[a-z0-9]+tw.com/
 ||ypshowtw.com^
 ||yshengtw.com^
 ||yt889.cn^
@@ -3758,10 +3744,10 @@
 ||yuhangewg.xyz^
 ||yulmfortw.xyz^
 ||yulom.com^
-||yulonfo*.com^
+/yulonfo[a-z0-9]*.com/
 ||yumingxuanjewelry.com^
 ||yumintw.com^
-||yundin*.com^
+/yundin[a-z0-9]*.com/
 ||yungu.io^
 ||yunnanyitianyun.com^
 ||yunnanytianyun.com^

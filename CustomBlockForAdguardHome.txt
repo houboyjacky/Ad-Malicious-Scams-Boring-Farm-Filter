@@ -11,7 +11,7 @@
 ||warmthhh.online^
 !
 ! 賭博
-||gdf999.*^
+/gdf999.[a-z]+/
 ||fa888.tw^
 ||wof888.blogspot.com^
 ||hoin1799.com^
