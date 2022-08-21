@@ -10,3 +10,10 @@
 ! Twitter短連結無法使用
 @@||t.co^
 !
+! 特別解放Agoda(APP連線實在太慢了)
+@@||agoda.com^$client=Dcard
+@@||agoda.com^$ctag=user_admin
+!
+! Apple官方購物，網頁刷卡無回應，但交易有成功(解決無回應)
+@@||securemvt.apple.com^
+@@||appleglobal.102.112.2o7.net^

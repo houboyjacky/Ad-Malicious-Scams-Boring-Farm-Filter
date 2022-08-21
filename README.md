@@ -6,6 +6,9 @@
 20220821 Update  
  == 調整 判斷download判斷錯誤(downloadcenter.nikonimglib.com)  
  == 調整 萬用符號*改採用正規化表示，減少誤判  
+ == 加入 LINE部分阻擋網址  
+ == 調整 解放Agoda於Dcard與admin  
+ == 加入 避免Apple官方購物刷卡頁面無回應
   
 20220820 Update  
  == 更新 165反詐騙公告網址(20220818Update)  

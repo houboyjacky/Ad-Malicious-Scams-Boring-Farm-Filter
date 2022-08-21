@@ -1,8 +1,5 @@
 ! 自訂阻擋清單
 ! 
-! LINE廣告阻擋
-||a.line.me^
-!
 ! 特別阻擋Gitkraken更新
 127.0.0.1 release.gitkraken.com
 !
@@ -21,10 +18,10 @@
 ||weshare.org^
 ||1711hy.com^
 !
-!Line 登入詐騙
+! Line 登入詐騙
 ||pdpdsum.com^
 !
-!加密貨幣詐騙
+! 加密貨幣詐騙
 ||huayangs.net^
 ||txnnezsf.com^
 !
@@ -32,6 +29,47 @@
 ||7wtv.com^
 ||bhmtsff.com^
 !
-!詐騙約會網站
+! 詐騙約會網站
 ||wfamilygo.com^
+!
+!
+! LINE 專區
+! 廣告來源
+||a.line.me
+! 廣告來源(與Line Today綁定，暫不考慮啟用)
+!||obs.line-scdn.net^
+! 廣告來源(源自於obs.line-scdn.net DNS回應，讓Line Today可運作，但官方帳號按鈕失效，暫不考慮開放所有人啟用)
+!||cac-obs.line-scdn.net.line-zero.akadns.net^$ctag=user_admin
+! 廣告來源(針對桌面APP，暫不有問題)
+||obs.line-apps.com^
+! LINE 不確定 故不啟用
+!||ci.line-apps.com^$ctag=user_admin
+!||cix.line-apps.com^$ctag=user_admin
+!||scdn.line-apps.com^$ctag=user_admin
+! 必要不可封
+!||d.line-scdn.net^
+!||gw.line.naver.jp^
+!||static.line-scdn.net^
+!||vos.line-scdn.net^
+! LINE 純紀錄
+! AdGuard已封鎖或允許
+!||crs-event.line.me^ 已封鎖
+!||lap-click.tr.line.me^ 已封鎖
+!||nelo2-col.linecorp.com^ 已封鎖
+!||uts-front.line-apps.com^ 已封鎖
+!||torimochi.line-apps.com^ 允許
+! LINE Taiwan無用
+!||aax-us.amazom-adsystem.com^$ctag=user_admin
+!||aax-us-pdx.amazom-adsystem.com^$ctag=user_admin
+!||adns1.line.naver.com^$ctag=user_admin
+!||adns2.line.naver.com^$ctag=user_admin
+!||appresource.line-scdn.net^$ctag=user_admin
+!||ch-news.line-apps.com^$ctag=user_admin
+!||ga2.line.naver.jp^$ctag=user_admin
+!||ga2x.line.naver.jp^$ctag=user_admin
+!||gs2.line.naver.jp^$ctag=user_admin
+!||gs2x.line.naver.jp^$ctag=user_admin
+!||ns1.line.naver.jp^$ctag=user_admin
+!||ns2.line.naver.jp^$ctag=user_admin
+!
 !
