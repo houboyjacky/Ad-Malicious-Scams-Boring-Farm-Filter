@@ -2,9 +2,12 @@
 台灣反詐騙   
   
 根據自身經驗來建立過濾  
+
+20220824 Update 
+ == 更新 Dcard文章詐騙  
   
 20220823 Update 
- == 更新 詐騙票券  
+ == 更新 Dcard文章詐騙  
   
 20220821 Update  
  == 調整 判斷download判斷錯誤(downloadcenter.nikonimglib.com)  

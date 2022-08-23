@@ -87,3 +87,19 @@
 # 詐騙買賣票 
 ||glory-as.com^
 ||gloryoss.oss-ap-southeast-7.aliyuncs.com^
+# 虛擬貨幣 https://www.dcard.tw/f/anti_fraud/p/239781197
+||yongxappdowns.com^
+# 衛服部詐騙 https://www.dcard.tw/f/anti_fraud/p/239778586
+||wysite.net^
+# 加密貨幣 https://www.dcard.tw/f/anti_fraud/p/239773610
+||usmininggroup.com^
+# 加密貨幣 https://www.dcard.tw/f/mood/p/237586146
+||x8m8tech.tw^
+# 補助詐騙 https://www.dcard.tw/f/anti_fraud/p/239770261
+||investimes.com^
+# 網購詐騙 https://www.dcard.tw/f/anti_fraud/p/239743425
+||superhappy.life^
+# 蝦皮詐騙 https://www.dcard.tw/f/anti_fraud/p/239719722
+||shopees.club^
+# 交易詐騙 https://www.dcard.tw/f/anti_fraud/p/239660286
+||hon-binary.com^
