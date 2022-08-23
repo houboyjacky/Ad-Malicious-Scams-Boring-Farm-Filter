@@ -3,6 +3,9 @@
   
 根據自身經驗來建立過濾  
   
+20220823 Update 
+ == 更新 詐騙票券  
+  
 20220821 Update  
  == 調整 判斷download判斷錯誤(downloadcenter.nikonimglib.com)  
  == 調整 萬用符號*改採用正規化表示，減少誤判  

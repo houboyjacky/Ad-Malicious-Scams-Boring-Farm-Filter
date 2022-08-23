@@ -84,3 +84,6 @@
 ||pagesinforverifications.*
 /successfull-[a-z0-9]+.online/
 /metoocofstimrgpaged-[a-z0-9]+.online/
+# 詐騙買賣票 
+||glory-as.com^
+||gloryoss.oss-ap-southeast-7.aliyuncs.com^
