@@ -11,8 +11,7 @@
 @@||t.co^
 !
 ! 特別解放Agoda(APP連線實在太慢了)
-@@||agoda.com^$client=Dcard
-@@||agoda.com^$ctag=user_admin
+@@||agoda.com^
 !
 ! Apple官方購物，網頁刷卡無回應，但交易有成功(解決無回應)
 @@||securemvt.apple.com^
