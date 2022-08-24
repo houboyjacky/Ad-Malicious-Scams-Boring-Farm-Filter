@@ -1074,7 +1074,9 @@
 ||dovbs.com^
 ||down.wmc520com^
 ||downios01.om^
-/download[a-z0-9]*.com/
+||downloadbc1.com^
+/downloadc[0-9]*.com/
+||downloadgiochipc.com^
 ||downloadkhfnbc03.xyz^
 ||dqyapj.cn^
 ||draxcv.com^
