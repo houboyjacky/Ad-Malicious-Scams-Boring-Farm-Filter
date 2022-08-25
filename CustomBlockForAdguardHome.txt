@@ -38,8 +38,6 @@
 ||a.line.me
 ! 廣告來源(與Line Today綁定，暫不考慮啟用)
 !||obs.line-scdn.net^
-! 廣告來源(針對桌面APP，暫不有問題)
-||obs.line-apps.com^
 ! LINE 不確定 故不啟用
 !||ci.line-apps.com^
 !||cix.line-apps.com^
@@ -50,6 +48,7 @@
 !||static.line-scdn.net^
 !||vos.line-scdn.net^
 !||obs-tw.line-apps.com^
+!||obs.line-apps.com^
 ! LINE 純紀錄
 ! AdGuard已封鎖或允許
 !||crs-event.line.me^ 已封鎖
