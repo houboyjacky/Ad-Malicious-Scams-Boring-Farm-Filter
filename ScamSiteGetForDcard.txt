@@ -103,3 +103,5 @@
 ||shopees.club^
 # 交易詐騙 https://www.dcard.tw/f/anti_fraud/p/239660286
 ||hon-binary.com^
+# 旋轉詐騙 https://www.dcard.tw/f/buyonline/p/239785440
+/carousell-tw[a-z0-9]+.xyz/
