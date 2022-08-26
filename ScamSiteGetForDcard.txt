@@ -5,6 +5,7 @@
 /[a-z0-9]+gov.xyz/
 /[a-z0-9]+gov.com/
 /[a-z0-9]+gov.me/
+/[a-z0-9]+gov.tv/
 ||bhnaku.xyz^
 !
 ! 旋轉詐騙一覽
