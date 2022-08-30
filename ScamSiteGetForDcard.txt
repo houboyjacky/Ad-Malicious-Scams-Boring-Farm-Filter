@@ -101,8 +101,11 @@
 # 網購詐騙 https://www.dcard.tw/f/anti_fraud/p/239743425
 ||superhappy.life^
 # 蝦皮詐騙 https://www.dcard.tw/f/anti_fraud/p/239719722
-||shopees.club^
+/[a-z\-]*shopee[a-z\-]*.club/
+/[a-z\-]*shopee[a-z\-]*.store/
 # 交易詐騙 https://www.dcard.tw/f/anti_fraud/p/239660286
 ||hon-binary.com^
 # 旋轉詐騙 https://www.dcard.tw/f/buyonline/p/239785440
 /carousell-tw[a-z0-9]+.xyz/
+# 衛服部詐騙
+||weishenw.xyz^
