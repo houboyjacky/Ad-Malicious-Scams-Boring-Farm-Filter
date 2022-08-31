@@ -6,6 +6,7 @@
 20220831 Update
  == 更新 來自Dcard 趨勢科技防詐達人 https://www.dcard.tw/@drmessage
  == 調整 解放metamask.io
+ == 加入 我與ScamAdviser詐騙阻擋
 
 20220830 Update 
  == 更新 蝦皮詐騙網址

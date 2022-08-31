@@ -3,36 +3,6 @@
 ! 特別阻擋Gitkraken更新
 127.0.0.1 release.gitkraken.com
 !
-! Youtube留言
-||empru.online^
-||warmthhh.online^
-!
-! 賭博
-/gdf999.[a-z]+/
-||fa888.tw^
-||wof888.blogspot.com^
-||hoin1799.com^
-||1768hi.com^
-||r83ihk.com^
-||weshare.hk^
-||weshare.org^
-||1711hy.com^
-!
-! Line 登入詐騙
-||pdpdsum.com^
-!
-! 加密貨幣詐騙
-||huayangs.net^
-||txnnezsf.com^
-!
-! 想騙遊戲的網址
-||7wtv.com^
-||bhmtsff.com^
-!
-! 詐騙約會網站
-||wfamilygo.com^
-!
-!
 ! LINE 專區
 ! 廣告來源
 ||a.line.me
