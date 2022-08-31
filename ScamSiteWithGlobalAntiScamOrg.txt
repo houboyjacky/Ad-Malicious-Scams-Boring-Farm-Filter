@@ -6578,7 +6578,6 @@
 ||meta-get.com^
 ||metakings.ai^
 ||metalmakt.com^
-||metamask.io^
 ||metanoa.vip^
 ||metaprominers.com^
 ||metatradebtc.com^

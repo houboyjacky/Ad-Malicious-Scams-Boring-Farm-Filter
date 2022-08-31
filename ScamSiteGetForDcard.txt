@@ -109,3 +109,109 @@
 /carousell-tw[a-z0-9]+.xyz/
 # 衛服部詐騙
 ||weishenw.xyz^
+# 假Netflix https://www.dcard.tw/f/persona_drmessage/p/239845144
+/netflti[a-z]*.com/
+# 假Line協助好友認證 https://www.dcard.tw/f/persona_drmessage/p/239672932
+||pdpdsun.com^
+# 假中國信託信扶專案 https://www.dcard.tw/f/persona_drmessage/p/239835868
+||yqcpkn.xyz^
+# 假Telegram https://www.dcard.tw/f/persona_drmessage/p/239827858
+||t-telegram.org^
+# 詐騙交友 https://www.dcard.tw/f/talk/p/238306266
+||waetlove.com^
+# 假冒金石堂 https://www.dcard.tw/f/persona_drmessage/p/239447065
+||tw-becnfun.com^
+# 假冒NFT網站
+||nft-wlmint.com^
+# 假冒中獎網站
+||tw-redpacket-51.com^
+# 假冒追蹤貨物網站 https://www.dcard.tw/f/persona_drmessage/p/239383723
+||twtracking.com^
+||tracking-tw.com^
+# 假冒宜家 https://www.dcard.tw/f/persona_drmessage/p/239368657
+||ikeety.com^
+||yijiays.com^
+||ezjf.cn^
+# 旋轉詐騙 https://www.dcard.tw/f/persona_drmessage/p/239361514
+||acg.kr^
+# 假抖音 https://www.dcard.tw/f/persona_drmessage/p/239287357
+||tiktokksop.com^
+# 假蒸氣卡 https://www.dcard.tw/f/persona_drmessage/p/239262011
+||virtualpoints.live^
+# 假康是美 https://www.dcard.tw/f/persona_drmessage/p/239245758
+||cosmed-tw.vip^
+# 衛服部詐騙 https://www.dcard.tw/f/persona_drmessage/p/239235219
+||qlnctm.com^
+||zcksov.com^
+# 虛擬貨幣詐騙 https://www.dcard.tw/f/persona_drmessage/p/239224925
+||robosetus.com^
+||tokensets.vip^
+||tset.app^
+||tstset.com^
+# 家樂福詐騙 https://www.dcard.tw/f/persona_drmessage/p/239201154
+||carrefaur.co^
+# 假冒DIOR https://www.dcard.tw/f/persona_drmessage/p/239134794
+||diortw.com^
+# 假冒Costco https://www.dcard.tw/f/persona_drmessage/p/239125909
+||gzusi.shop^
+||twzoc.shop^
+# 假冒紓困 https://www.dcard.tw/f/persona_drmessage/p/239116760
+||jtach.tech^
+# FB粉絲團詐騙 https://www.dcard.tw/f/persona_drmessage/p/239106860
+/[0-9]+.ml/
+/pages-[0-9]+.pw/
+# 虛擬錢包詐騙 https://www.dcard.tw/f/persona_drmessage/p/239042955
+# 虛擬錢包詐騙 https://www.dcard.tw/f/persona_drmessage/p/239190897
+/[a-z0-9]+-metamask.io/
+# 詐騙虛擬交易所 https://www.dcard.tw/f/persona_drmessage/p/238984705
+||bitvex.net^
+# 假冒Hinet https://www.dcard.tw/f/persona_drmessage/p/238965235
+||js99.tw^
+# 詐騙粉絲團 https://www.dcard.tw/f/persona_drmessage/p/238930714
+||laugh-laugh.live^
+# 詐騙FB粉絲團 https://www.dcard.tw/f/persona_drmessage/p/238930714
+/information-pages-[0-9]+.webnode.co/
+# 詐騙PEXPAY https://www.dcard.tw/f/persona_drmessage/p/238922226
+||pexpaybn.com^
+||pexbinance.com^
+||bnpexpay.com^
+||pexbian.com^
+# 假冒AMAZON https://www.dcard.tw/f/persona_drmessage/p/238909956
+||amazonshoptw.com^
+# 假冒抖音 https://www.dcard.tw/f/persona_drmessage/p/238909956
+||lazada-cn.com^
+# 假冒紓困 https://www.dcard.tw/f/persona_drmessage/p/238901309
+||iwipit.com^
+# NFT詐騙 https://www.dcard.tw/f/persona_drmessage/p/238847697
+||thaesport.com^
+||amy2000.com^
+# 通行費詐騙 https://www.dcard.tw/f/persona_drmessage/p/238806179
+||pvetc.com^
+||fqazetc.com^
+# 仿冒幣安 https://www.dcard.tw/f/persona_drmessage/p/238783143
+||manotch.com^
+# 油橘詐騙 https://www.dcard.tw/f/persona_drmessage/p/238747232
+||gyanvitaranamlawcollege.com^
+# 假口罩簡訊 https://www.dcard.tw/f/persona_drmessage/p/238729171
+||etshr.club^
+||nhysg.xyz^
+# 假冒無聊猿 https://www.dcard.tw/f/persona_drmessage/p/238719602
+||apelandsdrop.com^
+# 交友詐騙 https://www.dcard.tw/f/persona_drmessage/p/238612235
+||ibothu.com^
+||auntkaunen.com^
+||ticslove.com^
+# 詐騙蝦皮 https://www.dcard.tw/f/persona_drmessage/p/238539181
+||shopetw.xyz^
+||beaxfun.fun^
+||shope-tw.com^
+||shoppea.com^
+# 假冒健保 https://www.dcard.tw/f/persona_drmessage/p/238488687
+||hotvw.org^
+# 假冒投資專家 https://www.dcard.tw/f/persona_drmessage/p/238476649
+||otcoffers.com^
+||ofcoffers.com^
+# 假冒自由時報 https://www.dcard.tw/f/persona_drmessage/p/238476649
+||treoatio.com^
+||poecilogale.info^
+||dachshound.info^
