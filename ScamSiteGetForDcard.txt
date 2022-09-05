@@ -1,5 +1,4 @@
 # 資料來自Dcard文章
-# 2022/08/15 21:00 Update
 #詐騙個資 https://www.dcard.tw/f/persona_drmessage/p/239646609
 /[a-z0-9]+gov.(tw|xyz|me|tv|store|shop|com)/
 ||bhnaku.xyz^
