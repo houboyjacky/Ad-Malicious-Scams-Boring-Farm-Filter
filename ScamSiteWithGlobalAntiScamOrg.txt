@@ -706,8 +706,6 @@
 ||aocmarkets.com^
 ||aocnu.cn^
 ||aodo5.com^
-||AOFEX^
-||aofex.^
 ||aofex.com^
 ||aofst.com^
 ||aofst.pro^
