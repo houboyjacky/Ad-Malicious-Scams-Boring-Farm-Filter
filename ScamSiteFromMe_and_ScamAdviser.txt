@@ -32,3 +32,7 @@
 ! 仿冒
 ||blogdodge.shop^
 ||mbl-systemapp.com^
+!
+! 簡陋購買網站
+||carbon2.shop^
+!

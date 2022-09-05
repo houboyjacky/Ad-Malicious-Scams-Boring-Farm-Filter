@@ -1,12 +1,9 @@
 # 資料來自Dcard文章
 # 2022/08/15 21:00 Update
 #詐騙個資 https://www.dcard.tw/f/persona_drmessage/p/239646609
-/[a-z0-9]+gov.tw/
-/[a-z0-9]+gov.xyz/
-/[a-z0-9]+gov.com/
-/[a-z0-9]+gov.me/
-/[a-z0-9]+gov.tv/
+/[a-z0-9]+gov.(tw|xyz|me|tv|store|shop|com)/
 ||bhnaku.xyz^
+||benhayee.xyz^
 !
 ! 旋轉詐騙一覽
 #旋轉詐騙 https://www.dcard.tw/f/buyonline/p/239656198
@@ -101,8 +98,7 @@
 # 網購詐騙 https://www.dcard.tw/f/anti_fraud/p/239743425
 ||superhappy.life^
 # 蝦皮詐騙 https://www.dcard.tw/f/anti_fraud/p/239719722
-/[a-z\-]*shopee[a-z\-]*.club/
-/[a-z\-]*shopee[a-z\-]*.store/
+/[a-z\-]*shopee[a-z\-]*.(club|store)/
 # 交易詐騙 https://www.dcard.tw/f/anti_fraud/p/239660286
 ||hon-binary.com^
 # 旋轉詐騙 https://www.dcard.tw/f/buyonline/p/239785440
@@ -215,3 +211,11 @@
 ||treoatio.com^
 ||poecilogale.info^
 ||dachshound.info^
+# 虛擬貨幣詐騙 https://www.dcard.tw/f/anti_fraud/p/239883776
+||txniuyys.com^
+# 大陸縮網址(暫不信任) https://www.dcard.tw/f/anti_fraud/p/239856753
+||dlj.bz^
+# 詐騙購物 https://www.dcard.tw/f/anti_fraud/p/239855515
+||is.gd^
+# 詐騙購物 https://www.dcard.tw/f/anti_fraud/p/239853515
+||lifeshop.me^
