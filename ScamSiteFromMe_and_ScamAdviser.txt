@@ -36,3 +36,22 @@
 ! 簡陋購買網站
 ||carbon2.shop^
 !
+! Coupon假網站
+||ca-pontois.fr^
+||di02.biz^
+||ediliziaeponteggi.it^
+||exclusievecoatings.nl^
+||find-topaward-here.life^
+||hamiltonadviesbv.nl^
+||howgrewchi.live^
+||instalatorkrosno.pl^
+||isabel-lopez-kubben.at^
+||journeedelanature-2021-cdc.fr^
+||mes-scherp.nl^
+||mftranslations.eu^
+||mo08.biz^
+||mysleniekreatywne.pl^
+||osteopathe-06-marlena.fr^
+||severiana.eu^
+||steundester.nl^
+

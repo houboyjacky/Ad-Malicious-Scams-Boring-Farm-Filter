@@ -218,3 +218,9 @@
 ||is.gd^
 # 詐騙購物 https://www.dcard.tw/f/anti_fraud/p/239853515
 ||lifeshop.me^
+# 詐騙工作 https://www.dcard.tw/f/anti_fraud/p/239906853
+||91baowu.tk^
+# 詐騙配送 https://www.dcard.tw/f/anti_fraud/p/239903824
+||tw-post.co^
+# 詐騙iCloud帳號 https://www.dcard.tw/f/anti_fraud/p/239900119
+||appletw.net^
