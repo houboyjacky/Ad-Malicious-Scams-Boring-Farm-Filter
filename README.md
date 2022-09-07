@@ -6,6 +6,7 @@
 20220908 Update  
  == 更新 Global-Anti-Scam-Org-全球反詐騙組織  
  == 加入 國外寵物買賣詐騙PuppyScams_org_List  
+ == 調整 錯誤判斷  
   
 20220907 Update  
  == 更新 加入Coupon多導向網站  
