@@ -224,3 +224,10 @@
 ||tw-post.co^
 # 詐騙iCloud帳號 https://www.dcard.tw/f/anti_fraud/p/239900119
 ||appletw.net^
+# 詐騙幣安 https://www.dcard.tw/f/persona_drmessage/p/239908511
+||biancce.com^
+# 詐騙幣安 https://getdr.com/%E9%96%8B%E9%80%9Apexpay%E6%89%8D%E8%83%BD%E7%B9%BC%E7%BA%8C%E4%BD%BF%E7%94%A8%E5%B9%A3%E5%AE%89%EF%BC%9F%E8%A9%90%E9%A8%99%E8%AD%A6%E5%91%8A%EF%BC%81%E4%BD%BF%E7%94%A8%E5%85%A9%E5%A4%A7%E5%B7%A5/
+||pexpaybn.com^
+||pexbinance.com^
+||bnpexpay.com^
+||pexbian.com^
