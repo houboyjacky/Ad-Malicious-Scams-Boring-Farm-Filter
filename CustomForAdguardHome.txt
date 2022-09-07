@@ -1,14 +1,7 @@
 ! 自訂允許清單
 !
-! 避免Youtube歷史觀看不同步
-@@||s.youtube.com^
-@@||*.video-stats.l.google.com^
-!
 ! 特別解放MOPTT
 @@||moptt.tw^
-!
-! Twitter短連結無法使用
-@@||t.co^
 !
 ! 特別解放Agoda(APP連線實在太慢了)
 @@||agoda.com^
