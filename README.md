@@ -3,12 +3,16 @@
   
 根據自身經驗來建立過濾  
   
+20220908 Update
+ == 更新 Global-Anti-Scam-Org-全球反詐騙組織  
+ == 加入 國外寵物買賣詐騙PuppyScams_org_List  
+  
 20220907 Update  
  == 更新 加入Coupon多導向網站  
  == 更新 Dcard文章提供詐騙  
  == 更新 加入幣安詐騙  
- == 調整 白名單(用其他清單取代)
- == 加入 國外寵物買賣詐騙
+ == 調整 白名單(用其他清單取代)  
+ == 加入 國外寵物買賣詐騙Puppy_Scammer_List  
   
 20220905 Update  
  == 更新 Dcard文章提供詐騙  
