@@ -840,7 +840,7 @@
 ||cc8g8.com^
 ||ccafx.com^
 ||ccomnow.xyz^
-||cdn77.org^
+#||cdn77.org^
 ||cdpa.vip^
 ||centere.info^
 ||central-bank-uk.com^
