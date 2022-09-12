@@ -2,10 +2,13 @@
 台灣反詐騙   
   
 根據自身經驗來建立過濾  
-  
-20220910 Update
- == 調整 解放linker.ee
 
+20220912 Update  
+ == 調整 解放mystrikingly.com  
+  
+20220910 Update  
+ == 調整 解放linker.ee  
+  
 20220908 Update  
  == 更新 Global-Anti-Scam-Org-全球反詐騙組織  
  == 加入 國外寵物買賣詐騙PuppyScams_org_List  
