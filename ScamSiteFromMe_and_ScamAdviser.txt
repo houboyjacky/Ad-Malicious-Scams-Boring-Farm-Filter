@@ -78,3 +78,6 @@
 ||studiolonardelli.it^
 ||thamstore.nl^
 ||thuisbijmau.nl^
+!
+! Line輔助驗證詐騙
+||diniwap.cc^

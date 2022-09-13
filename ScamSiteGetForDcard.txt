@@ -252,3 +252,11 @@
 # Netflix詐騙 https://www.dcard.tw/f/persona_drmessage/p/239967091
 ||mailling.net^
 ||studentstoragemanchester.com^
+# 旋轉拍賣詐騙 https://www.dcard.tw/f/anti_fraud/p/239955565
+||carouseln.online^
+# 新臺馬國際交易平台 https://www.dcard.tw/f/game/p/239914269
+||dgshek.xyz^
+# 虛擬貨幣詐騙 https://www.dcard.tw/f/anti_fraud/p/239931434
+||vector-salt-it.com^
+# 抖音交易詐騙 https://www.dcard.tw/f/anti_fraud/p/239925488
+||cheerfulez.com^
