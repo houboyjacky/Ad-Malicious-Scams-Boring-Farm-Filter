@@ -249,3 +249,6 @@
 ||mitake.tw^
 # 詐騙遊戲交易平台 https://www.dcard.tw/f/anti_fraud/p/239805806
 ||xmgj11.com^
+# Netflix詐騙 https://www.dcard.tw/f/persona_drmessage/p/239967091
+||mailling.net^
+||studentstoragemanchester.com^
