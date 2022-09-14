@@ -260,3 +260,5 @@
 ||vector-salt-it.com^
 # 抖音交易詐騙 https://www.dcard.tw/f/anti_fraud/p/239925488
 ||cheerfulez.com^
+# 假冒PCHOME https://www.dcard.tw/f/persona_drmessage/p/239978380
+||pc24buyer.com^
