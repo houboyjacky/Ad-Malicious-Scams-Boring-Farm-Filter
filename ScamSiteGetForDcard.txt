@@ -262,3 +262,9 @@
 ||cheerfulez.com^
 # 假冒PCHOME https://www.dcard.tw/f/persona_drmessage/p/239978380
 ||pc24buyer.com^
+# 旋轉拍賣詐騙 https://www.dcard.tw/f/anti_fraud/p/239980829
+||meituang090.xyz^
+||ruyi.tv^
+# 延伸旋轉拍賣詐騙的在線客服 https://www.dcard.tw/f/anti_fraud/p/239980829
+||hkf.molinsoft.com^
+||kefu.mnkefu.com^
