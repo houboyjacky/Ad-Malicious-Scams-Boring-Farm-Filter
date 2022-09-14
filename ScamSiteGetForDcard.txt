@@ -5,70 +5,72 @@
 ||benhayee.xyz^
 !
 ! 旋轉詐騙一覽
-#旋轉詐騙 https://www.dcard.tw/f/buyonline/p/239656198
+/tw[a-z0-9-]*carousel[a-z0-9-]*.(com|xyz|tw)/
+/carousel[a-z0-9-]*tw.(com|xyz)/
+# 旋轉詐騙 https://www.dcard.tw/f/buyonline/p/239656198
 /tw[-]?carousel[a-z0-9]+.com/
 /carousel[a-z0-9]+[-]?tw.com/
-#旋轉詐騙 https://www.dcard.tw/f/buyonline/p/239698401
+# 旋轉詐騙 https://www.dcard.tw/f/buyonline/p/239698401
 /tw[-]?carousel[a-z0-9]+.tw/
-#旋轉詐騙 https://www.dcard.tw/f/buyonline/p/239705847
+# 旋轉詐騙 https://www.dcard.tw/f/buyonline/p/239705847
 /tw[-]?carousel[a-z0-9]+.xyz/
 /carousel[a-z0-9]+[-]?tw.xyz/
-#旋轉拍賣詐騙 https://www.dcard.tw/f/buyonline/p/239716333
+# 旋轉拍賣詐騙 https://www.dcard.tw/f/buyonline/p/239716333
 ||carousell.tw.cn^
 !
-#詐騙蝦皮 https://www.dcard.tw/f/buyonline/p/239628821
+# 詐騙蝦皮 https://www.dcard.tw/f/buyonline/p/239628821
 ||shzpee-tw.com^
 #詐騙蝦皮
 /[a-z0-9]+xakcqzj.cn/
 ||*.bar^
 /shopee-[a-z0-9]+.tw/
-#詐騙賺錢網站 https://www.dcard.tw/f/mood/p/239453488
+# 詐騙賺錢網站 https://www.dcard.tw/f/mood/p/239453488
 ||ebuy8899.com^
-#詐騙賺錢網站 https://www.dcard.tw/f/mood/p/239453488
+# 詐騙賺錢網站 https://www.dcard.tw/f/mood/p/239453488
 ||[a-z0-9]+hotshop.com^
-#順億賣場 https://www.dcard.tw/f/mood/p/239453488
+# 順億賣場 https://www.dcard.tw/f/mood/p/239453488
 ||[a-z0-9]+-tw.shop^
-#瘋狂購 https://www.dcard.tw/f/mood/p/239453488
+# 瘋狂購 https://www.dcard.tw/f/mood/p/239453488
 ||crazygostore-tw.com^
-#詐騙虛擬貨幣 https://www.dcard.tw/f/mood/p/239658656
+# 詐騙虛擬貨幣 https://www.dcard.tw/f/mood/p/239658656
 ||bakkttw.com^
-#apple登入詐騙 https://www.dcard.tw/f/talk/p/239489528
+# apple登入詐騙 https://www.dcard.tw/f/talk/p/239489528
 ||qevbc.com^
-#超商詐騙 https://www.dcard.tw/f/persona_drmessage/p/239654358
+# 超商詐騙 https://www.dcard.tw/f/persona_drmessage/p/239654358
 ||cablebewilder.online^
-#詐騙約會 https://www.dcard.tw/f/anti_fraud/p/239651272
+# 詐騙約會 https://www.dcard.tw/f/anti_fraud/p/239651272
 ||lovedatetw.com^
-#詐騙中油 https://www.dcard.tw/f/mood/p/239670990
+# 詐騙中油 https://www.dcard.tw/f/mood/p/239670990
 ||perchintimidation.fun^
-#問題網站
+# 問題網站
 ||chartoo.com^
-#詐騙蝦皮,專屬大陸域名 https://www.dcard.tw/f/buyonline/p/239586106
+# 詐騙蝦皮,專屬大陸域名 https://www.dcard.tw/f/buyonline/p/239586106
 ||*.icu^
-#詐騙信貸 https://www.dcard.tw/f/money/p/239532865
+# 詐騙信貸 https://www.dcard.tw/f/money/p/239532865
 ||[a-z0-9]+.ayju.tw^
-#包裹詐騙
+# 包裹詐騙
 ||webspace.re^
-#身分詐騙 https://www.dcard.tw/f/life_in_europe/p/239469431
+# 身分詐騙 https://www.dcard.tw/f/life_in_europe/p/239469431
 ||preview-domain.com^
-#長榮詐騙 https://www.dcard.tw/f/persona_mygopen/p/239645405
+# 長榮詐騙 https://www.dcard.tw/f/persona_mygopen/p/239645405
 ||80w19v.cn^
-#蝦皮詐騙 https://www.dcard.tw/f/buyonline/p/239616871
+# 蝦皮詐騙 https://www.dcard.tw/f/buyonline/p/239616871
 ||kajs32332.com^
-#購物詐騙 https://www.dcard.tw/f/buyonline/p/239681612?cid=B24EBBF7-3847-488E-BD37-375C35CA1DA5
+# 購物詐騙 https://www.dcard.tw/f/buyonline/p/239681612?cid=B24EBBF7-3847-488E-BD37-375C35CA1DA5
 ||alsoall.com^
-#郵局包裹詐騙 https://www.dcard.tw/f/talk/p/239664296
+# 郵局包裹詐騙 https://www.dcard.tw/f/talk/p/239664296
 /chung[-]?hwa[-]?[.]*.[.]*/
 ||postchunghwa.com^
-#兼職詐騙 https://www.dcard.tw/f/job/p/239716653
+# 兼職詐騙 https://www.dcard.tw/f/job/p/239716653
 ||91baowu.com^
-#投資詐騙 https://www.dcard.tw/f/stock/p/239714070
+# 投資詐騙 https://www.dcard.tw/f/stock/p/239714070
 ||stablesign.xyz^
-#交友詐騙 https://www.dcard.tw/f/rainbow/p/239710224
+# 交友詐騙 https://www.dcard.tw/f/rainbow/p/239710224
 ||ismax.shop^
-#投資詐騙 https://www.dcard.tw/f/money/p/239709438
+# 投資詐騙 https://www.dcard.tw/f/money/p/239709438
 ||ebdlj.com^
 ||ebcfinanaitw.com^
-#投資詐騙 https://www.dcard.tw/f/mood/p/239705352
+# 投資詐騙 https://www.dcard.tw/f/mood/p/239705352
 ||intofuture01.com^
 # 汽車詐騙 https://www.dcard.tw/f/anti_fraud/p/239701552
 ||ddb80.com^
@@ -268,3 +270,7 @@
 # 延伸旋轉拍賣詐騙的在線客服 https://www.dcard.tw/f/anti_fraud/p/239980829
 ||hkf.molinsoft.com^
 ||kefu.mnkefu.com^
+# 旋轉詐騙 https://www.dcard.tw/f/buyonline/p/239985748
+||twl-carousell-com.xyz^
+# 旋轉詐騙縮網址先封鎖 https://www.dcard.tw/f/buyonline/p/239985748
+||dlj2.cn^
