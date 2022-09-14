@@ -11128,7 +11128,7 @@
 ||zebpayex.com^
 ||zebpayex.vip^
 ||zeithcoin.com^
-||zendesk.com^
+#||zendesk.com^
 ||zeniq.com^
 ||zenithblockchainminers.com^
 ||zenithcryptotraders.com^
