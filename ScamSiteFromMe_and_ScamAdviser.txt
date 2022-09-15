@@ -81,3 +81,7 @@
 !
 ! Line輔助驗證詐騙
 ||diniwap.cc^
+!
+! 詐騙Linkin
+||linkebin.nl^
+!
