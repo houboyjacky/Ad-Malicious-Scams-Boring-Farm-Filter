@@ -274,3 +274,5 @@
 ||twl-carousell-com.xyz^
 # 旋轉詐騙縮網址先封鎖 https://www.dcard.tw/f/buyonline/p/239985748
 ||dlj2.cn^
+# iCloud詐騙 https://www.dcard.tw/f/apple/p/239992029
+||icloud-twn.info^
