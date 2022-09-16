@@ -276,3 +276,17 @@
 ||dlj2.cn^
 # iCloud詐騙 https://www.dcard.tw/f/apple/p/239992029
 ||icloud-twn.info^
+# 乙太幣合併 https://www.dcard.tw/f/persona_drmessage/p/240003944
+||ethereum-merge.live^
+||ether2x-event.info^
+||etherum-celebration.com^
+# 旋轉詐騙延伸封鎖縮網址  https://www.dcard.tw/f/buyonline/p/240004969
+||1v9.xyz^
+||link66.cn^
+# 旋轉拍賣詐騙 https://www.dcard.tw/f/buyonline/p/240004286
+||qth833.com^
+# 延伸旋轉拍賣詐騙的在線客服 https://www.dcard.tw/f/buyonline/p/240004286
+||wt.kefusoft.com^
+||chat.kefusoft.com^
+# 詐騙遊戲與客服 https://www.dcard.tw/f/ask/p/240005209
+||xm-chats.com^
