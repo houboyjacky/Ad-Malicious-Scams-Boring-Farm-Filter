@@ -292,6 +292,7 @@
 ||xm-chats.com^
 # 旋轉詐騙 https://www.dcard.tw/f/anti_fraud/p/240013878
 ||legoushopee.com^
+# 乙太幣詐騙 https://www.dcard.tw/f/anti_fraud/p/240013792
 ||ditok333.com^
 /ditok[0-9]*.com/
 # 蝦皮詐騙 https://www.dcard.tw/f/anti_fraud/p/239996541
