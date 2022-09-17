@@ -290,3 +290,13 @@
 ||chat.kefusoft.com^
 # 詐騙遊戲與客服 https://www.dcard.tw/f/ask/p/240005209
 ||xm-chats.com^
+# 旋轉詐騙 https://www.dcard.tw/f/anti_fraud/p/240013878
+||legoushopee.com^
+||ditok333.com^
+/ditok[0-9]*.com/
+# 蝦皮詐騙 https://www.dcard.tw/f/anti_fraud/p/239996541
+||shoppeatw.com^
+# IG詐騙帳號密碼 https://www.dcard.tw/f/persona_drmessage/p/239990650
+||centerhelpconfirm.cf
+# 旋轉詐騙 https://www.dcard.tw/f/buyonline/p/240016064
+||carousellgo.com^
