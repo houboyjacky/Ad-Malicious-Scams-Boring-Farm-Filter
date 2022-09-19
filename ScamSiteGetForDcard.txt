@@ -301,3 +301,10 @@
 ||centerhelpconfirm.cf
 # 旋轉詐騙 https://www.dcard.tw/f/buyonline/p/240016064
 ||carousellgo.com^
+# FB粉絲團詐騙 https://www.dcard.tw/f/persona_drmessage/p/240031978
+||2477235u71271355.co.vu^
+/[0-9a-z]+.co.vu/
+# FB粉絲團詐騙延伸封鎖縮網址 https://www.dcard.tw/f/persona_drmessage/p/240031978
+||u.to^
+# 詐騙遊戲買賣 https://www.dcard.tw/f/aov/p/240032267
+||cz916.cn^
