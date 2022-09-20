@@ -9917,7 +9917,7 @@
 ||tradingkms.com.tw^
 ||tradingon.io^
 ||tradingoption.us^
-||tradingview.com^
+#||tradingview.com^
 ||tradiso.com^
 ||tran123.com^
 ||transceend.com^

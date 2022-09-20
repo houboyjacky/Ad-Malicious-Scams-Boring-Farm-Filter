@@ -36,49 +36,6 @@
 ! 簡陋購買網站
 ||carbon2.shop^
 !
-! Coupon多導向網站
-||arcieri4castella.it^
-||bpnhklcgf.sa.com^
-||ca-pontois.fr^
-||chickencorner.fr^
-||cubicongardens.sk^
-||di02.biz^
-||directgrillage.fr^
-||ediliziaeponteggi.it^
-||e-dresscode.pl^
-||entrlock.cz^
-||exclusievecoatings.nl^
-||find-topaward-here.life^
-||finop-vvebeheer.nl^
-||fortalsa.co^
-||gordo.lv^
-||hamiltonadviesbv.nl^
-||howgrewchi.live^
-||ilbischero.it^
-||instalatorkrosno.pl^
-||isabel-lopez-kubben.at^
-||janjarolim.cz^
-||journeedelanature-2021-cdc.fr^
-||lumisan.eu^
-||mes-scherp.nl^
-||mftranslations.eu^
-||mo08.biz^
-||mysleniekreatywne.pl^
-||osteopathe-06-marlena.fr^
-||porscheclubtirol.at^
-||psdelier.nl^
-||quing.im^
-||rodari2020.it^
-||rosies-thun.ch^
-||runowoce.pl^
-||runziola.pl^
-||sanremoluce.it^
-||severiana.eu^
-||steundester.nl^
-||studiolonardelli.it^
-||thamstore.nl^
-||thuisbijmau.nl^
-!
 ! Line輔助驗證詐騙
 ||diniwap.cc^
 !
@@ -87,3 +44,4 @@
 !
 ! 販售台灣安樂死禁藥 https://www.dcard.tw/f/ask/p/240035968
 ||pentobarbitalgroup.com^
+!
