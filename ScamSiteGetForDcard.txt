@@ -310,3 +310,24 @@
 ||cz916.cn^
 # Pig出任務 https://www.dcard.tw/f/talk/p/240034774
 ||okx58.fun^
+# Line詐騙認證 https://www.dcard.tw/f/persona_drmessage/p/239672932
+||line.pdpdsun.com^
+/linebank.(beauty|click|homes|lol|one|mom|xyz|pics|skin|hair|shop)/
+||linebank.beauty^
+||linebank.click^
+||linebank.homes^
+||linebank.lol^
+||linebank.one^
+/linebank.(beauty|click|homes|lol|one|mom|xyz|pics|skin|hair|shop)/
+||linetw.homes^
+||linetw.lol^
+||linetw.mom^
+||linetw.one^
+||linetw.xyz^
+/linedown.(beauty|click|homes|lol|one|mom|xyz|pics|skin|hair|shop)/
+||linedown.homes^
+||linedown.pics^
+||linedown.skin^
+||linedown.hair^
+||linedown.xyz^
+||linedown.shop^
