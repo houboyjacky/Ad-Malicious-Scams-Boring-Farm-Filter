@@ -318,7 +318,7 @@
 ||linebank.homes^
 ||linebank.lol^
 ||linebank.one^
-/linebank.(beauty|click|homes|lol|one|mom|xyz|pics|skin|hair|shop)/
+/linetw.(beauty|click|homes|lol|one|mom|xyz|pics|skin|hair|shop)/
 ||linetw.homes^
 ||linetw.lol^
 ||linetw.mom^
