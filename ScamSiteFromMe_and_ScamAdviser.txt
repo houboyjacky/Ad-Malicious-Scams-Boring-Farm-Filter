@@ -51,3 +51,6 @@
 ! 賭博(?)
 ||sujiecp.com^
 ||520xingyun.com^
+!
+! FB詐騙
+||embalagensupbox.com.br^
