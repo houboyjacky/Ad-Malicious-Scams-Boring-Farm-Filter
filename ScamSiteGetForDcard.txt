@@ -1,9 +1,8 @@
 # 資料來自Dcard文章
-#詐騙個資 https://www.dcard.tw/f/persona_drmessage/p/239646609
+# 詐騙個資 https://www.dcard.tw/f/persona_drmessage/p/239646609
 /[a-z0-9]+gov.(tw|xyz|me|tv|store|shop|com)/
 ||bhnaku.xyz^
 ||benhayee.xyz^
-!
 ! 旋轉詐騙一覽
 /tw[a-z0-9-]*carousel[a-z0-9-]*.(com|xyz|tw)/
 /carousel[a-z0-9-]*tw.(com|xyz)/
@@ -17,7 +16,6 @@
 /carousel[a-z0-9]+[-]?tw.xyz/
 # 旋轉拍賣詐騙 https://www.dcard.tw/f/buyonline/p/239716333
 ||carousell.tw.cn^
-!
 # 詐騙蝦皮 https://www.dcard.tw/f/buyonline/p/239628821
 ||shzpee-tw.com^
 #詐騙蝦皮
@@ -331,3 +329,7 @@
 ||linedown.hair^
 ||linedown.xyz^
 ||linedown.shop^
+# 虛擬幣詐騙 https://www.dcard.tw/f/anti_fraud/p/240058126
+||maxwayco.com^
+# 虛擬幣詐騙 https://www.dcard.tw/f/money/p/240058312
+||coinabb.com^
