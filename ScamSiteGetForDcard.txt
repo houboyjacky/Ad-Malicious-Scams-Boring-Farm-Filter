@@ -341,3 +341,10 @@
 ||24ylgcs.com^
 # 旋轉詐騙延伸封鎖縮網址 https://www.dcard.tw/f/talk/p/240060484
 ||goo.gs^
+# 詐騙交友網站 https://www.dcard.tw/f/relationship/p/240068588
+||twskout.com^
+||lovecooltalk.com^
+||wikcloseyou.com^
+# 詐騙蝦皮 https://www.dcard.tw/f/buyonline/p/240065396
+||lc.chat^
+||2iz.cn^
