@@ -348,3 +348,5 @@
 # 詐騙蝦皮 https://www.dcard.tw/f/buyonline/p/240065396
 ||lc.chat^
 ||2iz.cn^
+# 詐騙蝦皮 https://www.dcard.tw/f/buyonline/p/240070421
+||tgh119.com^
