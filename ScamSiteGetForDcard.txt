@@ -337,3 +337,7 @@
 ||ai-service.online^
 # 旋轉詐騙延伸封鎖縮網址 https://www.dcard.tw/f/buyonline/p/240060947
 ||sourl.cn^
+# 詐騙購物平台 https://www.dcard.tw/f/buyonline/p/240059531
+||24ylgcs.com^
+# 旋轉詐騙延伸封鎖縮網址 https://www.dcard.tw/f/talk/p/240060484
+||goo.gs^
