@@ -352,3 +352,5 @@
 ||tgh119.com^
 # iCloud詐騙 
 ||icloud-tawo.info^
+# 詐騙交易所 https://www.dcard.tw/f/anti_fraud/p/240088213
+||okxpro.pro^
