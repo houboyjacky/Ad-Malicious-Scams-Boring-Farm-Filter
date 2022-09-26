@@ -46,8 +46,7 @@
 ! 販售台灣安樂死禁藥 https://www.dcard.tw/f/ask/p/240035968
 ||pentobarbitalgroup.com^
 !
-! 賭博性質
-!
+! 賭博
 ||lala329.com^
 ! 賭博(?)
 ||sujiecp.com^
@@ -55,3 +54,20 @@
 !
 ! FB詐騙
 ||embalagensupbox.com.br^
+!
+! 詐騙郵局 
+||thevisualisation.fr^
+||lavisualisation.lt.acemlnb.com^
+!
+! 詐騙郵局延伸 https://www.malwarebytes.com/blog/detections/acemlnb-com
+||warroombriefing.lt.acemlnb.com^
+||protrumpreport.lt.acemlnb.com^
+||welovetrump.lt.acemlnb.com^
+||drbuttar.lt.acemlnb.com^
+||kelbyone.lt.acemlnb.com^
+||guntests.lt.acemlnb.com^
+||tfporg.lt.acemlnb.com^
+||jajpholdings.lt.acemlnb.com^
+||fai-nyc.lt.acemlnb.com^
+||dollarvigilante.lt.acemlnb.com^
+||wealthpress98951.lt.acemlnb.com^
