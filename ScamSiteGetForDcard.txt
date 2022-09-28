@@ -356,3 +356,5 @@
 ||okxpro.pro^
 # 詐騙買賣遊戲 https://www.dcard.tw/f/mood/p/240099449
 ||yf639.cn^
+# 虛擬幣交易所詐騙 https://www.dcard.tw/f/money/p/240110844
+||transitcoin.cc^
