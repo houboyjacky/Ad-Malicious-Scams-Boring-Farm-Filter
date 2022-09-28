@@ -6,7 +6,8 @@
 20220926 Update  
  == 更新 農場網站  
  == 更新 Dcard文章詐騙網址  
- == 更新 ScamAdviser電子報
+ == 更新 ScamAdviser電子報  
+ == 調整 Dcard文章詐騙網址範圍  
 
 20220926 Update  
  == 更新 個人遇到的詐騙  
