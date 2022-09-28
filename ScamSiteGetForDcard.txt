@@ -358,3 +358,6 @@
 ||yf639.cn^
 # 虛擬幣交易所詐騙 https://www.dcard.tw/f/money/p/240110844
 ||transitcoin.cc^
+# 偽裝交易所 https://www.dcard.tw/f/persona_drmessage/p/240113637
+||binence.com^
+||biancce.com^
