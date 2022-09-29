@@ -8349,7 +8349,7 @@
 ||portalrealm.co^
 ||potatoex.cc^
 ||potatoex.io^
-||potatomedia.co^
+#||potatomedia.co^
 ||potex.com^
 ||potex.org^
 ||potex8.com^
