@@ -365,3 +365,6 @@
 ||teeeu.com^
 # 怪異網站連結 https://www.dcard.tw/f/mood/p/240131867
 ||354aecf.dwerls.eu.org^
+# 詐騙蝦皮 https://www.dcard.tw/f/talk/p/240132052
+||smw693.com^
+||m6z.cn^
