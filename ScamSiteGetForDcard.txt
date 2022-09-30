@@ -363,3 +363,5 @@
 ||biancce.com^
 # 詐騙手遊 https://www.dcard.tw/f/all/p/240099449/b/10
 ||teeeu.com^
+# 怪異網站連結 https://www.dcard.tw/f/mood/p/240131867
+||354aecf.dwerls.eu.org^
