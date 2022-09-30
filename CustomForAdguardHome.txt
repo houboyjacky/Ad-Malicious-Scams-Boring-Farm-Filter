@@ -9,3 +9,15 @@
 ! Apple官方購物，網頁刷卡無回應，但交易有成功(解決無回應)
 @@||securemvt.apple.com^
 @@||appleglobal.102.112.2o7.net^
+!
+! Line點擊連結
+@@|lap-click.tr.line.me^
+!
+! 解放Biggo樂天連結
+@@||affiliate.api.rakuten.com.tw^
+!
+! 解決 Apple AppStore偶爾不能連線的問題
+@@||app-measurement.com^
+!
+! 縮圖片縮影片無法看
+# @@||linodeobjects.com^
