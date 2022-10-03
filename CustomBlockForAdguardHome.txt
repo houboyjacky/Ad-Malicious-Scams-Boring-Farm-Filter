@@ -19,7 +19,11 @@
 !||vos.line-scdn.net^
 !||obs-tw.line-apps.com^
 !||obs.line-apps.com^
+!||api.line.me^
 ! LINE 純紀錄
+!||api2.line.me^
+!||api-cha.line.me.akadns.net
+!||api.line.me.akadns.net^
 ! AdGuard已封鎖或允許
 !||crs-event.line.me^ 已封鎖
 !||lap-click.tr.line.me^ 已封鎖

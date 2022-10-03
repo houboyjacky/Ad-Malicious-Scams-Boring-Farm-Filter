@@ -4,30 +4,30 @@
 ||bhnaku.xyz^
 ||benhayee.xyz^
 ! 旋轉詐騙一覽
-/tw[a-z0-9-]*carousel[a-z0-9-]*.(com|xyz|tw)/
-/carousel[a-z0-9-]*tw.(com|xyz)/
+/tw[a-z0-9-]*carousel[a-z0-9-]*\.(com|xyz|tw)/
+/carousel[a-z0-9-]*tw\.(com|xyz)/
 # 旋轉詐騙 https://www.dcard.tw/f/buyonline/p/239656198
-/tw[-]?carousel[a-z0-9]+.com/
-/carousel[a-z0-9]+[-]?tw.com/
+/tw[-]?carousel[a-z0-9]+\.com/
+/carousel[a-z0-9]+[-]?tw\.com/
 # 旋轉詐騙 https://www.dcard.tw/f/buyonline/p/239698401
-/tw[-]?carousel[a-z0-9]+.tw/
+/tw[-]?carousel[a-z0-9]+\.tw/
 # 旋轉詐騙 https://www.dcard.tw/f/buyonline/p/239705847
-/tw[-]?carousel[a-z0-9]+.xyz/
-/carousel[a-z0-9]+[-]?tw.xyz/
+/tw[-]?carousel[a-z0-9]+\.xyz/
+/carousel[a-z0-9]+[-]?tw\.xyz/
 # 旋轉拍賣詐騙 https://www.dcard.tw/f/buyonline/p/239716333
 ||carousell.tw.cn^
 # 詐騙蝦皮 https://www.dcard.tw/f/buyonline/p/239628821
 ||shzpee-tw.com^
 #詐騙蝦皮
-/[a-z0-9]+xakcqzj.cn/
+/[a-z0-9]+xakcqzj\.cn/
 ||*.bar^
-/shopee-[a-z0-9]+.tw/
+/shopee-[a-z0-9]+\.tw/
 # 詐騙賺錢網站 https://www.dcard.tw/f/mood/p/239453488
 ||ebuy8899.com^
 # 詐騙賺錢網站 https://www.dcard.tw/f/mood/p/239453488
-||[a-z0-9]+hotshop.com^
+/[a-z0-9]+hotshop\.com/
 # 順億賣場 https://www.dcard.tw/f/mood/p/239453488
-||[a-z0-9]+-tw.shop^
+/[a-z0-9]+-tw\.shop/
 # 瘋狂購 https://www.dcard.tw/f/mood/p/239453488
 ||crazygostore-tw.com^
 # 詐騙虛擬貨幣 https://www.dcard.tw/f/mood/p/239658656
@@ -57,7 +57,7 @@
 # 購物詐騙 https://www.dcard.tw/f/buyonline/p/239681612?cid=B24EBBF7-3847-488E-BD37-375C35CA1DA5
 ||alsoall.com^
 # 郵局包裹詐騙 https://www.dcard.tw/f/talk/p/239664296
-/chung[-]?hwa[-]?[.]*.[.]*/
+/chung[-]?hwa[-]?.*\..*/
 ||postchunghwa.com^
 # 兼職詐騙 https://www.dcard.tw/f/job/p/239716653
 ||91baowu.com^
@@ -76,11 +76,11 @@
 ||weishenl.com^
 # 詐騙FB帳號密碼搶奪粉絲團 https://www.dcard.tw/f/persona_drmessage/p/239555838
 ||ldp.page^
-/reactivate-page-[a-z0-9]+.click/
-/pageverification[a-z0-9]+.co.vu/
+/reactivate-page-[a-z0-9]+\.click/
+/pageverification[a-z0-9]+\.co\.vu/
 ||pagesinforverifications.*
-/successfull-[a-z0-9]+.online/
-/metoocofstimrgpaged-[a-z0-9]+.online/
+/successfull-[a-z0-9]+\.online/
+/metoocofstimrgpaged-[a-z0-9]+\.online/
 # 詐騙買賣票
 ||glory-as.com^
 ||gloryoss.oss-ap-southeast-7.aliyuncs.com^
@@ -97,11 +97,11 @@
 # 網購詐騙 https://www.dcard.tw/f/anti_fraud/p/239743425
 ||superhappy.life^
 # 蝦皮詐騙 https://www.dcard.tw/f/anti_fraud/p/239719722
-/[a-z\-]*shopee[a-z\-]*.(club|store)/
+/[a-z\-]*shopee[a-z\-]*\.(club|store)/
 # 交易詐騙 https://www.dcard.tw/f/anti_fraud/p/239660286
 ||hon-binary.com^
 # 旋轉詐騙 https://www.dcard.tw/f/buyonline/p/239785440
-/carousell-tw[a-z0-9]+.xyz/
+/carousell-tw[a-z0-9]+\.xyz/
 # 衛服部詐騙
 ||weishenw.xyz^
 # 假Netflix https://www.dcard.tw/f/persona_drmessage/p/239845144
@@ -153,8 +153,8 @@
 # 假冒紓困 https://www.dcard.tw/f/persona_drmessage/p/239116760
 ||jtach.tech^
 # FB粉絲團詐騙 https://www.dcard.tw/f/persona_drmessage/p/239106860
-#/[0-9]+.ml/
-/pages-[0-9]+.pw/
+#/[0-9]+\.ml/
+/pages-[0-9]+\.pw/
 # 虛擬錢包詐騙 https://www.dcard.tw/f/persona_drmessage/p/239042955
 # 虛擬錢包詐騙 https://www.dcard.tw/f/persona_drmessage/p/239190897
 /[a-z0-9]+-metamask.io/
@@ -292,7 +292,7 @@
 ||legoushopee.com^
 # 乙太幣詐騙 https://www.dcard.tw/f/anti_fraud/p/240013792
 ||ditok333.com^
-/ditok[0-9]*.com/
+/ditok[0-9]*\.com/
 # 蝦皮詐騙 https://www.dcard.tw/f/anti_fraud/p/239996541
 ||shoppeatw.com^
 # IG詐騙帳號密碼 https://www.dcard.tw/f/persona_drmessage/p/239990650
@@ -301,7 +301,7 @@
 ||carousellgo.com^
 # FB粉絲團詐騙 https://www.dcard.tw/f/persona_drmessage/p/240031978
 ||2477235u71271355.co.vu^
-/[0-9a-z]+.co.vu/
+/[0-9a-z]+\.co\.vu/
 # FB粉絲團詐騙延伸封鎖縮網址 https://www.dcard.tw/f/persona_drmessage/p/240031978
 ||u.to^
 # 詐騙遊戲買賣 https://www.dcard.tw/f/aov/p/240032267
@@ -310,13 +310,13 @@
 ||okx58.fun^
 # Line詐騙認證 https://www.dcard.tw/f/persona_drmessage/p/239672932
 ||line.pdpdsun.com^
-/linebank.(beauty|click|homes|lol|one|mom|xyz|pics|skin|hair|shop)/
+/linebank\.(beauty|click|homes|lol|one|mom|xyz|pics|skin|hair|shop)/
 ||linebank.beauty^
 ||linebank.click^
 ||linebank.homes^
 ||linebank.lol^
 ||linebank.one^
-/linetw.(beauty|click|homes|lol|one|mom|xyz|pics|skin|hair|shop)/
+/linetw\.(beauty|click|homes|lol|one|mom|xyz|pics|skin|hair|shop)/
 ||linetw.homes^
 ||linetw.lol^
 ||linetw.mom^
@@ -363,7 +363,6 @@
 ||biancce.com^
 # 詐騙虛擬貨幣 https://www.dcard.tw/f/blockchain/p/240125034
 ||yield-farmingpromax.com^
-
 # 詐騙手遊 https://www.dcard.tw/f/all/p/240099449/b/10
 ||teeeu.com^
 # 怪異網站連結 https://www.dcard.tw/f/mood/p/240131867
@@ -371,3 +370,10 @@
 # 詐騙蝦皮 https://www.dcard.tw/f/talk/p/240132052
 ||smw693.com^
 ||m6z.cn^
+# 詐騙交易所 https://www.dcard.tw/f/anti_fraud/p/240151219
+||aaex.win^
+# 詐騙交易所 https://www.dcard.tw/f/talk/p/240152389
+||lmphoness.com^
+# FB帳號被盜 https://www.dcard.tw/f/persona_drmessage/p/240155537
+||com.br^
+/.+-[0-9]+\.tk/

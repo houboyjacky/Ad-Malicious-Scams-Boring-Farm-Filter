@@ -90,3 +90,17 @@
 ||dobs-tds.com^
 ||3f-rent.ru^
 ||toptanzarfdunyasi.com^
+!
+! 怪異的測試
+/fnline\.(info|xyz|vip)/
+||fnline.info^
+||fnline.xyz^
+||fnline.vip^
+||hass.win^
+||hazz.win^
+||fans8.xyz^
+||paopaocloud.cyou^
+!
+! 怪異的信件內的連結
+||safefunhere.me^
+||datesrud.com^
