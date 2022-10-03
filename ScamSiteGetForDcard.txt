@@ -375,5 +375,7 @@
 # 詐騙交易所 https://www.dcard.tw/f/talk/p/240152389
 ||lmphoness.com^
 # FB帳號被盜 https://www.dcard.tw/f/persona_drmessage/p/240155537
-||com.br^
 /.+-[0-9]+\.tk/
+||pagesverification-nanotch.com^
+||apolloshop.com.br^
+||embalagensupbox.com.br^
