@@ -55,7 +55,7 @@
 ! FB詐騙
 ||embalagensupbox.com.br^
 !
-! 詐騙郵局 
+! 詐騙郵局
 ||thevisualisation.fr^
 ||lavisualisation.lt.acemlnb.com^
 !
@@ -72,7 +72,7 @@
 ||dollarvigilante.lt.acemlnb.com^
 ||wealthpress98951.lt.acemlnb.com^
 !
-! scamadviser電子報 
+! scamadviser電子報
 ||energybills-grantscheme.com^
 ||citybottles.us^
 ||uspsglobaldelivery.com^
@@ -104,3 +104,10 @@
 ! 怪異的信件內的連結
 ||safefunhere.me^
 ||datesrud.com^
+!
+! scamadviser電子報
+||pory.app^
+||londi.net^
+||ipfs.io^
+||aq47.net^
+!
