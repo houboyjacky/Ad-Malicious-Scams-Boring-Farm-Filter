@@ -386,6 +386,8 @@
 ||yt-google.com^
 # 一頁式網站 https://www.dcard.tw/f/buyonline/p/240169992
 ||smallbossstore.com^
-||lam810522.com
+||lam810522.com^
 # 詐騙全聯 https://www.dcard.tw/f/anti_fraud/p/240153324
-||holiie.online
+||holiie.online^
+# 詐騙外匯 https://www.dcard.tw/f/persona_yellowfx/p/240179365
+||rjmtt.com^
