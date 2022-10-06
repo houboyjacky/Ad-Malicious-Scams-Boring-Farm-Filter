@@ -391,3 +391,5 @@
 ||holiie.online^
 # 詐騙外匯 https://www.dcard.tw/f/persona_yellowfx/p/240179365
 ||rjmtt.com^
+# 詐騙交易所 https://www.dcard.tw/f/anti_fraud/p/240183988
+||pimcodefi.com^
