@@ -393,3 +393,5 @@
 ||rjmtt.com^
 # 詐騙交易所 https://www.dcard.tw/f/anti_fraud/p/240183988
 ||pimcodefi.com^
+# 詐騙交易所 https://www.dcard.tw/f/money/p/240191634
+||icebit-bit.com^
