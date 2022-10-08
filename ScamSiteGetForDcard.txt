@@ -395,3 +395,5 @@
 ||pimcodefi.com^
 # 詐騙交易所 https://www.dcard.tw/f/money/p/240191634
 ||icebit-bit.com^
+# 詐騙交友網站 https://www.dcard.tw/f/mood/p/240199910
+||ourlovespaceone.com^
