@@ -397,3 +397,5 @@
 ||icebit-bit.com^
 # 詐騙交友網站 https://www.dcard.tw/f/mood/p/240199910
 ||ourlovespaceone.com^
+# 詐騙旋轉拍賣 https://www.dcard.tw/f/buyonline/p/240201170
+||help-live.com^
