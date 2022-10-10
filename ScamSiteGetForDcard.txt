@@ -399,3 +399,7 @@
 ||ourlovespaceone.com^
 # 詐騙旋轉拍賣 https://www.dcard.tw/f/buyonline/p/240201170
 ||help-live.com^
+# 一頁式銷售網站 https://www.dcard.tw/f/anti_fraud/p/240206093
+||nuoge.live^
+# 詐騙虛擬貨幣 https://www.dcard.tw/f/police/p/240208774
+||valutrade168.net^
