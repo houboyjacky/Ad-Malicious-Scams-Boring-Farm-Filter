@@ -403,3 +403,10 @@
 ||nuoge.live^
 # 詐騙虛擬貨幣 https://www.dcard.tw/f/police/p/240208774
 ||valutrade168.net^
+# 詐騙購物 https://www.dcard.tw/f/sex/p/240219306
+||storyabouttobegin.com^
+# 詐騙NFT誘導新聞 https://www.dcard.tw/f/anti_fraud/p/240219549
+||nftrader.online^
+# 詐騙購物 https://www.dcard.tw/f/mood/p/240219256
+||gotopc24.com^
+||mstalk.cn^
