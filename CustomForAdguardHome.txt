@@ -20,4 +20,11 @@
 @@||app-measurement.com^
 !
 ! 縮圖片縮影片無法看
-# @@||linodeobjects.com^
+! @@||linodeobjects.com^
+!
+! Agoda 推薦網址
+@@||agoda.onelink.me^
+!
+! 微軟驗證失敗
+@@||mobile.pipe.aria.microsoft.com^
+!
