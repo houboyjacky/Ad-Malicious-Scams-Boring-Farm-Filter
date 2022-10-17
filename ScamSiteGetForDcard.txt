@@ -410,3 +410,16 @@
 # 詐騙購物 https://www.dcard.tw/f/mood/p/240219256
 ||gotopc24.com^
 ||mstalk.cn^
+# 怪異網站連結
+||bewithvctw.cyou^
+! 問題購物網站 樂瘋網 https://www.dcard.tw/f/buyonline/p/240259630
+||happygo-tw.com^
+||happygotw.com^
+! 詐騙交易所 https://www.dcard.tw/f/ask/p/240260133
+||aachain.pro^
+! 販售不明藥品 https://www.dcard.tw/f/trending/p/240261635
+||storettiysibnnsr.club^
+! 莫名連結
+||megic.ly^
+! 販售不明藥品 https://www.dcard.tw/f/ask/p/240263625
+||zhntp.cyou^
