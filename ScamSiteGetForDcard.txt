@@ -423,3 +423,5 @@
 ||megic.ly^
 ! 販售不明藥品 https://www.dcard.tw/f/ask/p/240263625
 ||zhntp.cyou^
+! 詐騙交易所 https://www.dcard.tw/f/anti_fraud/p/240269748
+||shapeminer.app^
