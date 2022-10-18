@@ -425,3 +425,5 @@
 ||zhntp.cyou^
 ! 詐騙交易所 https://www.dcard.tw/f/anti_fraud/p/240269748
 ||shapeminer.app^
+! 詐騙交易所 https://www.dcard.tw/f/mood/p/240276221
+||icebit-coin.com^
