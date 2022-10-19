@@ -18,7 +18,7 @@
 ||carousell.tw.cn^
 # 詐騙蝦皮 https://www.dcard.tw/f/buyonline/p/239628821
 ||shzpee-tw.com^
-#詐騙蝦皮
+# 詐騙蝦皮
 /[a-z0-9]+xakcqzj\.cn/
 ||*.bar^
 /shopee-[a-z0-9]+\.tw/
@@ -432,3 +432,8 @@
 ||costcois.lol^
 ! 詐騙交易所 https://www.dcard.tw/f/money/p/240279326
 ||illuminatimarkets.asia^
+! 詐騙交易所 https://www.dcard.tw/f/anti_fraud/p/240282557
+||localtrrds.com^
+! 詐騙FB https://www.dcard.tw/f/app/p/240281172
+/supportteam[0-9]+\.asia/
+||supportteam88634632.asia^
