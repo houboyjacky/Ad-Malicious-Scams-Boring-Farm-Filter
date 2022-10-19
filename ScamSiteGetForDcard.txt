@@ -437,3 +437,5 @@
 ! 詐騙FB https://www.dcard.tw/f/app/p/240281172
 /supportteam[0-9]+\.asia/
 ||supportteam88634632.asia^
+! 詐騙試吃員 https://www.dcard.tw/f/anti_fraud/p/240286123
+||investwinwork.com^
