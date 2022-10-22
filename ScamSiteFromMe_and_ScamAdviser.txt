@@ -6,15 +6,29 @@
 !
 ! 賭博
 /gdf999.[a-z]+/
-||fa888.tw^
-||wof888.blogspot.com^
-||hoin1799.com^
+||1711hy.com^
 ||1768hi.com^
+||bw777.cc^
+||fa888.tw^
+||fatlamb168.com^
+||favianbayer44.wixsite.com^
+||gamebatinfo.com^
+||gdf999.com^
+||hoin1799.com^
+||jdf88.com^
+||ko1788.com^
+||piu11.com^
 ||r83ihk.com^
+||sin624922.wixsite.com^
+||tad002.godaddysites.com^
+||top1king.com^
+||top558.net^
 ||weshare.hk^
 ||weshare.org^
-||1711hy.com^
+||wof888.blogspot.com^
+||wof888.com^
 ||xc-bet.com^
+||金大發娛樂城.tw^
 !
 ! Line 登入詐騙
 ||pdpdsum.com^
