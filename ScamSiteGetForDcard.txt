@@ -468,3 +468,7 @@
 ||twoto.tv^
 ! 詐騙交易點數 https://www.dcard.tw/f/mood/p/240099449
 ||661.hk^
+! 詐騙交易所 https://www.dcard.tw/f/anti_fraud/p/240256534
+||phemax.us^
+! 詐騙交易所 https://www.dcard.tw/f/anti_fraud/p/240189924
+||phmaxse.com
