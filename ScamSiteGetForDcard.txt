@@ -462,3 +462,9 @@
 ||hippo-tesco.io^
 ! 詐騙打工 https://www.dcard.tw/f/job/p/240321254
 ||ulwwork.com^
+! 詐騙購物網 https://www.dcard.tw/f/talk/p/240323925
+||best2.online^
+! 詐騙直撥網站 https://www.dcard.tw/f/talk/p/240324011
+||twoto.tv^
+! 詐騙交易點數 https://www.dcard.tw/f/mood/p/240099449
+||661.hk^
