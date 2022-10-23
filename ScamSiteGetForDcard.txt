@@ -460,3 +460,5 @@
 ||91shopcrossl.com.tw^
 ! 這是詐騙的電商平台嗎？ https://www.dcard.tw/f/buyonline/p/240317636
 ||hippo-tesco.io^
+! 詐騙打工 https://www.dcard.tw/f/job/p/240321254
+||ulwwork.com^
