@@ -1,9 +1,8 @@
-!我與ScamAdviser詐騙阻擋
+! 我與ScamAdviser詐騙阻擋
 !
 ! Youtube留言
 ||empru.online^
 ||warmthhh.online^
-!
 ! 賭博
 /gdf999.[a-z]+/
 ||1711hy.com^
@@ -29,50 +28,36 @@
 ||wof888.com^
 ||xc-bet.com^
 ||金大發娛樂城.tw^
-!
 ! Line 登入詐騙
 ||pdpdsum.com^
-!
 ! 加密貨幣詐騙
 ||huayangs.net^
 ||txnnezsf.com^
-!
 ! 想騙遊戲的網址
 ||7wtv.com^
 ||bhmtsff.com^
-!
 ! 詐騙約會網站
 ||wfamilygo.com^
-!
 ! 仿冒
 ||blogdodge.shop^
 ||mbl-systemapp.com^
-!
 ! 簡陋購買網站
 ||carbon2.shop^
-!
 ! Line輔助驗證詐騙
 ||diniwap.cc^
-!
 ! 詐騙Linkin
 ||linkebin.nl^
-!
 ! 販售台灣安樂死禁藥 https://www.dcard.tw/f/ask/p/240035968
 ||pentobarbitalgroup.com^
-!
-! 賭博
 ||lala329.com^
 ! 賭博(?)
 ||sujiecp.com^
 ||520xingyun.com^
-!
 ! FB詐騙
 ||embalagensupbox.com.br^
-!
 ! 詐騙郵局
 ||thevisualisation.fr^
 ||lavisualisation.lt.acemlnb.com^
-!
 ! 詐騙郵局延伸 https://www.malwarebytes.com/blog/detections/acemlnb-com
 ||warroombriefing.lt.acemlnb.com^
 ||protrumpreport.lt.acemlnb.com^
@@ -85,7 +70,6 @@
 ||fai-nyc.lt.acemlnb.com^
 ||dollarvigilante.lt.acemlnb.com^
 ||wealthpress98951.lt.acemlnb.com^
-!
 ! scamadviser電子報
 ||energybills-grantscheme.com^
 ||citybottles.us^
@@ -96,7 +80,6 @@
 ||spiritsandwhiskey.com^
 ||birdsmarket.us^
 ||offshorescoins.com^
-!
 ! 騙下載
 ||edition-eltern.com^
 ||catalogleagues.site^
@@ -104,7 +87,6 @@
 ||dobs-tds.com^
 ||3f-rent.ru^
 ||toptanzarfdunyasi.com^
-!
 ! 怪異的測試
 /fnline\.(info|xyz|vip)/
 ||fnline.info^
@@ -114,23 +96,113 @@
 ||hazz.win^
 ||fans8.xyz^
 ||paopaocloud.cyou^
-!
 ! 怪異的信件內的連結
 ||safefunhere.me^
 ||datesrud.com^
-!
-! scamadviser電子報
 ||pory.app^
 ||londi.net^
 ||ipfs.io^
 ||aq47.net^
-!
 ! 釣魚郵件
 ||acemlnc.com^
 ||alhamdoulillahcoin.com^
-!
 ! ScamAdviser Alert
 ||800notes.com^
 ||square.site^
 ||professionalinternetutilities.com^
 ||ko.gl^
+! 奇怪搜尋網站
+||blendedsearch.com^
+||izito.com.tw^
+! 主要下注頁面
+||ee2021.com^
+! 賭博網站
+||0857online.net
+||2013unique.com.tw^
+||2022wangcai.com^
+||4yuebix.com^
+||6fayuan.com^
+||857fadachi.com^
+||888pi.net^
+||999ts.net^
+||accesscs06.com^
+||ace777.com^
+||affinaddict.digital^
+||andriodforums.com^
+||ar777.net^
+||b1win.godaddysites.com^
+||bastidevalbonne.com^
+||bdfpfb2x.com^
+||belanjatupperware.com^
+||blueskymonday.com^
+||boma101.com^
+||britishlooseleaf.com
+||carcarecafe.com^
+||carrolltonrental.com^
+||cbin9.com^
+||cguang374.wixsite.com^
+||chatcs06.com^
+||clevelandmusicians.com^
+||dg38.net^
+||directbuycenters.com^
+||dp369.net^
+||elijahyundt.wixsite.com^
+||ewin.godaddysites.com^
+||fastcash4invoices.com^
+||ferrososymetales.com^
+||fuckyoudouble.com^
+||ga888.tw^
+||gaylehgregory.com^
+||gm1888.net^
+||goodpracticemining.com^
+||gtodm.com.tw^
+||hello178.com^
+||helpcenter04.com^
+||homebusinessgold.com^
+||hotelacuariotulum.com^
+||huaxiu4.com^
+||iju888.com^
+||incoolyo.com^
+||insin.com.tw^
+||interioraddiction.com^
+||jjt.tw^
+||ju-77.net^
+||katrina2929.wixsite.com^
+||lasvegascondotelsales.com^
+||learnguitarplaying.com^
+||leo5288.com^
+||leots88.com.tw^
+||londonatitsbest.com^
+||longislandhomecenter.com^
+||lowesrooferscompete.com^
+||maroc1001nuits.com^
+||maxwell-tech.net^
+||mobilesaustralia.com^
+||musicaltheatreschool.com^
+||mycard520.com.tw^
+||newsoftwarereview.com^
+||ofa55.net^
+||online04.com^
+||online808.com^
+||opticalilusion.com^
+||pcgws.com^
+||promotinglearning.com^
+||q8casino.net^
+||qeadws00000.pixnet.net
+||rgis-asset-inventory.com^
+||seductivevisions.com^
+||sh1768.net^
+||sh1788.net^
+||shortof.com^
+||sp5168.com^
+||sporting7.com^
+||streetboard-shop.com^
+||susanacarpintero.com^
+||ts178.com.tw^
+||ts7777.com.tw^
+||vszxm.com^
+||wyd2.com.tw^
+||y6585.com^
+||younit6.com^
+||yuyanwz.com^
+||zunlong-wangzhi.com^

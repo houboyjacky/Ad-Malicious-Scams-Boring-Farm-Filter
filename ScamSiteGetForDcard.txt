@@ -458,3 +458,5 @@
 ||grwkx.site^
 ! 詐騙購物網站
 ||91shopcrossl.com.tw^
+! 這是詐騙的電商平台嗎？ https://www.dcard.tw/f/buyonline/p/240317636
+||hippo-tesco.io^
