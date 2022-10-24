@@ -471,4 +471,6 @@
 ! 詐騙交易所 https://www.dcard.tw/f/anti_fraud/p/240256534
 ||phemax.us^
 ! 詐騙交易所 https://www.dcard.tw/f/anti_fraud/p/240189924
-||phmaxse.com
+||phmaxse.com^
+! 詐騙交易所 https://www.dcard.tw/f/ask/p/240328916
+||tcadgreats.com^
