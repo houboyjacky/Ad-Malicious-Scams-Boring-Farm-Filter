@@ -474,3 +474,5 @@
 ||phmaxse.com^
 ! 詐騙交易所 https://www.dcard.tw/f/ask/p/240328916
 ||tcadgreats.com^
+! 詐騙遊戲帳號 https://www.dcard.tw/f/talk/p/240345211
+||eh762.cn^

@@ -206,3 +206,10 @@
 ||younit6.com^
 ||yuyanwz.com^
 ||zunlong-wangzhi.com^
+! 賭博網站
+||bv888.cc^
+||f4mut.com^
+||jnqkzsh.cn^
+||vk090.cn^
+||2447hthty.com^
+||d2vm7.com^
