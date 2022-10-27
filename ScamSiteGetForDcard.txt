@@ -485,3 +485,7 @@
 ! 詐騙交易所 https://www.dcard.tw/f/anti_fraud/p/240350920
 ||fup-e.com^
 ||huaxiajijin8.com^
+! 詐騙貸款 https://www.dcard.tw/f/anti_fraud/p/240359537
+||henmoney.com.tw
+! 旋轉詐騙 https://www.dcard.tw/f/buyonline/p/240357371
+||pft336.com^
