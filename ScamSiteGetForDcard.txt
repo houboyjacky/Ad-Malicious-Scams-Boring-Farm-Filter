@@ -480,3 +480,8 @@
 ||085kwm.cyou^
 ||iq4qw4.cyou^
 ||120sd3.cn^
+! 詐騙交易所 https://www.dcard.tw/f/money/p/240352058
+||ikdufzn.cn^
+! 詐騙交易所 https://www.dcard.tw/f/anti_fraud/p/240350920
+||fup-e.com^
+||huaxiajijin8.com^
