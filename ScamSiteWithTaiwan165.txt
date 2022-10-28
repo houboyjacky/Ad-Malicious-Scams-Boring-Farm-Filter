@@ -731,7 +731,7 @@
 ||bitstamp.asia^
 ||bitstarex.com^
 ||bitswords.net^
-||bittrex.com^
+@@||bittrex.com^$important
 ||bittrillion.com^
 ||bittto.com^
 ||bitvovo.asia^

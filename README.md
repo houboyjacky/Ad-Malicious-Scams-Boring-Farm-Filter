@@ -5,6 +5,7 @@
 
 20221028 Update  
  == 更新 Dcard文章詐騙網址  
+ == 解除 bittrex.com  
 
 20221027 Update  
  == 更新 Dcard文章詐騙網址  
