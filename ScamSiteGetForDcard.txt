@@ -496,3 +496,7 @@
 ! 詐騙交易所 https://www.dcard.tw/f/talk/p/240368531
 ||ookvip.com^
 ||wellcion.com^
+! 詐騙購物網站 https://www.dcard.tw/f/anti_fraud/p/240374800
+||hippotesco.life^
+! 詐騙交易所 https://www.dcard.tw/f/mood/p/240373100
+||icebitt.net^
