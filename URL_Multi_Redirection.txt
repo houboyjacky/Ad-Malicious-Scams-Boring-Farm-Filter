@@ -1,4 +1,10 @@
 ! 多重導向網站
+!||it^$denyallow=org.it|edu.it|com.it
+!||fr^$denyallow=org.fr|edu.fr|com.fr
+!||de^$denyallow=org.de|edu.de|com.de
+!||ch^$denyallow=org.ch|edu.ch|com.ch
+!||pl^$denyallow=org.pl|edu.pl|com.pl
+!||nl^$denyallow=org.nl|edu.nl|com.nl
 ||albergoromaamiata.it^
 ||amini.com.pl^
 ||anrevika.lt^
@@ -130,3 +136,11 @@
 ||dlaflorysty.pl^
 ||messina.it^
 ||siracusa.it^
+||kam-fuer-kmu.ch^
+||eujen.space^
+||febeltigg.live^
+||logisfrance-architecture.fr^
+||seeland-nottwil.ch^
+||zdes.online^
+||artemis-soccorso-veterinario.it^
+||tn.it^
