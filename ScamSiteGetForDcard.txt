@@ -500,3 +500,5 @@
 ||hippotesco.life^
 ! 詐騙交易所 https://www.dcard.tw/f/mood/p/240373100
 ||icebitt.net^
+! 詐騙交友 https://www.dcard.tw/f/mood/p/240382795
+||signature888.vip^
