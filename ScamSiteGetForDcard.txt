@@ -511,3 +511,10 @@
 ||nftready.online^
 ! 詐騙交易商場 https://www.dcard.tw/f/anti_fraud/p/240400006
 ||awesomemtshop.com^
+! 詐騙交友 https://www.dcard.tw/f/sex/p/240401116
+||winkta.com^
+||cheekyuu.com^
+||misugan.com^
+||embracelvstry.com^
+||puzooo.com^
+||wainiy.com
