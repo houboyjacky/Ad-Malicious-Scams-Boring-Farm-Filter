@@ -63,6 +63,8 @@ Most of the multiple forwarding sites I have encountered from my own experience 
   * 更新 Dcard文章詐騙網址
   * 加入 MIT License
   * 更新 刪減、分類、名稱與說明描述
+  * 更新 ScamAdviser電子報
+  * 更新 個人覺得危險網站
 
 * 20221101 Update
   * 更新 Dcard文章詐騙網址
