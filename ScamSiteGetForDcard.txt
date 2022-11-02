@@ -521,3 +521,6 @@
 ! 假香水網站 https://www.dcard.tw/f/buyonline/p/240249246
 ||diptyque.com.tw^
 ||xs-tw.net^
+! 詐騙工作 https://www.dcard.tw/f/job/p/240409588
+||btstxz.com^
+||nzjcyf.xyz^
