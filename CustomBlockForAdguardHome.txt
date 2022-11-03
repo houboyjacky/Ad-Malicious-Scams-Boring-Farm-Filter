@@ -265,3 +265,5 @@
 ||franklin.com.tw^
 ||algotrading-mcpy.thinkific.com^
 ||turborstock.com^
+||cmtrade.com^
+||twstocke.com^
