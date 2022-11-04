@@ -259,9 +259,6 @@
 ||lindayang725.com^
 ||alphaloan.co^
 ||tbtgof.com^
-! 考慮封鎖一頁式創建網站
-#||1shop.tw^
-!
 ||franklin.com.tw^
 ||algotrading-mcpy.thinkific.com^
 ||turborstock.com^
@@ -282,3 +279,7 @@
 ||zerohouse1491.com^
 ||7figureecompreneur.com^
 ||boaa.it^
+||boviose.com^
+||lovelikewe.com^
+||editmysite.com^
+||17funmoney.com^
