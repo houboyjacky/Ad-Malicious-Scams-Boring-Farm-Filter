@@ -531,3 +531,6 @@
 ! 詐騙虛擬貨幣 https://www.dcard.tw/f/mood/p/240423250
 ||bitcores688.com^
 /bitcores[0-9]+\.com/
+! 詐騙虛擬貨幣 https://www.dcard.tw/f/anti_fraud/p/240416173
+||coinusdt66.com^
+||aexpro.net^
