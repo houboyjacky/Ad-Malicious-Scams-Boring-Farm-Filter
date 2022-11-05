@@ -528,3 +528,6 @@
 ||tqlp.club^
 ! 詐騙購物 https://www.dcard.tw/f/anti_fraud/p/240413509
 ||storekkiobaa.club^
+! 詐騙虛擬貨幣 https://www.dcard.tw/f/mood/p/240423250
+||bitcores688.com^
+/bitcores[0-9]+\.com/
