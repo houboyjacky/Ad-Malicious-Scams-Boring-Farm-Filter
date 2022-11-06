@@ -28,7 +28,7 @@ Same content as ContentFarmForChromeExtensions.txt, with additional blocking syn
 This site is blocked by other preset filter lists, "I" think it should be freed.<br/>
 
 ### CustomBlockForAdguardHome.txt
-"我"認為應該被解放<br/>
+"我"認為應該被封鎖<br/>
 "I" think it should be blocked.<br/>
 
 ### ScamSiteGetForPuppyScammer.txt
@@ -47,7 +47,7 @@ Taken from Taiwan website Dcard, from the author's article, the fraudulent URL o
 取自Global Anti Scam<br/>
 https://www.globalantiscam.org/<br/>
 
-#ScamSiteGetForTaiwan165.txt
+### ScamSiteGetForTaiwan165.txt
 取自台灣165反詐騙網站<br/>
 Taken from Taiwan 165 anti-fraud website.<br/>
 https://165.npa.gov.tw/<br/>
