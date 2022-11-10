@@ -551,3 +551,5 @@
 ||phaetnszn.com^
 ||pimcoinex.com^
 ||pimcodefi.com^
+! 詐騙購物 https://www.dcard.tw/f/buyonline/p/240478777
+||buycrazy-online.com^
