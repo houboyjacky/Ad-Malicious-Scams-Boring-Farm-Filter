@@ -542,3 +542,12 @@
 ||hepunuo.xyz^
 ! 詐騙交易所 https://www.dcard.tw/f/persona_drmessage/p/240469395
 ||yao11.com^
+! 可疑網站 https://www.dcard.tw/f/talk/p/240476374
+||solomonjenkin2.cn^
+! 詐騙打工 https://www.dcard.tw/f/anti_fraud/p/240474935
+||chcprotw.com^
+! 詐騙交易所 https://www.dcard.tw/f/anti_fraud/p/240426976
+||localtruds.com^
+||phaetnszn.com^
+||pimcoinex.com^
+||pimcodefi.com^
