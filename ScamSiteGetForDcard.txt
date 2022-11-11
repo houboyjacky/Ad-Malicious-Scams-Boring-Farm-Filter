@@ -24,7 +24,6 @@
 /shopee-[a-z0-9]+\.tw/
 # 詐騙賺錢網站 https://www.dcard.tw/f/mood/p/239453488
 ||ebuy8899.com^
-# 詐騙賺錢網站 https://www.dcard.tw/f/mood/p/239453488
 /[a-z0-9]+hotshop\.com/
 # 順億賣場 https://www.dcard.tw/f/mood/p/239453488
 /[a-z0-9]+-tw\.shop/
@@ -226,11 +225,6 @@
 ||appletw.net^
 # 詐騙幣安 https://www.dcard.tw/f/persona_drmessage/p/239908511
 ||biancce.com^
-# 詐騙幣安 https://getdr.com/%E9%96%8B%E9%80%9Apexpay%E6%89%8D%E8%83%BD%E7%B9%BC%E7%BA%8C%E4%BD%BF%E7%94%A8%E5%B9%A3%E5%AE%89%EF%BC%9F%E8%A9%90%E9%A8%99%E8%AD%A6%E5%91%8A%EF%BC%81%E4%BD%BF%E7%94%A8%E5%85%A9%E5%A4%A7%E5%B7%A5/
-||pexpaybn.com^
-||pexbinance.com^
-||bnpexpay.com^
-||pexbian.com^
 # 詐騙開店 https://m.facebook.com/story.php?story_fbid=pfbid02D8ygemr9A21CwhHYDSwTX1Me3gqEmnuPHEPho6Bs257EMSCSCBBNKim5UfQKpUa5l&id=100000504151071
 ||titk-shop.me^
 # 詐騙投資 https://www.dcard.tw/f/anti_fraud/p/239846904
@@ -360,7 +354,6 @@
 ||transitcoin.cc^
 # 偽裝交易所 https://www.dcard.tw/f/persona_drmessage/p/240113637
 ||binence.com^
-||biancce.com^
 # 詐騙虛擬貨幣 https://www.dcard.tw/f/blockchain/p/240125034
 ||yield-farmingpromax.com^
 # 詐騙手遊 https://www.dcard.tw/f/all/p/240099449/b/10
@@ -444,16 +437,12 @@
 ! 詐騙內衣 https://www.dcard.tw/f/girl/p/240298265
 ||storeiysisnkn.club^
 ||storeaajiwyuib.club^
-! 詐騙交易所 https://www.dcard.tw/f/girl/p/240300053
-||localtrrds.com^
 ! 詐騙買賣  https://www.dcard.tw/f/game/p/240301024
 ||yc876.cn^
 ! 詐騙買賣 https://www.dcard.tw/f/buyonline/p/240301239
 ||ztud.club^
 ! 詐騙遊戲交易平台
 ||vy986.cn^
-! 請問這種的通常會是詐騙嗎？ https://www.dcard.tw/f/buyonline/p/240301239
-||ztud.club^
 ! 智能診股神器 是什麼黑科技？是詐騙別上當 https://www.dcard.tw/f/persona_drmessage/p/240304128
 ||grwkx.site^
 ! 詐騙購物網站
@@ -491,8 +480,6 @@
 ||pft336.com^
 ! 詐騙遊戲帳號交易 https://www.dcard.tw/f/talk/p/240365875
 ||shop7899.xyz^
-! 詐騙購物網站 https://www.dcard.tw/f/buyonline/p/240366979
-||best2.online^
 ! 詐騙交易所 https://www.dcard.tw/f/talk/p/240368531
 ||ookvip.com^
 ||wellcion.com^
@@ -550,7 +537,6 @@
 ||localtruds.com^
 ||phaetnszn.com^
 ||pimcoinex.com^
-||pimcodefi.com^
 ! 詐騙購物 https://www.dcard.tw/f/buyonline/p/240478777
 ||buycrazy-online.com^
 ! 旋轉詐騙 https://www.dcard.tw/f/anti_fraud/p/240360391
