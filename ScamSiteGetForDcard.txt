@@ -553,3 +553,5 @@
 ||pimcodefi.com^
 ! 詐騙購物 https://www.dcard.tw/f/buyonline/p/240478777
 ||buycrazy-online.com^
+! 旋轉詐騙 https://www.dcard.tw/f/anti_fraud/p/240360391
+||gyccys.cn^
