@@ -16,9 +16,6 @@
 ! 解放Biggo樂天連結
 @@||affiliate.api.rakuten.com.tw^
 !
-! 解決 Apple AppStore偶爾不能連線的問題
-@@||app-measurement.com^
-!
 ! 縮圖片縮影片無法看
 ! @@||linodeobjects.com^
 !
