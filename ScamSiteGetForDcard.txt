@@ -511,6 +511,7 @@
 ! 詐騙工作 https://www.dcard.tw/f/job/p/240409588
 ||btstxz.com^
 ||nzjcyf.xyz^
+||btdke.com^
 ! 詐騙購物 https://www.dcard.tw/f/anti_fraud/p/240414315
 ||tqlp.club^
 ! 詐騙購物 https://www.dcard.tw/f/anti_fraud/p/240413509
@@ -545,3 +546,6 @@
 ||39937.cn^
 ! 有人遇過這個是詐騙嗎 https://www.dcard.tw/f/anti_fraud/p/240495895
 ||generaetvse.com^
+! 遊戲帳號買賣 https://www.dcard.tw/f/mood/p/240498783
+||2415chat.win
+/[0-9]+chat\.win/
