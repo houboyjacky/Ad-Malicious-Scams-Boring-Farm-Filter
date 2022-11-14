@@ -549,3 +549,5 @@
 ! 遊戲帳號買賣 https://www.dcard.tw/f/mood/p/240498783
 ||2415chat.win
 /[0-9]+chat\.win/
+! 詐騙apple https://www.dcard.tw/f/apple/p/240513389
+||gmx.at^
