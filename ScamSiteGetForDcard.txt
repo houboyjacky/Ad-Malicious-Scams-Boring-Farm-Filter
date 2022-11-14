@@ -551,3 +551,9 @@
 /[0-9]+chat\.win/
 ! 詐騙apple https://www.dcard.tw/f/apple/p/240513389
 ||gmx.at^
+! 詐騙交易 https://www.dcard.tw/f/mood/p/240515319
+||shrtm.nu^
+! 詐騙遊戲帳號 https://www.dcard.tw/f/talk/p/240515122
+||wan62.com^
+! 詐騙賣場 https://www.dcard.tw/f/anti_fraud/p/240513450
+||centriotw.com^
