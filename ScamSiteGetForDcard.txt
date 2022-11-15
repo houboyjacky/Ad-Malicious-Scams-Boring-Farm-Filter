@@ -557,3 +557,5 @@
 ||wan62.com^
 ! 詐騙賣場 https://www.dcard.tw/f/anti_fraud/p/240513450
 ||centriotw.com^
+! 詐騙遊戲帳號 https://www.dcard.tw/f/anti_fraud/p/240521691
+||26335.cn^
