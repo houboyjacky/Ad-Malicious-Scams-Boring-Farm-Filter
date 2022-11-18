@@ -340,3 +340,5 @@
 ||big-money-rush.com^
 ||currencyinfo.net^
 ||ivideo247.com^
+! 疑似奇怪交友軟體
+||vogofruit.com^
