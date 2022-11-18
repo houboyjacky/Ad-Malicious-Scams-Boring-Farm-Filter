@@ -333,3 +333,10 @@
 ||teachablecdn.com^
 ||nianfall.com^
 ||swissquote.com^
+! 詐騙虛擬貨幣
+||bazolis.com^
+||sumagopon.com^
+||oncheou.com^
+||big-money-rush.com^
+||currencyinfo.net^
+||ivideo247.com^
