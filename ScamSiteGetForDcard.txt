@@ -569,3 +569,14 @@
 ||zh5599.cyou^
 ! 詐騙郵資 https://www.dcard.tw/f/ask/p/240542902
 ||gaynorkennedycup.ie^
+! 包裹異常 https://www.dcard.tw/f/buyonline/p/240554966
+||tw-potn.com^
+! 詐騙購物 https://www.dcard.tw/f/job/p/240555248
+||asia-target.com^
+! 旋轉詐騙 https://www.dcard.tw/f/mood/p/240558076
+! 背後網址
+||gbm756.com^
+! 縮網址連帶封鎖
+||5w.fit^
+! 詐騙交易所 https://www.dcard.tw/f/anti_fraud/p/240558167
+||nstwmarket.com^

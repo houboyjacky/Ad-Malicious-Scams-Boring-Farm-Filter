@@ -342,3 +342,10 @@
 ||ivideo247.com^
 ! 疑似奇怪交友軟體
 ||vogofruit.com^
+! 疑似詐騙投資
+||agfafaffaue.com^
+||afeifuturesdiary.com^
+||cyberrecoverygroup.com^
+||taigu.live^
+||jinricaij.live^
+||tsi.st^
