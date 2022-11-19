@@ -580,3 +580,5 @@
 ||5w.fit^
 ! 詐騙交易所 https://www.dcard.tw/f/anti_fraud/p/240558167
 ||nstwmarket.com^
+! 詐騙交易所 https://www.dcard.tw/f/anti_fraud/p/240560402
+||nvexia.vip^
