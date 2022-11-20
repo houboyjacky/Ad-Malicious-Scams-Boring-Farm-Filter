@@ -582,3 +582,5 @@
 ||nstwmarket.com^
 ! 詐騙交易所 https://www.dcard.tw/f/anti_fraud/p/240560402
 ||nvexia.vip^
+! 詐騙投資 https://www.dcard.tw/f/anti_fraud/p/240561452
+||kgi588.com^
