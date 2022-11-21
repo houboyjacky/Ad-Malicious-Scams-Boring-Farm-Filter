@@ -586,3 +586,5 @@
 ||kgi588.com^
 ! 詐騙購物網站 https://www.dcard.tw/f/trending/p/240569135
 ||shoppiwsiha.club^
+! 一頁式購物網站 https://www.dcard.tw/f/whysoserious/p/240569288
+||llzbfw.com^
