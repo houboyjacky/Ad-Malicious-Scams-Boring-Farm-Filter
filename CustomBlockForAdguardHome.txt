@@ -3,7 +3,6 @@
 ||empru.online^
 ||warmthhh.online^
 ! 賭博
-/gdf999.[a-z]+/
 ||1711hy.com^
 ||1768hi.com^
 ||bw777.cc^
@@ -77,7 +76,6 @@
 ||3f-rent.ru^
 ||toptanzarfdunyasi.com^
 ! 怪異的測試
-/fnline\.(info|xyz|vip)/
 ||fnline.info^
 ||fnline.xyz^
 ||fnline.vip^
@@ -371,3 +369,10 @@
 ||lowworm.com^
 ||cepismen.com^
 ||cumenod.com^
+||taiwan-fgjndbm.com^
+||tickmill.online^
+||mizatio.com^
+!
+! 正規化
+/gdf999.[a-z]+/
+/fnline\.(info|xyz|vip)/
