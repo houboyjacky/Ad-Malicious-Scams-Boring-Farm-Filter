@@ -588,3 +588,5 @@
 ||shoppiwsiha.club^
 ! 一頁式購物網站 https://www.dcard.tw/f/whysoserious/p/240569288
 ||llzbfw.com^
+! LINE禮金詐騙 https://www.dcard.tw/f/persona_drmessage/p/240579466
+||line-store-taiwan-pay.com^
