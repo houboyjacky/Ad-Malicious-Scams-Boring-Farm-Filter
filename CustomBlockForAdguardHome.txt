@@ -372,6 +372,18 @@
 ||taiwan-fgjndbm.com^
 ||tickmill.online^
 ||mizatio.com^
+||disruptivebrandnow.com^
+||richfunrg.com^
+||yukai.ceo^
+||twstock1688.xyz^
+||histock1688.com^
+||moneyedu.org.tw^
+||hiplablas.com^
+||maymorbr.com^
+||mbobi.com^
+||turich888.com^
+||vinabitin.com^
+||abbiloce.com^
 !
 ! 正規化
 /gdf999.[a-z]+/
