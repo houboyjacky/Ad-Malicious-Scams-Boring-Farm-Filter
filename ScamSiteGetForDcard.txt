@@ -596,3 +596,5 @@
 ||bitrue.finance^
 ! 詐騙購物 https://www.dcard.tw/f/talk/p/240597489
 ||shoppiwsiha.club^
+! 詐騙購物 https://www.dcard.tw/f/buyonline/p/240602048
+||tokoshop.cc^
