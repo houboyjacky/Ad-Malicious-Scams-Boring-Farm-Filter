@@ -594,3 +594,5 @@
 ||btcex.club^
 ! 詐騙交易所 https://www.dcard.tw/f/blockchain/p/240583083
 ||bitrue.finance^
+! 詐騙購物 https://www.dcard.tw/f/talk/p/240597489
+||shoppiwsiha.club^
