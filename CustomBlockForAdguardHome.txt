@@ -384,6 +384,11 @@
 ||turich888.com^
 ||vinabitin.com^
 ||abbiloce.com^
+||minutefor.shop^
+||kypepto.com^
+||obtlebor.com^
+||oxfordclubtaiwan.com^
+||minutefor.shop^
 !
 ! 正規化
 /gdf999.[a-z]+/
