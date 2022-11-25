@@ -389,6 +389,11 @@
 ||obtlebor.com^
 ||oxfordclubtaiwan.com^
 ||minutefor.shop^
+||taiwan-qwexc.tw^
+||bbwifp.cyou^
+||stockbooks.xyz^
+||oggametop.live^
+||minwgl.live^
 !
 ! 正規化
 /gdf999.[a-z]+/
