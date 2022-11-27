@@ -25,3 +25,5 @@
 ! 微軟驗證失敗
 @@||mobile.pipe.aria.microsoft.com^
 !
+! Spotify E-mail的連結
+@@||wl.spotify.com^

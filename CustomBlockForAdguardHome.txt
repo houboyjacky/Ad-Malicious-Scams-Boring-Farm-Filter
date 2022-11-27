@@ -394,6 +394,15 @@
 ||stockbooks.xyz^
 ||oggametop.live^
 ||minwgl.live^
+||hellostock1688.com^
+||wxfeiq.bond^
+||ac1250c0a4b06682d.awsglobalaccelerator.com^
+||tgfmis.cyou^
+||i3course.de^
+||easywebinar.live^
+||iengkl.cyou^
+||fasterconsultant.com^
+||tane1985.com^
 !
 ! 正規化
 /gdf999.[a-z]+/
