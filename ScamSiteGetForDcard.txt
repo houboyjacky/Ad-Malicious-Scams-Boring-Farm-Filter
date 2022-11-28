@@ -598,6 +598,10 @@
 ||shoppiwsiha.club^
 ! 詐騙購物 https://www.dcard.tw/f/buyonline/p/240602048
 ||tokoshop.cc^
+! 詐騙交易所 https://www.dcard.tw/f/money/p/240619077
+||oyster666.com^
+! Lululemon假網站 https://www.dcard.tw/f/talk/p/240618847
+||lulu-tw.com^
 ! 詐騙虛擬交易所 https://www.dcard.tw/f/anti_fraud/p/240629387
 ||bitmexx02.com^
 ! 詐騙購物網站 https://www.dcard.tw/f/job/p/240631167
