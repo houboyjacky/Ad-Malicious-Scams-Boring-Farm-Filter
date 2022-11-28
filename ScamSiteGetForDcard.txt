@@ -606,3 +606,5 @@
 ||bitmexx02.com^
 ! 詐騙購物網站 https://www.dcard.tw/f/job/p/240631167
 ||yopixcart.com^
+! 詐騙購物 https://www.dcard.tw/f/buyonline/p/240632000
+||shrtm.nu^
