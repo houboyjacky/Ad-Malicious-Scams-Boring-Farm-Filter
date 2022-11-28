@@ -405,6 +405,9 @@
 ||wxfeiq.bond^
 ||fasterconsultant.com^
 ||tane1985.com^
+||zasdasd.club^
+||twstock.tv^
+||ufrsa.shop^
 !
 ! 正規化
 /gdf999.[a-z]+/
