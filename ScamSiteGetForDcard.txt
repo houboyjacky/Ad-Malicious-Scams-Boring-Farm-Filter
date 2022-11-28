@@ -610,3 +610,6 @@
 ||shrtm.nu^
 ! 詐騙蝦皮 https://www.dcard.tw/f/buyonline/p/240634075
 ||tw-sh0pee.vip^
+! 詐騙虛擬交易所 https://www.dcard.tw/f/anti_fraud/p/240634904
+||aachain.club^
+||aachain.*^
