@@ -408,6 +408,9 @@
 ||zasdasd.club^
 ||twstock.tv^
 ||ufrsa.shop^
+||aibiaogu.com^
+||szzhimu.com^
+||realgame.ink^
 !
 ! 正規化
 /gdf999.[a-z]+/
