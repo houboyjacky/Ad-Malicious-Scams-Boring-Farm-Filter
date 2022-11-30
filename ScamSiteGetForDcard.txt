@@ -613,3 +613,5 @@
 ! 詐騙虛擬交易所 https://www.dcard.tw/f/anti_fraud/p/240634904
 ||aachain.club^
 ||aachain.*^
+! 詐騙旋轉購物 https://www.dcard.tw/f/anti_fraud/p/240651601
+||karousell.com^
