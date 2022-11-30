@@ -411,6 +411,21 @@
 ||aibiaogu.com^
 ||szzhimu.com^
 ||realgame.ink^
+||hellostock1688.com^
+||linghittw.com^
+||scnleee.com^
+||lingwh.com^
+||8ujt597.cn^
+||scnleee.com^
+||qianliao.net^
+||qianliaowang.com^
+||qlchat.com^
+||sdkfld.vip^
+||take-yourprizes.life^
+||moncashrig.live^
+||10goneviral.com^
+||tntmedia.cz^
+||blenderelements.com^
 !
 ! 正規化
 /gdf999.[a-z]+/
