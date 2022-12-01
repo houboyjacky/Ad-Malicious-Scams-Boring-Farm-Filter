@@ -615,3 +615,5 @@
 ||aachain.*^
 ! 詐騙旋轉購物 https://www.dcard.tw/f/anti_fraud/p/240651601
 ||karousell.com^
+! 詐騙購物 https://www.dcard.tw/f/buyonline/p/240658077
+||jwpei.com.tw

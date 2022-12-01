@@ -426,6 +426,7 @@
 ||10goneviral.com^
 ||tntmedia.cz^
 ||blenderelements.com^
+||gutanzhijin.com^
 !
 ! 正規化
 /gdf999.[a-z]+/
