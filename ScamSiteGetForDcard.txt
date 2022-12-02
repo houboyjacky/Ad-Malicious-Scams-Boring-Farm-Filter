@@ -617,3 +617,6 @@
 ||karousell.com^
 ! 詐騙購物 https://www.dcard.tw/f/buyonline/p/240658077
 ||jwpei.com.tw
+! 詐騙購物 https://www.dcard.tw/f/anti_fraud/p/240665159
+||tysq.club^
+||outlet.win^
