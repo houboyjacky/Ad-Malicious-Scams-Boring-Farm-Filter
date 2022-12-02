@@ -594,8 +594,6 @@
 ||btcex.club^
 ! 詐騙交易所 https://www.dcard.tw/f/blockchain/p/240583083
 ||bitrue.finance^
-! 詐騙購物 https://www.dcard.tw/f/talk/p/240597489
-||shoppiwsiha.club^
 ! 詐騙購物 https://www.dcard.tw/f/buyonline/p/240602048
 ||tokoshop.cc^
 ! 詐騙交易所 https://www.dcard.tw/f/money/p/240619077
@@ -606,8 +604,6 @@
 ||bitmexx02.com^
 ! 詐騙購物網站 https://www.dcard.tw/f/job/p/240631167
 ||yopixcart.com^
-! 詐騙購物 https://www.dcard.tw/f/buyonline/p/240632000
-||shrtm.nu^
 ! 詐騙蝦皮 https://www.dcard.tw/f/buyonline/p/240634075
 ||tw-sh0pee.vip^
 ! 詐騙虛擬交易所 https://www.dcard.tw/f/anti_fraud/p/240634904
