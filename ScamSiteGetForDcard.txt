@@ -616,3 +616,5 @@
 ! 詐騙購物 https://www.dcard.tw/f/anti_fraud/p/240665159
 ||tysq.club^
 ||outlet.win^
+! 詐騙7-11 https://www.dcard.tw/f/buyonline/p/240674498
+||7-11-com.vip^
