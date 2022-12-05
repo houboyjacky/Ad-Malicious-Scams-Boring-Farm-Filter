@@ -618,3 +618,7 @@
 ||outlet.win^
 ! 詐騙7-11 https://www.dcard.tw/f/buyonline/p/240674498
 ||7-11-com.vip^
+! 詐騙購物 https://www.dcard.tw/f/buyonline/p/240686835
+||bananan.co^
+! 詐騙購物 https://www.dcard.tw/f/anti_fraud/p/240686950
+||suningshop.net^
