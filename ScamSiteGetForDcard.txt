@@ -622,3 +622,5 @@
 ||bananan.co^
 ! 詐騙購物 https://www.dcard.tw/f/anti_fraud/p/240686950
 ||suningshop.net^
+! 詐騙購物 https://www.dcard.tw/f/anti_fraud/p/240689532
+||amz-best.com^
