@@ -3,8 +3,15 @@
 #||easy.co^
 #||mystrikingly.com^
 #||potatomedia.co^
+#||reurl.cc^
+#||t.co^
+#||t.me^
 #||tradingview.com^
 #||zendesk.com^
+/sichcapital[a-z0-9]+.com/
+/trade[0-9]+\.xyz/
+@@uniswap.org^$important
+@@upbit.com^$important
 ||​007r.cn^
 ||004lv.com^
 ||007r.cn^
