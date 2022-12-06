@@ -624,3 +624,8 @@
 ||suningshop.net^
 ! 詐騙購物 https://www.dcard.tw/f/anti_fraud/p/240689532
 ||amz-best.com^
+! 詐騙購物 https://www.dcard.tw/f/talk/p/240696947
+||brileto.com^
+! 詐騙三花網頁 https://www.dcard.tw/f/talk/p/240696762
+||yanfangqq.com^
+||doub8.com^
