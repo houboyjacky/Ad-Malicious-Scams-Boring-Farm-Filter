@@ -15252,7 +15252,7 @@
 ||surlars-pro.com^
 ||surlarss.xyz^
 ||surrendeeninvest.com^
-||surveycake.com^
+#||surveycake.com^
 ||sushi-defi.com^
 ||sushidefimax.com^
 ||sushidefimex.com^
