@@ -549,3 +549,5 @@
 ! 詐騙兼職 https://www.dcard.tw/f/talk/p/240713697
 ||arsaneljc.com^
 ||schedule-stat.com^
+! 詐騙交友 https://www.dcard.tw/f/anti_fraud/p/240714887
+||seadrys.com^
