@@ -32,11 +32,13 @@ This site is blocked by other preset filter lists, "I" think it should be freed.
 "I" think it should be blocked.<br/>
 
 ### ScamSiteGetForPetScamsCom.txt
-From PetScams<br/>
+From PetScams.<br/>
+Pet List Priority 1<br/>
 https://petscams.com/<br/>
 
 ### ScamSiteGetForPuppyScamsOrg.txt
 From PuppyScams.<br/>
+Pet List Priority 2<br/>
 https://puppyscams.org/<br/>
 
 ### ScamSiteGetForDcard.txt

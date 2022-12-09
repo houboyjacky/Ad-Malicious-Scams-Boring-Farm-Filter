@@ -551,3 +551,5 @@
 ||schedule-stat.com^
 ! 詐騙交友 https://www.dcard.tw/f/anti_fraud/p/240714887
 ||seadrys.com^
+! 詐騙打工 https://www.dcard.tw/f/anti_fraud/p/240715163
+||btions.com^
