@@ -31,7 +31,7 @@ This site is blocked by other preset filter lists, "I" think it should be freed.
 "我"認為應該被封鎖<br/>
 "I" think it should be blocked.<br/>
 
-### ScamSiteGetForPuppyScammer.txt
+### ScamSiteGetForPetScamsCom.txt
 From PetScams<br/>
 https://petscams.com/<br/>
 
