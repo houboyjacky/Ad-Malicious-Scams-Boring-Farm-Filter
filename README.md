@@ -31,28 +31,28 @@ This site is blocked by other preset filter lists, "I" think it should be freed.
 "我"認為應該被封鎖<br/>
 "I" think it should be blocked.<br/>
 
-### ScamSiteGetForPetScamsCom.txt
-From PetScams.<br/>
-Pet List Priority 1<br/>
+### ScamSiteForPetScams.txt
+From PetScams and PuppyScams .<br/>
 https://petscams.com/<br/>
-
-### ScamSiteGetForPuppyScamsOrg.txt
-From PuppyScams.<br/>
-Pet List Priority 2<br/>
 https://puppyscams.org/<br/>
 
-### ScamSiteGetForDcard.txt
+### ScamSiteGetFromDcard.txt
 取自台灣網站Dcard，從作者的文章中，取得的詐騙網址<br/>
 Taken from Taiwan website Dcard, from the author's article, the fraudulent URL obtained.<br/>
 
-### ScamSiteGetForGlobalAntiScamOrg.txt
+### ScamSiteGetFromGlobalAntiScamOrg.txt
 取自Global Anti Scam<br/>
 https://www.globalantiscam.org/<br/>
 
-### ScamSiteGetForTaiwan165.txt
+### ScamSiteGetFromTaiwan165.txt
 取自台灣165反詐騙網站<br/>
 Taken from Taiwan 165 anti-fraud website.<br/>
 https://165.npa.gov.tw/<br/>
+
+### ScamSiteGetFromScamAdviserNewsletter.txt
+取自ScamAdviser電子報
+Taken from the ScamAdviser newsletter.<br/>
+https://www.scamadviser.com/<br/>
 
 ### URL_Multi_Redirection.txt
 根據自身經驗遇到的多重轉址網站，大多具有危險<br/>
