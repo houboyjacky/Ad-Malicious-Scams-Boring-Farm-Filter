@@ -644,7 +644,7 @@
 ||absystem.pro^
 ||abwin569.com^
 ||abxexchange.com^
-||ac.cn^
+#||ac.cn^
 ||ac3t41ct9.com^
 ||ac8888.net^
 ||academy^
