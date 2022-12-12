@@ -552,3 +552,7 @@
 ||seadrys.com^
 ! 詐騙打工 https://www.dcard.tw/f/anti_fraud/p/240715163
 ||btions.com^
+! 假網站 https://www.dcard.tw/f/anti_fraud/p/240748571
+||minafashion-store.com^
+! 詐騙遊戲帳號 https://www.dcard.tw/f/mood/p/240099449
+||661.hk^
