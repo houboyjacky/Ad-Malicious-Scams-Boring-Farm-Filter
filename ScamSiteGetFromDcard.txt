@@ -556,3 +556,8 @@
 ||minafashion-store.com^
 ! 詐騙遊戲帳號 https://www.dcard.tw/f/mood/p/240099449
 ||661.hk^
+! 詐騙momo https://www.dcard.tw/f/mood/p/240751966
+||tomomobuyer.com^
+||buyergomomo.com^
+! 詐騙虛擬交易所 https://www.dcard.tw/f/persona_yellowfx/p/240752486
+||tradingweb.io^
