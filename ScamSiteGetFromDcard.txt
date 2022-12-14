@@ -561,3 +561,6 @@
 ||buyergomomo.com^
 ! 詐騙虛擬交易所 https://www.dcard.tw/f/persona_yellowfx/p/240752486
 ||tradingweb.io^
+! 詐騙蝦皮 https://www.dcard.tw/f/buyonline/p/240762547
+||shopee-twtw.shop^
+||shopee-vip.shop^
