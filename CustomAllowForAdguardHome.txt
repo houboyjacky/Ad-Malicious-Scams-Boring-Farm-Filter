@@ -27,3 +27,6 @@
 !
 ! Spotify E-mail的連結
 @@||wl.spotify.com^
+!
+! 解放shopback連結
+@@||shopback.go2cloud.org^

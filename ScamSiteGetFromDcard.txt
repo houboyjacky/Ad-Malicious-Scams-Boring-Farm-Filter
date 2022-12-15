@@ -564,3 +564,12 @@
 ! 詐騙蝦皮 https://www.dcard.tw/f/buyonline/p/240762547
 ||shopee-twtw.shop^
 ||shopee-vip.shop^
+! 詐騙交友 https://www.dcard.tw/f/talk/p/240763648
+||boba.hk^
+! 詐騙買賣 https://www.dcard.tw/f/anti_fraud/p/240762483
+||d9e.cn^
+||klphwuk.cn^
+||putijianiang.cn^
+! 詐騙賣場 https://www.dcard.tw/f/anti_fraud/p/240768615
+||799917.space^
+||packer.digital^

@@ -1,6 +1,7 @@
 ! 疑似詐騙或不良的網站
 /fnline\.(info|xyz|vip)/
 /gdf999.[a-z]+/
+||*.cyou^
 ||0857online.net
 ||10goneviral.com^
 ||11ks.xyz^
@@ -11,6 +12,7 @@
 ||2022wangcai.com^
 ||2447hthty.com^
 ||3f-rent.ru^
+||4rich.org^
 ||4yuebix.com^
 ||520xingyun.com^
 ||52cj.info^
@@ -70,6 +72,7 @@
 ||bv888.cc^
 ||bw777.cc^
 ||c8tw.com^
+||caijing.live^
 ||caijing.world^
 ||caijing8.xyz^
 ||carbon2.shop^
@@ -86,9 +89,11 @@
 ||classtw.com^
 ||classtwdash.com^
 ||clevelandmusicians.com^
+||clickfunnels.com^
 ||cmtrade.com^
 ||comfortableife.com^
 ||copyrichacademy.com^
+||crazymonkey.lpages.co^
 ||cstockschool.com^
 ||cumenod.com^
 ||currencyinfo.net^
@@ -99,6 +104,7 @@
 ||dahwainternational.com^
 ||datesrud.com^
 ||dayone1.live^
+||deadlinefunnel.com^
 ||dennis-888.com^
 ||deviltoolee.com^
 ||dfpschool.com^
@@ -111,6 +117,7 @@
 ||dp369.net^
 ||drbuttar.lt.acemlnb.com^
 ||drich01.com^
+||dsports-rg.com^
 ||dutils.com^
 ||easywebinar.live^
 ||ecomironman.com^
@@ -122,6 +129,8 @@
 ||embalagensupbox.com.br^
 ||emeritus.org.cn^
 ||empru.online^
+||energysevencourse.com^
+||entiosat.com^
 ||ewin.godaddysites.com^
 ||ezplayrg.com^
 ||f4mut.com^
@@ -135,6 +144,7 @@
 ||fatlamb168.com^
 ||favianbayer44.wixsite.com^
 ||ferrososymetales.com^
+||ffffgame.com^
 ||firstrade.com^
 ||fnline.info^
 ||fnline.vip^
@@ -149,6 +159,7 @@
 ||gfdt999.com^
 ||ggthxptw.com^
 ||gm1888.net^
+||gogo123.com^
 ||gomarketing.com.tw^
 ||goodpracticemining.com^
 ||gotrade.com.tw^
@@ -163,9 +174,11 @@
 ||hass.win^
 ||hazz.win^
 ||hcuwc.shop^
+||heartwealthy.com^
 ||hello178.com^
 ||hellostock1688.com^
 ||helpcenter04.com^
+||herefun.us^
 ||hiplablas.com^
 ||histock1688.com^
 ||hoin1799.com^
@@ -232,6 +245,7 @@
 ||lp.cross-contents.com^
 ||l-pa.cc^
 ||maroc1001nuits.com^
+||mastermysan.com^
 ||maxwell-tech.net^
 ||maymorbr.com^
 ||mbl-systemapp.com^
@@ -251,6 +265,7 @@
 ||musicaltheatreschool.com^
 ||mwbangtw.com^
 ||mycard520.com.tw^
+||mygod.tw^
 ||nbatop50.com^
 ||needfunpartner.me^
 ||nellyreyrey.com^
@@ -312,7 +327,9 @@
 ||sporting7.com^
 ||square.site^
 ||ssharelove.us^
+||stackpathcdn.com^
 ||startingedu.tw^
+||steamboxs.com^
 ||stock499.com^
 ||stockbooks.xyz^
 ||streetboard-shop.com^
@@ -332,6 +349,7 @@
 ||tbtgof.com^
 ||teachable.cloud^
 ||teachablecdn.com^
+||terryfu.com^
 ||tfporg.lt.acemlnb.com^
 ||thevisualisation.fr^
 ||tickmill.online^
@@ -340,6 +358,7 @@
 ||top558.net^
 ||toptanzarfdunyasi.com^
 ||touzixuetan.com^
+||tradeepro.space^
 ||traderoadultimate.com^
 ||ts178.com.tw^
 ||ts7777.com.tw^
@@ -358,6 +377,7 @@
 ||ukwwx.com^
 ||uradni.shop^
 ||utube.tw^
+||v0985004622.com^
 ||vicollege.cc^
 ||vicollege.com.tw^
 ||vinabitin.com^
@@ -386,6 +406,7 @@
 ||xtrendspeed.com^
 ||xtspd.com^
 ||y6585.com^
+||yaeclass.com^
 ||yafengmaoyi.com^
 ||yahoocaijing.com^
 ||younit6.com^
@@ -397,21 +418,4 @@
 ||zsveejops.com^
 ||zunlong-wangzhi.com^
 ||金大發娛樂城.tw^
-||tradeepro.space^
-||v0985004622.com^
-||deadlinefunnel.com^
-||stackpathcdn.com^
-||energysevencourse.com^
-||clickfunnels.com^
-||yaeclass.com^
-||entiosat.com^
-||4rich.org^
-||mygod.tw^
-||heartwealthy.com^
-||caijing.live^
-||mastermysan.com^
-||herefun.us^
-||ffffgame.com^
-||steamboxs.com^
-||gogo123.com^
-||*.cyou^
+||dsports-rg.com^
