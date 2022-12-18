@@ -587,3 +587,8 @@
 ||love-buy-taiwan.com^
 ! 詐騙投資 https://www.dcard.tw/f/anti_fraud/p/240786983
 ||marathonpro.xyz^
+! 詐騙交易不成功 https://www.dcard.tw/f/mood/p/240793413
+||tw-kefu.vip^
+||tw-*.vip^
+||7-11.com-711.vip^
+||com-711.vip^
