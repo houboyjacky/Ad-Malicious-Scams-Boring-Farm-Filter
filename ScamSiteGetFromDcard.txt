@@ -592,3 +592,7 @@
 ||tw-*.vip^
 ||7-11.com-711.vip^
 ||com-711.vip^
+! 詐騙投資 https://www.dcard.tw/f/anti_fraud/p/240797418
+||richenkents.com^
+! 詐騙交易所 https://www.dcard.tw/f/anti_fraud/p/240795269
+||taiwanstartr.com^
