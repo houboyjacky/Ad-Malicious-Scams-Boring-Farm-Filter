@@ -596,3 +596,5 @@
 ||richenkents.com^
 ! 詐騙交易所 https://www.dcard.tw/f/anti_fraud/p/240795269
 ||taiwanstartr.com^
+! 詐騙交易所 https://www.dcard.tw/f/money/p/240802067
+||qoo9888.com^
