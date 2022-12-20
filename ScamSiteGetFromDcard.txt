@@ -598,3 +598,9 @@
 ||taiwanstartr.com^
 ! 詐騙交易所 https://www.dcard.tw/f/money/p/240802067
 ||qoo9888.com^
+! 詐騙貼圖 https://www.dcard.tw/f/persona_drmessage/p/240808949
+||taiwan2023.net^
+||linestore.org^
+||lineoutlet.org^
+||store-tw.net^
+||line-store-free.com^
