@@ -227,7 +227,7 @@
 ||leo5288.com^
 ||leots88.com.tw^
 ||lihi.tv^
-||lihi1.com^
+!||lihi1.com^
 ||lihi1.me^
 ||lindayang725.com^
 ||linghittw.com^
