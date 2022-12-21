@@ -608,3 +608,5 @@
 ||newnow.shop^
 ! 詐騙遊戲帳號 https://www.dcard.tw/f/talk/p/240811025
 ||meilu66.com^
+! 偽裝全家商店 https://www.dcard.tw/f/persona_drmessage/p/240817715
+||waeytsety.wixsite.com^
