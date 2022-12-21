@@ -73,3 +73,16 @@
 ||me2.do^
 ||silkyyincline.com^
 ||us-knpes.us^
+/approvedurls[0-9]+.info/
+||approvedurls5.info^
+||approvedurls7.info^
+||approvedurls8.info^
+||approvedurls9.info^
+||lienz-logistic.com^
+||shipdlstics.info^
+||americanexpress-securitty.com^
+||americanexpress.bid^
+||netemployers.com^
+||subserouslsdgroundable.com^
+||connaughtindustries.com^
+||jewelryoutletmall.com^
