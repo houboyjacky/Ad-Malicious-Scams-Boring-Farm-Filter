@@ -604,3 +604,7 @@
 ||lineoutlet.org^
 ||store-tw.net^
 ||line-store-free.com^
+! 危險購物 https://www.dcard.tw/f/anti_fraud/p/240815716
+||newnow.shop^
+! 詐騙遊戲帳號 https://www.dcard.tw/f/talk/p/240811025
+||meilu66.com^

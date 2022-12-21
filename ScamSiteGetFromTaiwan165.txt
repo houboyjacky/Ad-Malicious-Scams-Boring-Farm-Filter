@@ -77,7 +77,6 @@
 /vip[a-z0-9]+fx\.com/
 /wandataw[a-z0-9]*\.com/
 /waytec.+\.com/
-/wayteci[a-z]+\.com/
 /week-tradepro\..+/
 /weisen[a-z0-9]*\.com/
 /whgj[0-6]+\.(com|cc)/
