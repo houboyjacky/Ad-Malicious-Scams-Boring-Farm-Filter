@@ -610,3 +610,6 @@
 ||meilu66.com^
 ! 偽裝全家商店 https://www.dcard.tw/f/persona_drmessage/p/240817715
 ||waeytsety.wixsite.com^
+! 偽裝馬斯克 https://www.dcard.tw/f/persona_drmessage/p/240825982
+||elongsgifts.net^
+||elongsgifts.*^
