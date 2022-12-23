@@ -617,3 +617,4 @@
 ||carhoo.com.br^
 ||nanotch.com^
 /.*nanotch.com/
+||embalagensupbox.com.br^
