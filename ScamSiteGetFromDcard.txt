@@ -613,3 +613,7 @@
 ! 偽裝馬斯克 https://www.dcard.tw/f/persona_drmessage/p/240825982
 ||elongsgifts.net^
 ||elongsgifts.*^
+! 詐騙FB帳號密碼 https://www.dcard.tw/f/3c/p/240831266
+||carhoo.com.br^
+||nanotch.com^
+/.*nanotch.com/
