@@ -618,3 +618,7 @@
 ||nanotch.com^
 /.*nanotch.com/
 ||embalagensupbox.com.br^
+! 疑似詐騙 https://www.dcard.tw/f/relationship/p/240853210
+||tiky.hk^
+! 詐騙裸照 https://www.dcard.tw/f/girl/p/240853989
+||ffgshh.simdif.com^
