@@ -30,3 +30,6 @@
 !
 ! 解放shopback連結
 @@||shopback.go2cloud.org^
+!
+! 解放Medium點擊
+@@||medium-*.intercom-clicks.com^
