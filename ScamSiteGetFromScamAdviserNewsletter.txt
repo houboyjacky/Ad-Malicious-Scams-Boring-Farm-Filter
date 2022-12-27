@@ -42,7 +42,7 @@
 ||pemsv30.net^
 ||premiuminsuranceassets.com^
 ||prizeforsurveys.net^
-||sendgrid.net^
+!||sendgrid.net^ 縮網址遭到阻擋 to.imagenomic.com
 ||serviceshippingups.com^
 ||shadowcpa.com^
 ||siasky.net^
