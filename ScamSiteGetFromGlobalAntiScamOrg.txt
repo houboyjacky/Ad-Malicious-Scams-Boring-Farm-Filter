@@ -5988,7 +5988,6 @@
 ||collinswold.com^
 ||colnbery.online^
 ||colnnarketcap.com^
-||com^
 ||comacie.app^
 ||comadrvnecd.com^
 ||comcomcomcom.org^
