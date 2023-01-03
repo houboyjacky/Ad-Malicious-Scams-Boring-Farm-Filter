@@ -442,3 +442,6 @@
 ||honeymoon.gleeze.com^
 ||isnotdomain440059159.com^
 /isnotdomain[0-9]+\.com/
+||livechat337.xyz^
+||livechatxx.xyz^
+||fun2chatx.xyz^
