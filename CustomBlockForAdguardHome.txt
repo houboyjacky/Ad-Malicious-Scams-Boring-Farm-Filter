@@ -433,3 +433,12 @@
 ||zsveejops.com^
 ||zunlong-wangzhi.com^
 ||金大發娛樂城.tw^
+||grapeking.com.tw^
+||35bio.com.tw^
+||colegioquiropracticochile.cl^
+||wwwpost-govtw.sytes.net^
+/www-?post-?gov-?tw\.sytes\.net/
+||isgdanismanligi.com.tr^
+||honeymoon.gleeze.com^
+||isnotdomain440059159.com^
+/isnotdomain[0-9]+\.com/
