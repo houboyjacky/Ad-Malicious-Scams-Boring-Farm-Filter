@@ -7728,7 +7728,6 @@
 ||east-century.info^
 ||eastpac.live^
 ||easttd.com^
-||easy.co^
 ||easyaffinityfinance.com^
 ||easy-bitcoin.online^
 ||easy-coin.org^
