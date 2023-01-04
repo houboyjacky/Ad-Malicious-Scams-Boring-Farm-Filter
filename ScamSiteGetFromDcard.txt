@@ -638,3 +638,6 @@
 ||shoppevip.com^
 ! 詐騙交易所 https://www.dcard.tw/f/buyonline/p/240920816
 ||taiwanstartrpro.com^
+! 詐騙購物網站 https://www.dcard.tw/f/anti_fraud/p/240923589
+||cateno.shop^
+||cateno.com.br^
