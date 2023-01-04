@@ -644,3 +644,5 @@
 ! 詐騙賭博 https://www.dcard.tw/f/anti_fraud/p/240907559
 ||js0008.cn^
 /js[0-9]+\.cn/
+! 詐騙賣家 https://www.dcard.tw/f/whysoserious/p/240927058
+||user204620.psee.io^
