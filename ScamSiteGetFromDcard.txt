@@ -641,3 +641,6 @@
 ! 詐騙購物網站 https://www.dcard.tw/f/anti_fraud/p/240923589
 ||cateno.shop^
 ||cateno.com.br^
+! 詐騙賭博 https://www.dcard.tw/f/anti_fraud/p/240907559
+||js0008.cn^
+/js[0-9]+\.cn/
