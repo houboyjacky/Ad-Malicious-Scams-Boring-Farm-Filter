@@ -1316,7 +1316,7 @@
 ||wdomra.com^
 ||wealthfree1688.xyz^
 ||webwmk.com^
-||weebly.com^
+!||weebly.com^
 ||week-trademax.xyz^
 ||week-tradepro.xyz^
 ||wei011.com^

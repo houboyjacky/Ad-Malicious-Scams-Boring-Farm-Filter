@@ -1,6 +1,8 @@
 ! 疑似詐騙或不良的網站
 /fnline\.(info|xyz|vip)/
 /gdf999.[a-z]+/
+/isnotdomain[0-9]+\.com/
+/www-?post-?gov-?tw\.sytes\.net/
 ||*.cyou^
 ||*.ml^
 ||*.top^
@@ -13,6 +15,7 @@
 ||2013unique.com.tw^
 ||2022wangcai.com^
 ||2447hthty.com^
+||35bio.com.tw^
 ||3f-rent.ru^
 ||4rich.org^
 ||4yuebix.com^
@@ -94,6 +97,7 @@
 ||clevelandmusicians.com^
 ||clickfunnels.com^
 ||cmtrade.com^
+||colegioquiropracticochile.cl^
 ||comfortableife.com^
 ||copyrichacademy.com^
 ||crazymonkey.lpages.co^
@@ -158,6 +162,7 @@
 ||fnline.xyz^
 ||franklin.com.tw^
 ||fuckyoudouble.com^
+||fun2chatx.xyz^
 ||ga888.tw^
 ||gamebatinfo.com^
 ||gatherich01.com^
@@ -170,6 +175,7 @@
 ||gomarketing.com.tw^
 ||goodpracticemining.com^
 ||gotrade.com.tw^
+||grapeking.com.tw^
 ||gtodm.com.tw^
 ||gubbancie.com^
 ||gugufafacai.com^
@@ -190,6 +196,7 @@
 ||histock1688.com^
 ||hoin1799.com^
 ||homebusinessgold.com^
+||honeymoon.gleeze.com^
 ||hotelacuariotulum.com^
 ||huaxiu4.com^
 ||hublaud.com^
@@ -206,6 +213,8 @@
 ||interioraddiction.com^
 ||ipfs.io^
 ||ironfanmarketing.com^
+||isgdanismanligi.com.tr^
+||isnotdomain440059159.com^
 ||ivideo247.com^
 ||izito.com.tw^
 ||jajpholdings.lt.acemlnb.com^
@@ -246,6 +255,8 @@
 ||lingwh.com^
 ||linkebin.nl^
 ||liseamall.com^
+||livechat337.xyz^
+||livechatxx.xyz^
 ||londi.net^
 ||londonatitsbest.com^
 ||longislandhomecenter.com^
@@ -333,6 +344,7 @@
 ||shortof.com^
 ||simonhouse.com.tw^
 ||sin624922.wixsite.com^
+||sjawnmgh3232.com^
 ||skyinvest01.com^
 ||sleepyinvest.com^
 ||sp5168.com^
@@ -415,6 +427,7 @@
 ||wiocdsd.world^
 ||wof888.blogspot.com^
 ||wof888.com^
+||wwwpost-govtw.sytes.net^
 ||wxfeiq.bond^
 ||wyd2.com.tw^
 ||xc-bet.com^
@@ -433,15 +446,3 @@
 ||zsveejops.com^
 ||zunlong-wangzhi.com^
 ||金大發娛樂城.tw^
-||grapeking.com.tw^
-||35bio.com.tw^
-||colegioquiropracticochile.cl^
-||wwwpost-govtw.sytes.net^
-/www-?post-?gov-?tw\.sytes\.net/
-||isgdanismanligi.com.tr^
-||honeymoon.gleeze.com^
-||isnotdomain440059159.com^
-/isnotdomain[0-9]+\.com/
-||livechat337.xyz^
-||livechatxx.xyz^
-||fun2chatx.xyz^
