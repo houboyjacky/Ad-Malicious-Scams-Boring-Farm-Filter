@@ -632,5 +632,9 @@
 ||movie-city.site^
 ! 詐騙交易所 https://www.dcard.tw/f/talk/p/240872517
 ||meetwmrk.com^
-! https://www.dcard.tw/f/buyonline/p/240920816
+! 詐騙購物網 https://www.dcard.tw/f/buyonline/p/240920816
 ||shopee-sell.com^
+||shoppevip.oss-cn-hongkong.aliyuncs.com^
+||shoppevip.com^
+! 詐騙交易所 https://www.dcard.tw/f/buyonline/p/240920816
+||taiwanstartrpro.com^
