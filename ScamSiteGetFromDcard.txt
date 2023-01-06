@@ -646,3 +646,8 @@
 /js[0-9]+\.cn/
 ! 詐騙賣家 https://www.dcard.tw/f/whysoserious/p/240927058
 ||user204620.psee.io^
+! 詐騙賣家 https://www.dcard.tw/f/talk/p/240938511
+||tokopediashopping.com^
+! 詐騙Pchome https://www.dcard.tw/f/anti_fraud/p/240081025
+||viptopc24.com^
+||news-pc24.com^
