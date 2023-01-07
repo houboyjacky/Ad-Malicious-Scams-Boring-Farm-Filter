@@ -651,3 +651,5 @@
 ! 詐騙Pchome https://www.dcard.tw/f/anti_fraud/p/240081025
 ||viptopc24.com^
 ||news-pc24.com^
+! 詐騙購物 https://www.dcard.tw/f/buyonline/p/240939803
+||w-delivery.cfd^
