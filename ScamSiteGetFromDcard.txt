@@ -653,3 +653,8 @@
 ||news-pc24.com^
 ! 詐騙購物 https://www.dcard.tw/f/buyonline/p/240939803
 ||w-delivery.cfd^
+! 詐騙投資 https://www.dcard.tw/f/mood/p/240953203
+||exness67.com^
+/exness[0-9]+\.com/
+!Line假貼圖 https://www.dcard.tw/f/mood/p/240965996
+||okpro.us^
