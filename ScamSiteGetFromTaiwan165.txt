@@ -1,6 +1,6 @@
 ! 民眾通報假投資(博弈)詐騙網站 https://165.npa.gov.tw
-#||weebly.com^
 #||cdn77.org^
+#||weebly.com^
 /17[-]?play[a-z0-9]*\.com/
 /17shop[a-z0-9]*\.com/
 /24pchome[a-z0-9]*\.com/
@@ -204,6 +204,7 @@
 ||am90.xyz^
 ||amazon.cn^
 ||amazontwshop.com^
+||ambvt.com^
 ||americamerrillynch1914.com^
 ||am-g.live^
 ||amg666.net^
@@ -253,6 +254,7 @@
 ||axiex.net^
 ||axswykfllcom^
 ||axswyklbjncom^
+||axtdjbe.com^
 ||ayjybtc.com^
 ||azyshopping.tw^
 ||b818.vip^
@@ -272,6 +274,7 @@
 ||banvemy.space^
 ||baolaizhengjuan.tw^
 ||baoyy.com^
+||bbcoinccex.com^
 ||bbncmd.com^
 ||bboilyf.com^
 ||bbva1999.co-profile^
@@ -347,6 +350,7 @@
 ||btctrad.net^
 ||btigx.com^
 ||btkakjndeqs.com^
+||btminepx.com^
 ||btminka.com^
 ||btminlu.com^
 ||btsiw.com^
@@ -433,6 +437,7 @@
 ||dakagorex.com^
 ||dax178.com^
 ||day4wld.com^
+||day4wld.cyou^
 ||dbrej.xyz^
 ||dcmforexs.com^
 ||ddixf.com^
@@ -522,6 +527,7 @@
 ||faggk.xyz^
 ||fanbtctw.*^
 ||fanbtctw.site^
+||fastprofita.com^
 ||fb197.com^
 ||fbsexcoin.com^
 ||fbsforetw.com^
@@ -570,6 +576,7 @@
 ||fnglc.com^
 ||forexo24.com^
 ||forextw.xyz^
+||forgomomo.com^
 ||formomoshop.com^
 ||forshopmomo.com^
 ||fpmarkotast.com^
@@ -607,6 +614,7 @@
 ||gamocv.com^
 ||ga-nar.com^
 ||gardalas.com^
+||gateiomax-defi.com^
 ||gbsvl.com^
 ||gdp36.net^
 ||gdp369.net^
@@ -616,6 +624,7 @@
 ||geminital.com^
 ||gemnsff.com^
 ||generation.com^
+||genernnysen.com^
 ||geneskkye.com^
 ||gennertvse.com^
 ||gennertvsue.com^
@@ -732,6 +741,7 @@
 ||hsydl.com^
 ||htzyiy.com^
 ||huanan.life^
+||hugbgv.online^
 ||huifucc.com^
 ||huifura.com^
 ||huobi.com^
@@ -839,6 +849,7 @@
 ||js8999.net^
 ||jsc168.net^
 ||jsdranbing.com^
+||jsunexchange.com^
 ||jsunglobal.com^
 ||jsunholdings.com^
 ||jsunstock.com^
@@ -852,6 +863,7 @@
 ||kai1688.net^
 ||kaiyitw.com^
 ||karfordsecurities.com^
+||karfordtrade.com^
 ||kasjxehjqas.com^
 ||kbai.tw^
 ||kcfq.cc^
@@ -874,9 +886,11 @@
 ||kinfunggroup.com^
 ||kinfungmkt.com^
 ||kion.rocks^
+||kion.work^
 ||kitnvest.co^
 ||kjfjekjeqhw.com^
 ||kjghll.com^
+||kjsjjdbqweva.com^
 ||kkdaiday.com^
 ||kkrtrad.pw^
 ||kkrtrading.com^
@@ -898,6 +912,7 @@
 ||kwsfzqvod.com^
 ||kwsnxwl.tw^
 ||kwszqvod.com^
+||kxnn1knej1kn.com^
 ||kyeiy.com^
 ||kyneg.xyz^
 ||lalaadx.cn^
@@ -905,6 +920,7 @@
 ||larcmap.online^
 ||lazada-tw.com^
 ||lbcgoal.com^
+||lbkti.com^
 ||lcgmarket886.com^
 ||ldznqe.com^
 ||ledokvl.com^
@@ -912,10 +928,12 @@
 ||lehinsecurities.*
 ||lehinsecurities.com^
 ||lehinstock.com^
+||lehintrade.com^
 ||lenswo.com^
 ||leo777vertexxs.com^
 ||letiantw.xyz^
 ||levelclubs.net^
+||lgenjnjaknnwa.com^
 ||lhbet88.com^
 ||lianfa168.net^
 ||lianhuida.com^
@@ -925,6 +943,7 @@
 ||livetraders.vip^
 ||livzaz.com^
 ||lkda172.com^
+||llshopping-tw.com^
 ||lmexseut.com^
 ||love5168.com^
 ||lovebuyasia.com^
@@ -951,7 +970,9 @@
 ||mddar.xyz^
 ||meaxt.com^
 ||medisou.cloud^
+||medisou.com^
 ||medisou.vip^
+||medisou.*^
 ||meetwmrk.com^
 ||mega1024.com^
 ||megatoken app^
@@ -961,9 +982,11 @@
 ||meiseng11.com^
 ||memhds.com^
 ||mengkeyu.com^
+||metadsva.com^
 ||metaquotes.net^
 ||metaverseprotrade.com^
 ||mexa-vip.one^
+||mexc-ex.com^
 ||mexcmax.com^
 ||mfcteam.com^
 ||mffeex.com^
@@ -992,6 +1015,7 @@
 ||momo1778ngenasia.net^
 ||momotofun.com^
 ||money4u.vip^
+||move-mall.com^
 ||moxcakd.com^
 ||moxcbwx.com^
 ||moxcdel.com^
@@ -1007,6 +1031,7 @@
 ||mtmq15.com^
 ||mugames.tw^
 ||muhoeascoin.com^
+||muhorscoin.com^
 ||mustafa.com^
 ||mxtrad.net^
 ||mxyge.com^
@@ -1050,6 +1075,7 @@
 ||nvjtheyquwy.com^
 ||nxhuanyi.com^
 ||nxncbdhasd.com^
+||nymextw.com^
 ||nysemt4.com^
 ||nyseuronexts.xyz^
 ||oandartw.com^
@@ -1075,6 +1101,7 @@
 ||patrlg.com^
 ||payironn.com^
 ||pbvix.com^
+||pc24vip.com^
 ||pchomeshopping.store^
 ||pdoraafx.com^
 ||pemfhr.com^
@@ -1089,6 +1116,7 @@
 ||plcgcapital.co^
 ||plcgexchang.com^
 ||plglobals.co^
+||pmxdbdpd.tokyo^
 ||pncgroup201.com^
 ||pncgrouppzb101.com^
 ||pncgrouppzb200.com^
@@ -1105,6 +1133,7 @@
 ||pvp101.com^
 ||pxppjrr.cn^
 ||pzkd3.com^
+||qftxc.com^
 ||qh356.tw^
 ||qh539.tw^
 ||qiaoanjin.com^
@@ -1139,6 +1168,7 @@
 ||risheng688.com^
 ||rishenqc.com^
 ||riverroadam.com^
+||rjqwjkekqla.com^
 ||rlparii.com^
 ||rmiex.com^
 ||rnfenqwndams.com^
@@ -1157,6 +1187,7 @@
 ||rwlmm.com^
 ||safoforextw.com^
 ||saignaltrade.online^
+||sales0-mall.com^
 ||sanfmore.com^
 ||saturdaylivetw.com^
 ||saxobanktw.com^
@@ -1182,6 +1213,7 @@
 ||sgold.online^
 ||shboran.tw^
 ||shdhfjakshd.com^
+||sheeldmarket1.com^
 ||shejlo.com^
 ||shenghaointernational168.com^
 ||shfjsu.com^
@@ -1192,6 +1224,7 @@
 ||shopeevex.com^
 ||shopfaa.com^
 ||shopgool.com^
+||shoppevip4.com^
 ||shopping-jf.com^
 ||shopwky.com/m^
 ||shopwnn.com^
@@ -1204,6 +1237,7 @@
 ||sjeifk.tw^
 ||sjwajndawja.com^
 ||sjxqzvv.cn^
+||sk9988.com^
 ||skdeefehqw.com^
 ||sketoo.com^
 ||sklbank.com^
@@ -1213,12 +1247,15 @@
 ||smnhus.com^
 ||snthui.com^
 ||snxdefiplus.com^
+||snxprodefi.com^
 ||snxtradepro.com^
 ||socktkf.com^
 ||soejfyu.com^
 ||solidsb.com^
 ||sotwex.com^
 ||southnan.com^
+||speedfxwin.com^
+||speedstar.site^
 ||speedwindltd.com^
 ||spgex.com^
 ||spgex.net^
@@ -1229,9 +1266,11 @@
 ||srofx.com^
 ||srwfi.com^
 ||ssysp54.xyz^
+||starhailn.com^
 ||starhalau.com^
 ||starhalle.com^
 ||starhalln.com^
+/starha[a-z]+\.com/
 ||starkj88.com^
 ||starlux.design^
 ||starlux.today^
@@ -1328,6 +1367,7 @@
 ||troneei.com^
 ||trsptw.com^
 ||tseiou.com^
+||tsendim.com^
 ||ttuokeglobal.com^
 ||tu9qx.cn^
 ||tuancne.com^
@@ -1353,6 +1393,7 @@
 ||tyc66780.com^
 ||tzbets88.net^
 ||u0y0.cn^
+||u2ubs.com^
 ||uecgc.com^
 ||ueugv.com^
 ||ufo.tw^
@@ -1407,14 +1448,17 @@
 ||webwmk.com^
 ||week-trademax.xyz^
 ||week-tradepro.xyz^
+||wehkl.xyz^
 ||wei011.com^
 ||welfu.org^
 ||weshinemkt.com^
+||wexxex.com^
 ||wfinve.com^
 ||wh668888.com^
 ||whakoex.com^
 ||whgj66.com^
 ||whgj68.com^
+||whgj988.com^
 ||whs399.com^
 ||wikifx.com^
 ||win911.net^
@@ -1548,3 +1592,4 @@
 ||zyczs88.com^
 ||zzhbaoo1788.com^
 ||zz-hk.co^
+||zznuojin.com^

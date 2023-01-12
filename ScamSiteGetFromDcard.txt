@@ -656,5 +656,9 @@
 ! 詐騙投資 https://www.dcard.tw/f/mood/p/240953203
 ||exness67.com^
 /exness[0-9]+\.com/
-!Line假貼圖 https://www.dcard.tw/f/mood/p/240965996
+! Line假貼圖 https://www.dcard.tw/f/mood/p/240965996
 ||okpro.us^
+! 詐騙蝦皮 https://www.dcard.tw/f/buyonline/p/240985608
+||shopeetwg.com^
+! 網購詐騙 https://www.dcard.tw/f/talk/p/240983958
+||zeze.pet^
