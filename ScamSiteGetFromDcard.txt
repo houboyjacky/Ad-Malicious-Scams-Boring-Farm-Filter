@@ -667,3 +667,24 @@
 ! 詐騙投資 https://www.dcard.tw/f/anti_fraud/p/240995963
 ||day4wld.cyou^
 ||day4wld.*^
+! 一頁式網站 https://www.dcard.tw/f/relationship/p/240999958
+||mtdroppship.com^
+||mescroll.com^
+||0797seo.cn^
+||cailutong168.com^
+||itool.store^
+||baibaisong.cn^
+||cloudoer.com^
+||cdm2m.com^
+||51tangpiao.com^
+||pusdn.com^
+||shenmaziyuan.com^
+||swiper.com.cn^
+||oschina.net^
+||yjllive.com^
+||cnblogs.com^
+||wx186.cn^
+||zscnb.gitee.io^
+||baibaisong.cn^
+||namenb.com^
+||miit.gov.cn^
