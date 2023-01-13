@@ -690,3 +690,5 @@
 ||miit.gov.cn^
 ! 詐騙投資 https://www.dcard.tw/f/financial/p/241000691
 ||zue6688.com^
+||nymex2023tw.com^
+/nymex.+tw\.com/
