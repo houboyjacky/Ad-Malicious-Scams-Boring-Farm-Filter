@@ -664,3 +664,6 @@
 ||zeze.pet^
 ! 詐騙交友 https://www.dcard.tw/f/talk/p/240988436
 ||mystorywithyou.com^
+! 詐騙投資 https://www.dcard.tw/f/anti_fraud/p/240995963
+||day4wld.cyou^
+||day4wld.*^
