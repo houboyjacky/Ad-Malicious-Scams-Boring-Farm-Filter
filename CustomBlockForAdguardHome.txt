@@ -1,7 +1,10 @@
 ! 疑似詐騙或不良的網站
+/ee[0-9]+\.com/
+/fk[0-9]+\.com/
 /fnline\.(info|xyz|vip)/
 /gdf999.[a-z]+/
 /isnotdomain[0-9]+\.com/
+/so[0-9]+\.com/
 /www-?post-?gov-?tw\.sytes\.net/
 ||*.cyou^
 ||*.ml^
@@ -15,6 +18,7 @@
 ||2013unique.com.tw^
 ||2022wangcai.com^
 ||2447hthty.com^
+||344k.com^
 ||35bio.com.tw^
 ||3f-rent.ru^
 ||4everland.xyz^
@@ -142,6 +146,9 @@
 ||edition-eltern.com^
 ||editmysite.com^
 ||ee1299.com^
+||ee1488.com^
+||ee1499.com^
+||ee1899.com^
 ||ee2021.com^
 ||elijahyundt.wixsite.com^
 ||embalagensupbox.com.br^
@@ -168,6 +175,7 @@
 ||ffffgame.com^
 ||firr-store.com^
 ||firstrade.com^
+||fk677.com^
 ||fnline.info^
 ||fnline.vip^
 ||fnline.xyz^
@@ -181,6 +189,7 @@
 ||gaylehgregory.com^
 ||gdf999.com^
 ||gfdt999.com^
+||ggseo7.com^
 ||ggthxptw.com^
 ||gm1888.net^
 ||gogo123.com^
@@ -358,16 +367,21 @@
 ||sdkfld.vip^
 ||sedu.tw^
 ||seductivevisions.com^
+||sh03.vip^
 ||sh1768.net^
 ||sh1788.net^
 ||shopline.tw^
 ||shortof.com^
+||shufabu6000.com^
 ||simonhouse.com.tw^
 ||sin624922.wixsite.com^
 ||sjawnmgh3232.com^
 ||skyinvest01.com^
 ||sleepyinvest.com^
+||so1299.com^
+||so196.com^
 ||sp5168.com^
+||spk3296.com^
 ||sporting7.com^
 ||square.site^
 ||ssharelove.us^
@@ -384,6 +398,7 @@
 ||susanacarpintero.com^
 ||swissquote.com^
 ||szzhimu.com^
+||t248.com^
 ||tad002.godaddysites.com^
 ||taigu.live^
 ||taiwan-fgjndbm.com^
@@ -391,10 +406,12 @@
 ||taiwan-uhcxfr.com^
 ||take-yourprizes.life^
 ||tane1985.com^
+||tb888.online^
 ||tbtgof.com^
 ||teachable.cloud^
 ||teachablecdn.com^
 ||tedcleari.shop^
+||telegram996.com^
 ||terryfu.com^
 ||tfporg.lt.acemlnb.com^
 ||thevisualisation.fr^
@@ -410,6 +427,7 @@
 ||touzixuetan.com^
 ||tradeepro.space^
 ||traderoadultimate.com^
+||trafficmediia.net^
 ||ts178.com.tw^
 ||ts7777.com.tw^
 ||tsi.st^
@@ -448,6 +466,7 @@
 ||weshare.hk^
 ||weshare.org^
 ||wfamilygo.com^
+||win666.tw^
 ||wiocdsd.world^
 ||wof888.blogspot.com^
 ||wof888.com^

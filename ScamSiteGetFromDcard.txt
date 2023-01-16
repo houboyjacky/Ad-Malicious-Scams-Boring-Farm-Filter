@@ -692,3 +692,11 @@
 ||zue6688.com^
 ||nymex2023tw.com^
 /nymex.+tw\.com/
+! 詐騙購物 https://www.dcard.tw/f/mood/p/241003120
+||nerdytw.com^
+! 詐騙虛擬幣投資 https://www.dcard.tw/f/anti_fraud/p/241014156
+||midtd.com^
+! 詐騙虛擬幣投資 https://www.dcard.tw/f/anti_fraud/p/241006916
+||snxdefi-max.com^
+||snxprodefi.com^
+/snx.+\.com/
