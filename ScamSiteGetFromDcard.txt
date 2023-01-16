@@ -700,3 +700,10 @@
 ||snxdefi-max.com^
 ||snxprodefi.com^
 /snx.+\.com/
+! 詐騙購物網站 https://www.dcard.tw/f/anti_fraud/p/241018167
+||mycheap-home.online^
+||cheap-homese.fun^
+||cheap-homese.vip^
+||gsxt.gov.cn^
+! 詐騙偽裝8591 https://www.dcard.tw/f/anti_fraud/p/240606412
+||8591i.fit^
