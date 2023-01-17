@@ -710,6 +710,7 @@
 ! 詐騙投資 https://www.dcard.tw/f/financial/p/241000691
 ||zue6688.com^
 ||nymex2023tw.com^
+||nymex2022tw.com^
 /nymex.+tw\.com/
 ! 詐騙購物 https://www.dcard.tw/f/mood/p/241003120
 ||nerdytw.com^

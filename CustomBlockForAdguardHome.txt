@@ -199,7 +199,9 @@
 ||grapeking.com.tw^
 ||gtodm.com.tw^
 ||gubbancie.com^
+||gugu.fund^
 ||gugufafacai.com^
+||gugufund.com^
 ||guntests.lt.acemlnb.com^
 ||gutan.live^
 ||gutanzhijin.com^
@@ -209,6 +211,7 @@
 ||hazz.win^
 ||hcuwc.shop^
 ||heartwealthy.com^
+||hecons01.com^
 ||hello178.com^
 ||hellostock1688.com^
 ||helpcenter04.com^
@@ -234,6 +237,7 @@
 ||insin.com.tw^
 ||insurblessing.com^
 ||interioraddiction.com^
+||internationallmedia.net^
 ||ipfs.io^
 ||ironfanmarketing.com^
 ||isgdanismanligi.com.tr^
