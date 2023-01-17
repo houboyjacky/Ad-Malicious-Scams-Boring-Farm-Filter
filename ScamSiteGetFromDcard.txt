@@ -730,3 +730,7 @@
 ! 詐騙網購 https://www.dcard.tw/f/relationship/p/241007865
 ||asisasos.com^
 ||bacn.shop^
+! 詐騙慈善 https://www.dcard.tw/f/mood/p/241027053
+||angrandcharityassociation2006.com^
+||xuansiwei.com^
+||mengb123.com^
