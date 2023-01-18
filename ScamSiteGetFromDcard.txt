@@ -747,3 +747,9 @@
 #境外支付網站封鎖
 ||cropay.com^
 ||ipasspay.biz^
+! 詐騙購物平台 https://www.dcard.tw/f/buyonline/p/241033206
+||shoppmjebgg.store^
+||tbserp.com^
+||osstbs.shop^
+||trust-provider.cn^
+||iowune.com^
