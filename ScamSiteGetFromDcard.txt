@@ -734,3 +734,16 @@
 ||angrandcharityassociation2006.com^
 ||xuansiwei.com^
 ||mengb123.com^
+! 詐騙交友 https://www.dcard.tw/f/relationship/p/239241786
+||twsweeting.com^
+||kupaisky.com^
+||navyfm.com^
+||kupaiserver.com^
+! 詐騙交友網站 https://www.dcard.tw/f/relationship/p/238615127
+||getwishome.com^
+||wshtmltool.com^
+||twmet.com^
+||singlestw.com^
+#境外支付網站封鎖
+||cropay.com^
+||ipasspay.biz^
