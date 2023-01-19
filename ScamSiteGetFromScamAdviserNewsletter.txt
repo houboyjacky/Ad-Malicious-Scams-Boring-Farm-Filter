@@ -2,10 +2,12 @@
 !||sendgrid.net^ 縮網址遭到阻擋 to.imagenomic.com
 /approvedurls[0-9]+.info/
 ||abfinanceppc.com^
+||akashgowdaracing.com^
 ||alkaliserelettermantellone.com^
 ||allecotte-cargo.com^
 ||aluzdasestrelas.org^
 ||amazon.net^
+||amazonaws.com^
 ||americanexpress-securitty.com^
 ||americanexpress.bid^
 ||anhchuai04.wixsite.com^
@@ -17,6 +19,7 @@
 ||approvedurls9.info^
 ||ashenyheade.com^
 ||astin-cargo.com^
+||bankusanet.com^
 ||billingupdatesca.live^
 ||birdsmarket.us^
 ||bourbonwhiskeyforsale.shop^
@@ -33,6 +36,7 @@
 ||ddlnk.net^
 ||dubaitailoring.com^
 ||eb4.us^
+||eigbox.net^
 ||emamuto.com^
 ||energybills-grantscheme.com^
 ||f0undlth3r3.link^
@@ -44,6 +48,7 @@
 ||ikuxopo.com^
 ||ilenoyo.com^
 ||illyimport.com^
+||ipfs.io^
 ||ipfs.io^
 ||irefuvo.com^
 ||jewelryoutletmall.com^
@@ -105,6 +110,7 @@
 ||traplightly.com^
 ||traun-logistic.com^
 ||trendytrainer.com^
+||ubohovu.com^
 ||uev.wtf^
 ||unlockyouhip.shop^
 ||us-knpes.us^
@@ -117,3 +123,4 @@
 ||webmunarohh.com^
 ||whimsical.com^
 ||windows.net^
+||yougetgreen.com^

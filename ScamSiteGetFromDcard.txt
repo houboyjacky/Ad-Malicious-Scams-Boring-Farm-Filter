@@ -753,3 +753,7 @@
 ||osstbs.shop^
 ||trust-provider.cn^
 ||iowune.com^
+! IG網購詐騙 https://www.dcard.tw/f/mood/p/241034836
+||adamwitheve.com^
+! 詐騙投資 https://www.dcard.tw/f/anti_fraud/p/241035242
+||coinvxsl.com^

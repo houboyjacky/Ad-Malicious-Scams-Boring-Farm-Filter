@@ -466,6 +466,7 @@
 ||web01.me^
 ||weikh.shop^
 ||weily.com.tw^
+||weilyyeh.com.tw^
 ||welovetrump.lt.acemlnb.com^
 ||weshare.hk^
 ||weshare.org^
