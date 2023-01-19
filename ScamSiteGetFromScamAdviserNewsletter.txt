@@ -7,7 +7,7 @@
 ||allecotte-cargo.com^
 ||aluzdasestrelas.org^
 ||amazon.net^
-||amazonaws.com^
+#||amazonaws.com^
 ||americanexpress-securitty.com^
 ||americanexpress.bid^
 ||anhchuai04.wixsite.com^
@@ -122,5 +122,5 @@
 ||walesgerbils.com^
 ||webmunarohh.com^
 ||whimsical.com^
-||windows.net^
+#||windows.net^
 ||yougetgreen.com^
