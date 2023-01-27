@@ -6,6 +6,7 @@
 /isnotdomain[0-9]+\.com/
 /so[0-9]+\.com/
 /www-?post-?gov-?tw\.sytes\.net/
+#||fontawesomes.com^
 ||*.cyou^
 ||*.ml^
 ||*.top^
@@ -67,6 +68,7 @@
 ||bdfpfb2x.com^
 ||belanjatupperware.com^
 ||bellostock1688.com^
+||betterlife520vip.com^
 ||beyondpeak168.com^
 ||bgoani.co^
 ||bhmtsff.com^
@@ -78,6 +80,7 @@
 ||blogdodge.shop^
 ||blueskymonday.com^
 ||boaa.it^
+||bokmega.com^
 ||boma101.com^
 ||bombmy.live^
 ||boviose.com^
@@ -114,6 +117,7 @@
 ||comfortableife.com^
 ||copyrichacademy.com^
 ||crazymonkey.lpages.co^
+||csogmes168.com^
 ||cstockschool.com^
 ||cumenod.com^
 ||currencyinfo.net^
@@ -158,6 +162,7 @@
 ||enrfb.store^
 ||entiosat.com^
 ||errpau.bond^
+||etherue.com^
 ||ewin.godaddysites.com^
 ||ezplayrg.com^
 ||f4mut.com^
@@ -188,6 +193,7 @@
 ||gatherich01.com^
 ||gaylehgregory.com^
 ||gdf999.com^
+||genesisquantify.com^
 ||gfdt999.com^
 ||ggseo7.com^
 ||ggthxptw.com^
@@ -216,15 +222,19 @@
 ||hellostock1688.com^
 ||helpcenter04.com^
 ||herefun.us^
+||hfm.com^
 ||hiplablas.com^
 ||histock1688.com^
 ||hoin1799.com^
+||holidayinnresorts.com^
 ||homebusinessgold.com^
 ||honeymoon.gleeze.com^
 ||hotelacuariotulum.com^
 ||huaxiu4.com^
 ||hublaud.com^
 ||husevon.com^
+||hw111.net^
+||hw16555.net^
 ||hywzgk.bond^
 ||hyx050129.com^
 ||i3course.de^
@@ -242,6 +252,7 @@
 ||ironfanmarketing.com^
 ||isgdanismanligi.com.tr^
 ||isnotdomain440059159.com^
+||ivenor.tw^
 ||ivideo247.com^
 ||izito.com.tw^
 ||jajpholdings.lt.acemlnb.com^
@@ -273,6 +284,7 @@
 ||l-pa.cc^
 ||lala329.com^
 ||lasvegascondotelsales.com^
+||latestrends01.com^
 ||lavisualisation.lt.acemlnb.com^
 ||learnguitarplaying.com^
 ||learningpa.cc^
@@ -330,6 +342,7 @@
 ||obtlebor.com^
 ||odesrn.com^
 ||ofa55.net^
+||ofa77.net^
 ||oggametop.live^
 ||oncheou.com^
 ||onenightsrsr.wiki^
@@ -338,6 +351,7 @@
 ||online808.com^
 ||onlinerichmkt.com^
 ||opticalilusion.com^
+||oriental-hotels.com^
 ||outlet.win^
 ||oxfordclubtaiwan.com^
 ||pcgws.com^
@@ -368,6 +382,7 @@
 ||safefunhere.me^
 ||sanlinew.com^
 ||scnleee.com^
+||scratchhappyiness.com^
 ||sdkfld.vip^
 ||sedu.tw^
 ||seductivevisions.com^
@@ -384,6 +399,7 @@
 ||sleepyinvest.com^
 ||so1299.com^
 ||so196.com^
+||sobileis.com^
 ||sp5168.com^
 ||spk3296.com^
 ||sporting7.com^
@@ -400,6 +416,7 @@
 ||sujiecp.com^
 ||sumagopon.com^
 ||susanacarpintero.com^
+||suucceessfultrruust.shop^
 ||swissquote.com^
 ||szzhimu.com^
 ||t248.com^
@@ -432,6 +449,7 @@
 ||tradeepro.space^
 ||traderoadultimate.com^
 ||trafficmediia.net^
+||trxcitymalaysia.com^
 ||ts178.com.tw^
 ||ts7777.com.tw^
 ||tsi.st^
@@ -458,6 +476,7 @@
 ||vitabox.com.tw^
 ||vk090.cn^
 ||vogofruit.com^
+||vorosce.com^
 ||vszxm.com^
 ||vuhnvf.bond^
 ||warmthhh.online^

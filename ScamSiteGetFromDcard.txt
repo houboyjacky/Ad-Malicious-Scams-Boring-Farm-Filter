@@ -757,3 +757,8 @@
 ||adamwitheve.com^
 ! 詐騙投資 https://www.dcard.tw/f/anti_fraud/p/241035242
 ||coinvxsl.com^
+! NFT詐騙 https://www.dcard.tw/f/blockchain/p/241050997
+||megabasenft.net^
+! 交友詐騙 https://www.dcard.tw/f/anti_fraud/p/241073669
+||alliedeagleinc.com^
+||smartsuppchat.com^
