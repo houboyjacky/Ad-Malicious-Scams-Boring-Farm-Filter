@@ -762,3 +762,5 @@
 ! 交友詐騙 https://www.dcard.tw/f/anti_fraud/p/241073669
 ||alliedeagleinc.com^
 ||smartsuppchat.com^
+! 詐騙投資 https://www.dcard.tw/f/anti_fraud/p/241103681
+||ziiniteks.com^
