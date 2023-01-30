@@ -1,11 +1,11 @@
-! 2023/01/19 Update
+! 2023/01/30 Update
 ! Dcard JasonY https://www.dcard.tw/@yen7716888
 ! Global-Anti-Scam-Org-全球反詐騙組織 https://www.globalantiscam.org/
 @@||coinbase.com^$important
 @@||coinrule.com^$important
-@@||lithiumbatteryrepaircenter.business.site^
-@@uniswap.org^$important
-@@upbit.com^$important
+@@||lithiumbatteryrepaircenter.business.site^$important
+@@||uniswap.org^$important
+@@||upbit.com^$important
 /17-?play[0-9]+\.com/
 /17shopp[a-z]\.com/
 /aava-[a-z]+\.[a-z]/
@@ -223,6 +223,7 @@
 ||35.184.249.115^
 ||350524.cn^
 ||3523443.space^
+||354785.com^
 ||356339c.com^
 ||35901125.com^
 ||360apexmining.com^
@@ -2009,6 +2010,7 @@
 ||b3809ecubs.net^
 ||b4uexchange.com^
 ||b66588.com^
+||b9bc.cc^
 ||b9szex.net^
 ||b9szex.xyz^
 ||b9xb.xyz^
@@ -2338,6 +2340,8 @@
 ||betinvestkr.com^
 ||betrade.one^
 ||bets688.com^
+||betterme-fasting.com^
+||betterme.world^
 ||bettermentexchange.com^
 ||betterwayexpress.com^
 ||betterxbit.com^
@@ -3953,6 +3957,7 @@
 ||brokerinvestment.com^
 ||brookinvestments.net^
 ||brookstonefinance.org^
+||brothertakingball.com^
 ||brownstonefinance.org^
 ||brtrade.world^
 ||brunm.com^
@@ -4362,6 +4367,7 @@
 ||bzex.me^
 ||bzex.pro^
 ||bzexpro.com^
+||bznk.com^
 ||bzoneg.vip^
 ||bzzmt.com^
 ||c-expertersaccess.com^
@@ -9195,6 +9201,7 @@
 ||f2pfit.com^
 ||f5415567.xyz^
 ||f968502.xyz^
+||fa8football.com^
 ||fabcons.cn^
 ||face-forex.com^
 ||facebookbit1.com^
@@ -11893,6 +11900,7 @@
 ||hourlycryptoprofits.com^
 ||house-of-btc.com^
 ||houseethereum.com^
+||houseloan.tw^
 ||houx.net^
 ||howcrypto.org^
 ||howwpc.com^
@@ -13736,6 +13744,7 @@
 ||lntokem.shopim^
 ||lo2e.xyz^
 ||loan-tw.org^
+||loantw.cc^
 ||lobstr.co^
 ||localbitcoins.com^
 ||localbtcdeal.com^
@@ -14838,6 +14847,7 @@
 ||moonvextrade.com^
 ||more-achievertrading.online^
 ||moreinvestin.website^
+||morelongz.com^
 ||morenovainvestments.com^
 ||morenweforme.com^
 ||morganglobal-pro.com^
@@ -15880,6 +15890,7 @@
 ||orca-capitalinvestment.ltd^
 ||orchidtraders.net^
 ||ordeforex.com^
+||order888.com^
 ||ordersforex.com^
 ||ordesys.com^
 ||oreanafx.com^
@@ -16757,6 +16768,7 @@
 ||qh758.tw^
 ||qh927.tw^
 ||qh9o.app^
+||qhgs.xyz^
 ||qhsh2.com^
 ||qianmingwww.com^
 ||qicsex.com^
@@ -18355,6 +18367,7 @@
 ||stfxmarkets.com^
 ||stgamem.com^
 ||stic2021.com^
+||stickershop23.com^
 ||stidebprom.vip^
 ||stipnex.com^
 ||stmff.com^
@@ -18875,6 +18888,7 @@
 ||texhaninvestments.com^
 ||teyycy.tw^
 ||tf1688.net^
+||tfafa.online^
 ||tfcfootball.com^
 ||tfcm-protrading.com^
 ||tfcvcoin.com^
@@ -19901,6 +19915,7 @@
 ||ttpkw.cc^
 ||ttshop5678.vip^
 ||ttsmarkets.com^
+||tu123.app^
 ||tu123.co^
 ||tucchi-fx.com^
 ||tuentor.com^
@@ -19946,6 +19961,7 @@
 ||twbaojian.com^
 ||twbbw.com^
 ||twbpxkai.com^
+||twca.com.tw^
 ||twcav.com^
 ||twcf.xyz^
 ||twcoin.xyz^
@@ -21734,6 +21750,8 @@
 ||xzgj999.com^
 ||xziqd.xyz^
 ||xzzm.xyz^
+||y-school.thinkific.com^
+||y.school^
 ||y3589.com^
 ||y55321.com^
 ||y69988.com^
