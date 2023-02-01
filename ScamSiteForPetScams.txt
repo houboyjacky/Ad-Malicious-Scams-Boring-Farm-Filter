@@ -1,5 +1,6 @@
 ! Pet Scams List 2022/12/09 on https://petscams.com/
 ! Puppy Scams List 2023/02/01 on https://puppyscams.org/
+#檢查google.com^
 ||1goldenretrieverpuppyspot.com^
 ||1rhodesianridgeback.com^
 ||1stclassbloodhoundpuppies.com^
@@ -4254,7 +4255,6 @@
 ||christinahsdobermanpinscherhome.com^
 ||christinasminiteacupchihuahuahome.com^
 ||christinebassethoundpuppies.com^
-||﻿christinebassethoundpuppies.com^
 ||christineroycehoundpuppies.com^
 ||christineyorkies.com^
 ||christmasakita.com^
@@ -9027,7 +9027,6 @@
 ||goodwilltoypuppies.com^
 ||goodwinpugpuppies.com^
 ||goodwinpuppies.com^
-||google.com^
 ||gooldendoodleusa.com^
 ||gordonabyssiniancathome.com^
 ||gordonpomeranian.com^
