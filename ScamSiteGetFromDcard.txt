@@ -623,6 +623,8 @@
 ||lineoutlet.org^
 ||store-tw.net^
 ||line-store-free.com^
+||hssui37490.wixsite.com^
+/hssui[0-9]+\.wixsite\.com/
 ! 危險購物 https://www.dcard.tw/f/anti_fraud/p/240815716
 ||newnow.shop^
 ! 詐騙遊戲帳號 https://www.dcard.tw/f/talk/p/240811025
@@ -764,3 +766,8 @@
 ||smartsuppchat.com^
 ! 詐騙投資 https://www.dcard.tw/f/anti_fraud/p/241103681
 ||ziiniteks.com^
+! 詐騙蝦皮 https://www.dcard.tw/f/buyonline/p/241122573
+||shxiapee.com^
+||shopeeo.com^
+! 詐騙虛擬幣 https://www.dcard.tw/f/anti_fraud/p/241117859
+||loboexmaxdefi.com^
