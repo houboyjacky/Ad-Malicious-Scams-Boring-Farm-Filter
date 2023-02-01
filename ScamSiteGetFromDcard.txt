@@ -769,5 +769,11 @@
 ! 詐騙蝦皮 https://www.dcard.tw/f/buyonline/p/241122573
 ||shxiapee.com^
 ||shopeeo.com^
+||xinrongshe.com^
+||xiaoee.com^
+||003970.com^
+#有大陸學校的連結紀錄
+||ynjgy.com^
+||ceaie.edu.cn^
 ! 詐騙虛擬幣 https://www.dcard.tw/f/anti_fraud/p/241117859
 ||loboexmaxdefi.com^
