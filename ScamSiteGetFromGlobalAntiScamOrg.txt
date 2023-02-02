@@ -35,6 +35,7 @@
 #||t.co^
 #||t.me^
 #||tradingview.com^
+#||twca.com.tw^
 #||zendesk.com^
 ||0-casinos.org^
 ||004lv.com^
@@ -19961,7 +19962,6 @@
 ||twbaojian.com^
 ||twbbw.com^
 ||twbpxkai.com^
-||twca.com.tw^
 ||twcav.com^
 ||twcf.xyz^
 ||twcoin.xyz^

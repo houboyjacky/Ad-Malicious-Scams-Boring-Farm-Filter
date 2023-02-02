@@ -777,3 +777,9 @@
 ||ceaie.edu.cn^
 ! 詐騙虛擬幣 https://www.dcard.tw/f/anti_fraud/p/241117859
 ||loboexmaxdefi.com^
+! 詐騙簡訊 https://www.dcard.tw/f/anti_fraud/p/241124589
+||a2gz.com^
+||ipost-tw.sbs^
+! 詐騙簡訊 https://www.dcard.tw/f/anti_fraud/p/241124108
+||xfrsh.com^
+||ipost-tw.sbs^

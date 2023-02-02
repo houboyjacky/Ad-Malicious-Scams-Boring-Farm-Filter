@@ -32,6 +32,7 @@
 ||charle-stanley.co.uk^
 ||citybottles.us^
 ||classicwineryshop.com^
+||comprehensiveliquor.com^
 ||connaughtindustries.com^
 ||courire.org^
 ||ddlnk.net^
@@ -44,6 +45,7 @@
 ||f0undlth3re.link^
 ||fleek.co^
 ||fortune-logist.com^
+||globalwhiskyline.com^
 ||go2affm.com^
 ||holdorstoorin.store^
 ||ikuxopo.com^
@@ -62,6 +64,7 @@
 ||lightyspatter.com^
 ||lolameraz.com^
 ||margo-logistic.com^
+||mayshoesstore.com.br^
 ||mbhogl.info^
 ||me2.do^
 ||mentakstatute.com^
