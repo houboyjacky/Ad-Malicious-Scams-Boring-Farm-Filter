@@ -783,3 +783,9 @@
 ! 詐騙簡訊 https://www.dcard.tw/f/anti_fraud/p/241124108
 ||xfrsh.com^
 ||ipost-tw.sbs^
+! 詐騙約會網站 https://www.dcard.tw/f/anti_fraud/p/241166626
+||xsbaby.com^
+! 詐騙投資 https://www.dcard.tw/f/anti_fraud/p/241167695
+||xtexchanges.com^
+||vipqqxz89.xyz^
+||vipqqff1.xyz^
