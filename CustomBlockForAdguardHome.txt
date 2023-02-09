@@ -5,6 +5,7 @@
 /gdf999.[a-z]+/
 /isnotdomain[0-9]+\.com/
 /so[0-9]+\.com/
+/taiwan-[a-z]+\.(com|tw)/
 /www-?post-?gov-?tw\.sytes\.net/
 #||fontawesomes.com^
 ||*.cyou^
@@ -283,6 +284,7 @@
 ||ivenor.tw^
 ||ivideo247.com^
 ||izito.com.tw^
+||jackchangcrypto.com^
 ||jackpresident.com.tw^
 ||jajpholdings.lt.acemlnb.com^
 ||jdf88.com^
@@ -467,6 +469,7 @@
 ||taac3955.com^
 ||tad002.godaddysites.com^
 ||taigu.live^
+||taiwan-etrvok.com^
 ||taiwan-fgjndbm.com^
 ||taiwan-qwexc.tw^
 ||taiwan-uhcxfr.com^
