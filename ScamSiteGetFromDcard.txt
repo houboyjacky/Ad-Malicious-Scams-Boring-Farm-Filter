@@ -792,3 +792,8 @@
 ||vipqq*.xyz^
 ! 蝦皮詐騙 https://www.dcard.tw/f/buyonline/p/241184412
 ||shopeeriwg.com^
+! 詐騙虛擬貨幣 https://www.dcard.tw/f/anti_fraud/p/241185559
+||xeddq659.com^
+! 詐騙蝦皮
+||shopeetuwg.com^
+||user2046020.psee.io^
