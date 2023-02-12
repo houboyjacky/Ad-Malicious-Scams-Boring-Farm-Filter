@@ -800,3 +800,8 @@
 ! 黃金期貨詐騙 https://www.dcard.tw/f/job/p/241185911
 ||goldstar.expert^
 ||goldstar.directory^
+! 詐騙賭博 https://www.dcard.tw/f/ask/p/241195544
+||leoicns.com^
+||kuofp.com^
+! 詐騙郵局 https://www.dcard.tw/f/anti_fraud/p/241200830
+||twpldru.cc^

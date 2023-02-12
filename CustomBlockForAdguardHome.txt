@@ -8,6 +8,7 @@
 /taiwan-[a-z]+\.(com|tw)/
 /www-?post-?gov-?tw\.sytes\.net/
 #||fontawesomes.com^
+#||phicdn.net^
 ||*.cyou^
 ||*.ml^
 ||*.top^
@@ -80,7 +81,9 @@
 ||bgoani.co^
 ||bhmtsff.com^
 ||biaogutty.com^
+||biasyoga.com^
 ||big-money-rush.com^
+||bingohome.xyz^
 ||bitby01.com^
 ||blendedsearch.com^
 ||blenderelements.com^
@@ -303,6 +306,7 @@
 ||ju-77.net^
 ||jukixvd.shop^
 ||julia-jbs.com^
+||kanda-stock.com^
 ||kangstock.com^
 ||katrina2929.wixsite.com^
 ||kelbyone.lt.acemlnb.com^
@@ -330,6 +334,7 @@
 ||lihi1.cc^
 ||lihi1.com^
 ||lihi1.me^
+||limcunrs.shop^
 ||lindayang725.com^
 ||linghittw.com^
 ||lingwh.com^
@@ -365,6 +370,7 @@
 ||mpg168.com^
 ||mrceo.online^
 ||mts.news^
+||mttsig.online^
 ||musicaltheatreschool.com^
 ||mw1688.net^
 ||mwbangtw.com^
@@ -401,7 +407,6 @@
 ||pcgws.com^
 ||pdpdsum.com^
 ||pentobarbitalgroup.com^
-||phicdn.net^
 ||piu11.com^
 ||pory.app^
 ||presentlinks.com^
