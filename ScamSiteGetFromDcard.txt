@@ -807,3 +807,8 @@
 ||twpldru.cc^
 ! 網購詐騙 https://www.dcard.tw/f/anti_fraud/p/241209785
 ||gmarket.life^
+! 詐騙虛擬幣 https://www.dcard.tw/f/persona_shutterhouboy/p/241115700
+||mt5pro.lol^
+||mtpro5.xyz^
+||mt5pro.*^
+||mtpro5.*^
