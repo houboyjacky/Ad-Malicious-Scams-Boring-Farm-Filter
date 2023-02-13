@@ -805,3 +805,5 @@
 ||kuofp.com^
 ! 詐騙郵局 https://www.dcard.tw/f/anti_fraud/p/241200830
 ||twpldru.cc^
+! 網購詐騙 https://www.dcard.tw/f/anti_fraud/p/241209785
+||gmarket.life^
