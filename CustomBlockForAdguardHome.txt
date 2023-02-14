@@ -1,4 +1,7 @@
-! 疑似詐騙或不良的網站
+!  疑似詐騙或不良的網站
+! 過度引用 s3-symbol-logo.tradingview.com
+! 過度引用 widgetdata.tradingview.com
+! 過度引用 www.tradingview-widget.com
 /ee[0-9]+\.com/
 /fk[0-9]+\.com/
 /fnline\.(info|xyz|vip)/
@@ -95,6 +98,7 @@
 ||bokmega.com^
 ||boma101.com^
 ||bombmy.live^
+||bookxess.com^
 ||boviose.com^
 ||bp.blogspot.com^
 ||britishlooseleaf.com
@@ -190,6 +194,7 @@
 ||errpau.bond^
 ||etherue.com^
 ||ewin.godaddysites.com^
+||exxpperttrrrusst.shop^
 ||ezplayrg.com^
 ||f4mut.com^
 ||fa8168.net^
@@ -267,6 +272,7 @@
 ||holidayinnresorts.com^
 ||homebusinessgold.com^
 ||honeymoon.gleeze.com^
+||honeyslashie.com^
 ||hotelacuariotulum.com^
 ||houstorys.shop^
 ||huaxiu4.com^
@@ -415,6 +421,7 @@
 ||pentobarbitalgroup.com^
 ||piu11.com^
 ||pory.app^
+||pprroductiveprroggram.shop^
 ||presentlinks.com^
 ||professionalinternetutilities.com^
 ||promotinglearning.com^
@@ -441,7 +448,9 @@
 ||richfunrg.com^
 ||richslash.com^
 ||rm16888.com^
+||royalgaming777.com^
 ||ruihejade.com^
+||s3-symbol-logo.tradingview.com^
 ||safefunhere.me^
 ||sanlinew.com^
 ||scnleee.com^
@@ -473,6 +482,7 @@
 ||steamboxs.com^
 ||stock499.com^
 ||stockbooks.xyz^
+||stockszxy.live^
 ||streetboard-shop.com^
 ||studygoda.site^
 ||suinoic.com^
@@ -565,6 +575,7 @@
 ||weshare.hk^
 ||weshare.org^
 ||wfamilygo.com^
+||widgetdata.tradingview.com^
 ||win666.tw^
 ||wiocdsd.world^
 ||wof888.blogspot.com^
@@ -572,6 +583,7 @@
 ||wokqo.shop^
 ||wqajz2022.com^
 ||wssjhss.com^
+||www.tradingview-widget.com^
 ||wwwpost-govtw.sytes.net^
 ||wxfeiq.bond^
 ||wyd2.com.tw^
