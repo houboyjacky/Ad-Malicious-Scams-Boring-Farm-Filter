@@ -22,7 +22,7 @@
 /[a-z0-9]+gov.(tw|xyz|me|tv|store|shop|com)/
 ||bhnaku.xyz^
 ||benhayee.xyz^
-! 旋轉詐騙一覽
+# 旋轉詐騙一覽
 /tw[a-z0-9-]*carousel[a-z0-9-]*\.(com|xyz|tw)/
 /carousel[a-z0-9-]*tw\.(com|xyz)/
 # 旋轉詐騙 https://www.dcard.tw/f/buyonline/p/239656198
@@ -863,3 +863,5 @@
 ||vestradefx.com^
 ||wsbroker.io^
 ||zuitex.com^
+! 詐騙交友 https://www.dcard.tw/f/relationship/p/241231936
+||usd-mall1.com^
