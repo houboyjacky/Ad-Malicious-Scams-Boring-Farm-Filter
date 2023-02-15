@@ -867,3 +867,9 @@
 ||usd-mall1.com^
 ! 詐騙打工 https://www.dcard.tw/f/job_search/p/241234267
 ||yrxtw.com^
+! 詐騙快遞 https://www.dcard.tw/f/persona_drmessage/p/241234667
+||twpldru.com^
+||twpldrs.com^
+/twpldr[a-z]\.com/
+||track-tw074.com^
+/track-tw[0-9]+\.com/
