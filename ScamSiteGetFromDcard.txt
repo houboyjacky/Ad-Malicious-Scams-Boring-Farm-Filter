@@ -875,5 +875,8 @@
 /track-tw[0-9]+\.com/
 ! 詐騙虛擬交易所 https://www.dcard.tw/f/money/p/241235820
 ||ziiearaties.com^
+||ziieatieas.com^
+||ziieatieks.com^
+/ziiea[a-z]+\.com/
 ! 詐騙縮網址 https://www.dcard.tw/f/mood/p/241236951
 ||d1.mk^
