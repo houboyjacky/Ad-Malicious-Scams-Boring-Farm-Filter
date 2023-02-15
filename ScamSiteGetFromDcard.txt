@@ -865,3 +865,5 @@
 ||zuitex.com^
 ! 詐騙交友 https://www.dcard.tw/f/relationship/p/241231936
 ||usd-mall1.com^
+! 詐騙打工 https://www.dcard.tw/f/job_search/p/241234267
+||yrxtw.com^
