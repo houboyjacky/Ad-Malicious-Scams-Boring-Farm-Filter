@@ -391,6 +391,7 @@
 ||mw1688.net^
 ||mwbangtw.com^
 ||mwbdsb.com^
+||my5353.com^
 ||mycard520.com.tw^
 ||mygod.tw^
 ||nbatop50.com^
@@ -553,6 +554,7 @@
 ||twstock1688.xyz^
 ||twstocke.com^
 ||twstocknews.com^
+||twtouzi.shop^
 ||twtzq.com^
 ||tysq.club^
 ||ufrsa.shop^
