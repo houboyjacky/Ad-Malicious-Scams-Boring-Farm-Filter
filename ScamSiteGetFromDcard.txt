@@ -884,3 +884,11 @@
 ||tb-tbb.com^
 ! 詐騙購物 https://www.dcard.tw/f/anti_fraud/p/241240360
 ||klgw.shop^
+! 詐騙打工 https://www.dcard.tw/f/job_search/p/241244696
+||volatils.com^
+! 詐騙打工 https://www.dcard.tw/f/job_search/p/241244857
+||g1o2ltr.xyz^
+! 詐騙 https://www.dcard.tw/f/anti_fraud/p/241244917
+||engine6tw.site^
+||ordesies.com^
+||hottopdeal.com^
