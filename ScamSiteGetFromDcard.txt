@@ -811,7 +811,7 @@
 ||fungame99.net^
 ||ahdy652ss.org^
 ||126.net^
-||kunluncan.com^
+!||kunluncan.com^ 阿里雲 CDN
 ||wm555.net^
 ! 詐騙公益 https://www.dcard.tw/f/talk/p/241220267
 ||huayutw.com^
