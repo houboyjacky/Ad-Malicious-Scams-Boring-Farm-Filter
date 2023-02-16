@@ -880,3 +880,7 @@
 /ziiea[a-z]+\.com/
 ! 詐騙縮網址 https://www.dcard.tw/f/mood/p/241236951
 ||d1.mk^
+!想問大家有人在用這個嗎？ https://www.dcard.tw/f/talk/p/241239161
+||tb-tbb.com^
+! 詐騙購物 https://www.dcard.tw/f/anti_fraud/p/241240360
+||klgw.shop^
