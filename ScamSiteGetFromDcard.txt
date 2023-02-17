@@ -896,3 +896,6 @@
 ||madsfx.com^
 ! 詐騙交易所 https://www.dcard.tw/f/mood/p/241253360
 ||acuxs.com^
+! 蝦皮詐騙 https://www.dcard.tw/f/anti_fraud/p/241258624
+||shopee1-tw1.fun^
+||abc188.com^
