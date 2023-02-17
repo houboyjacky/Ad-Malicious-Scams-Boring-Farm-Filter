@@ -892,3 +892,7 @@
 ||engine6tw.site^
 ||ordesies.com^
 ||hottopdeal.com^
+! 詐騙交易所 https://www.dcard.tw/f/persona_yellowfx/p/241254315
+||madsfx.com^
+! 詐騙交易所 https://www.dcard.tw/f/mood/p/241253360
+||acuxs.com^
