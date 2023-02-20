@@ -899,3 +899,5 @@
 ! 蝦皮詐騙 https://www.dcard.tw/f/anti_fraud/p/241258624
 ||shopee1-tw1.fun^
 ||abc188.com^
+! BIT交易所這個是詐騙嗎？ https://www.dcard.tw/f/money/p/241274416
+||fidelity-tw.cc^
