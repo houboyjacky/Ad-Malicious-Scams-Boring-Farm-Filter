@@ -8,6 +8,7 @@
 !||fr^$denyallow=org.fr|edu.fr|gov.fr
 !||me^$denyallow=org.me|edu.me|gov.me
 !||nl^$denyallow=org.nl|edu.nl|gov.nl
+||9flowex.com^
 ||a-tipico.pt^
 ||anishinaabe.ch^
 ||anrevika.lt^
@@ -51,6 +52,7 @@
 ||glnge.me^
 ||golden-memories.nl^
 ||gordo.lv^
+||grande-maison.eu^
 ||hamiltonadviesbv.nl^
 ||howgrewchi.live^
 ||icaro-research.eu^
@@ -112,6 +114,7 @@
 ||psdelier.nl^
 ||qabayz.site^
 ||quing.im^
+||qwvaemeivec.plus^
 ||raidecar.es^
 ||recepcni-pulty.cz^
 ||regaltechnik.cz^
