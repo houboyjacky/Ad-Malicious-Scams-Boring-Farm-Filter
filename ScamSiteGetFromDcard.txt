@@ -901,3 +901,13 @@
 ||abc188.com^
 ! BIT交易所這個是詐騙嗎？ https://www.dcard.tw/f/money/p/241274416
 ||fidelity-tw.cc^
+! 詐騙交友 https://www.dcard.tw/f/relationship/p/241291190
+||pairstw.com^
+||lnstock.shop^$important
+! 詐騙投資 https://www.dcard.tw/f/ask/p/241293340
+||busdsign.me^$important
+||u9xz4.xyz^$important
+||tskdh.xyz^$important
+! 詐騙交易 https://www.dcard.tw/f/anti_fraud/p/241293605
+||dozbm.com^$important
+||htmlpacker.xyz^
