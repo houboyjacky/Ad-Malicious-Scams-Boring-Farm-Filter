@@ -163,6 +163,7 @@
 ||deviltoolee.com^
 ||dfpschool.com^
 ||dg38.net^
+||dgclass.cn^
 ||dgjhenren.com.tw^
 ||diniwap.cc^
 ||dio-atomy.com^
@@ -388,6 +389,7 @@
 ||lowworm.com^
 ||lp.cross-contents.com^
 ||lxfssb.com^
+||lyqdsb.com^
 ||lzpfc.shop^
 ||lzpnb.shop^
 ||marketdatasystems.com^
@@ -496,6 +498,7 @@
 ||sdkfld.vip^
 ||sedu.tw^
 ||seductivevisions.com^
+||sfzao.com^
 ||sh03.vip^
 ||sh1768.net^
 ||sh1788.net^
@@ -541,6 +544,7 @@
 ||taiwan-fgjndbm.com^
 ||taiwan-qwexc.tw^
 ||taiwan-uhcxfr.com^
+||taiwancnm.shop^
 ||taiwangupiao.com^
 ||take-yourprizes.life^
 ||tane1985.com^
@@ -550,6 +554,8 @@
 ||teachablecdn.com^
 ||tedcleari.shop^
 ||telegram996.com^
+||tenclass.io^
+||tenclass.net^
 ||terryfu.com^
 ||tfporg.lt.acemlnb.com^
 ||thevisualisation.fr^
@@ -584,6 +590,7 @@
 ||twgpzx.com^
 ||twlicai.shop^
 ||twokx.com^
+||twruten1688.cn^
 ||twstock.cc^
 ||twstock.tv^
 ||twstock1688.xyz^

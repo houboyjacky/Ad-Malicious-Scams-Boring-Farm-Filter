@@ -916,3 +916,5 @@
 ! 詐騙投資 https://www.dcard.tw/f/talk/p/241294914
 ||fantomboom.online^
 ||toprghot66.com^
+! 詐騙購物 https://www.dcard.tw/f/anti_fraud/p/241291450
+||yitooshop.com^
