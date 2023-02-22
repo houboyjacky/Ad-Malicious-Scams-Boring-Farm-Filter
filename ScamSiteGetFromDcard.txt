@@ -911,3 +911,8 @@
 ! 詐騙交易 https://www.dcard.tw/f/anti_fraud/p/241293605
 ||dozbm.com^$important
 ||htmlpacker.xyz^
+! 詐騙投資 https://www.dcard.tw/f/blockchain/p/241294291
+||ethseg.com^
+! 詐騙投資 https://www.dcard.tw/f/talk/p/241294914
+||fantomboom.online^
+||toprghot66.com^
