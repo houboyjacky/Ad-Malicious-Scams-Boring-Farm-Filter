@@ -10,6 +10,7 @@
 !||nl^$denyallow=org.nl|edu.nl|gov.nl
 ||9flowex.com^
 ||a-tipico.pt^
+||aikiingenieria.cl
 ||anishinaabe.ch^
 ||anrevika.lt^
 ||antibot.cloud^
@@ -20,6 +21,7 @@
 ||balance4you.ch^
 ||bastaujana.cz^
 ||bbarill.me^
+||bibo.com.pl
 ||bienvenido-a-darmstadt.de^
 ||bpnhklcgf.sa.com^
 ||bremancitywallcross.nl^
