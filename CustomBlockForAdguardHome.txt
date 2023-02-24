@@ -1,4 +1,4 @@
-!  疑似詐騙或不良的網站
+! 疑似詐騙或不良的網站
 ! 過度引用 s3-symbol-logo.tradingview.com
 ! 過度引用 widgetdata.tradingview.com
 ! 過度引用 www.tradingview-widget.com
@@ -13,6 +13,8 @@
 #||fontawesomes.com^
 #||phicdn.net^
 ||*.cyou^
+||it^$denyallow=org.it|edu.it|com.it|gov.it
+||pl^$denyallow=org.pl|edu.pl|com.pl|gov.pl
 ||*.ml^
 ||*.top^
 ||0857online.net

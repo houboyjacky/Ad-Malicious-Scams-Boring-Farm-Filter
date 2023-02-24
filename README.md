@@ -11,17 +11,22 @@ From Taiwan, build filters based on own experience.<br/>
 You can come to my website to follow, I will share information about photography and scams.<br/>
 
 Dcard : https://www.dcard.tw/@shutterhouboy<br/>
+Medium : https://medium.com/@shutterhouboy<br/>
 
 ***
 # 檔案內容 File Content
-### ContentFarmForChromeExtensions.txt
-提供"終結內容農場"使用<br/>
-Offers "Content-Farm-Terminator" use.<br/>
+### Content-Farm_Multi-Redirection.txt
+提供"終結內容農場"使用，包含內容農場與多重轉址網站<br/>
+Provides access to "Content-Farm-Terminator", including content farms and multiple redirection sites<br/>
 https://chrome.google.com/webstore/detail/content-farm-terminator/lcghoajegeldpfkfaejegfobkapnemjl<br/>
 
-### ContentFarmForAdguardHome.txt
-與ContentFarmForChromeExtensions.txt內容相同，額外加了阻擋語法<br/>
-Same content as ContentFarmForChromeExtensions.txt, with additional blocking syntax.<br/>
+### Content-Farm_Multi-RedirectionForAdguardHome.txt
+與Content-Farm_Multi-Redirection.txt內容相同，額外加了Adguard阻擋語法<br/>
+Same content as Content-Farm_Multi-Redirection.txt, with additional Adguard blocking syntax<br/>
+
+### Content-Farm_Multi-RedirectionForUblackList.txt
+與Content-Farm_Multi-Redirection.txt內容相同，額外加了UblackList阻擋語法<br/>
+Same content as Content-Farm_Multi-Redirection.txt, with additional UblackList blocking syntax<br/>
 
 ### CustomAllowForAdguardHome.txt
 該網站被預設其他過濾清單阻擋，"我"認為應該被解放<br/>
@@ -53,9 +58,5 @@ https://165.npa.gov.tw/<br/>
 取自ScamAdviser電子報
 Taken from the ScamAdviser newsletter.<br/>
 https://www.scamadviser.com/<br/>
-
-### URL_Multi_Redirection.txt
-根據自身經驗遇到的多重轉址網站，大多具有危險<br/>
-Most of the multiple forwarding sites I have encountered from my own experience are dangerous.<br/>
 
 ***

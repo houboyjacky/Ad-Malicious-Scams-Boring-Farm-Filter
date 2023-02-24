@@ -1,3 +1,6 @@
+# Title : Content Farm and Multi-Redirection
+# Description :  Filter for general content farms and Multi Redirection
+# Licence: MIT License
 9flowex.com
 a-tipico.pt
 abo24.it
@@ -82,7 +85,6 @@ insid.fr
 ireviewtw.com
 isabel-lopez-kubben.at
 ishkuru.co
-it
 iwiki.tw
 janjarolim.cz
 januaryprivilege.me
@@ -137,7 +139,6 @@ paddelstun.de
 perspektivwechsel-seeheim.de
 pharmaie-jolivet.fr
 pitopalvelumatilda.fi
-pl
 placestostay.im
 platformduurzaamfryslan.nl
 porscheclubtirol.at
