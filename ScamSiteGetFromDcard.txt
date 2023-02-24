@@ -903,13 +903,13 @@
 ||fidelity-tw.cc^
 ! 詐騙交友 https://www.dcard.tw/f/relationship/p/241291190
 ||pairstw.com^
-||lnstock.shop^$important
+||lnstock.shop^
 ! 詐騙投資 https://www.dcard.tw/f/ask/p/241293340
-||busdsign.me^$important
-||u9xz4.xyz^$important
-||tskdh.xyz^$important
+||busdsign.me^
+||u9xz4.xyz^
+||tskdh.xyz^
 ! 詐騙交易 https://www.dcard.tw/f/anti_fraud/p/241293605
-||dozbm.com^$important
+||dozbm.com^
 ||htmlpacker.xyz^
 ! 詐騙投資 https://www.dcard.tw/f/blockchain/p/241294291
 ||ethseg.com^
@@ -918,3 +918,7 @@
 ||toprghot66.com^
 ! 詐騙購物 https://www.dcard.tw/f/anti_fraud/p/241291450
 ||yitooshop.com^
+! 詐騙NFT https://www.dcard.tw/f/blockchain/p/241320418
+||nftartsvese.com^
+! 詐騙兼職 https://www.dcard.tw/f/talk/p/241319989
+||newtradetw.com^

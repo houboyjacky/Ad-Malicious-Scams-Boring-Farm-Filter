@@ -114,6 +114,7 @@
 ||185.245.0.210^
 ||185.245.0.225^
 ||1988220.com^
+||1isdnqnebajw.com^
 ||1xideas.xyz^
 ||2000.com^
 ||201772.cn^
@@ -186,7 +187,10 @@
 ||abccornerhk.com^
 ||abd.tw^
 ||aberiu.com^
+||abwhqnjandsaj.com^
+||acp-tw.*^
 ||acp-tw.info^
+||acp-tw.life^
 ||acp-tw.website^
 ||acrondwss.com^
 ||ad-influencer.com^
@@ -197,12 +201,14 @@
 ||af-indes.com^
 ||agamarkets.com^
 ||aganki.com^
+||agencegout.com^
 ||agigxp.com^
 ||aibiad.com^
 ||aifeier888.xyz^
 ||ainfx.com^
 ||ainfxs.com^
 ||ainx.com^
+||aisagoldmxs.com^
 ||ajsksf.com^
 ||alb85.com^
 ||alicfu.com^
@@ -218,12 +224,15 @@
 ||americamerrillynch1914.com^
 ||amg666.net^
 ||ammb7.com^
+||amtop.*^
+||amtop.info^
 ||amtop.xyz^
 ||amtopcoltd.com^
 ||amz-magic.com^
 ||amzbizunis.com^
 ||amzshop.homes^
 ||anhdty.com^
+||anybuymall.com^
 ||anybuyshops.com^
 ||aocnej.tw^
 ||aomenletou.com^
@@ -337,6 +346,7 @@
 ||bithunb77.com^
 ||bitmaxc.com^
 ||bitmexx03.com^
+||bitmxc.net^
 ||bitoexs-tw.com^
 ||bitprofitw.com^
 ||bitprofitx.com^
@@ -350,6 +360,7 @@
 ||bixc.tw^
 ||bjwex2000.com^
 ||bkk168.net^
+||bkoex.finance^
 ||blockhpex.com^
 ||blueberrypro.net^
 ||blzjvip.tw^
@@ -393,6 +404,7 @@
 ||busskin.com^
 ||buy-forex.com^
 ||buyamzz.com^
+||bvxgat.com^
 ||bxt66.com^
 ||byyp.life^
 ||bzeuk.com^
@@ -403,9 +415,9 @@
 ||capittari.com^
 ||cardgame0808.com^
 ||cav567.xyz^
+||cbn-tw.*^
 ||cbn-tw.club^
 ||cbn-tw.fyi^
-||cbn-tw.*^
 ||cbntw.com^
 ||cbntw.site^
 ||cd9jr3kegh.com^
@@ -500,6 +512,7 @@
 ||dexveq.com^
 ||df136.xyz^
 ||dg168a.com^
+||dhgywschdgwwz.com^
 ||difimining-concept.com^
 ||digital3577.com^
 ||diovqar.com^
@@ -515,6 +528,7 @@
 ||dooprimetw.com^
 ||down.wmc520com^
 ||downloadgiochipc.com^
+||doxzweb.com^
 ||dream9.vip^
 ||dreamangel.io^
 ||drpj.tw^
@@ -537,11 +551,15 @@
 ||eetnfmh.com^
 ||effectiven.com^
 ||efm88.net^
+||ehutoken.com^
+||ellandroadcapital.*^
 ||ellandroadcapital.com^
+||ellandroadcapital.site^
 ||elparit.com^
 ||empfiiitw.com^
 ||enekfkr.com^
 ||engine6tw.net^
+||enterpc24.com^
 ||envrch.com^
 ||epmtig.com^
 ||erc20free.io^
@@ -556,6 +574,7 @@
 ||ethotw.net^
 ||ethq.github.io^
 ||ethxxx.xyz^
+||etrvew.com^
 ||etwdss.com^
 ||eufxqro.me^
 ||everfxglobalasia.com^
@@ -583,11 +602,13 @@
 ||fanbtctw.*^
 ||fanbtctw.site^
 ||fastprofita.com^
+||fazaekeys.com^
 ||fb197.com^
 ||fbsexcoin.com^
 ||fbsexcoinx.com^
 ||fbsforetw.com^
 ||fbsforextw.com^
+||fc69.online^
 ||fcpjtz.com^
 ||fdyjkl.com^
 ||fedforexstw.com^
@@ -658,9 +679,11 @@
 ||fx110.com^
 ||fxathenafx.com^
 ||fxbdg.com^
+||fxbellemont.com^
 ||fxcap888.com^
 ||fxcap889.com^
 ||fxdealabaab.com^
+||fxinvechcorporation.com^
 ||fxopen.tw^
 ||fxpros.vip^
 ||fxprotw.com^
@@ -673,6 +696,7 @@
 ||gameboy666.xyz^
 ||gamocv.com^
 ||gardalas.com^
+||gate-trade.xyz^
 ||gate168.com^
 ||gateiomax-defi.com^
 ||gbsvl.com^
@@ -806,6 +830,7 @@
 ||htzyiy.com^
 ||huanan.life^
 ||hugbgv.online^
+||huidaedh.com^
 ||huidatw.com^
 ||huifucc.com^
 ||huifura.com^
@@ -975,6 +1000,7 @@
 ||ksdanjskqq.com^
 ||ksglimited.com^
 ||ksjhqwjhvru.com^
+||ku-bitcoin.com^
 ||ku-excoin.com^
 ||kudj.tw^
 ||kunteng18.com^
@@ -1005,6 +1031,7 @@
 ||lehinsecurities.com^
 ||lehinstock.com^
 ||lehintrade.com^
+||leinse.com^
 ||lenswo.com^
 ||leo777vertexxs.com^
 ||leoicns.com^
@@ -1024,10 +1051,12 @@
 ||livzaz.com^
 ||lkda172.com^
 ||llshopping-tw.com^
+||lmexmin.com^
 ||lmexncv.com^
 ||lmexoium.com^
 ||lmexseut.com^
 ||lmexwre.com^
+||loboex-protrade.com^
 ||loboexpromaxdefi.com^
 ||love-buy-taiwan.com^
 ||love5168.com^
@@ -1070,7 +1099,9 @@
 ||meiseng11.com^
 ||memhds.com^
 ||mengkeyu.com^
+||merbcu.com^
 ||metadsva.com^
+||metaethemax.com^
 ||metaquotes.net^
 ||metaverseprotrade.com^
 ||metavuw.com^
@@ -1096,6 +1127,7 @@
 ||mitsubishi886.com^
 ||mjb.tw^
 ||mjszmw.com^
+||mkgreh.com^
 ||mkl877.com^
 ||mlb6688.com^
 ||mlchop.cn^
@@ -1113,6 +1145,7 @@
 ||mozmcg.com^
 ||mrcusdt.com^
 ||mrkglrv.com^
+||mrnbqkjeqnkw.com^
 ||mshfurmiture.com^
 ||mskrkqjwje.com^
 ||msndjehqjwjw.com^
@@ -1156,9 +1189,11 @@
 ||newbig168.net^
 ||newcapitaltw.com^
 ||nexss.vip^
+||nftgoper.com^
 ||nftsbuf.com^
 ||nftsbv.com^
 ||ngenasia.com^
+||ngoex-club.com^
 ||ngoexpro.com^
 ||nisajp.com^
 ||njlrngi.com^
@@ -1168,6 +1203,7 @@
 ||nookiss.com^
 ||nordfxtw.com^
 ||nrcstock.com^
+||nrmtdbag.com^
 ||nrxadd.com^
 ||nscarpe.com^
 ||nstwexchange.com^
@@ -1192,8 +1228,10 @@
 ||og5858.com^
 ||ohooho.com^
 ||okxbit8.com^
+||okxlgeur.com^
 ||onecin.vip^
 ||onecopi.vip^
+||onecopx.vip^
 ||onecss.vip^
 ||ones6.xyz^
 ||ones66.xyz^
@@ -1202,6 +1240,7 @@
 ||origina199.xyz^
 ||originalb1.com^
 ||otcintaiwan.com^
+||otcmexc.com^
 ||oyster666.net^
 ||p2aoc.com^
 ||patrlg.com^
@@ -1232,6 +1271,7 @@
 ||polyx.tw^
 ||por6tgn.cn^
 ||pqshiu.com^
+||pricsiwl.xyz^
 ||prizmbitex.com^
 ||proexchangtw.xyz^
 ||protosscp.com^
@@ -1260,10 +1300,12 @@
 ||rakuten01.org^
 ||rakuten06.com^
 ||rakuten09.com^
+||raqqekwl.buzz^
 ||raymondjames-tw.net^
 ||raytheongloball.com^
 ||rc06.me^
 ||rc95.m1^
+||rdkmomo.com^
 ||rdnvwd.com^
 ||rdq6974.com^
 ||readstock8.com^
@@ -1307,6 +1349,7 @@
 ||saturdaylivetw.com^
 ||saxo-tw.com^
 ||saxobanktw.com^
+||sbcdvscj.xyz^
 ||schwabcp.com^
 ||schwfin.com^
 ||schwfund.com^
@@ -1342,6 +1385,7 @@
 ||shiimikr.com^
 ||shopeech.com^
 ||shopeecq.com^
+||shopeeix.com^
 ||shopeev.com^
 ||shopeevex.com^
 ||shopfaa.com^
@@ -1349,6 +1393,7 @@
 ||shoppevip4.com^
 ||shopping-jf.com^
 ||shopping-ypd.com^
+||shopvvv.com^
 ||shopwky.com^
 ||shopwnn.com^
 ||shorttermtradings.com^
@@ -1435,6 +1480,7 @@
 ||taiwan-okx.com^
 ||taiwanstartr.com^
 ||taiwanstartrpros.com^
+||taiwanstartrpros1.com^
 ||taiyunn.com^
 ||tausnn.com^
 ||tbab905.com^
@@ -1447,6 +1493,7 @@
 ||tf7688.net^
 ||tgshops.live^
 ||tgx9.com^
+||tha91.tw^
 ||theamjs.net^
 ||theamyli.net^
 ||thehqgj.com^
@@ -1503,16 +1550,19 @@
 ||trade.com^
 ||traderstore-ebay.com^
 ||tradetw.com^
+||tradingspfx.com^
 ||tradxtrad.com^
 ||trendcenter.com^
 ||trendcenterr.com^
 ||trondci.com^
+||trondfko.com^
 ||troneei.com^
 ||tronsdew.com^
 ||trsptw.com^
 ||tseiou.com^
 ||tsendim.com^
 ||tsesiem.com^
+||tseweoi.com^
 ||ttuokeglobal.com^
 ||tu9qx.cn^
 ||tuancne.com^
@@ -1540,8 +1590,10 @@
 ||tx168tx.com^
 ||tyc66780.com^
 ||tzbets88.net^
+||u-tradecn.tw^
 ||u0y0.cn^
 ||u2ubs.com^
+||ubsext.com^
 ||uecgc.com^
 ||ueugv.com^
 ||ufo.tw^
@@ -1597,6 +1649,7 @@
 ||wandataw667.com^
 ||wangxingju.com^
 ||wargodkimono.com^
+||waves.city^
 ||waves.directory^
 ||waves.works^
 ||wayteciuies.com^
@@ -1615,6 +1668,7 @@
 ||wei011.com^
 ||weihezb.com^
 ||welfu.org^
+||weshinellc.com^
 ||weshinemkt.com^
 ||weshinestock.com^
 ||wexfc.com^
@@ -1648,6 +1702,7 @@
 ||wns7728.com^
 ||wnsr1777.com^
 ||wnsr58888.live^
+||wobcoins.com^
 ||wootrade.com^
 ||woprad.com^
 ||worldxtrad.com^
@@ -1661,6 +1716,7 @@
 ||xaisiamclub.com^
 ||xclbank.com^
 ||xd19789.com^
+||xeddq659.com^
 ||xensaqd.com^
 ||xgvesp.com^
 ||xh-sports.com^
@@ -1735,6 +1791,8 @@
 ||zbet8888.com^
 ||zbinc.vip^
 ||zbny.net^
+||zdsyy.com^
+||ze28s.com^
 ||zenithfinancial.com.tw^
 ||zeocean-tw.com^
 ||zero2richer.store^
@@ -1744,6 +1802,7 @@
 ||zhbam.com^
 ||zhenhanziben.com^
 ||zhevv.cn^
+||zhoanzn.com^
 ||zhongzhdngsk.cc^
 ||zhongzhenghk.co^
 ||zhontw.com^
@@ -1755,8 +1814,10 @@
 ||zhyaet.com^
 ||zhybcw.com^
 ||zhygob.com^
+||zhymsi.com^
 ||zhyotc.com^
 ||zhyrtc.com^
+||ziiearaties.com^
 ||ziieatieks.com^
 ||ziinitieks.com^
 ||ziintek.com^
