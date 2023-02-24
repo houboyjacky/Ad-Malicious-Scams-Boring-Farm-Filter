@@ -8,7 +8,7 @@
 From Taiwan, build filters based on own experience.<br/>
 
 可以來我的網站來關注，我會分享攝影與詐騙的相關訊息。<br/>
-You can come to my website to follow, I will share information about photography and scams.<br/>
+You can come to my website to follow, I will share articles related to scams, photography and computers.<br/>
 
 Dcard : https://www.dcard.tw/@shutterhouboy<br/>
 Medium : https://medium.com/@shutterhouboy<br/>
@@ -55,7 +55,7 @@ Taken from Taiwan 165 anti-fraud website.<br/>
 https://165.npa.gov.tw/<br/>
 
 ### ScamSiteGetFromScamAdviserNewsletter.txt
-取自ScamAdviser電子報
+取自ScamAdviser電子報<br/>
 Taken from the ScamAdviser newsletter.<br/>
 https://www.scamadviser.com/<br/>
 
