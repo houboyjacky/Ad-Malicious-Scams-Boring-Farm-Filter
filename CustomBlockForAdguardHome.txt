@@ -1,7 +1,7 @@
-! 疑似詐騙或不良的網站
 ! 過度引用 s3-symbol-logo.tradingview.com
 ! 過度引用 widgetdata.tradingview.com
 ! 過度引用 www.tradingview-widget.com
+! 疑似詐騙或不良的網站
 /ee[0-9]+\.com/
 /fk[0-9]+\.com/
 /fnline\.(info|xyz|vip)/
@@ -13,8 +13,6 @@
 #||fontawesomes.com^
 #||phicdn.net^
 ||*.cyou^
-||it^$denyallow=org.it|edu.it|com.it|gov.it
-||pl^$denyallow=org.pl|edu.pl|com.pl|gov.pl
 ||*.ml^
 ||*.top^
 ||0857online.net
@@ -166,6 +164,7 @@
 ||deadlinefunnel.com^
 ||dennis-888.com^
 ||deviltoolee.com^
+||dewudewu.com^
 ||dfpschool.com^
 ||dg38.net^
 ||dgclass.cn^
@@ -206,6 +205,7 @@
 ||errpau.bond^
 ||etherue.com^
 ||ewin.godaddysites.com^
+||ewyqui.asia^
 ||exxpperttrrrusst.shop^
 ||ezplayrg.com^
 ||f4mut.com^
@@ -286,6 +286,7 @@
 ||helpcenter04.com^
 ||herefun.us^
 ||hfm.com^
+||hhyy.asia^
 ||hiplablas.com^
 ||histock1688.com^
 ||histudio.vip^
@@ -323,6 +324,7 @@
 ||ironfanmarketing.com^
 ||isgdanismanligi.com.tr^
 ||isnotdomain440059159.com^
+||it^$denyallow=org.it|edu.it|com.it|gov.it
 ||ivenor.tw^
 ||ivideo247.com^
 ||izito.com.tw^
@@ -392,6 +394,7 @@
 ||lowesrooferscompete.com^
 ||lowworm.com^
 ||lp.cross-contents.com^
+||lrgcif.shop^
 ||lxfssb.com^
 ||lyqdsb.com^
 ||lzpfc.shop^
@@ -462,6 +465,7 @@
 ||pdpdsum.com^
 ||pentobarbitalgroup.com^
 ||piu11.com^
+||pl^$denyallow=org.pl|edu.pl|com.pl|gov.pl
 ||pory.app^
 ||pprroductiveprroggram.shop^
 ||presentlinks.com^
