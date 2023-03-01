@@ -1,6 +1,6 @@
-# Title : Content Farm and Multi-Redirection
 # Description :  Filter for general content farms and Multi Redirection
 # Licence: MIT License
+# Title : Content Farm and Multi-Redirection
 9flowex.com
 a-tipico.pt
 abo24.it
@@ -23,6 +23,7 @@ bbarill.me
 bibo.com.pl
 bienvenido-a-darmstadt.de
 biloop.it
+blacktiechauffeur.fr
 blogsbodasdeisabel.com
 boblo.eu
 book4kids.ru
@@ -32,6 +33,7 @@ ca-pontois.fr
 camracub.me
 chb-creations.fr
 chefuing.co
+chiarasassorestauri.it
 chickencorner.fr
 clinicadentalmilenio.es
 codertw.com
@@ -110,7 +112,9 @@ loremflickr.com
 lovekhc.com
 lovetweast.com
 lumisan.eu
+magnetyzery3.pl
 malirstvi-nedorostek.cz
+mantrafund.top
 maximilienzamanski.eu
 mediaprim.ru
 mes-scherp.nl
@@ -136,12 +140,14 @@ optique-republique.fr
 ordination-dr-fruehwald.at
 osteopathe-06-marlena.fr
 paddelstun.de
+parnassen.se
 perspektivwechsel-seeheim.de
 pharmaie-jolivet.fr
 pitopalvelumatilda.fi
 placestostay.im
 platformduurzaamfryslan.nl
 porscheclubtirol.at
+portalnew.pp.ua
 pqnn.cc
 prestigelublin.eu
 prizesense.life
@@ -201,6 +207,7 @@ todohealth.com
 topawardhere.life
 toutiao.com
 trampolinfm.cl
+trinley-glaskunst.at
 twvpnegsa.sa.com
 underona.me
 unimakslinieki.lv
