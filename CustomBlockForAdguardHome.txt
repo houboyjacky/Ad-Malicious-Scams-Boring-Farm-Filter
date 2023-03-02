@@ -1,3 +1,4 @@
+! 國家網域封鎖 it、pl
 ! 過度引用 s3-symbol-logo.tradingview.com
 ! 過度引用 widgetdata.tradingview.com
 ! 過度引用 www.tradingview-widget.com
@@ -28,6 +29,7 @@
 ||277sy.com^
 ||344k.com^
 ||35bio.com.tw^
+||3699wan.com^
 ||3f-rent.ru^
 ||3inhn5s.xyz^
 ||4everland.xyz^
@@ -37,6 +39,7 @@
 ||52cj.info^
 ||568fuli.com^
 ||594po.com^
+||617yuyu.com^
 ||6fayuan.com^
 ||707kpx.cfd^
 ||7112.cn^
@@ -110,6 +113,7 @@
 ||bp.blogspot.com^
 ||britainstock.xyz^
 ||britishlooseleaf.com
+||bsclink.cn^
 ||buffettonlineschool.com.tw^
 ||butomongs.com^
 ||buyanpro.com^
@@ -175,6 +179,7 @@
 ||dg38.net^
 ||dgclass.cn^
 ||dgjhenren.com.tw^
+||digifaculty.com^
 ||diniwap.cc^
 ||dio-atomy.com^
 ||directbuycenters.com^
@@ -200,6 +205,7 @@
 ||ee1499.com^
 ||ee1899.com^
 ||ee2021.com^
+||eerrr.asia^
 ||ejdambvh0090.com^
 ||ekcuci4.asia^
 ||ekcuci4.club^
@@ -218,7 +224,9 @@
 ||energysevencourse.com^
 ||enrfb.store^
 ||entiosat.com^
+||eplus.jp^
 ||errpau.bond^
+||ethan8.com^
 ||etherue.com^
 ||ewin.godaddysites.com^
 ||ewyqui.asia^
@@ -232,6 +240,7 @@
 ||fairmarketscampaign.com^
 ||fans8.xyz^
 ||farendangchong.com^
+||farlightgames.com^
 ||fastcash4invoices.com^
 ||fasterconsultant.com^
 ||fate888.vip^
@@ -250,6 +259,7 @@
 ||fnline.vip^
 ||fnline.xyz^
 ||franklin.com.tw^
+||friedmancall.space^
 ||fuckyoudouble.com^
 ||fuilsi.shop^
 ||fun2chatx.xyz^
@@ -271,6 +281,7 @@
 ||ggthxptw.com^
 ||gm1888.net^
 ||gnfdc.shop^
+||gofander.com^
 ||gogo123.com^
 ||gomarketing.com.tw^
 ||goodpracticemining.com^
@@ -289,6 +300,7 @@
 ||guminluntan.com^
 ||guntests.lt.acemlnb.com^
 ||guopiao.shop^
+||gushidaren.club^
 ||gutan.live^
 ||gutanzhijin.com^
 ||gwgz.com.tw^
@@ -320,6 +332,8 @@
 ||honeyslashie.com^
 ||hotelacuariotulum.com^
 ||houstorys.shop^
+||hrenyomicv.com^
+||hsin168.com^
 ||htxfinance.com^
 ||huaxiu4.com^
 ||hublaud.com^
@@ -389,6 +403,7 @@
 ||ko.gl^
 ||ko1788.com^
 ||kopitiv.com^
+||krtra.com^
 ||ktstack.com^
 ||kwrsc.com^
 ||kypepto.com^
@@ -413,6 +428,8 @@
 ||liseamall.com^
 ||livechat337.xyz^
 ||livechatxx.xyz^
+||loan588.cc^
+||loan588.com^
 ||londi.net^
 ||londonatitsbest.com^
 ||longislandhomecenter.com^
@@ -434,10 +451,13 @@
 ||maymorbr.com^
 ||mbl-systemapp.com^
 ||mbobi.com^
+||mccdn.me^
 ||mdhl520.com^
 ||meiricaij.live^
 ||meta-academy.biz^
+||metal52539.com^
 ||metal539.com^
+||mgjswq.site^
 ||minutefor.shop^
 ||mizatio.com^
 ||mobilesaustralia.com^
@@ -498,6 +518,7 @@
 ||piu11.com^
 ||pl^$denyallow=org.pl|edu.pl|com.pl|gov.pl
 ||pory.app^
+||ppiiipp.com^
 ||pprroductiveprroggram.shop^
 ||presentlinks.com^
 ||professionalinternetutilities.com^
@@ -527,6 +548,7 @@
 ||rich01.com.tw^
 ||rich01.wpengine.com^
 ||richfunrg.com^
+||richgameboy.com^
 ||richslash.com^
 ||rjnnbaw.vip^
 ||rm16888.com^
@@ -656,6 +678,7 @@
 ||utube.tw^
 ||v0985004622.com^
 ||vblorvd.shop^
+||vention.online^
 ||vhzsqi2.cfd^
 ||vicollege.cc^
 ||vicollege.com.tw^
@@ -673,6 +696,7 @@
 ||walterj.club^
 ||warmthhh.online^
 ||warroombriefing.lt.acemlnb.com^
+||wayshop.site^
 ||wealthpress98951.lt.acemlnb.com^
 ||web01.me^
 ||weikh.shop^
@@ -695,6 +719,7 @@
 ||www.tradingview-widget.com^
 ||wwwpost-govtw.sytes.net^
 ||wxfeiq.bond^
+||wxkitopxw.com^
 ||wyd2.com.tw^
 ||wzold.site^
 ||xc-bet.com^
