@@ -1,6 +1,7 @@
 ! Pet Scams List 2022/12/09 on https://petscams.com/
-! Puppy Scams List 2023/02/01 on https://puppyscams.org/
-#檢查google.com^
+! Puppy Scams List 2023/03/02 on https://puppyscams.org/
+# ||wixsite.com^ 適用子網域
+# ||google.com^
 ||1goldenretrieverpuppyspot.com^
 ||1rhodesianridgeback.com^
 ||1stclassbloodhoundpuppies.com^
@@ -17,6 +18,7 @@
 ||24hrprayer.org^
 ||24hrsnowpocketbullies.com^
 ||2xlcottonkentpitbullpups.com^
+||3lpchihuahuahome.com^
 ||3xlpitbullmonsters.com^
 ||4beaglepupshome.com^
 ||4caringhome.com^
@@ -28,6 +30,7 @@
 ||5starempirepuppies.com^
 ||5starpuppybreeders.com^
 ||6sixbreederstogether.com^
+||6star-beagles.com^
 ||8877shopp.com^
 ||8b.io^
 ||a1cavachonpuppies.com^
@@ -39,8 +42,10 @@
 ||aaronminigoldendoodle.com^
 ||aaronsminiaturedachshundspuppies.com^
 ||aaroonberners.com^
+||aashudna-dachshund.com^
 ||aayangermanrottweilerpuppies.com^
 ||aayansavannahandbenglkittens.com^
+||abbagalemainecoon.com^
 ||abbypetshome.com^
 ||abbyscockapoopuppies.com^
 ||abcbulldogpuppies.com^
@@ -95,6 +100,7 @@
 ||activedachshundhome.com^
 ||activedoodlepuppies.com^
 ||activefrenchies.com^
+||activegermanshepherds.com^
 ||activejackrussellpuppies.com^
 ||activelabrador.com^
 ||activeminpinpuppies.com^
@@ -202,10 +208,12 @@
 ||adorablebichonpuppiesforsale.com^
 ||adorablebordercollie.dog^
 ||adorablebordercolliepup.com^
+||adorablebordercollies.store^
 ||adorablebostonpuppies.com^
 ||adorablebostonterrier.com^
 ||adorablebostonterrierhome.com^
 ||adorablebostonterrierpuppies.com^
+||adorableboxerpuppies.com^
 ||adorablebreederspups.com^
 ||adorablebulldogpuppies.com^
 ||adorablebullmastiffpuppiesforsale.com^
@@ -215,6 +223,7 @@
 ||adorablecanecorsopups.com^
 ||adorablecatahoulapuppies.com^
 ||adorablecattery.com^
+||adorablecatteryfarm.com^
 ||adorablecavachonhome.com^
 ||adorablecavalierkingcharles.com^
 ||adorablecavapoohome.com^
@@ -251,6 +260,7 @@
 ||adorabledobermanpincher.com^
 ||adorabledobermanpuppieshome.com^
 ||adorabledobies4sale.com^
+||adorabledoodlefarm.com^
 ||adorabledoodlehome.com^
 ||adorableenglishbulldog.com^
 ||adorableenglishbulls.com^
@@ -274,7 +284,6 @@
 ||adorablefrenchiesss.com^
 ||adorablefrenchiesusa.com^
 ||adorablefreshfrenchies.com^
-||﻿adorablefreshfrenchies.com^
 ||adorablefurbabies.com^
 ||adorablegermanrottweilerpuppies.com^
 ||adorablegermanrottweillerpuppies.com^
@@ -294,6 +303,7 @@
 ||adorablegoldenretrievers.com^
 ||adorablegoldenretrieverworld.com^
 ||adorablegreatdanepuppy.com^
+||adorablegreatdanepups.com^
 ||adorablehavanesefarm.com^
 ||adorablehavanesepuppies.com^
 ||adorablehevanesefarm.com^
@@ -314,13 +324,15 @@
 ||adorablelabpuppiesforsale.com^
 ||adorablelabpuppy.com^
 ||adorablelabradoodlepups.com^
-||﻿adorablelabradorpupforsell.com^
+||adorablelabradorpupforsell.com^
 ||adorablelabradorpuppies.com^
 ||adorablelabradorpups.com^
 ||adorablelabradorpups.dog^
+||adorablelabradorretrieverpuppies.com^
 ||adorablelabradorretrieversfarm.com^
 ||adorablelittlepups.com^
 ||adorablemainecoon.com^
+||adorablemainecooncatsforsale.com^
 ||adorablemaletesepuppies.com^
 ||adorablemaltesehome.com^
 ||adorablemaltesepuppies.com^
@@ -347,6 +359,7 @@
 ||adorablepets4sale.com^
 ||adorablepetsforhomes.com^
 ||adorablepetsforrehoming.com^
+||adorablepetsforsale.com^
 ||adorablepetsgarden.com^
 ||adorablepetshomes.com^
 ||adorablepetskingdom.co.za^
@@ -393,12 +406,14 @@
 ||adorablepupsforhome.com^
 ||adorablepupshome.com^
 ||adorableragdollkittenshome.com^
+||adorableragdollkittiens.com^
 ||adorablerottiepups.com^
 ||adorablerottiworld.com^
 ||adorablerottweilerfarm.com^
 ||adorablerottweilerpuppies.com^
 ||adorablerottweilerpuppiesforsale.com^
 ||adorablerottweilerpups.com^
+||adorablerottweilers.com^
 ||adorableschnauzerpuppies.live^
 ||adorablescorgipups.com^
 ||adorablescottishfoldkittens.com^
@@ -447,11 +462,13 @@
 ||adorableyorkiepup.com^
 ||adorableyorkiepuppies.com^
 ||adorableyorkiepups.xyz^
+||adorableyorkieshome.com^
 ||adorableyorkshirepups.com^
 ||adorableyorkshireterrier.com^
 ||adoralepugpuppies.com^
 ||adorbpet.com^
 ||adorbscats.com^
+||adoredpomeranianresidence.com^
 ||adoreenglishbulldog.com^
 ||adorefrenchbulldogs.com^
 ||adorepoodlepuppies.com^
@@ -462,6 +479,7 @@
 ||adorrableteacuppoodles.com^
 ||adrianadachshundpuppies.com^
 ||adrianspitbullpuppies.com^
+||adventureboxerdogs.com^
 ||adzchihuahuahome.com^
 ||afarowana.com^
 ||affablebirds-and-fertileeggs.com^
@@ -480,6 +498,7 @@
 ||affectionatepuppies.com^
 ||affectionatepupshome.com^
 ||affectionateshihtzus.com^
+||affinityfrenchbulldog.com^
 ||affluentpupspetshome.com^
 ||afforablefrenchiebulldog.com^
 ||affordablealaskanmalamute.com^
@@ -533,8 +552,11 @@
 ||agapedanes.com^
 ||agapegoldenretrievers.com^
 ||agapehavanese.com^
+||agapesaintbernards.com^
 ||agapesamoyeds.com^
 ||agapeschnauzers.com^
+||agapeshepherdshome.com^
+||agatabullies.com^
 ||agnesgreatdanepuppies.com^
 ||agnesmaltesepuppies.com^
 ||agparrotcongo.com^
@@ -567,6 +589,7 @@
 ||akcbreederhome.club^
 ||akcbulldogbreeder.com^
 ||akcbulldogcorner.com^
+||akcbulldoghome.com^
 ||akcbulldogpuppies.com^
 ||akcbulldogspalace.com^
 ||akcbulldogsworld.com^
@@ -633,6 +656,7 @@
 ||akcsiberianhuskies.net^
 ||akcsiberianhuskypups.com^
 ||akcspaniel.com^
+||akcstarpugs.online^
 ||akctcuppomeranianpups.us^
 ||akctcupyorkieshome.com^
 ||akctcupyorkieshome.us^
@@ -777,6 +801,7 @@
 ||allbreedpuppiesforsale.com^
 ||allbreedteacuppuppies.homes^
 ||allcolorgreatdanes.com^
+||allconnectteacuphome.com^
 ||allcutepomeranianpups.com^
 ||alldogsbreeder.com^
 ||allenamazingpugpuppies.com^
@@ -793,6 +818,7 @@
 ||allisonspoodleanddoodlepuppies.com^
 ||allisonweimaraner.com^
 ||alljoydalmatianpupshome.com^
+||allmaltipoobreedinghome.com^
 ||allmightypedigreerotties.com^
 ||allnewpuppiesforsale.store^
 ||allomaltesefarm.com^
@@ -812,6 +838,7 @@
 ||alluringdachshundpuppieshome.com^
 ||alluringfrenchbulldogshome.com^
 ||alluringfrenchbullies.com^
+||alluringgreatdanes.com^
 ||alluringlabradoodlepups.com^
 ||alluringminigoldendoodlepuppies.com^
 ||alluringpugpuppies.com^
@@ -1032,10 +1059,12 @@
 ||amazingpuppiesfarm.com^
 ||amazingpuppieshome.com^
 ||amazingpuppieskennel.com^
+||amazingpuppybreeder.site^
 ||amazingpuppyskennelbreeder.com^
 ||amazingpupz.com^
 ||amazingranchdoodles.com^
 ||amazingrottiesbreedershome.com^
+||amazingschnauzerpuppies.com^
 ||amazingschnauzerpupshome.com^
 ||amazingschnauzerrpupsforsale.com^
 ||amazingshibainupuppies.com^
@@ -1074,6 +1103,7 @@
 ||amberrottweilershome.com^
 ||amberscatahoulaleopardpups.com^
 ||amberschnauzershome.us^
+||amecattery.site^
 ||amekittens.com^
 ||ameliabassethoundhome.com^
 ||ameliabichonfrise.com^
@@ -1102,6 +1132,7 @@
 ||americanbullyclub.com^
 ||americanbullyhomes.com^
 ||americanbullypuppie.online^
+||americanbullypuppies.store^
 ||americanbullypuppiesbydaniel.com^
 ||americanbullyxlpups.com^
 ||americancockerspanielpuppies.com^
@@ -1124,6 +1155,7 @@
 ||americanpitbullterrierhomes.com^
 ||americanpomeranian.com^
 ||americanpomskys.us^
+||americanragdollkittien.com^
 ||americanshibainupupps.com^
 ||americanshibainupups.com^
 ||americanshihtzudynasty.com^
@@ -1148,6 +1180,7 @@
 ||amicagoldenretriever.com^
 ||amicawestiepuppies.com^
 ||amigoakcbulldogs.com^
+||amipitbull.com^
 ||amitypomeranianhome.com^
 ||amitysharpei.com^
 ||ammonsbritishshorthairkittens.com^
@@ -1177,6 +1210,7 @@
 ||anarottweilers.com^
 ||anashuskyandpomsky.us^
 ||anasparrotsandbirdies.com^
+||anatolianpupshome.com^
 ||anchorcavaliers.com^
 ||anchorpuppies.com^
 ||andechowchowpups.com^
@@ -1327,7 +1361,6 @@
 ||anthonymaltipoopups.com^
 ||anthonypitbullhome.com^
 ||anthonypomeranian.com^
-||﻿anthonypomeranian.com^
 ||anthonywestminigoldendoodleshome.com^
 ||antoniocanecorsohome.com^
 ||antonioteacuphome.net^
@@ -1449,6 +1482,7 @@
 ||associate4you.com^
 ||asssphynxkittens.com^
 ||astonishingbengalsiberiankittenshome.com^
+||astonishingcavapoos.com^
 ||astonishingdachshundfamily.com^
 ||astonishingdachshundshome.com^
 ||astonishinggoldenretrievers.com^
@@ -1527,10 +1561,11 @@
 ||auspiciouspomeranians.com^
 ||ausshepherd.com^
 ||ausshepherdpups.com^
-||﻿aussichihuahuahome.com^
+||aussichihuahuahome.com^
 ||aussidoodleshome.com^
 ||aussie-au-puppy.com^
 ||aussie-escrow.com^
+||aussie-ville.com^
 ||aussiebengalhome.info^
 ||aussieboogiepups.com^
 ||aussiebreedinghome.com^
@@ -1538,6 +1573,7 @@
 ||aussiecavoodlehome.com^
 ||aussiecavoodles.com^
 ||aussiecavooodlepups.org^
+||aussiechihuahuahome.com^
 ||aussiedachshundhome.com^
 ||aussiedoodle-puppies.com^
 ||aussiedoodleparadise.com^
@@ -1638,6 +1674,7 @@
 ||australianshepherdforadoption.com^
 ||australianshepherdforall.com^
 ||australianshepherdforsale.net^
+||australianshepherdhome.com^
 ||australianshepherdhome.us^
 ||australianshepherdhomes.com^
 ||australianshepherdogs.com^
@@ -1687,12 +1724,14 @@
 ||availablecavapoopuppies.com^
 ||availablecutepuppies.com^
 ||availabledachshundpupppies.com^
+||availabledachshuudpuppies.com^
 ||availablegoldendoodleshome.com^
 ||availablehusky.com^
 ||availablekittenshome.com^
 ||availablelabradorretrieverspuppies.com^
 ||availablemaltesepuppiesforsale.com^
 ||availablepitbullpuppies.com^
+||availablepuppiesplace.com^
 ||availableshibas.com^
 ||avalosteacuppomhome.com^
 ||avamaltipoopuppies.com^
@@ -1700,6 +1739,8 @@
 ||avanewfiefamily.com^
 ||avapomeranianhome.com^
 ||avapuppies.com^
+||avaschnauzers.online^
+||avashihtzu.com^
 ||avenuebulldogs.com^
 ||averychihuahua.com^
 ||averyschnauzerpuppies.com^
@@ -1715,6 +1756,8 @@
 ||awesomeaussiehome.com^
 ||awesomeaussieshepherd.com^
 ||awesomebernedoodles.com^
+||awesomebernesemountainpuppies.com^
+||awesomebichonfrisecatelog.com^
 ||awesomebostonterrierpupies.com^
 ||awesomecavpups.net^
 ||awesomecavpups21.com^
@@ -1738,6 +1781,7 @@
 ||awesomepoodles.com^
 ||awesomepugpuppies.com^
 ||awesomeretrieverpuppies.com^
+||awesomeshih-tzu.com^
 ||awesomeshihtzupuppies.com^
 ||awesometcupyorkiepups.com^
 ||awesometoypoodlepuppies.com^
@@ -1759,7 +1803,9 @@
 ||babaybooparrots.com^
 ||babiedwesthighlandterrierhome.com^
 ||babiescorgipembroke.com^
+||babiesdachshund.com^
 ||babieshomeoflove.net^
+||babiespomeranianpups.com^
 ||babiesshibainubreeder.com^
 ||babiesshibainuhome.com^
 ||babiesshibainukennel.com^
@@ -1800,6 +1846,7 @@
 ||balibullies.com^
 ||balinesekittenbreeder.com^
 ||balinesekittenshome.com^
+||balinesekittenstanz.com^
 ||balismartspitbull.com^
 ||ballerskennel.com^
 ||balliah.com^
@@ -1827,6 +1874,7 @@
 ||barhfarmcorgis.com^
 ||bariboschnauzers.online^
 ||barkingmatepaws.com^
+||barkinpupps.com^
 ||barkinstylehome.com^
 ||barkinstylehouse.com^
 ||baronshibainu.com^
@@ -1848,6 +1896,7 @@
 ||bassethoundfamily.com^
 ||bassethoundfarms.com^
 ||bassethoundhome.com^
+||bassethoundhomes.com^
 ||bassethoundhomeusa.com^
 ||bassethoundland.com^
 ||bassethoundpup.com^
@@ -1908,6 +1957,7 @@
 ||beaglepupslovers.com^
 ||beagles.store^
 ||beagles4home.com^
+||beaglesbreeder.com^
 ||beaglescrib.com^
 ||beaglesfamily.com^
 ||beaglesforall.com^
@@ -1964,6 +2014,7 @@
 ||beautifulstaffordshire.com^
 ||beautifulwestiepuppies.com^
 ||beautifulyorkiehome.com^
+||beautifulyorkiepups.com^
 ||beauty-creatures.com^
 ||beautyangieyorkies.com^
 ||beautycorgipups.com^
@@ -1989,7 +2040,6 @@
 ||beddablepomeranianpups.com^
 ||beddablepomskypups.com^
 ||bedfordbengals.com^
-||﻿bedfordbengals.com^
 ||begalehomebreeders.com^
 ||beguilingmaltesepups.com^
 ||beguilingshihtzuhome.com^
@@ -2025,6 +2075,7 @@
 ||bellaustralianandirishterriers.com^
 ||bellavonkennel.co.za^
 ||bellayorkiepuppies.com^
+||bellechows.shop^
 ||bellecorgipups.com^
 ||belledachshundpupppies.com^
 ||bellepuppies.com^
@@ -2067,6 +2118,7 @@
 ||bengalcatteryhome.company^
 ||bengalcatteryparadise.com^
 ||bengalfriendly.com^
+||bengalheavencattery.com^
 ||bengalhousekittens.com^
 ||bengalkittencastal.com^
 ||bengalkittencattery.com^
@@ -2078,10 +2130,12 @@
 ||bengalkittensnear.com^
 ||bengalkittensrfq.com^
 ||bengalkittienshome.com^
+||bengalpawskitten.com^
 ||bengalpet.com^
 ||bengalsandhairlesskittens.com^
 ||bengalsandsavannah.com^
 ||bengalsfrever.com^
+||bengalshomeonline.com^
 ||bengaluniverse.com^
 ||bengalvineyard.com^
 ||bengalyavrularikittens.com^
@@ -2089,6 +2143,7 @@
 ||bengsavkittenhome.com^
 ||benitabritishshorthairkittenshome.com^
 ||benjaminyorkiehome.com^
+||benkennel.com^
 ||benlocalbreeders.com^
 ||bennetsgermanshepherdpuppies.com^
 ||bennetteacuppuppies.com^
@@ -2110,6 +2165,7 @@
 ||benzcavoodle.com^
 ||benzpomhome.com^
 ||bergegoldenretrievers.com^
+||bergshepherds.com^
 ||berhallbernedoodle.com^
 ||berhallgoldendoodle.com^
 ||bericavalierhome.com^
@@ -2161,6 +2217,7 @@
 ||bernesemtpups.com^
 ||bernesepuppiesbreeder.com^
 ||bernesmpup.com^
+||bernicefrenchie.com^
 ||bernicepuppies.com^
 ||berrscavapoopuppies.com^
 ||berryfendalnunbullies.com^
@@ -2174,6 +2231,7 @@
 ||bertiabyssiniancattery.com^
 ||bertilabradorretrievers.com^
 ||bertseyteacupyorkiepuppieshome.com^
+||berwickretrieverkennel.com^
 ||best-bostonterriers.com^
 ||best-puppies.net^
 ||bestadoptionuk.com^
@@ -2193,6 +2251,7 @@
 ||bestbeagles.store^
 ||bestbeaglespppies.com^
 ||bestbengalshome.com^
+||bestbernedoodle.com^
 ||bestbesiamesehome.com^
 ||bestbichonhome.com^
 ||bestbordercolliepuppies.com^
@@ -2201,6 +2260,7 @@
 ||bestbostonterrierfamily.com^
 ||bestbostonterrierpups.com^
 ||bestboxerpuppieshome.com^
+||bestbreedcockerspaniels.com^
 ||bestbreeddobermans.com^
 ||bestbulldogandlabrador.com^
 ||bestbulldogbreeds.com^
@@ -2241,6 +2301,7 @@
 ||bestdreamkittenslover.com^
 ||bestenglishbulldoghome.com^
 ||bestenglishbulldogpuppies.online^
+||bestenglishbulldogshome.com^
 ||besteverbluestaffypuppies.com^
 ||besteverenglishbulldoghomes.com^
 ||besteverpomeranianpuppies.com^
@@ -2269,6 +2330,7 @@
 ||bestgoldenretrieverspups.com^
 ||besthavanesepups.com^
 ||besthomecorgispuppies.com^
+||besthomelitters.com^
 ||besthomemonkeys.com^
 ||besthomemonkeyz.com^
 ||besthomeofpaws.com^
@@ -2363,6 +2425,7 @@
 ||bestteacuppetbreeder.com^
 ||bestteacuppoodlepupshome.com^
 ||bestteacuppuppies.com^
+||bestteacuppuppiesstoreever.com^
 ||bestteacupyorkiepuppies.com^
 ||besttoypoodlehome.com^
 ||besttrainedboxerpuppieshome.com^
@@ -2390,9 +2453,11 @@
 ||bettermainecoonkittensforsale.com^
 ||betterpoodles.com^
 ||bettertimes-dalmatians.club^
+||bettiebelgianmalinoispups.com^
 ||bettsgoldendoodles.com^
 ||bettymaltesepuppies.com^
 ||bettypersiansphynx.com^
+||bettypoopuppies.com^
 ||bettysdobermanpinscherhome.com^
 ||bettysfrenchbulldogs.com^
 ||beumenmaltipoopups.com^
@@ -2468,6 +2533,7 @@
 ||billittlecavapoopuppies.com^
 ||billpuppyhome.com^
 ||billyaustralianshepherdpuppies.com^
+||billyblueheelers.com^
 ||billycavoodlepupshome.com^
 ||billycavoodlespuppies.com^
 ||billyenglishspringerspaniels.com^
@@ -2495,6 +2561,7 @@
 ||birmancatforsale.com^
 ||birmankittensforsale.com^
 ||birmankittenshome.com^
+||birthedunderaluckystar.com^
 ||bitchonpuppies.com^
 ||bitsychihuahuadogs.com^
 ||bitsyteacuppoodlehome.net^
@@ -2505,14 +2572,17 @@
 ||blackandfawnpug.com^
 ||blackbostonterrier.com^
 ||blackpearlteacuppom.us^
+||blackrussianterrierpups.com^
 ||blackstarluxurypuppies.com^
 ||blainesdoxies.com^
+||blaisedachshundbreed.com^
 ||blakegreatdane.com^
 ||blakesdobermanhome.net^
 ||blakesdobermanpups.net^
 ||blakesenglishbulldogpups.com^
 ||blakesgreatdanepups.com^
 ||blakesrottweilerhome.com^
+||blatedachshund.com^
 ||blattergoldenretriever.com^
 ||blazecoons.com^
 ||bleekrottweilers.com^
@@ -2537,6 +2607,7 @@
 ||blessedgoldenretrieverpups.com^
 ||blessedhuskyfarm.com^
 ||blessedlabradorpups.com^
+||blessedlittershome.com^
 ||blessedmaltesespuppies.com^
 ||blessedmaltipoopuppies.com^
 ||blessedmarvellouspuppieshome.com^
@@ -2572,6 +2643,7 @@
 ||blissfulaussiepuppies.com^
 ||blissfulgoldendoodle.com^
 ||blissfulhavanesepuppies.com^
+||blissfulminiandgiantschnauzers.com^
 ||blissfulsphynxcattery.com^
 ||blissfulyorkiespuppies.com^
 ||blissgoldenretriever.com^
@@ -2610,6 +2682,7 @@
 ||bluebullypitbulls.com^
 ||bluecollarpettransport.com^
 ||bluecorgipuppies.com^
+||bluecountycoons.com^
 ||bluecourierservice.com^
 ||bluediamondshelties.com^
 ||bluedogpty.com^
@@ -2661,6 +2734,7 @@
 ||blueraypoodlepuppies.com^
 ||bluerockmainecoon.com^
 ||bluerosepomeranian.com^
+||bluescanecorsopuppies.com^
 ||bluesfrenchbulldog.com^
 ||bluesilkshihtzus.com^
 ||blueskydoodle.com^
@@ -2711,6 +2785,7 @@
 ||bonnycavapoopuppies.com^
 ||bonnycorgipuppies.com^
 ||bonnyorientalkittenshome.com^
+||bonnypapillionpuppies.com^
 ||bonnypitbulldoghome.com^
 ||bonnypuppy.dog^
 ||bonnyrussianbluehome.com^
@@ -2789,6 +2864,7 @@
 ||bostonterrierpuppies-4sale.com^
 ||bostonterrierpuppies.org^
 ||bostonterrierpuppiesarena.com^
+||bostonterrierpuppiesforsale.org^
 ||bostonterrierpuppiesgarden.com^
 ||bostonterrierpuppiesup4sale.com^
 ||bostonterrierpuppy.org^
@@ -2834,6 +2910,7 @@
 ||boxerpuppiesfarm.com^
 ||boxerpuppieshome.com^
 ||boxerpuppiespethome.com^
+||boxerpuppiesradise.xyz^
 ||boxerpuppiessale.com^
 ||boxerpuppysale.com^
 ||boxerpuppyshop.com^
@@ -2855,6 +2932,7 @@
 ||bradspitbullhouse.com^
 ||bradspugpuppies.com^
 ||bradybeagles.com^
+||bradypaws.com^
 ||bradyragdollkittenhome.com^
 ||braehome.com^
 ||brainasdachshundhomes.com^
@@ -2879,14 +2957,17 @@
 ||bransongoldenretrieverhome.com^
 ||braveakitapuppies.com^
 ||braveaussiepups.com^
+||bravebassethounds.com^
 ||bravebassetshome.com^
 ||braveberners.com^
 ||bravebernesemountaindogpuppies.com^
 ||bravebernesemountainpups.com^
+||bravebernesemountains.com^
 ||bravebichonfrise.us^
 ||braveboerboelpuppies.com^
 ||bravebordercolliepups.com^
 ||braveboxerpuppies.com^
+||bravebullmastiffs.com^
 ||bravebullyhome.com^
 ||bravecanecorsohome.com^
 ||bravecanecorsopuppies.com^
@@ -2901,6 +2982,7 @@
 ||bravegoldendoodlepups.com^
 ||bravegoldendoodles.com^
 ||bravegoldenretrievers.com^
+||bravehuntingdogs.com^
 ||bravehuskies.com^
 ||bravehuskypups.us^
 ||bravekennelfarmua.com^
@@ -2923,6 +3005,7 @@
 ||bravesphynxkittens.com^
 ||braveteacupfrenchiepups.com^
 ||braveteacuppoodles.com^
+||bravewiggletails.com^
 ||bravocavalierkingcharlesspaniel.com^
 ||brawnyaustralianshepherds.com^
 ||brawnybuddies.com^
@@ -2936,6 +3019,7 @@
 ||breathtakingminibernedoodles.com^
 ||breathtakingnewfoundland.com^
 ||breathtakingpugpuppies.com^
+||breathtakinpugs.com^
 ||breedamericanbullies.com^
 ||breedbulls.com^
 ||breedcavaliers.com^
@@ -2971,6 +3055,7 @@
 ||brendalefrenchies.com^
 ||brendanhealthypuppies.com^
 ||brendfordhome.com^
+||brenglorabulldogs.com^
 ||brennamunchkinhome.com^
 ||brentabyssinians.com^
 ||brentakita.com^
@@ -3120,6 +3205,7 @@
 ||britishshorthairworld.com^
 ||britishshortkittenparadise.com^
 ||britneystbernardpups.com^
+||britoscanecorsopuppies.com^
 ||brittanycanecorso.com^
 ||brittanypomeranianhome.com^
 ||brittanyweimaraners.com^
@@ -3129,6 +3215,7 @@
 ||brodercolllliespuppies.com^
 ||broedercopty.com^
 ||brondgoldenretrievers.com^
+||brongersburmesekittens.com^
 ||bronnshounds.com^
 ||bronxgoldenretrieverhome.com^
 ||brooks-dachshundsdogs.live^
@@ -3154,6 +3241,7 @@
 ||brunopug.com^
 ||brunoservalcaracalexotichome.com^
 ||bruspuppieshome.dog^
+||brusselgriffonpuppiestanz.com^
 ||brusselgriffonpuppiesvip.com^
 ||brusselsgriffonpuppies.store^
 ||bruvabullies.com^
@@ -3210,6 +3298,7 @@
 ||bulldogpetsonline.com^
 ||bulldogpetworld.com^
 ||bulldogpuppiesavailable.com^
+||bulldogpuppiesforsale.com.au^
 ||bulldogpuppiespot.com^
 ||bulldogpuppiesspot.com^
 ||bulldogpuppiesworld.com^
@@ -3223,6 +3312,7 @@
 ||bulldogs-rescue.com^
 ||bulldogs-santuary.com^
 ||bulldogseng.online^
+||bulldogsforsalenearme.com^
 ||bulldogsground.com^
 ||bulldogsinenglish.com^
 ||bulldogslover.com^
@@ -3235,6 +3325,7 @@
 ||bulliespalace.com^
 ||bullishprides.com^
 ||bullmastiffhome.com^
+||bullmastiffpupforsale.com^
 ||bullmastiffsales.com^
 ||bullmastifpuppies.com^
 ||bullongbulldogs.com^
@@ -3271,11 +3362,13 @@
 ||burkhartschnauzerpups.store^
 ||burkhartsheltie.store^
 ||burleybullz.com^
+||burlycanecorsopuppies.com^
 ||burlygoldenretrievers.com^
 ||burlyhuskies.com^
 ||burmesekittenshome.com^
 ||bushexoticfamily.com^
 ||bushkingcharles.net^
+||business.site^
 ||busse-pomeranian.com^
 ||butchshepherd.dog^
 ||butterflypomeranianpupps.com^
@@ -3299,6 +3392,7 @@
 ||buybostonterrierforsale.com^
 ||buybostonterriers.com^
 ||buybulldogbreeds.com^
+||buybulldogpups.com^
 ||buybulldogsonline.com^
 ||buybullpups.com^
 ||buycanecorsopuppies.com^
@@ -3316,6 +3410,7 @@
 ||buydachshunds.com^
 ||buydalmatianpuppies.com^
 ||buyduchshundpuppies.com^
+||buyenglishbulldog.com^
 ||buyenglishbulldogs.com^
 ||buyexoticmonkeysonline.com^
 ||buyexoticshorthairkittens.com^
@@ -3334,6 +3429,7 @@
 ||buyhuskyandpomsky.shop^
 ||buyhuskypuppyonline.com^
 ||buyhypoallergenickittens.com^
+||buylabradorretriever.com^
 ||buylabradorretrieverpuppies.com^
 ||buylabretrieverpups.com^
 ||buyleanoredalmatian.com^
@@ -3388,6 +3484,8 @@
 ||caldwelldevonrex.com^
 ||calebhuskypuppies.com^
 ||calicatahoulapuppies.com^
+||calicopuppies.com^
+||californiadoberman.shop^
 ||calinopugpuppybreedforsale.com^
 ||caliparrotsforsale.com^
 ||calipsocoons.com^
@@ -3433,6 +3531,7 @@
 ||camilasiberianhuskies.com^
 ||camillacanishome.com^
 ||camillafrenchiepuppies.com^
+||camillapuppies.com^
 ||camillashibainu.com^
 ||camilsphynxkittens.com^
 ||campascorgibreeders.com^
@@ -3467,6 +3566,8 @@
 ||canecorsoboulevard.com^
 ||canecorsobreedershome.com^
 ||canecorsobreedershomes.com^
+||canecorsocastle.com^
+||canecorsocreek.com^
 ||canecorsodogsandpuppiesforsale.store^
 ||canecorsoempire.com^
 ||canecorsofam.com^
@@ -3479,6 +3580,8 @@
 ||canecorsoparadisehome.com^
 ||canecorsopupp.com^
 ||canecorsopuppies02.com^
+||canecorsopuppies24hrs.com^
+||canecorsopuppiesforadoption.com^
 ||canecorsopuppiesforsaleonline.com^
 ||canecorsopuppiesforsales.com^
 ||canecorsopuppieshome.com^
@@ -3572,6 +3675,7 @@
 ||carylbernedoodlespot.com^
 ||casachihuahuapups.com^
 ||casademascota.es^
+||casagrandan.com^
 ||casapomeranian.com^
 ||casbulldog.com^
 ||caseycavapoo.com^
@@ -3636,6 +3740,7 @@
 ||cavalierkingcharles.shop^
 ||cavalierkingcharles.site^
 ||cavalierkingcharlesbreeder.org^
+||cavalierkingcharlescreek.com^
 ||cavalierkingcharlesdog.com^
 ||cavalierkingcharlesdogs.com^
 ||cavalierkingcharlesfamily.com^
@@ -3777,6 +3882,7 @@
 ||cavapoosworld.com^
 ||cavapoowhelp.store^
 ||cavarosterbullies.com^
+||cavarpoopuppyshop.com^
 ||cavoodle4home.com^
 ||cavoodlecavapoohomebreeder.com^
 ||cavoodleclub.com^
@@ -3797,6 +3903,7 @@
 ||cavoodlepuppieswithlove.com^
 ||cavoodlepuppy.com^
 ||cavoodlepuppyhome.com^
+||cavoodlepuppys.com^
 ||cavoodlepupshaven.com^
 ||cavoodleroyalty.com^
 ||cavoodlesaustralia.com^
@@ -3833,6 +3940,7 @@
 ||celebrityteacupyorkiepupshome.com^
 ||celebritywelshcorgihome.com^
 ||celeritassafelogistics.com^
+||celestialamericanshorthair.com^
 ||celestialbostonterrier.com^
 ||celestialpuppiez.com^
 ||celestialscottishfolds.com^
@@ -3847,6 +3955,7 @@
 ||centralpets.online^
 ||centurybordercollie.com^
 ||centurybordercollies.com^
+||centurygoldens.com^
 ||ceracastpoultry.com^
 ||certifiedbeaglepuppybreeders.com^
 ||certifiedbeaglespups.com^
@@ -3910,10 +4019,13 @@
 ||championbloodlinefrenchies.com^
 ||championbordercollies.com^
 ||championboxerpups.com^
+||championbreedpups.com^
+||championcanecorsokennelsllc.com^
 ||championcanecorsopuppies.com^
 ||championcavalieraustralia.com^
 ||championchihuahuagroup.com^
 ||championchihuahuakennel.com^
+||championchowchowhome.com^
 ||championdachshunds.com^
 ||championdobermanpuppies.com^
 ||championdogbreeder.com^
@@ -3924,6 +4036,7 @@
 ||championgoldendoodle.com^
 ||championgoldendoodlepuppies.com^
 ||championhavanesehome.com^
+||championkittenshome.com^
 ||championkittenshome.wixsite.com^
 ||championlinepomskies.com^
 ||championlinewelshcorgis.com^
@@ -3962,6 +4075,7 @@
 ||champkennel.com^
 ||champlabradors.com^
 ||champoinbloodlinefarm.com^
+||champpapillonpuppies.com^
 ||chancattery.site^
 ||chancellorrottweilerpuppies.com^
 ||chancesdachshundpuppies.com^
@@ -3973,6 +4087,7 @@
 ||chankittens.net^
 ||channelbulldogs.com^
 ||channelpuppies.com^
+||chapletsavannahs.com^
 ||chapritat.com^
 ||chariotcanecorsopups.com^
 ||chariotcavalierhome.com^
@@ -4010,10 +4125,11 @@
 ||charliesbernesepuppies.com^
 ||charliesdachshundpuppieshome.com^
 ||charliesdachshundsausages.com^
-||﻿charligoodgreatdanepuppies.com^
+||charligoodgreatdanepuppies.com^
 ||charlotteadorablepupshome.com^
 ||charlotteaustralianshepherd.com^
 ||charlottekittens-au.com^
+||charlottelaine.shop^
 ||charlottepurepuppies.com^
 ||charlottespughome.com^
 ||charming4you.com^
@@ -4071,6 +4187,8 @@
 ||cheapgreatdanepuppies.com^
 ||cheapkittens-au.shop^
 ||cheapkittens.site^
+||cheappetdog.com^
+||cheappuppiesforsale.com^
 ||cheaprottweiler.com^
 ||cheerfulbassethoundpuppies.com^
 ||cheerfulboxers.com^
@@ -4084,6 +4202,7 @@
 ||cheeryyorkielovers.com^
 ||chelayahome.com^
 ||chelochihuahuas.com^
+||chelseadonerbassethoundhom.com^
 ||chendahyork.com^
 ||chensiberianhuskypups.site^
 ||cheriebichonhome.com^
@@ -4115,6 +4234,7 @@
 ||cheteminidachshundpuppies.com^
 ||chettygoldendoodles.com^
 ||chevykittens.com^
+||chewypupshome.com^
 ||chiaussiepuppies.com^
 ||chibostonterrierpuppies.com^
 ||chicascattery.com^
@@ -4130,6 +4250,7 @@
 ||chihuahuababiesbreeder.com^
 ||chihuahuabeautypuppies.com^
 ||chihuahuabreed.org^
+||chihuahuabreedeerhome.com^
 ||chihuahuachampionhome.com^
 ||chihuahuaclubken.com^
 ||chihuahuacuties.com^
@@ -4175,6 +4296,7 @@
 ||chinchillasspot.com^
 ||chinesesharpaipuppies.com^
 ||chioe-exotics.com^
+||chipper-chihuahua.com^
 ||chirpy-chihuahua.com^
 ||chirpypoodles.com^
 ||chiseahuskyhomes.com^
@@ -4206,6 +4328,7 @@
 ||chowchowbreeders.com^
 ||chowchowcastle.com^
 ||chowchowfamily.com^
+||chowchowfarms.com^
 ||chowchowhhome.com^
 ||chowchowhome.store^
 ||chowchownyc.com^
@@ -4224,6 +4347,7 @@
 ||chowchowsquad.store^
 ||chowchowteddybear.us^
 ||chowparadise.com^
+||chrisaustralianshepherdpuppies.com^
 ||chrisavary.com^
 ||chrisbeaglepuppies.com^
 ||chriscarterscavoodlepuppies.com^
@@ -4272,6 +4396,7 @@
 ||christmassgoldendoodles.com^
 ||christmassharpeipups.com^
 ||christmasshibainupuppies.com^
+||christofferterriers.com^
 ||christolystboerboels.com^
 ||christolysttboerboels.com^
 ||christopherbilldachshund.com^
@@ -4296,6 +4421,7 @@
 ||chummybengalkittens.com^
 ||chummypersiankitten.com^
 ||chummypersiankittens.com^
+||chumysphynxkitty.com^
 ||chunkifrenchies.info^
 ||churchjackrussels.com^
 ||chusphynxkitty.com^
@@ -4304,6 +4430,7 @@
 ||ciaolegs.com^
 ||ciaranrottweilers.com^
 ||cichonsamoyedpuppies.com^
+||cichonsamoyedpups.com^
 ||cidaqdachshunds.com^
 ||cidaqminidachshunds.com^
 ||cienrottweilershome.com^
@@ -4349,6 +4476,7 @@
 ||clarasdoxiepethome.com^
 ||clarasparrothome.com^
 ||claredachshundfamily.com^
+||clarfrenchies.com^
 ||clarionbullies.com^
 ||clarischihuahuapuppies.com^
 ||claritycoons.com^
@@ -4372,6 +4500,7 @@
 ||classicaussies.com^
 ||classicaustralianshepard.com^
 ||classicbeagle.com^
+||classicbeaglepuppieshome.com^
 ||classicbengalkittens.com^
 ||classicbostonterrier.com^
 ||classicbostonterrierpuppies.com^
@@ -4449,6 +4578,7 @@
 ||classypomskypuppies.com^
 ||classypuppiesforsale.com^
 ||classypuppybreeders.com^
+||classypuppybreeders.top^
 ||classypuppyhome.com^
 ||classypupsaustralia.com^
 ||classyshihtzubreeder.com^
@@ -4468,6 +4598,7 @@
 ||cleanpuppy.net^
 ||clearsphynxkittens.com^
 ||cleavesrottweilerpups.com^
+||clemangreyparrot.shop^
 ||clementcattery.com^
 ||cleoweimaranerpups.com^
 ||clerepapillons.com^
@@ -4495,6 +4626,7 @@
 ||clorafrenchbulldogpups.com^
 ||cloranmetenbullies.com^
 ||clorilalabullies.com^
+||closedachshund.com^
 ||clotelteddybearshome.com^
 ||cloutshihtzupuppies.us^
 ||cloverhavanese.com^
@@ -4521,6 +4653,7 @@
 ||cockapoogalore.com^
 ||cockapoohaven.com^
 ||cockapoohomeus.com^
+||cockapookennel.com^
 ||cockapoopuppies.org^
 ||cockapoopuppiesfarm.com^
 ||cockapoopuppieshomes.com^
@@ -4533,6 +4666,7 @@
 ||cockapoopupsusa.com^
 ||cockapooshome.com^
 ||cockapopupshome.com^
+||cockatookings.com^
 ||cockerandspoodlepups.com^
 ||cockergarden.com^
 ||cockersandcrossbreeders.com^
@@ -4663,6 +4797,7 @@
 ||coolrunninminidachshunds.com^
 ||cooperfrenchbulldogpuppies.com^
 ||coquillettefrancishome.com^
+||corahavanesefarm.com^
 ||corahavaneseshome.com^
 ||coralchowchowpuppies.com^
 ||coralparrots.com^
@@ -4686,6 +4821,7 @@
 ||corgibreedersfarm.com^
 ||corgibreedershome.com^
 ||corgibreedershomes.com^
+||corgibreedersstore.com^
 ||corgicaringhomes.com^
 ||corgidoghome.com^
 ||corgidogsforsale.com^
@@ -4730,6 +4866,7 @@
 ||corporatefrenchbulldogs.us^
 ||corrislabradors.com^
 ||cosphynxkitten.com^
+||cossvgermanshepherds.com^
 ||costalchowchowpuppieshome.com^
 ||costaldachshundpuppies.com^
 ||costamainecoon.com^
@@ -4764,6 +4901,7 @@
 ||countyside-doodles.com^
 ||countysidedoodles.com^
 ||courageousdachshund.com^
+||courtneyfrenchbulldogs.com^
 ||courtyardguardhounds.com^
 ||coxboxerslove.com^
 ||coxminischnauzers.com^
@@ -4929,6 +5067,7 @@
 ||cutebabieslabradorretrieverhome.com^
 ||cutebabydollmaltesepupshome.com^
 ||cutebabysphynx.com^
+||cutebalinese.com^
 ||cutebalinesekittenshome.com^
 ||cutebassehoundspuppies.com^
 ||cutebassethoundpuppy.com^
@@ -4976,6 +5115,7 @@
 ||cutecanecorso.com^
 ||cutecanecorsokennel.com^
 ||cutecanecorsopuppies.com^
+||cutecanecorsopups.com^
 ||cutecanvapoopuppies.com^
 ||cutecavadoodlesdawgs.com^
 ||cutecavapoofamilypups.com^
@@ -5041,6 +5181,7 @@
 ||cutefelines.com^
 ||cuteferretsglobal.com^
 ||cuteferretz.com^
+||cutefrenchbulldognearme.com^
 ||cutefrenchbulldogpupshome.com^
 ||cutefrenchbulldogspetshop.com^
 ||cutefrenchbullies.com^
@@ -5074,6 +5215,7 @@
 ||cutegreatdanepuppies.com^
 ||cutegreatdanes.com^
 ||cutehavanese.com^
+||cutehavanesefarm.com^
 ||cutehavanesepuppies.com^
 ||cutehavanesepuppieshome.com^
 ||cutehealthyforme.com^
@@ -5089,6 +5231,7 @@
 ||cutejoyousmaltesepuppy.com^
 ||cutekingcharlescavalierpupforhome.com^
 ||cutekittenlovers.com^
+||cutekittensa.com^
 ||cuteklorapugpuppies.com^
 ||cutelabpuppies.com^
 ||cutelabradoepups.com^
@@ -5130,13 +5273,14 @@
 ||cutemilesboxerpupps.com^
 ||cuteminicavoodlespuppueshome.com^
 ||cuteminidachshunds.com^
+||cuteminifrenchbullmodels.com^
 ||cuteminifrenchiesforsale.com^
 ||cuteminigoldendoodlepuppies.com^
 ||cuteminigoldendoodles.com^
 ||cuteminipupsforhomes.com^
 ||cutemunchkinsforsale.com^
 ||cutenesoverload.com^
-||﻿cuteotterspetstore.com^
+||cuteotterspetstore.com^
 ||cutepapillonpuppiesforfamily.com^
 ||cuteparadisemaltese.com^
 ||cuteparrotsforhomes.com^
@@ -5212,6 +5356,7 @@
 ||cuteshibainupups.com^
 ||cuteshihtzu4homes.com^
 ||cuteshihtzuandmaltesepuppies.com^
+||cuteshihtzubreeders.com^
 ||cuteshihtzuhome.com^
 ||cuteshihtzuplace.com^
 ||cuteshihtzupuppys.online^
@@ -5259,6 +5404,7 @@
 ||cuteteacuppups.com^
 ||cuteteacupshihtzufarm.com^
 ||cuteteacupyorkiepuppies.com^
+||cutetoymaltipoo.com^
 ||cutetoypoodle.com^
 ||cutetoypoodlepuppies.site^
 ||cutetoypoodlesonline.com^
@@ -5288,6 +5434,7 @@
 ||cutiegoldenretrieverpups.com^
 ||cutielabradorretrievers.com^
 ||cutiemunchkinkittens.com^
+||cutiepawsminidachshunds.com^
 ||cutiepawspomeranian.com^
 ||cutiepiepomeranian.com^
 ||cutiepieyorkiepuppies.com^
@@ -5302,6 +5449,7 @@
 ||cuttieschihuahuateacuppups.com^
 ||cuttieyorkiepuppies.shop^
 ||cuttypitbulls.com^
+||cutyhavanese.us^
 ||cvdpuppies.com^
 ||cwycorgipuppies.com^
 ||cx-petmovers.com^
@@ -5319,6 +5467,7 @@
 ||dachchundhealthypupshome.com^
 ||dachshajoyhome.com^
 ||dachshund-homeland.com^
+||dachshund-pups.com^
 ||dachshundamusingpups.com^
 ||dachshundategung.com^
 ||dachshundbabies.com^
@@ -5494,6 +5643,7 @@
 ||dalmatianparadise.com^
 ||dalmatianpets.store^
 ||dalmatianpupbreeders.com^
+||dalmatianpuppbreeders.com^
 ||dalmatianpuppiesbreeders.com^
 ||dalmatianpuppiesfamily.com^
 ||dalmatianpuppieshome.com^
@@ -5507,8 +5657,10 @@
 ||dalmatianpupspot.com^
 ||dalmatianpupworld.com^
 ||dalmatiansfamilyhome.com^
+||dalmatiansonthemove.com^
 ||daltonsbeaglepuppies.com^
 ||dalubullterriers.com^
+||dalymaltipoos.com^
 ||damarisafrenchiespups.com^
 ||damascusroad-pomeranians.com^
 ||damelamericanbully.com^
@@ -5579,9 +5731,11 @@
 ||danteacupmaltesepuppy.com^
 ||dantepughome.com^
 ||dantibetanmastiff.com^
+||danyabyssiniankittens.com^
 ||danycorgi.com^
 ||danydobermanpinscher.com^
 ||danyorkiepups.com^
+||danypersiancattery.com^
 ||daoudpomeranianpups.com^
 ||daoudteacuppomeranianpuppies.com^
 ||dappersamoyedhome.com^
@@ -5727,6 +5881,7 @@
 ||davidsschnauzer.com^
 ||davidsshibainupuppies.com^
 ||daviesgoodjackrussell.com^
+||davisadorablecoons.com^
 ||davisakitashome.com^
 ||davisbeaglepuppieshome.com^
 ||davisdobbermanpuppies.com^
@@ -5951,6 +6106,7 @@
 ||devonrexcastle.com^
 ||devonrexcatcattery.com^
 ||devonrexcatteryhome.com^
+||devonrexkittenforsale.com^
 ||devonrexkitty4u.com^
 ||devonrexlight.com^
 ||devonrexshop.com^
@@ -5992,9 +6148,11 @@
 ||diamondgreatdaneshome.com^
 ||diamondhouseofpuppies.com^
 ||diamondkcpuppies.com^
+||diamondkennelfarm.com^
 ||diamondmainecoons.com^
 ||diamondmorkiepups.com^
 ||diamondmountaindogs.com^
+||diamondpawcanecorso.com^
 ||diamondpitbullhome.com^
 ||diamondpomeranianpups.com^
 ||diamondpoodlepups.com^
@@ -6041,6 +6199,7 @@
 ||dilleyshelter.com^
 ||dillondachshundpuppies.com^
 ||dillonpembrokewelshcorgipuppieshome.com^
+||diloncockerspaniel.com^
 ||dilondachshundpuppies.com^
 ||dilsandbreederhome.com^
 ||dimifrenchbulldog.com^
@@ -6098,6 +6257,7 @@
 ||dksamoyedpuppy.com^
 ||dkwatlabradoodleshome.net^
 ||dobbermannation.com^
+||dobbiesheaven.com^
 ||dobbypups.com^
 ||doberman-pethouse.com^
 ||doberman-puppies.com^
@@ -6126,6 +6286,7 @@
 ||dobermanpinscher.site^
 ||dobermanpinschergarden.com^
 ||dobermanpinscherhome.com^
+||dobermanpinscherkennel.com^
 ||dobermanpinscherpuppieshome.com^
 ||dobermanpuppies.site^
 ||dobermanpuppiesarena.com^
@@ -6135,6 +6296,7 @@
 ||dobermanpuppiesmansion.com^
 ||dobermanpuppiesonline.com^
 ||dobermanpuppiesspot.com^
+||dobermanpuppiesworld.com^
 ||dobermanpuppieszone.com^
 ||dobermanpuppybay.com^
 ||dobermanpuppyville.com^
@@ -6164,8 +6326,10 @@
 ||doggeroyals.com^
 ||doggie-home.com^
 ||doggiesnpuppiesnow.com^
+||doggybeagledoos.com^
 ||doggyfolks.com^
 ||doggyheavens.com^
+||doggyjackrussellterrier.com^
 ||doggymorkiepuppieshome.com^
 ||doglandgalore.com^
 ||dogoargentino.online^
@@ -6344,6 +6508,7 @@
 ||dovecavoodles.com^
 ||dovecavoodlespuppieshome.com^
 ||dovedachshundshome.com^
+||doveyorkiepuppies.com^
 ||downhillkittenshome.com^
 ||downhomebernedoodlesforsale.com^
 ||downtownbernedoodlefarm.com^
@@ -6351,6 +6516,7 @@
 ||downtownsamoyed.com^
 ||downtownshibas.online^
 ||downtownshihtzupupps.com^
+||downtowntoymaltipoos.com^
 ||doxiedachshundpuppies.com^
 ||doxieparadise.com^
 ||doxiewoodspuppies.com^
@@ -6378,6 +6544,7 @@
 ||dreamcanecorsopuppies.com^
 ||dreamcanecorsopups.store^
 ||dreamcatahoulakennel.com^
+||dreamclubpugs.com^
 ||dreamcockapoopuppies.com^
 ||dreamdachshund.com^
 ||dreamdogoargentinopuppies.dog^
@@ -6564,6 +6731,8 @@
 ||dynastycockapoopuppies.com^
 ||dynastygermanshepherdhome.com^
 ||dynastygreatpyrenees.com^
+||dynastymaltipoo.com^
+||dynastynewfoundland.com^
 ||dynastypitbullhome.com^
 ||dynastypoodlepuppies.com^
 ||dynastypuppieshome.com^
@@ -6603,6 +6772,7 @@
 ||eddachshundpups.com^
 ||edddachshunds.com^
 ||eddieaussie.com^
+||eddiesfrenchies.com^
 ||eddricksteacupyorkieshome.com^
 ||eddysamoyedpuppies.com^
 ||edenbulldogs.com^
@@ -6645,11 +6815,13 @@
 ||elainelovelybeagles4home.com^
 ||elainepomeranianhome.com^
 ||elamaltesesales.com^
+||elanateacuppomeranian.com^
 ||elated-chihuahua.com^
 ||elationforeverprevails.com^
 ||elcdachshundpupshome.com^
 ||eldridgefamilyfrenchies.com^
 ||eldrinebassethoundhome.com^
+||eldyslabradorshome.com^
 ||eleanorcattery.com^
 ||eleanorkittery.com^
 ||electromartglob.com^
@@ -6703,6 +6875,8 @@
 ||elevatedcavapoos.com^
 ||elevatedmaltipoos.dog^
 ||elevatedpoms.com^
+||elfincavapoos.com^
+||elfinfrenchies.com^
 ||elgantshihtzupuppies.com^
 ||elianfamilypomeranianpuppies.com^
 ||elianshihtzupuppies.com^
@@ -6785,6 +6959,7 @@
 ||ellensgoldenretrieverpuppies.com^
 ||elliegoldendoodle4homes.com^
 ||elliesdobermanpinscherpuppies.com^
+||elliesdoodleshome.com^
 ||elliotscorgipuppiesspot.com^
 ||ellisonpoodlepuppieshome.com^
 ||ellispugpuppies.com^
@@ -6796,6 +6971,7 @@
 ||elsiepuppies.com^
 ||elsiepuppieshome.com^
 ||elsieteacuppoms.com^
+||elsonthelabrador.com^
 ||eltacorottweilersfarm.com^
 ||eltacorottweilerssfarm.com^
 ||eltiebernedoodlepuppieshome.com^
@@ -6861,8 +7037,10 @@
 ||empowereddoodlefarm.com^
 ||emryslabradorhome.com^
 ||emshihtzupuppies.com^
+||emslivestocklogistics.com^
 ||emyafricangreyparrots.com^
 ||emyorkiepuppies.net^
+||enchantingbassethoundhome.com^
 ||enchantingdevons247.com^
 ||enchantingoldenretriever.com^
 ||enchantingpitbull.com^
@@ -6898,6 +7076,7 @@
 ||english-bulldogbreeder.com^
 ||englishbravehearts.com^
 ||englishbuldogsbreeders.com^
+||englishbulldog-rescue.com^
 ||englishbulldogbestbreeders.com^
 ||englishbulldogbreeders.club^
 ||englishbulldogbreedershome.com^
@@ -6955,10 +7134,12 @@
 ||englishspringerspanielpuppy.com^
 ||englishspringerspanielpups.com^
 ||englishspringerspanielspups.com^
+||englishstaffieshomeaustralia.su^
 ||englishstaffypalace.com^
 ||enimamaltesehome.com^
 ||enrichedschnauzerhome.com^
 ||enrichwesthighlandterriehome.com^
+||enriquekittens.com^
 ||entertaininghuskypuppies.com^
 ||enthusiasticpugcity.com^
 ||enticingmainecoons.com^
@@ -7010,10 +7191,12 @@
 ||esthersiamesekittenshome.com^
 ||ethanbluefrenchies.com^
 ||ethanboxerpuppies.com^
+||ethandoberman.com^
 ||ethangoldendoodlehome.com^
 ||ethanpitbull.com^
 ||ethansgoldenretriever.com^
 ||ethicalbernedoodlefamily.com^
+||ethicalbreedersa.com^
 ||ethicalmaltipoofamily.com^
 ||etockdachshund.com^
 ||etockpomeranian.com^
@@ -7044,6 +7227,7 @@
 ||evachihuahuahome.com^
 ||evacockapoopuppies.com^
 ||evanbasenjipuppieshome.com^
+||evandoberman.com^
 ||evanslabradorretrieverpuppy.com^
 ||evanspitbullhome.com^
 ||evanspomskypuppies.com^
@@ -7143,6 +7327,7 @@
 ||exocticdoodles.com^
 ||exocticpetshome.com^
 ||exorticfrenchbulldogs.com^
+||exorticpetstore.com^
 ||exosfrenchies.com^
 ||exoticafricanparrots.com^
 ||exoticarowanafishfarm.com^
@@ -7171,6 +7356,7 @@
 ||exoticfurs.us^
 ||exoticgoldenretrievers-au.com^
 ||exotichandraisedparrots.com^
+||exotichomepetsbreeders.com^
 ||exotichuskies.com^
 ||exotickitten.store^
 ||exoticmacaquemonkeysfarm.com^
@@ -7198,6 +7384,7 @@
 ||exoticpethom.com^
 ||exoticpethome.com^
 ||exoticpetonline.com^
+||exoticpetreptilesforsale.com^
 ||exoticpets-breedhome.com^
 ||exoticpetsales.com^
 ||exoticpetsbay.com^
@@ -7209,6 +7396,7 @@
 ||exoticpuppieskennel.com^
 ||exoticpurebredkittens.com^
 ||exoticpurebredkittenshome.com^
+||exoticpussycats.com^
 ||exoticreptileslounge.com^
 ||exoticrottweilerpuppies.com^
 ||exoticroyalfrenchies.com^
@@ -7243,6 +7431,7 @@
 ||exquisitekitties.com^
 ||exquisitelabradorretrieverpuppies.com^
 ||exquisitelabradors.com^
+||exquisitemainecoons.com^
 ||exquisitemaltesepups.com^
 ||exquisitemaltipoofamily.dog^
 ||exquisitemaltipoos.com^
@@ -7299,6 +7488,7 @@
 ||faisphynxkitty.com^
 ||faithaussie.com^
 ||faithbeaglefarm.com^
+||faithbordercolliepuppies.com^
 ||faithfulbernesehome.com^
 ||faithfulcavapoopuppies.com^
 ||faithfulchihuahuapups.com^
@@ -7375,6 +7565,7 @@
 ||familychowchow.com^
 ||familychowchowpuppies.com^
 ||familycockerspanielhome.com^
+||familycompanion.us^
 ||familycompanionaussiepuppies.com^
 ||familycompanionhavanese.com^
 ||familycoonscattery.com^
@@ -7414,6 +7605,7 @@
 ||familygreatdanepups.com^
 ||familygreatdanes.com^
 ||familygreatpyreneespuppies.com^
+||familyguardianpuppiescom.net^
 ||familyhavanesepups.com^
 ||familyhomebulldog.com^
 ||familyhomefrenchies.com^
@@ -7454,6 +7646,7 @@
 ||familypitbulls.com^
 ||familypomhoms.com^
 ||familypoodlepuppies.com^
+||familypugbabies.com^
 ||familypughome.com^
 ||familypugpuppy.com^
 ||familypugs.com^
@@ -7475,6 +7668,7 @@
 ||familyraisedcackapoo.com^
 ||familyraisedcavoodle.com^
 ||familyraisedfrenchies.com^
+||familyraisedgoldendoodle.com^
 ||familyraisedminiaturepinschers.com^
 ||familyraisednewfoundlandpuppies.com^
 ||familyraisednewfypoo.com^
@@ -7514,9 +7708,11 @@
 ||familyteacupmaltipoo.net^
 ||familyteacuppomeranians.com^
 ||familyteacuppoodle.com^
+||familyteacuppoodles.com^
 ||familyteacuppuppies.com^
 ||familyteacuppuppieshome.com^
 ||familyteacuppuppy.com^
+||familyteacupschihuahuas.com^
 ||familyteacupsmaltese.com^
 ||familyteacupyorkiepuppies.com^
 ||familyteacupyorkiespuppies.com^
@@ -7543,11 +7739,13 @@
 ||famousafricangreybirds.com^
 ||famousallaboutdogsfarm.com^
 ||famousbeaglepups.com^
+||famousbichonfriseblog.com^
 ||famousbreeders.com^
 ||famousbulldogs.com^
 ||famousdanes.com^
 ||famousgoldendoodlepups.com^
 ||famousgroodles.com^
+||famousiberiankittens.com^
 ||famousmaltipoolitters.us^
 ||famouspomeranianhome.com^
 ||famouspoodlepuppies.com^
@@ -7598,6 +7796,7 @@
 ||fantasyragdollkittenshome.com^
 ||fanteacupyorkiepuppies.com^
 ||farmhouseofboxerpuppies.com^
+||farmilycavoodle.com^
 ||farmlandcorgis.com^
 ||farmlandfamilypugs.com^
 ||farmlandfrenchies.com^
@@ -7618,6 +7817,8 @@
 ||favoritepomskypuppies.com^
 ||favorparrotfarm.com^
 ||favouredakitahome.com^
+||favouredbordercollies.com^
+||favouritepitbullpuppies.com^
 ||fawndiamondfrenchies.net^
 ||fawnpugpuppies.com^
 ||fdfrenchiepuppies.net^
@@ -7638,6 +7839,7 @@
 ||felicitouswelshcorgipups.com^
 ||felicitycoonscattery.com^
 ||felineheavens.com^
+||felinepalacecattery.com^
 ||felipembrokewestcorgihome.com^
 ||felisbengalensis.com^
 ||felisbengals.club^
@@ -7651,6 +7853,7 @@
 ||fennecfoxhome.com^
 ||fennecfoxranch.com^
 ||fentygermanshepherds.com^
+||ferdinandocanecorsohome.com^
 ||ferdshihtzupups.com^
 ||fergusondanepuppies.com^
 ||ferlandbullies.com^
@@ -7660,6 +7863,7 @@
 ||ferretsforadoption.com^
 ||ferrislabradorpups.com^
 ||ferrydachshunds.shop^
+||ferryenglishbulldogpups.com^
 ||fertileparroteggs.com^
 ||festinenglishmastiff.com^
 ||festivesaussages.com^
@@ -7722,6 +7926,7 @@
 ||finetreasurekittens.com^
 ||finevizslapuppies.com^
 ||fineyorkshireterrier.com^
+||finiestmainecoon.com^
 ||finnamericanpocketbullies.com^
 ||finnspuppyshop.com^
 ||finspuppyshop.com^
@@ -7828,6 +8033,7 @@
 ||fluffydevonrexkittens.com^
 ||fluffydiamondfrenches.com^
 ||fluffydoggiepalace.top^
+||fluffyfrenchbulldogforsale.com^
 ||fluffyfrenchiepuppie.com^
 ||fluffyfrenchiepups.com^
 ||fluffygoldendoodlepups.com^
@@ -7866,6 +8072,7 @@
 ||fmpuppies.com^
 ||fodenfamilykennel.com^
 ||fomopuppies.com^
+||fondlebengals.com^
 ||fondlebostonfarm.com^
 ||fondlegreatdaneken.com^
 ||fonlabrador.com^
@@ -7878,9 +8085,11 @@
 ||forestalminipets.com^
 ||forestcavalier.com^
 ||forestorydalmatianspotted.com^
+||forever-home-puppies.com^
 ||foreverbengal.com^
 ||foreverbengals.com^
 ||foreverbernedoodlepuppies.com^
+||foreverbichons.com^
 ||foreverbulldoghome.com^
 ||forevercharmingcorgihomes.com^
 ||forevercorgis.com^
@@ -7913,6 +8122,7 @@
 ||formidablepoodles.com^
 ||fortdachshundpetcorner.com^
 ||fortdoxie.com^
+||forteteacuppom.com^
 ||fortfamilycorgi.com^
 ||fortheparrot.com^
 ||fortmaltesehome.com^
@@ -7954,6 +8164,7 @@
 ||franklanesgoldenpuppies.com^
 ||franklinbulldog.com^
 ||franklindoxieland.com^
+||franklineshitzuhome.com^
 ||franklingoldenretrievers.com^
 ||frankpitbullpups.com^
 ||frankpompups.net^
@@ -7994,6 +8205,7 @@
 ||french-bulldogforsale.com^
 ||french-bulldogs.online^
 ||french-bulldogsforsale.com^
+||french-bulldogsrescue.com^
 ||french-puppiesshop.com^
 ||frenchandbritishbulldogpuppies-au.com^
 ||frenchandenglishbulldogpup.com^
@@ -8001,8 +8213,9 @@
 ||frenchbullclub.com^
 ||frenchbullcuties.com^
 ||frenchbulldog-puppies.com^
+||frenchbulldog.live^
 ||frenchbulldog4homes.com^
-||﻿frenchbulldog4sale.org^
+||frenchbulldog4sale.org^
 ||frenchbulldog81.com^
 ||frenchbulldogaustralia.com^
 ||frenchbulldogbreederhome.com^
@@ -8086,6 +8299,7 @@
 ||frenchie-puppies-for-sale-in-usa.com^
 ||frenchie-puppiesale.com^
 ||frenchie4all.su^
+||frenchiebeautyhome.com^
 ||frenchiebreedernow.com^
 ||frenchiebreedershomes.com^
 ||frenchiebreederstoday.com^
@@ -8162,12 +8376,14 @@
 ||frenzybullies.com^
 ||frenzyreptiles.com^
 ||freshbalinesekittenshome.com^
+||freshbreedpuppies.com^
 ||freshfarmofmerlybullies.com^
 ||freshfrenchbullies.com^
 ||freshgoldenretrievers.com^
 ||freshlabradorpuppies.com^
 ||freundlichefranzosischebulldogenwelpen.de^
 ||freundlichgoldenretriver.com^
+||freyalabradorpuppies.com^
 ||fridabeaglepuppies.com^
 ||fridaymaltese.com^
 ||friendlybeaglepuppies.com^
@@ -8233,8 +8449,10 @@
 ||friendlypughome.com^
 ||friendlypuppyhome.com^
 ||friendlypups4homes.com^
+||friendlypupshome.com^
 ||friendlyragdollshome.com^
 ||friendlyrottweilers.com^
+||friendlyschnauzerpuppieshome.com^
 ||friendlyshepherddogs.com^
 ||friendlyshepherdhome.com^
 ||friendlyshitzupuppies.com^
@@ -8253,6 +8471,7 @@
 ||frontlinebeaglepuppies.com^
 ||frontlineminigoldendoodles.com^
 ||frostyfrenchies.com^
+||fruitfuldachshundhome.com^
 ||fruityaussieshome.com^
 ||frusphynxkittens.com^
 ||fsdsamoyedpuppies.com^
@@ -8423,8 +8642,11 @@
 ||generoushavanesepupshome.com^
 ||genesiscorgipuppies.com^
 ||genesisminiatureschnauzerpuppies.com^
+||genevievepups.com^
 ||genialdachshundpuppieshome.com^
+||genietoypomeranian.com^
 ||genkinameifeashibainupuppies.com^
+||genlanfamilystbernard.com^
 ||gennarocorsoshome.com^
 ||gennysdachshundhome.com^
 ||genteelcavalierkingcharlespuppies.com^
@@ -8443,6 +8665,7 @@
 ||gentlegiantpuppies.com^
 ||gentlegiantpups.com^
 ||gentlegiantranch.com^
+||gentlegiantsgreatdanes.com^
 ||gentlegoldenretrieverhome.com^
 ||gentlegsppuppies.com^
 ||gentlehomepomeranian.com^
@@ -8511,6 +8734,7 @@
 ||germanrottweilerranch.com^
 ||germanrottweilersworld.com^
 ||germansheperdpuppiesbydaniel.com^
+||germanshephedforsale.su^
 ||germanshepherd4u.online^
 ||germanshepherdbrigade.com^
 ||germanshepherdcolors.com^
@@ -8562,6 +8786,7 @@
 ||gfsiberianhuskies.com^
 ||gherabordercollies.com^
 ||ghmcavoodles.com^
+||giancarlocanecorsohome.com^
 ||giantakitas.com^
 ||giantcooncats.com^
 ||giantcoonscattery.com^
@@ -8593,6 +8818,7 @@
 ||gigobullies.com^
 ||gihankingcharlesspanielpuppies.us^
 ||gilbsonfrenchbulldogpuppies.com^
+||gillet-family.site^
 ||gilletshome.com^
 ||gillsbostonsandfrenchies.com^
 ||gilmoregoldenretrievers.com^
@@ -8720,7 +8946,7 @@
 ||gloriouslabradorhome.com^
 ||gloriousmaltipoos.com^
 ||gloriousminibernedoodles.com^
-||﻿gloriouspetfarm.com^
+||gloriouspetfarm.com^
 ||gloriouspitbullhome.com^
 ||gloriouspoodlepuppies.com^
 ||gloriouspugpuppies.com^
@@ -8730,6 +8956,7 @@
 ||gloriousranchdoodles.com^
 ||gloriousshepherds.com^
 ||glorioussphynxcattery.com^
+||glorioussphynxhome.com^
 ||glorioussphynxkittens.com^
 ||gloriousteacuppomeranians.com^
 ||gloriousyorkiepuppies.store^
@@ -8741,10 +8968,13 @@
 ||glorypuppieshome.com^
 ||gloverteacupyorkies.com^
 ||glowbengalshome.com^
+||gmaltesepuppies.com^
 ||gmarkfarms.com^
 ||gminiaturepoodles.com^
 ||gnacorgipups.com^
+||godaddysites.com^
 ||godeliveryint.com^
+||godfearingteacuppoodles.com^
 ||godfearingyorkiehome.com^
 ||godgraceyorkies.com^
 ||godincanecorsopups.com^
@@ -8754,6 +8984,7 @@
 ||godlypomeranianpups.com^
 ||godsmarveldachshundpups.com^
 ||godsonsamoyedpuppies.com^
+||godstimecavapoo.com^
 ||godwillakitapuppies.shop^
 ||godwillrottieshome.com^
 ||goegoldenretrievers.com^
@@ -8775,6 +9006,7 @@
 ||goldenauretrieverspuppiez.com^
 ||goldenbassets.com^
 ||goldenbengals.com^
+||goldenbernesehome.com^
 ||goldenbichonfrisepups.com^
 ||goldenbloodfrenchies.com^
 ||goldenboxerpuppy.com^
@@ -8785,10 +9017,12 @@
 ||goldenbulldogsa.com^
 ||goldencanecorsopups.com^
 ||goldencannines.com^
+||goldencatscatteryhome.com^
 ||goldencavachons.com^
 ||goldencavalierkingcharleshome.com^
 ||goldencavoodles.info^
 ||goldenchampion.net^
+||goldencloudpuppies.com^
 ||goldencockapoo.com^
 ||goldencrestretrievers.com^
 ||goldendachshundpuppies.com^
@@ -8845,6 +9079,7 @@
 ||goldenkittens4you.com^
 ||goldenlabradorretrieverpuppieshomes.com^
 ||goldenlabradorretrievers.com^
+||goldenlandcavachons.com^
 ||goldenlight-poodles.com^
 ||goldenlinepitbulls.com^
 ||goldenmaltese.com^
@@ -8934,7 +9169,7 @@
 ||goldenretrieverpuppyrehome.com^
 ||goldenretrieverpuppyz.com^
 ||goldenretrieverpups-socute.com^
-||﻿goldenretrieverpups.store^
+||goldenretrieverpups.store^
 ||goldenretrieverpupsfarm.com^
 ||goldenretrieverpupshaven.com^
 ||goldenretrieverpupshome.com^
@@ -8950,6 +9185,7 @@
 ||goldenretrieverspuphome.com^
 ||goldenretrieverspuppy.com^
 ||goldenretrieverspuppystore.com^
+||goldenretrieversshop.com^
 ||goldenretrieversshopping.com^
 ||goldenretrieverw.com^
 ||goldenretrieverwelp.com^
@@ -8989,17 +9225,20 @@
 ||goldlineyorkiepuppies.com^
 ||goldlyjackrussell.com^
 ||goldmaltipoopuppies.com^
+||goldondoodlepuppyhome.com^
 ||goldoodles.com^
 ||goldpomeranianshome.com^
 ||goldretrieverbabies.com^
 ||goldretrieverhome.com^
 ||goldretrieverhomes.com^
+||goldridgebullterrierhome.com^
 ||goldridgegoldenretrievers-nz.com^
 ||goldsiberianfamily.com^
 ||goldsmithgorgeousakita.com^
 ||goldstandarddevonsusa.com^
 ||goldstonepaw.com^
 ||goldykittens.com^
+||goldypuppies.com^
 ||golfsiberianhuskyhome.com^
 ||gomezshibainu.com^
 ||gonzalezdachshundpuppy.com^
@@ -9027,6 +9266,7 @@
 ||goodwilltoypuppies.com^
 ||goodwinpugpuppies.com^
 ||goodwinpuppies.com^
+||googoostbernardpuppies.com^
 ||gooldendoodleusa.com^
 ||gordonabyssiniancathome.com^
 ||gordonpomeranian.com^
@@ -9046,9 +9286,11 @@
 ||gorgeouscavoodlepuppies.info^
 ||gorgeouscavoodles.com^
 ||gorgeouschihuahuapups.com^
+||gorgeouschihuahuas.com^
 ||gorgeouscuddlefamily.com^
 ||gorgeousdalmatianpuppieshome.com^
 ||gorgeousdoodleshome.com^
+||gorgeousecatteringhome.com^
 ||gorgeousenglishmastiffpuppies.com^
 ||gorgeousfrenchies.com^
 ||gorgeousfrenchiess.com^
@@ -9161,6 +9403,7 @@
 ||gracelynnsragdollkittens.com^
 ||gracemaltesepuppies.com^
 ||gracepomeranianhome.com^
+||gracepugfarm.com^
 ||gracepugpuppies.com^
 ||gracepuppieshouse.com^
 ||gracequalityaussies.com^
@@ -9217,6 +9460,7 @@
 ||grandwesthighlandterrierhome.com^
 ||grangebernedoodles.com^
 ||grangehillpugs.com^
+||grangesheepadoodles.com^
 ||grantspitbullkennels.com^
 ||grapofamily.com^
 ||grasslandbernedoodles.com^
@@ -9232,6 +9476,7 @@
 ||gravesregisteredmaltipoos.site^
 ||grayafricanparrot.com^
 ||grayboxerpuppies.com^
+||graylinepuppies.com^
 ||graysondachshund.com^
 ||graysonpomeranian.com^
 ||grayteacupyorkiepuppies.com^
@@ -9283,6 +9528,7 @@
 ||greatdanepupshome.xyz^
 ||greatdanepupsworld.com^
 ||greatdanescaremd.com^
+||greatdanescreek.com^
 ||greatdanesdynasty.com^
 ||greatdaneshomes.com^
 ||greatdaneslover.com^
@@ -9311,11 +9557,13 @@
 ||greatpethome.com^
 ||greatpoodlehome.com^
 ||greatpupp.com^
+||greatschnauzerhome.com^
 ||greatschnauzerpups.store^
 ||greatshihtzupuppies.com^
 ||greatshihtzupuppiesgarden.com^
 ||greatsiberiankittens.com^
 ||greatswissies.com^
+||greatteacuppomeranianpuppies.com^
 ||greatvizlapups.com^
 ||greatwelshpembrokecorgipup.com^
 ||greatworldlabradors.com^
@@ -9355,6 +9603,7 @@
 ||greenfieldrottweilershome.com^
 ||greenfieldschnauzerpuppies.live^
 ||greenfieldshichonpuppies.com^
+||greenfieldsiberiankittens.com^
 ||greenfieldslabradors.com^
 ||greenfieldspups.com^
 ||greenfieldstbernardhome.com^
@@ -9444,6 +9693,7 @@
 ||greytamedparrotshop.com^
 ||greyteacupchihuahuapuppieshome.com^
 ||griffinfrenchies.info^
+||grifitsbengals.com^
 ||gripsfeathershome.com^
 ||groodledogs.com^
 ||groodleforsale.com^
@@ -9469,6 +9719,7 @@
 ||gspbreeder.net^
 ||gspuppieshome.com^
 ||gspupshome.com^
+||gstglobalpet.com^
 ||gtenglishbulldoghplace.com^
 ||gtrainukcbullies.com^
 ||guaranteedfrenchies.com^
@@ -9476,6 +9727,7 @@
 ||guardenglishmastiffpuppies.com^
 ||guardgermanshepherdpuppies.com^
 ||guardiandachshundpuppies.com^
+||guardiandobermanpuppieshome.com^
 ||guardiandogoargentino.store^
 ||guardiangermanshepherdpets.com^
 ||guardianpitbullangels.com^
@@ -9501,6 +9753,7 @@
 ||haileydachshundpuppiesfarm.com^
 ||haileygoldenretriverpuppshome.com^
 ||haileypuppiesfarm.com^
+||hairlesscatteryhome.net^
 ||hairlessphynxcats.com^
 ||hairlesssphynxcottage.com^
 ||hakimipapillonspups.com^
@@ -9639,6 +9892,7 @@
 ||happypawsa.com^
 ||happypawscatahoulapupieshome.com^
 ||happypawsconner.com^
+||happypawshihtzupups.com^
 ||happypawskitten.com^
 ||happypawsmaltese.com^
 ||happypawsmaltesehome.com^
@@ -9666,6 +9920,7 @@
 ||happypupshome.com^
 ||happyranchshepherds.com^
 ||happyretrieverhome.com^
+||happyrottweilers.store^
 ||happyrottweilershome.com^
 ||happyrottweilerskennel.com^
 ||happyroyalhavanesebreeders.com^
@@ -9686,6 +9941,7 @@
 ||happytailyorkiepuppies.com^
 ||happytalescattery.co.za^
 ||happytaleskennels.com^
+||happyteacupchihuahuahome.com^
 ||happyteacuppomeranianhome.com^
 ||happyteacuppups.com^
 ||happyvizslapuppies.com^
@@ -9704,9 +9960,12 @@
 ||harleyparadisecorgihomes.com^
 ||harleyragdollkittenshome.com^
 ||harleysamoyedhome.com^
+||harleysdachshundpuppieshome.com^
+||harleywestie.com^
 ||harlragdollkittenscattery.com^
 ||harlynscockerspanielpuppieshome.com^
 ||harlyragdollkittenshome.com^
+||harmancorgipuppies.com^
 ||harmanwelshorgis.com^
 ||harmonyacreshome.com^
 ||harmonybreeders.com^
@@ -9752,11 +10011,13 @@
 ||havanese4homes.com^
 ||havanesebeautypress.com^
 ||havanesebeautypuppies.com^
+||havanesebreedershome.com^
 ||havanesebreedershomes.com^
 ||havanesecarehome.com^
 ||havanesecuties.com^
 ||havanesedaycare.com^
 ||havanesedogfamily.com^
+||havanesefamilyhome.com^
 ||havanesefamilylitters.com^
 ||havanesefamilypuppies.com^
 ||havanesefamilypups.com^
@@ -9794,6 +10055,7 @@
 ||havenhomebordercolliepups.com^
 ||havenhomechowchow.com^
 ||havenhomechowchowpuppies.com^
+||havenhomedachshunds.com^
 ||havenhomegolendoodlepups.com^
 ||havenhomemaltipoopuppies.com^
 ||havenlyhavenesehome.com^
@@ -9812,6 +10074,7 @@
 ||hazelkennel.com^
 ||hazelkitten.com^
 ||hazelshibainu.com^
+||hazelshihtzu.com^
 ||hazypomskies.com^
 ||hbichonfrisepups.com^
 ||hdgreatdanes.com^
@@ -9830,6 +10093,7 @@
 ||healthyalaskanmalamuteforsale.com^
 ||healthyamericanpitbullpuppies.com^
 ||healthyaussiepuppies.com^
+||healthyaussiepups.com^
 ||healthyaussieshepherd.com^
 ||healthyaustralianshepherd.net^
 ||healthyaustraliashepherdpuppy.com^
@@ -9862,6 +10126,7 @@
 ||healthybullyhome.com^
 ||healthycavalierkingcharleshome.com^
 ||healthycavalierkingcharlespups.com^
+||healthycavalierpuppies.com^
 ||healthycavapoo.com^
 ||healthycavapoohome.com^
 ||healthycavoodlehome.com^
@@ -9869,6 +10134,7 @@
 ||healthychihuahuapuppies.com^
 ||healthychihuahuapups.com^
 ||healthychihuahuas.com^
+||healthychowchowhome.com^
 ||healthychowchowlitters.com^
 ||healthycitydalmatians.com^
 ||healthycockerspanielhome.com^
@@ -9890,6 +10156,7 @@
 ||healthydollypups.com^
 ||healthyenglishbulldogpuppies.com^
 ||healthyenglishbulldogpups.com^
+||healthyenglishbulldogshome.com^
 ||healthyfamilydachshundpuppies.com^
 ||healthyfamilydobermans.com^
 ||healthyfrenchbulldogpuppiesforsale.com^
@@ -9909,6 +10176,7 @@
 ||healthygoldenpupsfarm.com^
 ||healthygoldenretriever.com^
 ||healthygoldenretrieverpuppies.com^
+||healthygoldenretrievers-au.site^
 ||healthygoldenretrievers.com^
 ||healthygreatdanepups.com^
 ||healthygreatdanes.com^
@@ -10024,6 +10292,7 @@
 ||heavenlyfrienchies.com^
 ||heavenlygermanshepherds.com^
 ||heavenlygoldendoodlepups.com^
+||heavenlyjackrt.com^
 ||heavenlykittens.co.za^
 ||heavenlylabradors.org^
 ||heavenlylabstoday.com^
@@ -10151,10 +10420,12 @@
 ||highlandbullterriersfarm.com^
 ||highlandfrenchies.com^
 ||highlandsbassethounds.com^
+||highlandschnauzerhome.com^
 ||highlandsmartpomeranians.com^
 ||highlytrainedamericanbullyhome.com^
 ||highlytrainedpomeranian.com^
 ||highqualitybulldogs.com^
+||highqualitychihuahuahome.com^
 ||highqualitycorgipuppies.com^
 ||highqualitydachshund.com^
 ||highqualitydobermanpups.com^
@@ -10215,6 +10486,7 @@
 ||hilltopsaintbernardhome.com^
 ||hilltopshibas.com^
 ||hilltoptexasheeler.com^
+||hilltopyorkiepuppies.com^
 ||hillviewmaltese.com^
 ||hilsonpomeranianpups.com^
 ||hiltongoldenretrieverspups.com^
@@ -10222,6 +10494,7 @@
 ||hiltopbassethound.com^
 ||hiltopbassethoundpuppies.com^
 ||hiltopcavalierkingcharles.com^
+||hiltopdachshundpuppies.com^
 ||hiltophavanese.com^
 ||hiltophuskypuppies.com^
 ||hiltopnewfiedoodles.com^
@@ -10264,6 +10537,7 @@
 ||hollypomeransianavenue.com^
 ||hollyqueengiantschnauzer.com^
 ||hollyqueentoypoodle.com^
+||hollysideyorkies.com^
 ||hollyteacupyorkiepuppies.com^
 ||holmansphynxkitten.com^
 ||holmescreekpugs.com^
@@ -10274,10 +10548,12 @@
 ||holygrailbordercolliepuphome.com^
 ||holyhomeshihtzu.com^
 ||holylandpuppies.com^
+||holyranchaussie.farm^
 ||holyrottweilerpuppies.net^
 ||holysaintbernards.com^
 ||holyshihtzuhome.com^
 ||holyshitzupuppies.com^
+||holytrinitycotons.com^
 ||holytrinitypoodles.com^
 ||home-bredbengalkittens.com^
 ||home-of-poodles.com^
@@ -10322,6 +10598,7 @@
 ||homebreedpets.com^
 ||homebreedrottweilers.com^
 ||homebreedsiberianhuskies.com^
+||homebreedteacuppuppies.com^
 ||homechoicerottweilers.com^
 ||homechowchow.com^
 ||homecockersdog.com^
@@ -10383,6 +10660,7 @@
 ||homemaltipodle.com^
 ||homeobeagles.com^
 ||homeofadorablebassethound.com^
+||homeofadorablepupiess.com^
 ||homeofaffordableyorkiepuppies.com^
 ||homeofakitainupuppies.com^
 ||homeofalaskanmalamute.com^
@@ -10429,7 +10707,9 @@
 ||homeofcollies.com^
 ||homeofcorgi.com^
 ||homeofcorgipups.com^
+||homeofcutepuppies.com^
 ||homeofdachshundpuppies.com^
+||homeofdobermanpinscher.com^
 ||homeofdobermanpoppies.com^
 ||homeofdobermanpuppies.com^
 ||homeofdobermans.com^
@@ -10457,6 +10737,7 @@
 ||homeofkingcharlescavalier.com^
 ||homeofkingcharlespuppies.com^
 ||homeofkingcharlespuppies.net^
+||homeofkittens.com^
 ||homeoflabradorretrievers.com^
 ||homeoflabretrievers.us^
 ||homeoflitters.com^
@@ -10544,6 +10825,7 @@
 ||homeraisedcavachons.com^
 ||homeraisedcavalierkingcharles.com^
 ||homeraisedcavoodles.com^
+||homeraisedchihuahua.com^
 ||homeraisedchowchowpuppies.com^
 ||homeraisedcockapoo.com^
 ||homeraisedcockers.com^
@@ -10569,6 +10851,7 @@
 ||homeraisedmaltipoopups.com^
 ||homeraisedmaltipoos.com^
 ||homeraisedminiaturepinschers.com^
+||homeraisedminipoodlepuppiesforsale.com^
 ||homeraisedminischnauzers.com^
 ||homeraisedminpinpuppies.com^
 ||homeraisedmonkeys.com^
@@ -10640,6 +10923,7 @@
 ||hometrainedcorgi.com^
 ||hometrainedexotic.com^
 ||hometrainedlabradorretrievers.com^
+||hometrainedmainencoon.com^
 ||hometrainedpomeranian.com^
 ||hometrainedpoms.com^
 ||hometrainedpuppies.com^
@@ -10654,6 +10938,7 @@
 ||hommiepuppies.com^
 ||homofpreciouspomsky.com^
 ||homofyorkie.com^
+||hondenaby.com^
 ||hondenthuis.com^
 ||hondjiesnaby.com^
 ||hondjiestekoopza.co.za^
@@ -10696,6 +10981,7 @@
 ||hornesbordercollies.com^
 ||horsehaven-ranch.com^
 ||hosedanes.com^
+||hosekcharlesparadise.com^
 ||hossanacotons.com^
 ||hostschnauzerpupshome.com^
 ||house4yorkies.com^
@@ -10734,6 +11020,8 @@
 ||howtotrainabeaglepuppy.com^
 ||hrlabdoodles.com^
 ||hsbreedersus.com^
+||htoypoodlepuppies.com^
+||httpcelebritysaintbernardhome.com^
 ||httptimespekingesepuppygardens.com^
 ||hubmonkeys.com^
 ||hubpups.com^
@@ -10745,6 +11033,7 @@
 ||hudsonmastiffpups.com^
 ||hudsonnusry.com^
 ||hughenglishbulldogs.com^
+||hughmodestcompanionsfarm.com^
 ||hugsfrenchies.com^
 ||huguespup.com^
 ||huksypuppieshome.com^
@@ -10842,6 +11131,7 @@
 ||idealgoldendoodles.com^
 ||idealgoldenretrieverpuppieshome.net^
 ||idealhavanesepupshome.com^
+||idealhomemaltese.com^
 ||idealkittenshome.com^
 ||idealmaltesehome.com^
 ||idealminiandgiantschnauzer.com^
@@ -10880,6 +11170,7 @@
 ||incrediblepets.co.za^
 ||incrediblepuppiesforsale.com^
 ||indianapuppistore.com^
+||indigosiberianhusky.com^
 ||indispensablebostonterriers.com^
 ||industrialakitas.com^
 ||infinbeaglehome.com^
@@ -10911,10 +11202,13 @@
 ||inlandcreekmastiffs.com^
 ||innsyorkiepuppies.com^
 ||inquisitivefrenchbulldog.com^
+||instateacuppoodles.com^
+||integritybasset.com^
 ||integrityboxer.com^
 ||integrityhavanesehome.com^
 ||integrityitaliangreyhoundkennel.com^
 ||integritysolacefondle.com^
+||intelligentafricangreyparrots.com^
 ||intelligentdobermanpups.com^
 ||intelligenteswelpenhaus.com^
 ||intelligentlabradorpuppies.com^
@@ -10966,6 +11260,7 @@
 ||jackcuteboxers.com^
 ||jackdogbreeders.com^
 ||jackgreatdane.com^
+||jackiechihuahuas.com^
 ||jackmaltese.com^
 ||jackntheboxrussells.com^
 ||jackretrivers.com^
@@ -10987,6 +11282,7 @@
 ||jackrussellpupshome.com^
 ||jackrussellterrier.store^
 ||jackrussellterrierbreeders.com^
+||jackrussellterriercreek.com^
 ||jackrussellterrierhomee.com^
 ||jackrussellterrierview.com^
 ||jacksonbasset.com^
@@ -11078,6 +11374,7 @@
 ||jamesshihtzupuppieshome.com^
 ||jamessphynxcattery.com^
 ||jamestoypoodle.com^
+||jamestzufamilypuppies.com^
 ||jamesweaverdanes.com^
 ||jameswoodmaltipoos.com^
 ||jamesxxlpitbull.com^
@@ -11093,6 +11390,7 @@
 ||jamieretrievers.com^
 ||jamiesdachshundpuppieshome.com^
 ||jamilchihuahuahome.com^
+||jamisonfrenchbulldogs.com^
 ||jampoodle.com^
 ||janabasenjipuppies.com^
 ||janarescuebernardshome.com^
@@ -11104,6 +11402,7 @@
 ||janesaussiepuppies.com^
 ||janesmithhavanesepuppieshome.com^
 ||janeswelshcorgipuppies.com^
+||janetchihuahuas.com^
 ||janetgoldenretrievers.com^
 ||janethlabradorretrievers.store^
 ||janibasset.com^
@@ -11168,6 +11467,7 @@
 ||jassonpugpuppies.com^
 ||jauntyenglishmastiffpuppies.com^
 ||javisexotichome.com^
+||javoncorgibreeders.com^
 ||jaybillsfrenchbulldogs.com^
 ||jaydachshundpups.com^
 ||jaydanes.com^
@@ -11192,7 +11492,9 @@
 ||jayminischnauzers.com^
 ||jayminiyorkies.com^
 ||jaynecavapoopups.com^
+||jayreasonboxerpuppies.com^
 ||jaysamoyeds.com^
+||jayscavalierkingcharlesspaniel.com^
 ||jaysdachshundhome.com^
 ||jaysdachshunds.com^
 ||jaysdobermann.com^
@@ -11204,6 +11506,7 @@
 ||jaysonbernesepuppies.com^
 ||jaysonpomsky.com^
 ||jaysonsbichonparadise.com^
+||jaysonshihtzus.com^
 ||jayspugpuppieshome.com^
 ||jayteacupyorkies.com^
 ||jaywillscavalierkingcharlespuppies.com^
@@ -11214,6 +11517,7 @@
 ||jbsminidoodles.com^
 ||jc-corgies.com^
 ||jcfrenchbulldogpuppies.com^
+||jcfurryloversofall.com^
 ||jcmaltipootoypoodle.com^
 ||jcorgipups.com^
 ||jcsmittenpomsky.com^
@@ -11245,6 +11549,7 @@
 ||jefferysphynxcatteryhome.com^
 ||jeffgolddens.com^
 ||jeffgoldenretrievers.com^
+||jeffhavanesefacility.com^
 ||jeffhealthypoodlepuppyhome.com^
 ||jefflabradorhome.com^
 ||jeffmaltese.com^
@@ -11362,12 +11667,15 @@
 ||jimbordercollies.com^
 ||jimbullfrenchmastiffhome.com^
 ||jimcanecorsohome.com^
+||jimmycholabradorretriever.com^
+||jimmydachshunds.site^
 ||jimmysdachshund.com^
 ||jimmyyorkies.com^
 ||jimsmaltesefamily-au.com^
 ||jimsmaltesefamily-au.site^
 ||jinglebelldachshund.com^
 ||jingleboxers.com^
+||jingledalmatianbreeders.com^
 ||jingleretrievers.com^
 ||jinnypugspuppies.net^
 ||jjcockerspaniels.com^
@@ -11396,6 +11704,7 @@
 ||jodidanikabassethoundhome.com^
 ||jodidanikahavanesefarm.com^
 ||jodiecavapoopuppies.com^
+||jodiecavoodle.org^
 ||jodieshibainupuppies.com^
 ||jodyfrenchiepupshome.com^
 ||jodysbulldogs.com^
@@ -11403,10 +11712,12 @@
 ||joelbeaglepuppies.com^
 ||joeldobbies.com^
 ||joelsboxerpuppies.com^
+||joeparrotbreeder.com^
 ||joescorgies.com^
 ||joescorgipuppies.com^
 ||joesfrenchbulldogs.com^
 ||joespuppyhome.com^
+||joeydobermanuppies.com^
 ||johgrabeagles.com^
 ||johnbellteacupmaltese.com^
 ||johnboxerpuppies.com^
@@ -11418,6 +11729,7 @@
 ||johngoldenretrieverpuppies.com^
 ||johngreatdane.com^
 ||johnmaincoonkitten.com^
+||johnmorelscorgipuppies.com^
 ||johnpugpuppy.com^
 ||johnsaviary.us^
 ||johnsgreatdanehome.com^
@@ -11443,6 +11755,7 @@
 ||johnsonsfamilypaws.net^
 ||johnsonsfrenchies.com^
 ||johnsonslabpuppies.com^
+||johnsonspitbullpuppies.com^
 ||johnsonspomskypuppies.com^
 ||johnsonspuppyhome.com^
 ||johnsonwesthighlandwhiteterrier.com^
@@ -11532,6 +11845,7 @@
 ||jovialyorkiepuppieshome.com^
 ||joyaussiepuppies.com^
 ||joybalinesekittens.com^
+||joybondleteacuppomeranians.com^
 ||joybostonterrierpuppies.com^
 ||joyboxerhome.com^
 ||joybritishshorthair.com^
@@ -11584,6 +11898,7 @@
 ||joyhomepugpuppies.com^
 ||joyitaliangreyhoundpuppies.com^
 ||joylandalaskanmalamutepuppieshome.com^
+||joylandragdollkittenshome.com^
 ||joymaltesepupsfamily.com^
 ||joymaltipoohomes.com^
 ||joymunchkincattery.com^
@@ -11610,6 +11925,7 @@
 ||jozipuppyfinder.com^
 ||jpamperpuppies.com^
 ||jpaulfrenchies.com^
+||jperkinss.com^
 ||jpethome.com^
 ||jrbordercolliepups4sale.com^
 ||jrgoldenretrievers.com^
@@ -11618,6 +11934,7 @@
 ||jschnauzerpuppies.com^
 ||jscockapoohome.com^
 ||jshuskyandpomsky.us^
+||jskittycattery.com^
 ||jtoyteacupspomshome.net^
 ||juanasfrenchies.com^
 ||juanitahoundpuppies.com^
@@ -11644,6 +11961,7 @@
 ||juliateacupyorkiepuppshome.com^
 ||juliensamericanbullies.com^
 ||julieroyalsheltiepuppies.com^
+||julieshelties.com^
 ||julieshihtzuhome.com^
 ||juliessphynxkittens.com^
 ||julliete-bernedoodle.com^
@@ -11674,6 +11992,7 @@
 ||jwfrenchies.com^
 ||jwgermanshepherd.com^
 ||jwtoypoodles.com^
+||jwyorkshireterrier.dog^
 ||jwzchihuahuahome.com^
 ||k9belgianmalinois4sale.com^
 ||k9gsdkennel.com^
@@ -11756,6 +12075,8 @@
 ||kathleenmainecoonworld.net^
 ||kathlenegoldendoodlehome.com^
 ||kathrynbassethoundhome.com^
+||kathryncorgis.com^
+||kathrynpugshome.com^
 ||kathrynpuppieshome.com^
 ||kathymaltipoopuppies.com^
 ||kathypuppieshome.com^
@@ -11766,6 +12087,7 @@
 ||katiekittenshome.info^
 ||katiesrottweilers.com^
 ||katinayorkies.com^
+||katjiestekoop.online^
 ||katlynlabradorpuppies.com^
 ||katrinaloyalpuppies.com^
 ||katrinedachshundfamily.shop^
@@ -11822,6 +12144,7 @@
 ||keithsbostonterrierpuppies.com^
 ||kelashihtzus.com^
 ||kelbiscorgies.com^
+||kelisbernedoodles.com^
 ||kelloggspups.com^
 ||kellybassethoundpetshome.com^
 ||kellycockapoo.com^
@@ -11880,16 +12203,20 @@
 ||kennypitbullpuppies.com^
 ||kennypughome.com^
 ||kennyragdollkittens.com^
+||kennys-sheltiepuppies.com^
 ||kennystarbully.store^
 ||kensboxerpuppies.com^
 ||kensdachshundpuppies.com^
 ||kenspitbullhouse.com^
 ||kenspoodles.com^
+||kenswiftchihuahuahome.com^
 ||kentbasenjipuppies.com^
+||kentbengal.com^
 ||kentonslabradorpups.com^
 ||kentrellxxlpitbullpuppies.com^
 ||kenyorkiepuppieshome.com^
 ||kenzigoldendoodlepuppies.com^
+||kepadachshundpuppies.com^
 ||kerenbalfrenchies.com^
 ||kerenchihuahuahome.com^
 ||kerenteacuppuppiesfarm.net^
@@ -11982,6 +12309,7 @@
 ||kimpets.online^
 ||kimpugpuppieshome.com^
 ||kimsbeaglehome.com^
+||kimscanecorsopuppies.com^
 ||kimsenglishbulldogpups.com^
 ||kimsfrenchbulldogpuppies.com^
 ||kimshomeofpoodles.com^
@@ -11993,6 +12321,7 @@
 ||kinahomeforpuppies.com^
 ||kinderminimaltipoo.com^
 ||kindfrenchies.com^
+||kindleteacupmaltese.com^
 ||kindredexoticshorthairkittens.com^
 ||kindsamoyeds.com^
 ||kinfolkexoticshorthairkittens.com^
@@ -12129,7 +12458,9 @@
 ||kingstonpomeranians.com^
 ||kingstonshibas.com^
 ||kingsyorkiepups.com^
+||kingteacupchihuahuahome.com^
 ||kingteacuppoodlepups.com^
+||kingteacuppuppieshome.com^
 ||kingtoypoodleshome.com^
 ||kingtrainedpapillons.com^
 ||kingviewgoldenretriever.com^
@@ -12176,7 +12507,9 @@
 ||klaramaltipoohome.com^
 ||klarapuppies.com^
 ||klassickingcharles.com^
+||klassickingcharlesbay.com^
 ||kleinehundezuhause.com^
+||kleinfdachshund.com^
 ||kleinschnauzerdairy.com^
 ||kleinspuppies.com^
 ||klengoldenretrievers.com^
@@ -12198,6 +12531,7 @@
 ||knoxcockapoo.com^
 ||kobepitbullpuppiesfarms.com^
 ||kodysfamilymaltipoopuppies.com^
+||kohlercavapoo.com^
 ||kolafrenchbulldogs.com^
 ||kolbushgoldenretrievers.com^
 ||kollslabradors.com^
@@ -12218,6 +12552,7 @@
 ||kraigsgoldenretrievershome.com^
 ||kraliyetshihtzuhome.com^
 ||kreamluxurypuppies.com^
+||kreativefrenchies.com^
 ||kreppschihuahuas.com^
 ||kreptonchihuahuas.com^
 ||kribibeagles.com^
@@ -12230,6 +12565,7 @@
 ||kristineteacuppoodles.com^
 ||kristypugpuppies.com^
 ||kristysiberianhuskypuppieshome.com^
+||kruegerlabradorshome.com^
 ||krugerpuppieshome.com^
 ||kruizendachshund.com^
 ||krysrottweilerhome.com^
@@ -12247,6 +12583,7 @@
 ||kuntacats.com^
 ||kunyampiggyhome.com^
 ||kuorahomes.com^
+||kurtskittenhome.com^
 ||kurtsrottweilers.com^
 ||kusabreedershome.com^
 ||kusapuppies4sale.co.za^
@@ -12254,6 +12591,7 @@
 ||kutcheraussiepups.com^
 ||kuttofrenchies.us^
 ||kuttypomerian.com^
+||kutypomeranian.com^
 ||kuvenlabradorpuppies.com^
 ||kvaussiepups.com^
 ||kvlabradorpuppies.com^
@@ -12327,6 +12665,7 @@
 ||labradorpupeez.com^
 ||labradorpuppies.online^
 ||labradorpuppies.store^
+||labradorpuppies.su^
 ||labradorpuppies4u.com^
 ||labradorpuppiesbreeder.com^
 ||labradorpuppiescenter.com^
@@ -12405,6 +12744,7 @@
 ||lakemansgoldenretrievers.com^
 ||laken-danes.com^
 ||lakersgoldenretriever.com^
+||lakerspuppiesbreedinghome.com^
 ||lakersrottweilerpuppieshome.com^
 ||lakeshorealaskanmalamute.com^
 ||lakeshoregoldenretrievers.com^
@@ -12485,6 +12825,7 @@
 ||laryfrenchies.com^
 ||larymainecoongarden.com^
 ||lastingpugs.com^
+||lasvegasmaltipoo.com^
 ||latashiawhippetpuppies.site^
 ||lathanslabradorshome.com^
 ||latifamorgantyorkies.com^
@@ -12502,10 +12843,12 @@
 ||laurapuppyfarm.com^
 ||laurawelshcorgipuppies.com^
 ||laurelspitbullpuppies.com^
+||laurenspitbulls.com^
 ||laurenspuppyfarm.com^
 ||lauretlabradorpuppies.com^
 ||lauriechihuahuas.com^
 ||lavallecanecorsohome.com^
+||laverneteacuppoodlehome.com^
 ||lavishbordercollie.com^
 ||lawnstarmainecooncats.com^
 ||lawnstarshihtzupuppies.com^
@@ -12611,8 +12954,8 @@
 ||lemobengalkittens.com^
 ||lenacockapoopuppies.com^
 ||lenahavanesepuppies.com^
-||﻿lenahavanesepuppies.com^
 ||lennonpuppiesparadise.com^
+||lennonretrieverkennel.com^
 ||lennykennel-de.com^
 ||lennysdoxies.com^
 ||lennyspups.com^
@@ -12713,6 +13056,7 @@
 ||lilroyscavalierpups.com^
 ||lilshetlandpuppies.com^
 ||lilwelshcorgi.com^
+||lilybeagles.com^
 ||lilybordercollies.com^
 ||lilyboxersheaven.com^
 ||lilydoodleshome.com^
@@ -12735,6 +13079,7 @@
 ||lindishepherd.com^
 ||lindosbulldogsfranceses.com^
 ||lindoscachorros.com^
+||lindosminicachorros.us^
 ||lindseyclassyboerboelpups.com^
 ||lindseyitaliangreyhoundpups.com^
 ||lindseysbasenjipuppies.com^
@@ -12742,12 +13087,14 @@
 ||lindyjfamilyshelties.com^
 ||lineahouseofgoldenretrievers.com^
 ||linetesamoyedhomes.com^
+||linkcorgipups.com^
 ||linpugpuppiesforhome.com^
 ||linpugs.com^
 ||linshihtzupuppies.com^
 ||linylpugpuppies.com^
 ||linzybloodhoundpuppiehome.com^
 ||lionamainecoonkitten.com^
+||lionelboxers.com^
 ||lionfacechowchowpuppies.com^
 ||lionheartkittens.com^
 ||lionheartshepherds.com^
@@ -12767,6 +13114,7 @@
 ||lisarottweilerpuppies.com^
 ||lisasheltiehome.com^
 ||lisasrotties.com^
+||lispugslovehome.com^
 ||listateacuppuppies.com^
 ||litracyfrenchies.com^
 ||litteheavenminpins.com^
@@ -12797,6 +13145,7 @@
 ||livelykitecattery.com.au^
 ||livelykitecattery.com^
 ||livelypitbullpups.com^
+||livelypomskies.com^
 ||livelyschnauzerandschnoodlehome.com^
 ||livelywestieterrierhome.com^
 ||liveparrots.com^
@@ -12821,6 +13170,7 @@
 ||lminikittens.com^
 ||local24online.com^
 ||localadorablefrenchies.com^
+||localbostonterrier.com^
 ||localbostonterrierpuppies.com^
 ||localbreederhome.com^
 ||localfrenchbulldogbreeders.com^
@@ -12828,6 +13178,7 @@
 ||localjackrussellpuppies.com^
 ||localminiaturedachshundpups.com^
 ||localminidachshundpuppies.com^
+||localminidachundpuppies.com^
 ||localminischnauzerandcross.com^
 ||localmonkeyhome.com^
 ||localmoodlebreeders.com^
@@ -12854,13 +13205,14 @@
 ||logansiamesekittenshome.com^
 ||loganspitbullhome.com^
 ||logisticstransexpress.com^
-||﻿logminishihtzubreeders.com^
+||logminishihtzubreeders.com^
 ||lolacavapoopuppies.com^
 ||lolitachihuahuapups.com^
 ||lolly-poodles.com^
 ||lollypuppieshome.com^
 ||londgoldenretrievers.com^
 ||lonelybullmastiff.com^
+||longanshorthairchihuahua.xyz^
 ||longanshorthairchihuahuaforsale.xyz^
 ||longfrench.com^
 ||longhairdachshund4sale.com^
@@ -12947,6 +13299,7 @@
 ||lovelybeaglepuppiesforsale.com^
 ||lovelybeaglepups.com^
 ||lovelybeagles.site^
+||lovelybeagleshome.com^
 ||lovelybengalkitten.com^
 ||lovelybengalkittenshome.com^
 ||lovelybernesecuties.com^
@@ -12963,6 +13316,7 @@
 ||lovelycanecorsoforsale.com^
 ||lovelycanecorsoforsale.net^
 ||lovelycanecorsos.com^
+||lovelycapuchinhome.com^
 ||lovelycatahoulapuppies.com^
 ||lovelycavalierkingcharles.com^
 ||lovelycavapoo.com^
@@ -12979,6 +13333,7 @@
 ||lovelycockerspaniels.com^
 ||lovelycockerspanielshome.com^
 ||lovelycompaniondachshunds.com^
+||lovelycompanionpuppies.com^
 ||lovelycorgicuties.com^
 ||lovelycorgis.com^
 ||lovelydachshund.com^
@@ -13004,6 +13359,7 @@
 ||lovelyfrenchbulldog.com^
 ||lovelyfrenchbulldogpuppies.com^
 ||lovelyfrenchbulldogpups.com^
+||lovelyfrenchbulldogs.com^
 ||lovelyfrenchbulldogshome.com^
 ||lovelyfrenchiebulldogs.com^
 ||lovelyfrenchiehome.com^
@@ -13089,7 +13445,6 @@
 ||lovemaltesehome.com^
 ||lovepaws-poodles.com^
 ||lovepersiankittenscattery.com^
-||﻿lovepersiankittenscattery.com^
 ||lovepitbullpups.com^
 ||lovepomeranianpets.com^
 ||loveprimerotts.site^
@@ -13097,9 +13452,13 @@
 ||loversdayakita.com^
 ||loversdaypug.com^
 ||lovershomeforall.com^
+||loversofall.com^
 ||loverspupshome.com^
 ||lovertkimboxerspuppies.com^
+||loveseasoncorgihome.com^
+||loveseasondachshundpups.com^
 ||lovesphynx.com^
+||lovetouchdoggiess.top^
 ||lovetoypoodle.com^
 ||lovettgreatdaneshome.com^
 ||lovettpitbullpuppies.com^
@@ -13127,6 +13486,7 @@
 ||lovingpurebredpomeranian.com^
 ||lovingsiamesekittens.com^
 ||lovingtoypoodles.com^
+||lowchenandbiewerterrierhome.com^
 ||lowesdachshunds.com^
 ||lowrdachshunds.com^
 ||loyal-frenchies.com^
@@ -13168,7 +13528,6 @@
 ||loyalstaffordshirebullterrierpups.com^
 ||loyalteacupchihuahuapupshome.com^
 ||loyaltyaussiedoodlehome.com^
-||﻿loyaltyaussiedoodlehome.com^
 ||loyaltydachshundpupshome.com^
 ||loyaltygoldenretrieverpuppies.com^
 ||loyaltypoodle.com^
@@ -13191,6 +13550,7 @@
 ||luciateacuppoodlepuppies.com^
 ||luciawelshcorgipuppies.com^
 ||lucidbelgianmalinois.com^
+||lucidumbulldogs.com.au^
 ||lucillepugs.com^
 ||luciouskittens.info^
 ||luckyarowanafishery.com^
@@ -13198,6 +13558,7 @@
 ||luckyaustralianshepherds.com^
 ||luckybirmankittens.com^
 ||luckybordercollies.com^
+||luckybostonterriers.com^
 ||luckycanecorsopuppies.com^
 ||luckycavaliers.com^
 ||luckycavalierspaniels.com^
@@ -13232,6 +13593,7 @@
 ||lucysdachshundhome.com^
 ||lucysjackrusselpuppies.com^
 ||lucyswelshcorgipuppies.com^
+||ludaspot.com^
 ||lufkinmaltesefarm.com^
 ||lugzlinegoldendoodles.com^
 ||luisasbasenjipuppies.com^
@@ -13326,6 +13688,7 @@
 ||luxurymastiffs.com^
 ||luxuryminipuppies.com^
 ||luxurypethomes.store^
+||luxurypetsource.com^
 ||luxurypitbullsandfrenchies.com^
 ||luxurypoodlescorner.com^
 ||luxyboxerpuppieshome.com^
@@ -13376,6 +13739,7 @@
 ||maconcanecorso.com^
 ||macronteacuppuppies.com^
 ||macronyorkiespuppies.com^
+||macrottweilerpuppies.com^
 ||macsmithfrenchiehome.com^
 ||macsphynxkittens.site^
 ||macusminipigs.com^
@@ -13438,12 +13802,13 @@
 ||magnificentyorkies.com^
 ||magnificientboxerpuppies.com^
 ||magnoliacreekscorgis.com^
+||magnumgreatdane.com^
 ||magnummaltese.com^
 ||magpomeranians.com^
 ||mahanttabullies.com^
 ||mahanzaussiepuppy.com^
 ||maiateacuppomeranian.com^
-||﻿maidenfrenchbulldogpups.com^
+||maidenfrenchbulldogpups.com^
 ||maidenrockminiaussies.com^
 ||maileyheavencorgihomes.com^
 ||mailingontime.com^
@@ -13474,6 +13839,7 @@
 ||mainecoonkittensforsalee.com^
 ||mainecoonkittenshome.net^
 ||mainecoonkittensparadise.com^
+||mainecoonkittenusa.com^
 ||mainecoonkittsparadise.com^
 ||mainecoonprivatebreeder.com^
 ||mainecoonragdoll.com^
@@ -13488,6 +13854,7 @@
 ||maisondesbouledogue.com^
 ||maisonpuppies.com^
 ||maisonsmaincoonkitten.com^
+||maisphynx.com^
 ||majesticaussiepuppies.com^
 ||majesticcanecorso.com^
 ||majesticchowchow.com^
@@ -13610,8 +13977,10 @@
 ||maltesepups4home.com^
 ||maltesepupsforsale.com^
 ||maltesepupshome.com^
+||maltesepupyangels.com^
 ||maltesesanctuaryhome.com^
 ||malteseshitzupoodlehome.com^
+||maltesespitz.online^
 ||maltesesweethome.com^
 ||maltesetimes.com^
 ||maltesewithluv.com^
@@ -13695,6 +14064,8 @@
 ||manelturkishangorakittens.com^
 ||manesamoyedpuppies.com^
 ||mangaskitties.com^
+||mangwabritishfurs.com^
+||manhattanrescueshelter.com^
 ||maniboxer.com^
 ||manikiepitbulls.com^
 ||manillafrenchies.com^
@@ -13725,6 +14096,7 @@
 ||marbordercollies.com^
 ||marccanecorsopuppiesforsale.com^
 ||marcgoldendoodles.com^
+||marcihuskyhome.site^
 ||marcolfrenchiehome.com^
 ||marcosdobermanpupsforsale.com^
 ||marcoseurodanes.com^
@@ -13834,6 +14206,7 @@
 ||marlonsbostonterrier.com^
 ||marloschnauzers.com^
 ||marluxrussianbluecattery.com^
+||marmatiacavaliers.com^
 ||marmosetkingdom.com^
 ||marmosetmonkiesbyjefferson.com^
 ||marmosetsfamilyhouse.com^
@@ -13845,6 +14218,7 @@
 ||marquispuppyhome.store^
 ||marrscottishfoldkittens.com^
 ||marshagoldendoodles.com^
+||marshallgreatdanes.com^
 ||marshallrotweillerpuppies.com^
 ||marshallspuppies.store^
 ||marssyorkiegardens.com^
@@ -13891,6 +14265,8 @@
 ||marvelousbullmastiff.com^
 ||marvelouscanecorsobreeder.com^
 ||marvelouscavachonpuppies.com^
+||marvelouschihuahuaapuppies.com^
+||marvelousdachshund.com^
 ||marvelousdachshundpuppies.com^
 ||marvelousdachsundhomes.com^
 ||marvelousdoxiepuppies.com^
@@ -13923,6 +14299,7 @@
 ||marvelousyorkiepuppies.com^
 ||marvelpoodles.com^
 ||marvelshihtzupuppies.com^
+||marvindachshundbreed.com^
 ||marvinfrenchbulldogs.com^
 ||marvinmaltesehome.com^
 ||marvisbulldogs.com^
@@ -14148,6 +14525,7 @@
 ||mdpuppyclub.com^
 ||mdpuppyclub.dog^
 ||mdrescuehome.com^
+||meadowsteacupmaltipoos.com^
 ||mecumdachshund.com^
 ||mecumgreatdane.com^
 ||mecumpomeranian.com^
@@ -14169,6 +14547,7 @@
 ||megagoldenretrievers.com^
 ||megagreatdanepups.com^
 ||megahchihuahuapuppies.com^
+||megamainecooncattery.com^
 ||megamainecoonkittens.com^
 ||megaminidoxie.com^
 ||megaminidoxiepuppies.com^
@@ -14197,6 +14576,7 @@
 ||melbypoodles.com^
 ||melflyncattery.com^
 ||melharcopugpups.com^
+||meligoldenretrievers.com^
 ||melinabassethoundhome.com^
 ||melindafrenchbulldogs.com^
 ||melisateacupyorkiepuppies.com^
@@ -14265,6 +14645,7 @@
 ||merlpocketbullies10.com^
 ||merritpups.com^
 ||merryaussiedoodles.com^
+||merrybichonfrise.com^
 ||merrydachshundpuppies.com^
 ||merrymakingbulldogs.com^
 ||merrypitbullhome.com^
@@ -14337,6 +14718,7 @@
 ||michellepuppieshomes.com^
 ||michellerosebassethoundpuppies.com^
 ||michelleteacups.net^
+||michnelfluffypoodlepuppies.com^
 ||micjackrussellhome.store^
 ||micjackrussellkennel.store^
 ||mickeyfrenchbulldogs.com^
@@ -14352,6 +14734,7 @@
 ||micropomeranianpuppies.com^
 ||micropomeranianshome.com^
 ||microspottypetstore.com^
+||microteacuppoodlesforsale.info^
 ||microteacupyorkiepuppieshome.com^
 ||microyorkiepuppies.pet^
 ||micsharpeihome.store^
@@ -14401,6 +14784,7 @@
 ||mikejonespoodlepuppieshome.com^
 ||mikelawsonbeaglebabies.com^
 ||mikemillergermanshepherdpuppies.com^
+||mikeminiaturedachshunds.com^
 ||mikepompuppies.com^
 ||mikepugpuppies.com^
 ||mikesausagepups.com^
@@ -14431,6 +14815,7 @@
 ||milafahome.online^
 ||milanapupgs.com^
 ||milanfrenchiehome.com^
+||mildbordercolliepups.com^
 ||milerdachshund.net^
 ||milesbasenjipuppieshome.com^
 ||milesboxers.com^
@@ -14468,6 +14853,7 @@
 ||miltonchowchowhome.com^
 ||miltondachsundpuppies.com^
 ||miltonrottiehomes.com^
+||mimicafricangreyparrots.com^
 ||mimikennels.com^
 ||mimosapoms.com^
 ||mimsbrownpuppies.com^
@@ -14475,6 +14861,7 @@
 ||minafrenchies.com^
 ||minapugpuppies.com^
 ||minasphynxkittens.com^
+||minatureaustraliasheperd.com^
 ||mindblownteacups.com^
 ||mindcreedaussies.com^
 ||mindcreedrottweilers.com^
@@ -14491,6 +14878,7 @@
 ||miniaturebulldogforsale.com^
 ||miniaturecavoodles.com^
 ||miniaturecorgifamily.com^
+||miniaturedachshundhaven.com^
 ||miniaturedachshundhomes.com^
 ||miniaturedachshundpup.com^
 ||miniaturedachshundpuppies.net^
@@ -14503,6 +14891,7 @@
 ||miniaturemalteseforsale.com^
 ||miniaturepigranch.com^
 ||miniaturepinscheradoption.com^
+||miniaturepinscherbreederhome.com^
 ||miniaturepinscherhome.com^
 ||miniaturepinschernearme.com^
 ||miniaturepinschernearmee.com^
@@ -14514,6 +14903,7 @@
 ||miniaturepoodleforsale.com^
 ||miniaturepoodlehome.com^
 ||miniaturepoodlepuppies.com^
+||miniaturepoodles.net^
 ||miniaturepuppies.su^
 ||miniaturepuppiesworld.co.za^
 ||miniatureschnauzerforsale.com^
@@ -14542,6 +14932,7 @@
 ||minidachshund4loves.com^
 ||minidachshundandmore.com^
 ||minidachshundbabies.com^
+||minidachshundhaven.com^
 ||minidachshundhome.com^
 ||minidachshundhome.net^
 ||minidachshundisland.com^
@@ -14573,6 +14964,7 @@
 ||minifrenchbulldogwarehouse.com^
 ||minigolddoodle.com^
 ||minigolden-doodles.com^
+||minigoldendoodleforsale.com^
 ||minigoldendoodlehomes.com^
 ||minigoldendoodlepaw.com^
 ||minigoldendoodlepuppies.us^
@@ -14619,6 +15011,7 @@
 ||minisausagepuppycorner.com^
 ||minisausagerolls.com^
 ||minischnauzerpalace.com^
+||minischnauzerpuppys.com^
 ||minischnauzersandcross.com^
 ||minischnauzershome.com^
 ||minischnauzerskennel.com^
@@ -14626,6 +15019,7 @@
 ||minischnauzerspluscross.com^
 ||minischnauzerspot.com^
 ||minisforyou.com^
+||minishibainunearme.com^
 ||minisizemaltese.com^
 ||minismartpomeranianpuppies.com^
 ||ministandardgoldendoodlepuppies.com^
@@ -14648,12 +15042,12 @@
 ||miniyorkshirepups.com^
 ||minordachshundpuppy.com^
 ||minotbichonfrisehome.com^
-||﻿minotbichonfrisehome.com^
 ||minotmaltbone.com^
 ||minotpomshome.com^
 ||minotpwcorgihome.com^
 ||minotshihtzuhome.com^
 ||minotsmartpugs.com^
+||minpinnearme.com^
 ||minpinpalace.com^
 ||minpinslovers.com^
 ||minpinsource.com^
@@ -14686,6 +15080,7 @@
 ||mistyfrenchies.com^
 ||mistymountainpuppies.net^
 ||mitchdobermanpuppies.com^
+||mitchellsteacupmaltipoos.com^
 ||mitchyorkiepups.com^
 ||mittlewesthuskies.com^
 ||mittlewestmaltipoocom.com^
@@ -14693,10 +15088,12 @@
 ||mixbreeder.com^
 ||mixbreedgroodlepups.com^
 ||mixbreedpuppiez.com^
+||mixedbreedkittens.com^
 ||mixfamilypups.com^
 ||mixminiatures.com^
 ||mixxbreedpuppies.com^
 ||miyabichonhome.com^
+||miyakapals.com^
 ||mjparrothome.com^
 ||mjpithomes.com^
 ||mjpoodleheavens.com^
@@ -14720,9 +15117,12 @@
 ||mmypuppies.com^
 ||mngoldendoodles.com^
 ||mobibeagles.com^
+||mobilityhavanesehome.com^
 ||mobitbirdsfarm.com^
 ||moderngiantsmainecooncats.com^
 ||modernpetshippers.com^
+||modernsiberianhuskypuppies.com^
+||modestcavalierkingcharlesspaniel.com^
 ||modishaussie.com^
 ||modishbassets.com^
 ||modishboxerpups.com^
@@ -14734,6 +15134,7 @@
 ||moewparadisekittens.com^
 ||mofondachshund.com^
 ||mofonpomeranian.com^
+||mohillsservices.com^
 ||molehillpuppies.com^
 ||molliespoodle.com^
 ||molloyminischnauzers.com^
@@ -14872,12 +15273,14 @@
 ||mountainmastiffhome.com^
 ||mountainschnauzerpuppies.com^
 ||mountainsidepuppies.com^
+||mountainstbernards.com^
 ||mountaintopragdollkittens.com^
 ||mountainviewbernesemountaindogpuppies.com^
 ||mountlabradors.com^
 ||mountpuppies.com^
 ||movabichonfrisehome.com^
 ||movwelshcorgihome.com^
+||moyalvizslapuppies.com^
 ||moyosjosainpuppieshome.com^
 ||moyospuppieshouse.com^
 ||mparrotszone.com^
@@ -14908,7 +15311,9 @@
 ||mulberryshihtzu.com^
 ||mullahshibainupuppy.com^
 ||mullanshihtzu.com^
+||mullysheltiepuppies.com^
 ||multibreedersshop.com^
+||multiparrot.shop^
 ||multipupshome.com^
 ||munchkin-citykittens.com^
 ||munchkin-kittycattery.com^
@@ -14947,6 +15352,7 @@
 ||murrayteacuppomhome.com^
 ||muscleboudhuskies.com^
 ||musculardobermanpinscherpuppies.com^
+||mussanggreatdaneheaven.com^
 ||mustikspuppies.com^
 ||muttcaninefamily.com^
 ||muvetschnauzers.com^
@@ -14992,6 +15398,7 @@
 ||mydobermanspups.com^
 ||mydoodleshome.com^
 ||mydreamfamilyhome.com^
+||mydreamhomepuppies.com^
 ||mydreamlabrador.com^
 ||mydreammaltipoopups.com^
 ||myenglishbulldoghome.com^
@@ -15107,6 +15514,7 @@
 ||mzansipuppieshome.com^
 ||mzanzipupkennel.com^
 ||naanmerlepitbull.com^
+||naaztradingpls.com^
 ||nabcavaliershome.com^
 ||nadekristoferpups.com^
 ||nadelcoonscattery.com^
@@ -15201,7 +15609,6 @@
 ||nelabeagles.com^
 ||nelasfrenchies.online^
 ||nelljpupps.com^
-||﻿nelljpupps.com^
 ||nellspuppiesacres.net^
 ||nellybasenjipuppies.com^
 ||nelminidachshundpup.com^
@@ -15241,6 +15648,7 @@
 ||newdawncockerspaniels.com^
 ||newdawncorgispuppies.com^
 ||newdawngoldendoodle.com^
+||newdawngreatdane.com^
 ||newdawngreatdanes.com^
 ||newdawnminiaturepinscherpups.com^
 ||newdawnpugs.com^
@@ -15268,6 +15676,7 @@
 ||newheavenshihzhushome.com^
 ||newheavenspitbull.com^
 ||newhomebostonterrier.us^
+||newhomepuppies.com^
 ||newhomesbassethoundpuppies.com^
 ||newhopeshibainu.com^
 ||newkingcharlesbreeds.online^
@@ -15338,7 +15747,6 @@
 ||ngongdalmatianpups.com^
 ||ngonsonyuybeagle.com^
 ||ngosakapuppies.com^
-||﻿ngosakapuppies.com^
 ||ngwechihuahuapuppieshome.com^
 ||niapoodleteacuppuppies.com^
 ||nibabichonfrisehome.com^
@@ -15375,7 +15783,9 @@
 ||nicoledachshundpuppies.com^
 ||nicolefrenchbulldog.com^
 ||nicolehavanesehome.com^
+||nicolehavanesepups.com^
 ||nicolelabradorpups.com^
+||nicolemorkiepups.com^
 ||nicolepomeranian.net^
 ||nicolepomeranianpups.net^
 ||nicoleteacups.net^
@@ -15389,6 +15799,7 @@
 ||nikasschnauzers.online^
 ||nikisdachshundpuppies.com^
 ||nikizbulldoghome.store^
+||nikkybordercollies.com^
 ||nilepoodles.com^
 ||nileslogistics.com^
 ||ninacavapoohome.com^
@@ -15399,7 +15810,6 @@
 ||ninibengalkittens.com^
 ||ninostoypoodles.com^
 ||nipscavoodles.com^
-||﻿nipscavoodles.com^
 ||niropugpuppies.com^
 ||nissilizypuppies.com^
 ||nixspuppypals.com^
@@ -15407,6 +15817,7 @@
 ||nizhnyrottweilers.com^
 ||njiketeacuppomeranianpuppies.com^
 ||njmpuppieshome.com^
+||njubichonfrisehome.com^
 ||nkahbabichon.com^
 ||nmgreatdanepuppies.xyz^
 ||nmpomeranianpuppies.com^
@@ -15446,7 +15857,7 @@
 ||nolanskylercanecorsofarm.com^
 ||nonofrenchbulldog.com^
 ||noodlepugs.com^
-||﻿noracavapoopuppies.com^
+||noracavapoopuppies.com^
 ||norahomepups.com^
 ||norasrottweillerpuppieshome.com^
 ||norbertpomeranian.com^
@@ -15465,6 +15876,7 @@
 ||northlandspuppies-sa.com^
 ||northlandspuppies.com^
 ||northstarteacupmaltesepups.com^
+||northstormdalmatianshome.com^
 ||norwegian-forestcats.com^
 ||norwichterrierpups.com^
 ||norwoodsakitapuppiesforsale.com^
@@ -15472,6 +15884,7 @@
 ||nostabullies.com^
 ||notasgreatdanepups.com^
 ||nothbostonterrier.com^
+||novanbirds.com^
 ||novoabichonhome.com^
 ||novoapugpuppies.com^
 ||nsgreatdanepuppies.xyz^
@@ -15558,11 +15971,13 @@
 ||oliversrottweilerpuppieshome.com^
 ||oliviabeaglepuppies.com^
 ||oliviajaymedachshundhome.com^
+||oliviamaltse.shop^
 ||oliviamlt.shop^
 ||oliviapekingesehome.com^
 ||oliviapoodlespup.com^
 ||oliviascavapoopuppies.com^
 ||oliviascorgidogs.com^
+||oliviasiamesehome.com^
 ||oliviaspuppydogs.com^
 ||oliviasragdollkittens.com^
 ||olliebostonterrierhomes.com^
@@ -15645,12 +16060,14 @@
 ||origobengals.com^
 ||oriollalabullies.com^
 ||orixfrenchies.com^
+||orizedachshund.com^
 ||orlandorosadobbies.com^
 ||ormalubordercollies.com^
 ||ornadahdachshund.com^
 ||ortizdachshundpuppies.com^
 ||ortizdachshundpups.com^
 ||osborneauussies.com^
+||oscarinecutemaltespuppies.com^
 ||oscarinemaltesepuppies.com^
 ||osongparrotsfarm.com^
 ||otangdachshund.com^
@@ -15695,6 +16112,7 @@
 ||ourwonderfulmoments.com^
 ||oustandingamericanbully.com^
 ||oustandingminischnauzerhome.com^
+||outfoxaustralianshepherds.com^
 ||outgoingpetshop.com^
 ||outstanding-huskypuppies.com^
 ||outstandingamericanpitbullhome.com^
@@ -15777,6 +16195,7 @@
 ||paddyhealthypuppieshome.com^
 ||padenglishbulldoghome.com^
 ||padfrenchbulldogpuppies.com^
+||padillabullies.com^
 ||pagostermaltesehome.com^
 ||pagupagubeagles.com^
 ||pahomerottweilers.com^
@@ -15834,6 +16253,7 @@
 ||paradisemonkeys.com^
 ||paradisemonkeysforsale.com^
 ||paradisenewfiepuppies.com^
+||paradiseofpuppies.com^
 ||paradiseparkpuppies.com^
 ||paradiseparrotsafrica.com^
 ||paradisepawshub.com^
@@ -15856,7 +16276,6 @@
 ||paradiseteacupchihuahuapuppies.com^
 ||paradiseteacupmaltesepups.com^
 ||paradiseteacuppuppieshome.com^
-||﻿paradiseteacuppuppieshome.com^
 ||paradiseyorkiepuppy.com^
 ||paradiseyorkiesfamilyhome.com^
 ||paradiseyorkiespuppies.com^
@@ -15868,6 +16287,7 @@
 ||paramountbernedoodles.com^
 ||paramountbostonhome.com^
 ||paramountbullterriers.com^
+||paramountcockerspanielpuppies.com^
 ||paramountengbulls.com^
 ||paramountgermanshepherdhome.com^
 ||paramountgoldenretrieverpuppies.com^
@@ -15898,8 +16318,10 @@
 ||parrothomebreeder.com^
 ||parrotparadise.shop^
 ||parrotpets4home.com^
+||parrots-adoption.com^
 ||parrots-fertile-eggs.com^
 ||parrots-ville.com^
+||parrotsalfahome.com^
 ||parrotsandeggsforsell.com^
 ||parrotsandpuppies.com^
 ||parrotsbreeds.com^
@@ -15936,11 +16358,13 @@
 ||passionatehavanesepups.com^
 ||passionbelgianmalinoispuppyhome.com^
 ||passionbengals.com^
+||passionbernesemountaindogs.com^
 ||passionbichonfrise.com^
-||﻿passioncorgipuppies.com^
+||passioncorgipuppies.com^
 ||passiondashchunds.com^
 ||passiongoldens.com^
 ||passionpug.com^
+||passionragdollkittens.com^
 ||passionrottweilerpuppies.com^
 ||passionshihtzu.com^
 ||pastecrottweilerhome.com^
@@ -16001,6 +16425,7 @@
 ||pawjackrussellterrier.com^
 ||pawpals-professionals.com^
 ||pawpalsprofessionals.com^
+||pawpawfrenchies.com^
 ||pawpawpomeranianhome.com^
 ||pawpiesplace.com^
 ||pawprintsfrenchies.com^
@@ -16009,6 +16434,7 @@
 ||pawradepuppies.com^
 ||pawrisehuskies.com^
 ||pawsadoptionhome.com^
+||pawsbeagleshome.com^
 ||pawsbritishshorthairkittens.site^
 ||pawscolony.com^
 ||pawshakebreeders.com^
@@ -16020,6 +16446,7 @@
 ||pawsoffaithfrenchies.com^
 ||pawspotsa.com^
 ||pawsragdollkittens.com^
+||pawsreadyforhome.com^
 ||pawsteacuppom.com^
 ||pawstorichesyorkiehome.com^
 ||pawteacupyorkies.com^
@@ -16031,6 +16458,7 @@
 ||pbgermanrotts.com^
 ||pbpupuppies.com^
 ||pbshibainupuppies-akc.net^
+||pclitters.com^
 ||pdybm.com^
 ||peacefulparrots.com^
 ||peacehillshihtzus.info^
@@ -16171,6 +16599,7 @@
 ||perfectrottweilerpuppieshome.com^
 ||perfectsamoyeds.com^
 ||perfectschnauzerpuppies.com^
+||perfectservicedoodle.com^
 ||perfectshihtzufarm.com^
 ||perfectsiamesekittens.com^
 ||perfectsphynx.com^
@@ -16187,6 +16616,7 @@
 ||perkinsmaltese.com^
 ||perkinsyorkiepoofamily.site^
 ||perky-boxerpuppsforsale.com^
+||perkygoldenretrievers.com^
 ||perkytoyteacuppuppies.com^
 ||peronlovelyhomess.com^
 ||perrieracorgis.com^
@@ -16209,7 +16639,7 @@
 ||persiancats.store^
 ||persiankittenkindle.com^
 ||persiankittenlovers.com^
-||﻿persiankittens.info^
+||persiankittens.info^
 ||persiankittensale.com^
 ||persiankittenshome.net^
 ||persiankittenshomebreeder.com^
@@ -16234,6 +16664,7 @@
 ||petcoteacuppoodles.com^
 ||petdachshundpups.com^
 ||petdachshunds.com^
+||petdogbreeders.com^
 ||petefrenchies.com^
 ||peteislandfrenchies.com^
 ||petelabradorhomes.com^
@@ -16286,6 +16717,7 @@
 ||petrabullies.com^
 ||petronellapuppieshome.com^
 ||pets-familyhomes-au.com^
+||pets-farm.com^
 ||pets-home.store^
 ||pets2view.com^
 ||pets4homesnow.com^
@@ -16301,12 +16733,14 @@
 ||petsfindpoms.com^
 ||petsforsalenearme.com^
 ||petsforyourhomes.com^
+||petsheltiepupliss.com^
 ||petshippingexpress.com^
 ||petshome4u.com^
 ||petshomerescue.com^
 ||petshopbreedersclub.com^
 ||petsiberiankittens.com^
 ||petsitterscare.com^
+||petsloverkingdom.com^
 ||petsloveuae.com^
 ||petslovies.com^
 ||petsneedlove.store^
@@ -16337,9 +16771,11 @@
 ||philipsfurhome.com^
 ||philipshihtzupupshome.com^
 ||philipsrottweilerpuppies.com^
+||phillipalaskanmalamutepuppies.com^
 ||philmaltipoohome.com^
 ||philpugpuppies.com^
 ||philscottishfoldhome.com^
+||philsshorthairorientalkittens.com^
 ||phoribengalkittenshome.com^
 ||phylspitbulls.com^
 ||phynxkitts4homes.com^
@@ -16381,6 +16817,7 @@
 ||pitbullfido.com^
 ||pitbullforestfarm.com^
 ||pitbullforesthouses.com^
+||pitbullforsale.su^
 ||pitbullforsalehome.com^
 ||pitbullfriends.com^
 ||pitbullgivers.com^
@@ -16453,6 +16890,7 @@
 ||playfulwesthighlandterrier.com^
 ||playfulyorkiepuppiesfurhome.com^
 ||playmateshihtzu.com^
+||playpawsgoldendoodles.com^
 ||playpenhavanese.com^
 ||playpenpoodles.com^
 ||playpenpups.com^
@@ -16471,6 +16909,7 @@
 ||pocketbeaglepethome.com^
 ||pocketbeaglesofjane.com^
 ||pocketbreeders.com^
+||pocketbulliesfarmer.com^
 ||pocketpupsbreed.com^
 ||pocketsbeaglesclark.com^
 ||poeticalkennel.com^
@@ -16573,12 +17012,14 @@
 ||pommerschewelpenzuverkaufen.com^
 ||pompompuppsboutique.net^
 ||pompuppies4homes.com^
+||pompuppybreeders.com^
 ||pompupshome.com^
 ||pomsfamily.com^
 ||pomshaven.com^
 ||pomsheaven.com^
 ||pomskies.online^
 ||pomskpuppiesbreeders.com^
+||pomsky1234.com^
 ||pomskybreedershome.com^
 ||pomskyfamily.com^
 ||pomskyforhomes.com^
@@ -16591,6 +17032,7 @@
 ||pomskypuppiesclub.com^
 ||pomskypuppiesforadoption.com^
 ||pomskypuppiesgarden.com^
+||pomskypuppieshome.com^
 ||pomskypuppsforsale.com^
 ||pomskypuppysafari.online^
 ||pomskypuppyshop.com^
@@ -16612,6 +17054,7 @@
 ||poodle6.com^
 ||poodleandoodles.com^
 ||poodleavailable.com^
+||poodlebeardogs.com^
 ||poodlebreedersnow.com^
 ||poodlefamcross.com^
 ||poodlefamilyhome.net^
@@ -16625,6 +17068,7 @@
 ||poodlemixminiatures.com^
 ||poodlemixpuppies.com^
 ||poodlepageforsale.com^
+||poodlepallace.com^
 ||poodlepetlovers.com^
 ||poodlepromiseland.com^
 ||poodlepuppies4us.com^
@@ -16701,6 +17145,7 @@
 ||pottysiberianhuskies.com^
 ||pottytrainbordercolliepuppies.com^
 ||pottytraincockerspanielhome.com^
+||pottytrainedakcteacupyorkiepuppies.com^
 ||pottytrainedaussiepups.com^
 ||pottytrainedbassethound.com^
 ||pottytrainedbichonfrise.com^
@@ -16715,6 +17160,7 @@
 ||pottytrainedmaltesebreeders.com^
 ||pottytrainedmaltesepups.com^
 ||pottytrainedpitbull.com^
+||pottytrainedpomsky.com^
 ||pottytrainedpomskypups.com^
 ||pottytrainedpoodles.com^
 ||pottytrainedpug.com^
@@ -16731,6 +17177,7 @@
 ||powellfrenchies.com^
 ||powellrosellbirmankittenspro.online^
 ||powellsgoldenretrievers.com^
+||powerpomeranianpuppies.com^
 ||powerrotties.com^
 ||powersamoyedpuppies.com^
 ||powerteacuppuppieshome.com^
@@ -16772,6 +17219,7 @@
 ||precioushuskypups.com^
 ||preciouskingcharlespuppies.com^
 ||preciouslabradorretrievers.com^
+||preciouslittershome.com^
 ||preciousmaincoonshome.com^
 ||preciousmaltese.com^
 ||preciousmaltesepuppies.com^
@@ -16845,6 +17293,7 @@
 ||premierpomskypuppies.com^
 ||premierpugpuppies.com^
 ||premierpuppiesfarm.com^
+||premierpupps.online^
 ||premierpuppy.net^
 ||premierpuppyshop.net^
 ||premierpups.online^
@@ -16933,6 +17382,7 @@
 ||premiummunchkinhome.com^
 ||premiumpembrokecorgipuppies.com^
 ||premiumpembrokewelshcorgi.com^
+||premiumpembrokewelshcorgies.com^
 ||premiumpetfarm.com^
 ||premiumpetshome.com^
 ||premiumpitbull.com^
@@ -16969,6 +17419,7 @@
 ||premiumteacuppugpuppies.com^
 ||premiumteacuppuppies.com^
 ||premiumteacupschihuahuapuppies.com^
+||premiumteacupshihtzupuppies.com^
 ||premiumtoypoodlefamily.site^
 ||premiumwelshpembrokecorgi.com^
 ||premiumwestieandscottishterrierhome.com^
@@ -17008,6 +17459,7 @@
 ||prettybordercollie.com^
 ||prettybostonterrierpups.com^
 ||prettyclawbengals.com^
+||prettycoolchihuahua.com^
 ||prettydachshund.com^
 ||prettyfrenchbulldogshome.com^
 ||prettyfrenchiepups.com^
@@ -17061,6 +17513,7 @@
 ||pridesamoyeds.com^
 ||primaamericanbullies.com^
 ||primatesforhomes.com^
+||primatesforsale.com^
 ||primatexoticpets.com^
 ||prime21bullies.com^
 ||primeaussie.com^
@@ -17069,6 +17522,7 @@
 ||primebichonfrisepups.com^
 ||primeboxerpuppies.com^
 ||primecavalierpups.com^
+||primecavapoopuppies.com^
 ||primechihuahuas.com^
 ||primeclubchihuahua.com^
 ||primecockapoopups.com^
@@ -17114,6 +17568,7 @@
 ||primesiberianhuskypups.com^
 ||primesmartcoons.com^
 ||primeteacuppompuppies.com^
+||primeteacuppoodles.com^
 ||primewelshcogipups.com^
 ||primiumpuppieshome.com^
 ||primordialfrenchbulldogs.us^
@@ -17234,7 +17689,7 @@
 ||pugs4mankind.com^
 ||pugsbreeder.com^
 ||pugscottage.com^
-||﻿pugsfamily.com^
+||pugsfamily.com^
 ||pugsfamilyfarm.com^
 ||pugsfarmclub.com^
 ||pugsfind.com^
@@ -17250,6 +17705,7 @@
 ||pugspuppyspot.com^
 ||pugstandardclub.com^
 ||pugsworld24.com^
+||pugteacuppuppies.store^
 ||pugypuppieshome.com^
 ||pugypuppiesspot.com^
 ||pulchritudinouscorgihome.com^
@@ -17272,11 +17728,11 @@
 ||puppies-shop.net^
 ||puppies4home.com^
 ||puppies4newhome.com^
+||puppies4yourhomes.com^
 ||puppiesace.com^
 ||puppiesadopt.com^
 ||puppiesakchome.com^
 ||puppiesale.com^
-||﻿puppiesale.com^
 ||puppiesanddogscenter.com^
 ||puppiesandkittens.xyz^
 ||puppiesaroundu.com^
@@ -17330,6 +17786,7 @@
 ||puppiesreadynow.com^
 ||puppiesroom.com^
 ||puppiesrover.com^
+||puppiessales.com^
 ||puppiessaleshome.com^
 ||puppiesse.com^
 ||puppiesshops.com^
@@ -17349,6 +17806,7 @@
 ||puppsforsale.com^
 ||puppy-center.com^
 ||puppy-finders.com^
+||puppy-green.com^
 ||puppy-store.com^
 ||puppy4loves.dog^
 ||puppyadoption.online^
@@ -17374,7 +17832,7 @@
 ||puppyfindersa.com^
 ||puppyfinnd.com^
 ||puppyfist.com^
-||﻿puppyforeveryone.com^
+||puppyforeveryone.com^
 ||puppyforhome.com^
 ||puppyfornewhomes.com^
 ||puppyforsalenow.com^
@@ -17386,6 +17844,7 @@
 ||puppyheavens.com^
 ||puppyhome.online^
 ||puppyhome.site^
+||puppyhomelabrado.shop^
 ||puppyhomeplanet.com^
 ||puppyinline.com^
 ||puppyland.store^
@@ -17432,6 +17891,7 @@
 ||puppytrailbreeders.com^
 ||puppyvals.com^
 ||puppyviewers.com^
+||puppyvillagespca.com^
 ||puppyville.dog^
 ||puppywayz.com^
 ||puppywise.dog^
@@ -17446,7 +17906,7 @@
 ||pupshomeshop.com^
 ||pupslikenoother.com^
 ||pupuludobieshome.com^
-||﻿pure-kittens.com^
+||pure-kittens.com^
 ||pure-registeredfrenchbulldogpups.com^
 ||pureafricangreyparrot.com^
 ||pureakcbulldogspalace.com^
@@ -17473,6 +17933,7 @@
 ||purebredaussiepups.com^
 ||purebredbeaglepuppies.com^
 ||purebredbernese.com^
+||purebredbernesemountains.com^
 ||purebredbichonfrisepuppies.com^
 ||purebredbichonsfrise.com^
 ||purebredblueeyeshuskies.com^
@@ -17657,6 +18118,7 @@
 ||puritylabradorpups.com^
 ||puritypoodles.com^
 ||puritypuppies.com^
+||purityteddypomeranians.com^
 ||purplevalleypuppies.com^
 ||purrbreedcavalierkc.com^
 ||purrevercattery.com^
@@ -17742,6 +18204,7 @@
 ||qualityteacupyork.com^
 ||qualityteacupyorkiepuppies.com^
 ||qualitytoypoodle.com^
+||qualitytoypoodlepuppies.com^
 ||qualityyorkiepuppieshome.com^
 ||quanaussiepupshome.com^
 ||quatronminischnauzers.com^
@@ -17760,6 +18223,7 @@
 ||queensbasenjipuppies.com^
 ||queensdobermanhome.com^
 ||queensfrenchbulldog.us^
+||queenshihtzupuppieshome.com^
 ||queenshomechowchow.com^
 ||queenslandbreeders.site^
 ||queenslandgoldenretrievers.site^
@@ -17790,6 +18254,7 @@
 ||quincydachshundpuppies.com^
 ||quincydancingdoxies.com^
 ||quincyfrenchbulldog.com^
+||quinlabradorpuppies.com^
 ||quinorabordercollies.com^
 ||quinoracavaliers.com^
 ||quirkyteacups.com^
@@ -17814,6 +18279,7 @@
 ||ragdoll-kitty.com^
 ||ragdollamericanshorthairkittenshome.com^
 ||ragdollbeautykittens.com^
+||ragdollcastsankittens.com^
 ||ragdollcatskittensforsale.com^
 ||ragdollcatterykitties.com^
 ||ragdollcatterys.com^
@@ -17914,7 +18380,9 @@
 ||ravishingbullieshome.com^
 ||ravishingfamilypupps.com^
 ||ravishingpuphome.com^
+||ravlinefrenchbullies.com^
 ||rawlingslabpuppies.com^
+||rayangoldenretrievershome.com^
 ||raybernesepup.com^
 ||rayfrenchiepupshome.com^
 ||raylesteacupmaltesepuppies.com^
@@ -17953,7 +18421,9 @@
 ||readycorgihome.com^
 ||readyfrenchbulldogpups.com^
 ||readygoldenretrieverpuppieshome.com^
+||readypoodles.com.au^
 ||readypug.com^
+||readypupsyork.us^
 ||readysiamesekitten.com^
 ||readysiamesekittens.com^
 ||readytobond.com^
@@ -17963,7 +18433,7 @@
 ||realfrenchies.org^
 ||realparrothome.com^
 ||realpetsforhomes.com^
-||﻿realpetworld.com^
+||realpetworld.com^
 ||realragdollbreeders.org^
 ||reatepuppieszone.com^
 ||rebassiberianhuskypups.com^
@@ -17971,12 +18441,14 @@
 ||rebeccaderbypuppies.com^
 ||rebeccalovey.com^
 ||rebeccaorange.com^
+||rebekahfrenchbulldog.com^
 ||rebirthdachshundandschnauzerhome.com^
 ||recevoirpomeranianpups.com^
 ||reckonlabretriever.com^
 ||redbostonterrier.com^
 ||reddingcorgipuppies.com^
 ||reddybsphynxplace.com^
+||redissionworldpuppies.com^
 ||redsdalmatianpuppies.com^
 ||redteacuppoodlehome.com^
 ||reedchihuahuapuppy.com^
@@ -17996,6 +18468,7 @@
 ||reganshihtzus.com^
 ||regbengalheritagecattery.com^
 ||regcavalierpups.com^
+||regdachshunds.com^
 ||regenbogenkatzenzuhause.com^
 ||reggermanshepherdpuppiesforsale.com^
 ||reggiewesties.com^
@@ -18005,6 +18478,7 @@
 ||reginashihtzupuppies.com^
 ||reginaskultfrenchbulldog.com^
 ||reginaskultfrenchbulldogs.com^
+||registeredboxerbredpups.org^
 ||registeredcavalierkingcharlespuppies.com^
 ||registeredcavapoopuppies.com^
 ||registereddachshundpuppies.com^
@@ -18046,6 +18520,7 @@
 ||reloadedsamoyedpups.com^
 ||relsgoldenretrievers.com^
 ||remarkableenglishmastiffpuppies.com^
+||remedypomeranians.com^
 ||remedypuppies.com^
 ||remikrotts.com^
 ||remingtonmaltese.com^
@@ -18139,6 +18614,7 @@
 ||rhodawesthighlandterrrierhome.com^
 ||rhodesianridgebackpuppieshome.com^
 ||rhodesianridgebacksale.com^
+||rhodolitespaniels.com^
 ||rhondaaussies.com^
 ||rhondachihuahuas.com^
 ||rhondaspughome.com^
@@ -18181,6 +18657,7 @@
 ||rickeysminidachshund.com^
 ||rickicorgipuppyhome.com^
 ||rickigoldenretrieverpuppies.com^
+||rickimarieaussies.com^
 ||rickipughome.com^
 ||ricksgreatdanepups.com^
 ||rickslovelycorgis.com^
@@ -18224,21 +18701,28 @@
 ||ritzyyorkiepuppies.com^
 ||riverahavanesepuppies.com^
 ||riverdale-7.com^
+||riverdanes.store^
 ||riverdoodle.com^
 ||riverhillside.com^
 ||riverjackrussell.store^
 ||riverlabrador.store^
 ||riversedgecavapoo.com^
+||riversharpei.store^
 ||riversidebassethounds.com^
 ||riversidebernedoodles.com^
 ||riversidebernesemountainpups.com^
 ||riversidebichons.com^
 ||riversidebostons.com^
 ||riversideboxershome.com^
+||riversidedogoargentinohome.store^
+||riversidegsppuppies.store^
 ||riversideminischnauzers.com^
+||riversideranchdoodles.com^
 ||riversiderottweilerspot.com^
+||riversidesharpei.store^
 ||riversidesheepapoos.com^
 ||riversideshibainu.com^
+||riversidesiamesekittensforsale.com^
 ||riyadmaltesepuppieshome.com^
 ||rjsuntrustbulldogs.com^
 ||rmaltipoopups.com^
@@ -18249,6 +18733,7 @@
 ||robbinsbeaglepuppies.com^
 ||robbyragdollkittens.com^
 ||robbysboxerpuppies.com^
+||robbyshihtzupups.com^
 ||robbyteacupchihuahuas.com^
 ||robertbeaglepups.com^
 ||robertbostonterrierhome.com^
@@ -18273,6 +18758,7 @@
 ||robertsdobermanpuppies.com^
 ||robertsfrenchies.com^
 ||robertsgoldendoodles.com^
+||robertshuskyandpomsky.com^
 ||roberttoypoodles.net^
 ||robertwelshcorgihome.com^
 ||robetsbernesemountaindogs.com^
@@ -18385,6 +18871,8 @@
 ||roseaustralianshepherd.com^
 ||roseaustralianshepherdshome.store^
 ||roseberners.com^
+||rosebokbostonterrier.com^
+||rosebordercolliehomess.store^
 ||rosebrownminipoms.com^
 ||rosecavapoopuppies.com^
 ||rosechihuahuahome.store^
@@ -18402,6 +18890,7 @@
 ||rosegoldenretriever.com^
 ||rosegoldfamilybiewer.com^
 ||rosejackrussell.store^
+||roselandpinchers.com^
 ||roselinesgermanshepherd.com^
 ||roselockchristinaspaws.com^
 ||rosemaltipoopuppies.com^
@@ -18411,6 +18900,8 @@
 ||rosepomeranianpups.com^
 ||rosepuppieshome.com^
 ||rosesharpeihome.store^
+||rosesharpeipuppshome.store^
+||rosesharpeipupshome.store^
 ||rosesheltie.store^
 ||rosetadevonrexkittens.com^
 ||roseteacuphomes.com^
@@ -18427,6 +18918,7 @@
 ||rossymaltesehome.com^
 ||rostosgoldenretrievers.com^
 ||roswelpomskypuppies.com^
+||rosycatterykitties.com^
 ||rosypomeranianhouse.com^
 ||rotteilershome.net^
 ||rottiebreeders.com^
@@ -18474,6 +18966,7 @@
 ||rottweilerpupskennel.com^
 ||rottweilerpupzone.com^
 ||rottweilerrangers.online^
+||rottweilerscreek.com^
 ||rottweilersforfamilyhomes.com^
 ||rottweilersforlovinghomes.com^
 ||rottweilershomes.com^
@@ -18492,6 +18985,7 @@
 ||roxanebostonterrierpuppies.com^
 ||roxanecatahoulapuppieshome.com^
 ||roxaneminiaussiepuppies.com^
+||roxannecorgis.com^
 ||roxgoldenretrieverpups.com^
 ||roxiepug.com^
 ||roxieshepherds.com^
@@ -18505,6 +18999,7 @@
 ||royalausiepups.net^
 ||royalaussiepuppies.com^
 ||royalaustralianshephardpuppies.com^
+||royalaustralianshepherdpuppies.com^
 ||royalaustraliansherpherdpuppies.com^
 ||royalbassethound.com^
 ||royalbassetpuppies.com^
@@ -18581,6 +19076,7 @@
 ||royalenglishbulldog.com^
 ||royalenglishbulldogbreeder.com^
 ||royalenglishbulldogbreeders.com^
+||royalenglishspringerspaniel.com^
 ||royalepomsky.com^
 ||royalfamilypuppies.com^
 ||royalfennecfox.com^
@@ -18633,6 +19129,7 @@
 ||royallabretrieverpupshome.com^
 ||royallandcavachons.com^
 ||royallmastiff.com^
+||royallpaws.com^
 ||royalmaltese.com^
 ||royalmaltesebreeder.com^
 ||royalmaltesepuppies.store^
@@ -18642,6 +19139,7 @@
 ||royalminiatureschnauzerpuppies.com^
 ||royalminifrenchies.com^
 ||royalminpinhome.com^
+||royalmonkeyshome.com^
 ||royalmunchkinkittenhome.com^
 ||royalnakedsphynxkingdom.com^
 ||royalpapillonpups.com^
@@ -18697,7 +19195,7 @@
 ||royalshihtzupuppiesforsale.com^
 ||royalshihtzupuppieshome.com^
 ||royalsidebernepoos.com^
-||﻿royalsiteyorkshireterrierpuppies.com^
+||royalsiteyorkshireterrierpuppies.com^
 ||royalsphynxcat.com^
 ||royalsphynxcats.com^
 ||royalsphynxkittens.net^
@@ -18710,6 +19208,7 @@
 ||royaltcupyorkies.com^
 ||royalteacupchihuahuapetfarm.com^
 ||royalteacupchihuahuas.com^
+||royalteacuppomeraniansfamily.com^
 ||royalteacuppoodles.com^
 ||royalteacuppoodles.net^
 ||royalteacuppuppi.com^
@@ -18726,6 +19225,7 @@
 ||royaltycavalierkingcharlespups.com^
 ||royaltycavalierpups.com^
 ||royaltycavaliers.com^
+||royaltychihuahua.su^
 ||royaltychihuahuapuppies.com^
 ||royaltydanesmd.com^
 ||royaltyfrenchbulldogs.com^
@@ -18743,6 +19243,7 @@
 ||royaltytoypoodles.com^
 ||royalvacyork.com^
 ||royalweimaranershome.net^
+||royalwelshcorgi.com^
 ||royalwesthighlandhome.com^
 ||royalworthcockers.com^
 ||royalworthjacks.com^
@@ -18772,6 +19273,7 @@
 ||rsiberianhuskypuppies.com^
 ||rubbyfurhome.com^
 ||rubicongoldretrievers.com^
+||rubycatterykittens.com^
 ||rubyfrenchbulldogpuppies.com^
 ||rubymaltesepuppies.info^
 ||rubysbernesemountainpups.com^
@@ -18794,6 +19296,7 @@
 ||rushpuppieshome.com^
 ||russackcavalierhome.com^
 ||russellcatahoulapuppieshome.com^
+||russellcoonscattery.com^
 ||russelldachshundpuppy.com^
 ||russelldachshundpupshome.com^
 ||russelldobermanhome.com^
@@ -18810,8 +19313,9 @@
 ||russianbluecatteryhome.com^
 ||russianbluehaven.com^
 ||russianbluehome.com^
+||russianbluekittenbreeder.com^
 ||russianbluekittengelic.com^
-||﻿russianbluekittenshome.com^
+||russianbluekittenshome.com^
 ||russianbluekittenspure.com^
 ||russianbluekittiesforsale.com^
 ||russianbluekitts.com^
@@ -18822,6 +19326,7 @@
 ||rutsybulldogkingdom.com^
 ||ryananddenialbreeder.online^
 ||ryanaustralianshepherds.com^
+||ryanbengals.com^
 ||ryanbichonfrise.com^
 ||ryanboxerpuppies.com^
 ||ryanbrownwhippedpuppieshome.com^
@@ -18852,6 +19357,7 @@
 ||ryanswelshcorgipuppies.com^
 ||ryanxxlpitbullpuppies.com^
 ||ryderslabradoodles.com^
+||rykarbengals.com^
 ||rykerpoodles.com^
 ||rylanfrenchies.com^
 ||s-quarryjackrussells.com^
@@ -18893,7 +19399,6 @@
 ||saintbernardpuppiesforsaleonline.com^
 ||saintbernardpuppieshome.com^
 ||saintbernardpuppyforsale.com^
-||﻿saintbernardpuppyforsale.com^
 ||saintbernardpuppyhome.com^
 ||saintbernardpuppyhouse.com^
 ||saintbernardpupstars.store^
@@ -18960,6 +19465,7 @@
 ||samoyedpupsfarm.com^
 ||samoyedpupshome.com^
 ||samoyeds.online^
+||samoyedsgarden.com^
 ||samoyedspuppies.com^
 ||samoyhome.com^
 ||samparrotfarm.com^
@@ -18997,7 +19503,7 @@
 ||sandypomeranianfarm.com^
 ||sandypoodlehome.com^
 ||sandysmithscatshome.com^
-||﻿sangermanshepherd.com^
+||sangermanshepherd.com^
 ||sanhavanesepuppies.com^
 ||sanifrenchbulldog.com^
 ||sanjifrenchbulldogpuppies.com^
@@ -19120,6 +19626,7 @@
 ||scottcatscattery.com^
 ||scottdachshundpupies.com^
 ||scottdachshunds.com^
+||scottdobbermanpuppies.com^
 ||scottdobermanhomes.com^
 ||scottdoguedebordeauxpuppyhome.com^
 ||scottfrenchieshome.com^
@@ -19176,7 +19683,7 @@
 ||sellennachihuahua.com^
 ||sendolbullies.com^
 ||senelvofrenchies.club^
-||﻿sennenhundehaus.com^
+||sennenhundehaus.com^
 ||senragdollhome.com^
 ||sensationalboxerpuppies.com^
 ||sensationalcotons.com^
@@ -19236,6 +19743,7 @@
 ||shantypoodlepuppies.com^
 ||sharelabradorretriever.com^
 ||sharleisdunnpurebredyorkie.com^
+||sharlyteacuppomeranianhome.com^
 ||sharmaparadise.com^
 ||sharonashome.com^
 ||sharonbeaglepuppies.com^
@@ -19293,6 +19801,7 @@
 ||shelbygreatdanes.com^
 ||shelbypuppieshome.com^
 ||sheldonanstewartpupskennel.com^
+||sheldonminipuppies.com^
 ||sheldonslabradorshome.com^
 ||sheliandobshome.com^
 ||shellayorkiepuppieshome.com^
@@ -19302,6 +19811,8 @@
 ||shelterapitbullnow.com^
 ||sheltie4pets.com^
 ||sheltieforhomes.com^
+||sheltiepuppiesbreeder.com^
+||sheltiepuppiesforsale.online^
 ||sheltiepuppieshome.com^
 ||sheltiepuppyfarm.com^
 ||sheltiepupsforsale.com^
@@ -19351,6 +19862,7 @@
 ||shibainupuppydogs.com^
 ||shibainupups-home.com^
 ||shibainupupsbreed.com^
+||shibainusbreeders.com^
 ||shibainushome.com^
 ||shibainushomes.com^
 ||shibainuspot.com^
@@ -19393,6 +19905,7 @@
 ||shihtzupuppiesnearme.com^
 ||shihtzupuppiesonline.com^
 ||shihtzupuppiesonsale.com^
+||shihtzupuppiesparadise.pw^
 ||shihtzupuppiess.com^
 ||shihtzupuppiesworld.com^
 ||shihtzupuppy.org^
@@ -19456,6 +19969,7 @@
 ||showboatpoodles.com^
 ||showcasshibainupuppies.com^
 ||showcockerspanielpuppies.com^
+||showtiebordercollie.com^
 ||shozatoypoodlescastle.com^
 ||shrihansexoticanimals.com^
 ||shronkatyteacupyorkie.com^
@@ -19477,6 +19991,7 @@
 ||siberianhusky-puppydogs.com^
 ||siberianhusky-purebred.com^
 ||siberianhuskyamazing.com^
+||siberianhuskybreedernearme.com^
 ||siberianhuskybreeders.site^
 ||siberianhuskybreedershop.com^
 ||siberianhuskyeite.com^
@@ -19516,6 +20031,7 @@
 ||siliconfrenchiehome.com^
 ||silkenclawkittens.com^
 ||silkirnclawskittens.com^
+||silkyterrierpupsforsale.com^
 ||silocavapoohome.com^
 ||silvaspringbordercollies.com^
 ||silverfeildboxers.com^
@@ -19564,6 +20080,7 @@
 ||skybullsfrenchiebulldogs.com^
 ||skycanecorsohome.com^
 ||skycavoodlepuppies.com^
+||skychowchowhome.com^
 ||skycorgies.com^
 ||skycreekaussie.com^
 ||skydachshundpuppieshome.com^
@@ -19592,6 +20109,7 @@
 ||skylightyorkiesforsale.com^
 ||skylinehuskyhome.com^
 ||skyminiatureschnauzers.com^
+||skyminidachshunds.com^
 ||skyplotthoundhome.com^
 ||skyprideretrievers.com^
 ||skypugpuppies.com^
@@ -19705,6 +20223,7 @@
 ||smarthuskies.store^
 ||smartiggys.com^
 ||smartjoeyssugarglidersfarm.com^
+||smartk9germanshepherds.com^
 ||smartkennelpitbull.com^
 ||smartkittens.net^
 ||smartkittenshome.com^
@@ -19727,6 +20246,7 @@
 ||smartpitbullcuties.com^
 ||smartpomeraniandogs.com^
 ||smartpomeranianhome.com^
+||smartpugspup.com^
 ||smartpuppies4sale.com^
 ||smartpuppiesfarm.com^
 ||smartpuppiesgarden.com^
@@ -19775,6 +20295,7 @@
 ||smilingpupshome.com^
 ||smilingsammyhomes.com^
 ||smithbengal-mainecoonkittens.com^
+||smithdachshundbreed.com^
 ||smithenglishbull.dog^
 ||smithgoldendoodlepuppies.com^
 ||smithhockcavapoopuppieshome.com^
@@ -19828,9 +20349,10 @@
 ||socratelabradors.com^
 ||socraticbulldogs.club^
 ||sofaamericanbullies.com^
+||sofiabeagles.com^
 ||sofialabretrieverpuppies.com^
 ||sofiaragdollkittenshome.store^
-||﻿softheartedcuties.com^
+||softheartedcuties.com^
 ||softpalmteacuppom.com^
 ||softpawkittens.com^
 ||solacekennel.com^
@@ -19854,6 +20376,7 @@
 ||soniafrenchies.com^
 ||soniahfarms.com^
 ||sophiacavapoopuppies.com^
+||sophiafrenchbulldogs.com^
 ||sophiakay.shop^
 ||sophiakittenshome.com^
 ||sophiapugpuppies.com^
@@ -20051,9 +20574,13 @@
 ||springfieldrottweilers.com^
 ||springpuppieshome.com^
 ||springpupshome.com^
+||springsbordercollies.com^
 ||springsbullterrierpuppies.com^
+||springscatahoulakennel.com^
+||springscatahoulas.com^
 ||springscockapookennel.com^
 ||springscockerspaniels.com^
+||springsgoldendoodle.com^
 ||springshitzupuppies.com^
 ||springsideyorkiepuppies.com^
 ||springsphynxkittens.com^
@@ -20070,6 +20597,7 @@
 ||spunkywelshcorgipups.com^
 ||spurlocklabretrivers.us^
 ||spykerrottweilerhome.com^
+||srmaltipoo.com^
 ||ssbritishkitty.com^
 ||st-marityscottishkittenshome.com^
 ||st-petersfrenchbulldogs.com^
@@ -20111,6 +20639,7 @@
 ||staleyfrenchies.com^
 ||stallybullies.com^
 ||staminapoodlepups.com^
+||stamperaussiepuppies.com^
 ||stanamericanstaffordshireterrierhome.com^
 ||standard-munchkinkittens.com^
 ||standard-munchkins.com^
@@ -20249,6 +20778,7 @@
 ||starrottweillerpuppies.com^
 ||starsharpeipuppy.com^
 ||starsheltiepupshome.store^
+||starshibainupuppies.online^
 ||starsiberianhusky.com^
 ||starsiberiankittensfoundation.com^
 ||startfrenchies.com^
@@ -20282,6 +20812,7 @@
 ||steeleshihtzus.info^
 ||steffranzosischebulldoggen.net^
 ||stefteacupyorkiepuppieshome.com^
+||steinbachmaltesescrosspuppieskennel.com^
 ||stelladachshundshome.com^
 ||stellaminibendoodlesandbarneshome.com^
 ||stellarbernesekennel.com^
@@ -20383,6 +20914,7 @@
 ||stunningsamoyedpupshome.com^
 ||stunningscottishfoldguys.com^
 ||stunningsiamesecatsshome.com^
+||stunningteacupoodlepuppies.com^
 ||stunningtoypomeranian.com^
 ||stunningwelshcorgis.com^
 ||sturdyrotshome.org^
@@ -20405,6 +20937,7 @@
 ||successpuppieshome.com^
 ||sucregoldenretrievers.com^
 ||sueenglishbulldogs.com^
+||sueprotectiondogs.com^
 ||sugargliderforsale.com^
 ||sugargliderpalace.com^
 ||sugarglidersforpets.com^
@@ -20450,6 +20983,7 @@
 ||sunnycanecorso.com^
 ||sunnydachshund.com^
 ||sunnydachshunds.com^
+||sunnyesgoldenretrieverpuppies.com^
 ||sunnygreatdanepuppies.com^
 ||sunnylabpuppies.com^
 ||sunnyminipuppies.com^
@@ -20498,6 +21032,7 @@
 ||sunshinebordercollies.com^
 ||sunshineboxerhomes.com^
 ||sunshinebulldogpuppiesavailable.com^
+||sunshinecatahoulaleopardpups.com^
 ||sunshinecavalierkingcharles.com^
 ||sunshinechihuahuapuppies.com^
 ||sunshinechihuahuapups.com^
@@ -20557,6 +21092,7 @@
 ||supercutebulldogs.com^
 ||supercutecavapoos.com^
 ||supercutedachshundspuppies.com^
+||supercutedoodles.com^
 ||supercutegoldenretrieverpups.com^
 ||supercutepetshop.com^
 ||supercutepomeranianpuppies.com^
@@ -20596,6 +21132,7 @@
 ||superminipinscherpups.com^
 ||supermorkiepuppieshome.com^
 ||superpitbullpuppies.com^
+||superpomeranianhome.com^
 ||superpomeranians.com^
 ||superpugpuppies.com^
 ||superpuppyfinder.com^
@@ -20639,6 +21176,7 @@
 ||suprememaltesepuppieshome.com^
 ||supremepedigreerotties.com^
 ||supremepitbullcastle.com^
+||supremepocketbullies.com^
 ||supremepomskypuppies.com^
 ||supremepuppiesforhomes.com^
 ||supremepuppiesforsale.com^
@@ -20651,6 +21189,7 @@
 ||sureshotbulldogs.xyz^
 ||surpremecoonscattery.com^
 ||surprisepuppyhome.com^
+||surreyhillsgsd.dog^
 ||susanacrespuppies.com^
 ||susangoldenretrieverhome.com^
 ||susanmainecoonkittens.com^
@@ -20721,6 +21260,7 @@
 ||sweetlabradorretrieverpups.com^
 ||sweetlandbostonterriers.su^
 ||sweetlinemaltesepuppy.com^
+||sweetlittershome.com^
 ||sweetmainecoonkittens.com^
 ||sweetmaltesehome.com^
 ||sweetmaltesepups.com^
@@ -20745,6 +21285,7 @@
 ||sweetspringminiaussies.com^
 ||sweettoybobkittens.com^
 ||sweettoypoodleworld.com^
+||sweetyorkiepupies.com^
 ||sweetyorkshirepups.com^
 ||swiftpugspuppies.com^
 ||swissdachshund.online^
@@ -20757,6 +21298,7 @@
 ||sylvesterpomeranian.com^
 ||sylviacockerspanielandcockapoo.com^
 ||sylviaspomskyspuppies.com^
+||synergystablescorgis.store^
 ||syneypups.com^
 ||systempugs.com^
 ||szerletichbeaglepups.com^
@@ -20794,7 +21336,7 @@
 ||tammysiberianhusky.com^
 ||tammyteacupyorkies.com^
 ||tamsinlabradors.com^
-||﻿tandnatfrenchies.com^
+||tandnatfrenchies.com^
 ||tannergoldendoodlehome.com^
 ||tanpitbulls.com^
 ||tansamoyedpuppies.com^
@@ -20920,6 +21462,7 @@
 ||teacuppoodleshop.com^
 ||teacuppoodlestoday.com^
 ||teacuppughome.com^
+||teacuppupies.com^
 ||teacuppuppie.com^
 ||teacuppuppies.store^
 ||teacuppuppies.su^
@@ -20936,6 +21479,7 @@
 ||teacuppuppieshouse.com^
 ||teacuppuppiesnearme.com^
 ||teacuppuppiesspot.com^
+||teacuppuppiestore.com^
 ||teacuppuppieszone.com^
 ||teacuppuppy.net^
 ||teacuppuppyfamily.com^
@@ -20950,6 +21494,7 @@
 ||teacuptoycavapoopuppies.com^
 ||teacuptoymaltipoopuppies.com^
 ||teacuptoypoodlepuppies.com^
+||teacuptoypoodlepuppiesforsale.xyz^
 ||teacuptoypuppies.com^
 ||teacuptoypups.com^
 ||teacupwelpenhaus.net^
@@ -20978,6 +21523,7 @@
 ||teddyshibainupuppies.com^
 ||teddyshihtzufarmpups4home.com^
 ||teddysiberiankittenforsale.com^
+||teddywinsphynxkittens.com^
 ||teeyorkiepuppies.com^
 ||teganpureretrieverkennel.com^
 ||teirdrefamilyfrenchies.com^
@@ -21031,6 +21577,7 @@
 ||terrypugpuppies.com^
 ||terrypups.co.za^
 ||terrytcuppompups.com^
+||terryteacupmaltesehome.com^
 ||terryteacupyorkies.com^
 ||tesodoxiehome.com^
 ||tessasdachshundpups.com^
@@ -21098,6 +21645,7 @@
 ||thefrenchbulldogpuppieshome.com^
 ||thefrenchhype.com^
 ||thegentlemensbulldog.com^
+||thegiantmainecoons.com^
 ||thegolden-retrieverdogs.com^
 ||thegoldenelitehome.com^
 ||thegoldenretrieverayres.com^
@@ -21115,7 +21663,9 @@
 ||thehealthydoodles.com^
 ||thehelpformyhome.com^
 ||thehlandbirdfarm.com^
+||thehomeofcertifiedkittens.com^
 ||thehomeofjoy.com^
+||thehomeraisedpuppies.com^
 ||thehuntersweimaranerhome.com^
 ||theitaliangreyhound.com^
 ||theitaliangreyhoundhome.com^
@@ -21160,7 +21710,9 @@
 ||thepethubs.com^
 ||thepomeranianfamily.com^
 ||thepoodlebreeder.com^
+||thepoodlehouse.com^
 ||thepoodlepallace.com^
+||theprobreeder.com^
 ||thepugpuppybreeder.com^
 ||thepugsfamily.com^
 ||thepugsparadise.com^
@@ -21172,6 +21724,7 @@
 ||thepurebengalkittens.com^
 ||thepureshihtzuhome.com^
 ||thequeenscorgipuppies.com^
+||therapeuticgermanshepherds.com^
 ||therapeuticsheepapoos.com^
 ||therapytoypoodlespaws.com^
 ||therapytoypoodlespawsau.com^
@@ -21404,15 +21957,17 @@
 ||topitaliangreyhoundpuppies.com^
 ||toplinebirdsforsale.com^
 ||toplinebluepups.com^
+||toplitterbreeders.com^
 ||topmainecoonkittens.com^
 ||topmaltipoobreeder.com^
 ||topmaltipoopuppies.com^
 ||topnochegoldendoodlepuppies.com^
 ||topnotchbullterrierpupies.com^
+||topnotchdachshundandschnauzerhome.com^
 ||topnotchdachshunds.dog^
 ||topnotchhuskies.com^
 ||topnotchpuppy.online^
-||﻿topnotchshihtzu.com^
+||topnotchshihtzu.com^
 ||topnotchyorkies.com^
 ||toppompuppies.com^
 ||toppuppiesafrica.com^
@@ -21427,6 +21982,7 @@
 ||toprankpuppies.com^
 ||topranksmaltesepuppies.com^
 ||toprankteddypomeranians.com^
+||toproyaltyfrenchies.com^
 ||topsamoyedpupshome.com^
 ||topshelfenglishbulldogs.com^
 ||topshelffexortics.com^
@@ -21502,6 +22058,7 @@
 ||tracypomeranianpuppyhome.site^
 ||tracysbeagles.store^
 ||traders-aussie-puppies.com^
+||traditionalsiamesekittensforsale.com^
 ||trainablecockerspaniel.com^
 ||trainedamericanbullyhome.com^
 ||trainedaussiepuppies.com^
@@ -21613,6 +22170,7 @@
 ||tristenteacupyorkiepuppies.com^
 ||tristernpups.com^
 ||triumphantmastiffs.com^
+||triumphantsharpeis.com^
 ||triumphcavalierkingcharlesspaniel.com^
 ||triumphcavapoo.com^
 ||triumphcavoodles.com^
@@ -21779,9 +22337,11 @@
 ||uniqueshpynxkittens.com^
 ||uniquesphynxhomes.com^
 ||uniquestbernardpuppies.com^
+||uniqueteacuppuppieshome.com^
 ||uniqueteacups.com^
 ||uniquevizslaweimaranerhome.com^
 ||uniquewestieterrieshome.com^
+||unitedbullies.com^
 ||unitedpetbreeders.com^
 ||unitedpettrans.com^
 ||unitedpuppiesbreeders.com^
@@ -21790,6 +22350,7 @@
 ||unitedteacupyorkiepuppies.com^
 ||unitydobermanpinscherpups.com^
 ||universaldoodlesempire.com^
+||universalengbulls.com^
 ||universalfamilysamoyedpuppies.com^
 ||universalgiantpuppies.com^
 ||universalparrotsfarm.com^
@@ -21836,6 +22397,7 @@
 ||us-pitbullpuppies.com^
 ||us-pups.com^
 ||us.com^
+||usaarizonachowshome.net^
 ||usabasecorgispups.com^
 ||usabaseshihtzupups.com^
 ||usabritishshorthair.com^
@@ -21870,6 +22432,8 @@
 ||valdaspomeranian.com^
 ||valentinafrenchiehome.com^
 ||valentinapoodlepuppies.com^
+||valentinedachshunds.com^
+||valentinedoxies.com^
 ||valleyamericancurlcats.com^
 ||valleykennelgreatdanes.com^
 ||valleylilpawz.com^
@@ -21921,6 +22485,7 @@
 ||veracavapoopuppies.com^
 ||verapugshome.com^
 ||verasdobermannpuppies.com^
+||verifiedbreederlistings.com^
 ||veringoldenretrieverpups.com^
 ||veritablebulldogs.com^
 ||verlapomeranian.com^
@@ -21955,6 +22520,7 @@
 ||victoriarehomingcentre.com^
 ||victoriateddypomeranians.com^
 ||victorinescharmingmaltipoo.com^
+||victorybassethoundhome.com^
 ||victoryfrenchbulldogpupshome.com^
 ||victoryislandminidachshund.com^
 ||victoryrottweilerhome.com^
@@ -21969,6 +22535,7 @@
 ||vilnasamoyedhomes.com^
 ||vincentbordercolliepuppies.com^
 ||vincentbulldogpalaces.com^
+||vincentpitbulls.com^
 ||vineyardpethome.com^
 ||vineyardpugpuppies.com^
 ||vinsparrots.com^
@@ -22069,6 +22636,7 @@
 ||wakagermanrotti.com^
 ||wakahfrenchbulldogpups.com^
 ||walfespoos.store^
+||walkerbreannadoberman.com^
 ||walkerscorgihome.com^
 ||wallacecockerspaniels.com^
 ||wallingslabradorpups.com^
@@ -22100,6 +22668,7 @@
 ||waveofwarmth.com^
 ||wayfieldbullterriers.com^
 ||wayfieldmaltesepupshome.com^
+||waynebillcavapoos.com^
 ||waynebordercollie.com^
 ||waynedachshundhomes.com^
 ||waynedoodle.com^
@@ -22117,6 +22686,7 @@
 ||wearepugs.com^
 ||weatherfarmpugs.com^
 ||webreedprestigesamoyed.com^
+||wedodoodles.com^
 ||weekendteacupmaltese.com^
 ||weekendteacuppomeranians.com^
 ||weekendtoypoodle.com^
@@ -22170,7 +22740,7 @@
 ||welshcorgipuppybreeder.com^
 ||welshcorgipuppyland.com^
 ||welshcorgipupsforsale.com^
-||﻿welshcorgis4home.com^
+||welshcorgis4home.com^
 ||welshcorgisanctuary.com^
 ||welshcorgiworld.com^
 ||wendygermanrottweilerpuppies.com^
@@ -22228,6 +22798,7 @@
 ||westhighlandterrierpups4sale.com^
 ||westhighlandterrierpupshome.com^
 ||westhighlandterrierpupshomes.com^
+||westhighlandterrierunion.com^
 ||westhighlandwhitepuppies.com^
 ||westhighlandwhiteterrierhome.com^
 ||westhighlandwhiteterrierpups.com^
@@ -22235,6 +22806,7 @@
 ||westiepethome.com^
 ||westiepetshomes.com^
 ||westiepoopuppiesforsale.com^
+||westiepuppiesforsale.com^
 ||westiepuppieshome.com^
 ||westiepuppiessale.com^
 ||westiepuppyforlovinghomes.com^
@@ -22245,12 +22817,14 @@
 ||westlandcorgibreeders.com^
 ||westlanddachshundpuppies.com^
 ||westlanddalmatianpuppies.com^
+||westlandfrenchies.com^
 ||westlandgoldenretrieverpuppies.com^
 ||westlandgreatdanes.com^
 ||westlandlabradorretrievers.com^
 ||westlandlabradorretrievers.us^
 ||westlandmaltese.com^
 ||westlandmaltesepuppies.com^
+||westlandpugs.com^
 ||westlandteacupyorkies.com^
 ||westminsterk9shepherds.club^
 ||westoaksfrenchies.com^
@@ -22262,16 +22836,18 @@
 ||westpointteacupchihuahua.com^
 ||westropehuskies.com^
 ||westshibainupuppies.com^
+||westsiberianskittens.com^
 ||westside-nb.com^
 ||westsidedachshundhome.com^
 ||westsidemainecoon.com^
 ||westteacuppomeranian.com^
-||﻿westwindaussies.com^
+||westwindaussies.com^
 ||westwindbassethounds.com^
 ||weyforthhavanesepups.com^
 ||wheatleybullieshome.com^
 ||whelppalace.store^
 ||whippetguard.com^
+||whiskerwhishes.com^
 ||whisperingpugpuppies.com^
 ||whisperwilowfrenchbulldogs.com^
 ||whistlehillfrenchies.com^
@@ -22285,6 +22861,7 @@
 ||whiteforestmainecoon.com^
 ||whitegalaxycotons.com^
 ||whitehighlandterrierbreeders.com^
+||whitehighlandwestterrier.com^
 ||whitehomepets.com^
 ||whitelandpuppies.com^
 ||whitemaltesepuppieshome.com^
@@ -22368,6 +22945,7 @@
 ||williefrenchies.com^
 ||willisgoldenretrieverpups.com^
 ||willowbordercolliepuppies.com^
+||willowfarmgoldenretriever.org^
 ||willowlabpuppies.com^
 ||willowlabradorpuppies.com^
 ||willowmainecoonkittens.com^
@@ -22399,6 +22977,7 @@
 ||wincyyorkieshome.com^
 ||windwoodkennel.com^
 ||windywayshihtzupuppies.com^
+||winifredsbluemansion.com^
 ||winklerteacuppoodles.com^
 ||winnesyorkies.com^
 ||winniepuppiesforsale.com^
@@ -22406,7 +22985,7 @@
 ||winsheltiepuppieshome.com^
 ||winsomecockerspaniels.store^
 ||winsomedachshundpuppieshome.com^
-||﻿winsomehavanesepups.com^
+||winsomehavanesepups.com^
 ||winsomenglishbulldogs.com^
 ||winsomepomeranianfamily.com^
 ||winsomepomskyhome.com^
@@ -22458,6 +23037,7 @@
 ||woodskittens.com^
 ||woodsmaltese.com^
 ||woodspomeranians.com^
+||woodwardsbostonterriers.com^
 ||woodwynddalmatianpuppieshome.com^
 ||woodymaltipoopuppies.com^
 ||wooferdachshund.com^
@@ -22542,6 +23122,7 @@
 ||yolandapugshome.com^
 ||yolidachshundpuppieshome.com^
 ||yorkie-club.com^
+||yorkieandmalteseforsales.com^
 ||yorkieandpomeranianpuppies.com^
 ||yorkiebestbreeders.com^
 ||yorkiecapitol.com^
@@ -22590,6 +23171,7 @@
 ||yorkiesgram.com^
 ||yorkiespark.com^
 ||yorkiespuppiessale.com^
+||yorkiesworld.com^
 ||yorkieteacuppups.com^
 ||yorksgoldenretrievers.com^
 ||yorkshirecutiebreeders.com^
@@ -22637,6 +23219,8 @@
 ||yvanteacupyorkiepuppies.com^
 ||yvonnemorganscavapoopuppieshome.com^
 ||yvytoypoodles.com^
+||zacharybernesemountainpuppies.com^
+||zacharygermanshepherdpuppies.com^
 ||zachfrenchbulldog.com^
 ||zackdachshundbreed.com^
 ||zackysmarthpitbullkennel.com^
@@ -22652,6 +23236,7 @@
 ||zanifrenchies.com^
 ||zanolboxerpuppies.com^
 ||zanolgreatdane.com^
+||zanottidach.online^
 ||zanyminidachshundpups.com^
 ||zanzilabrador.co.uk^
 ||zarafrenchbulldogs.com^
@@ -22706,6 +23291,7 @@
 ||zpomeranian.com^
 ||zulliocavalierpups.com^
 ||zulzfurhome.com^
+||zumbachyorkies.com^
 ||zumsfrenchies.com^
 ||zwchihuahuahome.com^
 ||zwelachihuahuapups.com^
