@@ -29,6 +29,7 @@
 #||cloudfront.net^
 #||digitalocean.com^
 #||easy.co^
+#||github.io^
 #||google.com^
 #||lin.ee^
 #||my.id^
@@ -13251,7 +13252,6 @@
 ||gitcoincs.com^
 ||gitexbit.com^
 ||github-finance.com^
-||github.io^
 ||gittradex.com^
 ||give-crypto.com^
 ||giveloveapp.com^
