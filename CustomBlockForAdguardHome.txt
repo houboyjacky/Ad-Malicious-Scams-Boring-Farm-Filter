@@ -3,6 +3,7 @@
 ! 過度引用 widgetdata.tradingview.com
 ! 過度引用 www.tradingview-widget.com
 ! 疑似詐騙或不良的網站
+/caijing\w*\.w*/
 /ee[0-9]+\.com/
 /fk[0-9]+\.com/
 /fnline\.(info|xyz|vip)/
@@ -53,6 +54,7 @@
 ||88betworld.co^
 ||89as7f4d.site^
 ||8ujt597.cn^
+||925kufd8vj7mbw6.com^
 ||948fa.com^
 ||982815.icu^
 ||999ts.net^
@@ -94,6 +96,7 @@
 ||bgoani.co^
 ||bhmtsff.com^
 ||biaogutty.com^
+||biaoguxuetang.com^
 ||biasyoga.com^
 ||big-money-rush.com^
 ||bingohome.xyz^
@@ -126,6 +129,7 @@
 ||caijing.live^
 ||caijing.world^
 ||caijing8.xyz^
+||caijingo.shop^
 ||caijingxin.com^
 ||carbon2.shop^
 ||carcarecafe.com^
@@ -186,6 +190,7 @@
 ||directbuycenters.com^
 ||disruptivebrandnow.com^
 ||diygod.me^
+||djagn.online^
 ||dobs-tds.com^
 ||dollarvigilante.lt.acemlnb.com^
 ||dp369.net^
@@ -227,6 +232,7 @@
 ||entiosat.com^
 ||eplus.jp^
 ||errpau.bond^
+||esjersaxmsmnebc.com^
 ||ethan8.com^
 ||etherue.com^
 ||ewin.godaddysites.com^
@@ -483,6 +489,7 @@
 ||needfunpartner.me^
 ||nellyreyrey.com^
 ||newsoftwarereview.com^
+||nhscf2x.xyz^
 ||nianfall.com^
 ||niushowstocks.com^
 ||nj23.com.tw^
@@ -534,6 +541,7 @@
 ||qianliao.net^
 ||qianliaowang.com^
 ||qiuvtglii.com^
+||qjea68f.com^
 ||qlchat.com^
 ||qstarlife.com^
 ||qxmaqs.bond^
@@ -636,6 +644,7 @@
 ||tioelimcee.shop^
 ||tntmedia.cz^
 ||tomformednow.net^
+||toosadf.shop^
 ||top1king.com^
 ||top558.net^
 ||toptanzarfdunyasi.com^
@@ -658,6 +667,7 @@
 ||tw777.vip^
 ||twbiaogu.com^
 ||twdongsen.shop^
+||twduichong.com^
 ||twfinances.com^
 ||twgpzx.com^
 ||twgushi.shop^
@@ -731,6 +741,7 @@
 ||xggkimixu.com^
 ||xlxxl.store^
 ||xnmzaa.asia^
+||xone1dd.xyz^
 ||xp688.net^
 ||xtrendspeed.com^
 ||xtspd.com^
