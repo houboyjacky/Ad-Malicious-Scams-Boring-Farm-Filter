@@ -158,6 +158,7 @@
 ||comfortableife.com^
 ||copyrichacademy.com^
 ||crazymonkey.lpages.co^
+||crcdd.shop^
 ||csogmes168.com^
 ||cstockschool.com^
 ||cumenod.com^
@@ -295,6 +296,7 @@
 ||goodsgreatsdeals.shop^
 ||gotrade.com.tw^
 ||grapeking.com.tw^
+||greatstocks.xyz^
 ||gstha.*^
 ||gstha.homes^
 ||gstha.xyz^
@@ -514,6 +516,7 @@
 ||online-rich.com^
 ||online04.com^
 ||online808.com^
+||onlineprotool.com^
 ||onlinerichmkt.com^
 ||opticalilusion.com^
 ||oriental-hotels.com^

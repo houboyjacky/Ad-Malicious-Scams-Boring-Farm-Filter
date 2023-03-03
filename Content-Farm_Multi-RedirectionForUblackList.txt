@@ -16,6 +16,7 @@
 *://*.arkauts.co/*
 *://*.arla-com.eu/*
 *://*.ateliersdudragon.fr/*
+*://*.atsit.in/*
 *://*.axel-chevre.fr/*
 *://*.balance4you.ch/*
 *://*.bastaujana.cz/*
@@ -27,7 +28,6 @@
 *://*.blogsbodasdeisabel.com/*
 *://*.boblo.eu/*
 *://*.book4kids.ru/*
-*://*.sa.com/*
 *://*.bremancitywallcross.nl/*
 *://*.ca-pontois.fr/*
 *://*.camracub.me/*
@@ -37,14 +37,17 @@
 *://*.chickencorner.fr/*
 *://*.clinicadentalmilenio.es/*
 *://*.codertw.com/*
+*://*.coiffeur-luthern.ch/*
 *://*.countryproblemlots.de/*
 *://*.cubicongardens.sk/*
+*://*.daisycode.ca/*
 *://*.di02.biz/*
 *://*.directgrillage.fr/*
 *://*.dradvice.asia/*
 *://*.dreamspub.fr/*
 *://*.easy-esthetique.fr/*
 *://*.easyfordog.de/*
+*://*.ecfs2017.ch/*
 *://*.echoppedescurrys.fr/*
 *://*.edurusotels.com/*
 *://*.empreendejovem.pt/*
@@ -57,6 +60,7 @@
 *://*.exclusievecoatings.nl/*
 *://*.faseood.co/*
 *://*.febeltigg.live/*
+*://*.festadeltortello.it/*
 *://*.find-topaward-here.life/*
 *://*.finop-vvebeheer.nl/*
 *://*.fleuristesymphonieflorale.fr/*
@@ -65,7 +69,9 @@
 *://*.fortalsa.co/*
 *://*.freejobalerts24.com/*
 *://*.fuehrenplus.de/*
+*://*.futbolowo.pl/*
 *://*.galacticwraps.at/*
+*://*.gameinfo.io/*
 *://*.glnge.me/*
 *://*.gojigo.me/*
 *://*.golden-memories.nl/*
@@ -73,6 +79,7 @@
 *://*.gotokeyword.com/*
 *://*.grande-maison.eu/*
 *://*.hamiltonadviesbv.nl/*
+*://*.hecht-gottlieben.ch/*
 *://*.hemass.me/*
 *://*.hobbigame.com/*
 *://*.homedesigntutor.com/*
@@ -92,11 +99,14 @@
 *://*.januaryprivilege.me/*
 *://*.jeanninemartens.ch/*
 *://*.jnele.me/*
+*://*.jocando.nl/*
 *://*.jongondernemendfryslan.nl/*
 *://*.journeedelanature-2021-cdc.fr/*
 *://*.juna-einsiedeln.ch/*
 *://*.kaleks.me/*
+*://*.kalipso.sk/*
 *://*.kam-fuer-kmu.ch/*
+*://*.km-bueroservice.de/*
 *://*.knihkupectvi-praha.cz/*
 *://*.komiva.eu/*
 *://*.kompetenz-internet.de/*
@@ -104,8 +114,10 @@
 *://*.kotivuokraus.fi/*
 *://*.kuosmasenpojat.fi/*
 *://*.langtrans.cz/*
+*://*.laudinie-fleurac.fr/*
 *://*.ledita.lt/*
 *://*.leuttonpostle.com/*
+*://*.listos-shop.fr/*
 *://*.loesham.nl/*
 *://*.logisfrance-architecture.fr/*
 *://*.loremflickr.com/*
@@ -117,6 +129,7 @@
 *://*.mantrafund.top/*
 *://*.maximilienzamanski.eu/*
 *://*.mediaprim.ru/*
+*://*.megumidev.fr/*
 *://*.mes-scherp.nl/*
 *://*.metallityotjokela.fi/*
 *://*.mftranslations.eu/*
@@ -131,6 +144,7 @@
 *://*.namtoo.co/*
 *://*.neonlux.cz/*
 *://*.nieuwservaas.nl/*
+*://*.nogentpresence.fr/*
 *://*.nokaut.pl/*
 *://*.notariuszzabrze.eu/*
 *://*.notebz.com/*
@@ -138,11 +152,14 @@
 *://*.nyomdokok.co/*
 *://*.optique-republique.fr/*
 *://*.ordination-dr-fruehwald.at/*
+*://*.orodjarstvo-birsa.si/*
 *://*.osteopathe-06-marlena.fr/*
 *://*.paddelstun.de/*
+*://*.pamiecislawka.pl/*
 *://*.parnassen.se/*
 *://*.perspektivwechsel-seeheim.de/*
 *://*.pharmaie-jolivet.fr/*
+*://*.pipesurfshop.it/*
 *://*.pitopalvelumatilda.fi/*
 *://*.placestostay.im/*
 *://*.platformduurzaamfryslan.nl/*
@@ -160,12 +177,14 @@
 *://*.rafaeod.co/*
 *://*.raidecar.es/*
 *://*.rapelling.eu/*
+*://*.rawabruzzo.it/*
 *://*.rebldo.co/*
 *://*.recepcni-pulty.cz/*
 *://*.regaltechnik.cz/*
 *://*.regionalfuchs.de/*
 *://*.regopazos.com.br/*
 *://*.reportry.co/*
+*://*.reptypark.pl/*
 *://*.reviewiki.com/*
 *://*.rgbgshop.de/*
 *://*.richter-aircraft.de/*
@@ -192,9 +211,11 @@
 *://*.smb-konkret.ch/*
 *://*.sparkrestaurant.cz/*
 *://*.steundester.nl/*
+*://*.strefa-ubran.pl/*
 *://*.stroawp.co/*
 *://*.style77.shop/*
 *://*.superm.cl/*
+*://*.sussexcinemahire.co.uk/*
 *://*.t-lock.se/*
 *://*.tablaturezaharmoniko.si/*
 *://*.testberichte.de/*
@@ -208,7 +229,6 @@
 *://*.toutiao.com/*
 *://*.trampolinfm.cl/*
 *://*.trinley-glaskunst.at/*
-*://*.sa.com/*
 *://*.underona.me/*
 *://*.unimakslinieki.lv/*
 *://*.uonika.co/*
@@ -223,5 +243,4 @@
 *://*.wjbk.site/*
 *://*.woneninklavertuin.nl/*
 *://*.wowpiemain.live/*
-*://*.co.ua/*
 *://*.zoomzoom-fotografie.de/*
