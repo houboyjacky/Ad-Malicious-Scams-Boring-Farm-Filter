@@ -36,6 +36,7 @@
 #||mystrikingly.com^
 #||page.link^
 #||payware.com.tw^
+#||pixnet.net^
 #||potatomedia.co^
 #||reurl.cc^
 #||surveycake.com^
@@ -19978,7 +19979,6 @@
 ||pivottrade.org^
 ||pixel-miners.com^
 ||pixinvest.online^
-||pixnet.net^
 ||piznd.com^
 ||pizzacoin.net^
 ||pizzanft.ai^
