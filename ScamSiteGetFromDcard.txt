@@ -966,3 +966,10 @@
 ||xxdkxx.com^
 ! 詐騙貸款 https://www.dcard.tw/f/anti_fraud/p/241410650
 ||crabdance.com^
+! 詐騙交易所 https://www.dcard.tw/f/mood/p/241419020
+||teraiov.com^
+# 封鎖可參考數值之管道
+||s.tradingview.com^
+||s3.tradingview.com^
+! 詐騙購物網站 https://www.dcard.tw/f/anti_fraud/p/241418752
+||webay.pro^
