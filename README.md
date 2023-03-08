@@ -59,4 +59,8 @@ https://165.npa.gov.tw/<br/>
 Taken from the ScamAdviser newsletter.<br/>
 https://www.scamadviser.com/<br/>
 
+### ublacklist-settings.json
+自製的ublacklist設定擋，提供直接匯入使用<br/>
+Self-made ublacklist configuration file, providing direct import and use.<br/>
+
 ***

@@ -1,0 +1,58 @@
+{
+  "blacklist": "",
+  "blockColor": "default",
+  "blockWholeSite": false,
+  "dialogTheme": "default",
+  "enablePathDepth": false,
+  "hideBlockLinks": false,
+  "hideControl": false,
+  "highlightColors": [
+    "#ddeeff"
+  ],
+  "linkColor": "default",
+  "skipBlockDialog": false,
+  "subscriptions": [
+    {
+      "name": "標準內容農場清單",
+      "url": "https://danny0838.github.io/content-farm-terminator/files/blocklist-ublacklist/content-farms.txt",
+      "enabled": true
+    },
+    {
+      "name": "類內容農場清單",
+      "url": "https://danny0838.github.io/content-farm-terminator/files/blocklist-ublacklist/nearly-content-farms.txt",
+      "enabled": true
+    },
+    {
+      "name": "擴充內容農場清單",
+      "url": "https://danny0838.github.io/content-farm-terminator/files/blocklist-ublacklist/extra-content-farms.txt",
+      "enabled": true
+    },
+    {
+      "name": "劣質複製農場清單",
+      "url": "https://danny0838.github.io/content-farm-terminator/files/blocklist-ublacklist/bad-cloners.txt",
+      "enabled": true
+    },
+    {
+      "name": "假新聞網站清單",
+      "url": "https://danny0838.github.io/content-farm-terminator/files/blocklist-ublacklist/fake-news.txt",
+      "enabled": true
+    },
+    {
+      "name": "詐騙網站清單",
+      "url": "https://danny0838.github.io/content-farm-terminator/files/blocklist-ublacklist/scam-sites.txt",
+      "enabled": true
+    },
+    {
+      "name": "反農場與多導向網站",
+      "url": "https://raw.githubusercontent.com/houboyjacky/Ad-Malicious-Scams-Boring-Farm-Filter/master/Content-Farm_Multi-RedirectionForUblackList.txt",
+      "enabled": true
+    }
+  ],
+  "syncAppearance": true,
+  "syncBlocklist": true,
+  "syncGeneral": true,
+  "syncInterval": 15,
+  "syncSubscriptions": true,
+  "updateInterval": 120,
+  "version": "8.2.6"
+}

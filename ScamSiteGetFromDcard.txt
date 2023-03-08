@@ -973,3 +973,5 @@
 ||s3.tradingview.com^
 ! 詐騙購物網站 https://www.dcard.tw/f/anti_fraud/p/241418752
 ||webay.pro^
+! 詐騙購物網站 https://www.dcard.tw/f/talk/p/241425066
+||slowen.xyz^
