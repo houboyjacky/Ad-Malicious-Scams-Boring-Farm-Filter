@@ -1,6 +1,7 @@
 # Description :  Filter for general content farms and Multi Redirection
 # Licence: MIT License
 # Title : Content Farm and Multi-Redirection
+4-travel.nl
 9flowex.com
 a-tipico.pt
 abo24.it
@@ -17,6 +18,7 @@ arkauts.co
 arla-com.eu
 ateliersdudragon.fr
 atsit.in
+attosconsultoria.com.br
 axel-chevre.fr
 balance4you.ch
 bastaujana.cz
@@ -32,6 +34,8 @@ bpnhklcgf.sa.com
 bremancitywallcross.nl
 ca-pontois.fr
 camracub.me
+celebritygolfclub.de
+centurionbusiness.it
 chb-creations.fr
 chefuing.co
 chiarasassorestauri.it
@@ -41,9 +45,12 @@ codertw.com
 coiffeur-luthern.ch
 countryproblemlots.de
 cubicongardens.sk
+d-evoke.cfd
 daisycode.ca
 di02.biz
+diamond-bs.de
 directgrillage.fr
+dpncostruzionigenerali.it
 dradvice.asia
 dreamspub.fr
 easy-esthetique.fr
@@ -114,6 +121,7 @@ kompetenz-internet.de
 kosmetikacalendula.cz
 kotivuokraus.fi
 kuosmasenpojat.fi
+la-primavera-lieferdienst.de
 langtrans.cz
 laudinie-fleurac.fr
 ledita.lt
@@ -139,10 +147,12 @@ mo08.biz
 mo13.biz
 moniques-fotografie.nl
 morethan.fi
+ms-hellriegel.de
 muttonisa.ch
 mystickah.fr
 na-madagaskar.sk
 namtoo.co
+nav4all.de
 neonlux.cz
 nieuwservaas.nl
 nogentpresence.fr
@@ -171,6 +181,7 @@ prestigelublin.eu
 prizesense.life
 prizesenses.life
 project-iwts20.eu
+przeciwdzialaniepraniupieniedzy.pl
 psdelier.nl
 qabayz.site
 quing.im
@@ -189,6 +200,7 @@ reptypark.pl
 reviewiki.com
 rgbgshop.de
 richter-aircraft.de
+ristorantelotreganoferrara.it
 ritualinespaslaugos.lt
 rockfitness.cz
 roekhorst.nl
@@ -209,6 +221,7 @@ severiana.eu
 shophann.co
 shusuien.co
 sicedu.org.uk
+signorinacucinagolosa.it
 smb-konkret.ch
 sparkrestaurant.cz
 steundester.nl
@@ -219,6 +232,7 @@ superm.cl
 sussexcinemahire.co.uk
 t-lock.se
 tablaturezaharmoniko.si
+teamservice-assistenza.it
 testberichte.de
 tetedail.fr
 thamstore.nl
@@ -230,6 +244,7 @@ topawardhere.life
 toutiao.com
 trampolinfm.cl
 trinley-glaskunst.at
+turmair-berufsinformation.de
 twvpnegsa.sa.com
 underona.me
 unimakslinieki.lv
@@ -245,5 +260,7 @@ widecassina.it
 wjbk.site
 woneninklavertuin.nl
 wowpiemain.live
+xn--28-6kcaibtab1im.xn--p1ai
 yozilkree.co.ua
+zahranaserii.ir
 zoomzoom-fotografie.de
