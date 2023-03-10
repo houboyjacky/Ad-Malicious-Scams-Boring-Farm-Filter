@@ -137,6 +137,7 @@
 ||carbon2.shop^
 ||carcarecafe.com^
 ||carrolltonrental.com^
+||cash17888.com^
 ||casualmeet.click^
 ||catalogleagues.site^
 ||cavernalabs.com.br^
@@ -262,11 +263,13 @@
 ||fbcus.com^
 ||feicuivip.xyz^
 ||ferrososymetales.com^
+||feyku.com^
 ||ffffgame.com^
 ||fidelaets.com^
 ||firr-store.com^
 ||firstrade.com^
 ||fixku.com^
+||fjxhwk.shop^
 ||fk677.com^
 ||fnline.info^
 ||fnline.vip^
@@ -411,6 +414,7 @@
 ||kfdshop.xyz^
 ||kgi-pro.com.tw^
 ||kgosf.com^
+||kingmiya.shop^
 ||kings889.com^
 ||kk5168.net^
 ||kkdu.asia^
@@ -493,6 +497,7 @@
 ||mwbdsb.com^
 ||my5353.com^
 ||mycard520.com.tw^
+||myfee.site^
 ||mygod.tw^
 ||mystock1688.com^
 ||na5.nl^
@@ -537,6 +542,8 @@
 ||pcgws.com^
 ||pdpdsum.com^
 ||pentobarbitalgroup.com^
+||phv955.net.wnacloud.com^
+||phv955.net^
 ||piu11.com^
 ||pl^$denyallow=org.pl|edu.pl|com.pl|gov.pl
 ||pory.app^
@@ -559,10 +566,12 @@
 ||qstarlife.com^
 ||qxmaqs.bond^
 ||qyhost168.com^
+||r3gsduh.store^
 ||r83ihk.com^
 ||radiusdressing.com^
 ||ralphcommerce.online^
 ||ranieey.weebly.com^
+||ranshop.online^
 ||rdshdnw.online^
 ||realgame.ink^
 ||rebuildemporium.online^
@@ -614,6 +623,7 @@
 ||square.site^
 ||sronsky.com^
 ||ssharelove.us^
+||staclimcg.shop^
 ||startingedu.tw^
 ||starz168.cc^
 ||steamboxs.com^
@@ -682,6 +692,7 @@
 ||tw666.vip^
 ||tw777.vip^
 ||twbiaogu.com^
+||twcaijin.fan^
 ||twdongsen.shop^
 ||twduichong.com^
 ||twfinances.com^
@@ -758,6 +769,7 @@
 ||xggkimixu.com^
 ||xlxxl.store^
 ||xnmzaa.asia^
+||xnuzxwm.com^
 ||xone1dd.xyz^
 ||xp688.net^
 ||xtrendspeed.com^
