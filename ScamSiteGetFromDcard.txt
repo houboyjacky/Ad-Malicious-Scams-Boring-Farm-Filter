@@ -820,7 +820,7 @@
 ||freedstoregift.com^
 ||2023freestickers.com^
 ! 問題交易所 https://www.dcard.tw/f/money/p/241225637
-#||metamask.io^
+@@||metamask.io^
 ||accessfx-247tradepro.com^
 ||assetsbull.com^
 ||binary-fx.trade^
