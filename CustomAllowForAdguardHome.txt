@@ -33,3 +33,6 @@
 !
 ! 解放Medium點擊
 @@||medium-*.intercom-clicks.com^
+!
+! icu特別解鎖
+@@||immers.icu^

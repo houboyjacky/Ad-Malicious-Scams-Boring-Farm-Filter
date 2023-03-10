@@ -135,6 +135,7 @@
 *://*.magnetyzery3.pl/*
 *://*.malirstvi-nedorostek.cz/*
 *://*.mantrafund.top/*
+*://*.maxfit.sk/*
 *://*.maximilienzamanski.eu/*
 *://*.mediaprim.ru/*
 *://*.megumidev.fr/*
@@ -147,6 +148,7 @@
 *://*.moniques-fotografie.nl/*
 *://*.morethan.fi/*
 *://*.ms-hellriegel.de/*
+*://*.mudrsmejkalova.cz/*
 *://*.muttonisa.ch/*
 *://*.mystickah.fr/*
 *://*.na-madagaskar.sk/*
@@ -227,6 +229,7 @@
 *://*.strefa-ubran.pl/*
 *://*.stroawp.co/*
 *://*.style77.shop/*
+*://*.suomenkonekauppa.fi/*
 *://*.superm.cl/*
 *://*.sussexcinemahire.co.uk/*
 *://*.t-lock.se/*

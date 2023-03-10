@@ -1,292 +1,292 @@
-# 資料來自Dcard文章
-#
-# 正規化語言
-# 顯示原義字 ^ $ ( ) * + ? . [ \ { |
-# ^ 字串開始位置
-# $ 字串結束位置
-# * 0次或多次
-# + 一次或多次
-# ? 0次或0次
-# {n} n為非負整數，是出現n次 o{2}，Boooo符合 Boo符合 Bo不符合
-# {n,} n為非負整數，至少出現n次 o{2,}，Boooo符合 Boo符合 Bo不符合，{1,} 等同+ {0,}等同*
-# {n,m} nm為非負整數，m大於等於n，出現次數至少為n，最大為m，o{1,3}，foooood符合，fod符合，fd不符合，{0,1}等同?
-# \d -> [0-9]
-# \D -> [^0-9]
-# . 除了\r \n之外的字元
-# \s 符合任何空白字元，包括空格、制表符、換頁符等等。等價於[ \f\n\r\t\v]
-# \S 符合任何非空白字元。等價於[^ \f\n\r\t\v]
-# \w 符合包括底線的任何單詞字元。等價於「[A-Za-z0-9_]」
-# \W 符合任何非單詞字元。等價於「[^A-Za-z0-9_]」
+! 資料來自Dcard文章
 !
-# 詐騙個資 https://www.dcard.tw/f/persona_drmessage/p/239646609
+! 正規化語言
+! 顯示原義字 ^ $ ( ) * + ? . [ \ { |
+! ^ 字串開始位置
+! $ 字串結束位置
+! * 0次或多次
+! + 一次或多次
+! ? 0次或0次
+! {n} n為非負整數，是出現n次 o{2}，Boooo符合 Boo符合 Bo不符合
+! {n,} n為非負整數，至少出現n次 o{2,}，Boooo符合 Boo符合 Bo不符合，{1,} 等同+ {0,}等同*
+! {n,m} nm為非負整數，m大於等於n，出現次數至少為n，最大為m，o{1,3}，foooood符合，fod符合，fd不符合，{0,1}等同?
+! \d -> [0-9]
+! \D -> [^0-9]
+! . 除了\r \n之外的字元
+! \s 符合任何空白字元，包括空格、制表符、換頁符等等。等價於[ \f\n\r\t\v]
+! \S 符合任何非空白字元。等價於[^ \f\n\r\t\v]
+! \w 符合包括底線的任何單詞字元。等價於「[A-Za-z0-9_]」
+! \W 符合任何非單詞字元。等價於「[^A-Za-z0-9_]」
+!
+! 詐騙個資 https://www.dcard.tw/f/persona_drmessage/p/239646609
 /[a-z0-9]+gov.(tw|xyz|me|tv|store|shop|com)/
 ||bhnaku.xyz^
 ||benhayee.xyz^
-# 旋轉詐騙一覽
+! 旋轉詐騙一覽
 /tw[a-z0-9-]*carousel[a-z0-9-]*\.(com|xyz|tw)/
 /carousel[a-z0-9-]*tw\.(com|xyz)/
-# 旋轉詐騙 https://www.dcard.tw/f/buyonline/p/239656198
+! 旋轉詐騙 https://www.dcard.tw/f/buyonline/p/239656198
 /tw[-]?carousel[a-z0-9]+\.com/
 /carousel[a-z0-9]+[-]?tw\.com/
-# 旋轉詐騙 https://www.dcard.tw/f/buyonline/p/239698401
+! 旋轉詐騙 https://www.dcard.tw/f/buyonline/p/239698401
 /tw[-]?carousel[a-z0-9]+\.tw/
-# 旋轉詐騙 https://www.dcard.tw/f/buyonline/p/239705847
+! 旋轉詐騙 https://www.dcard.tw/f/buyonline/p/239705847
 /tw[-]?carousel[a-z0-9]+\.xyz/
 /carousel[a-z0-9]+[-]?tw\.xyz/
-# 詐騙蝦皮 https://www.dcard.tw/f/buyonline/p/239628821
+! 詐騙蝦皮 https://www.dcard.tw/f/buyonline/p/239628821
 ||shzpee-tw.com^
-# 詐騙蝦皮
+! 詐騙蝦皮
 /[a-z0-9]+xakcqzj\.cn/
 ||*.bar^
 /shopee-[a-z0-9]+\.tw/
-# 詐騙賺錢網站 https://www.dcard.tw/f/mood/p/239453488
+! 詐騙賺錢網站 https://www.dcard.tw/f/mood/p/239453488
 /[a-z0-9]+hotshop\.com/
-# 順億賣場 https://www.dcard.tw/f/mood/p/239453488
+! 順億賣場 https://www.dcard.tw/f/mood/p/239453488
 /[a-z0-9]+-tw\.shop/
-# 瘋狂購 https://www.dcard.tw/f/mood/p/239453488
+! 瘋狂購 https://www.dcard.tw/f/mood/p/239453488
 ||crazygostore-tw.com^
-# 超商詐騙 https://www.dcard.tw/f/persona_drmessage/p/239654358
+! 超商詐騙 https://www.dcard.tw/f/persona_drmessage/p/239654358
 ||cablebewilder.online^
-# 詐騙約會 https://www.dcard.tw/f/anti_fraud/p/239651272
+! 詐騙約會 https://www.dcard.tw/f/anti_fraud/p/239651272
 ||lovedatetw.com^
-# 詐騙中油 https://www.dcard.tw/f/mood/p/239670990
+! 詐騙中油 https://www.dcard.tw/f/mood/p/239670990
 ||perchintimidation.fun^
-# 問題網站
+! 問題網站
 ||chartoo.com^
-# 詐騙蝦皮,專屬大陸域名 https://www.dcard.tw/f/buyonline/p/239586106
+! 詐騙蝦皮,專屬大陸域名 https://www.dcard.tw/f/buyonline/p/239586106
 ||*.icu^
-# 詐騙信貸 https://www.dcard.tw/f/money/p/239532865
+! 詐騙信貸 https://www.dcard.tw/f/money/p/239532865
 ||[a-z0-9]+.ayju.tw^
-# 包裹詐騙
+! 包裹詐騙
 ||webspace.re^
-# 身分詐騙 https://www.dcard.tw/f/life_in_europe/p/239469431
+! 身分詐騙 https://www.dcard.tw/f/life_in_europe/p/239469431
 ||preview-domain.com^
-# 長榮詐騙 https://www.dcard.tw/f/persona_mygopen/p/239645405
+! 長榮詐騙 https://www.dcard.tw/f/persona_mygopen/p/239645405
 ||80w19v.cn^
-# 蝦皮詐騙 https://www.dcard.tw/f/buyonline/p/239616871
+! 蝦皮詐騙 https://www.dcard.tw/f/buyonline/p/239616871
 ||kajs32332.com^
-# 購物詐騙 https://www.dcard.tw/f/buyonline/p/239681612?cid=B24EBBF7-3847-488E-BD37-375C35CA1DA5
+! 購物詐騙 https://www.dcard.tw/f/buyonline/p/239681612?cid=B24EBBF7-3847-488E-BD37-375C35CA1DA5
 ||alsoall.com^
-# 郵局包裹詐騙 https://www.dcard.tw/f/talk/p/239664296
+! 郵局包裹詐騙 https://www.dcard.tw/f/talk/p/239664296
 /chung[-]?hwa[-]?.*\..*/
 ||postchunghwa.com^
-# 兼職詐騙 https://www.dcard.tw/f/job/p/239716653
+! 兼職詐騙 https://www.dcard.tw/f/job/p/239716653
 ||91baowu.com^
-# 投資詐騙 https://www.dcard.tw/f/stock/p/239714070
+! 投資詐騙 https://www.dcard.tw/f/stock/p/239714070
 ||stablesign.xyz^
-# 交友詐騙 https://www.dcard.tw/f/rainbow/p/239710224
+! 交友詐騙 https://www.dcard.tw/f/rainbow/p/239710224
 ||ismax.shop^
-# 投資詐騙 https://www.dcard.tw/f/money/p/239709438
+! 投資詐騙 https://www.dcard.tw/f/money/p/239709438
 ||ebdlj.com^
-# 投資詐騙 https://www.dcard.tw/f/mood/p/239705352
+! 投資詐騙 https://www.dcard.tw/f/mood/p/239705352
 ||intofuture01.com^
-# 汽車詐騙 https://www.dcard.tw/f/anti_fraud/p/239701552
+! 汽車詐騙 https://www.dcard.tw/f/anti_fraud/p/239701552
 ||ddb80.com^
-# 紓困補貼詐騙 https://www.dcard.tw/f/anti_fraud/p/239699738
+! 紓困補貼詐騙 https://www.dcard.tw/f/anti_fraud/p/239699738
 ||weishenl.com^
-# 詐騙FB帳號密碼搶奪粉絲團 https://www.dcard.tw/f/persona_drmessage/p/239555838
+! 詐騙FB帳號密碼搶奪粉絲團 https://www.dcard.tw/f/persona_drmessage/p/239555838
 ||ldp.page^
 /reactivate-page-[a-z0-9]+\.click/
 /pageverification[a-z0-9]+\.co\.vu/
 ||pagesinforverifications.*
 /successfull-[a-z0-9]+\.online/
 /metoocofstimrgpaged-[a-z0-9]+\.online/
-# 詐騙買賣票
+! 詐騙買賣票
 ||glory-as.com^
 ||gloryoss.oss-ap-southeast-7.aliyuncs.com^
-# 虛擬貨幣 https://www.dcard.tw/f/anti_fraud/p/239781197
+! 虛擬貨幣 https://www.dcard.tw/f/anti_fraud/p/239781197
 ||yongxappdowns.com^
-# 衛服部詐騙 https://www.dcard.tw/f/anti_fraud/p/239778586
+! 衛服部詐騙 https://www.dcard.tw/f/anti_fraud/p/239778586
 ||wysite.net^
-# 加密貨幣 https://www.dcard.tw/f/mood/p/237586146
+! 加密貨幣 https://www.dcard.tw/f/mood/p/237586146
 ||x8m8tech.tw^
-# 補助詐騙 https://www.dcard.tw/f/anti_fraud/p/239770261
+! 補助詐騙 https://www.dcard.tw/f/anti_fraud/p/239770261
 ||investimes.com^
-# 網購詐騙 https://www.dcard.tw/f/anti_fraud/p/239743425
+! 網購詐騙 https://www.dcard.tw/f/anti_fraud/p/239743425
 ||superhappy.life^
-# 蝦皮詐騙 https://www.dcard.tw/f/anti_fraud/p/239719722
+! 蝦皮詐騙 https://www.dcard.tw/f/anti_fraud/p/239719722
 /[a-z\-]*shopee[a-z\-]*\.(club|store)/
-# 交易詐騙 https://www.dcard.tw/f/anti_fraud/p/239660286
+! 交易詐騙 https://www.dcard.tw/f/anti_fraud/p/239660286
 ||hon-binary.com^
-# 旋轉詐騙 https://www.dcard.tw/f/buyonline/p/239785440
+! 旋轉詐騙 https://www.dcard.tw/f/buyonline/p/239785440
 /carousell-tw[a-z0-9]+\.xyz/
-# 衛服部詐騙
+! 衛服部詐騙
 ||weishenw.xyz^
-# 假Netflix https://www.dcard.tw/f/persona_drmessage/p/239845144
+! 假Netflix https://www.dcard.tw/f/persona_drmessage/p/239845144
 /netflti[a-z]*.com/
-# 假Line協助好友認證 https://www.dcard.tw/f/persona_drmessage/p/239672932
+! 假Line協助好友認證 https://www.dcard.tw/f/persona_drmessage/p/239672932
 ||pdpdsun.com^
-# 假中國信託信扶專案 https://www.dcard.tw/f/persona_drmessage/p/239835868
+! 假中國信託信扶專案 https://www.dcard.tw/f/persona_drmessage/p/239835868
 ||yqcpkn.xyz^
-# 假Telegram https://www.dcard.tw/f/persona_drmessage/p/239827858
+! 假Telegram https://www.dcard.tw/f/persona_drmessage/p/239827858
 ||t-telegram.org^
-# 詐騙交友 https://www.dcard.tw/f/talk/p/238306266
+! 詐騙交友 https://www.dcard.tw/f/talk/p/238306266
 ||waetlove.com^
-# 假冒金石堂 https://www.dcard.tw/f/persona_drmessage/p/239447065
+! 假冒金石堂 https://www.dcard.tw/f/persona_drmessage/p/239447065
 ||tw-becnfun.com^
-# 假冒NFT網站
+! 假冒NFT網站
 ||nft-wlmint.com^
-# 假冒中獎網站
+! 假冒中獎網站
 ||tw-redpacket-51.com^
-# 假冒追蹤貨物網站 https://www.dcard.tw/f/persona_drmessage/p/239383723
+! 假冒追蹤貨物網站 https://www.dcard.tw/f/persona_drmessage/p/239383723
 ||twtracking.com^
 ||tracking-tw.com^
-# 假冒宜家 https://www.dcard.tw/f/persona_drmessage/p/239368657
+! 假冒宜家 https://www.dcard.tw/f/persona_drmessage/p/239368657
 ||ikeety.com^
 ||ezjf.cn^
-# 旋轉詐騙 https://www.dcard.tw/f/persona_drmessage/p/239361514
+! 旋轉詐騙 https://www.dcard.tw/f/persona_drmessage/p/239361514
 ||acg.kr^
-# 假抖音 https://www.dcard.tw/f/persona_drmessage/p/239287357
+! 假抖音 https://www.dcard.tw/f/persona_drmessage/p/239287357
 ||tiktokksop.com^
-# 假蒸氣卡 https://www.dcard.tw/f/persona_drmessage/p/239262011
+! 假蒸氣卡 https://www.dcard.tw/f/persona_drmessage/p/239262011
 ||virtualpoints.live^
-# 假康是美 https://www.dcard.tw/f/persona_drmessage/p/239245758
+! 假康是美 https://www.dcard.tw/f/persona_drmessage/p/239245758
 ||cosmed-tw.vip^
-# 衛服部詐騙 https://www.dcard.tw/f/persona_drmessage/p/239235219
+! 衛服部詐騙 https://www.dcard.tw/f/persona_drmessage/p/239235219
 ||qlnctm.com^
 ||zcksov.com^
-# 虛擬貨幣詐騙 https://www.dcard.tw/f/persona_drmessage/p/239224925
+! 虛擬貨幣詐騙 https://www.dcard.tw/f/persona_drmessage/p/239224925
 ||robosetus.com^
-# 家樂福詐騙 https://www.dcard.tw/f/persona_drmessage/p/239201154
+! 家樂福詐騙 https://www.dcard.tw/f/persona_drmessage/p/239201154
 ||carrefaur.co^
-# 假冒DIOR https://www.dcard.tw/f/persona_drmessage/p/239134794
+! 假冒DIOR https://www.dcard.tw/f/persona_drmessage/p/239134794
 ||diortw.com^
-# 假冒Costco https://www.dcard.tw/f/persona_drmessage/p/239125909
+! 假冒Costco https://www.dcard.tw/f/persona_drmessage/p/239125909
 ||gzusi.shop^
 ||twzoc.shop^
-# FB粉絲團詐騙 https://www.dcard.tw/f/persona_drmessage/p/239106860
-#/[0-9]+\.ml/
+! FB粉絲團詐騙 https://www.dcard.tw/f/persona_drmessage/p/239106860
+!/[0-9]+\.ml/
 /pages-[0-9]+\.pw/
-# 虛擬錢包詐騙 https://www.dcard.tw/f/persona_drmessage/p/239190897
+! 虛擬錢包詐騙 https://www.dcard.tw/f/persona_drmessage/p/239190897
 /[a-z0-9]+-metamask.io/
-# 詐騙虛擬交易所 https://www.dcard.tw/f/persona_drmessage/p/238984705
+! 詐騙虛擬交易所 https://www.dcard.tw/f/persona_drmessage/p/238984705
 ||bitvex.net^
-# 假冒Hinet https://www.dcard.tw/f/persona_drmessage/p/238965235
+! 假冒Hinet https://www.dcard.tw/f/persona_drmessage/p/238965235
 ||js99.tw^
-# 詐騙粉絲團 https://www.dcard.tw/f/persona_drmessage/p/238930714
+! 詐騙粉絲團 https://www.dcard.tw/f/persona_drmessage/p/238930714
 ||laugh-laugh.live^
-# 詐騙FB粉絲團 https://www.dcard.tw/f/persona_drmessage/p/238930714
+! 詐騙FB粉絲團 https://www.dcard.tw/f/persona_drmessage/p/238930714
 /information-pages-[0-9]+.webnode.co/
-# 詐騙PEXPAY https://www.dcard.tw/f/persona_drmessage/p/238922226
+! 詐騙PEXPAY https://www.dcard.tw/f/persona_drmessage/p/238922226
 ||pexpaybn.com^
 ||bnpexpay.com^
 ||pexbian.com^
-# 假冒AMAZON https://www.dcard.tw/f/persona_drmessage/p/238909956
+! 假冒AMAZON https://www.dcard.tw/f/persona_drmessage/p/238909956
 ||amazonshoptw.com^
-# 假冒抖音 https://www.dcard.tw/f/persona_drmessage/p/238909956
+! 假冒抖音 https://www.dcard.tw/f/persona_drmessage/p/238909956
 ||lazada-cn.com^
-# 假冒紓困 https://www.dcard.tw/f/persona_drmessage/p/238901309
+! 假冒紓困 https://www.dcard.tw/f/persona_drmessage/p/238901309
 ||iwipit.com^
-# NFT詐騙 https://www.dcard.tw/f/persona_drmessage/p/238847697
+! NFT詐騙 https://www.dcard.tw/f/persona_drmessage/p/238847697
 ||thaesport.com^
 ||amy2000.com^
-# 通行費詐騙 https://www.dcard.tw/f/persona_drmessage/p/238806179
+! 通行費詐騙 https://www.dcard.tw/f/persona_drmessage/p/238806179
 ||pvetc.com^
 ||fqazetc.com^
-# 仿冒幣安 https://www.dcard.tw/f/persona_drmessage/p/238783143
+! 仿冒幣安 https://www.dcard.tw/f/persona_drmessage/p/238783143
 ||manotch.com^
-# 油橘詐騙 https://www.dcard.tw/f/persona_drmessage/p/238747232
+! 油橘詐騙 https://www.dcard.tw/f/persona_drmessage/p/238747232
 ||gyanvitaranamlawcollege.com^
-# 假口罩簡訊 https://www.dcard.tw/f/persona_drmessage/p/238729171
+! 假口罩簡訊 https://www.dcard.tw/f/persona_drmessage/p/238729171
 ||etshr.club^
 ||nhysg.xyz^
-# 假冒無聊猿 https://www.dcard.tw/f/persona_drmessage/p/238719602
+! 假冒無聊猿 https://www.dcard.tw/f/persona_drmessage/p/238719602
 ||apelandsdrop.com^
-# 交友詐騙 https://www.dcard.tw/f/persona_drmessage/p/238612235
+! 交友詐騙 https://www.dcard.tw/f/persona_drmessage/p/238612235
 ||ibothu.com^
-# 詐騙蝦皮 https://www.dcard.tw/f/persona_drmessage/p/238539181
+! 詐騙蝦皮 https://www.dcard.tw/f/persona_drmessage/p/238539181
 ||shopetw.xyz^
 ||beaxfun.fun^
 ||shope-tw.com^
 ||shoppea.com^
-# 假冒健保 https://www.dcard.tw/f/persona_drmessage/p/238488687
+! 假冒健保 https://www.dcard.tw/f/persona_drmessage/p/238488687
 ||hotvw.org^
-# 假冒投資專家 https://www.dcard.tw/f/persona_drmessage/p/238476649
+! 假冒投資專家 https://www.dcard.tw/f/persona_drmessage/p/238476649
 ||otcoffers.com^
 ||ofcoffers.com^
-# 假冒自由時報 https://www.dcard.tw/f/persona_drmessage/p/238476649
+! 假冒自由時報 https://www.dcard.tw/f/persona_drmessage/p/238476649
 ||treoatio.com^
 ||poecilogale.info^
 ||dachshound.info^
-# 虛擬貨幣詐騙 https://www.dcard.tw/f/anti_fraud/p/239883776
+! 虛擬貨幣詐騙 https://www.dcard.tw/f/anti_fraud/p/239883776
 ||txniuyys.com^
-# 大陸縮網址(暫不信任) https://www.dcard.tw/f/anti_fraud/p/239856753
+! 大陸縮網址(暫不信任) https://www.dcard.tw/f/anti_fraud/p/239856753
 ||dlj.bz^
-# 詐騙工作 https://www.dcard.tw/f/anti_fraud/p/239906853
+! 詐騙工作 https://www.dcard.tw/f/anti_fraud/p/239906853
 ||91baowu.tk^
-# 詐騙配送 https://www.dcard.tw/f/anti_fraud/p/239903824
+! 詐騙配送 https://www.dcard.tw/f/anti_fraud/p/239903824
 ||tw-post.co^
-# 詐騙iCloud帳號 https://www.dcard.tw/f/anti_fraud/p/239900119
+! 詐騙iCloud帳號 https://www.dcard.tw/f/anti_fraud/p/239900119
 ||appletw.net^
-# 詐騙幣安 https://www.dcard.tw/f/persona_drmessage/p/239908511
+! 詐騙幣安 https://www.dcard.tw/f/persona_drmessage/p/239908511
 ||biancce.com^
-# 詐騙開店 https://m.facebook.com/story.php?story_fbid=pfbid02D8ygemr9A21CwhHYDSwTX1Me3gqEmnuPHEPho6Bs257EMSCSCBBNKim5UfQKpUa5l&id=100000504151071
+! 詐騙開店 https://m.facebook.com/story.php?story_fbid=pfbid02D8ygemr9A21CwhHYDSwTX1Me3gqEmnuPHEPho6Bs257EMSCSCBBNKim5UfQKpUa5l&id=100000504151071
 ||titk-shop.me^
-# 詐騙Netflix https://www.dcard.tw/f/persona_drmessage/p/239845144
+! 詐騙Netflix https://www.dcard.tw/f/persona_drmessage/p/239845144
 ||netfltiw.com^
-# 可疑信件網址 https://www.dcard.tw/f/anti_fraud/p/239829383
+! 可疑信件網址 https://www.dcard.tw/f/anti_fraud/p/239829383
 ||brothers.tw^
-# 詐騙購物網站 https://www.dcard.tw/f/anti_fraud/p/239821175
+! 詐騙購物網站 https://www.dcard.tw/f/anti_fraud/p/239821175
 ||parksontw.com^
 ||centraltw.com^
-# 詐騙車貸 https://www.dcard.tw/f/anti_fraud/p/239805007
+! 詐騙車貸 https://www.dcard.tw/f/anti_fraud/p/239805007
 ||mitake.tw^
-# 詐騙遊戲交易平台 https://www.dcard.tw/f/anti_fraud/p/239805806
+! 詐騙遊戲交易平台 https://www.dcard.tw/f/anti_fraud/p/239805806
 ||xmgj11.com^
-# Netflix詐騙 https://www.dcard.tw/f/persona_drmessage/p/239967091
+! Netflix詐騙 https://www.dcard.tw/f/persona_drmessage/p/239967091
 ||mailling.net^
 ||studentstoragemanchester.com^
-# 旋轉拍賣詐騙 https://www.dcard.tw/f/anti_fraud/p/239955565
+! 旋轉拍賣詐騙 https://www.dcard.tw/f/anti_fraud/p/239955565
 ||carouseln.online^
-# 新臺馬國際交易平台 https://www.dcard.tw/f/game/p/239914269
+! 新臺馬國際交易平台 https://www.dcard.tw/f/game/p/239914269
 ||dgshek.xyz^
-# 虛擬貨幣詐騙 https://www.dcard.tw/f/anti_fraud/p/239931434
+! 虛擬貨幣詐騙 https://www.dcard.tw/f/anti_fraud/p/239931434
 ||vector-salt-it.com^
-# 抖音交易詐騙 https://www.dcard.tw/f/anti_fraud/p/239925488
+! 抖音交易詐騙 https://www.dcard.tw/f/anti_fraud/p/239925488
 ||cheerfulez.com^
-# 旋轉拍賣詐騙 https://www.dcard.tw/f/anti_fraud/p/239980829
+! 旋轉拍賣詐騙 https://www.dcard.tw/f/anti_fraud/p/239980829
 ||meituang090.xyz^
 ||ruyi.tv^
-# 延伸旋轉拍賣詐騙的在線客服 https://www.dcard.tw/f/anti_fraud/p/239980829
+! 延伸旋轉拍賣詐騙的在線客服 https://www.dcard.tw/f/anti_fraud/p/239980829
 ||hkf.molinsoft.com^
 ||kefu.mnkefu.com^
-# 旋轉詐騙 https://www.dcard.tw/f/buyonline/p/239985748
+! 旋轉詐騙 https://www.dcard.tw/f/buyonline/p/239985748
 ||twl-carousell-com.xyz^
-# 旋轉詐騙縮網址先封鎖 https://www.dcard.tw/f/buyonline/p/239985748
+! 旋轉詐騙縮網址先封鎖 https://www.dcard.tw/f/buyonline/p/239985748
 ||dlj2.cn^
-# iCloud詐騙 https://www.dcard.tw/f/apple/p/239992029
+! iCloud詐騙 https://www.dcard.tw/f/apple/p/239992029
 ||icloud-twn.info^
-# 乙太幣合併 https://www.dcard.tw/f/persona_drmessage/p/240003944
+! 乙太幣合併 https://www.dcard.tw/f/persona_drmessage/p/240003944
 ||ethereum-merge.live^
 ||ether2x-event.info^
 ||etherum-celebration.com^
-# 旋轉詐騙延伸封鎖縮網址  https://www.dcard.tw/f/buyonline/p/240004969
+! 旋轉詐騙延伸封鎖縮網址  https://www.dcard.tw/f/buyonline/p/240004969
 ||1v9.xyz^
 ||link66.cn^
-# 旋轉拍賣詐騙 https://www.dcard.tw/f/buyonline/p/240004286
+! 旋轉拍賣詐騙 https://www.dcard.tw/f/buyonline/p/240004286
 ||qth833.com^
-# 延伸旋轉拍賣詐騙的在線客服 https://www.dcard.tw/f/buyonline/p/240004286
+! 延伸旋轉拍賣詐騙的在線客服 https://www.dcard.tw/f/buyonline/p/240004286
 ||wt.kefusoft.com^
 ||chat.kefusoft.com^
-# 詐騙遊戲與客服 https://www.dcard.tw/f/ask/p/240005209
+! 詐騙遊戲與客服 https://www.dcard.tw/f/ask/p/240005209
 ||xm-chats.com^
-# 旋轉詐騙 https://www.dcard.tw/f/anti_fraud/p/240013878
+! 旋轉詐騙 https://www.dcard.tw/f/anti_fraud/p/240013878
 ||legoushopee.com^
-# 乙太幣詐騙 https://www.dcard.tw/f/anti_fraud/p/240013792
+! 乙太幣詐騙 https://www.dcard.tw/f/anti_fraud/p/240013792
 ||ditok333.com^
 /ditok[0-9]*\.com/
-# IG詐騙帳號密碼 https://www.dcard.tw/f/persona_drmessage/p/239990650
+! IG詐騙帳號密碼 https://www.dcard.tw/f/persona_drmessage/p/239990650
 ||centerhelpconfirm.cf
-# 旋轉詐騙 https://www.dcard.tw/f/buyonline/p/240016064
+! 旋轉詐騙 https://www.dcard.tw/f/buyonline/p/240016064
 ||carousellgo.com^
-# FB粉絲團詐騙 https://www.dcard.tw/f/persona_drmessage/p/240031978
+! FB粉絲團詐騙 https://www.dcard.tw/f/persona_drmessage/p/240031978
 ||2477235u71271355.co.vu^
 /[0-9a-z]+\.co\.vu/
-# FB粉絲團詐騙延伸封鎖縮網址 https://www.dcard.tw/f/persona_drmessage/p/240031978
+! FB粉絲團詐騙延伸封鎖縮網址 https://www.dcard.tw/f/persona_drmessage/p/240031978
 ||u.to^
-# 詐騙遊戲買賣 https://www.dcard.tw/f/aov/p/240032267
+! 詐騙遊戲買賣 https://www.dcard.tw/f/aov/p/240032267
 ||cz916.cn^
-# Line詐騙認證 https://www.dcard.tw/f/persona_drmessage/p/239672932
+! Line詐騙認證 https://www.dcard.tw/f/persona_drmessage/p/239672932
 ||line.pdpdsun.com^
 /linebank\.(beauty|click|homes|lol|one|mom|xyz|pics|skin|hair|shop)/
 ||linebank.beauty^
@@ -307,74 +307,74 @@
 ||linedown.hair^
 ||linedown.xyz^
 ||linedown.shop^
-# 旋轉詐騙 https://www.dcard.tw/f/buyonline/p/240060947
+! 旋轉詐騙 https://www.dcard.tw/f/buyonline/p/240060947
 ||ai-service.online^
-# 旋轉詐騙延伸封鎖縮網址 https://www.dcard.tw/f/buyonline/p/240060947
+! 旋轉詐騙延伸封鎖縮網址 https://www.dcard.tw/f/buyonline/p/240060947
 ||sourl.cn^
-# 詐騙購物平台 https://www.dcard.tw/f/buyonline/p/240059531
+! 詐騙購物平台 https://www.dcard.tw/f/buyonline/p/240059531
 ||24ylgcs.com^
-# 旋轉詐騙延伸封鎖縮網址 https://www.dcard.tw/f/talk/p/240060484
+! 旋轉詐騙延伸封鎖縮網址 https://www.dcard.tw/f/talk/p/240060484
 ||goo.gs^
-# 詐騙交友網站 https://www.dcard.tw/f/relationship/p/240068588
+! 詐騙交友網站 https://www.dcard.tw/f/relationship/p/240068588
 ||twskout.com^
-# 詐騙蝦皮 https://www.dcard.tw/f/buyonline/p/240065396
+! 詐騙蝦皮 https://www.dcard.tw/f/buyonline/p/240065396
 ||lc.chat^
 ||2iz.cn^
-# 詐騙蝦皮 https://www.dcard.tw/f/buyonline/p/240070421
+! 詐騙蝦皮 https://www.dcard.tw/f/buyonline/p/240070421
 ||tgh119.com^
-# iCloud詐騙
+! iCloud詐騙
 ||icloud-tawo.info^
-# 詐騙交易所 https://www.dcard.tw/f/anti_fraud/p/240088213
+! 詐騙交易所 https://www.dcard.tw/f/anti_fraud/p/240088213
 ||okxpro.pro^
-# 詐騙買賣遊戲 https://www.dcard.tw/f/mood/p/240099449
+! 詐騙買賣遊戲 https://www.dcard.tw/f/mood/p/240099449
 ||yf639.cn^
-# 虛擬幣交易所詐騙 https://www.dcard.tw/f/money/p/240110844
+! 虛擬幣交易所詐騙 https://www.dcard.tw/f/money/p/240110844
 ||transitcoin.cc^
-# 偽裝交易所 https://www.dcard.tw/f/persona_drmessage/p/240113637
+! 偽裝交易所 https://www.dcard.tw/f/persona_drmessage/p/240113637
 ||binence.com^
-# 詐騙虛擬貨幣 https://www.dcard.tw/f/blockchain/p/240125034
+! 詐騙虛擬貨幣 https://www.dcard.tw/f/blockchain/p/240125034
 ||yield-farmingpromax.com^
-# 詐騙手遊 https://www.dcard.tw/f/all/p/240099449/b/10
+! 詐騙手遊 https://www.dcard.tw/f/all/p/240099449/b/10
 ||teeeu.com^
-# 怪異網站連結 https://www.dcard.tw/f/mood/p/240131867
+! 怪異網站連結 https://www.dcard.tw/f/mood/p/240131867
 ||354aecf.dwerls.eu.org^
-# 詐騙蝦皮 https://www.dcard.tw/f/talk/p/240132052
+! 詐騙蝦皮 https://www.dcard.tw/f/talk/p/240132052
 ||smw693.com^
 ||m6z.cn^
-# FB帳號被盜 https://www.dcard.tw/f/persona_drmessage/p/240155537
+! FB帳號被盜 https://www.dcard.tw/f/persona_drmessage/p/240155537
 /.+-[0-9]+\.tk/
 ||pagesverification-nanotch.com^
 ||apolloshop.com.br^
 ||embalagensupbox.com.br^
-# 詐騙投資 https://www.dcard.tw/f/rainbow/p/240163577
+! 詐騙投資 https://www.dcard.tw/f/rainbow/p/240163577
 ||hongtongf.vip^
-# 仿冒Apple官網 https://www.dcard.tw/f/persona_drmessage/p/240173281
+! 仿冒Apple官網 https://www.dcard.tw/f/persona_drmessage/p/240173281
 ||sicma.mg^
 ||yt-google.com^
-# 一頁式網站 https://www.dcard.tw/f/buyonline/p/240169992
+! 一頁式網站 https://www.dcard.tw/f/buyonline/p/240169992
 ||smallbossstore.com^
 ||lam810522.com^
-# 詐騙全聯 https://www.dcard.tw/f/anti_fraud/p/240153324
+! 詐騙全聯 https://www.dcard.tw/f/anti_fraud/p/240153324
 ||holiie.online^
-# 詐騙外匯 https://www.dcard.tw/f/persona_yellowfx/p/240179365
+! 詐騙外匯 https://www.dcard.tw/f/persona_yellowfx/p/240179365
 ||rjmtt.com^
-# 詐騙交易所 https://www.dcard.tw/f/money/p/240191634
+! 詐騙交易所 https://www.dcard.tw/f/money/p/240191634
 ||icebit-bit.com^
-# 詐騙交友網站 https://www.dcard.tw/f/mood/p/240199910
+! 詐騙交友網站 https://www.dcard.tw/f/mood/p/240199910
 ||ourlovespaceone.com^
-# 詐騙旋轉拍賣 https://www.dcard.tw/f/buyonline/p/240201170
+! 詐騙旋轉拍賣 https://www.dcard.tw/f/buyonline/p/240201170
 ||help-live.com^
-# 一頁式銷售網站 https://www.dcard.tw/f/anti_fraud/p/240206093
+! 一頁式銷售網站 https://www.dcard.tw/f/anti_fraud/p/240206093
 ||nuoge.live^
-# 詐騙虛擬貨幣 https://www.dcard.tw/f/police/p/240208774
+! 詐騙虛擬貨幣 https://www.dcard.tw/f/police/p/240208774
 ||valutrade168.net^
-# 詐騙購物 https://www.dcard.tw/f/sex/p/240219306
+! 詐騙購物 https://www.dcard.tw/f/sex/p/240219306
 ||storyabouttobegin.com^
-# 詐騙NFT誘導新聞 https://www.dcard.tw/f/anti_fraud/p/240219549
+! 詐騙NFT誘導新聞 https://www.dcard.tw/f/anti_fraud/p/240219549
 ||nftrader.online^
-# 詐騙購物 https://www.dcard.tw/f/mood/p/240219256
+! 詐騙購物 https://www.dcard.tw/f/mood/p/240219256
 ||mstalk.cn^
-# 怪異網站連結
+! 怪異網站連結
 ! 問題購物網站 樂瘋網 https://www.dcard.tw/f/buyonline/p/240259630
 ||happygo-tw.com^
 ||happygotw.com^
@@ -731,15 +731,16 @@
 ||xuansiwei.com^
 ||mengb123.com^
 ! 詐騙交友 https://www.dcard.tw/f/relationship/p/239241786
-||twsweeting.com^
-||kupaisky.com^
-||navyfm.com^
-||kupaiserver.com^
+||twsweeting.com^$dnsrewrite=NOERROR;A;138.2.53.104
+||kupaisky.com^$dnsrewrite=NOERROR;A;138.2.53.104
+||navyfm.com^$dnsrewrite=NOERROR;A;138.2.53.104
+||kupaiserver.com^$dnsrewrite=NOERROR;A;138.2.53.104
 ! 詐騙交友網站 https://www.dcard.tw/f/relationship/p/238615127
-||getwishome.com^
-||wshtmltool.com^
-||twmet.com^
-||singlestw.com^
+||getwishome.com^$dnsrewrite=NOERROR;A;138.2.53.104
+||wshtmltool.com^$dnsrewrite=NOERROR;A;138.2.53.104
+||twmet.com^$dnsrewrite=NOERROR;A;138.2.53.104
+||singlestw.com^$dnsrewrite=NOERROR;A;138.2.53.104
+||xfenfa.cn^$dnsrewrite=NOERROR;A;138.2.53.104
 #境外支付網站封鎖
 ||cropay.com^
 ||ipasspay.biz^
@@ -819,7 +820,7 @@
 ||freedstoregift.com^
 ||2023freestickers.com^
 ! 問題交易所 https://www.dcard.tw/f/money/p/241225637
-@@||metamask.io^
+#||metamask.io^
 ||accessfx-247tradepro.com^
 ||assetsbull.com^
 ||binary-fx.trade^
