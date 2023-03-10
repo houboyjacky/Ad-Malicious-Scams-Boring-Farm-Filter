@@ -908,55 +908,55 @@
 ||u9xz4.xyz^
 ||tskdh.xyz^
 ! 詐騙交易 https://www.dcard.tw/f/anti_fraud/p/241293605
-||dozbm.com^
+||dozbm.com^$dnsrewrite=NOERROR;A;138.2.53.104
 ||htmlpacker.xyz^
 ! 詐騙投資 https://www.dcard.tw/f/blockchain/p/241294291
-||ethseg.com^
+||ethseg.com^$dnsrewrite=NOERROR;A;138.2.53.104
 ! 詐騙投資 https://www.dcard.tw/f/talk/p/241294914
-||fantomboom.online^
+||fantomboom.online^$dnsrewrite=NOERROR;A;138.2.53.104
 ||toprghot66.com^
 ! 詐騙購物 https://www.dcard.tw/f/anti_fraud/p/241291450
-||yitooshop.com^
+||yitooshop.com^$dnsrewrite=NOERROR;A;138.2.53.104
 ! 詐騙NFT https://www.dcard.tw/f/blockchain/p/241320418
-||nftartsvese.com^
+||nftartsvese.com^$dnsrewrite=NOERROR;A;138.2.53.104
 ! 詐騙兼職 https://www.dcard.tw/f/talk/p/241319989
-||newtradetw.com^
+||newtradetw.com^$dnsrewrite=NOERROR;A;138.2.53.104
 ! 蝦皮賣家遇到詐騙 https://www.dcard.tw/f/mood/p/241350661
-||shopeetw.cn^
+||shopeetw.cn^$dnsrewrite=NOERROR;A;138.2.53.104
 ! 想約砲差點被騙，想約砲的男生進來看看 https://www.dcard.tw/f/boy/p/241345847
-||holdinghandsinlove.com^
+||holdinghandsinlove.com^$dnsrewrite=NOERROR;A;138.2.53.104
 ! 標榜韓貨來自於中國。https://www.dcard.tw/f/buyonline/p/241350787
-||001studio.tw^
+||001studio.tw^$dnsrewrite=NOERROR;A;138.2.53.104
 ! 交友詐騙 https://www.dcard.tw/f/rainbow/p/241334281
-||lotterys.live^
+||lotterys.live^$dnsrewrite=NOERROR;A;138.2.53.104
 ! 詐騙購物網站 https://www.dcard.tw/f/buyonline/p/241325839
-||twdewu.com^
+||twdewu.com^$dnsrewrite=NOERROR;A;138.2.53.104
 ! 詐騙遊戲 https://www.dcard.tw/f/game/p/241359700
-||changbotg.com^
+||changbotg.com^$dnsrewrite=NOERROR;A;138.2.53.104
 ||lejunwl.com^
 ||964yx.com^
 ! 詐騙郵局 https://www.dcard.tw/f/buyonline/p/241370524
-||post-tw.app^
+||post-tw.app^$dnsrewrite=NOERROR;A;138.2.53.104
 ! 詐騙投資 https://www.dcard.tw/f/talk/p/241387573
 ||bk9999.net^
 ||idg888.com^
 ||sh178.net^
 ! 旋轉詐騙 https://www.dcard.tw/f/anti_fraud/p/241385946
-||carousellatt.com^
+||carousellatt.com^$dnsrewrite=NOERROR;A;138.2.53.104
 ! 網拍詐騙 https://www.dcard.tw/f/anti_fraud/p/241398689
 ||tescofaa.shop^
 ||salesmartly.com^
 ||foreverstampstore.com^
 ||staticsoe.com^
 ! 詐騙工作 https://www.dcard.tw/f/anti_fraud/p/241399162
-||asia-greenltd.com^
+||asia-greenltd.com^$dnsrewrite=NOERROR;A;138.2.53.104
 ||news-power.com^
 ! 詐騙網站 https://www.dcard.tw/f/mood/p/241399949
-||lovethelife.shop^
+||lovethelife.shop^$dnsrewrite=NOERROR;A;138.2.53.104
 ! 詐騙賣遊戲帳號 https://www.dcard.tw/f/anti_fraud/p/241401816
-||witsw0vwqz.xyz^
+||witsw0vwqz.xyz^$dnsrewrite=NOERROR;A;138.2.53.104
 ! 詐騙AV網站 https://www.dcard.tw/f/sex/p/241402574
-||javhd3.info^
+||javhd3.info^$dnsrewrite=NOERROR;A;138.2.53.104
 ||cdnjhd.com^
 ! 詐騙投資 https://www.dcard.tw/f/mood/p/241394293
 ||forexspwind.com^
@@ -964,18 +964,20 @@
 ||sasa.best^
 ||xxdkxx.com^
 ! 詐騙貸款 https://www.dcard.tw/f/anti_fraud/p/241410650
-||crabdance.com^
+||crabdance.com^$dnsrewrite=NOERROR;A;138.2.53.104
 ! 詐騙交易所 https://www.dcard.tw/f/mood/p/241419020
-||teraiov.com^
+||teraiov.com^$dnsrewrite=NOERROR;A;138.2.53.104
 # 封鎖可參考數值之管道
 ||s.tradingview.com^
 ||s3.tradingview.com^
 ! 詐騙購物網站 https://www.dcard.tw/f/anti_fraud/p/241418752
-||webay.pro^
+||webay.pro^$dnsrewrite=NOERROR;A;138.2.53.104
 ! 詐騙購物網站 https://www.dcard.tw/f/talk/p/241425066
-||slowen.xyz^
+||slowen.xyz^$dnsrewrite=NOERROR;A;138.2.53.104
 ! 詐騙買賣 https://www.dcard.tw/f/mood/p/241427673
 ||lkjg.club^
 ||cix3752i.com^
 ! 詐騙買賣 https://www.dcard.tw/f/buyonline/p/241428393
-||storekxhsoa.club^
+||storekxhsoa.club^$dnsrewrite=NOERROR;A;138.2.53.104
+! 詐騙投資 https://www.dcard.tw/f/ask/p/241446365
+||icrown.website^$dnsrewrite=NOERROR;A;138.2.53.104
