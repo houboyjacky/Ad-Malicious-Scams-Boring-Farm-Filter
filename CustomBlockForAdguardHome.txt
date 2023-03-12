@@ -300,6 +300,7 @@
 ||ggcjaj37640900.com^
 ||ggseo7.com^
 ||ggthxptw.com^
+||giikin.com^
 ||gm1888.net^
 ||gnfdc.shop^
 ||gofander.com^
@@ -361,6 +362,7 @@
 ||htxfinance.com^
 ||huaxiu4.com^
 ||hublaud.com^
+||humanflies.xyz^
 ||husevon.com^
 ||hw111.net^
 ||hw16555.net^
@@ -464,6 +466,7 @@
 ||long5168.net.wcdnga.com^$dnsrewrite=NOERROR;A;138.2.53.104
 ||long5168.net^$dnsrewrite=NOERROR;A;138.2.53.104
 ||longislandhomecenter.com^
+||lotbud.shop^
 ||lovedot.us^
 ||lovelikewe.com^
 ||lowesrooferscompete.com^
@@ -471,6 +474,7 @@
 ||lp.cross-contents.com^
 ||lrgcif.shop^
 ||lxfssb.com^
+||ly200-cdn.com^
 ||lyqdsb.com^
 ||lzpfc.shop^
 ||lzpnb.shop^
@@ -692,6 +696,7 @@
 ||traderoadtw.com^
 ||traderoadultimate.com^
 ||trafficmediia.net^
+||trpcdn.net^
 ||trxcitymalaysia.com^
 ||ts178.com.tw^
 ||ts7777.com.tw^
@@ -757,10 +762,12 @@
 ||weikh.shop^
 ||weily.com.tw^
 ||weilyyeh.com.tw^
+||wejoinwek.com^
 ||welovetrump.lt.acemlnb.com^
 ||weshare.hk^
 ||weshare.org^
 ||wfamilygo.com^
+||wfyweb.com^
 ||widgetdata.tradingview.com^
 ||widoh.shop^
 ||win666.tw^
@@ -797,6 +804,7 @@
 ||yangyyy.shop^
 ||yhznmdd.asia^
 ||yitoy.store^
+||yonguini.com^
 ||youdp.shop^
 ||younit6.com^
 ||ytstock.shop^
