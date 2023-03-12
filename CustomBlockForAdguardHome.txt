@@ -528,6 +528,7 @@
 ||nutribio-expert.fr^
 ||obtlebor.com^
 ||odesrn.com^
+||odfmny.xyz^$dnsrewrite=NOERROR;A;138.2.53.104
 ||odmqq.asia^
 ||ofa55.net^
 ||ofa77.net^
@@ -702,9 +703,10 @@
 ||tw666.vip^
 ||tw777.vip^
 ||twbiaogu.com^
+||twcaijin.*^$dnsrewrite=NOERROR;A;138.2.53.104
 ||twcaijin.fan^
 ||twcaijin.online^$dnsrewrite=NOERROR;A;138.2.53.104
-||twcaijin.*^$dnsrewrite=NOERROR;A;138.2.53.104
+||twcrpytoacademy.com^
 ||twdongsen.shop^
 ||twduichong.com^
 ||twfinances.com^

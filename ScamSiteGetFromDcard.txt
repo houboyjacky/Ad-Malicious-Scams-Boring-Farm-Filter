@@ -983,3 +983,5 @@
 ||icrown.website^$dnsrewrite=NOERROR;A;138.2.53.104
 ! 詐騙投資 https://www.dcard.tw/f/money/p/241454048
 ||globalfinancialco.com^$dnsrewrite=NOERROR;A;138.2.53.104
+! 詐騙交友 https://www.dcard.tw/f/anti_fraud/p/241449738
+||escapesingle.com^$dnsrewrite=NOERROR;A;138.2.53.104
