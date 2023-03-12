@@ -3,7 +3,7 @@
 ! 過度引用 widgetdata.tradingview.com
 ! 過度引用 www.tradingview-widget.com
 ! 疑似詐騙或不良的網站
-/caijing\w*\.w*/$dnsrewrite=NOERROR;A;138.2.53.104
+/caijing\w*\.w*/
 /ee[0-9]+\.com/
 /fk[0-9]+\.com/
 /fnline\.(info|xyz|vip)/
@@ -62,7 +62,7 @@
 ||999ts.net^
 ||9cmoneylife.com^
 ||金大發娛樂城.tw^
-||aadshop.site^$dnsrewrite=NOERROR;A;138.2.53.104
+||aadshop.site^
 ||abbiloce.com^
 ||acadme.co^
 ||accesscs06.com^
@@ -147,7 +147,7 @@
 ||cavernalabs.com.br^
 ||cbaofficial.com^
 ||cbin9.com^
-||ccmnn746.com^$dnsrewrite=NOERROR;A;138.2.53.104
+||ccmnn746.com^
 ||cepismen.com^
 ||cgbsa.shop^
 ||cguang374.wixsite.com^
@@ -165,7 +165,7 @@
 ||cmtrade.com^
 ||colegioquiropracticochile.cl^
 ||comfortableife.com^
-||copmusionu.shop^$dnsrewrite=NOERROR;A;138.2.53.104
+||copmusionu.shop^
 ||copyrichacademy.com^
 ||crazymonkey.lpages.co^
 ||crcdd.shop^
@@ -196,6 +196,7 @@
 ||dgclass.cn^
 ||dgjhenren.com.tw^
 ||digifaculty.com^
+||diguogames88.com^
 ||diniwap.cc^
 ||dio-atomy.com^
 ||directbuycenters.com^
@@ -280,7 +281,7 @@
 ||fnline.info^
 ||fnline.vip^
 ||fnline.xyz^
-||fowku.com^$dnsrewrite=NOERROR;A;138.2.53.104
+||fowku.com^
 ||franklin.com.tw^
 ||friedmancall.space^
 ||fuckyoudouble.com^
@@ -296,7 +297,7 @@
 ||gatherich01.com^
 ||gaylehgregory.com^
 ||gdf999.com^
-||gemu08.com^$dnsrewrite=NOERROR;A;138.2.53.104
+||gemu08.com^
 ||genesisquantify.com^
 ||gfdfsaw.shop^
 ||gfdt999.com^
@@ -380,7 +381,7 @@
 ||iju888.com^
 ||imaster.club^
 ||incoolyo.com^
-||indiastock.club^$dnsrewrite=NOERROR;A;138.2.53.104
+||indiastock.club^
 ||infinitytraffic.net^
 ||insin.com.tw^
 ||insurblessing.com^
@@ -420,6 +421,7 @@
 ||jv-photos.com^
 ||kanda-stock.com^
 ||kangstock.com^
+||kasumigaseki.com.tw^
 ||katrina2929.wixsite.com^
 ||kelbyone.lt.acemlnb.com^
 ||kevfutur.online^
@@ -468,8 +470,8 @@
 ||loan588.com^
 ||londi.net^
 ||londonatitsbest.com^
-||long5168.net.wcdnga.com^$dnsrewrite=NOERROR;A;138.2.53.104
-||long5168.net^$dnsrewrite=NOERROR;A;138.2.53.104
+||long5168.net.wcdnga.com^
+||long5168.net^
 ||longislandhomecenter.com^
 ||lotbud.shop^
 ||lovedot.us^
@@ -498,9 +500,10 @@
 ||metal52539.com^
 ||metal539.com^
 ||mgjswq.site^
+||mikecrm.com^
 ||minutefor.shop^
 ||mizatio.com^
-||mkfsa.shop^$dnsrewrite=NOERROR;A;138.2.53.104
+||mkfsa.shop^
 ||mobilesaustralia.com^
 ||moncashrig.live^
 ||moneyedu.org.tw^
@@ -537,7 +540,7 @@
 ||nutribio-expert.fr^
 ||obtlebor.com^
 ||odesrn.com^
-||odfmny.xyz^$dnsrewrite=NOERROR;A;138.2.53.104
+||odfmny.xyz^
 ||odmqq.asia^
 ||ofa55.net^
 ||ofa77.net^
@@ -554,7 +557,7 @@
 ||onlinerichmkt.com^
 ||opticalilusion.com^
 ||oriental-hotels.com^
-||ospcv.com^$dnsrewrite=NOERROR;A;138.2.53.104
+||ospcv.com^
 ||outlet.win^
 ||oxfordclubtaiwan.com^
 ||pages-wildcard.weebly.com^
@@ -713,9 +716,9 @@
 ||tw666.vip^
 ||tw777.vip^
 ||twbiaogu.com^
-||twcaijin.*^$dnsrewrite=NOERROR;A;138.2.53.104
+||twcaijin.*^
 ||twcaijin.fan^
-||twcaijin.online^$dnsrewrite=NOERROR;A;138.2.53.104
+||twcaijin.online^
 ||twcrpytoacademy.com^
 ||twdongsen.shop^
 ||twduichong.com^
@@ -779,7 +782,7 @@
 ||win666.tw^
 ||wiocdsd.world^
 ||wmydhpq.com^
-||woacf.com^$dnsrewrite=NOERROR;A;138.2.53.104
+||woacf.com^
 ||wof888.blogspot.com^
 ||wof888.com^
 ||wokqo.shop^
@@ -812,6 +815,7 @@
 ||yitoy.store^
 ||yonguini.com^
 ||youdp.shop^
+||youlove2chat.com^
 ||younit6.com^
 ||ytstock.shop^
 ||yturie.asia^

@@ -78,6 +78,7 @@
 /starhal[a-z]+\.com/
 /stepup[a-z0-9]*\.com/
 /svj[\-a-z0-9]\.com/
+/taiwanstartr.+\.com/
 /thinkmark.+\.com/
 /tickmilltw.*\.xyz/
 /tk[0-9]\.shop/
@@ -581,10 +582,10 @@
 ||elparit.com^
 ||empfiiitw.com^
 ||enekfkr.com^
+||engine6tw.*^
 ||engine6tw.com^
 ||engine6tw.net^
 ||engine6tw.site^
-||engine6tw.*^
 ||enterpc24.com^
 ||envrch.com^
 ||epmtig.com^
@@ -1580,7 +1581,6 @@
 ||taife.cc^
 ||taifuex5.tw^
 ||taiwan-okx.com^
-/taiwanstartr.+\.com/
 ||taiwanstartr.com^
 ||taiwanstartrpro.com^
 ||taiwanstartrpros.com^

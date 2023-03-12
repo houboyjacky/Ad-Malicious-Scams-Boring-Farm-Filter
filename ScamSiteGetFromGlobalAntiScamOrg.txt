@@ -231,6 +231,7 @@
 ||24bits.ru^
 ||24bityux.com^
 ||24coin5.com^
+||24coinbet.*^
 ||24coinbet.fun^
 ||24coinbet.live^
 ||24coinbet.net^
@@ -241,7 +242,6 @@
 ||24coinbet.vip^
 ||24coinbet.website^
 ||24coinbet.xyz^
-||24coinbet.*^
 ||24coinbit.com^
 ||24coinbitex.com^
 ||24cryptobit.com^
