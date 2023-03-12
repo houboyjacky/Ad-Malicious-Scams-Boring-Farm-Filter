@@ -16,7 +16,7 @@
 #||phicdn.net^
 ||*.cyou^
 ||*.ml^
-||*.top^
+||*.top^$dnsrewrite=NOERROR;A;138.2.53.104
 ||0857online.net
 ||10goneviral.com^
 ||11ks.xyz^

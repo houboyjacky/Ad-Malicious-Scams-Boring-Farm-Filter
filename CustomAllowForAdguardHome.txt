@@ -36,3 +36,6 @@
 !
 ! icu特別解鎖
 @@||immers.icu^
+!
+! megadap解鎖
+@@||megadap.com^$important

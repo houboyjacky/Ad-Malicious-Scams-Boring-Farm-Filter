@@ -884,7 +884,7 @@
 ! 詐騙購物 https://www.dcard.tw/f/anti_fraud/p/241240360
 ||klgw.shop^
 ! 詐騙打工 https://www.dcard.tw/f/job_search/p/241244696
-||volatils.com^
+||volatils.com^$dnsrewrite=NOERROR;A;138.2.53.104
 ! 詐騙打工 https://www.dcard.tw/f/job_search/p/241244857
 ||g1o2ltr.xyz^
 ! 詐騙 https://www.dcard.tw/f/anti_fraud/p/241244917
@@ -985,3 +985,5 @@
 ||globalfinancialco.com^$dnsrewrite=NOERROR;A;138.2.53.104
 ! 詐騙交友 https://www.dcard.tw/f/anti_fraud/p/241449738
 ||escapesingle.com^$dnsrewrite=NOERROR;A;138.2.53.104
+! 詐騙交易所 https://www.dcard.tw/f/anti_fraud/p/241451593
+||fideltets.com^$dnsrewrite=NOERROR;A;138.2.53.104
