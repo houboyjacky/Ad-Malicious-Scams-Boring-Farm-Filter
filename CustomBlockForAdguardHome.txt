@@ -16,7 +16,7 @@
 #||phicdn.net^
 ||*.cyou^
 ||*.ml^
-||*.top^$dnsrewrite=NOERROR;A;138.2.53.104
+||*.top^
 ||0857online.net
 ||10goneviral.com^
 ||11ks.xyz^
@@ -57,6 +57,7 @@
 ||8ujt597.cn^
 ||925kufd8vj7mbw6.com^
 ||948fa.com^
+||94bdf365.com^
 ||982815.icu^
 ||999ts.net^
 ||9cmoneylife.com^
@@ -77,6 +78,7 @@
 ||algotrading-mcpy.thinkific.com^
 ||alhamdoulillahcoin.com^
 ||alphaloan.co^
+||alvinb.club^
 ||andriodforums.com^
 ||anstableu.com^
 ||aq47.net^
@@ -121,6 +123,7 @@
 ||bp.blogspot.com^
 ||britainstock.xyz^
 ||britishlooseleaf.com
+||brumolat.com^
 ||bsclink.cn^
 ||buffettonlineschool.com.tw^
 ||butomongs.com^
@@ -309,6 +312,7 @@
 ||goodpracticemining.com^
 ||goodsgreatsdeals.shop^
 ||gotrade.com.tw^
+||gptw.cc^
 ||grapeking.com.tw^
 ||greatstocks.xyz^
 ||growin.tv^
@@ -412,6 +416,7 @@
 ||judihero.co^
 ||jukixvd.shop^
 ||julia-jbs.com^
+||jun587.com^
 ||jv-photos.com^
 ||kanda-stock.com^
 ||kangstock.com^
@@ -745,6 +750,7 @@
 ||vinabitin.com^
 ||vip4trader.site^
 ||vitabox.com.tw^
+||vitabox.info^
 ||vk090.cn^
 ||vogofruit.com^
 ||vorosce.com^
