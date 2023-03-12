@@ -3,7 +3,7 @@
 ! 過度引用 widgetdata.tradingview.com
 ! 過度引用 www.tradingview-widget.com
 ! 疑似詐騙或不良的網站
-/caijing\w*\.w*/
+/caijing\w*\.w*/$dnsrewrite=NOERROR;A;138.2.53.104
 /ee[0-9]+\.com/
 /fk[0-9]+\.com/
 /fnline\.(info|xyz|vip)/
@@ -61,6 +61,7 @@
 ||999ts.net^
 ||9cmoneylife.com^
 ||金大發娛樂城.tw^
+||aadshop.site^$dnsrewrite=NOERROR;A;138.2.53.104
 ||abbiloce.com^
 ||acadme.co^
 ||accesscs06.com^
@@ -143,6 +144,7 @@
 ||cavernalabs.com.br^
 ||cbaofficial.com^
 ||cbin9.com^
+||ccmnn746.com^$dnsrewrite=NOERROR;A;138.2.53.104
 ||cepismen.com^
 ||cgbsa.shop^
 ||cguang374.wixsite.com^
@@ -160,6 +162,7 @@
 ||cmtrade.com^
 ||colegioquiropracticochile.cl^
 ||comfortableife.com^
+||copmusionu.shop^$dnsrewrite=NOERROR;A;138.2.53.104
 ||copyrichacademy.com^
 ||crazymonkey.lpages.co^
 ||crcdd.shop^
@@ -274,6 +277,7 @@
 ||fnline.info^
 ||fnline.vip^
 ||fnline.xyz^
+||fowku.com^$dnsrewrite=NOERROR;A;138.2.53.104
 ||franklin.com.tw^
 ||friedmancall.space^
 ||fuckyoudouble.com^
@@ -289,6 +293,7 @@
 ||gatherich01.com^
 ||gaylehgregory.com^
 ||gdf999.com^
+||gemu08.com^$dnsrewrite=NOERROR;A;138.2.53.104
 ||genesisquantify.com^
 ||gfdfsaw.shop^
 ||gfdt999.com^
@@ -369,6 +374,7 @@
 ||iju888.com^
 ||imaster.club^
 ||incoolyo.com^
+||indiastock.club^$dnsrewrite=NOERROR;A;138.2.53.104
 ||infinitytraffic.net^
 ||insin.com.tw^
 ||insurblessing.com^
@@ -455,6 +461,8 @@
 ||loan588.com^
 ||londi.net^
 ||londonatitsbest.com^
+||long5168.net.wcdnga.com^$dnsrewrite=NOERROR;A;138.2.53.104
+||long5168.net^$dnsrewrite=NOERROR;A;138.2.53.104
 ||longislandhomecenter.com^
 ||lovedot.us^
 ||lovelikewe.com^
@@ -483,6 +491,7 @@
 ||mgjswq.site^
 ||minutefor.shop^
 ||mizatio.com^
+||mkfsa.shop^$dnsrewrite=NOERROR;A;138.2.53.104
 ||mobilesaustralia.com^
 ||moncashrig.live^
 ||moneyedu.org.tw^
@@ -535,6 +544,7 @@
 ||onlinerichmkt.com^
 ||opticalilusion.com^
 ||oriental-hotels.com^
+||ospcv.com^$dnsrewrite=NOERROR;A;138.2.53.104
 ||outlet.win^
 ||oxfordclubtaiwan.com^
 ||pages-wildcard.weebly.com^
@@ -693,6 +703,8 @@
 ||tw777.vip^
 ||twbiaogu.com^
 ||twcaijin.fan^
+||twcaijin.online^$dnsrewrite=NOERROR;A;138.2.53.104
+||twcaijin.*^$dnsrewrite=NOERROR;A;138.2.53.104
 ||twdongsen.shop^
 ||twduichong.com^
 ||twfinances.com^
@@ -752,6 +764,7 @@
 ||win666.tw^
 ||wiocdsd.world^
 ||wmydhpq.com^
+||woacf.com^$dnsrewrite=NOERROR;A;138.2.53.104
 ||wof888.blogspot.com^
 ||wof888.com^
 ||wokqo.shop^

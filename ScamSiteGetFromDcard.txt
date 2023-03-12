@@ -981,3 +981,5 @@
 ||storekxhsoa.club^$dnsrewrite=NOERROR;A;138.2.53.104
 ! 詐騙投資 https://www.dcard.tw/f/ask/p/241446365
 ||icrown.website^$dnsrewrite=NOERROR;A;138.2.53.104
+! 詐騙投資 https://www.dcard.tw/f/money/p/241454048
+||globalfinancialco.com^$dnsrewrite=NOERROR;A;138.2.53.104
