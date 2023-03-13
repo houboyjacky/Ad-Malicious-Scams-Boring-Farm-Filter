@@ -987,3 +987,11 @@
 ||escapesingle.com^
 ! 詐騙交易所 https://www.dcard.tw/f/anti_fraud/p/241451593
 ||fideltets.com^
+! 詐騙交友 https://www.dcard.tw/f/talk/p/241462643
+||happyllove.com^
+! 詐騙蝦皮 https://www.dcard.tw/f/buyonline/p/241462762
+||shopee.rip^
+||shopeeptwy.com^
+! 仿冒網站 https://www.dcard.tw/f/buyonline/p/241459899
+||tb-tw.com^
+||loewetw.com.tw^
