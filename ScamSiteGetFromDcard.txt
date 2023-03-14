@@ -995,3 +995,5 @@
 ! 仿冒網站 https://www.dcard.tw/f/buyonline/p/241459899
 ||tb-tw.com^
 ||loewetw.com.tw^
+! 詐騙投資 https://www.dcard.tw/f/anti_fraud/p/241475063
+||tw-naga-max.com^
