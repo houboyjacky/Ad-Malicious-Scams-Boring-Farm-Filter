@@ -3,6 +3,7 @@
 /approvedurls[0-9]+.info/
 #||amazonaws.com^
 #||windows.net^
+||45.88.169.3^
 ||5onsup.online^
 ||abfinanceppc.com^
 ||acedeliveryexpress.com^
@@ -33,6 +34,7 @@
 ||bestshoppingpoint.co^
 ||billingupdatesca.live^
 ||birdsmarket.us^
+||bolonies.com^
 ||bourbonwhiskeyforsale.shop^
 ||buypappyvanwinkleonline.com^
 ||buysalestamp.shop^
@@ -47,11 +49,11 @@
 ||connaughtindustries.com^
 ||courire.org^
 ||covidtestingscreening.com^
+||cutt.ly^
 ||dancokersmemek23.online^
 ||ddlnk.net^
 ||dfghghfgghjghighj.synology-ds.de^
 ||dubaitailoring.com^
-||dweb.link^
 ||dweb.link^
 ||eb4.us^
 ||eigbox.net^
@@ -68,16 +70,19 @@
 ||go2affm.com^
 ||hdudo.com^
 ||healknak.nl^
+||hitchingpostsfl.com^
 ||holdorstoorin.store^
 ||ikuxopo.com^
 ||ilenoyo.com^
 ||illyimport.com^
 ||inovatik.com^
+||invoiceoverdues.com^
 ||ipfs.io^
 ||irefuvo.com^
 ||jewelryoutletmall.com^
 ||khsas.com^
 ||kleenkit.com^
+||knoxvillepiano.com^
 ||kodehexa.net^
 ||langsnotaryplus.com^
 ||laticka-cargo.com^
@@ -85,6 +90,7 @@
 ||lightyspatter.com^
 ||lolameraz.com^
 ||mail-ups.com^
+||mailpanion.com^
 ||managelogservupdteid23.us^
 ||margo-logistic.com^
 ||mayshoesstore.com.br^
@@ -94,6 +100,7 @@
 ||mentakstatute.com^
 ||messyypush.com^
 ||minas-cargo.com^
+||missykrueger.com^
 ||moneyzip.co^
 ||mooo.com^
 ||morocccancandles.com^
@@ -118,6 +125,8 @@
 ||paradiseyorkieshome.com^
 ||patternlikeannaunasserted.com^
 ||pemsv30.net^
+||pfizerGroup.be^
+||pfizersgroup.com^
 ||phatdigits.com^
 ||premiuminsuranceassets.com^
 ||primefood.shop^
@@ -161,6 +170,7 @@
 ||uspsontime.com^
 ||uspsstampstorelocal.com^
 ||valeriepepe.com^
+||viewschedule-ups.com^
 ||vortex-cargo.com^
 ||walesgerbils.com^
 ||webmunarohh.com^
