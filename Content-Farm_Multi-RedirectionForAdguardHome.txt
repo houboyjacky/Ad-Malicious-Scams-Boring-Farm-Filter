@@ -1,6 +1,7 @@
 # Description :  Filter for general content farms and Multi Redirection
 # Licence: MIT License
 # Title : Content Farm and Multi-Redirection
+||3x3elitesardinia.it^
 ||4-travel.nl^
 ||9flowex.com^
 ||a-tipico.pt^
@@ -39,12 +40,16 @@
 ||chefuing.co^
 ||chiarasassorestauri.it^
 ||chickencorner.fr^
+||choctaw.it^
 ||clinicadentalmilenio.es^
 ||codertw.com^
 ||coiffeur-luthern.ch^
 ||countryproblemlots.de^
 ||cubicongardens.sk^
+||d-eagle.cfd^
 ||d-evoke.cfd^
+||d-jelly.cfd^
+||d-pause.cfd^
 ||daisycode.ca^
 ||di02.biz^
 ||diamond-bs.de^
@@ -68,7 +73,9 @@
 ||faseood.co^
 ||febeltigg.live^
 ||festadeltortello.it^
+||fin-x.it^
 ||find-topaward-here.life^
+||fine-kosmetik.de^
 ||finop-vvebeheer.nl^
 ||fleuristesymphonieflorale.fr^
 ||flutkueche.de^
@@ -79,12 +86,14 @@
 ||futbolowo.pl^
 ||galacticwraps.at^
 ||gameinfo.io^
+||gidrotech74.ru^
 ||glnge.me^
 ||gojigo.me^
 ||golden-memories.nl^
 ||gordo.lv^
 ||gotokeyword.com^
 ||grande-maison.eu^
+||gravur-ks.de^
 ||hamiltonadviesbv.nl^
 ||hecht-gottlieben.ch^
 ||hemass.me^
@@ -96,6 +105,7 @@
 ||idayle.co^
 ||idormain.trade^
 ||igotojapan.com^
+||ilpaesedeibabaci.it^
 ||index-spa.ro^
 ||insid.fr^
 ||ireviewtw.com^
@@ -126,6 +136,7 @@
 ||ledita.lt^
 ||leuttonpostle.com^
 ||listos-shop.fr^
+||lodos-gmbh.de^
 ||loesham.nl^
 ||logisfrance-architecture.fr^
 ||loremflickr.com^
@@ -134,6 +145,7 @@
 ||lumisan.eu^
 ||magnetyzery3.pl^
 ||malirstvi-nedorostek.cz^
+||mamillu.it^
 ||mantrafund.top^
 ||maxfit.sk^
 ||maximilienzamanski.eu^
@@ -158,6 +170,7 @@
 ||nieuwservaas.nl^
 ||nogentpresence.fr^
 ||nokaut.pl^
+||noleggioplus.it^
 ||notariuszzabrze.eu^
 ||notebz.com^
 ||nuckieg.co^
@@ -166,6 +179,7 @@
 ||ordination-dr-fruehwald.at^
 ||orodjarstvo-birsa.si^
 ||osteopathe-06-marlena.fr^
+||p-electric.it^
 ||paddelstun.de^
 ||pamiecislawka.pl^
 ||parnassen.se^
@@ -205,6 +219,7 @@
 ||ritualinespaslaugos.lt^
 ||rockfitness.cz^
 ||roekhorst.nl^
+||ronellotoplastiken.de^
 ||rosies-thun.ch^
 ||rshs2019.ru^
 ||ru.com^
@@ -223,11 +238,14 @@
 ||shusuien.co^
 ||sicedu.org.uk^
 ||signorinacucinagolosa.it^
+||sitecltd.ru^
+||smart-city.fi^
 ||smb-konkret.ch^
 ||sparkrestaurant.cz^
 ||steundester.nl^
 ||strefa-ubran.pl^
 ||stroawp.co^
+||studiodimedicinanaturale.it^
 ||style77.shop^
 ||suomenkonekauppa.fi^
 ||superm.cl^
@@ -248,19 +266,24 @@
 ||trinley-glaskunst.at^
 ||turmair-berufsinformation.de^
 ||underona.me^
+||unhair.it^
 ||unimakslinieki.lv^
 ||uonika.co^
 ||uzribisirko.lt^
 ||valilnica.si^
 ||varvarovka08.ru^
 ||villiger-feuerschutz.ch^
+||vipohotaural.ru^
 ||wakompserwis.pl^
 ||wdba.org.uk^
 ||werkstatt-galerie.ch^
+||whim.ru^
 ||widecassina.it^
 ||wjbk.site^
 ||woneninklavertuin.nl^
 ||wowpiemain.live^
 ||xn--28-6kcaibtab1im.xn--p1ai^
+||xn--80aaebnvkb5ajldfb2a0m.xn--p1ai^
+||xn--e1akieng6a.xn--p1ai^
 ||zahranaserii.ir^
 ||zoomzoom-fotografie.de^
