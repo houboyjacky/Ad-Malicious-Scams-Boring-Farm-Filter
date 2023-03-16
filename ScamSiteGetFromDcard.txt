@@ -1013,3 +1013,5 @@
 ||dlszyht.net.cn^
 ! 詐騙工作 https://www.dcard.tw/f/anti_fraud/p/241496471
 ||ghwatop.com^
+! 詐騙投資 https://www.dcard.tw/f/anti_fraud/p/241498038
+||coinivts.com^
