@@ -1011,3 +1011,5 @@
 ||yyyssss.com^
 ||chplayer.com^
 ||dlszyht.net.cn^
+! 詐騙工作 https://www.dcard.tw/f/anti_fraud/p/241496471
+||ghwatop.com^

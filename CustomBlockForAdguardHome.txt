@@ -457,6 +457,7 @@
 ||kl-latestproperty.com^
 ||kl-luxury-properties.com^
 ||kmbangtw.com^
+||kmwmq.asia^
 ||kngoa.online^
 ||ko.gl^
 ||ko1788.com^
@@ -626,6 +627,8 @@
 ||rdshdnw.online^
 ||realgame.ink^
 ||rebuildemporium.online^
+||rehrnq.asia^
+||rexc.shop^
 ||rggo5269.com^
 ||rgis-asset-inventory.com^
 ||rich01.com.tw^
