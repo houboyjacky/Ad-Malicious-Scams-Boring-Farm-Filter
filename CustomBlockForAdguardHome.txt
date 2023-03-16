@@ -3,6 +3,7 @@
 ! 過度引用 widgetdata.tradingview.com
 ! 過度引用 www.tradingview-widget.com
 ! 疑似詐騙或不良的網站
+/1396[a-z]\.com/
 /caijing\w*\.w*/
 /ee[0-9]+\.com/
 /fk[0-9]+\.com/
@@ -20,12 +21,14 @@
 ||0857online.net
 ||10goneviral.com^
 ||11ks.xyz^
+||1396e.com^
 ||1396r.com^
 ||1711hy.com^
 ||1768hi.com^
 ||17funmoney.com^
 ||17tradingroom.ck.page^
 ||17tradingroom.com^
+||1af8ezx.asia^
 ||2013unique.com.tw^
 ||2022wangcai.com^
 ||2447hthty.com^
@@ -118,6 +121,7 @@
 ||bitby01.com^
 ||bitly.ws^
 ||biury.space^
+||bkd88.net^
 ||blendedsearch.com^
 ||blenderelements.com^
 ||blogdodge.shop^
@@ -228,9 +232,11 @@
 ||duafull.com^
 ||dutils.com^
 ||dwng.asia^
+||dwqvhf.asia^
 ||dxfguyer.life^
 ||dy228.net^
 ||easywebinar.live^
+||eaupoch.cn^
 ||ecomironman.com^
 ||edition-eltern.com^
 ||editmysite.com^
@@ -308,6 +314,7 @@
 ||fun2chatx.xyz^
 ||futra.football^
 ||futurescall.space^
+||fwger.asia^
 ||fxcabat.com^
 ||fxtraderacademy.com^
 ||ga888.tw^
@@ -481,6 +488,7 @@
 ||lihi1.com^
 ||lihi1.me^
 ||limcunrs.shop^
+||limingdadi.website^
 ||lindayang725.com^
 ||linghittw.com^
 ||lingwh.com^
@@ -560,10 +568,12 @@
 ||nkyyds.com^
 ||nmbbhaz.shop^
 ||nmiang.online^
+||nngg.asia^
 ||noahpb.club^
 ||nslfs.shop^
 ||nstock.tw^
 ||nutribio-expert.fr^
+||nwths.shop^
 ||obtlebor.com^
 ||odesrn.com^
 ||odfmny.xyz^
@@ -591,6 +601,7 @@
 ||pcgws.com^
 ||pdpdsum.com^
 ||pentobarbitalgroup.com^
+||phdcxt.com^
 ||phv955.net.wnacloud.com^
 ||phv955.net^
 ||pioni.live^
@@ -779,6 +790,7 @@
 ||usagoodsale.com^
 ||user132794.psee.io^
 ||utube.tw^
+||uxcia.com^
 ||v0985004622.com^
 ||vblorvd.shop^
 ||vekwq.asia^
@@ -865,6 +877,7 @@
 ||yukai.ceo^
 ||yuyanwz.com^
 ||yydsy.shop^
+||yz8899.com.tw^
 ||zabeeo.com^
 ||zasdasd.club^
 ||zdhwe.asia^
