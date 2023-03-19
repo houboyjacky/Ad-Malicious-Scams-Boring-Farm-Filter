@@ -1018,3 +1018,12 @@
 ! 詐騙購物網站 https://www.dcard.tw/f/buyonline/p/241500272
 ||scctg.com^
 ||worldball.app^
+! 詐騙投資 https://www.dcard.tw/f/anti_fraud/p/241511941
+||dgtokenna.com^
+||cbn-tw.cc^
+||sxigamess.com^
+||bitsther.com^
+! 詐騙購物 https://www.dcard.tw/f/anti_fraud/p/241506838
+||shopeetw.net.cn^
+! summer_hiphop提供
+||knejg.shop^
