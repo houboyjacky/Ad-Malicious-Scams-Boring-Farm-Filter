@@ -338,6 +338,7 @@
 ||gaoshentouzi.shop^
 ||gatherich01.com^
 ||gaylehgregory.com^
+||gdd.tw^
 ||gdf999.com^
 ||gdfb.shop^
 ||gemu08.com^
@@ -565,6 +566,7 @@
 ||momawe.xyz^
 ||moncashrig.live^
 ||moneyedu.org.tw^
+||moosheng.com^
 ||mpg1668.com^
 ||mpg168.com^
 ||mrceo.online^
@@ -574,6 +576,7 @@
 ||mw1688.net^
 ||mwbangtw.com^
 ||mwbdsb.com^
+||mwbscjdsb.com^
 ||my5353.com^
 ||mycard520.com.tw^
 ||myfee.site^
@@ -623,6 +626,7 @@
 ||opticalilusion.com^
 ||oriental-hotels.com^
 ||ospcv.com^
+||ouetd.shop^
 ||outlet.win^
 ||oxfordclubtaiwan.com^
 ||pages-wildcard.weebly.com^
@@ -638,6 +642,7 @@
 ||piu11.com^
 ||pl^$denyallow=org.pl|edu.pl|com.pl|gov.pl
 ||pory.app^
+||ppcc.fyi^
 ||ppiiipp.com^
 ||ppooc.shop^
 ||pprroductiveprroggram.shop^
@@ -682,6 +687,7 @@
 ||richslash.com^
 ||rjnnbaw.vip^
 ||rm16888.com^
+||rose2011kt.taplink.ws^
 ||royalgaming777.com^
 ||ruihejade.com^
 ||rzidj9.cc^
@@ -709,6 +715,7 @@
 ||shopline.tw^
 ||shopppkaojggdfg.store^
 ||shortof.com^
+||shtyw.shop^
 ||shufabu6000.com^
 ||simonhouse.com.tw^
 ||sin624922.wixsite.com^
@@ -718,6 +725,7 @@
 ||so1299.com^
 ||so196.com^
 ||sobileis.com^
+||sojguy.xyz^
 ||sp5168.com^
 ||spk3296.com^
 ||sporting7.com^
@@ -771,6 +779,7 @@
 ||thejamestrades.com^
 ||thevisualisation.fr^
 ||thinkmediakaik.vip^
+||tianxi-i.online^
 ||tickmill.com^
 ||tickmill.online^
 ||tioelimcee.shop^
@@ -828,6 +837,7 @@
 ||ufrsa.shop^
 ||uhongm.site^
 ||ukwwx.com^
+||uncleforex.pro^
 ||uradni.shop^
 ||usagoodsale.com^
 ||user132794.psee.io^

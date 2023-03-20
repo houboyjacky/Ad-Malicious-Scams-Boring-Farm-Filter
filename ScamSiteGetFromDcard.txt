@@ -1046,3 +1046,9 @@
 ||storeinppahu.store^
 ! summer_hiphop提供
 ||mwb-parcel.com^
+! 詐騙交易所 https://www.dcard.tw/f/money/p/241536740
+||wbmpzg.com^
+||okxapp88.com^
+||508665.com^
+#中國官方對話網站
+||live7000.com^
