@@ -1039,3 +1039,6 @@
 ||shentaig.com^
 ! 詐騙購物 https://www.dcard.tw/f/anti_fraud/p/241209785
 ||gbayshop.store^
+! 詐騙購物 https://www.dcard.tw/f/anti_fraud/p/241533642
+||711-tw-com.store^
+||shopee-1tw.xyz^
