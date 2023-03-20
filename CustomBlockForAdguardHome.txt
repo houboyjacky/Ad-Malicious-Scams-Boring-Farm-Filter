@@ -323,6 +323,7 @@
 ||franklin.com.tw^
 ||friedmancall.space^
 ||fuckyoudouble.com^
+||fuilco.shop^
 ||fuilsi.shop^
 ||fun2chatx.xyz^
 ||futra.football^
@@ -441,6 +442,7 @@
 ||it^$denyallow=org.it|edu.it|com.it|gov.it
 ||ivenor.tw^
 ||ivideo247.com^
+||iwmqa.asia^
 ||izito.com.tw^
 ||jackchangcrypto.com^
 ||jackpresident.com.tw^
@@ -668,6 +670,7 @@
 ||realgame.ink^
 ||rebuildemporium.online^
 ||rehrnq.asia^
+||relocationn.shop^
 ||rexc.shop^
 ||rggo5269.com^
 ||rgis-asset-inventory.com^
@@ -809,6 +812,7 @@
 ||twlicai.shop^
 ||twokx.com^
 ||twruten1688.cn^
+||twshares.com^
 ||twstock.cc^
 ||twstock.tv^
 ||twstock1688.xyz^
