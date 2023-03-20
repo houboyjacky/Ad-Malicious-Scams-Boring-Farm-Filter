@@ -319,6 +319,7 @@
 ||fnline.info^
 ||fnline.vip^
 ||fnline.xyz^
+||fongir.shop^
 ||fowku.com^
 ||franklin.com.tw^
 ||friedmancall.space^
@@ -688,6 +689,7 @@
 ||s9asia.com^
 ||safefunhere.me^
 ||sakfkw323455.com^
+||samconsultant.online^
 ||sanlinew.com^
 ||saulcommerce.online^
 ||scaleonlinecourse.com^
@@ -912,9 +914,11 @@
 ||youlove2chat.com^
 ||younit6.com^
 ||yqsfss.shop^
+||yscas.com^
 ||ytjnsn8379030.com^
 ||ytstock.shop^
 ||yturie.asia^
+||yuan-ta.com^
 ||yuewq.asia^
 ||yukai.ceo^
 ||yuyanwz.com^

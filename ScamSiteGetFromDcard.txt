@@ -1042,3 +1042,7 @@
 ! 詐騙購物 https://www.dcard.tw/f/anti_fraud/p/241533642
 ||711-tw-com.store^
 ||shopee-1tw.xyz^
+! 詐騙消費 https://www.dcard.tw/f/buyonline/p/241534757
+||storeinppahu.store^
+! summer_hiphop提供
+||mwb-parcel.com^
