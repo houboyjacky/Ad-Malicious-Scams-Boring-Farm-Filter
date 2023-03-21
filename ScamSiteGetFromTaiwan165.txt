@@ -1,6 +1,7 @@
 ! 民眾通報假投資(博弈)詐騙網站 https://165.npa.gov.tw
 @@||bittrex.com^$important
 @@||fpmarkets.com^$important
+@@||pingshangyang.webnode.tw^$important
 /17[-]?play[a-z0-9]*\.com/
 /17shop[a-z0-9]*\.com/
 /24pchome[a-z0-9]*\.com/
