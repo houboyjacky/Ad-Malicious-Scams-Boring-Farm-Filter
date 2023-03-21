@@ -14,6 +14,7 @@
 /taiwan-[a-z]+\.(com|tw)/
 /www-?post-?gov-?tw\.sytes\.net/
 #||fontawesomes.com^
+#||pages-wildcard.weebly.com^
 #||phicdn.net^
 ||*.cyou^
 ||*.ml^
@@ -33,6 +34,8 @@
 ||2022wangcai.com^
 ||2447hthty.com^
 ||277sy.com^
+||301-66cdn.com^
+||301-cdn.net^
 ||344k.com^
 ||35bio.com.tw^
 ||3699wan.com^
@@ -90,6 +93,7 @@
 ||allyouwant666.com^
 ||alphaloan.co^
 ||alvinb.club^
+||amp.dev^
 ||andriodforums.com^
 ||anstableu.com^
 ||aq47.net^
@@ -125,6 +129,7 @@
 ||bitby01.com^
 ||bitly.ws^
 ||biury.space^
+||bjdljkrjeur39591.com^
 ||bkd88.net^
 ||blendedsearch.com^
 ||blenderelements.com^
@@ -186,10 +191,12 @@
 ||clevelandmusicians.com^
 ||clickfunnels.com^
 ||cmtrade.com^
+||coise.shop^
 ||colegioquiropracticochile.cl^
 ||comfortableife.com^
 ||copmusionu.shop^
 ||copyrichacademy.com^
+||countercurrent01.com^
 ||crazymonkey.lpages.co^
 ||crcdd.shop^
 ||csogmes168.com^
@@ -214,6 +221,7 @@
 ||deadlinefunnel.com^
 ||deborahto.club^
 ||dennis-888.com^
+||determination1.com^
 ||devilkittgo.com^
 ||deviltoolee.com^
 ||dewudewu.com^
@@ -237,9 +245,11 @@
 ||drich.online^
 ||drich01.com^
 ||dsheres.com^
+||dsmczl.com^
 ||dsports-rg.com^
 ||duafull.com^
 ||dutils.com^
+||duyel.shop^
 ||dwng.asia^
 ||dwqvhf.asia^
 ||dxfguyer.life^
@@ -264,7 +274,9 @@
 ||ekcuci4.net^
 ||ekcuci4.org^
 ||ekmsjqka.shop^
+||elga.buzz^
 ||elijahyundt.wixsite.com^
+||elroy.buzz^
 ||embalagensupbox.com.br^
 ||emeritus.org.cn^
 ||emmad.club^
@@ -319,6 +331,7 @@
 ||fnline.info^
 ||fnline.vip^
 ||fnline.xyz^
+||fohnsn.shop^
 ||fongir.shop^
 ||fowku.com^
 ||franklin.com.tw^
@@ -335,6 +348,7 @@
 ||ga888.tw^
 ||gabrielea.club^
 ||gamebatinfo.com^
+||gamebook.com.tw^
 ||gaoshentouzi.shop^
 ||gatherich01.com^
 ||gaylehgregory.com^
@@ -350,6 +364,7 @@
 ||ggseo7.com^
 ||ggthxptw.com^
 ||giikin.com^
+||gioesp.shop^
 ||gm1888.net^
 ||gnfdc.shop^
 ||godmiracle.com.tw^
@@ -464,6 +479,7 @@
 ||jm17888.com^
 ||jnqkzsh.cn^
 ||joy.link^
+||jsayy666.com^
 ||jtimetrader.com^
 ||ju-77.net^
 ||judihero.co^
@@ -472,10 +488,12 @@
 ||jun587.com^
 ||jv-photos.com^
 ||kaik.network^
+||kaiping.app^
 ||kanda-stock.com^
 ||kangstock.com^
 ||kasumigaseki.com.tw^
 ||katrina2929.wixsite.com^
+||kbb.tw^
 ||kelbyone.lt.acemlnb.com^
 ||kevfutur.online^
 ||kevinevents.com^
@@ -494,6 +512,8 @@
 ||ko.gl^
 ||ko1788.com^
 ||kopitiv.com^
+||kp-apk.com^
+||kpty008.com^
 ||krtra.com^
 ||ktstack.com^
 ||kwrsc.com^
@@ -543,6 +563,7 @@
 ||lyqdsb.com^
 ||lzpfc.shop^
 ||lzpnb.shop^
+||magicvibe.shop^
 ||makemoresalesonlinechallenge.com^
 ||marketdatasystems.com^
 ||maroc1001nuits.com^
@@ -629,12 +650,12 @@
 ||ouetd.shop^
 ||outlet.win^
 ||oxfordclubtaiwan.com^
-||pages-wildcard.weebly.com^
 ||paktormeet.com^
 ||pcgws.com^
 ||pdpdsum.com^
 ||penetration1.com^
 ||pentobarbitalgroup.com^
+||percy.buzz^
 ||phdcxt.com^
 ||phv955.net.wnacloud.com^
 ||phv955.net^
@@ -725,7 +746,6 @@
 ||so1299.com^
 ||so196.com^
 ||sobileis.com^
-||sojguy.xyz^
 ||sp5168.com^
 ||spk3296.com^
 ||sporting7.com^
@@ -799,11 +819,14 @@
 ||trafficmediia.net^
 ||trpcdn.net^
 ||trxcitymalaysia.com^
+||ts-778.com^
 ||ts178.com.tw^
+||ts7771.com^
 ||ts7777.com.tw^
 ||tsi.st^
 ||turborstock.com^
 ||turich888.com^
+||tw-gupiao.shop^
 ||tw-gushi.shop^
 ||tw-news.shop^
 ||tw-stocks.com^
@@ -820,7 +843,9 @@
 ||twfinances.com^
 ||twgpzx.com^
 ||twgushi.shop^
+||twjingrong.online^
 ||twlicai.shop^
+||twmacd.com^
 ||twokx.com^
 ||twruten1688.cn^
 ||twshares.com^
@@ -856,6 +881,7 @@
 ||vitabox.com.tw^
 ||vitabox.info^
 ||vk090.cn^
+||vnskkw154329.com^
 ||vogofruit.com^
 ||vorosce.com^
 ||vowepcd.club^
@@ -863,6 +889,8 @@
 ||vszxm.com^
 ||vuhnvf.bond^
 ||vvcsgd.asia^
+||vxbdjhs37543.com^
+||wa55.net^
 ||walterj.club^
 ||warmthhh.online^
 ||warroombriefing.lt.acemlnb.com^
