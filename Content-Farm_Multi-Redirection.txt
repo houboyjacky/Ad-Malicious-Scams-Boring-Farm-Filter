@@ -1,15 +1,21 @@
 # Description :  Filter for general content farms and Multi Redirection
 # Licence: MIT License
 # Title : Content Farm and Multi-Redirection
+043verzekeren.nl
+212.86.109.185
 3x3elitesardinia.it
 4-travel.nl
+5.135.121.49
+82.117.255.64
 9flowex.com
 a-tipico.pt
 abo24.it
 aikiingenieria.cl
+aktywnirodzice.eu
 alamtor.co
 alleventsnews.com
 almacensolidario.cl
+alventmarket.es
 anishinaabe.ch
 anrevika.lt
 antibot.cloud
@@ -20,6 +26,7 @@ arla-com.eu
 ateliersdudragon.fr
 atsit.in
 attosconsultoria.com.br
+autowitzory.pl
 axel-chevre.fr
 balance4you.ch
 bastaujana.cz
@@ -33,15 +40,20 @@ boblo.eu
 book4kids.ru
 bpnhklcgf.sa.com
 bremancitywallcross.nl
+buckhorninn.com
 ca-pontois.fr
 camracub.me
+carniceriapascual.es
+casamora.net
 celebritygolfclub.de
 centurionbusiness.it
 chb-creations.fr
 chefuing.co
+chiaraceschini.it
 chiarasassorestauri.it
 chickencorner.fr
 choctaw.it
+cinesium.fr
 clinicadentalmilenio.es
 codertw.com
 coiffeur-luthern.ch
@@ -84,10 +96,12 @@ formbreeze.com
 fortalsa.co
 fqap.lodos-gmbh.de
 freejobalerts24.com
+fubaca.de
 fuehrenplus.de
 futbolowo.pl
 galacticwraps.at
 gameinfo.io
+geliusiena.lt
 gidrotech74.ru
 glnge.me
 gojigo.me
@@ -96,6 +110,7 @@ gordo.lv
 gotokeyword.com
 grande-maison.eu
 gravur-ks.de
+haftkon.pl
 hamiltonadviesbv.nl
 hecht-gottlieben.ch
 hemass.me
@@ -109,10 +124,13 @@ idormain.trade
 igotojapan.com
 ilpaesedeibabaci.it
 index-spa.ro
+insat.ru
 insid.fr
 ireviewtw.com
+irgroup.it
 isabel-lopez-kubben.at
 ishkuru.co
+itconcepte.de
 iwiki.tw
 janjarolim.cz
 januaryprivilege.me
@@ -134,9 +152,12 @@ kotivuokraus.fi
 kuosmasenpojat.fi
 la-primavera-lieferdienst.de
 langtrans.cz
+laserlands.fr
 laudinie-fleurac.fr
 ledita.lt
 leuttonpostle.com
+liberix.es
+link-usa.jp
 listos-shop.fr
 loesham.nl
 logisfrance-architecture.fr
@@ -169,6 +190,7 @@ namtoo.co
 nav4all.de
 neonlux.cz
 nieuwservaas.nl
+nikke-tennis.jp
 nogentpresence.fr
 nokaut.pl
 noleggioplus.it
@@ -190,10 +212,12 @@ pipesurfshop.it
 pitopalvelumatilda.fi
 placestostay.im
 platformduurzaamfryslan.nl
+plexat-forum.nl
 porscheclubtirol.at
 portalnew.pp.ua
 pqnn.cc
 prestigelublin.eu
+primariabrezoaele.ro
 prizesense.life
 prizesenses.life
 project-iwts20.eu
@@ -242,7 +266,9 @@ signorinacucinagolosa.it
 sitecltd.ru
 smart-city.fi
 smb-konkret.ch
+solinotes.sk
 sparkrestaurant.cz
+start-deutsch-a1.ru
 steundester.nl
 strefa-ubran.pl
 stroawp.co
@@ -251,6 +277,7 @@ style77.shop
 suomenkonekauppa.fi
 superm.cl
 sussexcinemahire.co.uk
+swiat-pomyslow.pl
 t-lock.se
 tablaturezaharmoniko.si
 teamservice-assistenza.it
@@ -265,6 +292,7 @@ topawardhere.life
 toutiao.com
 trampolinfm.cl
 trinley-glaskunst.at
+turboannunci.it
 turmair-berufsinformation.de
 twvpnegsa.sa.com
 underona.me
@@ -278,6 +306,7 @@ villiger-feuerschutz.ch
 vipohotaural.ru
 wakompserwis.pl
 wdba.org.uk
+werbegemeinschaft-emlichheim.de
 werkstatt-galerie.ch
 whim.ru
 widecassina.it
