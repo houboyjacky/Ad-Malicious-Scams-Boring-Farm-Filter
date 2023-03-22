@@ -2,6 +2,7 @@
 # Licence: MIT License
 # Title : Content Farm and Multi-Redirection
 ||043verzekeren.nl^
+||192.241.159.168^
 ||212.86.109.185.^
 ||3x3elitesardinia.it^
 ||4-travel.nl^
@@ -150,6 +151,7 @@
 ||kuosmasenpojat.fi^
 ||la-primavera-lieferdienst.de^
 ||langtrans.cz^
+||laotiantimes.com^
 ||laserlands.fr^
 ||laudinie-fleurac.fr^
 ||ledita.lt^
@@ -284,6 +286,7 @@
 ||tetedail.fr^
 ||thamstore.nl^
 ||the-best-prizes.life^
+||theonering.net^
 ||thuisbijmau.nl^
 ||tiktokfinder.shop^
 ||todohealth.com^

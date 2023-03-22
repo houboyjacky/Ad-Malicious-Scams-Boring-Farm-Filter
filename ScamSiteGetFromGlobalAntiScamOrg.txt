@@ -32,6 +32,7 @@
 #||accupass.com^
 #||aliyuncs.com^
 #||apple.com^
+#||bitfinex.com^
 #||cloudfront.net^
 #||digitalocean.com^
 #||easy.co^
@@ -3809,7 +3810,6 @@
 ||bitfinex-defipro.com^
 ||bitfinex-defipromax.com^
 ||bitfinex-giveway.com^
-||bitfinex.com^
 ||bitfinex888.com^
 ||bitfinex963.com^
 ||bitfinex99.xyz^

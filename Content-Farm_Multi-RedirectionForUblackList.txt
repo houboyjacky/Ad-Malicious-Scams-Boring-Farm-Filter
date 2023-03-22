@@ -147,6 +147,7 @@
 *://*.kuosmasenpojat.fi/*
 *://*.la-primavera-lieferdienst.de/*
 *://*.langtrans.cz/*
+*://*.laotiantimes.com/*
 *://*.laserlands.fr/*
 *://*.laudinie-fleurac.fr/*
 *://*.ledita.lt/*
@@ -281,6 +282,7 @@
 *://*.tetedail.fr/*
 *://*.thamstore.nl/*
 *://*.the-best-prizes.life/*
+*://*.theonering.net/*
 *://*.thuisbijmau.nl/*
 *://*.tiktokfinder.shop/*
 *://*.todohealth.com/*
@@ -313,6 +315,7 @@
 *://*.xn--e1akieng6a.xn--p1ai/*
 *://*.zahranaserii.ir/*
 *://*.zoomzoom-fotografie.de/*
+*://192.241.159.168/*
 *://212.86.109.185./*
 *://5.135.121.49./*
 *://82.117.255.64./*
