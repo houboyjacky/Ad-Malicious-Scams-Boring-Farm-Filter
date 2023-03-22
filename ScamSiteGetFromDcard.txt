@@ -1210,3 +1210,5 @@
 ||vsdtd.com^
 ||xetraerz.com^
 ||xtexchangepro.com^
+! 詐騙郵局 https://www.dcard.tw/f/buyonline/p/241552101
+||eithar.com^
