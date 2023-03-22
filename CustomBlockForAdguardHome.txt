@@ -93,6 +93,7 @@
 ||allyouwant666.com^
 ||alphaloan.co^
 ||alvinb.club^
+||amazon24.vip^
 ||amp.dev^
 ||andriodforums.com^
 ||anstableu.com^
@@ -323,6 +324,7 @@
 ||feyku.com^
 ||ffffgame.com^
 ||fidelaets.com^
+||fideltets.com^
 ||firr-store.com^
 ||firstrade.com^
 ||fixekea.live^
@@ -338,6 +340,7 @@
 ||fowku.com^
 ||franklin.com.tw^
 ||friedmancall.space^
+||ftprintedition.com^
 ||fuckyoudouble.com^
 ||fuguangshop.live^
 ||fuilco.shop^
@@ -462,6 +465,7 @@
 ||isgdanismanligi.com.tr^
 ||isnotdomain440059159.com^
 ||it^$denyallow=org.it|edu.it|com.it|gov.it
+||iubsex.com^
 ||ivenor.tw^
 ||ivideo247.com^
 ||iwmqa.asia^
@@ -692,6 +696,7 @@
 ||qjea68f.com^
 ||qlchat.com^
 ||qmfm.net^
+||qoo9888.com^
 ||qstarlife.com^
 ||qtaiguzixun.com^
 ||qxmaqs.bond^
@@ -890,6 +895,7 @@
 ||vicollege.cc^
 ||vicollege.com.tw^
 ||vinabitin.com^
+||vip-treasury.com^
 ||vip4trader.site^
 ||vitabox.com.tw^
 ||vitabox.info^
@@ -922,6 +928,7 @@
 ||weshare.org^
 ||wfamilygo.com^
 ||wfyweb.com^
+||wholesaler-mail.com^
 ||widgetdata.tradingview.com^
 ||widoh.shop^
 ||win666.tw^
