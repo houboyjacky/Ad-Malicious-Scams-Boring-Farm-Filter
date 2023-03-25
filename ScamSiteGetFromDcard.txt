@@ -1251,3 +1251,9 @@
 ||xcnkjs.shop^
 ! 詐騙回報
 ||zwheqjrkjhr.com^
+||tradfiged.com^
+! 詐騙投資 https://www.dcard.tw/f/anti_fraud/p/241573555
+||dsheres.com^
+! 詐騙電信 https://www.dcard.tw/f/anti_fraud/p/241573259
+||qew-tw.com^
+||webstage7a.smartone.com^
