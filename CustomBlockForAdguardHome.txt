@@ -10,6 +10,7 @@
 /fnline\.(info|xyz|vip)/
 /gdf999.[a-z]+/
 /isnotdomain[0-9]+\.com/
+/long[0-9]\.net/
 /so[0-9]+\.com/
 /taiwan-[a-z]+\.(com|tw)/
 /www-?post-?gov-?tw\.sytes\.net/
@@ -446,6 +447,7 @@
 ||hsin168.com^
 ||hskdsne424837.com^
 ||htxfinance.com^
+||huatai888.vip^
 ||huaxiu4.com^
 ||hublaud.com^
 ||humanflies.xyz^
@@ -459,6 +461,7 @@
 ||i3course.de^
 ||iamjackiechou.com^
 ||icreatecourse.com^
+||icrmsynquote.com^
 ||ictngsmnspcltdy.com^
 ||ig.com^
 ||iiil.io^
@@ -477,7 +480,7 @@
 ||ironfanmarketing.com^
 ||isgdanismanligi.com.tr^
 ||isnotdomain440059159.com^
-||it^$denyallow=org.it|edu.it|com.it|gov.it
+||it^$denyallow=org.it|edu.it|com.it|gov.it|mitm.it
 ||iubsex.com^
 ||ivenor.tw^
 ||ivideo247.com^
@@ -575,6 +578,7 @@
 ||londonatitsbest.com^
 ||long5168.net.wcdnga.com^
 ||long5168.net^
+||long5688.net^
 ||longislandhomecenter.com^
 ||looiioiquwe.shop^
 ||lotbud.shop^
@@ -604,6 +608,7 @@
 ||meta-academy.biz^
 ||metal52539.com^
 ||metal539.com^
+||metaquote.site^
 ||mgjswq.site^
 ||mikecrm.com^
 ||minutefor.shop^
@@ -640,6 +645,7 @@
 ||nellyreyrey.com^
 ||newsoftwarereview.com^
 ||nhscf2x.xyz^
+||niagara23456.com^
 ||nianfall.com^
 ||niushowstocks.com^
 ||nj23.com.tw^
@@ -807,6 +813,7 @@
 ||susanacarpintero.com^
 ||suucceessfultrruust.shop^
 ||swissquote.com^
+||synquotestrader.com^
 ||syycy.shop^
 ||szexma.com^
 ||szzhimu.com^
@@ -998,6 +1005,7 @@
 ||youdp.shop^
 ||youlove2chat.com^
 ||younit6.com^
+||yp298.vip^
 ||yqsfss.shop^
 ||yscas.com^
 ||ytjnsn8379030.com^

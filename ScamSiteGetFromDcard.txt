@@ -1257,3 +1257,10 @@
 ! 詐騙電信 https://www.dcard.tw/f/anti_fraud/p/241573259
 ||qew-tw.com^
 ||webstage7a.smartone.com^
+! 詐騙客服 https://www.dcard.tw/f/financial/p/241579357
+||uenk.cc^
+! 詐騙costco https://www.dcard.tw/f/anti_fraud/p/241579299
+||costcosshopping.com^
+||shopppcosco.com^
+! 詐騙賭博 https://www.dcard.tw/f/talk/p/241584955
+||zhunshu89.com^
