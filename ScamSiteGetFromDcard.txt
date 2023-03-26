@@ -1264,3 +1264,7 @@
 ||shopppcosco.com^
 ! 詐騙賭博 https://www.dcard.tw/f/talk/p/241584955
 ||zhunshu89.com^
+! 詐騙購物 https://www.dcard.tw/f/buyonline/p/241590749
+||ujho.club^
+! 簡訊詐騙 https://www.dcard.tw/f/anti_fraud/p/241588466
+||poch-tw.cn^
