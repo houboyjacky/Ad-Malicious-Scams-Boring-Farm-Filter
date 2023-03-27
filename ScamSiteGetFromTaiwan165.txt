@@ -99,6 +99,7 @@
 /yulonfo[a-z0-9]*\.com/
 /yundin[a-z0-9]*\.com/
 #||cdn77.org^
+#||fx110.com^
 #||weebly.com^
 ||0204net.com^
 ||0x5.me^
@@ -759,7 +760,6 @@
 ||fuya2008.com^
 ||fuyingholdings.co^
 ||fx-glenber.com^
-||fx110.com^
 ||fxathenafx.com^
 ||fxbdg.com^
 ||fxbellemont.com^

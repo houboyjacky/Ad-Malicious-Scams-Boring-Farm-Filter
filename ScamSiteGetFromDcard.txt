@@ -1269,3 +1269,7 @@
 ! 簡訊詐騙 https://www.dcard.tw/f/anti_fraud/p/241588466
 ||poch-tw.cn^
 ||fetnxet.com^
+! 詐騙工作 https://www.dcard.tw/f/ask/p/241599834
+||asia-energyltdss.com^
+! 詐騙購物
+||myfelt.site^

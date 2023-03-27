@@ -36,6 +36,7 @@
 #||cloudfront.net^
 #||digitalocean.com^
 #||easy.co^
+#||fx110.com.tw^
 #||github.io^
 #||google.com^
 #||lin.ee^
@@ -12679,7 +12680,6 @@
 ||fx-wing.com^
 ||fx-ws.com^
 ||fx-yongying.com^
-||fx110.com.tw^
 ||fx168.com^
 ||fx247traders.net^
 ||fx2minforest.site^
