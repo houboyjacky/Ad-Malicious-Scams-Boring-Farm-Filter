@@ -63,6 +63,7 @@
 *://*.clinicadentalmilenio.es/*
 *://*.codertw.com/*
 *://*.coiffeur-luthern.ch/*
+*://*.congresomedicosjubilados-sevilla2022.es/*
 *://*.countryproblemlots.de/*
 *://*.croceverdefaggiano.it/*
 *://*.cubicongardens.sk/*
