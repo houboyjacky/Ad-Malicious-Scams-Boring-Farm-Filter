@@ -89,7 +89,9 @@
 ||affutures.com^
 ||agfafaffaue.com^
 ||aggef.shop^
+||ahc.ink^
 ||aibiaogu.com^
+||aihecong.com^
 ||alexsignals.space^
 ||algopro.us^
 ||algotrading-mcpy.thinkific.com^
@@ -231,6 +233,7 @@
 ||dasqf.asia^
 ||datesrud.com^
 ||dayone1.live^
+||dbgmarkets.co^
 ||deadlinefunnel.com^
 ||deborahto.club^
 ||dennis-888.com^
