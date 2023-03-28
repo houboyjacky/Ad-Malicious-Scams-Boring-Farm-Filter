@@ -72,6 +72,7 @@
 *://*.d-jelly.cfd/*
 *://*.d-pause.cfd/*
 *://*.d-tiger.cfd/*
+*://*.dachrinnen-service.eu/*
 *://*.daisycode.ca/*
 *://*.di02.biz/*
 *://*.diamond-bs.de/*
