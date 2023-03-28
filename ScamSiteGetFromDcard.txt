@@ -971,6 +971,8 @@
 ||ghwatop.com^
 ! 詐騙投資 https://www.dcard.tw/f/anti_fraud/p/241498038
 ||coinivts.com^
+||ivstcoin.com^
+||coindigt.com^
 ! 詐騙購物網站 https://www.dcard.tw/f/buyonline/p/241500272
 ||scctg.com^
 ||worldball.app^
@@ -1230,3 +1232,7 @@
 ||asia-energyltdss.com^
 ! 詐騙購物
 ||myfelt.site^
+! 群友提供
+||bailiant.xyz^
+||xudkshop.com^
+||progynn.com^
