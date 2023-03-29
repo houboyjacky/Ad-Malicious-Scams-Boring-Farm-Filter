@@ -4,6 +4,7 @@
 ! 過度引用 www.tradingview-widget.com
 ! 疑似詐騙或不良的網站
 /1396[a-z]\.com/
+/b9b[a-z0-9]+\.cc/
 /caijing\w*\.w*/
 /ee[0-9]+\.com/
 /fk[0-9]+\.com/
@@ -119,6 +120,7 @@
 ||b1win.godaddysites.com^
 ||b8e63d.com^
 ||b9bb.cc^
+||b9be.cc^
 ||ba1dwinadvisors.online^
 ||basffs.com^
 ||bastidevalbonne.com^
@@ -281,6 +283,7 @@
 ||eaupoch.cn^
 ||ecomironman.com^
 ||ecrossinglab.com^
+||ecspeedy.com^
 ||edition-eltern.com^
 ||editmysite.com^
 ||ee1299.com^
@@ -511,6 +514,7 @@
 ||jdf88.com^
 ||jhehao.online^
 ||jieerfd.asia^
+||jimmyconnie.com^
 ||jingji8.xyz^
 ||jingu8.xyz^
 ||jingulunt.com^
@@ -708,6 +712,7 @@
 ||oppiuuhh.store^
 ||opticalilusion.com^
 ||oriental-hotels.com^
+||orva.buzz^
 ||ospcv.com^
 ||ouetd.shop^
 ||outlet.win^
@@ -805,6 +810,7 @@
 ||sh1768.net^
 ||sh1788.net^
 ||shareme.shop^
+||shonko.vip^
 ||shop2000.com.tw^
 ||shopcbws.space^
 ||shopline.tw^

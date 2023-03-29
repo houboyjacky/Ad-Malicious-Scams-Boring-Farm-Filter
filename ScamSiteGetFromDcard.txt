@@ -1191,6 +1191,7 @@
 ! 詐騙回報
 ||jsholdings.com.tw^
 ||dlyunkefu.net^
+! 詐騙工作 https://www.dcard.tw/f/mood/p/241621133
 ||guangdji.com^
 ! 博弈 https://www.dcard.tw/f/anti_fraud/p/241556123
 ||gamespg888.com^
@@ -1260,3 +1261,8 @@
 ! 可疑購物網 https://www.dcard.tw/f/talk/p/241616391
 ||jxypshops.com^
 ||cos.ap-hongkong.myqcloud.com^
+! 詐騙中華電信 https://www.dcard.tw/f/cycu/p/241620617
+||wdaq-tw.cn^
+! 詐騙取貨 https://www.dcard.tw/f/buyonline/p/241618526
+||7-11tw3.tech^$important
+/711-tw[0-9]+.tech/
