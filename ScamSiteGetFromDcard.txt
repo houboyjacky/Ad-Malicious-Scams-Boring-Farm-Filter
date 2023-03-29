@@ -1252,3 +1252,8 @@
 ||cos.ap-shanghai.myqcloud.com^
 ! 詐騙電商 https://www.dcard.tw/f/anti_fraud/p/241611957
 ||temu866.com^
+! 詐騙虛擬商 https://www.dcard.tw/f/persona_yellowfx/p/241615137
+||lidopro-defiplus.com^
+||oaktb1995.com^
+! 詐騙網站 https://www.dcard.tw/f/talk/p/241616391
+||kkabak.com^
