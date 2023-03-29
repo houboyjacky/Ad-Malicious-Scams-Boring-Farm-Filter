@@ -1243,3 +1243,12 @@
 ||chtcom-vip.com^
 ||chtcoonu.com^
 ||fetnetein.site^
+! 詐騙蝦皮 https://www.dcard.tw/f/anti_fraud/p/241611820
+||63a.life^
+||45t.cn^
+||45dwz.cn^
+||tuiabcedf.cn^
+||haoxuexiba.cn^
+||cos.ap-shanghai.myqcloud.com^
+! 詐騙電商 https://www.dcard.tw/f/anti_fraud/p/241611957
+||temu866.com^
