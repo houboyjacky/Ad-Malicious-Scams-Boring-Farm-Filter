@@ -1257,3 +1257,6 @@
 ||oaktb1995.com^
 ! 詐騙網站 https://www.dcard.tw/f/talk/p/241616391
 ||kkabak.com^
+! 可疑購物網 https://www.dcard.tw/f/talk/p/241616391
+||jxypshops.com^
+||cos.ap-hongkong.myqcloud.com^
