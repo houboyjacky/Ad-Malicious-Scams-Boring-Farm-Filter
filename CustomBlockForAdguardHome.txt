@@ -60,6 +60,7 @@
 ||7112.cn^
 ||7figconsultant.com^
 ||7figureecompreneur.com^
+||7ttw.cn^
 ||7wtv.com^
 ||800notes.com^
 ||857fadachi.com^
@@ -100,6 +101,7 @@
 ||allyouwant666.com^
 ||alphaloan.co^
 ||alvinb.club^
+||always.baby^
 ||amazon24.vip^
 ||amp.dev^
 ||amshopp.site^
@@ -172,6 +174,7 @@
 ||buyanpro.com^
 ||bv888.cc^
 ||bw777.cc^
+||bytecdntp.com^
 ||c8tw.com^
 ||cafsk.shop^
 ||caifuzhuanlan.com^
@@ -217,6 +220,7 @@
 ||comfortableife.com^
 ||copmusionu.shop^
 ||copyrichacademy.com^
+||cos.ap-guangzhou.myqcloud.com^
 ||countercurrent01.com^
 ||crazymonkey.lpages.co^
 ||crcdd.shop^
@@ -479,11 +483,13 @@
 ||hyhsdsb.com^
 ||hywzgk.bond^
 ||hyx050129.com^
+||hzgstr.live^
 ||i3course.de^
 ||iamjackiechou.com^
 ||icreatecourse.com^
 ||icrmsynquote.com^
 ||ictngsmnspcltdy.com^
+||ietwn.site^
 ||ig.com^
 ||iiil.io^
 ||iju888.com^
@@ -514,6 +520,7 @@
 ||jdf88.com^
 ||jhehao.online^
 ||jieerfd.asia^
+||jijiany.cn^
 ||jimmyconnie.com^
 ||jingji8.xyz^
 ||jingu8.xyz^
@@ -595,6 +602,7 @@
 ||lindayang725.com^
 ||linghittw.com^
 ||lingwh.com^
+||linkcdn.to^
 ||linkebin.nl^
 ||liseamall.com^
 ||livechat337.xyz^
@@ -758,10 +766,13 @@
 ||qlchat.com^
 ||qmfm.net^
 ||qoo9888.com^
+||qrurl.net^
 ||qstarlife.com^
 ||qtaiguzixun.com^
 ||qxmaqs.bond^
 ||qyhost168.com^
+||qzbzxgj.cn^
+||qzzcf.cn^
 ||r3gsduh.store^
 ||r83ihk.com^
 ||radiusdressing.com^
@@ -796,6 +807,7 @@
 ||samconsultant.online^
 ||sanlinew.com^
 ||saulcommerce.online^
+||sc.*.cn^
 ||scaleonlinecourse.com^
 ||scnleee.com^
 ||scratchhappyiness.com^
@@ -813,6 +825,7 @@
 ||shonko.vip^
 ||shop2000.com.tw^
 ||shopcbws.space^
+||shopfdhgn.club^
 ||shopline.tw^
 ||shopmetw.weebly.com^
 ||shopping99.com^
@@ -823,6 +836,7 @@
 ||simonhouse.com.tw^
 ||sin624922.wixsite.com^
 ||sjawnmgh3232.com^
+||skloiw.shop^
 ||skuwqo0013.com^
 ||skyinvest01.com^
 ||sleepyinvest.com^
@@ -846,6 +860,7 @@
 ||stockbooks.xyz^
 ||stocking01.com^
 ||stockszxy.live^
+||storehiesncm.shop^
 ||storejissna.shop^
 ||streetboard-shop.com^
 ||studygoda.site^
@@ -937,6 +952,7 @@
 ||twfinances.com^
 ||twgpzx.com^
 ||twgushi.shop^
+||twhqn.asia^
 ||twjingrong.online^
 ||twlicai.shop^
 ||twmacd.com^
@@ -964,6 +980,7 @@
 ||user132794.psee.io^
 ||utube.tw^
 ||uxcia.com^
+||uyl.buzz^
 ||v0985004622.com^
 ||vblorvd.shop^
 ||vekwq.asia^
@@ -1030,6 +1047,7 @@
 ||wxkitopxw.com^
 ||wyd2.com.tw^
 ||wzold.site^
+||x68x.cn^
 ||xc-bet.com^
 ||xe2w.com^
 ||xgdfs.com^
@@ -1063,9 +1081,12 @@
 ||ytstock.shop^
 ||yturie.asia^
 ||yuan-ta.com^
+||yuanmuxuanping.xyz^
 ||yuewq.asia^
 ||yukai.ceo^
 ||yuyanwz.com^
+||yxp8.cn^
+||yyds999.com.tw^
 ||yydsy.shop^
 ||yz8899.com.tw^
 ||zabeeo.com^
@@ -1074,8 +1095,11 @@
 ||zdhwe.asia^
 ||zdknvok2208.com^
 ||zerohouse1491.com^
+||zgsit.cn^
 ||zhihan.xyz^
 ||zsveejops.com^
 ||zsybt.shop^
+||ztg.buzz^
+||zucjk.cn^
 ||zunlong-wangzhi.com^
 ||zxwman.com^
