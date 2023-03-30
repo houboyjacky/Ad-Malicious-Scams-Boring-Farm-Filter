@@ -1264,5 +1264,9 @@
 ! 詐騙中華電信 https://www.dcard.tw/f/cycu/p/241620617
 ||wdaq-tw.cn^
 ! 詐騙取貨 https://www.dcard.tw/f/buyonline/p/241618526
-||7-11tw3.tech^$important
+||7-11tw3.tech^
 /711-tw[0-9]+.tech/
+! 群友提供
+||goldstar.asia^
+! 詐騙交友 https://www.dcard.tw/f/anti_fraud/p/241628822
+||tasteofthelove.com^

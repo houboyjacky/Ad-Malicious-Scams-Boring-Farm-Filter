@@ -269,6 +269,7 @@
 ||dobs-tds.com^
 ||dollarvigilante.lt.acemlnb.com^
 ||dp369.net^
+||dragon-legend.cc^
 ||drbuttar.lt.acemlnb.com^
 ||drhojyo.com.hk^
 ||drich.online^
@@ -329,6 +330,7 @@
 ||ewyqui.asia^
 ||exxpperttrrrusst.shop^
 ||ezplayrg.com^
+||ezw.buzz^
 ||f4mut.com^
 ||fa8168.net^
 ||fa888.tw^
@@ -406,6 +408,8 @@
 ||gioesp.shop^
 ||gm1888.net^
 ||gnfdc.shop^
+||godcup.me^
+||godcup.tw^
 ||godenlive.shop^
 ||godmiracle.com.tw^
 ||gofander.com^
@@ -413,6 +417,7 @@
 ||gomarketing.com.tw^
 ||goodpracticemining.com^
 ||goodsgreatsdeals.shop^
+||goqwr.store^
 ||gotrade.com.tw^
 ||gp888s.com^
 ||gptw.cc^
@@ -452,6 +457,7 @@
 ||hellostock1688.com^
 ||helpcenter04.com^
 ||herefun.us^
+||hese.shop^
 ||hfm.com^
 ||hfmarkets-tw.com^
 ||hhyy.asia^
@@ -477,6 +483,7 @@
 ||hublaud.com^
 ||humanflies.xyz^
 ||husevon.com^
+||huwwzzas.shop^
 ||hw111.net^
 ||hw16555.net^
 ||hyfayhhjnb.com^
@@ -521,7 +528,10 @@
 ||jhehao.online^
 ||jieerfd.asia^
 ||jijiany.cn^
+||jill.buzz^
 ||jimmyconnie.com^
+||jimmyconnie.xyz^
+||jimmyconnie.*^
 ||jingji8.xyz^
 ||jingu8.xyz^
 ||jingulunt.com^
@@ -563,12 +573,14 @@
 ||kilby.buzz^
 ||kingmiya.shop^
 ||kings889.com^
+||kiser.shop^
 ||kk5168.net^
 ||kkdu.asia^
 ||kl-latestproperty.com^
 ||kl-luxury-properties.com^
 ||kmbangtw.com^
 ||kmwmq.asia^
+||kmy.buzz^
 ||kngoa.online^
 ||ko.gl^
 ||ko1788.com^
@@ -708,6 +720,7 @@
 ||ohp.buzz^
 ||oicjs.shop^
 ||oiucxz.shop^
+||ojdls.online^
 ||okalla.shop^
 ||oncheou.com^
 ||onenightsrsr.wiki^
@@ -722,6 +735,7 @@
 ||oriental-hotels.com^
 ||orva.buzz^
 ||ospcv.com^
+||ouej.shop^
 ||ouetd.shop^
 ||outlet.win^
 ||oxfordclubtaiwan.com^
@@ -740,6 +754,7 @@
 ||piu11.com^
 ||pji.buzz^
 ||pl^$denyallow=org.pl|edu.pl|com.pl|gov.pl
+||plmaxjun.com^
 ||pory.app^
 ||powerbig888.com^
 ||ppcc.fyi^
@@ -751,6 +766,7 @@
 ||promotinglearning.com^
 ||protrumpreport.lt.acemlnb.com^
 ||psfcs.com^
+||psuha.shop^
 ||puzzl.site^
 ||pxcga.com^
 ||q8casino.net^
@@ -778,6 +794,7 @@
 ||radiusdressing.com^
 ||ralphcommerce.online^
 ||ranieey.weebly.com^
+||rankclub.io^
 ||ranshop.online^
 ||rdshdnw.online^
 ||realgame.ink^
@@ -966,7 +983,9 @@
 ||twstocknews.com^
 ||twtouzi.shop^
 ||twtzq.com^
+||twzdqfc.shop^
 ||twzgzj.com^
+||twzhang.com^
 ||twzhanggu.com^
 ||twzhenggu.xyz^
 ||tysq.club^
@@ -1068,6 +1087,7 @@
 ||yafengmaoyi.com^
 ||yahoocaijing.com^
 ||yangyyy.shop^
+||yau.buzz^
 ||yhznmdd.asia^
 ||yitoy.store^
 ||yonguini.com^
