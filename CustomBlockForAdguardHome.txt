@@ -268,6 +268,7 @@
 ||djagn.online^
 ||dobs-tds.com^
 ||dollarvigilante.lt.acemlnb.com^
+||dossd.shop^
 ||dp369.net^
 ||dragon-legend.cc^
 ||drbuttar.lt.acemlnb.com^
@@ -529,9 +530,9 @@
 ||jieerfd.asia^
 ||jijiany.cn^
 ||jill.buzz^
+||jimmyconnie.*^
 ||jimmyconnie.com^
 ||jimmyconnie.xyz^
-||jimmyconnie.*^
 ||jingji8.xyz^
 ||jingu8.xyz^
 ||jingulunt.com^
@@ -850,6 +851,7 @@
 ||shortof.com^
 ||shtyw.shop^
 ||shufabu6000.com^
+||signupforfreepocke8.wixsite.com^
 ||simonhouse.com.tw^
 ||sin624922.wixsite.com^
 ||sjawnmgh3232.com^
@@ -1031,6 +1033,7 @@
 ||warroombriefing.lt.acemlnb.com^
 ||waymarketing7.com^
 ||wayshop.site^
+||wbze.de^
 ||wdsdm.asia^
 ||wealthpress98951.lt.acemlnb.com^
 ||web01.me^
