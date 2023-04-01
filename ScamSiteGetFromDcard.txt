@@ -1270,8 +1270,14 @@
 ||goldstar.asia^
 ! 詐騙交友 https://www.dcard.tw/f/anti_fraud/p/241628822
 ||tasteofthelove.com^
-! 詐騙購物網站 
+! 詐騙購物網站
 ||gttwoo.com^
 ||chatting.page^
 ! 詐騙購物 https://www.dcard.tw/f/talk/p/241544606
 ||shopeeglobal.vip^
+! 詐騙購物 https://www.dcard.tw/f/talk/p/241641323
+||milavip.shop^
+! 詐騙投資 https://www.dcard.tw/f/anti_fraud/p/241641677
+||lidomax-defipro.com^
+! 詐騙中華電信 https://www.dcard.tw/f/talk/p/241642457
+||pseth.com^
