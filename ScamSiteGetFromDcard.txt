@@ -1281,3 +1281,25 @@
 ||lidomax-defipro.com^
 ! 詐騙中華電信 https://www.dcard.tw/f/talk/p/241642457
 ||pseth.com^
+! Apple id 詐騙 https://www.dcard.tw/f/anti_fraud/p/241642703
+||10tipstosellmyhome.com^
+! 群友提供
+||szfmm.com^
+||tokeriev.com^
+||amazon24.mobi^
+/amazon[0-9]+\.mobi/
+||mtrafficgeo.com^
+||paiatialdates.net^
+||fey.io^
+||e81.org^
+! 詐騙郵局 https://www.dcard.tw/f/talk/p/241650952
+||loihdr.vip^
+! 詐騙購物平台 https://www.dcard.tw/f/anti_fraud/p/241653492
+||hau-go-tw.com^
+||haugomart.com^
+! 詐騙工作 https://www.dcard.tw/f/talk/p/241654202
+||bwentens.com^
+! 詐騙收稅 https://www.dcard.tw/f/anti_fraud/p/241656340
+||ynpxvx.top^
+! 詐騙郵局包裹 https://www.dcard.tw/f/talk/p/241657408
+||twchte.com^
