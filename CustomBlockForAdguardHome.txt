@@ -3,7 +3,6 @@
 ! 過度引用 widgetdata.tradingview.com
 ! 過度引用 www.tradingview-widget.com
 ! 疑似詐騙或不良的網站
-!fb社團提供
 /1396[a-z]\.com/
 /b9b[a-z0-9]+\.cc/
 /caijing\w*\.w*/
@@ -154,9 +153,11 @@
 ||b9bb.cc^
 ||b9be.cc^
 ||ba1dwinadvisors.online^
+||bakm.top^
 ||basffs.com^
 ||bastidevalbonne.com^
 ||bazolis.com^
+||bbbuw38307.com^
 ||bc3i0w5.cam^
 ||bcrfuture.com^
 ||bcwcoin.com^
@@ -522,6 +523,7 @@
 ||drich.online^
 ||drich01.com^
 ||drustcoin.com^
+||dsgk62.vip^
 ||dsheres.com^
 ||dsmczl.com^
 ||dsports-rg.com^
@@ -904,6 +906,7 @@
 ||huaqiang35.com^
 ||huatai888.vip^
 ||huaxiu4.com^
+||huayuebb.top^
 ||hublaud.com^
 ||huidwhae.com^
 ||huiltw.com^
@@ -928,6 +931,7 @@
 ||icreatecourse.com^
 ||icrmsynquote.com^
 ||ictngsmnspcltdy.com^
+||iebuysun.com^
 ||ietwn.site^
 ||ig.com^
 ||iiil.io^
@@ -1011,6 +1015,7 @@
 ||kevfutur.online^
 ||kevinevents.com^
 ||kfdshop.xyz^
+||kga34.vip^
 ||kgi-pro.com.tw^
 ||kgosf.com^
 ||kilby.buzz^
@@ -1055,6 +1060,7 @@
 ||leots88.com.tw^
 ||leverj-web.com^
 ||lexgaga.shop^
+||lexjojo.shop^
 ||lfdmm333.com^
 ||lgty.site^
 ||lihi.tv^
@@ -1122,6 +1128,7 @@
 ||mikecrm.com^
 ||mining-clouds.top^
 ||minutefor.shop^
+||mises.shop^
 ||mizatio.com^
 ||mkfsa.shop^
 ||mkppck.com^
@@ -1133,6 +1140,7 @@
 ||moodminer.net^
 ||moosheng.com^
 ||morganbelllawfirm.com^
+||mp.weixin.qq.com^
 ||mpg1668.com^
 ||mpg168.com^
 ||mrceo.online^
@@ -1203,6 +1211,7 @@
 ||oicjs.shop^
 ||oiucxz.shop^
 ||ojdls.online^
+||ok5sk.cn^
 ||okalla.shop^
 ||okxvew.com^
 ||ole777th.co^
@@ -1218,6 +1227,7 @@
 ||opee0637.top^
 ||oppiuuhh.store^
 ||opticalilusion.com^
+||opvaasa.shop^
 ||oriental-hotels.com^
 ||origamall-install.shop^
 ||orva.buzz^
@@ -1226,6 +1236,7 @@
 ||ouetd.shop^
 ||outlet.win^
 ||oxfordclubtaiwan.com^
+||oyn.at^
 ||paktormeet.com^
 ||payeshop.site^
 ||pcgws.com^
@@ -1539,6 +1550,7 @@
 ||usdt-eth-top.com^
 ||usdtora.io^
 ||user132794.psee.io^
+||ussaisosad.shop^
 ||utube.tw^
 ||uxcia.com^
 ||uyl.buzz^
@@ -1597,6 +1609,7 @@
 ||wfamilygo.com^
 ||wfyweb.com^
 ||wfz.buzz^
+||whdcnc.shop^
 ||wholesaler-mail.com^
 ||wholesaler-mall.com^
 ||widgetdata.tradingview.com^
@@ -1627,6 +1640,7 @@
 ||xc-bet.com^
 ||xcvip115.com^
 ||xe2w.com^
+||xeaoy.com.cn^
 ||xetraerz.com^
 ||xgdfs.com^
 ||xggkimixu.com^

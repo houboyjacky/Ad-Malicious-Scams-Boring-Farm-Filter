@@ -808,7 +808,7 @@
 ! 詐騙玩遊戲 https://www.dcard.tw/f/anti_fraud/p/241220038
 ||fungame99.net^
 ||ahdy652ss.org^
-||126.net^
+#||126.net^
 !||kunluncan.com^ 阿里雲 CDN
 ||wm555.net^
 ! 詐騙公益 https://www.dcard.tw/f/talk/p/241220267
@@ -1303,3 +1303,79 @@
 ||ynpxvx.top^
 ! 詐騙郵局包裹 https://www.dcard.tw/f/talk/p/241657408
 ||twchte.com^
+! 仿露天詐騙 https://www.dcard.tw/f/anti_fraud/p/241660291
+||rutenstores.io^
+||v1tron.com^
+||shopee-tw2-com.website^
+||gotoip1.com^
+||800cdn.com^
+||vhostgo.com^
+! 仿costco詐騙 https://www.dcard.tw/f/anti_fraud/p/241594209
+||costcoshopp.com^
+||0tw.cc^
+! 詐騙蝦皮 https://www.dcard.tw/f/mood/p/241667400
+||shopeeptwp.cc^
+! 詐騙中獎 https://www.dcard.tw/f/anti_fraud/p/241668837
+||get-started-ok.xyz^
+||ryzvxm.com^
+||milk-pay.com^
+||solvpn.net^
+||downloadplayerz.com^
+!sitevensiter是詐騙嗎？ https://www.dcard.tw/f/talk/p/241668889
+||sitevensiter.com^
+||xwsgiu.com^
+||wuht.net^
+||vipstation.com.hk^
+||xcdn.global^
+! 網友提供
+||etreqiog.com^
+||crmsynquotes.net^
+! 詐騙網購 https://www.dcard.tw/f/anti_fraud/p/241658935
+||aiubi.club^
+||u-ho-tw.com^
+! 購物詐騙 https://www.dcard.tw/f/job/p/241633456
+||prettygo.com^
+||prettygo.tw^
+! 外匯詐騙 https://www.dcard.tw/f/ask/p/241673927
+||igomarkets.net^
+! 汽車燃料稅詐騙 https://www.dcard.tw/f/talk/p/241674333
+||orpmn1.vip^
+! 汽車燃料稅詐騙 https://www.dcard.tw/f/anti_fraud/p/241674381
+||lf732fk.vip^
+||2255game.cn^
+! 網友提供
+||mimohunn.com^
+||u-ho-shop.com^
+||getrichweee.com^
+||miracle-mall.com^
+||vemmastarshop.com^
+! 詐騙工作 https://www.dcard.tw/f/stock/p/241682080
+||huidaolx.com^
+! 詐騙中華電信 https://www.dcard.tw/f/mood/p/241675309
+||ee0dw.shop^
+! 詐騙工作 https://www.dcard.tw/f/anti_fraud/p/241675631
+||dorischen20220930.wixsite.com^
+||arexr.com^
+||levevrc.com^
+||cmfdwz.com^
+! 詐騙投資 https://www.dcard.tw/f/anti_fraud/p/241689765
+||maskmaxdefi.com^
+! 詐騙燃料稅 https://www.dcard.tw/f/talk/p/241690736
+||twcaifu.com^
+! 詐騙中華電信 https://www.dcard.tw/f/talk/p/241691172
+||cnvxl.com^
+! 詐騙燃料稅 https://www.dcard.tw/f/persona_drmessage/p/241691303
+||inrsd3.vip^
+||runflpr.vip^
+||losuj31.vip^
+||iojrpo3.vip^
+! 詐騙廣告 https://www.dcard.tw/f/mood/p/241693892
+||mjf7d47gz31se9f0h38fdjiw8i3uh5hf6f5geh3ufhd7d.com^
+! 詐騙和潤 https://www.dcard.tw/f/talk/p/241695119
+||ep1.tw^
+! 詐騙蝦皮 https://www.dcard.tw/f/anti_fraud/p/241695162
+||shopee89.shop^
+! 詐騙購物 https://www.dcard.tw/f/talk/p/238609021
+||gs1658.net^
+||jiulai-shop.com^
+||shopwxs.com^
