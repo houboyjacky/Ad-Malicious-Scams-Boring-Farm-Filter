@@ -1379,3 +1379,23 @@
 ||gs1658.net^
 ||jiulai-shop.com^
 ||shopwxs.com^
+! 詐騙露天 https://www.dcard.tw/f/buyonline/p/241697497
+||ruten1802.tw^
+/ruten[0-9]+\.tw/
+! 詐騙繳稅 https://www.dcard.tw/f/talk/p/241700872
+||sisc.tw^
+||fuebsa.xyz^
+||shopdsvdf.shop^
+! 購物詐騙 https://www.dcard.tw/f/mood/p/241704627
+||wied.shop^
+! 投資詐騙 https://www.dcard.tw/f/anti_fraud/p/241705668
+||ivrjquwehy.com^
+||xhahwqieuj.com^
+! 詐騙IG https://www.dcard.tw/f/anti_fraud/p/241706732
+||sprout.link^
+! 疑似新詐騙手法 https://www.dcard.tw/f/buyonline/p/241711324
+||aromanc.com^
+! 交友詐騙 https://www.dcard.tw/f/anti_fraud/p/241712016
+||euronext.com^
+! 詐騙遊戲交易平台 https://www.dcard.tw/f/talk/p/241713189
+||0bb1u2wmsf.xyz^

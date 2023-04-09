@@ -21,10 +21,12 @@
 ||*.cyou^
 ||*.ml^
 ||*.top^
+||*.vip^
 ||0857online.net
 ||10goneviral.com^
 ||110707.click^
 ||11ks.xyz^
+||11silo.com^
 ||1234fm.com^
 ||123mediax.com^
 ||1396e.com^
@@ -131,6 +133,7 @@
 ||aq47.net^
 ||ar777.net^
 ||archneasys.com^
+||ariswebay.club^
 ||arivaex.com^
 ||arvatori.com^
 ||as558.org^
@@ -398,6 +401,7 @@
 ||crystal-coinbits.com^
 ||csogmes168.com^
 ||cstockschool.com^
+||ctxyy.com^
 ||cumenod.com^
 ||currancybits.com^
 ||currencyinfo.net^
@@ -936,6 +940,7 @@
 ||ig.com^
 ||iiil.io^
 ||iju888.com^
+||ils3x.shop^
 ||ilsaphaconpa.tk^
 ||imaster.club^
 ||incoolyo.com^
@@ -1257,6 +1262,7 @@
 ||pl^$denyallow=org.pl|edu.pl|com.pl|gov.pl
 ||plmaxjun.com^
 ||plubitit.net^
+||point.top^
 ||pory.app^
 ||powerbig888.com^
 ||ppcc.fyi^
@@ -1323,6 +1329,7 @@
 ||rkhadui.top^
 ||rm16888.com^
 ||rose2011kt.taplink.ws^
+||rotteshop-vip.com^
 ||royalgaming777.com^
 ||rscga.com^
 ||ruihejade.com^
@@ -1576,6 +1583,7 @@
 ||vk090.cn^
 ||vki.buzz^
 ||vkjjqiwyejaj.com^
+||vn56.cc^
 ||vnskkw154329.com^
 ||vogofruit.com^
 ||vorosce.com^
@@ -1705,4 +1713,5 @@
 ||ztg.buzz^
 ||zucjk.cn^
 ||zunlong-wangzhi.com^
+||zvuaul.shop^
 ||zxwman.com^
