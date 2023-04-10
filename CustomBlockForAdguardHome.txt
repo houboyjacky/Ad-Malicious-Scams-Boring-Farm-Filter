@@ -22,8 +22,10 @@
 #||pages-wildcard.weebly.com^
 #||phicdn.net^
 ||*.cyou^
+||*.it^$denyallow=org.it|edu.it|com.it|gov.it|mitm.it
 ||*.ml^
-||*.online^
+||*.online^$denyallow=pestyle.online
+||*.pl^$denyallow=org.pl|edu.pl|com.pl|gov.pl
 ||*.top^
 ||*.vip^
 ||0857online.net
@@ -731,6 +733,7 @@
 ||fcrown.xyz^
 ||fdexohn.com^
 ||fdexxds.com^
+||fdjihodj.com^
 ||fdqfe5u.cam^
 ||feicuivip.xyz^
 ||ferrososymetales.com^
@@ -960,7 +963,6 @@
 ||ironfanmarketing.com^
 ||isgdanismanligi.com.tr^
 ||isnotdomain440059159.com^
-||it^$denyallow=org.it|edu.it|com.it|gov.it|mitm.it
 ||iubsex.com^
 ||ivenor.tw^
 ||ivideo247.com^
@@ -1263,7 +1265,6 @@
 ||pioni.live^
 ||piu11.com^
 ||pji.buzz^
-||pl^$denyallow=org.pl|edu.pl|com.pl|gov.pl
 ||plmaxjun.com^
 ||plubitit.net^
 ||point.top^
