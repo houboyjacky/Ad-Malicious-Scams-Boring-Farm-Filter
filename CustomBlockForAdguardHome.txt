@@ -1,9 +1,10 @@
 ! 國家網域封鎖 it、pl、ml
-! 詐騙網站常用網域封鎖 cyou、top、vip、online、xyz
+! 詐騙網站常用網域封鎖 cyou、top、vip、online
 ! 過度引用 s3-symbol-logo.tradingview.com
 ! 過度引用 widgetdata.tradingview.com
 ! 過度引用 www.tradingview-widget.com
 ! 疑似詐騙或不良的網站
+! 觀察 xyz
 /1396[a-z]\.com/
 /b9b[a-z0-9]+\.cc/
 /caijing\w*\.w*/
@@ -16,15 +17,15 @@
 /so[0-9]+\.com/
 /taiwan-[a-z]+\.(com|tw)/
 /www-?post-?gov-?tw\.sytes\.net/
+#||*.xyz^
 #||fontawesomes.com^
 #||pages-wildcard.weebly.com^
 #||phicdn.net^
 ||*.cyou^
 ||*.ml^
+||*.online^
 ||*.top^
 ||*.vip^
-||*.online^
-||*.xyz^
 ||0857online.net
 ||10goneviral.com^
 ||110707.click^
