@@ -1399,3 +1399,5 @@
 ||euronext.com^
 ! 詐騙遊戲交易平台 https://www.dcard.tw/f/talk/p/241713189
 ||0bb1u2wmsf.xyz^
+! 詐騙中華電信 https://www.dcard.tw/f/anti_fraud/p/241714220
+||cbrowser.pro^
