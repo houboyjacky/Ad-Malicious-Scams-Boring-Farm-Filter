@@ -64,6 +64,10 @@ https://www.scamadviser.com/<br/>
 Taken from the FX110 website.<br/>
 https://www.fx110.com.tw/<br/>
 
+### ScamsSiteGetFromFB_TonyNey.txt
+取自FB社團網友<br/>
+Taken from FB community netizen.<br/>
+
 ### ublacklist-settings.json
 自製的ublacklist設定擋，提供直接匯入使用<br/>
 Self-made ublacklist configuration file, providing direct import and use.<br/>
