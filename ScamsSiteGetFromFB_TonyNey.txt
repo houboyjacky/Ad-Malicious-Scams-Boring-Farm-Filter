@@ -1,5 +1,6 @@
 ! 2023/04/11 Update
 ! 取自FB https://www.facebook.com/groups/1141798046611751/user/100001471821039/
+#||cloudfront.net^
 #||easy.co^
 #||github.io^
 #||t.co^
@@ -4776,7 +4777,6 @@
 ||cloudcoin480.com^
 ||cloudcoinltd.com^
 ||cloudexchanges.net^
-||cloudfront.net^
 ||cloudfx.online^
 ||cloudfxmarket.com^
 ||cloudfxmeta.com^
