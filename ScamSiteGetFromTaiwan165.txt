@@ -213,7 +213,6 @@
 ||aehhs.xyz^
 ||aeqq.tw^
 ||af-indes.com^
-||agamarkets.com^
 ||aganki.com^
 ||agencegout.com^
 ||agigxp.com^
@@ -345,7 +344,6 @@
 ||bc168sss.com^
 ||bcgcex.com^
 ||bciomt.com^
-||bcpgltd.com^
 ||bcpmarkets.com^
 ||bcttan.com^
 ||bcwcoin.com^
@@ -360,7 +358,6 @@
 ||bellmoforfx.com^
 ||bellmonfx.com^
 ||bestlinkpay.com^
-||bestzhfx.com^
 ||betexpic.com^
 ||bewfdbag.com^
 ||bewin-global.com^
@@ -562,13 +559,11 @@
 ||cxmtradong.com^
 ||cys88vc.net^
 ||cysj9.net^
-||daasomtm.com^
 ||dabaoguoji886.com^
 ||dafexxx.com^
 ||daiether-defipro.com^
 ||daietherpromaxdefi.com^
 ||dakagorex.com^
-||dax178.com^
 ||day4wld.com^
 ||day4wld.cyou^
 ||day4wld.world^
@@ -578,7 +573,6 @@
 ||ddixf.com^
 ||ddttss.com^
 ||ddyg.shop^
-||deasmestw.com^
 ||deeplcoin.link^
 ||defeng123.com^
 ||defeng88.vip^
@@ -638,7 +632,6 @@
 ||dtgs88.cn^
 ||dunhuanggou.com^
 ||dunicorn.co^
-||duxgoldingltd.com^
 ||dvjfuhasihe.com^
 ||dwgj888.com^
 ||dws167.com^
@@ -781,7 +774,6 @@
 ||fm2566.com^
 ||fnebbeqnca.com^
 ||fnglc.com^
-||forexo24.com^
 ||forexspwind.com^
 ||forextw.xyz^
 ||forgomomo.com^
@@ -809,7 +801,6 @@
 ||fuyingholdings.co^
 ||fx-glenber.com^
 ||fxathenafx.com^
-||fxbdg.com^
 ||fxbellemont.com^
 ||fxcabat.com^
 ||fxcap888.com^
@@ -852,7 +843,6 @@
 ||gf-inftw1.com^
 ||gfmm.asis^
 ||gg868.net^
-||gh-prime.com^
 ||gia996.com^
 ||giant7.com^
 ||ginhex.com^
@@ -879,7 +869,6 @@
 ||gmpool.net^
 ||gold8financialexchange.com^
 ||gold8institute.com^
-||gold8services.com^
 ||goldenyuu.com^
 ||goldsstar.com^
 ||goldsstarr.com^
@@ -1037,7 +1026,6 @@
 ||infafx.com^
 ||inftw8.com^
 ||international-forex.com^
-||internationalforex.net^
 ||intervatefex.com^
 ||interventionai.com^
 ||intnforex.com^
@@ -1213,7 +1201,6 @@
 ||kwszqvod.com^
 ||kwszva.top^
 ||kxnn1knej1kn.com^
-||kyeiy.com^
 ||kyneg.xyz^
 ||lalaadx.cn^
 ||lamresearchly.xyz^
@@ -1301,7 +1288,6 @@
 ||medisou.*^
 ||medisou.cloud^
 ||medisou.club^
-||medisou.com^
 ||medisou.site^
 ||medisou.vip^
 ||meetsoons.com^
@@ -1327,7 +1313,6 @@
 ||mexcmax.com^
 ||mexcsvip-otc.com^
 ||mfcteam.com^
-||mffeex.com^
 ||mfsexchange.com^
 ||mft-infon.com^
 ||mgfcxtw.com^
@@ -1491,7 +1476,6 @@
 ||origina199.xyz^
 ||originalb1.com^
 ||orjlh.com^
-||otcintaiwan.com^
 ||otcmexc.com^
 ||otcvip-mexcs.com^
 ||oxeoxe.net^
@@ -1634,7 +1618,6 @@
 ||sasa.best^
 ||sasa.sale^
 ||saturdaylivetw.com^
-||saxo-tw.com^
 ||saxobanktw.com^
 ||sbcdvscj.xyz^
 ||sbiofficial.com^
@@ -1754,7 +1737,6 @@
 ||spreadextwss.net^
 ||sqjmzz.com^
 ||srmortgagesolutionslimited.com^
-||srofx.com^
 ||srwfi.com^
 ||ssnvnudhjkwq.com^
 ||ssysp54.xyz^
@@ -1782,7 +1764,6 @@
 ||super20300.tw^
 ||supercarglobal.net^
 ||superpitgroup.com^
-||supertraderlimit.com^
 ||supertraterlimited.com^
 ||superviamt.com^
 ||susgat.com^
@@ -1977,7 +1958,6 @@
 ||vanwardtrade.com^
 ||vbbzgbswas.com^
 ||vbhdbah1mansdba.com^
-||vbiix.com^
 ||vbjsnn11ndn.com^
 ||vbrhbqjena.com^
 ||vdsdbag.com^
@@ -2043,7 +2023,6 @@
 ||wdomra.com^
 ||wealthfree1688.xyz^
 ||wealthfrontintl.com^
-||webwmk.com^
 ||week-trademax.xyz^
 ||week-tradepro.xyz^
 ||weettoken.com^
@@ -2060,7 +2039,6 @@
 ||wexxex.com^
 ||wfinve.com^
 ||wh668888.com^
-||whakoex.com^
 ||whgj66.com^
 ||whgj68.com^
 ||whgj988.com^
@@ -2076,7 +2054,6 @@
 ||winnbao.com^
 ||winpr0.shop^
 ||winpro.lol^
-||winspeedforex.com^
 ||wisewingstock.com^
 ||wisewingstrade.com^
 ||wissuk.com^
@@ -2183,7 +2160,6 @@
 ||ytplm.com^
 ||ytptv.com^
 ||yulmfortw.xyz^
-||yulom.com^
 ||yunnanytianyun.com^
 ||yuwie.top^
 ||yuxinex.com^
@@ -2211,7 +2187,6 @@
 ||zfinternationlentertainmetcity.com^
 ||zgsyyqw.cn^
 ||zha.tw^
-||zhbam.com^
 ||zhenhanziben.com^
 ||zhevv.cn^
 ||zhoanzn.com^
