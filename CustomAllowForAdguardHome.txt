@@ -39,3 +39,6 @@
 !
 ! megadap解鎖
 @@||megadap.com^$important
+!
+! line.biz解鎖
+@@||line.biz^$important

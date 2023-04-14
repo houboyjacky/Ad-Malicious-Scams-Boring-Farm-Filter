@@ -1163,7 +1163,7 @@
 ||v1tron.com^
 ||shopee-tw2-com.website^
 ||gotoip1.com^
-||800cdn.com^
+#||800cdn.com^
 ||vhostgo.com^
 ! 仿costco詐騙 https://www.dcard.tw/f/anti_fraud/p/241594209
 ||costcoshopp.com^
@@ -1298,3 +1298,5 @@
 ||iotexpos.com^
 ! 詐騙郵局 https://www.dcard.tw/f/talk/p/241754897
 ||i-post-tw.com^
+! 詐騙代扣 https://www.dcard.tw/f/anti_fraud/p/241755105
+||ebill-verify.top^
