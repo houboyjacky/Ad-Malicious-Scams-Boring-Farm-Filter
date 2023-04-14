@@ -1283,3 +1283,18 @@
 ||etofx.cc^
 ! 詐騙蝦皮 https://www.dcard.tw/f/talk/p/241738600
 ||shopeeptwc.cc^
+! 詐騙購物網站 https://www.dcard.tw/f/anti_fraud/p/241749697
+||aijek.com^
+! 詐騙交友 https://www.dcard.tw/f/talk/p/241751430
+||singoier.com^
+! 詐騙交友 https://www.dcard.tw/f/sex/p/241752013
+||soultanapp.com^
+! 詐騙投資 https://www.dcard.tw/f/anti_fraud/p/241752459
+||gutscoin-official.com^
+||spdapp.site^
+! 詐騙投資 https://www.dcard.tw/f/anti_fraud/p/241753059
+||sgxprovip.com^
+! 詐騙虛擬幣投資 https://www.dcard.tw/f/anti_fraud/p/241753131
+||iotexpos.com^
+! 詐騙郵局 https://www.dcard.tw/f/talk/p/241754897
+||i-post-tw.com^
