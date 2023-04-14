@@ -286,6 +286,7 @@
 ||djagn.online^
 ||dobs-tds.com^
 ||dollarvigilante.lt.acemlnb.com^
+||domaincntrol.com^
 ||dossd.shop^
 ||dp369.net^
 ||dragon-legend.cc^
@@ -534,6 +535,7 @@
 ||indiastock.club^
 ||infinitytraffic.net^
 ||insin.com.tw^
+||instabo.cc^
 ||insurblessing.com^
 ||interioraddiction.com^
 ||internationallmedia.net^

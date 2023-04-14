@@ -1300,3 +1300,9 @@
 ||i-post-tw.com^
 ! 詐騙代扣 https://www.dcard.tw/f/anti_fraud/p/241755105
 ||ebill-verify.top^
+! 網友提供 https://www.dcard.tw/f/persona_shutterhouboy/p/241426482
+||boneglobal.cc^
+! 詐騙蝦皮 https://www.dcard.tw/f/anti_fraud/p/241758836
+||shopee-tw4.tech^
+! 詐騙購物 https://www.dcard.tw/f/anti_fraud/p/241760979
+||obstgruct.shop^
