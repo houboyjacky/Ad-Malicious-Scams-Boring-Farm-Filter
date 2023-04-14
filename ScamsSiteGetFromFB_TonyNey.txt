@@ -1,5 +1,8 @@
 ! 取自FB https://www.facebook.com/groups/1141798046611751/user/100001471821039/
 ! Update to 2023/04/15
+/btc[0-9]{4}\.com/
+/btcbox[a-z]{1,3}\.com/
+/usdter.?\..*/
 #||cloudfront.net^
 #||easy.co^
 #||github.io^
