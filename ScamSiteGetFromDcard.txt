@@ -1306,3 +1306,13 @@
 ||shopee-tw4.tech^
 ! 詐騙購物 https://www.dcard.tw/f/anti_fraud/p/241760979
 ||obstgruct.shop^
+! 詐騙算命 https://www.dcard.tw/f/mood/p/241763589
+||kxqo2ev.com^
+! 詐騙退款 https://www.dcard.tw/f/relationship/p/241763618
+||superperfectlove.com^
+! 詐騙交友 https://www.dcard.tw/f/anti_fraud/p/241449738
+||feelslike.cool^
+! 詐騙購物網站 https://www.dcard.tw/f/buyonline/p/241459899
+||www.marc-jacobs.com.tw^
+! 詐騙郵局 https://www.dcard.tw/f/anti_fraud/p/241771060
+||rhncb.xyz^
