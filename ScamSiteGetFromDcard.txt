@@ -983,11 +983,6 @@
 ||bitsther.com^
 ! 詐騙購物 https://www.dcard.tw/f/anti_fraud/p/241506838
 ||shopeetw.net.cn^
-! summer_hiphop提供
-||knejg.shop^
-||okxvew.com^
-||shentoken.com^
-||gowtpiengw.xyz^
 ! 詐騙貸款 https://www.dcard.tw/f/anti_fraud/p/241524840
 ||gowtplengw.xyz^
 ! 詐騙投資 https://www.dcard.tw/f/anti_fraud/p/241512996
@@ -1004,8 +999,6 @@
 ||shopee-1tw.xyz^
 ! 詐騙消費 https://www.dcard.tw/f/buyonline/p/241534757
 ||storeinppahu.store^
-! summer_hiphop提供
-||mwb-parcel.com^
 ! 詐騙交易所 https://www.dcard.tw/f/money/p/241536740
 ||wbmpzg.com^
 ||okxapp88.com^
@@ -1028,10 +1021,6 @@
 ||eithar.com^
 ! 詐騙買家 https://www.dcard.tw/f/talk/p/241552833
 ||tt67796.net^
-! 詐騙回報
-||cmecoins.life^
-||jhbxhhbvwhw.com^
-||tradfisun.com^
 ! 色情廣告 https://www.dcard.tw/f/talk/p/241555197
 ||cdn3reference.com^
 ||dailyprettygirls.page.link^
@@ -1043,9 +1032,6 @@
 ||taipecuteegirl.page.link^
 ||trh12trk.com^
 ||wonderful-marzipan-26038a.netlify.app^
-! 詐騙回報
-||jsholdings.com.tw^
-||dlyunkefu.net^
 ! 詐騙工作 https://www.dcard.tw/f/mood/p/241621133
 ||guangdji.com^
 ! 博弈 https://www.dcard.tw/f/anti_fraud/p/241556123
@@ -1064,9 +1050,6 @@
 ||shopeevip8.com^
 ! 詐騙賣藥 https://www.dcard.tw/f/talk/p/241567873
 ||xcnkjs.shop^
-! 詐騙回報
-||zwheqjrkjhr.com^
-||tradfiged.com^
 ! 詐騙投資 https://www.dcard.tw/f/anti_fraud/p/241573555
 ||dsheres.com^
 ! 詐騙電信 https://www.dcard.tw/f/anti_fraud/p/241573259
@@ -1088,11 +1071,6 @@
 ||asia-energyltdss.com^
 ! 詐騙購物
 ||myfelt.site^
-! 群友提供
-||bailiant.xyz^
-||xudkshop.com^
-||progynn.com^
-||ethpz.com^
 ! 防詐達人 https://www.dcard.tw/f/persona_drmessage/p/241607539
 ||uch-tw.cn^
 ||mibiee.com^
@@ -1121,8 +1099,6 @@
 ! 詐騙取貨 https://www.dcard.tw/f/buyonline/p/241618526
 ||7-11tw3.tech^
 /711-tw[0-9]+.tech/
-! 群友提供
-||goldstar.asia^
 ! 詐騙交友 https://www.dcard.tw/f/anti_fraud/p/241628822
 ||tasteofthelove.com^
 ! 詐騙購物網站
@@ -1138,15 +1114,6 @@
 ||pseth.com^
 ! Apple id 詐騙 https://www.dcard.tw/f/anti_fraud/p/241642703
 ||10tipstosellmyhome.com^
-! 群友提供
-||szfmm.com^
-||tokeriev.com^
-||amazon24.mobi^
-/amazon[0-9]+\.mobi/
-||mtrafficgeo.com^
-||paiatialdates.net^
-||fey.io^
-||e81.org^
 ! 詐騙郵局 https://www.dcard.tw/f/talk/p/241650952
 ||loihdr.vip^
 ! 詐騙購物平台 https://www.dcard.tw/f/anti_fraud/p/241653492
@@ -1182,9 +1149,6 @@
 ||wuht.net^
 ||vipstation.com.hk^
 ||xcdn.global^
-! 網友提供
-||etreqiog.com^
-||crmsynquotes.net^
 ! 詐騙網購 https://www.dcard.tw/f/anti_fraud/p/241658935
 ||aiubi.club^
 ||u-ho-tw.com^
@@ -1198,12 +1162,6 @@
 ! 汽車燃料稅詐騙 https://www.dcard.tw/f/anti_fraud/p/241674381
 ||lf732fk.vip^
 ||2255game.cn^
-! 網友提供
-||mimohunn.com^
-||u-ho-shop.com^
-||getrichweee.com^
-||miracle-mall.com^
-||vemmastarshop.com^
 ! 詐騙工作 https://www.dcard.tw/f/stock/p/241682080
 ||huidaolx.com^
 ! 詐騙中華電信 https://www.dcard.tw/f/mood/p/241675309
@@ -1300,8 +1258,6 @@
 ||i-post-tw.com^
 ! 詐騙代扣 https://www.dcard.tw/f/anti_fraud/p/241755105
 ||ebill-verify.top^
-! 網友提供 https://www.dcard.tw/f/persona_shutterhouboy/p/241426482
-||boneglobal.cc^
 ! 詐騙蝦皮 https://www.dcard.tw/f/anti_fraud/p/241758836
 ||shopee-tw4.tech^
 ! 詐騙購物 https://www.dcard.tw/f/anti_fraud/p/241760979
@@ -1316,3 +1272,14 @@
 ||www.marc-jacobs.com.tw^
 ! 詐騙郵局 https://www.dcard.tw/f/anti_fraud/p/241771060
 ||rhncb.xyz^
+! 詐騙開店 https://www.dcard.tw/f/mood/p/241771557
+||shop4hk.com^
+! 投資詐騙 https://www.dcard.tw/f/anti_fraud/p/241498038
+||aemda.com^
+! 詐騙工作 https://www.dcard.tw/f/talk/p/241774656
+||tdcairyers.com^
+! 詐騙商家 https://www.dcard.tw/f/talk/p/241775783
+||jdvps.shop^
+||wanlshop.com^
+! 詐騙商家 https://www.dcard.tw/f/ask/p/241776477
+||storemokfoofv.shop^
