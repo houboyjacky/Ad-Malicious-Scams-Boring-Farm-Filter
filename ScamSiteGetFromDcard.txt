@@ -1283,3 +1283,10 @@
 ||wanlshop.com^
 ! 詐騙商家 https://www.dcard.tw/f/ask/p/241776477
 ||storemokfoofv.shop^
+! 玉山簡訊詐騙 https://www.dcard.tw/f/anti_fraud/p/241780385
+||esunbank-check.top^
+! 詐騙投資 https://www.dcard.tw/f/anti_fraud/p/241780468
+||nutexs-ex.com^
+||mycurrency.net^
+! 詐騙稅金 https://www.dcard.tw/f/talk/p/241780576
+||wine12e.vip^
