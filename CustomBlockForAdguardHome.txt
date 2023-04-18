@@ -35,6 +35,7 @@
 ||11silo.com^
 ||1234fm.com^
 ||123mediax.com^
+||127hy34.top^
 ||1358yt.com^
 ||1396e.com^
 ||1396r.com^
@@ -751,6 +752,7 @@
 ||my-board.org^
 ||my5353.com^
 ||mycard520.com.tw^
+||mycurrency.net^
 ||myfee.site^
 ||myfelt.site^
 ||mygod.tw^
@@ -779,6 +781,7 @@
 ||noahpb.club^
 ||nslfs.shop^
 ||nstock.tw^
+||nutexs-ex.com^
 ||nutribio-expert.fr^
 ||nwths.shop^
 ||nxfga.com^
@@ -1007,6 +1010,7 @@
 ||tenclass.io^
 ||tenclass.net^
 ||terryfu.com^
+||tfhfinssra.com^
 ||tfporg.lt.acemlnb.com^
 ||thea.buzz^
 ||thejamestrades.com^
@@ -1153,6 +1157,7 @@
 ||widgetdata.tradingview.com^
 ||widoh.shop^
 ||win666.tw^
+||win68.cc^
 ||wiocdsd.world^
 ||wmtvn.com^
 ||wmydhpq.com^
