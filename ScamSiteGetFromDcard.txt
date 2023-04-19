@@ -1298,3 +1298,5 @@
 ||opw1ws.vip^
 ! 詐騙線上錢包 https://www.dcard.tw/f/talk/p/241791268
 ||uezmarktss.com^
+! 詐騙交易所 https://www.dcard.tw/f/anti_fraud/p/241749697
+||krakenoks.cc^

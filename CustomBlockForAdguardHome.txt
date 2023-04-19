@@ -15,6 +15,7 @@
 /gdf999.[a-z]+/
 /isnotdomain[0-9]+\.com/
 /long[0-9]\.net/
+/shopvip-?[a-z]{0-2}\.[a-z]+/
 /so[0-9]+\.com/
 /taiwan-[a-z]+\.(com|tw)/
 /www-?post-?gov-?tw\.sytes\.net/
@@ -243,6 +244,7 @@
 ||colegioquiropracticochile.cl^
 ||comfortableife.com^
 ||commine.^
+||compgoo.com^$important
 ||copmusionu.shop^
 ||copyrichacademy.com^
 ||cos.ap-guangzhou.myqcloud.com^
@@ -417,6 +419,7 @@
 ||fuilco.shop^
 ||fuilsi.shop^
 ||fun2chatx.xyz^
+||fundebug.cn^$important
 ||futra.football^
 ||futurefarm.bond^
 ||futuremoney138.weebly.com^
@@ -936,6 +939,12 @@
 ||shopmetw.weebly.com^
 ||shopping99.com^
 ||shopppkaojggdfg.store^
+||shopvip-jp.com^
+||shopvip-my.ltd^$important
+||shopvip-sg.com^$important
+||shopvip-tw.com^$important
+||shopvip.nl^$important
+||shopvip.us^$important
 ||shopxcuwhn.store^
 ||shortof.com^
 ||shtyw.shop^
