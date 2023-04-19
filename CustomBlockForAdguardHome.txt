@@ -244,7 +244,7 @@
 ||colegioquiropracticochile.cl^
 ||comfortableife.com^
 ||commine.^
-||compgoo.com^$important
+||compgoo.com^
 ||copmusionu.shop^
 ||copyrichacademy.com^
 ||cos.ap-guangzhou.myqcloud.com^
@@ -419,7 +419,7 @@
 ||fuilco.shop^
 ||fuilsi.shop^
 ||fun2chatx.xyz^
-||fundebug.cn^$important
+||fundebug.cn^
 ||futra.football^
 ||futurefarm.bond^
 ||futuremoney138.weebly.com^
@@ -510,6 +510,7 @@
 ||hese.shop^
 ||hfm.com^
 ||hhyy.asia^
+||hibuymall.com^
 ||hilda.buzz^
 ||hiplablas.com^
 ||histock1688.com^
@@ -554,6 +555,7 @@
 ||ig.com^
 ||iiil.io^
 ||iju888.com^
+||illumsfx.com^
 ||ils3x.shop^
 ||ilsaphaconpa.tk^
 ||imaster.club^
@@ -726,6 +728,7 @@
 ||metal52539.com^
 ||metal539.com^
 ||metaquote.site^
+||mf-888.com^
 ||mgjswq.site^
 ||mikecrm.com^
 ||miketong.net^
@@ -940,11 +943,11 @@
 ||shopping99.com^
 ||shopppkaojggdfg.store^
 ||shopvip-jp.com^
-||shopvip-my.ltd^$important
-||shopvip-sg.com^$important
-||shopvip-tw.com^$important
-||shopvip.nl^$important
-||shopvip.us^$important
+||shopvip-my.ltd^
+||shopvip-sg.com^
+||shopvip-tw.com^
+||shopvip.nl^
+||shopvip.us^
 ||shopxcuwhn.store^
 ||shortof.com^
 ||shtyw.shop^
