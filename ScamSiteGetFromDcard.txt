@@ -1313,3 +1313,5 @@
 ||yytmeet.com^
 ! 詐騙借貸 https://www.dcard.tw/f/money/p/241808812
 ||huaxin-borrow.com.tw^
+! 詐騙快遞 https://www.dcard.tw/f/anti_fraud/p/241811677
+||twaparcel-tracks.com^
