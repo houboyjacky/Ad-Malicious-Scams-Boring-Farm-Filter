@@ -1,0 +1,15 @@
+[Unit]
+Description=Line Bot Service
+After=network.target
+
+[Service]
+User=root
+# 需要修改位置
+WorkingDirectory=/home/user/linebot
+# 需要修改位置
+ExecStart=/usr/local/bin/gunicorn -c /home/user/linebot/gunicorn.conf.py CustomLineBot:app
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target

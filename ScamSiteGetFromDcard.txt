@@ -1302,3 +1302,13 @@
 ||krakenoks.cc^
 ! 詐騙FB https://www.dcard.tw/f/talk/p/241799774
 ||twfacebook.cyou^
+! 詐騙交友 https://www.dcard.tw/f/mood/p/241802487
+||missyoui.com^
+||nootlove.com^
+||uulovemeet.com^
+||gopapa.net^
+||oodear.net^
+||fastmeetu.com^
+||ppdatetw.com^
+||meeloveu.com^
+||yytmeet.com^
