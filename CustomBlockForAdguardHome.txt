@@ -23,7 +23,9 @@
 #||fontawesomes.com^
 #||pages-wildcard.weebly.com^
 #||phicdn.net^
+||*.bar^
 ||*.cyou^
+||*.icu^
 ||*.it^$denyallow=org.it|edu.it|com.it|gov.it|mitm.it
 ||*.ml^
 ||*.online^$denyallow=pestyle.online

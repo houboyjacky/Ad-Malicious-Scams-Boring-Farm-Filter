@@ -37,7 +37,6 @@
 ||shzpee-tw.com^
 ! 詐騙蝦皮
 /[a-z0-9]+xakcqzj\.cn/
-||*.bar^
 /shopee-[a-z0-9]+\.tw/
 ! 詐騙賺錢網站 https://www.dcard.tw/f/mood/p/239453488
 /[a-z0-9]+hotshop\.com/
@@ -54,7 +53,7 @@
 ! 問題網站
 ||chartoo.com^
 ! 詐騙蝦皮,專屬大陸域名 https://www.dcard.tw/f/buyonline/p/239586106
-||*.icu^
+||kdjh5s.icu^
 ! 詐騙信貸 https://www.dcard.tw/f/money/p/239532865
 ||[a-z0-9]+.ayju.tw^
 ! 包裹詐騙
