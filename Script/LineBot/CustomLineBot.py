@@ -19,7 +19,6 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 '''
-
 import os
 import json
 import tldextract
@@ -51,6 +50,7 @@ with open('setting.json', 'r') as f:
 # LINE 聊天機器人的基本資料
 line_bot_api = LineBotApi(setting['CHANNEL_ACCESS_TOKEN'])
 handler = WebhookHandler(setting['CHANNEL_SECRET'])
+rule = setting['RULE']
 
 def signal_handler(signal, frame):
     print('You pressed Ctrl+C!')
@@ -104,6 +104,30 @@ def is_blacklisted(user_text):
 def handle_message(event):
     # 讀取使用者傳來的文字訊息
     user_text = event.message.text.lower()
+
+    # 搜尋符合的字串
+    match = re.search(rule, user_text)
+
+    if match:
+        # 取得網址
+        url = match.group(1)
+
+        # 使用 tldextract 取得網域
+        extracted = tldextract.extract(url)
+        domain = extracted.domain
+        suffix = extracted.suffix
+
+        # 將網域和後綴名合併為完整網址
+        url = domain + "." + suffix
+
+        # 將網址寫入 NewScamWebsite.txt
+        with open("NewScamWebsite.txt", "a", encoding="utf-8") as f:
+            f.write(url + "\n")
+
+        # 提早執行更新
+        UpdateList.update_blacklist()
+        reply_text_message(event.reply_token, "成功完成")
+        return
 
     # 如果用戶輸入的網址沒有以 http 或 https 開頭，則不回應訊息
     if not user_text.startswith("http://") and not user_text.startswith("https://"):

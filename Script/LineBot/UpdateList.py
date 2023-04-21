@@ -26,12 +26,11 @@ import requests
 import schedule
 import time
 
-#BLACKLIST_FILE = "CombinationList.txt"
 COMBINATION_WEB_FILE = "CombinationWeb.txt"
 FILTER_DIR = "filter"
 MAX_DOWNLOAD_RETRIES = 3
 
-blacklist = set()
+blacklist = []
 
 def download_file(url):
     response = requests.get(url)
@@ -43,6 +42,7 @@ def download_file(url):
     with open(filename, "wb") as f:
         f.write(content)
     return filename
+
 
 def update_blacklist():
     global blacklist
@@ -64,23 +64,28 @@ def update_blacklist():
                 elif line.startswith('||0.0.0.0'):
                     line = line[9:]  # 去除"||0.0.0.0"開頭的文字
                     line = line.split('^')[0]  # 去除^以後的文字
-                    blacklist.add(line)
+                    blacklist.append(line)
                 elif line.startswith('||'):
                     line = line[2:]  # 去除||開頭的文字
                     line = line.split('^')[0]  # 去除^以後的文字
-                    blacklist.add(line)
+                    blacklist.append(line)
                 elif line.startswith('0.0.0.0 '):
                     line = line[8:]  # 去除"0.0.0.0 "開頭的文字
-                    blacklist.add(line)
+                    blacklist.append(line)
                 elif line.startswith('/'):
-                    blacklist.add(line)
+                    blacklist.append(line)
                 else:
                     continue  # 忽略該行文字
-    blacklist = sorted(list(blacklist))
-#    with open(BLACKLIST_FILE, "w", encoding="utf-8") as f:
-#        for line in blacklist:
-#            f.write(line)
-#            f.write("\n")
+
+    with open("NewScamWebsite.txt", "r") as f:
+        lines = f.readlines()
+        for line in lines:
+            domain = line.strip()
+            if not domain:
+                continue
+            blacklist.append(domain)
+
+    blacklist = sorted(list(set(blacklist)))
     print("Update blacklist finish!")
 
 # 初次執行更新黑名單
