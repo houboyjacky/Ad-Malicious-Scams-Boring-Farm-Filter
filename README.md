@@ -36,6 +36,10 @@ This site is blocked by other preset filter lists, "I" think it should be freed.
 "我"認為應該被封鎖<br/>
 "I" think it should be blocked.<br/>
 
+### CustomBlockTLDForAdguardHome.txt
+獨立自CustomBlockForAdguardHome.txt，作為最後過濾的手段。<br/>
+Standalone from CustomBlockForAdguardHome.txt as a last resort filter.<br/>
+
 ### ScamSiteForPetScams.txt
 From PetScams and PuppyScams .<br/>
 https://petscams.com/<br/>

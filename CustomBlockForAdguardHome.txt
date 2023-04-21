@@ -1,10 +1,8 @@
-! 國家網域封鎖 it、pl、ml
-! 詐騙網站常用網域封鎖 cyou、top、vip、online
 ! 過度引用 s3-symbol-logo.tradingview.com
 ! 過度引用 widgetdata.tradingview.com
 ! 過度引用 www.tradingview-widget.com
 ! 疑似詐騙或不良的網站
-! 觀察 xyz
+@@||pestyle.online^important
 /1396[a-z]\.com/
 /6[0Oo]{3}(?:gov)?\.tw/
 /amazon[0-9]+\.mobi/
@@ -20,7 +18,6 @@
 /so[0-9]+\.com/
 /taiwan-[a-z]+\.(com|tw)/
 /www-?post-?gov-?tw\.sytes\.net/
-#||*.xyz^
 #||fontawesomes.com^
 #||lihi.tv^
 #||lihi1.cc^
@@ -28,18 +25,10 @@
 #||lihi1.me^
 #||pages-wildcard.weebly.com^
 #||phicdn.net^
-||*.bar^
-||*.cyou^
-||*.icu^
-||*.it^$denyallow=org.it|edu.it|com.it|gov.it|mitm.it
-||*.ml^
-||*.online^$denyallow=pestyle.online
-||*.pl^$denyallow=org.pl|edu.pl|com.pl|gov.pl
-||*.top^
-||*.vip^
 ||00000255123135324.ml^
 ||0857online.net
 ||10goneviral.com^
+||11467.com^
 ||11ks.xyz^
 ||11silo.com^
 ||1234fm.com^
@@ -167,6 +156,7 @@
 ||bailiant.xyz^
 ||baixingnew.com^
 ||bakm.top^
+||baodan99.com^
 ||basffs.com^
 ||bastidevalbonne.com^
 ||bazolis.com^
@@ -922,6 +912,7 @@
 ||owo-owo.vip^
 ||oxfordclubtaiwan.com^
 ||oyn.at^
+||ozfhlr.shop^
 ||paiatialdates.net^
 ||paktormeet.com^
 ||payeshop.site^
@@ -942,6 +933,7 @@
 ||plmaxjun.com^
 ||plusonenative.com^
 ||point.top^
+||poolqkiqna.shop^
 ||poroak.com^
 ||pory.app^
 ||post-chunghwa-tw.app^
@@ -1010,6 +1002,7 @@
 ||rose2011kt.taplink.ws^
 ||rotteshop-vip.com^
 ||royalgaming777.com^
+||rqatg.com^
 ||rscga.com^
 ||ruihejade.com^
 ||rvegov.com^
@@ -1193,6 +1186,7 @@
 ||turborstock.com^
 ||turich888.com^
 ||tw-beaxfun.fun^
+||tw-gupiao.com^
 ||tw-gupiao.shop^
 ||tw-gushi.shop^
 ||tw-news.shop^
@@ -1260,6 +1254,8 @@
 ||uhongm.site^
 ||ukwwx.com^
 ||uncleforex.pro^
+||uqypgol.shop^
+||uqypgol.shop^
 ||uradni.shop^
 ||usagoodsale.com^
 ||user132794.psee.io^
@@ -1333,6 +1329,8 @@
 ||wfz.buzz^
 ||whdcnc.shop^
 ||wholesaler-mail.com^
+||wiberu.shop^
+||wiberu.shop^
 ||widgetdata.tradingview.com^
 ||widoh.shop^
 ||wildernbus1.live^

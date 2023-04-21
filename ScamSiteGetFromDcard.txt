@@ -1,23 +1,4 @@
 ! 資料來自Dcard文章
-! --------------------------------
-! 正規化語言
-! 顯示原義字 ^ $ ( ) * + ? . [ \ { |
-! ^ 字串開始位置
-! $ 字串結束位置
-! * 0次或多次
-! + 一次或多次
-! ? 0次或0次
-! {n} n為非負整數，是出現n次 o{2}，Boooo符合 Boo符合 Bo不符合
-! {n,} n為非負整數，至少出現n次 o{2,}，Boooo符合 Boo符合 Bo不符合，{1,} 等同+ {0,}等同*
-! {n,m} nm為非負整數，m大於等於n，出現次數至少為n，最大為m，o{1,3}，foooood符合，fod符合，fd不符合，{0,1}等同?
-! \d -> [0-9]
-! \D -> [^0-9]
-! . 除了\r \n之外的字元
-! \s 符合任何空白字元，包括空格、制表符、換頁符等等。等價於[ \f\n\r\t\v]
-! \S 符合任何非空白字元。等價於[^ \f\n\r\t\v]
-! \w 符合包括底線的任何單詞字元。等價於「[A-Za-z0-9_]」
-! \W 符合任何非單詞字元。等價於「[^A-Za-z0-9_]」
-! =================================
 ! 詐騙個資 https://www.dcard.tw/f/persona_drmessage/p/239646609
 /[a-z0-9]+gov.(tw|xyz|me|tv|store|shop|com)/
 ||bhnaku.xyz^
@@ -1315,3 +1296,14 @@
 ||huaxin-borrow.com.tw^
 ! 詐騙快遞 https://www.dcard.tw/f/anti_fraud/p/241811677
 ||twaparcel-tracks.com^
+! 詐騙虛擬幣 https://www.dcard.tw/f/blockchain/p/241813836
+||ethersafe.finance^
+||esadmin123.com^
+||ethersave.software^
+! 詐騙繳稅 https://www.dcard.tw/f/talk/p/241817593
+||in203.vip^
+! 買賣詐騙 https://www.dcard.tw/f/anti_fraud/p/241816802
+||gwxc5656.com^
+||user213388.psee.io^
+! 詐騙繳稅 https://www.dcard.tw/f/talk/p/241818169
+||ilor15.vip^
