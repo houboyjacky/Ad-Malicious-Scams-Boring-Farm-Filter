@@ -445,6 +445,7 @@
 ||fjxhwk.shop^
 ||fk677.com^
 ||flyhighway.xyz^
+||flylock.world^
 ||fnline.info^
 ||fnline.vip^
 ||fnline.xyz^
@@ -542,6 +543,7 @@
 ||gxfc307.com^
 ||gzjuning.com^
 ||gzjysd.com^
+||hagjjrtw.com^
 ||hardlywcoxpr.com^
 ||hass.win^
 ||hazz.win^
@@ -778,6 +780,8 @@
 ||lrrwo.xyz^
 ||lttgov.tv^
 ||luckfly.com^
+||lucklyfly.com^
+||luckyc.at^
 ||lxfssb.com^
 ||ly200-cdn.com^
 ||lyqdsb.com^
@@ -813,6 +817,7 @@
 ||mises.shop^
 ||mizatio.com^
 ||mkfsa.shop^
+||mnolews.weebly.com^
 ||mobilesaustralia.com^
 ||mohwgovl.com^
 ||mol-tw.com^
@@ -949,6 +954,7 @@
 ||progynn.com^
 ||promotinglearning.com^
 ||protrumpreport.lt.acemlnb.com^
+||psdky.online^
 ||psfcs.com^
 ||psuha.shop^
 ||puzzl.site^
@@ -1193,6 +1199,7 @@
 ||tw-news.shop^
 ||tw-redpacket-51.com^
 ||tw-stocks.com^
+||tw-tescoshop.com^
 ||tw-track.com^
 ||tw.fetnare.cn^
 ||tw1988.link^
@@ -1233,6 +1240,7 @@
 ||twstock1688.xyz^
 ||twstocke.com^
 ||twstocknews.com^
+||twswahewa.com^
 ||twtla.me^
 ||twtouzi.shop^
 ||twtwdfjgov.xyz^
@@ -1255,7 +1263,6 @@
 ||uhongm.site^
 ||ukwwx.com^
 ||uncleforex.pro^
-||uqypgol.shop^
 ||uqypgol.shop^
 ||uradni.shop^
 ||usagoodsale.com^
@@ -1330,7 +1337,6 @@
 ||wfz.buzz^
 ||whdcnc.shop^
 ||wholesaler-mail.com^
-||wiberu.shop^
 ||wiberu.shop^
 ||widgetdata.tradingview.com^
 ||widoh.shop^

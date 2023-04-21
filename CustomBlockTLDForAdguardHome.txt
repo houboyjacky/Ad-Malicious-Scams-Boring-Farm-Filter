@@ -3,13 +3,14 @@
 ! 封鎖觀察 xyz
 ! 封鎖HaGeZi's The World's Most Abused TLD 已定義bar、online、ml
 ! TLD直接封鎖(建議放在Adguard Home最末端)
-#||*.bar^
-#||*.ml^
-#||*.online^$denyallow=pestyle.online 
-#||*.xyz^
+#||bar^
+#||ml^
+#||*.online^$denyallow=pestyle.online
+#||xyz^
+||*.at^
 ||*.cyou^
 ||*.icu^
-||*.it^$denyallow=org.it|edu.it|com.it|gov.it|mitm.it
-||*.pl^$denyallow=org.pl|edu.pl|com.pl|gov.pl
+||it^$denyallow=org.it|edu.it|com.it|gov.it|mitm.it
+||pl^$denyallow=org.pl|edu.pl|com.pl|gov.pl
 ||*.top^
 ||*.vip^

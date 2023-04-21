@@ -19,69 +19,76 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 '''
+
+import hashlib
+import os
 import requests
 import schedule
 import time
 
-blacklist = []
+#BLACKLIST_FILE = "CombinationList.txt"
+COMBINATION_WEB_FILE = "CombinationWeb.txt"
+FILTER_DIR = "filter"
+MAX_DOWNLOAD_RETRIES = 3
 
-def updateBlackList():
+blacklist = set()
+
+def download_file(url):
+    response = requests.get(url)
+    if response.status_code != 200:
+        return None
+    content = response.content
+    sha1_hash = hashlib.sha1(content).hexdigest()
+    filename = os.path.join(FILTER_DIR, sha1_hash)
+    with open(filename, "wb") as f:
+        f.write(content)
+    return filename
+
+def update_blacklist():
     global blacklist
-    # 讀取網址檔案
-    with open("CombinationWeb.txt", "r") as f:
+    with open(COMBINATION_WEB_FILE, "r") as f:
         urls = f.readlines()
-
-    # 分析網頁內容
     for url in urls:
         url = url.strip()  # 去除換行符號
-
-        # 忽略非法網址
         if not url.startswith('http'):
             continue
-
-        # 透過requests套件發送GET請求
-        response = requests.get(url)
-        response.encoding = 'utf-8'  # 使用UTF-8編碼讀取網頁
-        content = response.text.split('\n')
-
-        # 分析網頁內容
-        for line in content:
-            line = line.strip().lower()  # 轉換為小寫
-            if line.startswith('/^'):
-                continue  # 略過此行
-            elif line.startswith('||0.0.0.0'):
-                line = line[9:]  # 去除"||0.0.0.0"開頭的文字
-                line = line.split('^')[0]  # 去除^以後的文字
-                blacklist.append(line)
-            elif line.startswith('||'):
-                line = line[2:]  # 去除||開頭的文字
-                line = line.split('^')[0]  # 去除^以後的文字
-                blacklist.append(line)
-            elif line.startswith('0.0.0.0 '):
-                line = line[8:]  # 去除"0.0.0.0 "開頭的文字
-                blacklist.append(line)
-            elif line.startswith('/'):
-                blacklist.append(line)
-            else:
-                continue  # 忽略該行文字
-
-    # 整理網址，透過ASCII排序並去除重複
-    blacklist = sorted(list(set(blacklist)))
-
-    # 將內容寫入CombinationList.txt檔案
-    with open("CombinationList.txt", "w", encoding="utf-8") as f:
-        for line in blacklist:
-            f.write(line)
-            f.write("\n")
-    print("Update BackList Finish!")
+        filename = download_file(url)
+        if not filename:
+            continue
+        with open(filename, "r", encoding="utf-8") as f:
+            lines = f.readlines()
+            for line in lines:
+                line = line.strip().lower()  # 轉換為小寫
+                if line.startswith('/^'):
+                    continue  # 略過此行
+                elif line.startswith('||0.0.0.0'):
+                    line = line[9:]  # 去除"||0.0.0.0"開頭的文字
+                    line = line.split('^')[0]  # 去除^以後的文字
+                    blacklist.add(line)
+                elif line.startswith('||'):
+                    line = line[2:]  # 去除||開頭的文字
+                    line = line.split('^')[0]  # 去除^以後的文字
+                    blacklist.add(line)
+                elif line.startswith('0.0.0.0 '):
+                    line = line[8:]  # 去除"0.0.0.0 "開頭的文字
+                    blacklist.add(line)
+                elif line.startswith('/'):
+                    blacklist.add(line)
+                else:
+                    continue  # 忽略該行文字
+    blacklist = sorted(list(blacklist))
+#    with open(BLACKLIST_FILE, "w", encoding="utf-8") as f:
+#        for line in blacklist:
+#            f.write(line)
+#            f.write("\n")
+    print("Update blacklist finish!")
 
 # 初次執行更新黑名單
-updateBlackList()
-
-# 定時排程，每一小時執行一次 updateBlackList()
-schedule.every(1).hours.do(updateBlackList)
+update_blacklist()
 
 def run_schedule():
+    # 定時排程，每一小時執行一次 update_blacklist()
+    schedule.every(1).hours.do(update_blacklist)
     while True:
         schedule.run_pending()
         time.sleep(60)
