@@ -72,3 +72,6 @@
 !
 ! Yahoo! 新聞影片
 @@||edgecast-vod.yahoo.net
+!
+! 技術網站
+@@||blog.panghai.top^$important
