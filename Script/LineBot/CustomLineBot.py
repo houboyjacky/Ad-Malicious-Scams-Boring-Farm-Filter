@@ -25,6 +25,7 @@ import tldextract
 import re
 import threading
 import signal
+import logging
 # pip install schedule tldextract flask line-bot-sdk
 
 # 在此處引入UpdateList.py，並執行其中的任務
@@ -36,6 +37,7 @@ from linebot.exceptions import InvalidSignatureError
 from linebot.models import MessageEvent, TextMessage, TextSendMessage
 from urllib.parse import urlparse
 from UpdateList import blacklist
+from logging.handlers import TimedRotatingFileHandler
 
 app = Flask(__name__)
 
@@ -50,13 +52,30 @@ with open('setting.json', 'r') as f:
 # LINE 聊天機器人的基本資料
 line_bot_api = LineBotApi(setting['CHANNEL_ACCESS_TOKEN'])
 handler = WebhookHandler(setting['CHANNEL_SECRET'])
-rule = setting['RULE']
+rule1 = setting['RULE1']
+admins = setting['ADMIN']
+NEW_SCAM_WEBSITE = setting['BLACKLIST']
+NEW_SCAM_WEBSITE_FOR_ADG = setting['BLACKLISTFORADG']
+LOGFILE = setting['LOGFILE']
 
-NEW_SCAM_WEBSITE = "NewScamWebsite.txt"
-NEW_SCAM_WEBSITE_FOR_ADG = "NewScamWebsiteForAdguard.txt"
+# 設定logger
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.INFO)
+
+# 設定其格式
+log_formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
+
+# 設定TimedRotatingFileHandler
+loghandler = TimedRotatingFileHandler(LOGFILE, when='midnight', interval=1, backupCount=7)
+loghandler.setFormatter(log_formatter)
+logger.addHandler(loghandler)
+
+# 清除7天以前的日誌
+loghandler.suffix = "%Y-%m-%d"
+loghandler.extMatch = re.compile(r"^\d{4}-\d{2}-\d{2}$")
+loghandler.doRollover()
 
 def signal_handler(signal, frame):
-    print('You pressed Ctrl+C!')
     os._exit(0)
 
 # 當 LINE 聊天機器人接收到「訊息事件」時，進行回應
@@ -70,7 +89,7 @@ def callback():
         abort(400)
     return 'OK'
 
-@app.route('/NewScamWebsiteForAdguard.txt')
+@app.route('/BlackListForAdguard.txt')
 def download_file():
     return Response(open(NEW_SCAM_WEBSITE_FOR_ADG, "rb"), mimetype="text/plain")
 
@@ -109,36 +128,43 @@ def is_blacklisted(user_text):
 # 每當收到 LINE 聊天機器人的訊息時，觸發此函式
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
+    global logger
+    # 取得發訊者的 ID
+    user_id = event.source.user_id
+    logger.info('UserID = '+ event.source.user_id)
+
     # 讀取使用者傳來的文字訊息
     user_text = event.message.text.lower()
+    logger.info('UserMessage = '+ event.message.text)
 
     # 搜尋符合的字串
-    match = re.search(rule, user_text)
+    match = re.search(rule1, user_text)
 
-    if match:
-        # 取得網址
-        url = match.group(1)
+    if user_id in admins:
+        if match:
+            # 取得網址
+            url = match.group(1)
 
-        # 使用 tldextract 取得網域
-        extracted = tldextract.extract(url)
-        domain = extracted.domain
-        suffix = extracted.suffix
+            # 使用 tldextract 取得網域
+            extracted = tldextract.extract(url)
+            domain = extracted.domain
+            suffix = extracted.suffix
 
-        # 將網域和後綴名合併為完整網址
-        url = domain + "." + suffix
+            # 將網域和後綴名合併為完整網址
+            url = domain + "." + suffix
 
-        # 將網址寫入 NewScamWebsite.txt
-        with open(NEW_SCAM_WEBSITE, "a", encoding="utf-8") as f:
-            f.write(url + "\n")
+            # 將網址寫入 NewScamWebsite.txt
+            with open(NEW_SCAM_WEBSITE, "a", encoding="utf-8") as f:
+                f.write(url + "\n")
 
-        # 將網址寫入 NewScamWebsite.txt
-        with open(NEW_SCAM_WEBSITE_FOR_ADG, "a", encoding="utf-8") as f:
-            f.write("||"+ url + "^\n")
+            # 將網址寫入 NewScamWebsite.txt
+            with open(NEW_SCAM_WEBSITE_FOR_ADG, "a", encoding="utf-8") as f:
+                f.write("||"+ url + "^\n")
 
-        # 提早執行更新
-        UpdateList.update_blacklist()
-        reply_text_message(event.reply_token, "成功完成")
-        return
+            # 提早執行更新
+            UpdateList.update_blacklist()
+            reply_text_message(event.reply_token, "成功完成")
+            return
 
     # 如果用戶輸入的網址沒有以 http 或 https 開頭，則不回應訊息
     if not user_text.startswith("http://") and not user_text.startswith("https://"):
@@ -152,9 +178,9 @@ def handle_message(event):
 
     #判斷網站
     if is_blacklisted(user_text):
-        rmessage = "你所輸入的網址\n「" + user_text + "」\n被判定是詐騙／可疑網站\n請勿相信此網站。\n若認為誤通報，請補充描述\n感恩。"
+        rmessage = "你所輸入的網址\n「" + user_text + "」\n被判定是詐騙／可疑網站\n請勿相信此網站。\n若認為誤通報，請補充描述\n感恩"
     else:
-        rmessage = "目前資料庫查詢不到\n敬請小心謹慎\n若認為是有問題的網站\n請補充描述\n放入相關網站、連結、截圖圖等\n協助考證\n感恩。"
+        rmessage = "目前資料庫查詢不到\n敬請小心謹慎\n若認為是有問題的網站\n請補充描述\n放入相關網站、連結、截圖圖等\n協助考證\n感恩"
 
     reply_text_message(event.reply_token, rmessage)
 

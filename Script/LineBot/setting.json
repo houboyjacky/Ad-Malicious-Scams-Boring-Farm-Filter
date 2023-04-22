@@ -1,7 +1,11 @@
 {
+    "ADMIN":"",
+    "BLACKLIST":"",
+    "BLACKLISTFORADG":"",
+    "CERT":"",
     "CHANNEL_ACCESS_TOKEN":"",
     "CHANNEL_SECRET":"",
-    "CERT":"",
+    "LOGFILE":"",
     "PRIVKEY":"",
-    "RULE":""
+    "RULE1":""
 }
