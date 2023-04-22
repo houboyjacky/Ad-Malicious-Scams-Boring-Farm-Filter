@@ -37,13 +37,30 @@ def download_file(url):
     response = requests.get(url)
     if response.status_code != 200:
         return None
-    content = response.content
-    sha1_hash = hashlib.sha1(content).hexdigest()
-    filename = os.path.join(FILTER_DIR, sha1_hash)
-    with open(filename, "wb") as f:
-        f.write(content)
-    return filename
 
+    content = response.content
+    # 使用 url 的最後一部分作為檔名
+    filename = os.path.join(FILTER_DIR, url.split("/")[-1])
+
+    # 如果檔案不存在，則直接下載
+    if not os.path.exists(filename):
+        with open(filename, "wb") as f:
+            f.write(content)
+        return filename
+
+    # 如果檔案已存在，則比對雜湊值
+    with open(filename, "rb") as f:
+        existing_content = f.read()
+    existing_hash = hashlib.sha1(existing_content).hexdigest()
+    new_hash = hashlib.sha1(content).hexdigest()
+    if existing_hash != new_hash:
+        # 雜湊值不同，代表內容有更新，需要下載
+        with open(filename, "wb") as f:
+            f.write(content)
+        return filename
+
+    # 雜湊值相同，代表檔案已經是最新的，不需要下載
+    return filename
 
 def update_blacklist():
     global blacklist
