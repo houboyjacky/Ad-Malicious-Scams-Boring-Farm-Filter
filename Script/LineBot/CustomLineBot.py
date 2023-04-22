@@ -30,7 +30,7 @@ import signal
 # 在此處引入UpdateList.py，並執行其中的任務
 import UpdateList
 
-from flask import Flask, request, abort
+from flask import Flask, Response, request, abort, send_file
 from linebot import LineBotApi, WebhookHandler
 from linebot.exceptions import InvalidSignatureError
 from linebot.models import MessageEvent, TextMessage, TextSendMessage
@@ -52,6 +52,9 @@ line_bot_api = LineBotApi(setting['CHANNEL_ACCESS_TOKEN'])
 handler = WebhookHandler(setting['CHANNEL_SECRET'])
 rule = setting['RULE']
 
+NEW_SCAM_WEBSITE = "NewScamWebsite.txt"
+NEW_SCAM_WEBSITE_FOR_ADG = "NewScamWebsiteForAdguard.txt"
+
 def signal_handler(signal, frame):
     print('You pressed Ctrl+C!')
     os._exit(0)
@@ -66,6 +69,10 @@ def callback():
     except InvalidSignatureError:
         abort(400)
     return 'OK'
+
+@app.route('/NewScamWebsiteForAdguard.txt')
+def download_file():
+    return Response(open(NEW_SCAM_WEBSITE_FOR_ADG, "rb"), mimetype="text/plain")
 
 def check_url(url):
     if not url.startswith('http') and not url.startswith('https'):
@@ -121,8 +128,12 @@ def handle_message(event):
         url = domain + "." + suffix
 
         # 將網址寫入 NewScamWebsite.txt
-        with open("NewScamWebsite.txt", "a", encoding="utf-8") as f:
+        with open(NEW_SCAM_WEBSITE, "a", encoding="utf-8") as f:
             f.write(url + "\n")
+
+        # 將網址寫入 NewScamWebsite.txt
+        with open(NEW_SCAM_WEBSITE_FOR_ADG, "a", encoding="utf-8") as f:
+            f.write("||"+ url + "^\n")
 
         # 提早執行更新
         UpdateList.update_blacklist()
@@ -155,4 +166,4 @@ if __name__ == "__main__":
     update_thread.start()
 
     # 開啟 LINE 聊天機器人的 Webhook 伺服器
-    app.run(host='0.0.0.0', port=8443, ssl_context=(setting['CERT'], setting['PRIVKEY']))
+    app.run(host='0.0.0.0', port=8443, ssl_context=(setting['CERT'], setting['PRIVKEY']), threaded=True)

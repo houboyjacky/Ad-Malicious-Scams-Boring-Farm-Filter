@@ -27,6 +27,7 @@ import schedule
 import time
 
 COMBINATION_WEB_FILE = "CombinationWeb.txt"
+NEW_SCAM_WEBSITE = "NewScamWebsite.txt"
 FILTER_DIR = "filter"
 MAX_DOWNLOAD_RETRIES = 3
 
@@ -77,7 +78,7 @@ def update_blacklist():
                 else:
                     continue  # 忽略該行文字
 
-    with open("NewScamWebsite.txt", "r") as f:
+    with open(NEW_SCAM_WEBSITE, "r") as f:
         lines = f.readlines()
         for line in lines:
             domain = line.strip()

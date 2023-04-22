@@ -1312,6 +1312,6 @@
 ! 詐騙電信 https://www.dcard.tw/f/anti_fraud/p/241812247
 ||morbleon.vip^
 ||oiujnjnuu.top^
-! 貸款詐騙 https://www.dcard.tw/f/anti_fraud/p/241821972$important
-!||hf7.tw^$important
-!||majipay.com.tw^$important
+! 貸款詐騙 https://www.dcard.tw/f/anti_fraud/p/241821972
+||hf7.tw^
+||majipay.com.tw^
