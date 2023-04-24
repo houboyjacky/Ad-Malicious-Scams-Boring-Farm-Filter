@@ -32,7 +32,7 @@ import time
 # 在此處引入UpdateList.py，並執行其中的任務
 import UpdateList
 
-from flask import Flask, Response, request, abort, send_file
+from flask import Flask, Response, request, abort
 from linebot import LineBotApi, WebhookHandler
 from linebot.exceptions import InvalidSignatureError
 from linebot.models import MessageEvent, TextMessage, TextSendMessage
@@ -126,6 +126,9 @@ def is_blacklisted(user_text):
         elif "*" in line:
             regex = line.replace("*", ".+")
             if re.fullmatch(regex, domain + "." + suffix):
+                # 特別有*號規則直接可以寫入Adguard規則
+                with open(NEW_SCAM_WEBSITE_FOR_ADG, "a", encoding="utf-8") as f:
+                    f.write("||"+ domain + "." + suffix + "^\n")
                 return True
         elif domain + "." + suffix == line:
             return True

@@ -39,6 +39,8 @@
 *://*.atsit.in/*
 *://*.attosconsultoria.com.br/*
 *://*.autowitzory.pl/*
+*://*.auxshop.com/*
+*://*.aver.com/*
 *://*.axel-chevre.fr/*
 *://*.ayurveda-massage-erlangen.de/*
 *://*.balance4you.ch/*
@@ -56,6 +58,7 @@
 *://*.blessyourcart.org/*
 *://*.blogsbodasdeisabel.com/*
 *://*.boblo.eu/*
+*://*.bodogfights.com/*
 *://*.book4kids.ru/*
 *://*.breakfast2go.online/*
 *://*.bremancitywallcross.nl/*
@@ -64,6 +67,7 @@
 *://*.bughy.it/*
 *://*.buhsovetnik48.ru/*
 *://*.bureaumeerman.nl/*
+*://*.buscatorino.it/*
 *://*.buzzhand.com/*
 *://*.buzzhand.net/*
 *://*.buzzhand.org/*
@@ -99,6 +103,7 @@
 *://*.codertw.com/*
 *://*.coiffeur-luthern.ch/*
 *://*.congresomedicosjubilados-sevilla2022.es/*
+*://*.countrybank.com/*
 *://*.countryproblemlots.de/*
 *://*.croceverdefaggiano.it/*
 *://*.cubicongardens.sk/*
@@ -127,14 +132,17 @@
 *://*.daisycode.ca/*
 *://*.damn.wiki/*
 *://*.dedsec.wiki/*
+*://*.detsad23samara.ru/*
 *://*.di02.biz/*
 *://*.diamond-bs.de/*
 *://*.directgrillage.fr/*
+*://*.dniprorada.gov.ua/*
 *://*.dpncostruzionigenerali.it/*
 *://*.dradvice.asia/*
 *://*.dragon-gifts.ru/*
 *://*.dreamspub.fr/*
 *://*.each.wiki/*
+*://*.easleychamber.net/*
 *://*.easy-esthetique.fr/*
 *://*.easyfordog.de/*
 *://*.ecfs2017.ch/*
@@ -157,6 +165,7 @@
 *://*.faseood.co/*
 *://*.fbiavip.com/*
 *://*.febeltigg.live/*
+*://*.feedbackhub.fun/*
 *://*.festadeltortello.it/*
 *://*.fin-x.it/*
 *://*.find-topaward-here.life/*
@@ -168,6 +177,7 @@
 *://*.fortalsa.co/*
 *://*.freak-show.fr/*
 *://*.freejobalerts24.com/*
+*://*.freeoffice.com/*
 *://*.fubaca.de/*
 *://*.fuehrenplus.de/*
 *://*.futbolowo.pl/*
@@ -245,6 +255,8 @@
 *://*.kalipso.sk/*
 *://*.kam-fuer-kmu.ch/*
 *://*.kbt-duesseldorf.de/*
+*://*.keepgame.ru/*
+*://*.keizai.biz/*
 *://*.kirche-halsdorf.de/*
 *://*.kknews.cc/*
 *://*.km-bueroservice.de/*
@@ -268,6 +280,7 @@
 *://*.ledita.lt/*
 *://*.leuttonpostle.com/*
 *://*.lexiscn.com/*
+*://*.lezhin.com/*
 *://*.liberix.es/*
 *://*.link-usa.jp/*
 *://*.listos-shop.fr/*
@@ -306,6 +319,7 @@
 *://*.mlb-gmbh.de/*
 *://*.mo08.biz/*
 *://*.mo13.biz/*
+*://*.moneydj.com/*
 *://*.moniques-fotografie.nl/*
 *://*.moptt.tw/*
 *://*.morethan.fi/*
@@ -314,6 +328,7 @@
 *://*.mss-antikspielzeug-onlineshop.de/*
 *://*.mudrsmejkalova.cz/*
 *://*.muttonisa.ch/*
+*://*.myendnoteweb.com/*
 *://*.mypresentsshop.de/*
 *://*.mystickah.fr/*
 *://*.na-madagaskar.sk/*
@@ -348,6 +363,7 @@
 *://*.pamiecislawka.pl/*
 *://*.pandaearth.online/*
 *://*.parnassen.se/*
+*://*.pcgameslab.net/*
 *://*.peekme.cc/*
 *://*.peoplecontent.de/*
 *://*.pergift.online/*
@@ -359,6 +375,7 @@
 *://*.placestostay.im/*
 *://*.platformduurzaamfryslan.nl/*
 *://*.plexat-forum.nl/*
+*://*.pokeringx.com/*
 *://*.porscheclubtirol.at/*
 *://*.pp.ua/*
 *://*.pqnn.cc/*
@@ -404,6 +421,7 @@
 *://*.richter-aircraft.de/*
 *://*.ristorantelotreganoferrara.it/*
 *://*.ritualinespaslaugos.lt/*
+*://*.robtex.com/*
 *://*.rockfitness.cz/*
 *://*.roekhorst.nl/*
 *://*.ronellotoplastiken.de/*
