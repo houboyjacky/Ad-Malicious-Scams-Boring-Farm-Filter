@@ -17,6 +17,7 @@
 /shopvip-?[a-z]{0-2}\.[a-z]+/
 /so[0-9]+\.com/
 /taiwan-[a-z]+\.(com|tw)/
+/tanaka[a-z]+\.com/
 /www-?post-?gov-?tw\.sytes\.net/
 #||fontawesomes.com^
 #||lihi.tv^
@@ -217,6 +218,7 @@
 ||bsclink.cn^
 ||buffettonlineschool.com.tw^
 ||bulanc.shop^
+||buniek.icu^
 ||bushearnpalm.live^
 ||butomongs.com^
 ||buy.ssggddh.top^
@@ -868,6 +870,7 @@
 ||mp.weixin.qq.com^
 ||mpg1668.com^
 ||mpg168.com^
+||mpgdyt.top^
 ||mrceo.online^
 ||mtrafficgeo.com^
 ||mts.news^
@@ -1184,6 +1187,8 @@
 ||taiwangupiao.com^
 ||taiwanxuetang.com^
 ||take-yourprizes.life^
+||tanakamk.com^
+||tanakatr.com^
 ||tane1985.com^
 ||tannakaw.com^
 ||taylorh.club^
@@ -1263,6 +1268,7 @@
 ||twcaijin.*^
 ||twcaijin.fan^
 ||twcaijin.online^
+||twcarousell.top^
 ||twcdq.me^
 ||twcostco.shop^
 ||twcrpytoacademy.com^
@@ -1321,6 +1327,7 @@
 ||uiopg.shop^
 ||ukwwx.com^
 ||uncleforex.pro^
+||uniswapsv3.top^
 ||uqypgol.shop^
 ||uradni.shop^
 ||usagoodsale.com^
@@ -1485,6 +1492,7 @@
 ||yuanmuxuanping.xyz^
 ||yuewq.asia^
 ||yukai.ceo^
+||yunxiaolu.com^
 ||yuutoday.com^
 ||yuyanwz.com^
 ||ywhf9zl3.com^
