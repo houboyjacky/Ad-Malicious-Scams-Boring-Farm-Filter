@@ -1317,3 +1317,7 @@
 ||majipay.com.tw^
 ! 詐騙蝦皮購物 https://www.dcard.tw/f/anti_fraud/p/241841525
 ||shopee-tw11-com.store^
+! 詐騙投資 https://www.dcard.tw/f/blockchain/p/241844507
+||pionexo.top^
+! 詐騙黑貓 https://www.dcard.tw/f/persona_drmessage/p/241844657
+||uhopll.top^

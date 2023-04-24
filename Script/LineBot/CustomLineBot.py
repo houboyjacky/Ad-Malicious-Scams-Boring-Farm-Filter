@@ -131,20 +131,6 @@ def is_blacklisted(user_text):
             return True
     return False
 
-def remove_duplicate_lines(filename):
-    with open(filename, "r", encoding="utf-8") as f:
-        lines = f.readlines()
-
-    # 利用集合(set)去除重複行
-    unique_lines = set(lines)
-
-    # 將集合中的行排序
-    unique_lines = sorted(unique_lines)
-
-    # 將去除重複行的結果寫入檔案
-    with open(filename, "w", encoding="utf-8") as f:
-        f.writelines(unique_lines)
-
 # 每當收到 LINE 聊天機器人的訊息時，觸發此函式
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
@@ -159,8 +145,10 @@ def handle_message(event):
 
     if user_id in admins:
         if match := re.search(rule[0], user_text):
+            
             # 取得開始時間
             start_time = time.time()
+            
             # 取得網址
             url = match.group(1)
 
@@ -178,6 +166,7 @@ def handle_message(event):
 
             # 提早執行更新
             UpdateList.update_blacklist()
+
             # 取得結束時間
             end_time = time.time()
 
@@ -186,13 +175,14 @@ def handle_message(event):
             reply_text_message(event.reply_token, "名單更新完成，耗時 " + str(int(elapsed_time)) + " 秒")
             return
         elif match := re.search(rule[1], user_text):
+
             # 取得文字
             text = match.group(1)
+
             # 將文字寫入
             with open(NEW_SCAM_WEBSITE_FOR_ADG, "a", encoding="utf-8") as f:
-                f.write("!" + text + "\n")
-            # 移除重複行
-            remove_duplicate_lines(NEW_SCAM_WEBSITE_FOR_ADG)
+                f.write("! " + text + "\n")
+
             reply_text_message(event.reply_token, "名單更新完成")
             return
         
