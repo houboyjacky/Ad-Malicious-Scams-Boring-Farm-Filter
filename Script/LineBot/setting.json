@@ -1,11 +1,11 @@
 {
     "ADMIN":"",
-    "BLACKLIST":"",
     "BLACKLISTFORADG":"",
     "CERT":"",
     "CHANNEL_ACCESS_TOKEN":"",
     "CHANNEL_SECRET":"",
     "LOGFILE":"",
     "PRIVKEY":"",
-    "RULE1":""
+    "RULE":"",
+    "SCAM_WEBSITE_LIST":""
 }

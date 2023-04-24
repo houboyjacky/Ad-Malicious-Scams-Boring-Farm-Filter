@@ -26,6 +26,7 @@ import re
 import threading
 import signal
 import logging
+import time
 # pip install schedule tldextract flask line-bot-sdk
 
 # 在此處引入UpdateList.py，並執行其中的任務
@@ -42,19 +43,24 @@ from logging.handlers import TimedRotatingFileHandler
 app = Flask(__name__)
 
 # 讀取設定檔
+# ADMIN => Linebot Admin
+# BLACKLISTFORADG => Blacklist for Adguard Home Download
+# CERT => Lets Encrypt Certificate Path
 # CHANNEL_ACCESS_TOKEN => Linebot Token
 # CHANNEL_SECRET => Linebot Secret
-# CERT => Lets Encrypt Certificate Path
+# LOGFILE => Linebot Log Path
 # PRIVKEY => Lets Encrypt Private Key Path
+# RULE => Reply message by rule
+# SCAM_WEBSITE_LIST => Download blackliste
+
 with open('setting.json', 'r') as f:
     setting = json.load(f)
 
 # LINE 聊天機器人的基本資料
 line_bot_api = LineBotApi(setting['CHANNEL_ACCESS_TOKEN'])
 handler = WebhookHandler(setting['CHANNEL_SECRET'])
-rule1 = setting['RULE1']
+rule = setting['RULE']
 admins = setting['ADMIN']
-NEW_SCAM_WEBSITE = setting['BLACKLIST']
 NEW_SCAM_WEBSITE_FOR_ADG = setting['BLACKLISTFORADG']
 LOGFILE = setting['LOGFILE']
 
@@ -89,7 +95,7 @@ def callback():
         abort(400)
     return 'OK'
 
-@app.route('/BlackListForAdguard.txt')
+@app.route('/'+NEW_SCAM_WEBSITE_FOR_ADG)
 def download_file():
     return Response(open(NEW_SCAM_WEBSITE_FOR_ADG, "rb"), mimetype="text/plain")
 
@@ -125,6 +131,20 @@ def is_blacklisted(user_text):
             return True
     return False
 
+def remove_duplicate_lines(filename):
+    with open(filename, "r", encoding="utf-8") as f:
+        lines = f.readlines()
+
+    # 利用集合(set)去除重複行
+    unique_lines = set(lines)
+
+    # 將集合中的行排序
+    unique_lines = sorted(unique_lines)
+
+    # 將去除重複行的結果寫入檔案
+    with open(filename, "w", encoding="utf-8") as f:
+        f.writelines(unique_lines)
+
 # 每當收到 LINE 聊天機器人的訊息時，觸發此函式
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
@@ -137,11 +157,10 @@ def handle_message(event):
     user_text = event.message.text.lower()
     logger.info('UserMessage = '+ event.message.text)
 
-    # 搜尋符合的字串
-    match = re.search(rule1, user_text)
-
     if user_id in admins:
-        if match:
+        if match := re.search(rule[0], user_text):
+            # 取得開始時間
+            start_time = time.time()
             # 取得網址
             url = match.group(1)
 
@@ -153,19 +172,30 @@ def handle_message(event):
             # 將網域和後綴名合併為完整網址
             url = domain + "." + suffix
 
-            # 將網址寫入 NewScamWebsite.txt
-            with open(NEW_SCAM_WEBSITE, "a", encoding="utf-8") as f:
-                f.write(url + "\n")
-
-            # 將網址寫入 NewScamWebsite.txt
+            # 將Adguard規則寫入檔案
             with open(NEW_SCAM_WEBSITE_FOR_ADG, "a", encoding="utf-8") as f:
                 f.write("||"+ url + "^\n")
 
             # 提早執行更新
             UpdateList.update_blacklist()
-            reply_text_message(event.reply_token, "成功完成")
-            return
+            # 取得結束時間
+            end_time = time.time()
 
+            # 計算耗時
+            elapsed_time = end_time - start_time
+            reply_text_message(event.reply_token, "名單更新完成，耗時 " + str(int(elapsed_time)) + " 秒")
+            return
+        elif match := re.search(rule[1], user_text):
+            # 取得文字
+            text = match.group(1)
+            # 將文字寫入
+            with open(NEW_SCAM_WEBSITE_FOR_ADG, "a", encoding="utf-8") as f:
+                f.write("!" + text + "\n")
+            # 移除重複行
+            remove_duplicate_lines(NEW_SCAM_WEBSITE_FOR_ADG)
+            reply_text_message(event.reply_token, "名單更新完成")
+            return
+        
     # 如果用戶輸入的網址沒有以 http 或 https 開頭，則不回應訊息
     if not user_text.startswith("http://") and not user_text.startswith("https://"):
         return
@@ -183,6 +213,7 @@ def handle_message(event):
         rmessage = "目前資料庫查詢不到\n敬請小心謹慎\n若認為是有問題的網站\n請補充描述\n放入相關網站、連結、截圖圖等\n協助考證\n感恩"
 
     reply_text_message(event.reply_token, rmessage)
+    return
 
 if __name__ == "__main__":
 

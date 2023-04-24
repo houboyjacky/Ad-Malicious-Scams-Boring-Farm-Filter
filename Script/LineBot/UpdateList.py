@@ -21,15 +21,20 @@ THE SOFTWARE.
 '''
 
 import hashlib
+import json
 import os
 import requests
 import schedule
 import time
 
-COMBINATION_WEB_FILE = "CombinationWeb.txt"
-NEW_SCAM_WEBSITE = "NewScamWebsite.txt"
 FILTER_DIR = "filter"
 MAX_DOWNLOAD_RETRIES = 3
+
+with open('setting.json', 'r') as f:
+    setting = json.load(f)
+
+SCAM_WEBSITE_LIST = setting['SCAM_WEBSITE_LIST']
+NEW_SCAM_WEBSITE_FOR_ADG = setting['BLACKLISTFORADG']
 
 blacklist = []
 
@@ -62,9 +67,33 @@ def download_file(url):
     # 雜湊值相同，代表檔案已經是最新的，不需要下載
     return filename
 
+def read_rule(filename):
+    global blacklist
+    with open(filename, "r", encoding="utf-8") as f:
+        lines = f.readlines()
+        for line in lines:
+            line = line.strip().lower()  # 轉換為小寫
+            if line.startswith('/^'):
+                continue  # 略過此行
+            elif line.startswith('||0.0.0.0'):
+                line = line[9:]  # 去除"||0.0.0.0"開頭的文字
+                line = line.split('^')[0]  # 去除^以後的文字
+                blacklist.append(line)
+            elif line.startswith('||'):
+                line = line[2:]  # 去除||開頭的文字
+                line = line.split('^')[0]  # 去除^以後的文字
+                blacklist.append(line)
+            elif line.startswith('0.0.0.0 '):
+                line = line[8:]  # 去除"0.0.0.0 "開頭的文字
+                blacklist.append(line)
+            elif line.startswith('/'):
+                blacklist.append(line)
+            else:
+                continue  # 忽略該行文字
+
 def update_blacklist():
     global blacklist
-    with open(COMBINATION_WEB_FILE, "r") as f:
+    with open(SCAM_WEBSITE_LIST, "r") as f:
         urls = f.readlines()
     for url in urls:
         url = url.strip()  # 去除換行符號
@@ -73,35 +102,9 @@ def update_blacklist():
         filename = download_file(url)
         if not filename:
             continue
-        with open(filename, "r", encoding="utf-8") as f:
-            lines = f.readlines()
-            for line in lines:
-                line = line.strip().lower()  # 轉換為小寫
-                if line.startswith('/^'):
-                    continue  # 略過此行
-                elif line.startswith('||0.0.0.0'):
-                    line = line[9:]  # 去除"||0.0.0.0"開頭的文字
-                    line = line.split('^')[0]  # 去除^以後的文字
-                    blacklist.append(line)
-                elif line.startswith('||'):
-                    line = line[2:]  # 去除||開頭的文字
-                    line = line.split('^')[0]  # 去除^以後的文字
-                    blacklist.append(line)
-                elif line.startswith('0.0.0.0 '):
-                    line = line[8:]  # 去除"0.0.0.0 "開頭的文字
-                    blacklist.append(line)
-                elif line.startswith('/'):
-                    blacklist.append(line)
-                else:
-                    continue  # 忽略該行文字
+        read_rule(filename)
 
-    with open(NEW_SCAM_WEBSITE, "r") as f:
-        lines = f.readlines()
-        for line in lines:
-            domain = line.strip()
-            if not domain:
-                continue
-            blacklist.append(domain)
+    read_rule(NEW_SCAM_WEBSITE_FOR_ADG)
 
     blacklist = sorted(list(set(blacklist)))
     print("Update blacklist finish!")

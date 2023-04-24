@@ -1315,3 +1315,5 @@
 ! 貸款詐騙 https://www.dcard.tw/f/anti_fraud/p/241821972
 ||hf7.tw^
 ||majipay.com.tw^
+! 詐騙蝦皮購物 https://www.dcard.tw/f/anti_fraud/p/241841525
+||shopee-tw11-com.store^
