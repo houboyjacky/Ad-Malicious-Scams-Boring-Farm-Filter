@@ -3,22 +3,6 @@
 ! 過度引用 www.tradingview-widget.com
 ! 疑似詐騙或不良的網站
 @@||pestyle.online^important
-/1396[a-z]\.com/
-/6[0Oo]{3}(?:gov)?\.tw/
-/amazon[0-9]+\.mobi/
-/b9b[a-z0-9]+\.cc/
-/caijing\w*\.w*/
-/ee[0-9]+\.com/
-/fk[0-9]+\.com/
-/fnline\.(info|xyz|vip)/
-/gdf999.[a-z]+/
-/isnotdomain[0-9]+\.com/
-/long[0-9]\.net/
-/shopvip-?[a-z]{0-2}\.[a-z]+/
-/so[0-9]+\.com/
-/taiwan-[a-z]+\.(com|tw)/
-/tanaka[a-z]+\.com/
-/www-?post-?gov-?tw\.sytes\.net/
 #||fontawesomes.com^
 #||lihi.tv^
 #||lihi1.cc^

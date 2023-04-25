@@ -29,6 +29,7 @@ import logging
 import time
 import whois
 import datetime
+from datetime import datetime
 # pip install schedule tldextract flask line-bot-sdk whois
 
 # 在此處引入UpdateList.py，並執行其中的任務
@@ -203,12 +204,12 @@ def handle_message(event):
     user_text = parsed_url.netloc
 
     #從 WHOIS 服務器獲取 WHOIS 信息
-    w = whois.query(user_text)
-
+    w = whois.whois(user_text)
+    print(w)
     #判斷網站
     checkresult = is_blacklisted(user_text)
 
-    if w is None:
+    if not w.domain_name:
         if checkresult is True:
             rmessage = ("所輸入的網址\n"
                         "「" + user_text + "」\n"
@@ -219,7 +220,7 @@ def handle_message(event):
         else:
             rmessage = ("所輸入的網址\n"
                         "「" + user_text + "」\n"
-                        "目前資料庫查詢不到\n"
+                        "目前尚未在資料庫中\n"
                         "敬請小心謹慎\n"
                         "此外若認為問題，請補充描述\n"
                         "放入相關描述、連結、截圖圖等\n"
@@ -230,7 +231,6 @@ def handle_message(event):
     
     # 提取創建時間和最後更新時間
     creation_date = w.creation_date.strftime('%Y-%m-%d %H:%M:%S')
-    last_updated = w.last_updated.strftime('%Y-%m-%d %H:%M:%S')
     
     if w.status:
         status_dict = {
@@ -253,10 +253,9 @@ def handle_message(event):
             'renewPeriod': '續訂期'
         }
         status = w.status.split()[0] + ' (' + status_dict[w.status.split()[0]] + ')'
-        print("Website" + user_text + "\n")
-        print("Create Date : " + creation_date + "\n")
-        print("Last Update Date : " + last_updated + "\n")
-        print('Status：' + status + "\n")
+        print("Website : " + user_text)
+        print("Create Date : " + creation_date)
+        print('Status : ' + status)
 
     today = datetime.today().date()  # 取得當天日期
     diff_days = (today - w.creation_date.date()).days  # 相差幾天
@@ -266,7 +265,6 @@ def handle_message(event):
         rmessage = ("所輸入的網址\n"
                     "「" + user_text + "」\n"
                     "建立時間：" + creation_date + "\n"
-                    "更新時間：" + last_updated + "\n"
                     "距離今天差" + str(diff_days) + "天\n"
                     "被判定是詐騙／可疑網站\n"
                     "請勿相信此網站\n"
@@ -276,9 +274,8 @@ def handle_message(event):
         rmessage = ("所輸入的網址\n"
                     "「" + user_text + "」\n"
                     "建立時間：" + creation_date + "\n"
-                    "更新時間：" + last_updated + "\n"
-                    "目前資料庫查詢不到\n"
                     "距離今天差" + str(diff_days) + "天\n"
+                    "目前尚未在資料庫中\n"
                     "天數越少，敬請小心謹慎\n"
                     "此外若認為問題，請補充描述\n"
                     "放入相關描述、連結、截圖圖等\n"
