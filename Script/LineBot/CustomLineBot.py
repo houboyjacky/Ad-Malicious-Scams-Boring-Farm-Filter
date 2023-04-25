@@ -152,10 +152,10 @@ def handle_message(event):
 
     if user_id in admins:
         if match := re.search(rule[0], user_text):
-            
+
             # 取得開始時間
             start_time = time.time()
-            
+
             # 取得網址
             url = match.group(1)
 
@@ -192,7 +192,7 @@ def handle_message(event):
 
             reply_text_message(event.reply_token, "名單更新完成")
             return
-        
+
     # 如果用戶輸入的網址沒有以 http 或 https 開頭，則不回應訊息
     if not user_text.startswith("http://") and not user_text.startswith("https://"):
         return
@@ -228,15 +228,19 @@ def handle_message(event):
                         "感恩")
         reply_text_message(event.reply_token, rmessage)
         return
-    
+
     # 提取創建時間和最後更新時間
-    creation_date = w.creation_date.strftime('%Y-%m-%d %H:%M:%S')
-    
-    #print("Website : " + user_text)
-    #print("Create Date : " + creation_date)
 
     today = datetime.today().date()  # 取得當天日期
-    diff_days = (today - w.creation_date.date()).days  # 相差幾天
+    if isinstance(w.creation_date, list):
+        creation_date = min(w.creation_date).strftime('%Y-%m-%d %H:%M:%S')
+        diff_days = (today - min(w.creation_date).date()).days  # 相差幾天
+    else:
+        creation_date = w.creation_date.strftime('%Y-%m-%d %H:%M:%S')
+        diff_days = (today - w.creation_date.date()).days  # 相差幾天
+
+    #print("Website : " + user_text)
+    #print("Create Date : " + creation_date)
 
     #判斷網站
     if checkresult is True:
