@@ -27,7 +27,9 @@ import threading
 import signal
 import logging
 import time
-# pip install schedule tldextract flask line-bot-sdk
+import whois
+import datetime
+# pip install schedule tldextract flask line-bot-sdk whois
 
 # 在此處引入UpdateList.py，並執行其中的任務
 import UpdateList
@@ -39,6 +41,7 @@ from linebot.models import MessageEvent, TextMessage, TextSendMessage
 from urllib.parse import urlparse
 from UpdateList import blacklist
 from logging.handlers import TimedRotatingFileHandler
+from datetime import datetime
 
 app = Flask(__name__)
 
@@ -199,11 +202,88 @@ def handle_message(event):
     #取得網域
     user_text = parsed_url.netloc
 
+    #從 WHOIS 服務器獲取 WHOIS 信息
+    w = whois.query(user_text)
+
     #判斷網站
-    if is_blacklisted(user_text):
-        rmessage = "你所輸入的網址\n「" + user_text + "」\n被判定是詐騙／可疑網站\n請勿相信此網站。\n若認為誤通報，請補充描述\n感恩"
+    checkresult = is_blacklisted(user_text)
+
+    if w is None:
+        if checkresult is True:
+            rmessage = ("所輸入的網址\n"
+                        "「" + user_text + "」\n"
+                        "被判定是詐騙／可疑網站\n"
+                        "請勿相信此網站\n"
+                        "若認為誤通報，請補充描述\n"
+                        "感恩")
+        else:
+            rmessage = ("所輸入的網址\n"
+                        "「" + user_text + "」\n"
+                        "目前資料庫查詢不到\n"
+                        "敬請小心謹慎\n"
+                        "此外若認為問題，請補充描述\n"
+                        "放入相關描述、連結、截圖圖等\n"
+                        "協助考證\n"
+                        "感恩")
+        reply_text_message(event.reply_token, rmessage)
+        return
+    
+    # 提取創建時間和最後更新時間
+    creation_date = w.creation_date.strftime('%Y-%m-%d %H:%M:%S')
+    last_updated = w.last_updated.strftime('%Y-%m-%d %H:%M:%S')
+    
+    if w.status:
+        status_dict = {
+            'ok': '網站運作正常',
+            'inactive': '未啟用的域名',
+            'pendingDelete': '域名正在被刪除',
+            'redemptionPeriod': '贖回期',
+            'transferPeriod': '域名轉移期',
+            'pendingTransfer': '域名轉移審核中',
+            'serverHold': '域名暫停',
+            'serverUpdateProhibited': '禁止更新域名註冊資料',
+            'serverTransferProhibited': '禁止轉移域名',
+            'serverDeleteProhibited': '禁止刪除域名',
+            'clientHold': '客戶端暫停',
+            'clientUpdateProhibited': '禁止更新域名註冊資料（由客戶端發起）',
+            'clientTransferProhibited': '禁止轉移域名（由客戶端發起）',
+            'clientDeleteProhibited': '禁止刪除域名（由客戶端發起）',
+            'linked': '該域名被連接到其它域名',
+            'autoRenewPeriod': '自動續訂期',
+            'renewPeriod': '續訂期'
+        }
+        status = w.status.split()[0] + ' (' + status_dict[w.status.split()[0]] + ')'
+        print("Website" + user_text + "\n")
+        print("Create Date : " + creation_date + "\n")
+        print("Last Update Date : " + last_updated + "\n")
+        print('Status：' + status + "\n")
+
+    today = datetime.today().date()  # 取得當天日期
+    diff_days = (today - w.creation_date.date()).days  # 相差幾天
+
+    #判斷網站
+    if checkresult is True:
+        rmessage = ("所輸入的網址\n"
+                    "「" + user_text + "」\n"
+                    "建立時間：" + creation_date + "\n"
+                    "更新時間：" + last_updated + "\n"
+                    "距離今天差" + str(diff_days) + "天\n"
+                    "被判定是詐騙／可疑網站\n"
+                    "請勿相信此網站\n"
+                    "若認為誤通報，請補充描述\n"
+                    "感恩")
     else:
-        rmessage = "目前資料庫查詢不到\n敬請小心謹慎\n若認為是有問題的網站\n請補充描述\n放入相關網站、連結、截圖圖等\n協助考證\n感恩"
+        rmessage = ("所輸入的網址\n"
+                    "「" + user_text + "」\n"
+                    "建立時間：" + creation_date + "\n"
+                    "更新時間：" + last_updated + "\n"
+                    "目前資料庫查詢不到\n"
+                    "距離今天差" + str(diff_days) + "天\n"
+                    "天數越少，敬請小心謹慎\n"
+                    "此外若認為問題，請補充描述\n"
+                    "放入相關描述、連結、截圖圖等\n"
+                    "以協助考證\n"
+                    "感恩")
 
     reply_text_message(event.reply_token, rmessage)
     return
