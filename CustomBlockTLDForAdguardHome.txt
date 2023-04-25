@@ -56,6 +56,7 @@
 /carousel[a-z0-9]+[-]?tw\.com/
 /carousel[a-z0-9]+[-]?tw\.xyz/
 /carousell-tw[a-z0-9]+\.xyz/
+/carousell[0-9][0-9]kf\.tw/
 /casave[0-9]+00\.com/
 /charterprime[a-z0-9]*\.com/
 /chung[-]?hwa[-]?.*\..*/
@@ -113,6 +114,7 @@
 /ioex[0-9]+\.com/
 /isnotdomain[0-9]+\.com/
 /js[0-9]+\.cn/
+/keixiantuijian[0-9]\.top/
 /kicurency.+\..+/
 /kimomi\.[a-z]+/
 /ko-.+\..+/
