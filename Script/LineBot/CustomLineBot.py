@@ -205,7 +205,7 @@ def handle_message(event):
 
     #從 WHOIS 服務器獲取 WHOIS 信息
     w = whois.whois(user_text)
-    print(w)
+    #print(w)
     #判斷網站
     checkresult = is_blacklisted(user_text)
 
@@ -232,30 +232,8 @@ def handle_message(event):
     # 提取創建時間和最後更新時間
     creation_date = w.creation_date.strftime('%Y-%m-%d %H:%M:%S')
     
-    if w.status:
-        status_dict = {
-            'ok': '網站運作正常',
-            'inactive': '未啟用的域名',
-            'pendingDelete': '域名正在被刪除',
-            'redemptionPeriod': '贖回期',
-            'transferPeriod': '域名轉移期',
-            'pendingTransfer': '域名轉移審核中',
-            'serverHold': '域名暫停',
-            'serverUpdateProhibited': '禁止更新域名註冊資料',
-            'serverTransferProhibited': '禁止轉移域名',
-            'serverDeleteProhibited': '禁止刪除域名',
-            'clientHold': '客戶端暫停',
-            'clientUpdateProhibited': '禁止更新域名註冊資料（由客戶端發起）',
-            'clientTransferProhibited': '禁止轉移域名（由客戶端發起）',
-            'clientDeleteProhibited': '禁止刪除域名（由客戶端發起）',
-            'linked': '該域名被連接到其它域名',
-            'autoRenewPeriod': '自動續訂期',
-            'renewPeriod': '續訂期'
-        }
-        status = w.status.split()[0] + ' (' + status_dict[w.status.split()[0]] + ')'
-        print("Website : " + user_text)
-        print("Create Date : " + creation_date)
-        print('Status : ' + status)
+    #print("Website : " + user_text)
+    #print("Create Date : " + creation_date)
 
     today = datetime.today().date()  # 取得當天日期
     diff_days = (today - w.creation_date.date()).days  # 相差幾天
