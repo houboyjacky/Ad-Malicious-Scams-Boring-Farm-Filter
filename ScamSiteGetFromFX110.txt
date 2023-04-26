@@ -271,6 +271,7 @@
 ||aifagm.com^
 ||aifhg.com^
 ||aifxholding.com^
+||aifxmarket.net^
 ||aigmarkets.com^
 ||aigrandhub.com^
 ||aijuq.com^
@@ -283,6 +284,7 @@
 ||aitechstock.live^
 ||aitforex.com^
 ||aitrade888.com^
+||aitradefxltd.com^
 ||aitrader.fm^
 ||aiwinmoney.com^
 ||aixinvestments.com^
@@ -861,6 +863,7 @@
 ||bitfargo.io^
 ||bitfastdealfx.com^
 ||bitfinexfxtradeoption.com^
+||bitforex.com^
 ||bitfxasset.com^
 ||bitfxd.com^
 ||bitfxtradez.online^
@@ -1114,6 +1117,7 @@
 ||capitalfxm.com^
 ||capitalgainltd.com^
 ||capitalgroup24.com^
+||capitalindex.pro^
 ||capitalinvestmentstrust.com^
 ||capitallevel.com^
 ||capitalmanageinv.com^
@@ -1396,6 +1400,7 @@
 ||compassassetmanagement.co^
 ||concept-forex.net^
 ||concordinvest.pro^
+||confidentialglobalfx.com^
 ||coniusfx.com^
 ||consultforex.com^
 ||conticapitals.com^
@@ -1515,6 +1520,7 @@
 ||cryptoinvestmenttrade.com^
 ||cryptojet.ltd^
 ||cryptokasse.co^
+||cryptolead-inc.com^
 ||cryptoliquidityx.com^
 ||cryptoliteprofit.com^
 ||cryptomakerinvest.com^
@@ -1587,6 +1593,7 @@
 ||cyber-futures.com^
 ||cyberbyte.live^
 ||cyberfx.id^
+||cypherfxpro.com^
 ||cz-changpengfx.com^
 ||czwjn.com^
 ||d-fca.com^
@@ -1652,6 +1659,7 @@
 ||decinutefx.com^
 ||deerxiao.com^
 ||defforex.com^
+||defxmarkets.com^
 ||dehuifx.com^
 ||deinfx.com^
 ||delanfx.com^
@@ -1740,6 +1748,7 @@
 ||dmfx.asia^
 ||dmitrader.com^
 ||dmxpro.net^
+||dnamarkets.com^
 ||dnbforex.com^
 ||dnsd66.com^
 ||dnsd88.com^
@@ -2291,6 +2300,7 @@
 ||finxforex.com^
 ||fireflyin.com^
 ||first-platform.com^
+||first-ratio.com^
 ||firstbtcfx.com^
 ||firstcapital1.com^
 ||firstcryptoinvestment.com^
@@ -2520,6 +2530,7 @@
 ||futuraytfx.com^
 ||futurecurrencytrading.pro^
 ||futurefx.capital^
+||futureprofit.net^
 ||futurestech.hk^
 ||fvlforex.com^
 ||fvlfx.com^
@@ -2879,6 +2890,7 @@
 ||gbtradefx.com^
 ||gcblondonltd.com^
 ||gcc-fx.net^
+||gcckcfxs.com^
 ||gcffx.com^
 ||gcglweb.com^
 ||gcgtrading.com^
@@ -3768,6 +3780,7 @@
 ||jcwhfx.com^
 ||jdcfx.com^
 ||jdcmks.com^
+||jdmarket-expo.com^
 ||jdrsecurities.com^
 ||jefferies-fxcg.com^
 ||jetcapitals.com^
@@ -5793,6 +5806,7 @@
 ||suplexdeals.net^
 ||surebinaryincomtrade.com^
 ||surefxcryptotrade.com^
+||surefxtrading.com^
 ||surehavenfx.com^
 ||sureinvest.org^
 ||surya-am.com^
@@ -5881,6 +5895,7 @@
 ||tedex.trade^
 ||tedforex.com^
 ||tegasfx.com^
+||teknosx.com^
 ||telaforex.vip^
 ||teletrade.org^
 ||telforward.net^
@@ -6500,6 +6515,7 @@
 ||volexfxglobal.com^
 ||volo.finance^
 ||volocapital.biz^
+||volttexltd.com^
 ||volumegroupsfx.com^
 ||vonwayforex.com^
 ||vonwayfx.com^

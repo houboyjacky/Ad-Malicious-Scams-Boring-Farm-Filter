@@ -78,6 +78,7 @@
 ||gabaritandoamatematica.com.br^
 ||globalwhiskyline.com^
 ||go2affm.com^
+||godaddysites.com^
 ||gurdbirto.gay^
 ||hdudo.com^
 ||healknak.nl^
@@ -89,12 +90,15 @@
 ||illyimport.com^
 ||inovatik.com^
 ||invoiceoverdues.com^
+||ipfs.cf-ipfs.com^
 ||ipfs.io^
 ||iqcreditcheck.com^
 ||irefuvo.com^
 ||jewelryoutletmall.com^
 ||kemnrst.us^
 ||khsas.com^
+||kickstargogo.com^
+||klclick3.com^
 ||kleenkit.com^
 ||knoxvillepiano.com^
 ||kodehexa.net^
@@ -111,7 +115,6 @@
 ||managesppsupys.us^
 ||managesrvcsolveppalrt33.us^
 ||managesrvicemembermeid21.us^
-||mapgodss.com^
 ||mapgodss.com^
 ||margo-logistic.com^
 ||massagesidppintroduction.us^
@@ -138,6 +141,7 @@
 ||nordstromSurveyz.store^
 ||offshorescoins.com^
 ||ojosehi.com^
+||ondigitalocean.app^
 ||onekoiriueuw.com^
 ||onlinebuystamps.com^
 ||onlinehome.us^
@@ -208,4 +212,8 @@
 ||wertyuiopqas.wixsite.com^
 ||wescononc.com^
 ||whimsical.com^
+||wxprtxi.com^
+||xfinitynewterms5.godaddysites.com^
+||yosoft.company.site^
+||yosoftinfo.online^
 ||yougetgreen.com^

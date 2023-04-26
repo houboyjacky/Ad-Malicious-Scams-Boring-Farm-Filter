@@ -114,7 +114,6 @@
 /ioex[0-9]+\.com/
 /isnotdomain[0-9]+\.com/
 /js[0-9]+\.cn/
-/keixiantuijian[0-9]\.top/
 /kicurency.+\..+/
 /kimomi\.[a-z]+/
 /ko-.+\..+/
