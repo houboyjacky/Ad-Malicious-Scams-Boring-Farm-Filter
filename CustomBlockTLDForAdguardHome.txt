@@ -196,7 +196,6 @@
 ||*.at^
 ||*.cyou^
 ||*.icu^
-||*.top^
 ||*.vip^
 ||it^$denyallow=org.it|edu.it|com.it|gov.it|mitm.it
 ||pl^$denyallow=org.pl|edu.pl|com.pl|gov.pl

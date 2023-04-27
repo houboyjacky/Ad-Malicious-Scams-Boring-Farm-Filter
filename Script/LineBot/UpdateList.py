@@ -51,6 +51,7 @@ def download_file(url):
     if not os.path.exists(filename):
         with open(filename, "wb") as f:
             f.write(content)
+            print(filename + " is download\n")
         return filename
 
     # 如果檔案已存在，則比對雜湊值
@@ -62,6 +63,7 @@ def download_file(url):
         # 雜湊值不同，代表內容有更新，需要下載
         with open(filename, "wb") as f:
             f.write(content)
+            print(filename + " is download\n")
         return filename
 
     # 雜湊值相同，代表檔案已經是最新的，不需要下載
@@ -82,6 +84,8 @@ def read_rule(filename):
             elif line.startswith('||'):
                 line = line[2:]  # 去除||開頭的文字
                 line = line.split('^')[0]  # 去除^以後的文字
+                if '.' not in line:
+                    line = '*.' + line
                 blacklist.append(line)
             elif line.startswith('0.0.0.0 '):
                 line = line[8:]  # 去除"0.0.0.0 "開頭的文字
@@ -93,8 +97,10 @@ def read_rule(filename):
 
 def update_blacklist():
     global blacklist
+
     with open(SCAM_WEBSITE_LIST, "r") as f:
         urls = f.readlines()
+
     for url in urls:
         url = url.strip()  # 去除換行符號
         if not url.startswith('http'):

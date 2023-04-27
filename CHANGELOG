@@ -3,7 +3,10 @@
 * 20230427 Update
   * 更新 個人不想看的廣告或網站
   * 更新 Dcard受害文章
+  * 更新 FB網友提供清單
   * 更新 FX110虛假交易所
+  * 調整 政府機關API取得資料Script
+  * 調整 LineBot功能
 
 * 20230426 Update
   * 加入 政府機關API取得資料Script

@@ -5,8 +5,8 @@ import tldextract
 # 設定API的網址
 line_url = 'https://od.moi.gov.tw/api/v1/rest/datastore/A01010000C-001277-053'
 scams_url2 = 'https://od.moi.gov.tw/api/v1/rest/datastore/A01010000C-002150-013'
-lineid = 'GetFromGovernmentInf_LineID.txt'
-scams165 = 'GetFromGovernmentInf_Scams165.txt'
+lineid = '../GetFromGovernmentInf_LineID.txt'
+scams165 = '../ScamSiteGetFromTaiwan165.txt'
 
 # 判斷檔案是否存在，如果不存在則建立一個空檔案
 if not os.path.exists(lineid):
@@ -34,7 +34,7 @@ if response1.status_code == 200:
         new_lineid = [record['帳號'].strip() for record in records]
         all_lineid = existing_lineid.union(set(new_lineid))
         sorted_lineid = sorted(all_lineid)
-        with open(lineid, 'w', encoding='utf-8') as f:
+        with open(lineid, 'w', encoding='utf-8', newline='') as f:
             f.write('\n'.join(sorted(all_lineid)))
         print('已將 '+lineid+' 寫入檔案')
     else:
@@ -44,11 +44,9 @@ else:
 
 ####################################################################
 
-# 讀取 Scams165.txt
+# 讀取 Scams165
 with open(scams165, 'r', encoding='utf-8') as f:
-    lines = set(f.read().splitlines()) # 去除重複
-
-sorted_lines = sorted(set(lines))  # 去除重複並排序
+    scams_line = set(f.read().splitlines()) # 去除重複
 
 # 發送API請求
 response2 = requests.get(scams_url2)
@@ -67,10 +65,10 @@ if response2.status_code == 200:
             domain, suffix = tldextract.extract(url)[1:]
             website.add('||' + domain + '.' + suffix + '^')
 
-        website.update(sorted_lines)  # 合併資料
+        website.update(scams_line)  # 合併資料
 
-        # 將結果寫入 Scams165.txt
-        with open(scams165, 'w', encoding='utf-8') as f:
+        # 將結果寫入 Scams165
+        with open(scams165, 'w', encoding='utf-8', newline='') as f:
             f.write('\n'.join(sorted(website)))
 
         print('已將 '+scams165+' 寫入檔案')
