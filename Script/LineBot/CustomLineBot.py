@@ -180,7 +180,7 @@ def admin_process(user_text):
 
         rmessage = "名單更新完成"
         return rmessage
-    return ""
+    return
 
 def user_query_website(user_text):
     #解析網址
@@ -292,6 +292,23 @@ def handle_message(event):
     user_text = event.message.text.lower()
     logger.info('UserMessage = '+ event.message.text)
 
+    if user_text.startswith("使用指南"):
+        rmessage = ("查詢危險網址：\n"
+                    "「http://」或者「https://」加上網址即可\n"
+                    "例如：「https://www.google.com.tw」\n"
+                    "查詢Line ID：\n"
+                    "在ID前面補上「賴」+ID就好囉！\n"
+                    "例如：「賴abcde」或官方帳號「賴@abcde」\n"
+                    "-\n"
+                    "如果懷疑是詐騙\n"
+                    "也建議貼上截圖與描述過程\n"
+                    "以幫助後續人工排查\n"
+                    "-\n"
+                    "小編本人是獨自經營，回覆慢還請見諒"
+                    )
+        reply_text_message(event.reply_token, rmessage)
+        return
+
     # 管理員操作
     if user_id in admins:
         rmessage = admin_process(user_text)
@@ -299,32 +316,30 @@ def handle_message(event):
             reply_text_message(event.reply_token, rmessage)
             return
 
-    if "." in user_text and not user_text.startswith("賴"):
-        # 判斷 user_text 是否為合法網域
-        extracted = tldextract.extract(user_text)
-        if extracted.domain and extracted.suffix:
-            rmessage = ("你在輸入網址嗎？\n"
-                        "記得前面要加上「http://」或者「https://」\n"
-                        "還是你在輸入Line ID嗎？\n"
-                        "在ID前面補上「賴」+ID就好囉！\n"
-                        "例如：「賴abcde」或官方帳號「賴@abcde」\n"
-                        "方便機器人自動辨識！")
-            reply_text_message(event.reply_token, rmessage)
-            return
-    
-    # 查詢Line ID
-    if match := re.search(rule[2], user_text) or user_text.startswith("賴"):
-        lineid = user_text.replace("賴", "")
-        rmessage = user_query_lineid(lineid)
-        reply_text_message(event.reply_token, rmessage)
-        return
-
     # 如果用戶輸入的網址沒有以 http 或 https 開頭，則不回應訊息
     if user_text.startswith("http://") or user_text.startswith("https://"):
         rmessage = user_query_website(user_text)
         reply_text_message(event.reply_token, rmessage)
         return
-
+    
+    # 查詢Line ID
+    if match := re.search(rule[2], user_text) and user_text.startswith("賴"):
+        lineid = user_text.replace("賴", "")
+        rmessage = user_query_lineid(lineid)
+        reply_text_message(event.reply_token, rmessage)
+        return
+    
+    extracted = tldextract.extract(user_text)
+    if extracted.domain and extracted.suffix:
+        rmessage = ("你在輸入網址嗎？\n"
+                    "記得前面要加上「http://」或者「https://」\n"
+                    "還是你在輸入Line ID嗎？\n"
+                    "在ID前面補上「賴」+ID就好囉！\n"
+                    "例如：「賴abcde」\n"
+                    "或者官方帳號「賴@abcde」\n"
+                    "方便機器人自動辨識！")
+        reply_text_message(event.reply_token, rmessage)
+        return
     return
 
 if __name__ == "__main__":
