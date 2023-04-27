@@ -31,7 +31,7 @@ if response1.status_code == 200:
     if data['success']:
         # 確定 success 為 True 後才進行後續處理
         records = data['result']['records']
-        new_lineid = [record['帳號'].strip() for record in records]
+        new_lineid = [record['帳號'].strip().lower() for record in records]
         all_lineid = existing_lineid.union(set(new_lineid))
         sorted_lineid = sorted(all_lineid)
         with open(lineid, 'w', encoding='utf-8', newline='') as f:
