@@ -19,16 +19,18 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 '''
-import os
-import json
-import tldextract
-import re
-import threading
-import signal
-import logging
-import time
-import whois
 import datetime
+import hashlib
+import json
+import logging
+import os
+import re
+import requests
+import signal
+import threading
+import time
+import tldextract
+import whois
 from datetime import datetime
 # pip install schedule tldextract flask line-bot-sdk whois
 
@@ -67,6 +69,10 @@ rule = setting['RULE']
 admins = setting['ADMIN']
 NEW_SCAM_WEBSITE_FOR_ADG = setting['BLACKLISTFORADG']
 LOGFILE = setting['LOGFILE']
+LINEID_WEB = setting['LINEID_WEB']
+lineid_list = []
+lineid_hash = None
+last_check_time = None
 
 # 設定logger
 logger = logging.getLogger(__name__)
@@ -103,11 +109,6 @@ def callback():
 def download_file():
     return Response(open(NEW_SCAM_WEBSITE_FOR_ADG, "rb"), mimetype="text/plain")
 
-def check_url(url):
-    if not url.startswith('http') and not url.startswith('https'):
-        return False
-    return True
-
 # 回應訊息的函式
 def reply_text_message(reply_token, text):
     message = TextSendMessage(text=text)
@@ -131,72 +132,57 @@ def is_blacklisted(user_text):
             regex = line.replace("*", ".+")
             if re.fullmatch(regex, domain + "." + suffix):
                 # 特別有*號規則直接可以寫入Adguard規則
-                with open(NEW_SCAM_WEBSITE_FOR_ADG, "a", encoding="utf-8") as f:
+                with open(NEW_SCAM_WEBSITE_FOR_ADG, "a", encoding="utf-8", newline='') as f:
                     f.write("||"+ domain + "." + suffix + "^\n")
                 return True
         elif domain + "." + suffix == line:
             return True
     return False
 
-# 每當收到 LINE 聊天機器人的訊息時，觸發此函式
-@handler.add(MessageEvent, message=TextMessage)
-def handle_message(event):
-    global logger
-    # 取得發訊者的 ID
-    user_id = event.source.user_id
-    logger.info('UserID = '+ event.source.user_id)
+def admin_process(user_text):
+    if match := re.search(rule[0], user_text):
+        # 取得開始時間
+        start_time = time.time()
 
-    # 讀取使用者傳來的文字訊息
-    user_text = event.message.text.lower()
-    logger.info('UserMessage = '+ event.message.text)
+        # 取得網址
+        url = match.group(1)
 
-    if user_id in admins:
-        if match := re.search(rule[0], user_text):
+        # 使用 tldextract 取得網域
+        extracted = tldextract.extract(url)
+        domain = extracted.domain
+        suffix = extracted.suffix
 
-            # 取得開始時間
-            start_time = time.time()
+        # 將網域和後綴名合併為完整網址
+        url = domain + "." + suffix
 
-            # 取得網址
-            url = match.group(1)
+        # 將Adguard規則寫入檔案
+        with open(NEW_SCAM_WEBSITE_FOR_ADG, "a", encoding="utf-8", newline='') as f:
+            f.write("||"+ url + "^\n")
 
-            # 使用 tldextract 取得網域
-            extracted = tldextract.extract(url)
-            domain = extracted.domain
-            suffix = extracted.suffix
+        # 提早執行更新
+        UpdateList.update_blacklist()
 
-            # 將網域和後綴名合併為完整網址
-            url = domain + "." + suffix
+        # 取得結束時間
+        end_time = time.time()
 
-            # 將Adguard規則寫入檔案
-            with open(NEW_SCAM_WEBSITE_FOR_ADG, "a", encoding="utf-8") as f:
-                f.write("||"+ url + "^\n")
+        # 計算耗時
+        elapsed_time = end_time - start_time
+        rmessage = "名單更新完成，耗時 " + str(int(elapsed_time)) + " 秒"
+        return rmessage
+    elif match := re.search(rule[1], user_text):
 
-            # 提早執行更新
-            UpdateList.update_blacklist()
+        # 取得文字
+        text = match.group(1)
 
-            # 取得結束時間
-            end_time = time.time()
+        # 將文字寫入
+        with open(NEW_SCAM_WEBSITE_FOR_ADG, "a", encoding="utf-8", newline='') as f:
+            f.write("! " + text + "\n")
 
-            # 計算耗時
-            elapsed_time = end_time - start_time
-            reply_text_message(event.reply_token, "名單更新完成，耗時 " + str(int(elapsed_time)) + " 秒")
-            return
-        elif match := re.search(rule[1], user_text):
+        rmessage = "名單更新完成"
+        return rmessage
+    return ""
 
-            # 取得文字
-            text = match.group(1)
-
-            # 將文字寫入
-            with open(NEW_SCAM_WEBSITE_FOR_ADG, "a", encoding="utf-8") as f:
-                f.write("! " + text + "\n")
-
-            reply_text_message(event.reply_token, "名單更新完成")
-            return
-
-    # 如果用戶輸入的網址沒有以 http 或 https 開頭，則不回應訊息
-    if not user_text.startswith("http://") and not user_text.startswith("https://"):
-        return
-
+def user_query_website(user_text):
     #解析網址
     parsed_url = urlparse(user_text)
 
@@ -226,8 +212,7 @@ def handle_message(event):
                         "放入相關描述、連結、截圖圖等\n"
                         "協助考證\n"
                         "感恩")
-        reply_text_message(event.reply_token, rmessage)
-        return
+        return rmessage
 
     # 提取創建時間和最後更新時間
 
@@ -258,18 +243,95 @@ def handle_message(event):
                     "建立時間：" + creation_date + "\n"
                     "距離今天差" + str(diff_days) + "天\n"
                     "目前尚未在資料庫中\n"
-                    "天數越少，敬請小心謹慎\n"
+                    "天數差距越小，詐騙與可疑程度越高\n"
+                    "敬請小心謹慎\n"
                     "此外若認為問題，請補充描述\n"
                     "放入相關描述、連結、截圖圖等\n"
                     "以協助考證\n"
                     "感恩")
 
-    reply_text_message(event.reply_token, rmessage)
+    return rmessage
+
+def user_download_lineid():
+    global lineid_list, lineid_hash, last_check_time
+    url = LINEID_WEB.strip()
+    if not lineid_list or time.time() - last_check_time > 86400:
+        response = requests.get(url)
+        if response.status_code == 200:
+            new_hash = hashlib.md5(response.text.encode('utf-8')).hexdigest()
+            lineid_list = response.text.splitlines()
+            last_check_time = time.time()
+            print("Download Line ID Finish")
+
+def user_query_lineid(lineid):
+    global lineid_list
+    user_download_lineid()
+    # 檢查是否符合命名規範
+    if lineid in lineid_list:
+        rmessage = ("「" + lineid + "」\n"
+                    "為165詐騙Line ID\n"
+                    "請勿輕易信任此Line ID的\n"
+                    "文字、圖像、語音和連結\n"
+                    "感恩")
+    else:
+        rmessage = ("「" + lineid + "」\n"
+                    "該不在165詐騙Line ID內\n"
+                    "若認為問題，請補充描述\n"
+                    "感恩")
+    return rmessage
+
+# 每當收到 LINE 聊天機器人的訊息時，觸發此函式
+@handler.add(MessageEvent, message=TextMessage)
+def handle_message(event):
+    global logger
+    # 取得發訊者的 ID
+    user_id = event.source.user_id
+    logger.info('UserID = '+ event.source.user_id)
+
+    # 讀取使用者傳來的文字訊息
+    user_text = event.message.text.lower()
+    logger.info('UserMessage = '+ event.message.text)
+
+    # 管理員操作
+    if user_id in admins:
+        rmessage = admin_process(user_text)
+        if rmessage:
+            reply_text_message(event.reply_token, rmessage)
+            return
+
+    if "." in user_text and not user_text.startswith("賴"):
+        # 判斷 user_text 是否為合法網域
+        extracted = tldextract.extract(user_text)
+        if extracted.domain and extracted.suffix:
+            rmessage = ("你在輸入網址嗎？\n"
+                        "記得前面要加上「http://」或者「https://」\n"
+                        "還是你在輸入Line ID嗎？\n"
+                        "在ID前面補上「賴」+ID就好囉！\n"
+                        "例如：「賴abcde」或官方帳號「賴@abcde」\n"
+                        "方便機器人自動辨識！")
+            reply_text_message(event.reply_token, rmessage)
+            return
+    
+    # 查詢Line ID
+    if match := re.search(rule[2], user_text) or user_text.startswith("賴"):
+        lineid = user_text.replace("賴", "")
+        rmessage = user_query_lineid(lineid)
+        reply_text_message(event.reply_token, rmessage)
+        return
+
+    # 如果用戶輸入的網址沒有以 http 或 https 開頭，則不回應訊息
+    if user_text.startswith("http://") or user_text.startswith("https://"):
+        rmessage = user_query_website(user_text)
+        reply_text_message(event.reply_token, rmessage)
+        return
+
     return
 
 if __name__ == "__main__":
 
     signal.signal(signal.SIGINT, signal_handler)
+
+    user_download_lineid()
 
     update_thread = threading.Thread(target=UpdateList.run_schedule)
     update_thread.start()

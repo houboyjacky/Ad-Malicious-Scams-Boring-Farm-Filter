@@ -4,8 +4,9 @@
     "CERT":"",
     "CHANNEL_ACCESS_TOKEN":"",
     "CHANNEL_SECRET":"",
+    "LINEID_WEB":"",
     "LOGFILE":"",
     "PRIVKEY":"",
-    "RULE":"",
+    "RULE":["","",""],
     "SCAM_WEBSITE_LIST":""
 }
