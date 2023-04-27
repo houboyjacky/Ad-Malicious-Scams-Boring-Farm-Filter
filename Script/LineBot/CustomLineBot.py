@@ -275,7 +275,7 @@ def user_query_lineid(lineid):
                     "感恩")
     else:
         rmessage = ("「" + lineid + "」\n"
-                    "該不在165詐騙Line ID內\n"
+                    "不是165詐騙Line ID\n"
                     "若認為問題，請補充描述\n"
                     "感恩")
     return rmessage
@@ -323,23 +323,12 @@ def handle_message(event):
         return
     
     # 查詢Line ID
-    if match := re.search(rule[2], user_text) and user_text.startswith("賴"):
+    if user_text.startswith("賴"):
         lineid = user_text.replace("賴", "")
         rmessage = user_query_lineid(lineid)
         reply_text_message(event.reply_token, rmessage)
         return
-    
-    extracted = tldextract.extract(user_text)
-    if extracted.domain and extracted.suffix:
-        rmessage = ("你在輸入網址嗎？\n"
-                    "記得前面要加上「http://」或者「https://」\n"
-                    "還是你在輸入Line ID嗎？\n"
-                    "在ID前面補上「賴」+ID就好囉！\n"
-                    "例如：「賴abcde」\n"
-                    "或者官方帳號「賴@abcde」\n"
-                    "方便機器人自動辨識！")
-        reply_text_message(event.reply_token, rmessage)
-        return
+
     return
 
 if __name__ == "__main__":
