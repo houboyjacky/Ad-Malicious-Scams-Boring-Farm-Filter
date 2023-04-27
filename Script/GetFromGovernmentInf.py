@@ -10,11 +10,11 @@ scams165 = '../ScamSiteGetFromTaiwan165.txt'
 
 # 判斷檔案是否存在，如果不存在則建立一個空檔案
 if not os.path.exists(lineid):
-    with open(lineid, 'w', encoding='utf-8') as f:
+    with open(lineid, 'w', encoding='utf-8', newline='') as f:
         pass
 
 if not os.path.exists(scams165):
-    with open(scams165, 'w', encoding='utf-8') as f:
+    with open(scams165, 'w', encoding='utf-8', newline='') as f:
         pass
 
 ####################################################################
