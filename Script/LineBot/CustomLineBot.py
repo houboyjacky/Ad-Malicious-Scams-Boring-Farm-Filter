@@ -19,8 +19,6 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 '''
-import datetime
-import hashlib
 import json
 import os
 import re
@@ -35,6 +33,7 @@ import Query_URL
 from Line_Invite_URL import lineinvite_write_file, lineinvite_read_file
 from logger import logger
 from Query_URL import user_query_website, run_schedule, update_blacklist
+from Query_Line_ID import user_query_lineid, user_download_lineid, user_add_lineid
 
 from flask import Flask, Response, request, abort
 from linebot import LineBotApi, WebhookHandler
@@ -62,19 +61,9 @@ handler = WebhookHandler(setting['CHANNEL_SECRET'])
 rule = setting['RULE']
 admins = setting['ADMIN']
 NEW_SCAM_WEBSITE_FOR_ADG = setting['BLACKLISTFORADG']
-LINEID_LOCAL = setting['LINEID_LOCAL']
-LINEID_WEB = setting['LINEID_WEB']
-lineid_list = []
-lineid_download_hash = None
-lineid_download_last_time = None
 
 def handle_signal(signal, frame):
     os._exit(0)
-
-def check_empty_file(filename):
-    if not os.path.exists(filename):
-        with open(filename, 'w', encoding='utf-8', newline='') as f:
-            pass
 
 @app.route('/'+NEW_SCAM_WEBSITE_FOR_ADG)
 def tmp_blacklisted_site():
@@ -98,7 +87,6 @@ def message_reply(reply_token, text):
 
 # 管理員操作
 def admin_process(user_text):
-    global lineid_list
     if match := re.search(rule[0], user_text):
         # 取得開始時間
         start_time = time.time()
@@ -141,17 +129,7 @@ def admin_process(user_text):
         return rmessage
     elif match := re.search(rule[3], user_text):
         text = match.group(1)
-
-        check_empty_file(LINEID_LOCAL)
-
-        # 將文字寫入
-        with open(LINEID_LOCAL, "a", encoding="utf-8", newline='') as f:
-            f.write(text + "\n")
-
-        with open(LINEID_LOCAL, "r", encoding="utf-8") as f:
-            lineid_local = f.read().splitlines()
-
-        lineid_list = sorted(set(lineid_list + lineid_local))
+        user_add_lineid(text)
 
         rmessage = "賴黑名單更新完成"
         return rmessage
@@ -161,51 +139,9 @@ def admin_process(user_text):
         else:
             rmessage = "邀請黑名單更新失敗"
         return rmessage
-    return
-
-# 使用者下載Line ID
-def user_download_lineid():
-    global lineid_list, lineid_download_hash, lineid_download_last_time
-    url = LINEID_WEB.strip()
-    if lineid_list:
-        if time.time() - lineid_download_last_time < 86400:
-            return
-
-    response = requests.get(url)
-    if response.status_code != 200:
-        return
-
-    new_hash = hashlib.md5(response.text.encode('utf-8')).hexdigest()
-    if new_hash == lineid_download_hash:
-        return
-
-    lineid_download_hash = new_hash
-    lineid_list = response.text.splitlines()
-    lineid_download_last_time = time.time()
-    print("Download Line ID Finish")
-
-    with open(LINEID_LOCAL, "r", encoding="utf-8") as f:
-        lineid_local = f.read().splitlines()
-
-    lineid_list = sorted(set(lineid_list + lineid_local))
-
-# 使用者查詢Line ID
-def user_query_lineid(lineid):
-    global lineid_list
-    user_download_lineid()
-    # 檢查是否符合命名規範
-    if lineid in lineid_list:
-        rmessage = ("「" + lineid + "」\n"
-                    "為詐騙Line ID\n"
-                    "請勿輕易信任此Line ID的\n"
-                    "文字、圖像、語音和連結\n"
-                    "感恩")
     else:
-        rmessage = ("「" + lineid + "」\n"
-                    "該不在詐騙Line ID中\n"
-                    "若認為問題，請補充描述\n"
-                    "感恩")
-    return rmessage
+        pass
+    return
 
 # 每當收到 LINE 聊天機器人的訊息時，觸發此函式
 @handler.add(MessageEvent, message=TextMessage)
