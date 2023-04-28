@@ -88,9 +88,18 @@ def message_reply(reply_token, text):
 def admin_process(user_text):
     rmessage = ''
 
-    if match := re.search(rule[0], user_text):
+    # 邀請碼有大小寫之分
+    if match := re.search(rule[3], user_text):
 
-        user_text = user_text.lower()
+        if lineinvite_write_file(user_text):
+            rmessage = "邀請黑名單更新完成"
+        else:
+            rmessage = "邀請黑名單更新失敗"
+        return rmessage
+
+    user_text = user_text.lower()
+
+    if match := re.search(rule[0], user_text):
 
         # 取得開始時間
         start_time = time.time()
@@ -118,12 +127,10 @@ def admin_process(user_text):
 
         # 計算耗時
         elapsed_time = end_time - start_time
-        
+
         rmessage = "網址名單更新完成，耗時 " + str(int(elapsed_time)) + " 秒"
 
     elif match := re.search(rule[1], user_text):
-
-        user_text = user_text.lower()
 
         # 取得文字
         text = match.group(1)
@@ -139,23 +146,13 @@ def admin_process(user_text):
 
     elif match := re.search(rule[2], user_text):
 
-        user_text = user_text.lower()
-
         # 取得文字
         lineid = match.group(1)
-        
+
         # 加入新line id
         user_add_lineid(lineid)
 
         rmessage = "賴黑名單更新完成"
-
-    elif match := re.search(rule[3], user_text):
-
-        if lineinvite_write_file(user_text):
-            rmessage = "邀請黑名單更新完成"
-        else:
-            rmessage = "邀請黑名單更新失敗"
-
     else:
         pass
 

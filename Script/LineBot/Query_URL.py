@@ -34,7 +34,6 @@ from datetime import datetime
 from urllib.parse import urlparse
 
 FILTER_DIR = "filter"
-MAX_DOWNLOAD_RETRIES = 3
 
 # 讀取設定檔
 # SCAM_WEBSITE_LIST => Download blackliste
@@ -156,12 +155,17 @@ def user_query_website(user_text):
     user_text = parsed_url.netloc
 
     #從 WHOIS 服務器獲取 WHOIS 信息
-    w = whois.whois(user_text)
+    try:
+        w = whois.whois(user_text)
+        Error = False
+    except whois.parser.PywhoisError: # 判斷原因 whois.parser.PywhoisError: No match for "FXACAP.COM"
+        w = None
+        Error = True
     #print(w)
     #判斷網站
     checkresult = check_blacklisted_site(user_text)
 
-    if not w.domain_name:
+    if Error or not w.domain_name:
         if checkresult is True:
             rmessage = ("所輸入的網址\n"
                         "「" + user_text + "」\n"
