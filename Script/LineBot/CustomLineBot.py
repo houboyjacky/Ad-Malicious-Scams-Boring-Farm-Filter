@@ -29,21 +29,17 @@ import signal
 import threading
 import time
 import tldextract
-import whois
-from datetime import datetime
 # pip install schedule tldextract flask line-bot-sdk whois
 
-import UpdateList
+import Query_URL
 from Line_Invite_URL import lineinvite_write_file, lineinvite_read_file
 from logger import logger
+from Query_URL import user_query_website, run_schedule, update_blacklist
 
 from flask import Flask, Response, request, abort
 from linebot import LineBotApi, WebhookHandler
 from linebot.exceptions import InvalidSignatureError
 from linebot.models import MessageEvent, TextMessage, TextSendMessage
-from urllib.parse import urlparse
-from UpdateList import blacklist
-from datetime import datetime
 
 app = Flask(__name__)
 # 讀取設定檔
@@ -100,31 +96,6 @@ def message_reply(reply_token, text):
     message = TextSendMessage(text=text)
     line_bot_api.reply_message(reply_token, message)
 
-# 黑名單判斷
-def check_blacklisted_site(user_text):
-    global blacklist
-    user_text = user_text.lower()
-    # 解析黑名單中的域名
-    extracted = tldextract.extract(user_text)
-    domain = extracted.domain
-    suffix = extracted.suffix
-    for line in blacklist:
-        line = line.strip().lower()  # 去除開頭或結尾的空白和轉成小寫
-        if line.startswith("/") and line.endswith("/"):
-            regex = re.compile(line[1:-1])
-            if regex.match(domain + "." + suffix):
-                return True
-        elif "*" in line:
-            regex = line.replace("*", ".+")
-            if re.fullmatch(regex, domain + "." + suffix):
-                # 特別有*號規則直接可以寫入Adguard規則
-                with open(NEW_SCAM_WEBSITE_FOR_ADG, "a", encoding="utf-8", newline='') as f:
-                    f.write("||"+ domain + "." + suffix + "^\n")
-                return True
-        elif domain + "." + suffix == line:
-            return True
-    return False
-
 # 管理員操作
 def admin_process(user_text):
     global lineid_list
@@ -148,7 +119,7 @@ def admin_process(user_text):
             f.write("||"+ url + "^\n")
 
         # 提早執行更新
-        UpdateList.update_blacklist()
+        update_blacklist()
 
         # 取得結束時間
         end_time = time.time()
@@ -191,77 +162,6 @@ def admin_process(user_text):
             rmessage = "邀請黑名單更新失敗"
         return rmessage
     return
-
-# 使用者查詢網址
-def user_query_website(user_text):
-    #解析網址
-    parsed_url = urlparse(user_text)
-
-    #取得網域
-    user_text = parsed_url.netloc
-
-    #從 WHOIS 服務器獲取 WHOIS 信息
-    w = whois.whois(user_text)
-    #print(w)
-    #判斷網站
-    checkresult = check_blacklisted_site(user_text)
-
-    if not w.domain_name:
-        if checkresult is True:
-            rmessage = ("所輸入的網址\n"
-                        "「" + user_text + "」\n"
-                        "被判定是詐騙／可疑網站\n"
-                        "請勿相信此網站\n"
-                        "若認為誤通報，請補充描述\n"
-                        "感恩")
-        else:
-            rmessage = ("所輸入的網址\n"
-                        "「" + user_text + "」\n"
-                        "目前尚未在資料庫中\n"
-                        "敬請小心謹慎\n"
-                        "此外若認為問題，請補充描述\n"
-                        "放入相關描述、連結、截圖圖等\n"
-                        "協助考證\n"
-                        "感恩")
-        return rmessage
-
-    # 提取創建時間和最後更新時間
-
-    today = datetime.today().date()  # 取得當天日期
-    if isinstance(w.creation_date, list):
-        creation_date = min(w.creation_date).strftime('%Y-%m-%d %H:%M:%S')
-        diff_days = (today - min(w.creation_date).date()).days  # 相差幾天
-    else:
-        creation_date = w.creation_date.strftime('%Y-%m-%d %H:%M:%S')
-        diff_days = (today - w.creation_date.date()).days  # 相差幾天
-
-    #print("Website : " + user_text)
-    #print("Create Date : " + creation_date)
-
-    #判斷網站
-    if checkresult is True:
-        rmessage = ("所輸入的網址\n"
-                    "「" + user_text + "」\n"
-                    "建立時間：" + creation_date + "\n"
-                    "距離今天差" + str(diff_days) + "天\n"
-                    "被判定是詐騙／可疑網站\n"
-                    "請勿相信此網站\n"
-                    "若認為誤通報，請補充描述\n"
-                    "感恩")
-    else:
-        rmessage = ("所輸入的網址\n"
-                    "「" + user_text + "」\n"
-                    "建立時間：" + creation_date + "\n"
-                    "距離今天差" + str(diff_days) + "天\n"
-                    "目前尚未在資料庫中\n"
-                    "天數差距越小，詐騙與可疑程度越高\n"
-                    "敬請小心謹慎\n"
-                    "此外若認為問題，請補充描述\n"
-                    "放入相關描述、連結、截圖圖等\n"
-                    "以協助考證\n"
-                    "感恩")
-
-    return rmessage
 
 # 使用者下載Line ID
 def user_download_lineid():
@@ -391,7 +291,7 @@ if __name__ == "__main__":
 
     user_download_lineid()
 
-    update_thread = threading.Thread(target=UpdateList.run_schedule)
+    update_thread = threading.Thread(target=run_schedule)
     update_thread.start()
 
     # 開啟 LINE 聊天機器人的 Webhook 伺服器
