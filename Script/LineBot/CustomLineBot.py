@@ -89,6 +89,9 @@ def admin_process(user_text):
     rmessage = ''
 
     if match := re.search(rule[0], user_text):
+
+        user_text = user_text.lower()
+
         # 取得開始時間
         start_time = time.time()
 
@@ -120,6 +123,8 @@ def admin_process(user_text):
 
     elif match := re.search(rule[1], user_text):
 
+        user_text = user_text.lower()
+
         # 取得文字
         text = match.group(1)
 
@@ -133,6 +138,8 @@ def admin_process(user_text):
         rmessage = "網址名單更新完成"
 
     elif match := re.search(rule[2], user_text):
+
+        user_text = user_text.lower()
 
         # 取得文字
         lineid = match.group(1)
@@ -185,6 +192,7 @@ def handle_message(event):
 
     # 管理員操作
     if user_text.startswith("加入") and user_id in admins:
+        user_text = event.message.text
         rmessage = admin_process(user_text)
         if rmessage:
             message_reply(event.reply_token, rmessage)
