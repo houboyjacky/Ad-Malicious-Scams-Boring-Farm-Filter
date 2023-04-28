@@ -19,6 +19,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 '''
+
 import json
 import os
 import re
@@ -47,20 +48,18 @@ app = Flask(__name__)
 # CERT => Lets Encrypt Certificate Path
 # CHANNEL_ACCESS_TOKEN => Linebot Token
 # CHANNEL_SECRET => Linebot Secret
-# LOGFILE => Linebot Log Path
 # PRIVKEY => Lets Encrypt Private Key Path
 # RULE => Reply message by rule
-# SCAM_WEBSITE_LIST => Download blackliste
 
 with open('setting.json', 'r') as f:
     setting = json.load(f)
 
 # LINE 聊天機器人的基本資料
-line_bot_api = LineBotApi(setting['CHANNEL_ACCESS_TOKEN'])
-handler = WebhookHandler(setting['CHANNEL_SECRET'])
-rule = setting['RULE']
 admins = setting['ADMIN']
+handler = WebhookHandler(setting['CHANNEL_SECRET'])
+line_bot_api = LineBotApi(setting['CHANNEL_ACCESS_TOKEN'])
 NEW_SCAM_WEBSITE_FOR_ADG = setting['BLACKLISTFORADG']
+rule = setting['RULE']
 
 def handle_signal(signal, frame):
     os._exit(0)
@@ -87,6 +86,8 @@ def message_reply(reply_token, text):
 
 # 管理員操作
 def admin_process(user_text):
+    rmessage = ''
+
     if match := re.search(rule[0], user_text):
         # 取得開始時間
         start_time = time.time()
@@ -99,12 +100,12 @@ def admin_process(user_text):
         domain = extracted.domain
         suffix = extracted.suffix
 
-        # 將網域和後綴名合併為完整網址
-        url = domain + "." + suffix
+        # 組合成新的規則
+        new_rule = "||"+ domain + "." + suffix + "^\n"
 
         # 將Adguard規則寫入檔案
         with open(NEW_SCAM_WEBSITE_FOR_ADG, "a", encoding="utf-8", newline='') as f:
-            f.write("||"+ url + "^\n")
+            f.write(new_rule)
 
         # 提早執行更新
         update_blacklist()
@@ -114,34 +115,44 @@ def admin_process(user_text):
 
         # 計算耗時
         elapsed_time = end_time - start_time
+        
         rmessage = "網址名單更新完成，耗時 " + str(int(elapsed_time)) + " 秒"
-        return rmessage
+
     elif match := re.search(rule[1], user_text):
 
         # 取得文字
         text = match.group(1)
 
+        # 組合成新的規則
+        new_rule = "! " + text + "\n"
+
         # 將文字寫入
         with open(NEW_SCAM_WEBSITE_FOR_ADG, "a", encoding="utf-8", newline='') as f:
-            f.write("! " + text + "\n")
+            f.write(new_rule)
 
         rmessage = "網址名單更新完成"
-        return rmessage
-    elif match := re.search(rule[3], user_text):
-        text = match.group(1)
-        user_add_lineid(text)
+
+    elif match := re.search(rule[2], user_text):
+
+        # 取得文字
+        lineid = match.group(1)
+        
+        # 加入新line id
+        user_add_lineid(lineid)
 
         rmessage = "賴黑名單更新完成"
-        return rmessage
-    elif match := re.search(rule[4], user_text):
+
+    elif match := re.search(rule[3], user_text):
+
         if lineinvite_write_file(user_text):
             rmessage = "邀請黑名單更新完成"
         else:
             rmessage = "邀請黑名單更新失敗"
-        return rmessage
+
     else:
         pass
-    return
+
+    return rmessage
 
 # 每當收到 LINE 聊天機器人的訊息時，觸發此函式
 @handler.add(MessageEvent, message=TextMessage)
@@ -173,7 +184,7 @@ def handle_message(event):
         return
 
     # 管理員操作
-    if user_id in admins:
+    if user_text.startswith("加入") and user_id in admins:
         rmessage = admin_process(user_text)
         if rmessage:
             message_reply(event.reply_token, rmessage)
@@ -203,23 +214,12 @@ def handle_message(event):
         return
 
     # 查詢Line ID
-    if match := re.search(rule[2], user_text) and user_text.startswith("賴"):
+    if user_text.startswith("賴") and re.search(rule[4], user_text):
         lineid = user_text.replace("賴", "")
         rmessage = user_query_lineid(lineid)
         message_reply(event.reply_token, rmessage)
         return
 
-    extracted = tldextract.extract(user_text)
-    if extracted.domain and extracted.suffix:
-        rmessage = ("你在輸入網址嗎？\n"
-                    "記得前面要加上「http://」或者「https://」\n"
-                    "還是你在輸入Line ID嗎？\n"
-                    "在ID前面補上「賴」+ID就好囉！\n"
-                    "例如：「賴abcde」\n"
-                    "或者官方帳號「賴@abcde」\n"
-                    "方便機器人自動辨識！")
-        message_reply(event.reply_token, rmessage)
-        return
     return
 
 if __name__ == "__main__":

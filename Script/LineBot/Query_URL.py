@@ -36,6 +36,9 @@ from urllib.parse import urlparse
 FILTER_DIR = "filter"
 MAX_DOWNLOAD_RETRIES = 3
 
+# 讀取設定檔
+# SCAM_WEBSITE_LIST => Download blackliste
+# BLACKLISTFORADG => Blacklist for Adguard Home Download
 with open('setting.json', 'r') as f:
     setting = json.load(f)
 
