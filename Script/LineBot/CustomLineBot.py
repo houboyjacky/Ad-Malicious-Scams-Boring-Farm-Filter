@@ -34,8 +34,7 @@ from datetime import datetime
 # pip install schedule tldextract flask line-bot-sdk whois
 
 import UpdateList
-
-import logging
+from Line_Invite_URL import lineinvite_write_file, lineinvite_read_file
 from logger import logger
 
 from flask import Flask, Response, request, abort
@@ -45,7 +44,6 @@ from linebot.models import MessageEvent, TextMessage, TextSendMessage
 from urllib.parse import urlparse
 from UpdateList import blacklist
 from datetime import datetime
-from typing import Optional
 
 app = Flask(__name__)
 # 讀取設定檔
@@ -70,7 +68,6 @@ admins = setting['ADMIN']
 NEW_SCAM_WEBSITE_FOR_ADG = setting['BLACKLISTFORADG']
 LINEID_LOCAL = setting['LINEID_LOCAL']
 LINEID_WEB = setting['LINEID_WEB']
-LINE_INVITE = setting['LINE_INVITE']
 lineid_list = []
 lineid_download_hash = None
 lineid_download_last_time = None
@@ -78,92 +75,10 @@ lineid_download_last_time = None
 def handle_signal(signal, frame):
     os._exit(0)
 
-def checkempty(filename):
+def check_empty_file(filename):
     if not os.path.exists(filename):
         with open(filename, 'w', encoding='utf-8', newline='') as f:
             pass
-
-checkempty(LINEID_LOCAL)
-
-def analyze_line_invite_url(user_text:str) -> Optional[dict]:
-    # 定義邀請類型的正則表達式
-    PATTERN = r'^https:\/\/(line\.me|lin\.ee)\/(R\/ti\/p|ti\/(g|g2|p)|)\/(@?[a-zA-Z0-9_]+)(\?[a-zA-Z0-9_=&]+)?$'
-    
-    user_text = user_text.replace("加入詐騙邀請", "")
-
-    if user_text.startswith("https://lin.ee"):
-        response = requests.get(user_text)
-        if response.status_code != 200:
-            print('lin.ee邀請網址解析失敗')
-            return False
-        
-        redirected_url = response.url
-        match = re.match(PATTERN, redirected_url)
-            
-    else:
-        match = re.match(PATTERN, user_text)
-        if not match:
-            print('line.me邀請網址解析失敗')
-            return False
-
-    domain, group2, group3, invite_code, group4 = match.groups()
-    if domain:
-        print("domain : " + domain)
-    if group2:
-        print("group2 : " + group2)
-    if group3:
-        print("group3 : " + group3)
-    if invite_code:
-        print("invite_code : " + invite_code)
-    if group4:
-        print("group4 : " + group4)
-
-    if group2 == "ti/p":
-        category = "個人"
-    elif group2 in ["ti/g", "ti/g2"]:
-        category = "群組"
-    elif "@" in invite_code:
-        category = "官方"
-    else:
-        print('無法解析類別')
-        return None
-
-    return {"類別": category, "邀請碼": invite_code, "原始網址": user_text}
-
-def read_json_file(filename: str) -> list:
-    try:
-        with open(filename, "r", encoding="utf-8") as file:
-            return json.load(file)
-    except (FileNotFoundError, json.JSONDecodeError):
-        return []
-
-
-def write_json_file(filename: str, data: list) -> None:
-    with open(filename, "w", encoding="utf-8") as file:
-        json.dump(data, file, ensure_ascii=False, indent=2)
-
-
-def lineinvite_write_file(user_text:str) -> bool:
-    result = analyze_line_invite_url(user_text)
-
-    if result:
-        results = read_json_file(LINE_INVITE)
-        results.append(result)
-        write_json_file(LINE_INVITE, results)
-        print("分析完成，結果已寫入")
-        return True
-    else:
-        print("無法分析網址")
-        return False
-
-def lineinvite_read_file(user_text:str) -> bool:
-    analyze = analyze_line_invite_url(user_text)
-
-    results = read_json_file(LINE_INVITE)
-    for result in results:
-        if result["邀請碼"] == analyze["邀請碼"]:
-            return True
-    return False
 
 @app.route('/'+NEW_SCAM_WEBSITE_FOR_ADG)
 def tmp_blacklisted_site():
@@ -255,6 +170,9 @@ def admin_process(user_text):
         return rmessage
     elif match := re.search(rule[3], user_text):
         text = match.group(1)
+
+        check_empty_file(LINEID_LOCAL)
+
         # 將文字寫入
         with open(LINEID_LOCAL, "a", encoding="utf-8", newline='') as f:
             f.write(text + "\n")
