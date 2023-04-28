@@ -45,9 +45,9 @@ from urllib.parse import urlparse
 from UpdateList import blacklist
 from logging.handlers import TimedRotatingFileHandler
 from datetime import datetime
+from typing import Optional
 
 app = Flask(__name__)
-
 # 讀取設定檔
 # ADMIN => Linebot Admin
 # BLACKLISTFORADG => Blacklist for Adguard Home Download
@@ -69,10 +69,12 @@ rule = setting['RULE']
 admins = setting['ADMIN']
 NEW_SCAM_WEBSITE_FOR_ADG = setting['BLACKLISTFORADG']
 LOGFILE = setting['LOGFILE']
+LINEID_LOCAL = setting['LINEID_LOCAL']
 LINEID_WEB = setting['LINEID_WEB']
+LINE_INVITE = setting['LINE_INVITE']
 lineid_list = []
-lineid_hash = None
-last_check_time = None
+lineid_download_hash = None
+lineid_download_last_time = None
 
 # 設定logger
 logger = logging.getLogger(__name__)
@@ -91,12 +93,103 @@ loghandler.suffix = "%Y-%m-%d"
 loghandler.extMatch = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 loghandler.doRollover()
 
-def signal_handler(signal, frame):
+def handle_signal(signal, frame):
     os._exit(0)
+
+def checkempty(filename):
+    if not os.path.exists(filename):
+        with open(filename, 'w', encoding='utf-8', newline='') as f:
+            pass
+
+checkempty(LINEID_LOCAL)
+
+def analyze_line_invite_url(user_text:str) -> Optional[dict]:
+    # 定義邀請類型的正則表達式
+    PATTERN = r'^https:\/\/(line\.me|lin\.ee)\/(R\/ti\/p|ti\/(g|g2|p)|)\/(@?[a-zA-Z0-9_]+)(\?[a-zA-Z0-9_=&]+)?$'
+    
+    user_text = user_text.replace("加入詐騙邀請", "")
+
+    if user_text.startswith("https://lin.ee"):
+        response = requests.get(user_text)
+        if response.status_code != 200:
+            print('lin.ee邀請網址解析失敗')
+            return False
+        
+        redirected_url = response.url
+        match = re.match(PATTERN, redirected_url)
+            
+    else:
+        match = re.match(PATTERN, user_text)
+        if not match:
+            print('line.me邀請網址解析失敗')
+            return False
+
+    domain, group2, group3, invite_code, group4 = match.groups()
+    if domain:
+        print("domain : " + domain)
+    if group2:
+        print("group2 : " + group2)
+    if group3:
+        print("group3 : " + group3)
+    if invite_code:
+        print("invite_code : " + invite_code)
+    if group4:
+        print("group4 : " + group4)
+
+    if group2 == "ti/p":
+        category = "個人"
+    elif group2 in ["ti/g", "ti/g2"]:
+        category = "群組"
+    elif "@" in invite_code:
+        category = "官方"
+    else:
+        print('無法解析類別')
+        return None
+
+    return {"類別": category, "邀請碼": invite_code, "原始網址": user_text}
+
+def read_json_file(filename: str) -> list:
+    try:
+        with open(filename, "r", encoding="utf-8") as file:
+            return json.load(file)
+    except (FileNotFoundError, json.JSONDecodeError):
+        return []
+
+
+def write_json_file(filename: str, data: list) -> None:
+    with open(filename, "w", encoding="utf-8") as file:
+        json.dump(data, file, ensure_ascii=False, indent=2)
+
+
+def lineinvite_write_file(user_text:str) -> bool:
+    result = analyze_line_invite_url(user_text)
+
+    if result:
+        results = read_json_file(LINE_INVITE)
+        results.append(result)
+        write_json_file(LINE_INVITE, results)
+        print("分析完成，結果已寫入")
+        return True
+    else:
+        print("無法分析網址")
+        return False
+
+def lineinvite_read_file(user_text:str) -> bool:
+    analyze = analyze_line_invite_url(user_text)
+
+    results = read_json_file(LINE_INVITE)
+    for result in results:
+        if result["邀請碼"] == analyze["邀請碼"]:
+            return True
+    return False
+
+@app.route('/'+NEW_SCAM_WEBSITE_FOR_ADG)
+def tmp_blacklisted_site():
+    return Response(open(NEW_SCAM_WEBSITE_FOR_ADG, "rb"), mimetype="text/plain")
 
 # 當 LINE 聊天機器人接收到「訊息事件」時，進行回應
 @app.route("/callback", methods=['POST'])
-def callback():
+def message_callback():
     signature = request.headers['X-Line-Signature']
     body = request.get_data(as_text=True)
     try:
@@ -105,17 +198,13 @@ def callback():
         abort(400)
     return 'OK'
 
-@app.route('/'+NEW_SCAM_WEBSITE_FOR_ADG)
-def download_file():
-    return Response(open(NEW_SCAM_WEBSITE_FOR_ADG, "rb"), mimetype="text/plain")
-
 # 回應訊息的函式
-def reply_text_message(reply_token, text):
+def message_reply(reply_token, text):
     message = TextSendMessage(text=text)
     line_bot_api.reply_message(reply_token, message)
 
 # 黑名單判斷
-def is_blacklisted(user_text):
+def check_blacklisted_site(user_text):
     global blacklist
     user_text = user_text.lower()
     # 解析黑名單中的域名
@@ -139,7 +228,9 @@ def is_blacklisted(user_text):
             return True
     return False
 
+# 管理員操作
 def admin_process(user_text):
+    global lineid_list
     if match := re.search(rule[0], user_text):
         # 取得開始時間
         start_time = time.time()
@@ -167,7 +258,7 @@ def admin_process(user_text):
 
         # 計算耗時
         elapsed_time = end_time - start_time
-        rmessage = "名單更新完成，耗時 " + str(int(elapsed_time)) + " 秒"
+        rmessage = "網址名單更新完成，耗時 " + str(int(elapsed_time)) + " 秒"
         return rmessage
     elif match := re.search(rule[1], user_text):
 
@@ -178,10 +269,30 @@ def admin_process(user_text):
         with open(NEW_SCAM_WEBSITE_FOR_ADG, "a", encoding="utf-8", newline='') as f:
             f.write("! " + text + "\n")
 
-        rmessage = "名單更新完成"
+        rmessage = "網址名單更新完成"
+        return rmessage
+    elif match := re.search(rule[3], user_text):
+        text = match.group(1)
+        # 將文字寫入
+        with open(LINEID_LOCAL, "a", encoding="utf-8", newline='') as f:
+            f.write(text + "\n")
+
+        with open(LINEID_LOCAL, "r", encoding="utf-8") as f:
+            lineid_local = f.read().splitlines()
+
+        lineid_list = sorted(set(lineid_list + lineid_local))
+
+        rmessage = "賴黑名單更新完成"
+        return rmessage
+    elif match := re.search(rule[4], user_text):
+        if lineinvite_write_file(user_text):
+            rmessage = "邀請黑名單更新完成"
+        else:
+            rmessage = "邀請黑名單更新失敗"
         return rmessage
     return
 
+# 使用者查詢網址
 def user_query_website(user_text):
     #解析網址
     parsed_url = urlparse(user_text)
@@ -193,7 +304,7 @@ def user_query_website(user_text):
     w = whois.whois(user_text)
     #print(w)
     #判斷網站
-    checkresult = is_blacklisted(user_text)
+    checkresult = check_blacklisted_site(user_text)
 
     if not w.domain_name:
         if checkresult is True:
@@ -252,30 +363,46 @@ def user_query_website(user_text):
 
     return rmessage
 
+# 使用者下載Line ID
 def user_download_lineid():
-    global lineid_list, lineid_hash, last_check_time
+    global lineid_list, lineid_download_hash, lineid_download_last_time
     url = LINEID_WEB.strip()
-    if not lineid_list or time.time() - last_check_time > 86400:
-        response = requests.get(url)
-        if response.status_code == 200:
-            new_hash = hashlib.md5(response.text.encode('utf-8')).hexdigest()
-            lineid_list = response.text.splitlines()
-            last_check_time = time.time()
-            print("Download Line ID Finish")
+    if lineid_list:
+        if time.time() - lineid_download_last_time < 86400:
+            return
 
+    response = requests.get(url)
+    if response.status_code != 200:
+        return
+
+    new_hash = hashlib.md5(response.text.encode('utf-8')).hexdigest()
+    if new_hash == lineid_download_hash:
+        return
+
+    lineid_download_hash = new_hash
+    lineid_list = response.text.splitlines()
+    lineid_download_last_time = time.time()
+    print("Download Line ID Finish")
+
+    with open(LINEID_LOCAL, "r", encoding="utf-8") as f:
+        lineid_local = f.read().splitlines()
+
+    lineid_list = sorted(set(lineid_list + lineid_local))
+
+# 使用者查詢Line ID
 def user_query_lineid(lineid):
     global lineid_list
     user_download_lineid()
     # 檢查是否符合命名規範
     if lineid in lineid_list:
         rmessage = ("「" + lineid + "」\n"
-                    "為165詐騙Line ID\n"
+                    "為詐騙Line ID\n"
                     "請勿輕易信任此Line ID的\n"
                     "文字、圖像、語音和連結\n"
                     "感恩")
     else:
         rmessage = ("「" + lineid + "」\n"
-                    "不是165詐騙Line ID\n"
+                    "該不在詐騙Line ID中\n"
                     "若認為問題，請補充描述\n"
                     "感恩")
     return rmessage
@@ -306,34 +433,61 @@ def handle_message(event):
                     "-\n"
                     "小編本人是獨自經營，回覆慢還請見諒"
                     )
-        reply_text_message(event.reply_token, rmessage)
+        message_reply(event.reply_token, rmessage)
         return
 
     # 管理員操作
     if user_id in admins:
         rmessage = admin_process(user_text)
         if rmessage:
-            reply_text_message(event.reply_token, rmessage)
+            message_reply(event.reply_token, rmessage)
             return
+
+    # 查詢line邀請網址
+    if user_text.startswith("https://line.me") or user_text.startswith("https://lin.ee"):
+        if lineinvite_read_file(user_text):
+            rmessage = ("「" + user_text + " 」\n"
+                        "「是」已知詐騙Line邀請網址\n"
+                        "請勿輕易信任此Line ID的\n"
+                        "文字、圖像、語音和連結\n"
+                        "感恩")
+        else:
+            rmessage = ("「" + user_text + " 」\n"
+                        "「不是」已知詐騙邀請網址\n"
+                        "若認為問題，請補充描述\n"
+                        "感恩")
+        message_reply(event.reply_token, rmessage)
+        return
 
     # 如果用戶輸入的網址沒有以 http 或 https 開頭，則不回應訊息
     if user_text.startswith("http://") or user_text.startswith("https://"):
         rmessage = user_query_website(user_text)
-        reply_text_message(event.reply_token, rmessage)
-        return
-    
-    # 查詢Line ID
-    if user_text.startswith("賴"):
-        lineid = user_text.replace("賴", "")
-        rmessage = user_query_lineid(lineid)
-        reply_text_message(event.reply_token, rmessage)
+        message_reply(event.reply_token, rmessage)
         return
 
+    # 查詢Line ID
+    if match := re.search(rule[2], user_text) and user_text.startswith("賴"):
+        lineid = user_text.replace("賴", "")
+        rmessage = user_query_lineid(lineid)
+        message_reply(event.reply_token, rmessage)
+        return
+
+    extracted = tldextract.extract(user_text)
+    if extracted.domain and extracted.suffix:
+        rmessage = ("你在輸入網址嗎？\n"
+                    "記得前面要加上「http://」或者「https://」\n"
+                    "還是你在輸入Line ID嗎？\n"
+                    "在ID前面補上「賴」+ID就好囉！\n"
+                    "例如：「賴abcde」\n"
+                    "或者官方帳號「賴@abcde」\n"
+                    "方便機器人自動辨識！")
+        message_reply(event.reply_token, rmessage)
+        return
     return
 
 if __name__ == "__main__":
 
-    signal.signal(signal.SIGINT, signal_handler)
+    signal.signal(signal.SIGINT, handle_signal)
 
     user_download_lineid()
 
