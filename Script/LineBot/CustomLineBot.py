@@ -22,7 +22,6 @@ THE SOFTWARE.
 import datetime
 import hashlib
 import json
-import logging
 import os
 import re
 import requests
@@ -34,8 +33,10 @@ import whois
 from datetime import datetime
 # pip install schedule tldextract flask line-bot-sdk whois
 
-# 在此處引入UpdateList.py，並執行其中的任務
 import UpdateList
+
+import logging
+from logger import logger
 
 from flask import Flask, Response, request, abort
 from linebot import LineBotApi, WebhookHandler
@@ -43,7 +44,6 @@ from linebot.exceptions import InvalidSignatureError
 from linebot.models import MessageEvent, TextMessage, TextSendMessage
 from urllib.parse import urlparse
 from UpdateList import blacklist
-from logging.handlers import TimedRotatingFileHandler
 from datetime import datetime
 from typing import Optional
 
@@ -68,30 +68,12 @@ handler = WebhookHandler(setting['CHANNEL_SECRET'])
 rule = setting['RULE']
 admins = setting['ADMIN']
 NEW_SCAM_WEBSITE_FOR_ADG = setting['BLACKLISTFORADG']
-LOGFILE = setting['LOGFILE']
 LINEID_LOCAL = setting['LINEID_LOCAL']
 LINEID_WEB = setting['LINEID_WEB']
 LINE_INVITE = setting['LINE_INVITE']
 lineid_list = []
 lineid_download_hash = None
 lineid_download_last_time = None
-
-# 設定logger
-logger = logging.getLogger(__name__)
-logger.setLevel(logging.INFO)
-
-# 設定其格式
-log_formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
-
-# 設定TimedRotatingFileHandler
-loghandler = TimedRotatingFileHandler(LOGFILE, when='midnight', interval=1, backupCount=7)
-loghandler.setFormatter(log_formatter)
-logger.addHandler(loghandler)
-
-# 清除7天以前的日誌
-loghandler.suffix = "%Y-%m-%d"
-loghandler.extMatch = re.compile(r"^\d{4}-\d{2}-\d{2}$")
-loghandler.doRollover()
 
 def handle_signal(signal, frame):
     os._exit(0)
