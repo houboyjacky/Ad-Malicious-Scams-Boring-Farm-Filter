@@ -1,6 +1,7 @@
 import os
 import requests
 import tldextract
+import unicodedata
 
 # 設定API的網址
 # https://data.gov.tw/dataset/78432
@@ -35,7 +36,7 @@ if response1.status_code == 200:
         records = data['result']['records']
         new_lineid = [record['帳號'].strip().lower() for record in records]
         all_lineid = existing_lineid.union(set(new_lineid))
-        sorted_lineid = sorted(all_lineid)
+        all_lineid = set(unicodedata.normalize("NFKC", x) for x in all_lineid)
         with open(lineid, 'w', encoding='utf-8', newline='') as f:
             f.write('\n'.join(sorted(all_lineid)))
         print('已將 '+lineid+' 寫入檔案')
