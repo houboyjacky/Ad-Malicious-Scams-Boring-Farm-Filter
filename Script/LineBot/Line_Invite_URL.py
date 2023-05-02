@@ -24,7 +24,7 @@ import re
 import requests
 import json
 from typing import Optional
-from Query_Line_ID import user_add_lineid
+from Query_Line_ID import user_add_lineid, user_query_lineid
 
 # 讀取設定檔
 # LINE_INVITE => LINE Invite Site List
@@ -116,7 +116,7 @@ def write_json_file(filename: str, data: list) -> None:
 #         json.dump(result, f, ensure_ascii=False, indent=2)
 
 def add_sort_lineinvite(result, results):
-    
+
     # 查找是否有重複的邀請碼和類別
     for r in results:
         if r['邀請碼'] == result['邀請碼'] and r['類別'] == result['類別']:
@@ -124,7 +124,7 @@ def add_sort_lineinvite(result, results):
             if r['原始網址'] != result['原始網址']:
                 r['原始網址'] = [r['原始網址'], result['原始網址']]
             return
-    
+
     # 新增結果
     results.append(result)
 
@@ -154,8 +154,8 @@ def lineinvite_read_file(user_text:str) -> bool:
 
     results = read_json_file(LINE_INVITE)
     for result in results:
-        print("Result = " + result["邀請碼"])
-        print("analyze = " + analyze["邀請碼"])
         if result["邀請碼"] == analyze["邀請碼"]:
             return True
+    if user_query_lineid(analyze["邀請碼"]):
+        return True
     return False
