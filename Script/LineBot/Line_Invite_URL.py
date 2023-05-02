@@ -89,8 +89,50 @@ def write_json_file(filename: str, data: list) -> None:
     with open(filename, "w", encoding="utf-8") as file:
         json.dump(data, file, ensure_ascii=False, indent=2)
 
+# def merge_data(filename):
+#     # 讀取JSON檔案
+#     with open(filename, 'r', encoding='utf-8') as f:
+#         data = json.load(f)
+
+#     # 將邀請碼和類別相同的資料加入同一個字典中
+#     temp_dict = {}
+#     for d in data:
+#         key = (d['類別'], d['邀請碼'])
+#         value = d['原始網址']
+#         if key not in temp_dict:
+#             temp_dict[key] = [value]
+#         elif value not in temp_dict[key]:
+#             temp_dict[key].append(value)
+
+#     # 將字典轉回JSON格式
+#     result = []
+#     for key, value in temp_dict.items():
+#         category, invite_code = key
+#         for v in value:
+#             result.append({'類別': category, '邀請碼': invite_code, '原始網址': v})
+
+#     # 寫回JSON檔案
+#     with open(filename, 'w', encoding='utf-8') as f:
+#         json.dump(result, f, ensure_ascii=False, indent=2)
+
+def add_sort_lineinvite(result, results):
+    
+    # 查找是否有重複的邀請碼和類別
+    for r in results:
+        if r['邀請碼'] == result['邀請碼'] and r['類別'] == result['類別']:
+            # 邀請碼和類別相同，但原始網址不同，則加入原始網址
+            if r['原始網址'] != result['原始網址']:
+                r['原始網址'] = [r['原始網址'], result['原始網址']]
+            return
+    
+    # 新增結果
+    results.append(result)
+
 def lineinvite_write_file(user_text:str) -> bool:
     result = analyze_line_invite_url(user_text)
+
+    # 暫時為一次性調整
+    #merge_data(LINE_INVITE)
 
     if result:
         if "@" in result["邀請碼"]:
@@ -99,7 +141,7 @@ def lineinvite_write_file(user_text:str) -> bool:
             LineID = result["邀請碼"].replace("~", "")
             user_add_lineid(LineID)
         results = read_json_file(LINE_INVITE)
-        results.append(result)
+        add_sort_lineinvite(result,results)
         write_json_file(LINE_INVITE, results)
         print("分析完成，結果已寫入")
         return True

@@ -89,12 +89,15 @@ def user_add_lineid(text):
         with open(LINEID_LOCAL, 'w', encoding='utf-8', newline='') as f:
             pass
 
-    # 將文字寫入
-    with open(LINEID_LOCAL, "a", encoding="utf-8", newline='') as f:
-        f.write(text + "\n")
-
     with open(LINEID_LOCAL, "r", encoding="utf-8") as f:
         lineid_local = f.read().splitlines()
+
+    # 加入text並去除重複
+    lineid_local = list(set(lineid_local + [text]))
+
+    # 寫回LINEID_LOCAL
+    with open(LINEID_LOCAL, "w", encoding="utf-8", newline='') as f:
+        f.write('\n'.join(sorted(lineid_local)))
 
     lineid_list = sorted(set(lineid_list + lineid_local))
 
