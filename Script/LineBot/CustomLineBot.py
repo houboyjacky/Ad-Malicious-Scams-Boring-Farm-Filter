@@ -90,12 +90,17 @@ def admin_process(user_text):
 
     # 邀請碼有大小寫之分
     if match := re.search(rule[3], user_text):
-
-        if lineinvite_write_file(user_text):
+        if match := re.search(r"https://line\.me/ti/p/~(.+)", user_text):
+            lineid = match.group(1)
+            # 加入新line id
+            user_add_lineid(lineid)
+            rmessage = "邀請黑名單更新完成"
+        elif lineinvite_write_file(user_text):
             rmessage = "邀請黑名單更新完成"
         else:
             rmessage = "邀請黑名單更新失敗"
         return rmessage
+
 
     user_text = user_text.lower()
 
@@ -182,7 +187,9 @@ def handle_message(event):
                     "也建議貼上截圖與描述過程\n"
                     "以幫助後續人工排查\n"
                     "-\n"
-                    "小編本人是獨自經營，回覆慢還請見諒"
+                    "小編本人是獨自經營，回覆慢還請見諒\n"
+                    "查詢詐騙，建議配合過濾器使用\n"
+                    "https://www.dcard.tw/f/persona_shutterhouboy/p/241115700"
                     )
         message_reply(event.reply_token, rmessage)
         return
