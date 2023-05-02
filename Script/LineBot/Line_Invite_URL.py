@@ -24,6 +24,7 @@ import re
 import requests
 import json
 from typing import Optional
+from Query_Line_ID import user_add_lineid
 
 # 讀取設定檔
 # LINE_INVITE => LINE Invite Site List
@@ -34,8 +35,8 @@ LINE_INVITE = setting['LINE_INVITE']
 
 def analyze_line_invite_url(user_text:str) -> Optional[dict]:
     # 定義邀請類型的正則表達式
-    PATTERN = r'^https:\/\/(line\.me|lin\.ee)\/(R\/ti\/p|ti\/(g|g2|p)|)\/(@?[a-zA-Z0-9_]+)(\?[a-zA-Z0-9_=&]+)?$'
-    
+    PATTERN = r'^https:\/\/(line\.me|lin\.ee)\/(R\/ti\/p|ti\/(g|g2|p)|)\/(~?@?[a-zA-Z0-9-_]+)(\?[a-zA-Z0-9_=&]+)?#?~?$'
+
     user_text = user_text.replace("加入詐騙邀請", "")
 
     if user_text.startswith("https://lin.ee"):
@@ -43,10 +44,10 @@ def analyze_line_invite_url(user_text:str) -> Optional[dict]:
         if response.status_code != 200:
             print('lin.ee邀請網址解析失敗')
             return False
-        
+
         redirected_url = response.url
         match = re.match(PATTERN, redirected_url)
-            
+
     else:
         match = re.match(PATTERN, user_text)
         if not match:
@@ -65,7 +66,7 @@ def analyze_line_invite_url(user_text:str) -> Optional[dict]:
     if group4:
         print("group4 : " + group4)
 
-    if group2 == "ti/p":
+    if group2 == "ti/p" or "~" in invite_code:
         category = "個人"
     elif group2 in ["ti/g", "ti/g2"]:
         category = "群組"
@@ -92,6 +93,11 @@ def lineinvite_write_file(user_text:str) -> bool:
     result = analyze_line_invite_url(user_text)
 
     if result:
+        if "@" in result["邀請碼"]:
+            user_add_lineid(result["邀請碼"])
+        elif "~" in result["邀請碼"]:
+            LineID = result["邀請碼"].replace("~", "")
+            user_add_lineid(LineID)
         results = read_json_file(LINE_INVITE)
         results.append(result)
         write_json_file(LINE_INVITE, results)
@@ -106,6 +112,8 @@ def lineinvite_read_file(user_text:str) -> bool:
 
     results = read_json_file(LINE_INVITE)
     for result in results:
+        print("Result = " + result["邀請碼"])
+        print("analyze = " + analyze["邀請碼"])
         if result["邀請碼"] == analyze["邀請碼"]:
             return True
     return False
