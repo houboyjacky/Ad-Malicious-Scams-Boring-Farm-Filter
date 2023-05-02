@@ -21,6 +21,7 @@ THE SOFTWARE.
 '''
 
 import re
+import requests
 import json
 from typing import Optional
 
