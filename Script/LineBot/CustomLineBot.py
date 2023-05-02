@@ -176,20 +176,30 @@ def handle_message(event):
     logger.info('UserMessage = '+ event.message.text)
 
     if user_text.startswith("使用指南"):
-        rmessage = ("查詢危險網址：\n"
-                    "「http://」或者「https://」加上網址即可\n"
+        rmessage = ("目前有三大功能\n"
+                    "1. 查詢危險網址：\n"
+                    "加上「http://」或者「https://」網址即可\n"
                     "例如：「https://www.google.com.tw」\n"
-                    "查詢Line ID：\n"
+                    "會顯示出是不是「黑名單」中！\n"
+                    "會顯示出「天數」，天數太少也不可信喔！\n"
+                    "建議配合我的過濾器使用\n"
+                    "大幅降低遇到危險網站\n"
+                    "https://www.dcard.tw/f/persona_shutterhouboy/p/241115700?cid=E438D239-9DBF-4D6D-B35C-7ABAF39DD096\n"
+                    "-\n"
+                    "2. 查詢Line ID：\n"
                     "在ID前面補上「賴」+ID就好囉！\n"
                     "例如：「賴abcde」或官方帳號「賴@abcde」\n"
+                    "-\n"
+                    "3. 查詢Line邀請網址：\n"
+                    "直接貼上「https://line.me/XXXXX」\n"
+                    "或者貼上「https://lin.ee/XXXXX」\n"
                     "-\n"
                     "如果懷疑是詐騙\n"
                     "也建議貼上截圖與描述過程\n"
                     "以幫助後續人工排查\n"
                     "-\n"
-                    "小編本人是獨自經營，回覆慢還請見諒\n"
-                    "查詢詐騙，建議配合過濾器使用\n"
-                    "https://www.dcard.tw/f/persona_shutterhouboy/p/241115700"
+                    "小編本人是獨自一人經營管理，回覆慢還請見諒\n"
+                    "感恩"
                     )
         message_reply(event.reply_token, rmessage)
         return

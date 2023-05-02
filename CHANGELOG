@@ -9,6 +9,7 @@
   * 調整 LineBot邀請碼辨識的出ID，額外加入其他資料庫
   * 調整 LineBot邀請碼辨識的出ID，額外比對其他資料庫
   * 調整 LineBot移除重複資料
+  * 調整 LineBot文字說明
 
 * 20230429 Update
   * 調整 LineBot大小寫導致判斷問題
