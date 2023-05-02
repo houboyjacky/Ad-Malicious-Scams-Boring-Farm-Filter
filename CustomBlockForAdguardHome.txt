@@ -176,6 +176,8 @@
 ||bio.site^
 ||bit-exvavo.com^
 ||bitly.ws^
+||bitsguss.com^
+||bitsovo.com^
 ||biury.space^
 ||bjdljkrjeur39591.com^
 ||bkd88.net^
@@ -281,6 +283,7 @@
 ||copmusionu.shop^
 ||copyrichacademy.com^
 ||cos.ap-guangzhou.myqcloud.com^
+||costcoclock.com^
 ||costcoshopp.com^
 ||countercurrent01.com^
 ||cpggov.com^
@@ -291,6 +294,7 @@
 ||csogmes168.com^
 ||cstockschool.com^
 ||ctxyy.com^
+||cuanthebcr.com^
 ||cumenod.com^
 ||currencyinfo.net^
 ||cvnjfff.tech^
@@ -413,6 +417,7 @@
 ||eszdoand.jp^
 ||ethan8.com^
 ||ethen.buzz^
+||etherbk.site^
 ||etherue.com^
 ||ethpz.com^
 ||etrades.info^
@@ -463,6 +468,7 @@
 ||fixku.com^
 ||fjxhwk.shop^
 ||fk677.com^
+||floramo.club^
 ||flyhighway.xyz^
 ||flylock.world^
 ||fnline.info^
@@ -506,6 +512,7 @@
 ||gdf999.com^
 ||gdfb.shop^
 ||geamua.com^
+||geepy.top^
 ||gemu08.com^
 ||genesisquantify.com^
 ||getleaguevip.buzz^
@@ -563,6 +570,7 @@
 ||guniswap.top^
 ||guntests.lt.acemlnb.com^
 ||guopiao.shop^
+||gupiaojiexi.top^
 ||gushidaren.club^
 ||gutan.live^
 ||gutanzhijin.com^
@@ -600,6 +608,7 @@
 ||hhigov.com^
 ||hhyy.asia^
 ||hibuymall.com^
+||hightop-dex.com^
 ||hilda.buzz^
 ||hiplablas.com^
 ||histock1688.com^
@@ -628,6 +637,7 @@
 ||huayuebb.top^
 ||hublaud.com^
 ||humanflies.xyz^
+||huohua.cn^
 ||husevon.com^
 ||huwnll.com^
 ||huwwzzas.shop^
@@ -649,6 +659,7 @@
 ||ig.com^
 ||iigov.xyz^
 ||iiil.io^
+||ij2hr.top^
 ||iju888.com^
 ||illumsfx.com^
 ||ils3x.shop^
@@ -678,6 +689,7 @@
 ||isgdanismanligi.com.tr^
 ||isnotdomain440059159.com^
 ||itradesoeasy.com^
+||iu1hwe.top^
 ||ivenor.tw^
 ||ivideo247.com^
 ||iwmqa.asia^
@@ -731,6 +743,7 @@
 ||kanda-stock.com^
 ||kangstock.com^
 ||kaohsiunggirlhotvideo.page.link^
+||karnscrypto.com^
 ||kasumigaseki.com.tw^
 ||kathy.buzz^
 ||katrina2929.wixsite.com^
@@ -816,6 +829,7 @@
 ||lkd49d.vip^
 ||lkjvbn.com^
 ||llld.shop^
+||lmaxnames.vip^
 ||lmstem.com^
 ||loan588.cc^
 ||loan588.com^
@@ -875,6 +889,7 @@
 ||mikecrm.com^
 ||miketong.net^
 ||mimohunn.com^
+||miningdifi.com^
 ||minutefor.shop^
 ||miracle-mall.com^
 ||mises.shop^
@@ -975,6 +990,7 @@
 ||onlineprotool.com^
 ||onlinerichmkt.com^
 ||oovgov.com^
+||openposile.top^
 ||oplalssa.shop^
 ||oppiuuhh.store^
 ||opticalilusion.com^
@@ -985,6 +1001,8 @@
 ||ouej.shop^
 ||ouetd.shop^
 ||outlet.win^
+||outraszmp.shop^
+||owhdhd.com^
 ||owo-owo.vip^
 ||oxfordclubtaiwan.com^
 ||oyn.at^
@@ -999,6 +1017,7 @@
 ||penetration1.com^
 ||pentobarbitalgroup.com^
 ||percy.buzz^
+||pesc.pw^
 ||phdcxt.com^
 ||phv955.net.wnacloud.com^
 ||phv955.net^
@@ -1044,6 +1063,7 @@
 ||qjea68f.com^
 ||qlchat.com^
 ||qmfm.net^
+||qoo10tw.asia^
 ||qoo10twn.com^
 ||qrurl.net^
 ||qstarlife.com^
@@ -1125,6 +1145,7 @@
 ||shopee89.shop^
 ||shopeeo.online^
 ||shopfdhgn.club^
+||shoping688.com^
 ||shopline.tw^
 ||shopmetw.weebly.com^
 ||shopping99.com^
@@ -1140,6 +1161,7 @@
 ||shtyw.shop^
 ||shufabu6000.com^
 ||shukunjin.com^
+||sibwa.top^
 ||signupforfreepocke8.wixsite.com^
 ||sigov.top^
 ||sijn888.com^
@@ -1358,6 +1380,7 @@
 ||uchdk.top^
 ||ucxgov.com^
 ||ufrsa.shop^
+||uh1sdf.top^
 ||uhongm.site^
 ||uiopg.shop^
 ||ukwwx.com^
@@ -1450,6 +1473,7 @@
 ||win68.cc^
 ||winning-coupon-theday-congrats.cyou^
 ||wiocdsd.world^
+||wkpszs.shop^
 ||wmtvn.com^
 ||wmydhpq.com^
 ||woacf.com^
@@ -1485,7 +1509,9 @@
 ||xeaoy.com.cn^
 ||xgdfs.com^
 ||xggkimixu.com^
+||xiahu.site^
 ||xiapee.com^
+||xivr.tw^
 ||xll31v.top^
 ||xlxxl.store^
 ||xn--299a.xn--3e0b707e^
@@ -1508,6 +1534,7 @@
 ||yafengmaoyi.com^
 ||yahoocaijing.com^
 ||yangyyy.shop^
+||yasenfinancial.live^
 ||yau.buzz^
 ||ybfbit.com^
 ||ycxgov.tv^

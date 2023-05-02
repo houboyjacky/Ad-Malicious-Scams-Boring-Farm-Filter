@@ -1304,3 +1304,9 @@
 ||coindataflow777.top^
 ! 詐騙網購 https://www.dcard.tw/f/anti_fraud/p/241877461
 ||shopwako.com^
+! 詐騙投資 https://www.dcard.tw/f/money/p/241913608
+||vantwnow.com^
+||vantwnow.live^
+||vantwnow.net^
+||vantwnow.xyz^
+||vantwnow.*^

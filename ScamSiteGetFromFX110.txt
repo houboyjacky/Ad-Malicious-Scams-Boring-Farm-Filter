@@ -1,4 +1,4 @@
-! 2023/04/18 Update
+! 2023/05/02 Update
 ! FX110 https://www.fx110.com.tw/
 @@||metamask.io^
 ||00fa.com^
@@ -63,6 +63,7 @@
 ||365falcon.com^
 ||365viewoptions.online^
 ||365ydgj.com^
+||375viewoptions.online^
 ||38.55.214.195.^
 ||3ng648.site^
 ||4006766910.com^
@@ -180,6 +181,7 @@
 ||actioncorretora.com^
 ||actionmarkets.com^
 ||actior.de^
+||activ4x.com^
 ||active-brokerage.com^
 ||activebrokerz.com^
 ||activeresist.com^
@@ -254,6 +256,8 @@
 ||agamarkets.com^
 ||agatrader.com^
 ||agefx.io^
+||agenamarkets.com^
+||agenatrader.com^
 ||agerfx.com^
 ||agfxmarket.com^
 ||agfxmarkets.com^
@@ -450,6 +454,7 @@
 ||api-fx.com^
 ||apipfx.com^
 ||aplexva.com^
+||aplustrader.com^
 ||apmmarkets.com^
 ||apollofinances.com^
 ||app-trader.biz^
@@ -472,6 +477,7 @@
 ||areatrading.pro^
 ||arenacapitals.com^
 ||arenaglobal.asia^
+||arenatrading.co^
 ||argoforex.com^
 ||argontrades.com^
 ||arjsecurities.com^
@@ -484,6 +490,7 @@
 ||aroxtradeasset.com^
 ||arrowteks.com^
 ||artascopefx.com^
+||artemisforex.com^
 ||artfx.pro^
 ||artsmrkts.com^
 ||arygosfx.com^
@@ -590,6 +597,7 @@
 ||aursfxl.com^
 ||ausbey.com^
 ||ausbeymarkets.com^
+||ausfitm.com^
 ||ausjr.com^
 ||auspiciousorganization.xyz^
 ||aussietrust.com^
@@ -974,6 +982,7 @@
 ||bridgefund.io^
 ||bridgemarkets.eu^
 ||bridger-group.pro^
+||bridgetrustcap.org^
 ||bright4x.com^
 ||brighterfieldstrade.com^
 ||brightfinance.co^
@@ -1457,6 +1466,7 @@
 ||crypneteasy.com^
 ||cryptbull.io^
 ||cryptenix.com^
+||cryptexmarginfx.com^
 ||cryptfx24.com^
 ||cryptfxtm.com^
 ||cryptics.cc^
@@ -1466,6 +1476,7 @@
 ||crypto-btc.info^
 ||crypto-bulltrade.com^
 ||crypto-deskfx.com^
+||crypto-guider.com^
 ||crypto-lloyds.com^
 ||crypto-markets.io^
 ||crypto-miningexpert.com^
@@ -2155,11 +2166,13 @@
 ||fasfxtrading.online^
 ||fasonla.com^
 ||fastforbrokers.com^
+||fastforextradelab.com^
 ||fastlinkfx.com^
 ||fastrading.com^
 ||fasttrade.co.in^
 ||fasttrade.online^
 ||favortrades.com^
+||fblholdings.org^
 ||fbpfutures.com^
 ||fcautomatic.com^
 ||fccforex.com^
@@ -2189,6 +2202,7 @@
 ||feitefx.com^
 ||fendatrade.com^
 ||fengduf.com^
+||fenicsfx.com^
 ||fenix-funds.pro^
 ||fergofx.com^
 ||fescinternation.com^
@@ -2727,6 +2741,7 @@
 ||fxmonline.com^
 ||fxmoption.com^
 ||fxmtf.com^
+||fxmtradingview.com^
 ||fxmundo.com^
 ||fxmventure.com^
 ||fxmyth.com^
@@ -3556,6 +3571,7 @@
 ||ikici.net^
 ||ikici.org^
 ||ikonatlantic.com^
+||ikoncfd.com^
 ||ikonch.com^
 ||ilafx.com^
 ||ilimitsinvest.com^
@@ -3718,6 +3734,7 @@
 ||investzo.com^
 ||invfx.co.uk^
 ||invhouse.com^
+||invincogmbh.de^
 ||invlife.com^
 ||invxsler.co^
 ||invxsler.com^
@@ -3863,6 +3880,7 @@
 ||jupaml.com^
 ||jupiterholdings.net^
 ||jupiterholdingsltd.com^
+||jussimple.com^
 ||just2trade.live^
 ||justforex.asia^
 ||justforex.com^
@@ -4160,6 +4178,7 @@
 ||lsatrading.com^
 ||lscmarket.com^
 ||lsft.lk^
+||lskinvestments.com^
 ||lslgj.com^
 ||lt-forex.com^
 ||ltd-fx.com^
@@ -5006,8 +5025,10 @@
 ||power-markets.com^
 ||power-tmfx.com^
 ||powerbitfxsignal.com^
+||powerflowcurrencies.com^
 ||powerforexchn.com^
 ||powerforexint.com^
+||powerrichmarket.com^
 ||pps.com.kh^
 ||ppsforex.com.kh^
 ||prbcapitals.com^
@@ -5354,6 +5375,7 @@
 ||ronghuiforex.com^
 ||rongk.com^
 ||rongks.com^
+||rongxiang-fx.com^
 ||rongyi-fx.com^
 ||rontchoh.com^
 ||rosyfx.com^
@@ -5505,6 +5527,7 @@
 ||sensetrade.cc^
 ||sentinel-market.com^
 ||sentrade.net^
+||serengetifx.com^
 ||sethisecurities.com^
 ||sevencapital24.com^
 ||sevengatesconsulting.de^
@@ -5559,6 +5582,7 @@
 ||signals4life.com^
 ||signalsbit.live^
 ||signgold.online^
+||silvercreststocktrades.com^
 ||silvertree-hk.org^
 ||simarkets.com^
 ||simmarkets.com^
@@ -5846,6 +5870,7 @@
 ||swisscapital.ae^
 ||swisscapitalfx.com^
 ||swisscbank.com^
+||swisscfd.com^
 ||swisschains.com^
 ||swisscoininvest.com^
 ||swisscryptobanc.com^
@@ -5897,6 +5922,7 @@
 ||tcllccn.com^
 ||tcr-fx.com^
 ||tcrfx.com^
+||td365.com^
 ||tdgjvip.com^
 ||tdonline-asia.com^
 ||tdrfx.com^
@@ -5920,6 +5946,7 @@
 ||tenkofx.com^
 ||tenxprime.com^
 ||tenxtrade.com^
+||teratrade.co^
 ||tercmarkets.com^
 ||tescoinvest.com^
 ||tescoplctrade.com^
@@ -6071,9 +6098,11 @@
 ||trade4x.net^
 ||trade7fx.com^
 ||trade98152.xyz^
+||tradeactive.com^
 ||tradebaionics.com^
 ||tradebaionics.io^
 ||tradebaionics.net^
+||tradebells.in^
 ||tradeblaisefx.com^
 ||tradebullfx.com^
 ||tradecapital.com^
@@ -6467,6 +6496,7 @@
 ||vertical-markets.net^
 ||vertiforex.ca^
 ||verycapital.com^
+||vesta.trade^
 ||vestapros.com^
 ||vestlefx.com^
 ||vestradefx.com^
@@ -6629,6 +6659,8 @@
 ||websteroptions.com^
 ||webwmk.com^
 ||weekdefi.com^
+||weekend-fx.com^
+||weeklytrade247.com^
 ||weeklytradecryptos.com^
 ||wefxcn.com^
 ||weikefx.com^
@@ -6658,6 +6690,7 @@
 ||whjygs.com^
 ||widecfd.com^
 ||widehorizonglobal.com^
+||wiicrypto.com^
 ||wilkesfx.com^
 ||will-markets.com^
 ||wiltonoption.com^
@@ -6733,6 +6766,7 @@
 ||worldmarkets.com^
 ||worldstocks.co^
 ||worldtradecenter.io^
+||worldtradedoor.com^
 ||worldwealthgroup.com^
 ||worldwidemarkets.com^
 ||wow-trader.com^
@@ -6926,6 +6960,7 @@
 ||zenomarkets.com^
 ||zentrade.com^
 ||zentrader.com^
+||zenultrafxltd.com^
 ||zeusgjforex.cn^
 ||zeyfex.com^
 ||zforex.com^
