@@ -65,11 +65,16 @@ def user_download_lineid():
 
     lineid_list = sorted(set(lineid_list + lineid_local))
 
-# 使用者查詢Line ID
-def user_query_lineid(lineid):
+def user_query_lineid_sub(lineid):
     user_download_lineid()
     # 檢查是否符合命名規範
     if lineid in lineid_list:
+        return True
+    return False
+
+# 使用者查詢Line ID
+def user_query_lineid(lineid):
+    if user_query_lineid_sub(lineid):
         rmessage = ("「" + lineid + "」\n"
                     "為詐騙Line ID\n"
                     "請勿輕易信任此Line ID的\n"

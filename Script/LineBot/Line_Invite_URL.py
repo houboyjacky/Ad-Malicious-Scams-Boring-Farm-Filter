@@ -24,7 +24,7 @@ import re
 import requests
 import json
 from typing import Optional
-from Query_Line_ID import user_add_lineid, user_query_lineid
+from Query_Line_ID import user_add_lineid, user_query_lineid_sub
 
 # 讀取設定檔
 # LINE_INVITE => LINE Invite Site List
@@ -156,6 +156,6 @@ def lineinvite_read_file(user_text:str) -> bool:
     for result in results:
         if result["邀請碼"] == analyze["邀請碼"]:
             return True
-    if user_query_lineid(analyze["邀請碼"]):
+    if user_query_lineid_sub(analyze["邀請碼"]):
         return True
     return False
