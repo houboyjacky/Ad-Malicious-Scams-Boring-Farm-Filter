@@ -2,6 +2,7 @@
 
 * 20230503 Update
   * 修復 LineBot query line id return錯誤
+  * 調整 LineBot 正規化規則
 
 * 20230502 Update
   * 更新 個人不想看的廣告或網站

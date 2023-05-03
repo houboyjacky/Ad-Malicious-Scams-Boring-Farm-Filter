@@ -35,7 +35,7 @@ LINE_INVITE = setting['LINE_INVITE']
 
 def analyze_line_invite_url(user_text:str) -> Optional[dict]:
     # 定義邀請類型的正則表達式
-    PATTERN = r'^https:\/\/(line\.me|lin\.ee)\/(R\/ti\/p|ti\/(g|g2|p)|)\/(~?@?[a-zA-Z0-9-_]+)(\?[a-zA-Z0-9_=&]+)?#?~?$'
+    PATTERN = r'https:\/\/line\.me\/R?\/?ti\/(p|g|g2)\/([a-zA-Z0-9_~@-]+)[#~?]*\S*'
 
     user_text = user_text.replace("加入詐騙邀請", "")
 
@@ -46,6 +46,7 @@ def analyze_line_invite_url(user_text:str) -> Optional[dict]:
             return False
 
         redirected_url = response.url
+        print("Redirected_url = " + redirected_url)
         match = re.match(PATTERN, redirected_url)
 
     else:
@@ -54,24 +55,18 @@ def analyze_line_invite_url(user_text:str) -> Optional[dict]:
             print('line.me邀請網址解析失敗')
             return False
 
-    domain, group2, group3, invite_code, group4 = match.groups()
-    if domain:
-        print("domain : " + domain)
-    if group2:
-        print("group2 : " + group2)
-    if group3:
-        print("group3 : " + group3)
+    Type, invite_code = match.groups()
+    if Type:
+        print("Type : " + Type)
     if invite_code:
         print("invite_code : " + invite_code)
-    if group4:
-        print("group4 : " + group4)
 
-    if group2 == "ti/p" or "~" in invite_code:
-        category = "個人"
-    elif group2 in ["ti/g", "ti/g2"]:
-        category = "群組"
-    elif "@" in invite_code:
+    if "@" in invite_code:
         category = "官方"
+    elif Type == "p" or "~" in invite_code:
+        category = "個人"
+    elif Type in ["g", "g2"]:
+        category = "群組"
     else:
         print('無法解析類別')
         return None
