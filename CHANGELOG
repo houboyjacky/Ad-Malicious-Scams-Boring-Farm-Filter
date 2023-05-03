@@ -4,6 +4,7 @@
   * 修復 LineBot import錯誤
   * 修復 LineBot query line id return錯誤
   * 調整 LineBot 正規化規則
+  * 調整 LineBot 用字
   * 調整 LineBot 防呆
   * 調整 LineBot 狀態寫入log
 

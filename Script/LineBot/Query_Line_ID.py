@@ -79,13 +79,13 @@ def user_query_lineid_sub(lineid):
 def user_query_lineid(lineid):
     if user_query_lineid_sub(lineid):
         rmessage = ("「" + lineid + "」\n"
-                    "為詐騙Line ID\n"
+                    "「是」詐騙Line ID\n"
                     "請勿輕易信任此Line ID的\n"
                     "文字、圖像、語音和連結\n"
                     "感恩")
     else:
         rmessage = ("「" + lineid + "」\n"
-                    "該不在詐騙Line ID中\n"
+                    "目前不在詐騙黑名單中\n"
                     "若認為問題，請補充描述\n"
                     "感恩")
     return rmessage
