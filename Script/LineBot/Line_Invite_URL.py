@@ -145,8 +145,10 @@ def lineinvite_write_file(user_text:str) -> bool:
         logger.info("無法分析網址")
         return False
 
-def lineinvite_read_file(user_text:str) -> bool:
+def lineinvite_read_file(user_text:str) -> int:
     analyze = analyze_line_invite_url(user_text)
+    if not analyze:
+        return -1
 
     results = read_json_file(LINE_INVITE)
     for result in results:

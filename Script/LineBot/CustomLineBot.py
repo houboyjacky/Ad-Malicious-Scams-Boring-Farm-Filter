@@ -228,7 +228,12 @@ def handle_message(event):
     # 查詢line邀請網址
     if user_text.startswith("https://line.me") or user_text.startswith("https://lin.ee"):
         user_text = event.message.text
-        if lineinvite_read_file(user_text):
+        r = lineinvite_read_file(user_text)
+        if r == -1:
+            rmessage = ("「" + user_text + " 」\n"
+                        "輸入有誤，請重新確認\n"
+                        "感恩")
+        elif r == True:
             rmessage = ("「" + user_text + " 」\n"
                         "「是」已知詐騙Line邀請網址\n"
                         "請勿輕易信任此Line ID的\n"
