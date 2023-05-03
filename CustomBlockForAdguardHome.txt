@@ -93,6 +93,7 @@
 ||ace777.com^
 ||acefinance.asia^
 ||acemlnc.com^
+||aclarines.com^
 ||ad-specs.guoshipartners.com^
 ||ad.setn.com^
 ||adsv.svc.litv.tv^
@@ -163,6 +164,7 @@
 ||beats.com.tw^
 ||belanjatupperware.com^
 ||bellostock1688.com^
+||bestinlansing.com^
 ||betterlife520vip.com^
 ||beyondpeak168.com^
 ||bgoani.co^
@@ -236,6 +238,7 @@
 ||carbon2.shop^
 ||carcarecafe.com^
 ||carousellshop.com^
+||carousellverify.com^
 ||carrolltonrental.com^
 ||cash17888.com^
 ||casualmeet.click^
@@ -317,6 +320,7 @@
 ||darraninvest.com^
 ||dasqf.asia^
 ||datesrud.com^
+||dayicha.shop^
 ||dayone1.live^
 ||dbagvmi.com^
 ||dbgmarkets.co^
@@ -352,6 +356,7 @@
 ||dp369.net^
 ||dragon-legend.cc^
 ||drbuttar.lt.acemlnb.com^
+||dreambxn.com^
 ||drhojyo.com.hk^
 ||drich.online^
 ||drich01.com^
@@ -798,6 +803,7 @@
 ||latestrends01.com^
 ||lavisualisation.lt.acemlnb.com^
 ||lazadashop-twmall.com^
+||lc.chat^
 ||lcspw.asia^
 ||leadquizzes.com^
 ||learnguitarplaying.com^
@@ -868,6 +874,7 @@
 ||majieke12.top^
 ||majieke13.top^
 ||makemoresalesonlinechallenge.com^
+||maoyou85.com^
 ||marketdatasystems.com^
 ||maroc1001nuits.com^
 ||mastermysan.com^
@@ -1073,6 +1080,7 @@
 ||qyhost168.com^
 ||qzbzxgj.cn^
 ||qzzcf.cn^
+||r.sn.cn^
 ||r3gsduh.store^
 ||r83ihk.com^
 ||radiusdressing.com^
@@ -1142,6 +1150,7 @@
 ||shonko.vip^
 ||shop2000.com.tw^
 ||shopcbws.space^
+||shopee-tw11-com.top^
 ||shopee89.shop^
 ||shopeeo.online^
 ||shopfdhgn.club^
@@ -1258,6 +1267,7 @@
 ||tesseract222.top^
 ||tfhfinssra.com^
 ||tfporg.lt.acemlnb.com^
+||tha666.tw^
 ||thea.buzz^
 ||thejamestrades.com^
 ||theonering.net^
@@ -1543,6 +1553,7 @@
 ||ymsgov.com^
 ||ynrgov.com^
 ||yoelw.top^
+||yoiyaio.top^
 ||yonguini.com^
 ||youdp.shop^
 ||youlove2chat.com^
@@ -1588,3 +1599,4 @@
 ||zwheqjrkjhr.com^
 ||zxw-tw.cn^
 ||zxwman.com^
+||zzosq.top^
