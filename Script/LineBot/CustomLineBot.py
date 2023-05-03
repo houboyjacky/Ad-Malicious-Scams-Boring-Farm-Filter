@@ -32,7 +32,7 @@ import tldextract
 
 import Query_URL
 from Line_Invite_URL import lineinvite_write_file, lineinvite_read_file
-from logger import logger
+from Logger import logger
 from Query_URL import user_query_website, run_schedule, update_blacklist
 from Query_Line_ID import user_query_lineid, user_download_lineid, user_add_lineid
 
