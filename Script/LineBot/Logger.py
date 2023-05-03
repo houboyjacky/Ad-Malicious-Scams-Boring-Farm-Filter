@@ -49,3 +49,6 @@ logger.addHandler(loghandler)
 loghandler.suffix = "%Y-%m-%d"
 loghandler.extMatch = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 loghandler.doRollover()
+
+# 設定日誌記錄器在關閉時不清除handler，以便在下一次啟動應用程序時繼續寫入到新文件。
+logger.propagate = False
