@@ -64,6 +64,17 @@ rule = setting['RULE']
 def handle_signal(signal, frame):
     os._exit(0)
 
+@app.after_request
+def log_request(response):
+    if response.status_code != 404:
+        return response
+
+    # 記錄404錯誤
+    log_message = '404 Error: %s %s %s' % (request.remote_addr, request.method, request.url)
+    logger.error(log_message)
+
+    return response
+
 @app.route('/'+NEW_SCAM_WEBSITE_FOR_ADG)
 def tmp_blacklisted_site():
     return Response(open(NEW_SCAM_WEBSITE_FOR_ADG, "rb"), mimetype="text/plain")
@@ -94,7 +105,7 @@ def admin_process(user_text):
             lineid = match.group(1)
             # 加入新line id
             user_add_lineid(lineid)
-            rmessage = "邀請黑名單更新完成"
+            rmessage = "邀請黑名單與賴黑名單更新完成" + lineid
         elif lineinvite_write_file(user_text):
             rmessage = "邀請黑名單更新完成"
         else:
@@ -157,7 +168,7 @@ def admin_process(user_text):
         # 加入新line id
         user_add_lineid(lineid)
 
-        rmessage = "賴黑名單更新完成"
+        rmessage = "賴黑名單已加入" + lineid
     else:
         pass
 

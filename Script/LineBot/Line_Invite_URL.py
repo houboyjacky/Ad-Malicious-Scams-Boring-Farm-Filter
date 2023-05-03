@@ -23,6 +23,7 @@ THE SOFTWARE.
 import re
 import requests
 import json
+from Logger import logger
 from typing import Optional
 from Query_Line_ID import user_add_lineid, user_query_lineid_sub
 
@@ -42,24 +43,24 @@ def analyze_line_invite_url(user_text:str) -> Optional[dict]:
     if user_text.startswith("https://lin.ee"):
         response = requests.get(user_text)
         if response.status_code != 200:
-            print('lin.ee邀請網址解析失敗')
+            logger.error("lin.ee邀請網址解析失敗")
             return False
 
         redirected_url = response.url
-        print("Redirected_url = " + redirected_url)
+        logger.info("Redirected_url = " + redirected_url)
         match = re.match(PATTERN, redirected_url)
 
     else:
         match = re.match(PATTERN, user_text)
         if not match:
-            print('line.me邀請網址解析失敗')
+            logger.error('line.me邀請網址解析失敗')
             return False
 
     Type, invite_code = match.groups()
     if Type:
-        print("Type : " + Type)
+        logger.info("Type : " + Type)
     if invite_code:
-        print("invite_code : " + invite_code)
+        logger.info("invite_code : " + invite_code)
 
     if "@" in invite_code:
         category = "官方"
@@ -68,7 +69,7 @@ def analyze_line_invite_url(user_text:str) -> Optional[dict]:
     elif Type in ["g", "g2"]:
         category = "群組"
     else:
-        print('無法解析類別')
+        logger.error('無法解析類別')
         return None
 
     return {"類別": category, "邀請碼": invite_code, "原始網址": user_text}
@@ -138,10 +139,10 @@ def lineinvite_write_file(user_text:str) -> bool:
         results = read_json_file(LINE_INVITE)
         add_sort_lineinvite(result,results)
         write_json_file(LINE_INVITE, results)
-        print("分析完成，結果已寫入")
+        logger.info("分析完成，結果已寫入")
         return True
     else:
-        print("無法分析網址")
+        logger.info("無法分析網址")
         return False
 
 def lineinvite_read_file(user_text:str) -> bool:

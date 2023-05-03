@@ -32,6 +32,7 @@ import whois
 
 from datetime import datetime
 from urllib.parse import urlparse
+from Logger import logger
 
 FILTER_DIR = "filter"
 
@@ -49,6 +50,7 @@ blacklist = []
 def download_file(url):
     response = requests.get(url)
     if response.status_code != 200:
+        logger.error(url + "download fail\n")
         return None
 
     content = response.content
@@ -59,7 +61,7 @@ def download_file(url):
     if not os.path.exists(filename):
         with open(filename, "wb") as f:
             f.write(content)
-            print(filename + " is download\n")
+        logger.info(filename + " is download\n")
         return filename
 
     # 如果檔案已存在，則比對雜湊值
@@ -71,7 +73,7 @@ def download_file(url):
         # 雜湊值不同，代表內容有更新，需要下載
         with open(filename, "wb") as f:
             f.write(content)
-            print(filename + " is download\n")
+        logger.info(filename + " is download\n")
         return filename
 
     # 雜湊值相同，代表檔案已經是最新的，不需要下載
@@ -120,7 +122,7 @@ def update_blacklist():
     read_rule(NEW_SCAM_WEBSITE_FOR_ADG)
 
     blacklist = sorted(list(set(blacklist)))
-    print("Update blacklist finish!")
+    logger.info("Update blacklist finish!")
 
 # 黑名單判斷
 def check_blacklisted_site(user_text):
@@ -161,7 +163,7 @@ def user_query_website(user_text):
     except whois.parser.PywhoisError: # 判斷原因 whois.parser.PywhoisError: No match for "FXACAP.COM"
         w = None
         Error = True
-    #print(w)
+    #logger.info(w)
     #判斷網站
     checkresult = check_blacklisted_site(user_text)
 
@@ -194,8 +196,8 @@ def user_query_website(user_text):
         creation_date = w.creation_date.strftime('%Y-%m-%d %H:%M:%S')
         diff_days = (today - w.creation_date.date()).days  # 相差幾天
 
-    #print("Website : " + user_text)
-    #print("Create Date : " + creation_date)
+    #logger.info("Website : " + user_text)
+    #logger.info("Create Date : " + creation_date)
 
     #判斷網站
     if checkresult is True:

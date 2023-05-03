@@ -26,6 +26,8 @@ import requests
 import time
 import os
 
+from Logger import logger
+
 # 讀取設定檔
 # LINEID_LOCAL => LINE ID local file
 # LINEID_WEB => LINE ID Download from Web
@@ -49,6 +51,7 @@ def user_download_lineid():
 
     response = requests.get(url)
     if response.status_code != 200:
+        logger.error("Download Line ID Fail")
         return
 
     new_hash = hashlib.md5(response.text.encode('utf-8')).hexdigest()
@@ -58,7 +61,7 @@ def user_download_lineid():
     lineid_download_hash = new_hash
     lineid_list = response.text.splitlines()
     lineid_download_last_time = time.time()
-    print("Download Line ID Finish")
+    logger.info("Download Line ID Finish")
 
     with open(LINEID_LOCAL, "r", encoding="utf-8") as f:
         lineid_local = f.read().splitlines()
