@@ -28,6 +28,7 @@ import signal
 import threading
 import time
 import tldextract
+import ipaddress
 # pip install schedule tldextract flask line-bot-sdk whois
 
 import Query_URL
@@ -40,6 +41,7 @@ from flask import Flask, Response, request, abort
 from linebot import LineBotApi, WebhookHandler
 from linebot.exceptions import InvalidSignatureError
 from linebot.models import MessageEvent, TextMessage, TextSendMessage
+from Security_Check import get_cf_ips, download_cf_ips
 
 app = Flask(__name__)
 # 讀取設定檔
@@ -64,6 +66,17 @@ rule = setting['RULE']
 def handle_signal(signal, frame):
     os._exit(0)
 
+@app.before_request
+def limit_remote_addr():
+    cf_ips = get_cf_ips()
+    for cf_ip in cf_ips:
+        if ipaddress.IPv4Address(request.remote_addr) in ipaddress.ip_network(cf_ip):
+            return None
+    # 記錄403錯誤
+    log_message = '403 Error: %s %s %s' % (request.remote_addr, request.method, request.url)
+    logger.error(log_message)
+    return "Forbidden", 403
+
 @app.after_request
 def log_request(response):
     if response.status_code != 404:
@@ -72,7 +85,6 @@ def log_request(response):
     # 記錄404錯誤
     log_message = '404 Error: %s %s %s' % (request.remote_addr, request.method, request.url)
     logger.error(log_message)
-
     return response
 
 @app.route('/'+NEW_SCAM_WEBSITE_FOR_ADG)
@@ -267,6 +279,8 @@ if __name__ == "__main__":
     signal.signal(signal.SIGINT, handle_signal)
 
     user_download_lineid()
+
+    download_cf_ips()
 
     update_thread = threading.Thread(target=run_schedule)
     update_thread.start()
