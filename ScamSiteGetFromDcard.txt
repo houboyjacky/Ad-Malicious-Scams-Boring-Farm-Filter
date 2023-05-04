@@ -1312,3 +1312,5 @@
 ||vantwnow.*^
 ! 詐騙投資 https://www.dcard.tw/f/anti_fraud/p/241914022
 ||bstustb.com^
+! 詐騙購物 https://www.dcard.tw/f/anti_fraud/p/241927280
+||carousell2.site^

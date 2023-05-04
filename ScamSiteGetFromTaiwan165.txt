@@ -1,10 +1,11 @@
 ! 民眾通報假投資(博弈)詐騙網站 https://165.npa.gov.tw
-#||cdn77.org^
-#||fx110.com^
-#||weebly.com^
 @@||bittrex.com^$important
 @@||fpmarkets.com^$important
 @@||pingshangyang.webnode.tw^$important
+#||cdn77.org^
+#||fx110.com^
+#||mystrikingly.com^
+#||weebly.com^
 ||0204net.com^
 ||04800.cn^
 ||0963084.space^
@@ -2328,7 +2329,6 @@
 ||myrzzw.com^
 ||myselfshopgo.com^
 ||mysterikingly.com^
-||mystrikingly.com^
 ||mytat.top^
 ||myzj1288.com^
 ||myzj2688.cc^

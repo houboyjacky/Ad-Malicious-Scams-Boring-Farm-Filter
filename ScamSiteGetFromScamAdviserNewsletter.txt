@@ -4,6 +4,7 @@
 #||windows.net^
 ||45.88.169.3^
 ||5onsup.online^
+||75892.com^
 ||abfinanceppc.com^
 ||acedeliveryexpress.com^
 ||adaptivelearninglabs.com^
@@ -39,6 +40,7 @@
 ||bolonies.com^
 ||bourbonwhiskeyforsale.shop^
 ||bravethinking.co.uk^
+||brightdecor.info^
 ||buypappyvanwinkleonline.com^
 ||buysalestamp.shop^
 ||bynipoj.xyz^
@@ -70,6 +72,7 @@
 ||engineercoin.xyz^
 ||f0undlth3r3.link^
 ||f0undlth3re.link^
+||finaynnand.tk^
 ||fishingpraslin.com^
 ||fksepgq.in^
 ||fleek.co^
@@ -95,6 +98,7 @@
 ||iqcreditcheck.com^
 ||irefuvo.com^
 ||jewelryoutletmall.com^
+||k712.site^
 ||kemnrst.us^
 ||khsas.com^
 ||kickstargogo.com^
@@ -122,6 +126,7 @@
 ||mbhogl.info^
 ||me2.do^
 ||mealfresh.com^
+||medcomdeoit.xyz^
 ||mentakstatute.com^
 ||messyypush.com^
 ||milliondollaridea.store^
@@ -138,24 +143,27 @@
 ||nelanycargo.com^
 ||netemployers.com^
 ||nienorlogistic.com^
-||nordstromSurveyz.store^
+||nordstromsurveyz.store^
 ||offshorescoins.com^
 ||ojosehi.com^
 ||ondigitalocean.app^
 ||onekoiriueuw.com^
 ||onlinebuystamps.com^
 ||onlinehome.us^
+||onlyexpert.com^
 ||onydouglasllc.com^
 ||orfiuph.com^
+||oveltr.com^
 ||ownybit.com^
 ||page.app.br^
 ||paradiseyorkieshome.com^
 ||patternlikeannaunasserted.com^
 ||pemsv30.net^
-||pfizerGroup.be^
+||pfizergroup.be^
 ||pfizersgroup.com^
 ||phatdigits.com^
 ||premiuminsuranceassets.com^
+||presec.us^
 ||primefood.shop^
 ||prizeforsurveys.net^
 ||psaxalg.in^
@@ -197,6 +205,7 @@
 ||txbgfz.pics^
 ||ubohovu.com^
 ||uev.wtf^
+||universitykart.com^
 ||unlockyouhip.shop^
 ||uoedercm.com^
 ||us-knpes.us^
@@ -217,3 +226,4 @@
 ||yosoft.company.site^
 ||yosoftinfo.online^
 ||yougetgreen.com^
+||zenkit.com^
