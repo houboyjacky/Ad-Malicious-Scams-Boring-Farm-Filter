@@ -51,6 +51,7 @@
 /bycp[a-z0-9]*\.com/
 /caifuyiha[a-z0-9]*\.club/
 /caijing\w*\.w*/
+/caixin[0-9]+yule\.com/
 /capita[a-z0-9]*\.com/
 /carousel[a-z0-9-]*tw\.(com|xyz)/
 /carousel[a-z0-9]+[-]?tw\.com/
@@ -66,6 +67,7 @@
 /coincheck\.[a-z]+/
 /coinrule.*\.*/
 /cwgforexp[a-z0-9]*\.com/
+/dbag[a-z]{3}\.com/
 /dbgmarke[a-z0-9]*\.com/
 /defiflexpool-vip-[a-z0-9]*\.com/
 /defiflexpool.*\.com$/
@@ -74,6 +76,7 @@
 /dongsen[a-z0-9]*\.com/
 /downloadc[0-9]*\.com/
 /dsglobalyl[l]?\.com/
+/dwgj[0-9]{3-4}\.com/
 /dxm[0-9]*.com/
 /ebay-comerc[a-z]*\.com/
 /ee[0-9]+\.com/
@@ -112,6 +115,7 @@
 /igmark[a-z0-9]*\.com/
 /information-pages-[0-9]+.webnode.co/
 /ioex[0-9]+\.com/
+/ioexx?[0-9]{1,2}\.com/
 /isnotdomain[0-9]+\.com/
 /js[0-9]+\.cn/
 /kicurency.+\..+/
@@ -159,6 +163,7 @@
 /taiwan-[a-z]+\.(com|tw)/
 /taiwanstartr.+\.com/
 /tanaka[a-z]+\.com/
+/tesseract[0-9]{3}\.top/
 /thinkmark.+\.com/
 /tickmilltw.*\.xyz/
 /tk[0-9]\.shop/
@@ -172,6 +177,7 @@
 /twpldr[a-z]\.com/
 /usdter.?\..*/
 /vip[a-z0-9]+fx\.com/
+/vipmexc[0-9]{3}\.com/
 /vipmining[0-9]{3,4}\.com/
 /wandataw[a-z0-9]*\.com/
 /waytec.+\.com/
@@ -182,6 +188,7 @@
 /wnsr[a-z0-9]*\.com/
 /worldfistw\.[a-z]+/
 /www-?post-?gov-?tw\.sytes\.net/
+/xpj[0-9]{4,5}\.com/
 /xpromarkets\.[a-z]+/
 /xw[a-z0-9]+vv\.xyz/
 /yinhe[a-z0-9]*\.com/
