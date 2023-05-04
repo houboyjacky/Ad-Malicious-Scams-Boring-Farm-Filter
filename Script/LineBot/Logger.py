@@ -21,10 +21,11 @@ THE SOFTWARE.
 '''
 
 import logging
+import logging.handlers
+import atexit
 import json
-import re
-
-from logging.handlers import TimedRotatingFileHandler
+import os
+from datetime import datetime
 
 # 讀取設定檔
 # LOGFILE => Linebot Log Path
@@ -32,6 +33,31 @@ with open('setting.json', 'r') as f:
     setting = json.load(f)
 
 LOGFILE = setting['LOGFILE']
+
+def add_time_to_logfile_name():
+    """
+    在檔名後加上當前時間，形成新的日誌檔案名稱
+    """
+    now = datetime.now()
+    logfilename = os.path.basename(LOGFILE)
+    dirname = os.path.dirname(LOGFILE)
+    new_logfilename = "{}_{}.log".format(
+        logfilename, now.strftime("%Y-%m-%d_%H-%M-%S"))
+    return os.path.join(dirname, new_logfilename)
+
+
+def rollover_logfile():
+    """
+    轉移現有的日誌檔案，以維持最多30個日誌檔案
+    """
+    loghandler.doRollover()
+    old_logs = loghandler.getFilesToDelete()
+    for log in old_logs:
+        try:
+            os.remove(log)
+        except Exception:
+            pass
+
 
 # 設定logger
 logger = logging.getLogger(__name__)
@@ -41,14 +67,12 @@ logger.setLevel(logging.INFO)
 log_formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
 
 # 設定TimedRotatingFileHandler
-loghandler = TimedRotatingFileHandler(LOGFILE, when='midnight', interval=1, backupCount=7)
+loghandler = logging.handlers.TimedRotatingFileHandler(filename=add_time_to_logfile_name(), when='midnight', interval=1, backupCount=30)
 loghandler.setFormatter(log_formatter)
 logger.addHandler(loghandler)
 
-# 清除7天以前的日誌
-loghandler.suffix = "%Y-%m-%d"
-loghandler.extMatch = re.compile(r"^\d{4}-\d{2}-\d{2}$")
-loghandler.doRollover()
-
 # 設定日誌記錄器在關閉時不清除handler，以便在下一次啟動應用程序時繼續寫入到新文件。
 logger.propagate = False
+
+# 設定當應用程式關閉時執行的函數
+atexit.register(rollover_logfile)

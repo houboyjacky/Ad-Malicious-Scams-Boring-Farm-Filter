@@ -50,7 +50,7 @@ blacklist = []
 def download_file(url):
     response = requests.get(url)
     if response.status_code != 200:
-        logger.error(url + "download fail\n")
+        logger.error(url + "download fail")
         return None
 
     content = response.content
@@ -61,7 +61,7 @@ def download_file(url):
     if not os.path.exists(filename):
         with open(filename, "wb") as f:
             f.write(content)
-        logger.info(filename + " is download\n")
+        logger.info(filename + " is download")
         return filename
 
     # 如果檔案已存在，則比對雜湊值
@@ -73,7 +73,7 @@ def download_file(url):
         # 雜湊值不同，代表內容有更新，需要下載
         with open(filename, "wb") as f:
             f.write(content)
-        logger.info(filename + " is download\n")
+        logger.info(filename + " is download")
         return filename
 
     # 雜湊值相同，代表檔案已經是最新的，不需要下載

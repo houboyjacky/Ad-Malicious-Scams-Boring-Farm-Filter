@@ -23,7 +23,6 @@ THE SOFTWARE.
 import json
 import os
 import re
-import requests
 import signal
 import threading
 import time
@@ -31,7 +30,6 @@ import tldextract
 import ipaddress
 # pip install schedule tldextract flask line-bot-sdk whois
 
-import Query_URL
 from Line_Invite_URL import lineinvite_write_file, lineinvite_read_file
 from Logger import logger
 from Query_URL import user_query_website, run_schedule, update_blacklist
