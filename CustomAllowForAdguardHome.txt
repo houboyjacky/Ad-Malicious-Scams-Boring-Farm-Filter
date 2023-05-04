@@ -75,3 +75,12 @@
 !
 ! 技術網站
 @@||blog.panghai.top^$important
+!
+! Apple氣象
+@@||weather-analytics-events.apple.com^
+!
+! 提供詐騙資訊
+@@||fx110.com.tw^$important
+!
+! 有用的網站
+@@||techrabbit.biz^$important
