@@ -1,0 +1,17 @@
+[Unit]
+Description=Download Service
+After=network.target
+
+[Service]
+User=root
+# 需要修改位置
+WorkingDirectory=/home/user/DownloadServer
+# 需要修改位置
+ExecStart=/usr/local/bin/gunicorn -c /home/user/DownloadServer/gunicorn.conf.py DownloadServer:app
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
+
+# 保存在/etc/systemd/system/download.service

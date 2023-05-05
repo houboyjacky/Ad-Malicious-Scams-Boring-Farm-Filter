@@ -1,0 +1,8 @@
+{
+    "CONFIG_BACKUP":"",
+    "CONFIG_ORIGIN":"",
+    "CONFIG_SIGN":"",
+    "PEM_DIR":"",
+    "CERT":"",
+    "PRIVKEY":""
+}
