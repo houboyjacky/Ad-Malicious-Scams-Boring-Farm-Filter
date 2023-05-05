@@ -1,8 +1,9 @@
 # 歷史更新 History Update
 
 * 20230505 Update
-  * 調整 LineBot Log規則
   * 加入 LineBot 新邀請網址liff.line.me
+  * 調整 LineBot Log規則
+  * 調整 LineBot Threading方法
 
 * 20230504 Update
   * 加入 LineBot IP來源限制

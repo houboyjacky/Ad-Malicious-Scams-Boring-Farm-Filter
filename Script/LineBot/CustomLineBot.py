@@ -22,7 +22,8 @@ THE SOFTWARE.
 
 import ipaddress
 import json
-import os
+import schedule
+import time
 import re
 import signal
 import sys
@@ -36,10 +37,10 @@ from Line_Invite_URL import lineinvite_write_file, lineinvite_read_file
 from linebot import LineBotApi, WebhookHandler
 from linebot.exceptions import InvalidSignatureError
 from linebot.models import MessageEvent, TextMessage, TextSendMessage
+from Logger import close_logger
 from Logger import logger
-from Logger import Logger_schedule, close_logger
 from Query_Line_ID import user_query_lineid, user_download_lineid, user_add_lineid
-from Query_URL import user_query_website, Update_url_schedule, update_blacklist
+from Query_URL import user_query_website, update_blacklist
 from Security_Check import get_cf_ips, download_cf_ips
 
 app = Flask(__name__)
@@ -61,9 +62,6 @@ handler = WebhookHandler(setting['CHANNEL_SECRET'])
 line_bot_api = LineBotApi(setting['CHANNEL_ACCESS_TOKEN'])
 NEW_SCAM_WEBSITE_FOR_ADG = setting['BLACKLISTFORADG']
 rule = setting['RULE']
-
-def handle_signal(signal, frame):
-    os._exit(0)
 
 @app.before_request
 def limit_remote_addr():
@@ -237,7 +235,7 @@ def handle_message(event):
             return
 
     # 查詢line邀請網址
-    if user_text.startswith("https://line.me") or user_text.startswith("https://lin.ee"):
+    if user_text.startswith("https://liff.line.me") or user_text.startswith("https://line.me") or user_text.startswith("https://lin.ee"):
         user_text = event.message.text
         r = lineinvite_read_file(user_text)
         if r == -1:
@@ -273,23 +271,47 @@ def handle_message(event):
 
     return
 
+def Update_url_schedule(stop_event):
+    schedule.every(1).hours.do(update_blacklist)
+    while not stop_event.is_set():
+        schedule.run_pending()
+        time.sleep(1)
+
+def Logger_schedule(stop_event):
+    schedule.every().day.at("23:00").do(close_logger)
+    while not stop_event.is_set():
+        schedule.run_pending()
+        time.sleep(1)
+
 def signal_handler(sig, frame):
+    logger.info('Received signal : ' + str(sig))
+    stop_event.set()
     close_logger()
     sys.exit(0)
 
 if __name__ == "__main__":
 
+    # 建立 stop_event
+    stop_event = threading.Event()
+
     signal.signal(signal.SIGINT, signal_handler)
 
     user_download_lineid()
-
     download_cf_ips()
+    logger.info('download_cf_ips Finish')
+    update_blacklist()
 
-    update_thread = threading.Thread(target=Update_url_schedule)
+    # 建立 thread
+    update_thread = threading.Thread(target=Update_url_schedule, args=(stop_event,))
+    logger_thread = threading.Thread(target=Logger_schedule, args=(stop_event,))
+    
+    # 啟動 thread
     update_thread.start()
-
-    logger_thread = threading.Thread(target=Logger_schedule)
     logger_thread.start()
 
     # 開啟 LINE 聊天機器人的 Webhook 伺服器
     app.run(host='0.0.0.0', port=8443, ssl_context=(setting['CERT'], setting['PRIVKEY']), threaded=True)
+    
+    # 等待 thread 結束
+    update_thread.join()
+    logger_thread.join()

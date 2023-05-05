@@ -25,8 +25,6 @@ import json
 import os
 import re
 import requests
-import schedule
-import time
 import tldextract
 import whois
 
@@ -224,16 +222,3 @@ def user_query_website(user_text):
                     "感恩")
 
     return rmessage
-
-# 初次執行更新黑名單
-update_blacklist()
-
-def Update_url_schedule():
-    # 定時排程，每一小時執行一次 update_blacklist()
-    schedule.every(1).hours.do(update_blacklist)
-    while True:
-        schedule.run_pending()
-        time.sleep(60)
-
-if __name__ == '__main__':
-    Update_url_schedule()

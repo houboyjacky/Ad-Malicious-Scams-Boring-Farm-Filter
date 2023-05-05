@@ -24,8 +24,6 @@ import json
 import logging
 import logging.handlers
 import os
-import schedule
-import time
 import re
 
 # 讀取設定檔
@@ -77,8 +75,3 @@ def close_logger():
     # 移除LineBot.log
     open(LOGFILE, 'w').close()
 
-def Logger_schedule():
-    schedule.every().day.at("23:00").do(close_logger)
-    while True:
-        schedule.run_pending()
-        time.sleep(60)
