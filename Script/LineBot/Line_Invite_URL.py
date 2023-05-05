@@ -23,6 +23,7 @@ THE SOFTWARE.
 import re
 import requests
 import json
+from bs4 import BeautifulSoup
 from Logger import logger
 from typing import Optional
 from Query_Line_ID import user_add_lineid, user_query_lineid_sub
@@ -49,7 +50,27 @@ def analyze_line_invite_url(user_text:str) -> Optional[dict]:
         redirected_url = response.url
         logger.info("Redirected_url = " + redirected_url)
         match = re.match(PATTERN, redirected_url)
+    elif user_text.startswith("https://liff.line.me"):
+        response = requests.get(user_text)
+        if response.status_code != 200:
+            logger.error("liff.line.me邀請網址解析失敗")
+            return False
 
+        soup = BeautifulSoup(response.content, 'html.parser')
+        redirected_url1 = soup.find('a')['href']
+
+        logger.info("Redirected_url 1 = " + redirected_url1)
+
+        response = requests.get(redirected_url1)
+        if response.status_code != 200:
+            logger.error("page.line.me邀請網址解析失敗")
+            return False
+
+        redirected_url = response.url
+
+        logger.info("Redirected_url 2 = " + redirected_url)
+
+        match = re.match(PATTERN, redirected_url)
     else:
         match = re.match(PATTERN, user_text)
         if not match:
