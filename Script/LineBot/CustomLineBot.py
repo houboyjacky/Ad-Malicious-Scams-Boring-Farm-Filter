@@ -20,25 +20,26 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 '''
 
+import ipaddress
 import json
 import os
 import re
 import signal
+import sys
 import threading
 import time
 import tldextract
-import ipaddress
 # pip install schedule tldextract flask line-bot-sdk whois
 
-from Line_Invite_URL import lineinvite_write_file, lineinvite_read_file
-from Logger import logger
-from Query_URL import user_query_website, run_schedule, update_blacklist
-from Query_Line_ID import user_query_lineid, user_download_lineid, user_add_lineid
-
 from flask import Flask, Response, request, abort
+from Line_Invite_URL import lineinvite_write_file, lineinvite_read_file
 from linebot import LineBotApi, WebhookHandler
 from linebot.exceptions import InvalidSignatureError
 from linebot.models import MessageEvent, TextMessage, TextSendMessage
+from Logger import logger
+from Logger import Logger_schedule, close_logger
+from Query_Line_ID import user_query_lineid, user_download_lineid, user_add_lineid
+from Query_URL import user_query_website, Update_url_schedule, update_blacklist
 from Security_Check import get_cf_ips, download_cf_ips
 
 app = Flask(__name__)
@@ -272,16 +273,23 @@ def handle_message(event):
 
     return
 
+def signal_handler(sig, frame):
+    close_logger()
+    sys.exit(0)
+
 if __name__ == "__main__":
 
-    signal.signal(signal.SIGINT, handle_signal)
+    signal.signal(signal.SIGINT, signal_handler)
 
     user_download_lineid()
 
     download_cf_ips()
 
-    update_thread = threading.Thread(target=run_schedule)
+    update_thread = threading.Thread(target=Update_url_schedule)
     update_thread.start()
+
+    logger_thread = threading.Thread(target=Logger_schedule)
+    logger_thread.start()
 
     # 開啟 LINE 聊天機器人的 Webhook 伺服器
     app.run(host='0.0.0.0', port=8443, ssl_context=(setting['CERT'], setting['PRIVKEY']), threaded=True)
