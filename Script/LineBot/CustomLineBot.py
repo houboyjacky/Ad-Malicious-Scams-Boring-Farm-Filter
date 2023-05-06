@@ -315,7 +315,7 @@ def Update_url_schedule(stop_event):
         time.sleep(1)
 
 def Logger_schedule(stop_event):
-    schedule.every().day.at("23:00").do(Logger_Transfer)
+    schedule.every().day.at("23:00").do(Logger_Transfer, pre_close=False)
     while not stop_event.is_set():
         schedule.run_pending()
         time.sleep(1)

@@ -1,5 +1,8 @@
 # 歷史更新 History Update
 
+* 20230507 Update
+  * 修復 LineBot log 錯誤
+
 * 20230506 Update
   * 加入 LineBot 檢舉功能與積分
   * 修復 LineBot bug

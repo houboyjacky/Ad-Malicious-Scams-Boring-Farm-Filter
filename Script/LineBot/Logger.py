@@ -45,7 +45,7 @@ file_handler = logging.FileHandler(LOGFILE)
 file_handler.setFormatter(log_formatter)
 logger.addHandler(file_handler)
 
-def Logger_Transfer():
+def Logger_Transfer(pre_close = True):
     logger.removeHandler(file_handler)
     file_handler.close()
 
@@ -74,4 +74,7 @@ def Logger_Transfer():
 
     # 移除LineBot.log
     open(LOGFILE, 'w').close()
+
+    if not pre_close:
+        logger.addHandler(file_handler)
 
