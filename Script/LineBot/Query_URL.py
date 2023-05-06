@@ -193,8 +193,9 @@ def user_query_website(user_text):
     diff_days = (today - creation_date.date()).days  # 相差幾天
     creation_date = creation_date.strftime('%Y-%m-%d %H:%M:%S')  # 轉換成字串
 
-    #logger.info("Website : " + user_text)
-    #logger.info("Create Date : " + creation_date)
+    logger.info("Website : " + user_text)
+    logger.info("Create Date : " + creation_date)
+    logger.info("Diff Days : " + str(diff_days))
 
     #判斷網站
     if checkresult is True:

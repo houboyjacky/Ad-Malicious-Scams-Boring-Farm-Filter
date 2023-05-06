@@ -2,6 +2,8 @@
 
 * 20230506 Update
   * 修復 LineBot bug
+  * 調整 LineBot log
+
 * 20230505 Update
   * 加入 Downalod Server + 自動簽屬mobileconfig
   * 加入 LineBot 新邀請網址liff.line.me

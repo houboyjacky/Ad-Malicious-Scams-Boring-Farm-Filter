@@ -37,8 +37,7 @@ from Line_Invite_URL import lineinvite_write_file, lineinvite_read_file
 from linebot import LineBotApi, WebhookHandler
 from linebot.exceptions import InvalidSignatureError
 from linebot.models import MessageEvent, TextMessage, TextSendMessage
-from Logger import close_logger
-from Logger import logger
+from Logger import logger, Logger_Transfer
 from Query_Line_ID import user_query_lineid, user_download_lineid, user_add_lineid
 from Query_URL import user_query_website, update_blacklist
 from Security_Check import get_cf_ips, download_cf_ips
@@ -97,6 +96,9 @@ def message_callback():
         handler.handle(body, signature)
     except InvalidSignatureError:
         abort(400)
+    except Exception as e:
+        # 將錯誤訊息寫入 log
+        logger.error(str(e))
     return 'OK'
 
 # 回應訊息的函式
@@ -278,7 +280,7 @@ def Update_url_schedule(stop_event):
         time.sleep(1)
 
 def Logger_schedule(stop_event):
-    schedule.every().day.at("23:00").do(close_logger)
+    schedule.every().day.at("23:00").do(Logger_Transfer)
     while not stop_event.is_set():
         schedule.run_pending()
         time.sleep(1)
@@ -286,7 +288,7 @@ def Logger_schedule(stop_event):
 def signal_handler(sig, frame):
     logger.info('Received signal : ' + str(sig))
     stop_event.set()
-    close_logger()
+    Logger_Transfer()
     sys.exit(0)
 
 if __name__ == "__main__":

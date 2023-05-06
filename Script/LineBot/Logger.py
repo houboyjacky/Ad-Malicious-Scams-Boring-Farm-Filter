@@ -45,7 +45,7 @@ file_handler = logging.FileHandler(LOGFILE)
 file_handler.setFormatter(log_formatter)
 logger.addHandler(file_handler)
 
-def close_logger():
+def Logger_Transfer():
     logger.removeHandler(file_handler)
     file_handler.close()
 
