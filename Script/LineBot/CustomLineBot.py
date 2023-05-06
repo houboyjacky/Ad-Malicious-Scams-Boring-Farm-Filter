@@ -33,7 +33,7 @@ import tldextract
 # pip install schedule tldextract flask line-bot-sdk whois
 
 from flask import Flask, Response, request, abort
-from Line_Invite_URL import lineinvite_write_file, lineinvite_read_file
+from Line_Invite_URL import lineinvite_write_file, lineinvite_read_file, get_random_invite, push_random_invite
 from linebot import LineBotApi, WebhookHandler
 from linebot.exceptions import InvalidSignatureError
 from linebot.models import MessageEvent, TextMessage, TextSendMessage
@@ -236,6 +236,35 @@ def handle_message(event):
             message_reply(event.reply_token, rmessage)
             return
 
+    if user_text == "檢舉":
+        site = get_random_invite(user_id)
+        if not site:
+            rmessage = "目前暫停檢舉喔~"
+        else:
+            rmessage = "請開始你的檢舉\n" + site + "\n若「完成」請回報「完成」\n若「失效」請回傳「失效」"
+        
+        message_reply(event.reply_token, rmessage)
+        return
+
+    if user_text == "完成":
+        found = push_random_invite(user_id, True, False)
+        if found:
+            rmessage = "感謝你的檢舉\n輸入「檢舉」\n進行下一波行動"
+        else:
+            rmessage = "程式有誤，請勿繼續使用"
+        
+        message_reply(event.reply_token, rmessage)
+        return
+    
+    if user_text == "失效":
+        push_random_invite(user_id, False, True)
+        if found:
+            rmessage = "感謝你的回報\n輸入「檢舉」\n進行下一波行動"
+        else:
+            rmessage = "程式有誤，請勿繼續使用"
+        message_reply(event.reply_token, rmessage)
+        return
+
     # 查詢line邀請網址
     if user_text.startswith("https://liff.line.me") or user_text.startswith("https://line.me") or user_text.startswith("https://lin.ee"):
         user_text = event.message.text
@@ -297,6 +326,7 @@ if __name__ == "__main__":
     stop_event = threading.Event()
 
     signal.signal(signal.SIGINT, signal_handler)
+    signal.signal(signal.SIGTERM, signal_handler)
 
     user_download_lineid()
     download_cf_ips()

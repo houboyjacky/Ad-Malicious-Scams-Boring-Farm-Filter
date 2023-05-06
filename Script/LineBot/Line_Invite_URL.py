@@ -23,6 +23,7 @@ THE SOFTWARE.
 import re
 import requests
 import json
+import random
 from bs4 import BeautifulSoup
 from Logger import logger
 from typing import Optional
@@ -93,7 +94,7 @@ def analyze_line_invite_url(user_text:str) -> Optional[dict]:
         logger.error('無法解析類別')
         return None
 
-    return {"類別": category, "邀請碼": invite_code, "原始網址": user_text}
+    return {"類別": category, "邀請碼": invite_code, "原始網址": user_text, "回報次數": 0, "失效": 0, "檢查者": ""}
 
 def read_json_file(filename: str) -> list:
     try:
@@ -178,3 +179,54 @@ def lineinvite_read_file(user_text:str) -> int:
     if user_query_lineid_sub(analyze["邀請碼"]):
         return True
     return False
+
+def get_random_invite(UserID):
+    invites = read_json_file(LINE_INVITE)
+    if not invites:  # 如果 invites 是空的 list
+        return None
+    found = False
+    count = 0
+    while count < 1000:  # 最多找 100 次，避免無限迴圈
+        invite = random.choice(invites)
+        if invite['檢查者'] == "" and invite['失效'] == 0:
+            invite['檢查者'] = UserID
+            found = True
+            break
+        count += 1
+    if found:
+        write_json_file(LINE_INVITE, invites)
+    return invite['原始網址']
+
+def push_random_invite(UserID, success, disappear):
+    invites = read_json_file(LINE_INVITE)
+    found = False
+    for invite in invites:
+        if invite['檢查者'] == UserID:
+            invite['檢查者'] = ""
+            if success:
+                invite['回報次數'] += 1
+            if disappear:
+                invite['失效'] = 1
+            found = True
+            break
+    if found:
+        write_json_file(LINE_INVITE, invites)
+    return found
+
+def check_data(filename: str) -> None:
+    data = read_json_file(filename)
+    modify = False
+    for item in data:
+        if "回報次數" not in item:
+            item["回報次數"] = 0
+            modify = True
+        if "失效" not in item:
+            item["失效"] = 0
+            modify = True
+        if "檢查者" not in item:
+            item["檢查者"] = ""
+            modify = True
+    if modify:
+        write_json_file(filename, data)
+
+check_data(LINE_INVITE)
