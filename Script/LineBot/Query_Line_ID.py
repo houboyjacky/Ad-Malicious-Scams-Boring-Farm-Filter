@@ -61,6 +61,11 @@ def user_download_lineid():
     lineid_download_hash = new_hash
     lineid_list = response.text.splitlines()
     lineid_download_last_time = time.time()
+
+    filename = "Web_LineID.txt"
+    with open(filename, "w", encoding="utf-8") as f:
+        f.write('\n'.join(lineid_list))
+
     logger.info("Download Line ID Finish")
 
     with open(LINEID_LOCAL, "r", encoding="utf-8") as f:

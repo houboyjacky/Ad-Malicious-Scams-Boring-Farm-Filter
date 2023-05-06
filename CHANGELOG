@@ -3,6 +3,7 @@
 * 20230506 Update
   * 修復 LineBot bug
   * 調整 LineBot log
+  * 調整 政府Line ID 下載存檔
 
 * 20230505 Update
   * 加入 Downalod Server + 自動簽屬mobileconfig
