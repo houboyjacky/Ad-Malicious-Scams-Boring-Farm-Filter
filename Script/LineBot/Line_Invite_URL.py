@@ -20,6 +20,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 '''
 
+import os
 import re
 import requests
 import json
@@ -35,6 +36,7 @@ with open('setting.json', 'r') as f:
     setting = json.load(f)
 
 LINE_INVITE = setting['LINE_INVITE']
+USER_POINT = setting['USER_POINT']
 
 def analyze_line_invite_url(user_text:str) -> Optional[dict]:
     # 定義邀請類型的正則表達式
@@ -106,6 +108,36 @@ def read_json_file(filename: str) -> list:
 def write_json_file(filename: str, data: list) -> None:
     with open(filename, "w", encoding="utf-8") as file:
         json.dump(data, file, ensure_ascii=False, indent=2)
+
+def write_user_point(user_id):
+    # 建立 User_Point.txt 檔案，如果不存在的話
+    if not os.path.exists("User_Point.txt"):
+        with open("User_Point.txt", "w", encoding="utf-8") as f:
+            f.write("{}:0\n")
+    # 讀取檔案內容，並更新指定使用者的 Point
+    with open("User_Point.txt", "r+", encoding="utf-8") as f:
+        content = f.read()
+        lines = content.split("\n")
+        for i in range(len(lines)):
+            if lines[i].startswith(user_id):
+                point = int(lines[i].split(":")[1])
+                lines[i] = f"{user_id}:{point+1}"
+                break
+        else:
+            lines.insert(-1, f"{user_id}:1")
+        # 將更新後的內容寫回檔案
+        f.seek(0)
+        f.write("\n".join(lines))
+        f.truncate()
+
+def read_user_point(user_id) -> int:
+    with open("User_Point.txt", "r", encoding="utf-8") as f:
+        content = f.read()
+        for line in content.split("\n"):
+            if line.startswith(user_id):
+                return int(line.split(":")[1])
+        # 如果找不到指定的使用者 ID，回傳 None
+        return 0
 
 # def merge_data(filename):
 #     # 讀取JSON檔案
@@ -205,8 +237,10 @@ def push_random_invite(UserID, success, disappear):
             invite['檢查者'] = ""
             if success:
                 invite['回報次數'] += 1
+                write_user_point(UserID)
             if disappear:
                 invite['失效'] = 1
+                write_user_point(UserID)
             found = True
             break
     if found:
@@ -229,4 +263,15 @@ def check_data(filename: str) -> None:
     if modify:
         write_json_file(filename, data)
 
+def clear_data(filename: str) -> None:
+    data = read_json_file(filename)
+    modify = False
+    for item in data:
+        if "檢查者":
+            item["檢查者"] = ""
+            modify = True
+    if modify:
+        write_json_file(filename, data)
+
 check_data(LINE_INVITE)
+clear_data(LINE_INVITE)

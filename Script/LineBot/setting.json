@@ -8,5 +8,6 @@
     "LOGFILE":"",
     "PRIVKEY":"",
     "RULE":["","",""],
-    "SCAM_WEBSITE_LIST":""
+    "SCAM_WEBSITE_LIST":"",
+	"USER_POINT":""
 }

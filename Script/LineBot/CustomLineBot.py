@@ -33,7 +33,7 @@ import tldextract
 # pip install schedule tldextract flask line-bot-sdk whois
 
 from flask import Flask, Response, request, abort
-from Line_Invite_URL import lineinvite_write_file, lineinvite_read_file, get_random_invite, push_random_invite
+from Line_Invite_URL import lineinvite_write_file, lineinvite_read_file, get_random_invite, push_random_invite, read_user_point
 from linebot import LineBotApi, WebhookHandler
 from linebot.exceptions import InvalidSignatureError
 from linebot.models import MessageEvent, TextMessage, TextSendMessage
@@ -264,6 +264,12 @@ def handle_message(event):
             rmessage = "程式有誤，請勿繼續使用"
         message_reply(event.reply_token, rmessage)
         return
+
+    if user_text == "積分":
+        point = read_user_point(user_id)
+        rmessage = "你的檢舉積分是" + str(point) + "分"
+        message_reply(event.reply_token, rmessage)
+        return        
 
     # 查詢line邀請網址
     if user_text.startswith("https://liff.line.me") or user_text.startswith("https://line.me") or user_text.startswith("https://lin.ee"):
