@@ -39,7 +39,7 @@ LINEID_WEB = setting['LINEID_WEB']
 
 lineid_list = []
 lineid_download_hash = None
-lineid_download_last_time = None
+lineid_download_last_time = 0
 
 # 使用者下載Line ID
 def user_download_lineid():
