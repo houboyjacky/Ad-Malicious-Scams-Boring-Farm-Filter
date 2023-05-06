@@ -247,6 +247,33 @@ def push_random_invite(UserID, success, disappear):
         write_json_file(LINE_INVITE, invites)
     return found
 
+def get_user_rank(user_id):
+    # 讀取檔案中所有的使用者點數
+    if os.path.exists(USER_POINT):
+        with open(USER_POINT, "r") as f:
+            lines = f.readlines()
+            users = {}
+            for line in lines:
+                uid, point = line.strip().split(":")
+                users[uid] = int(point)
+    else:
+        users = {}
+
+    # 取得使用者的點數
+    if user_id in users:
+        point = users[user_id]
+    else:
+        point = 0
+
+    # 計算使用者點數的排名
+    rank = 1
+    for uid, pt in users.items():
+        if uid != user_id and pt > point:
+            rank += 1
+
+    # 回傳排名
+    return rank
+
 def check_data(filename: str) -> None:
     data = read_json_file(filename)
     modify = False
