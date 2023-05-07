@@ -32,7 +32,7 @@ import time
 import tldextract
 # pip install schedule tldextract flask line-bot-sdk whois
 
-from flask import Flask, Response, request, abort
+from flask import Flask, Response, request, abort, send_file
 from Line_Invite_URL import lineinvite_write_file, lineinvite_read_file, get_random_invite, push_random_invite, read_user_point, get_user_rank 
 from linebot import LineBotApi, WebhookHandler
 from linebot.exceptions import InvalidSignatureError
@@ -86,6 +86,11 @@ def log_request(response):
 @app.route('/'+NEW_SCAM_WEBSITE_FOR_ADG)
 def tmp_blacklisted_site():
     return Response(open(NEW_SCAM_WEBSITE_FOR_ADG, "rb"), mimetype="text/plain")
+
+@app.route('/robots.txt')
+def robots():
+    logger.info('Downloaded robots.txt')
+    return send_file('robots.txt', mimetype='text/plain')
 
 # 當 LINE 聊天機器人接收到「訊息事件」時，進行回應
 @app.route("/callback", methods=['POST'])
