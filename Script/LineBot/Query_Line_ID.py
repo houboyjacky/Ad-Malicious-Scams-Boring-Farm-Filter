@@ -62,7 +62,7 @@ def user_download_lineid():
     lineid_list = response.text.splitlines()
     lineid_download_last_time = time.time()
 
-    filename = "Web_LineID.txt"
+    filename = "config/" + os.path.basename(LINEID_WEB)
     with open(filename, "w", encoding="utf-8") as f:
         f.write('\n'.join(lineid_list))
 

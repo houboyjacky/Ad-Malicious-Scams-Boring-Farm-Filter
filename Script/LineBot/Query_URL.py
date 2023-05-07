@@ -168,14 +168,14 @@ def user_query_website(user_text):
     if Error or not w.domain_name:
         if checkresult is True:
             rmessage = ("所輸入的網址\n"
-                        "「" + user_text + "」\n"
+                        "「 " + user_text + " 」\n"
                         "被判定是詐騙／可疑網站\n"
                         "請勿相信此網站\n"
                         "若認為誤通報，請補充描述\n"
                         "感恩")
         else:
             rmessage = ("所輸入的網址\n"
-                        "「" + user_text + "」\n"
+                        "「 " + user_text + " 」\n"
                         "目前尚未在資料庫中\n"
                         "敬請小心謹慎\n"
                         "此外若認為問題，請補充描述\n"
@@ -200,7 +200,7 @@ def user_query_website(user_text):
     #判斷網站
     if checkresult is True:
         rmessage = ("所輸入的網址\n"
-                    "「" + user_text + "」\n"
+                    "「 " + user_text + " 」\n"
                     "建立時間：" + creation_date + "\n"
                     "距離今天差" + str(diff_days) + "天\n"
                     "已經被列入是詐騙／可疑網站名單中\n"
@@ -209,7 +209,7 @@ def user_query_website(user_text):
                     "感恩")
     else:
         rmessage = ("所輸入的網址\n"
-                    "「" + user_text + "」\n"
+                    "「 " + user_text + " 」\n"
                     "建立時間：" + creation_date + "\n"
                     "距離今天差" + str(diff_days) + "天\n"
                     "雖然目前尚未在資料庫中\n"

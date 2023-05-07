@@ -88,11 +88,12 @@ def log_request(response):
     logger.error(log_message)
     return response
 
-@app.route('/'+NEW_SCAM_WEBSITE_FOR_ADG)
+filename = os.path.basename(NEW_SCAM_WEBSITE_FOR_ADG)
+@app.route('/'+filename)
 def tmp_blacklisted_site():
     return Response(open(NEW_SCAM_WEBSITE_FOR_ADG, "rb"), mimetype="text/plain")
 
-@app.route('/robots.txt')
+@app.route('/config/robots.txt')
 def robots():
     logger.info('Downloaded robots.txt')
     return send_file('robots.txt', mimetype='text/plain')
@@ -282,17 +283,17 @@ def handle_message_text(event):
         user_text = event.message.text
         r = lineinvite_read_file(user_text)
         if r == -1:
-            rmessage = ("「" + user_text + " 」\n"
+            rmessage = ("「 " + user_text + " 」\n"
                         "輸入有誤，請重新確認\n"
                         "感恩")
         elif r == True:
-            rmessage = ("「" + user_text + " 」\n"
+            rmessage = ("「 " + user_text + " 」\n"
                         "「是」已知詐騙Line邀請網址\n"
                         "請勿輕易信任此Line ID的\n"
                         "文字、圖像、語音和連結\n"
                         "感恩")
         else:
-            rmessage = ("「" + user_text + " 」\n"
+            rmessage = ("「 " + user_text + " 」\n"
                         "「不是」已知詐騙邀請網址\n"
                         "若認為問題，請補充描述\n"
                         "感恩")
@@ -365,7 +366,8 @@ def handle_message_file(event):
         FILE_DIR = "audio/"
         file_extension = ".m4a"
     elif file_type == "file":
-        file_name = event.message.file_namesplit(".")[0]
+        FILE_DIR = "file/"
+        file_name = event.message.file_name.split(".")[0]
         file_extension = "." + file_name.split(".")[-1] # 取得最後一個'.'後的副檔名
     else:
         return

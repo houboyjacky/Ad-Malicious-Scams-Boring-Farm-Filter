@@ -25,7 +25,7 @@ import hashlib
 import requests
 
 CF_IPS_URL = "https://www.cloudflare.com/ips-v4"
-CF_IPS_LOCAL = "ips-v4.txt"
+CF_IPS_LOCAL = "config/Cloudflare_ipv4.txt"
 
 def get_cf_ips():
     if not os.path.exists(CF_IPS_LOCAL):
