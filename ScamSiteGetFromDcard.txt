@@ -1314,3 +1314,7 @@
 ||bstustb.com^
 ! 詐騙購物 https://www.dcard.tw/f/anti_fraud/p/241927280
 ||carousell2.site^
+! 詐騙 7-11 https://www.dcard.tw/f/anti_fraud/p/241936345
+||7-eleveniu.cc^
+! 詐騙購物 https://www.dcard.tw/f/buyonline/p/241938316
+||jnkp.shop^
