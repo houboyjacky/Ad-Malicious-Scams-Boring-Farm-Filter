@@ -36,7 +36,7 @@ import tldextract
 
 from flask import Flask, Response, request, abort, send_file
 from io import BytesIO
-from Line_Invite_URL import lineinvite_write_file, lineinvite_read_file, get_random_invite, push_random_invite, read_user_point, get_user_rank 
+from Line_Invite_URL import lineinvite_write_file, lineinvite_read_file, get_random_invite, push_random_invite, read_user_point, get_user_rank
 from linebot import LineBotApi, WebhookHandler
 from linebot.exceptions import InvalidSignatureError
 from linebot.models import MessageEvent, TextMessage, TextSendMessage
@@ -120,52 +120,50 @@ def message_reply(reply_token, text):
 def admin_process(user_text):
     rmessage = ''
 
-    # 邀請碼有大小寫之分
-    if match := re.search(rule[3], user_text):
+    if match := re.search(rule[0], user_text):
         if match := re.search(r"https://line\.me/ti/p/~(.+)", user_text):
             lineid = match.group(1)
             # 加入新line id
             user_add_lineid(lineid)
             rmessage = "邀請黑名單與賴黑名單更新完成" + lineid
-        elif lineinvite_write_file(user_text):
-            rmessage = "邀請黑名單更新完成"
+        elif match := re.search(r"https://.*(line|lin)\.(me|ee)/.+", user_text):
+            if lineinvite_write_file(user_text):
+                rmessage = "邀請黑名單更新完成"
+            else:
+                rmessage = "邀請黑名單更新失敗"
         else:
-            rmessage = "邀請黑名單更新失敗"
-        return rmessage
+            # 取得開始時間
+            start_time = time.time()
 
+            user_text = user_text.lower()
 
-    user_text = user_text.lower()
+            match = re.search(rule[0], user_text)
 
-    if match := re.search(rule[0], user_text):
+            # 取得網址
+            url = match.group(1)
 
-        # 取得開始時間
-        start_time = time.time()
+            # 使用 tldextract 取得網域
+            extracted = tldextract.extract(url)
+            domain = extracted.domain
+            suffix = extracted.suffix
 
-        # 取得網址
-        url = match.group(1)
+            # 組合成新的規則
+            new_rule = "||"+ domain + "." + suffix + "^\n"
 
-        # 使用 tldextract 取得網域
-        extracted = tldextract.extract(url)
-        domain = extracted.domain
-        suffix = extracted.suffix
+            # 將Adguard規則寫入檔案
+            with open(NEW_SCAM_WEBSITE_FOR_ADG, "a", encoding="utf-8", newline='') as f:
+                f.write(new_rule)
 
-        # 組合成新的規則
-        new_rule = "||"+ domain + "." + suffix + "^\n"
+            # 提早執行更新
+            update_blacklist()
 
-        # 將Adguard規則寫入檔案
-        with open(NEW_SCAM_WEBSITE_FOR_ADG, "a", encoding="utf-8", newline='') as f:
-            f.write(new_rule)
+            # 取得結束時間
+            end_time = time.time()
 
-        # 提早執行更新
-        update_blacklist()
+            # 計算耗時
+            elapsed_time = end_time - start_time
 
-        # 取得結束時間
-        end_time = time.time()
-
-        # 計算耗時
-        elapsed_time = end_time - start_time
-
-        rmessage = "網址名單更新完成，耗時 " + str(int(elapsed_time)) + " 秒"
+            rmessage = "網址名單更新完成，耗時 " + str(int(elapsed_time)) + " 秒"
 
     elif match := re.search(rule[1], user_text):
 
@@ -248,7 +246,7 @@ def handle_message_text(event):
             rmessage = "目前暫停檢舉喔~"
         else:
             rmessage = "請開始你的檢舉\n" + site + "\n若「完成」請回報「完成」\n若「失效」請回傳「失效」"
-        
+
         message_reply(event.reply_token, rmessage)
         return
 
@@ -258,10 +256,10 @@ def handle_message_text(event):
             rmessage = "感謝你的檢舉\n輸入「檢舉」\n進行下一波行動"
         else:
             rmessage = "程式有誤，請勿繼續使用"
-        
+
         message_reply(event.reply_token, rmessage)
         return
-    
+
     if user_text == "失效":
         push_random_invite(user_id, False, True)
         if found:
@@ -277,10 +275,10 @@ def handle_message_text(event):
 
         rmessage = "你的檢舉積分是" + str(point) + "分\n排名第" + str(rank) + "名"
         message_reply(event.reply_token, rmessage)
-        return        
+        return
 
     # 查詢line邀請網址
-    if user_text.startswith("https://liff.line.me") or user_text.startswith("https://line.me") or user_text.startswith("https://lin.ee"):
+    if re.match(r'https://.*(line|lin)\.(me|ee)', user_text):
         user_text = event.message.text
         r = lineinvite_read_file(user_text)
         if r == -1:
@@ -308,7 +306,7 @@ def handle_message_text(event):
         return
 
     # 查詢Line ID
-    if user_text.startswith("賴") and re.search(rule[4], user_text):
+    if user_text.startswith("賴") and re.search(rule[3], user_text):
         lineid = user_text.replace("賴", "")
         rmessage = user_query_lineid(lineid)
         message_reply(event.reply_token, rmessage)
@@ -316,7 +314,7 @@ def handle_message_text(event):
     return
 
 def handle_message_image(event):
-    
+
     # 儲存照片的目錄
     IMAGE_DIR = "image/"
     website_list = []
@@ -405,14 +403,14 @@ if __name__ == "__main__":
     # 建立 thread
     update_thread = threading.Thread(target=Update_url_schedule, args=(stop_event,))
     logger_thread = threading.Thread(target=Logger_schedule, args=(stop_event,))
-    
+
     # 啟動 thread
     update_thread.start()
     logger_thread.start()
 
     # 開啟 LINE 聊天機器人的 Webhook 伺服器
     app.run(host='0.0.0.0', port=8443, ssl_context=(setting['CERT'], setting['PRIVKEY']), threaded=True)
-    
+
     # 等待 thread 結束
     update_thread.join()
     logger_thread.join()

@@ -42,9 +42,9 @@ def analyze_line_invite_url(user_text:str) -> Optional[dict]:
     # 定義邀請類型的正則表達式
     PATTERN = r'https:\/\/line\.me\/R?\/?ti\/(p|g|g2)\/([a-zA-Z0-9_~@-]+)[#~?]*\S*'
 
-    user_text = user_text.replace("加入詐騙邀請", "")
+    user_text = user_text.replace("加入", "")
 
-    if user_text.startswith("https://lin.ee"):
+    if user_text.startswith("https://lin.ee") or user_text.startswith("https://page.line.me"):
         response = requests.get(user_text)
         if response.status_code != 200:
             logger.error("lin.ee邀請網址解析失敗")
@@ -96,7 +96,9 @@ def analyze_line_invite_url(user_text:str) -> Optional[dict]:
         logger.error('無法解析類別')
         return None
 
-    return {"類別": category, "邀請碼": invite_code, "原始網址": user_text, "回報次數": 0, "失效": 0, "檢查者": ""}
+    struct =  {"類別": category, "邀請碼": invite_code, "原始網址": user_text, "回報次數": 0, "失效": 0, "檢查者": ""}
+
+    return struct
 
 def read_json_file(filename: str) -> list:
     try:
@@ -166,7 +168,6 @@ def read_user_point(user_id) -> int:
 #         json.dump(result, f, ensure_ascii=False, indent=2)
 
 def add_sort_lineinvite(result, results):
-
     # 查找是否有重複的邀請碼和類別
     for r in results:
         if r['邀請碼'] == result['邀請碼'] and r['類別'] == result['類別']:
@@ -278,6 +279,15 @@ def check_data(filename: str) -> None:
     data = read_json_file(filename)
     modify = False
     for item in data:
+        if "類別" not in item:
+            item["類別"] = 0
+            modify = True
+        if "邀請碼" not in item:
+            item["邀請碼"] = 0
+            modify = True
+        if "原始網址" not in item:
+            item["原始網址"] = 0
+            modify = True
         if "回報次數" not in item:
             item["回報次數"] = 0
             modify = True
