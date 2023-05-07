@@ -22,25 +22,30 @@ THE SOFTWARE.
 
 import ipaddress
 import json
-import schedule
-import time
+import os
+import pytesseract
 import re
+import schedule
 import signal
 import sys
 import threading
 import time
+import time
 import tldextract
-# pip install schedule tldextract flask line-bot-sdk whois
+# pip install schedule tldextract flask line-bot-sdk whois pytesseract
 
 from flask import Flask, Response, request, abort, send_file
+from io import BytesIO
 from Line_Invite_URL import lineinvite_write_file, lineinvite_read_file, get_random_invite, push_random_invite, read_user_point, get_user_rank 
 from linebot import LineBotApi, WebhookHandler
 from linebot.exceptions import InvalidSignatureError
 from linebot.models import MessageEvent, TextMessage, TextSendMessage
 from Logger import logger, Logger_Transfer
+from PIL import Image
 from Query_Line_ID import user_query_lineid, user_download_lineid, user_add_lineid
 from Query_URL import user_query_website, update_blacklist
 from Security_Check import get_cf_ips, download_cf_ips
+from string import ascii_letters
 
 app = Flask(__name__)
 # 讀取設定檔
@@ -190,17 +195,13 @@ def admin_process(user_text):
 
     return rmessage
 
-# 每當收到 LINE 聊天機器人的訊息時，觸發此函式
-@handler.add(MessageEvent, message=TextMessage)
-def handle_message(event):
-    global logger
+def handle_message_text(event):
+
     # 取得發訊者的 ID
     user_id = event.source.user_id
-    logger.info('UserID = '+ event.source.user_id)
 
     # 讀取使用者傳來的文字訊息
     user_text = event.message.text.lower()
-    logger.info('UserMessage = '+ event.message.text)
 
     if user_text.startswith("使用指南"):
         rmessage = ("目前有三大功能\n"
@@ -312,7 +313,62 @@ def handle_message(event):
         rmessage = user_query_lineid(lineid)
         message_reply(event.reply_token, rmessage)
         return
+    return
 
+def handle_message_image(event):
+    
+    # 儲存照片的目錄
+    IMAGE_DIR = "image/"
+    website_list = []
+
+    # 取得照片
+    message_content = line_bot_api.get_message_content(event.message.id)
+    image = Image.open(BytesIO(message_content.content))
+
+    # 儲存照片
+    user_id = event.source.user_id
+    user_files = [f for f in os.listdir(IMAGE_DIR) if f.startswith(user_id)]
+    num_files = len(user_files)
+    filename = f"{user_id}_{num_files+1:02}.jpg"
+    with open(os.path.join(IMAGE_DIR, filename), "wb") as f:
+        f.write(message_content.content)
+
+    # 辨識文字
+    text_msg = pytesseract.image_to_string(image, lang='eng', config='--psm 12')
+
+    # 判斷是否有網址
+    url_pattern = re.compile(r"http[s]?://\S+")
+    website_list = url_pattern.findall(text_msg)
+
+    # 回應訊息
+    if website_list:
+        website_msg = "\n".join(website_list)
+    else:
+        website_msg = "無"
+
+    rmessage = f"網站：\n{website_msg}\n\n判斷文字：\n{text_msg}"
+    message_reply(event.reply_token, rmessage)
+    return
+
+# 每當收到 LINE 聊天機器人的訊息時，觸發此函式
+@handler.add(MessageEvent)
+def handle_message(event):
+
+    # 取得發訊者的 ID
+    user_id = event.source.user_id
+    logger.info('UserID = '+ event.source.user_id)
+
+    message_type = event.message.type
+
+    if message_type == 'image' and user_id in admins:
+        # 讀取使用者傳來的文字訊息
+        logger.info('UserMessage = image message')
+        handle_message_image(event)
+    elif message_type == 'text':
+        # 讀取使用者傳來的文字訊息
+        user_text = event.message.text.lower()
+        logger.info('UserMessage = '+ event.message.text)
+        handle_message_text(event)
     return
 
 def Update_url_schedule(stop_event):
