@@ -63,7 +63,8 @@ def Logger_Transfer(pre_close = True):
         if date_match or not current_log_file:
             year, month, day = date_match.groups()
             current_date_str = year + month + day
-            current_log_file = f'LineBot_{current_date_str}.log'
+            basename = LOGFILE.split('.')[0]
+            current_log_file = basename + "_" + current_date_str + ".log"
         
         if os.path.exists(current_log_file):
             with open(current_log_file, 'a', encoding='utf-8', newline='') as f:
