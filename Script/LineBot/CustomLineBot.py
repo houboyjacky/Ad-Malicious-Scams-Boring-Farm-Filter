@@ -121,7 +121,7 @@ def admin_process(user_text):
     rmessage = ''
 
     if match := re.search(rule[0], user_text):
-        if match := re.search(r"https://line\.me/ti/p/~(.+)", user_text):
+        if match := re.search(r"https://line\.me/R?/?ti/p/~(.+)", user_text):
             lineid = match.group(1)
             # 加入新line id
             user_add_lineid(lineid)
@@ -278,7 +278,7 @@ def handle_message_text(event):
         return
 
     # 查詢line邀請網址
-    if re.match(r'https://.*(line|lin)\.(me|ee)', user_text):
+    if re.match(r'.*(line|lin)\.(me|ee)', user_text):
         user_text = event.message.text
         r = lineinvite_read_file(user_text)
         if r == -1:
@@ -348,6 +348,41 @@ def handle_message_image(event):
     message_reply(event.reply_token, rmessage)
     return
 
+def handle_message_file(event):
+    # 設定儲存檔案的目錄
+    FILE_DIR = ""
+
+    # 取得檔案內容
+    message_content = line_bot_api.get_message_content(event.message.id)
+
+    # 判斷檔案類型
+    file_type = event.message.type
+    file_extension = ""
+    if file_type == "video":
+        FILE_DIR = "video/"
+        file_extension = ".mp4"
+    elif file_type == "audio":
+        FILE_DIR = "audio/"
+        file_extension = ".m4a"
+    elif file_type == "file":
+        file_name = event.message.file_namesplit(".")[0]
+        file_extension = "." + file_name.split(".")[-1] # 取得最後一個'.'後的副檔名
+    else:
+        return
+
+    # 儲存檔案
+    user_id = event.source.user_id
+    user_files = [f for f in os.listdir(FILE_DIR) if f.startswith(user_id)]
+    num_files = len(user_files)
+    filename = f"{user_id}_{num_files+1:02}{file_extension}"
+    with open(os.path.join(FILE_DIR, filename), "wb") as f:
+        for chunk in message_content.iter_content():
+            f.write(chunk)
+
+    # 回覆使用者已收到檔案
+    #message_reply(event.reply_token, f"已收到檔案 {file_name}")
+    return
+
 # 每當收到 LINE 聊天機器人的訊息時，觸發此函式
 @handler.add(MessageEvent)
 def handle_message(event):
@@ -367,6 +402,8 @@ def handle_message(event):
         user_text = event.message.text.lower()
         logger.info('UserMessage = '+ event.message.text)
         handle_message_text(event)
+    else:
+        handle_message_file(event)
     return
 
 def Update_url_schedule(stop_event):
