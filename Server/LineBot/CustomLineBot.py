@@ -31,7 +31,7 @@ import sys
 import threading
 import time
 import tldextract
-# pip install schedule tldextract flask line-bot-sdk whois beautifulsoup4 pytesseract
+# pip3 install schedule tldextract flask line-bot-sdk whois beautifulsoup4 pytesseract
 # pytesseract
 # sudo apt install tesseract-ocr tesseract-ocr-eng tesseract-ocr-chi-tra tesseract-ocr-chi-tra-vert tesseract-ocr-chi-sim tesseract-ocr-chi-sim-vert
 
@@ -334,7 +334,7 @@ def handle_message_image(event):
         f.write(message_content.content)
 
     # 辨識文字
-    text_msg = pytesseract.image_to_string(image, lang='eng', config='--psm 12')
+    text_msg = pytesseract.image_to_string(image, lang='eng+chi_tra+chi_sim', config='--psm 12')
 
     # 判斷是否有網址
     url_pattern = re.compile(r"http[s]?://\S+")
@@ -373,6 +373,8 @@ def handle_message_file(event):
     else:
         return
 
+    logger.info('UserMessage = '+ event.message.text)
+
     # 儲存檔案
     user_id = event.source.user_id
     user_files = [f for f in os.listdir(FILE_DIR) if f.startswith(user_id)]
@@ -383,7 +385,7 @@ def handle_message_file(event):
             f.write(chunk)
 
     # 回覆使用者已收到檔案
-    #message_reply(event.reply_token, f"已收到檔案 {file_name}")
+    message_reply(event.reply_token, "")
     return
 
 # 每當收到 LINE 聊天機器人的訊息時，觸發此函式
@@ -405,8 +407,10 @@ def handle_message(event):
         user_text = event.message.text.lower()
         logger.info('UserMessage = '+ event.message.text)
         handle_message_text(event)
-    else:
+    elif message_type == 'video' or message_type == 'audio' or message_type == 'file':
         handle_message_file(event)
+    else:
+        pass
     return
 
 def Update_url_schedule(stop_event):
