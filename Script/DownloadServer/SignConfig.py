@@ -24,6 +24,7 @@ import os
 import shutil
 import subprocess
 import json
+from Logger import logger
 
 with open('setting.json', 'r') as f:
     setting = json.load(f)
@@ -35,7 +36,7 @@ PEM_DIR = setting['PEM_DIR']
 
 def SignMobileconfig():
     if not os.path.isdir(PEM_DIR):
-        print(f'The {PEM_DIR} is NOT exist in your system.')
+        logger.info(f'The {PEM_DIR} is NOT exist in your system.')
         return False
 
     if os.path.isdir(BackupDIR):
@@ -45,7 +46,7 @@ def SignMobileconfig():
     os.makedirs(TARGET_DIR)
 
     if not os.path.isdir(MobileConfigDIR):
-        print(f'The {MobileConfigDIR} is NOT exist in your system.')
+        logger.info(f'The {MobileConfigDIR} is NOT exist in your system.')
         return False
 
     subprocess.run(['openssl', 'ec', '-in', f'{PEM_DIR}/privkey.pem', '-out', f'{TARGET_DIR}/Self_Key.key'], check=True)
@@ -54,7 +55,7 @@ def SignMobileconfig():
     for filename in filelist:
         extension = filename.split('.')[-1]
         if extension == 'mobileconfig':
-            print(f'Sign {filename} Start')
+            logger.info(f'Sign {filename} Start')
             subprocess.run(['openssl', 'smime', '-sign', '-in', f'{MobileConfigDIR}/{filename}', '-out', f'{TARGET_DIR}/{filename}', '-signer', f'{PEM_DIR}/fullchain.pem', '-inkey', f'{TARGET_DIR}/Self_Key.key', '-certfile', f'{PEM_DIR}/chain.pem', '-outform', 'der', '-nodetach'], check=True)
-            print(f'Sign {TARGET_DIR}/{filename} Finish')
+            logger.info(f'Sign {TARGET_DIR}/{filename} Finish')
     return True

@@ -4,5 +4,6 @@
     "CONFIG_SIGN":"",
     "PEM_DIR":"",
     "CERT":"",
-    "PRIVKEY":""
+    "PRIVKEY":"",
+	"LOGFILE":""
 }
