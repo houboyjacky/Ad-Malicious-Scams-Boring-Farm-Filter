@@ -7,7 +7,7 @@ User=root
 # 需要修改位置
 WorkingDirectory=/home/user/linebot
 # 需要修改位置
-ExecStart=/usr/local/bin/gunicorn -c /home/user/linebot/gunicorn.conf.py CustomLineBot:app
+ExecStart=/usr/bin/python3 /home/user/linebot/CustomLineBot.py
 Restart=always
 RestartSec=10
 
