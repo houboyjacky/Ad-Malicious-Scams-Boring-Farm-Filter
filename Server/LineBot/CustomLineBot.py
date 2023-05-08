@@ -37,7 +37,7 @@ import tldextract
 
 from flask import Flask, Response, request, abort, send_file
 from io import BytesIO
-from Line_Invite_URL import lineinvite_write_file, lineinvite_read_file, get_random_invite, push_random_invite, read_user_point, get_user_rank
+from Line_Invite_URL import lineinvite_write_file, lineinvite_read_file, get_random_invite, push_random_invite
 from linebot import LineBotApi, WebhookHandler
 from linebot.exceptions import InvalidSignatureError
 from linebot.models import MessageEvent, TextMessage, TextSendMessage
@@ -46,7 +46,7 @@ from PIL import Image
 from Query_Line_ID import user_query_lineid, user_download_lineid, user_add_lineid, user_query_lineid_sub
 from Query_URL import user_query_website, update_blacklist, check_blacklisted_site
 from Security_Check import get_cf_ips, download_cf_ips
-from string import ascii_letters
+from Point import read_user_point, get_user_rank
 
 app = Flask(__name__)
 # 讀取設定檔
@@ -266,7 +266,7 @@ def handle_message_text(event):
         return
 
     if user_text == "失效":
-        push_random_invite(user_id, False, True)
+        found = push_random_invite(user_id, False, True)
         if found:
             rmessage = "感謝你的回報\n輸入「檢舉」\n進行下一波行動"
         else:
