@@ -156,16 +156,27 @@ def admin_process(user_text):
             with open(NEW_SCAM_WEBSITE_FOR_ADG, "a", encoding="utf-8", newline='') as f:
                 f.write(new_rule)
 
-            # 提早執行更新
-            update_blacklist()
+            r = lineinvite_read_file(url)
+            if r == True :
+                # 取得結束時間
+                end_time = time.time()
 
-            # 取得結束時間
-            end_time = time.time()
+                # 計算耗時
+                elapsed_time = end_time - start_time
 
-            # 計算耗時
-            elapsed_time = end_time - start_time
+                rmessage = "網址名單已存在，耗時 " + str(int(elapsed_time)) + " 秒"
+            else:
 
-            rmessage = "網址名單更新完成，耗時 " + str(int(elapsed_time)) + " 秒"
+                # 提早執行更新
+                update_blacklist()
+
+                # 取得結束時間
+                end_time = time.time()
+
+                # 計算耗時
+                elapsed_time = end_time - start_time
+
+                rmessage = "網址名單更新完成，耗時 " + str(int(elapsed_time)) + " 秒"
 
     elif match := re.search(rule[1], user_text):
 
