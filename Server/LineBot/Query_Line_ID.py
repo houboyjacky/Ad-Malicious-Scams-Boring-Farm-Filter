@@ -74,6 +74,7 @@ def user_download_lineid():
     lineid_list = sorted(set(lineid_list + lineid_local))
 
 def user_query_lineid_sub(lineid):
+    global lineid_list
     user_download_lineid()
     # 檢查是否符合命名規範
     if lineid in lineid_list:

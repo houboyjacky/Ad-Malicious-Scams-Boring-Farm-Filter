@@ -43,8 +43,8 @@ from linebot.exceptions import InvalidSignatureError
 from linebot.models import MessageEvent, TextMessage, TextSendMessage
 from Logger import logger, Logger_Transfer
 from PIL import Image
-from Query_Line_ID import user_query_lineid, user_download_lineid, user_add_lineid
-from Query_URL import user_query_website, update_blacklist
+from Query_Line_ID import user_query_lineid, user_download_lineid, user_add_lineid, user_query_lineid_sub
+from Query_URL import user_query_website, update_blacklist, check_blacklisted_site
 from Security_Check import get_cf_ips, download_cf_ips
 from string import ascii_letters
 
@@ -156,27 +156,17 @@ def admin_process(user_text):
             with open(NEW_SCAM_WEBSITE_FOR_ADG, "a", encoding="utf-8", newline='') as f:
                 f.write(new_rule)
 
-            r = lineinvite_read_file(url)
+            r = check_blacklisted_site(url)
             if r == True :
-                # 取得結束時間
-                end_time = time.time()
-
-                # 計算耗時
-                elapsed_time = end_time - start_time
-
-                rmessage = "網址名單已存在，耗時 " + str(int(elapsed_time)) + " 秒"
+                rmessage = "網址黑名單已存在"
             else:
-
                 # 提早執行更新
                 update_blacklist()
-
                 # 取得結束時間
                 end_time = time.time()
-
                 # 計算耗時
                 elapsed_time = end_time - start_time
-
-                rmessage = "網址名單更新完成，耗時 " + str(int(elapsed_time)) + " 秒"
+                rmessage = "網址黑名單更新完成，耗時 " + str(int(elapsed_time)) + " 秒"
 
     elif match := re.search(rule[1], user_text):
 
@@ -196,11 +186,13 @@ def admin_process(user_text):
 
         # 取得文字
         lineid = match.group(1)
-
-        # 加入新line id
-        user_add_lineid(lineid)
-
-        rmessage = "賴黑名單已加入" + lineid
+        r = user_query_lineid_sub(lineid)
+        if r:
+            rmessage = "賴黑名單已存在" + lineid
+        else:
+            # 加入新line id
+            user_add_lineid(lineid)
+            rmessage = "賴黑名單已加入" + lineid
     else:
         pass
 

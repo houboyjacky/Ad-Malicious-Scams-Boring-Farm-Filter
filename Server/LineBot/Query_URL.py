@@ -166,7 +166,7 @@ def user_query_website(user_text):
     checkresult = check_blacklisted_site(user_text)
 
     if Error or not w.domain_name:
-        if checkresult is True:
+        if checkresult:
             rmessage = ("所輸入的網址\n"
                         "「 " + user_text + " 」\n"
                         "被判定是詐騙／可疑網站\n"
