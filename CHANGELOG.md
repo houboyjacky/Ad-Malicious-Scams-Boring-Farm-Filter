@@ -1,5 +1,8 @@
 # 歷史更新 History Update
 
+* 20230509 Update
+  * 調整 獨立Point.py
+
 * 20230508 Update
   * 加入 DownloadServer Log
   * 更新 FB網友提供清單
