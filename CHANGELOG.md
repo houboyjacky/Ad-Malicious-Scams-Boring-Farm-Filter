@@ -1,7 +1,7 @@
 # 歷史更新 History Update
 
 * 20230509 Update
-  * 調整 獨立Point.py
+  * 調整 獨立Point.py並改為載入記憶體中
   * 調整 儲存資料夾結構
 
 * 20230508 Update

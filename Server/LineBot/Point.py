@@ -30,59 +30,52 @@ with open('setting.json', 'r') as f:
 
 USER_POINT = setting['USER_POINT']
 
-def write_user_point(user_id,addpoint):
-    # 建立 User_Point.txt 檔案，如果不存在的話
-    if not os.path.exists(USER_POINT):
-        with open(USER_POINT, "w", encoding="utf-8") as f:
-            f.write("{}:0\n")
-    # 讀取檔案內容，並更新指定使用者的 Point
-    with open(USER_POINT, "r+", encoding="utf-8") as f:
-        content = f.read()
-        lines = content.split("\n")
-        for i in range(len(lines)):
-            if lines[i].startswith(user_id):
-                point = int(lines[i].split(":")[1])
-                lines[i] = f"{user_id}:{point+addpoint}"
-                break
-        else:
-            lines.insert(-1, f"{user_id}:{addpoint}")
-        # 將更新後的內容寫回檔案
-        f.seek(0)
-        f.write("\n".join(lines))
-        f.truncate()
+# global 變數，用來儲存點數列表
+Point_List = {}
 
-def read_user_point(user_id) -> int:
-    with open(USER_POINT, "r", encoding="utf-8") as f:
-        content = f.read()
-        for line in content.split("\n"):
-            if line.startswith(user_id):
-                return int(line.split(":")[1])
-        # 如果找不到指定的使用者 ID，回傳 None
-        return 0
-
-def get_user_rank(user_id):
-    # 讀取檔案中所有的使用者點數
+def load_point_file():
+    global Point_List
     if os.path.exists(USER_POINT):
         with open(USER_POINT, "r") as f:
             lines = f.readlines()
-            users = {}
             for line in lines:
                 uid, point = line.strip().split(":")
-                users[uid] = int(point)
-    else:
-        users = {}
+                Point_List[uid] = int(point)
 
-    # 取得使用者的點數
-    if user_id in users:
-        point = users[user_id]
+def write_point_file():
+    global Point_List
+    with open(USER_POINT, "w") as f:
+        for uid, point in Point_List.items():
+            f.write(f"{uid}:{point}\n")
+
+def write_user_point(user_id, addpoint):
+    global Point_List
+    if user_id not in Point_List:
+        Point_List[user_id] = addpoint
     else:
-        point = 0
+        Point_List[user_id] += addpoint
+    write_point_file()
+
+def read_user_point(user_id) -> int:
+    global Point_List
+    if user_id in Point_List:
+        return Point_List[user_id]
+    else:
+        return 0
+
+def get_user_rank(user_id):
+    global Point_List
+    if user_id not in Point_List:
+        Point_List[user_id] = 0
 
     # 計算使用者點數的排名
     rank = 1
-    for uid, pt in users.items():
-        if uid != user_id and pt > point:
+    for uid, pt in Point_List.items():
+        if uid != user_id and pt > Point_List[user_id]:
             rank += 1
 
     # 回傳排名
     return rank
+
+# 在程式一開始呼叫讀取檔案函式，將檔案內容存入 Point_List
+load_point_file()
