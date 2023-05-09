@@ -329,11 +329,20 @@ def handle_message_image(event):
     image = Image.open(BytesIO(message_content.content))
 
     # 儲存照片
+    IMAGE = "image"
+    IMAGE_DIR = f"{IMAGE}/"
+    if not os.path.isdir(IMAGE_DIR):
+        os.mkdir(IMAGE_DIR)
+
     user_id = event.source.user_id
-    user_files = [f for f in os.listdir(IMAGE_DIR) if f.startswith(user_id)]
+    user_dir = f"{IMAGE}/{user_id}/"
+    if not os.path.isdir(user_dir):
+        os.mkdir(user_dir)
+
+    user_files = [f for f in os.listdir(user_dir) if f.startswith(user_id)]
     num_files = len(user_files)
-    filename = f"{user_id}_{num_files+1:02}.jpg"
-    with open(os.path.join(IMAGE_DIR, filename), "wb") as f:
+    filename = f"{user_dir}{user_id}_{num_files+1:02}.jpg"
+    with open(filename, "wb") as f:
         f.write(message_content.content)
 
     # 辨識文字
@@ -376,6 +385,9 @@ def handle_message_file(event):
     else:
         return
 
+    if not os.path.isdir(FILE_DIR):
+        os.mkdir(FILE_DIR)
+
     logger.info('UserMessage = '+ event.message.text)
 
     # 儲存檔案
@@ -390,7 +402,6 @@ def handle_message_file(event):
     # 回覆使用者已收到檔案
     message_reply(event.reply_token, "")
     return
-
 # 每當收到 LINE 聊天機器人的訊息時，觸發此函式
 @handler.add(MessageEvent)
 def handle_message(event):

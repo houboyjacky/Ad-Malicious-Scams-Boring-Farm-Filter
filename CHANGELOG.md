@@ -2,6 +2,7 @@
 
 * 20230509 Update
   * 調整 獨立Point.py
+  * 調整 儲存資料夾結構
 
 * 20230508 Update
   * 加入 DownloadServer Log
