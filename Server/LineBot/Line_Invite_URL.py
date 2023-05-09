@@ -29,6 +29,7 @@ from Logger import logger
 from typing import Optional
 from Query_Line_ID import user_add_lineid, user_query_lineid_sub
 from Point import write_user_point
+from filelock import FileLock
 
 # 讀取設定檔
 # LINE_INVITE => LINE Invite Site List
@@ -36,6 +37,8 @@ with open('setting.json', 'r') as f:
     setting = json.load(f)
 
 LINE_INVITE = setting['LINE_INVITE']
+
+invites = []
 
 def analyze_line_invite_url(user_text:str) -> Optional[dict]:
     # 定義邀請類型的正則表達式
@@ -107,8 +110,14 @@ def read_json_file(filename: str) -> list:
         return []
 
 def write_json_file(filename: str, data: list) -> None:
-    with open(filename, "w", encoding="utf-8") as file:
-        json.dump(data, file, ensure_ascii=False, indent=2)
+    # 創建一個檔案鎖定對象
+    lock_file = FileLock(f"{filename}.lock")
+
+    # 使用 with 陳述式自動管理檔案鎖定
+    with lock_file:
+        # 打開檔案並寫入數據
+        with open(filename, "w", encoding="utf-8") as file:
+            json.dump(data, file, ensure_ascii=False, indent=2)
 
 def add_sort_lineinvite(result, results):
     # 查找是否有重複的邀請碼和類別
@@ -123,17 +132,16 @@ def add_sort_lineinvite(result, results):
     results.append(result)
 
 def lineinvite_write_file(user_text:str) -> bool:
+    global invites
     result = analyze_line_invite_url(user_text)
-
     if result:
         if "@" in result["邀請碼"]:
             user_add_lineid(result["邀請碼"])
         elif "~" in result["邀請碼"]:
             LineID = result["邀請碼"].replace("~", "")
             user_add_lineid(LineID)
-        results = read_json_file(LINE_INVITE)
-        add_sort_lineinvite(result,results)
-        write_json_file(LINE_INVITE, results)
+        add_sort_lineinvite(result,invites)
+        write_json_file(LINE_INVITE, invites)
         logger.info("分析完成，結果已寫入")
         return True
     else:
@@ -141,12 +149,12 @@ def lineinvite_write_file(user_text:str) -> bool:
         return False
 
 def lineinvite_read_file(user_text:str) -> int:
+    global invites
     analyze = analyze_line_invite_url(user_text)
     if not analyze:
         return -1
 
-    results = read_json_file(LINE_INVITE)
-    for result in results:
+    for result in invites:
         if result["邀請碼"] == analyze["邀請碼"]:
             return True
     if user_query_lineid_sub(analyze["邀請碼"]):
@@ -154,14 +162,14 @@ def lineinvite_read_file(user_text:str) -> int:
     return False
 
 def get_random_invite(UserID):
-    invites = read_json_file(LINE_INVITE)
+    global invites
     if not invites:  # 如果 invites 是空的 list
         return None
     found = False
     count = 0
     while count < 1000:  # 最多找 100 次，避免無限迴圈
         invite = random.choice(invites)
-        if invite['檢查者'] == "" and invite['失效'] == 0:
+        if invite['檢查者'] == "" and invite['失效'] < 50:
             invite['檢查者'] = UserID
             found = True
             break
@@ -171,7 +179,7 @@ def get_random_invite(UserID):
     return invite['原始網址']
 
 def push_random_invite(UserID, success, disappear):
-    invites = read_json_file(LINE_INVITE)
+    global invites
     found = False
     for invite in invites:
         if invite['檢查者'] == UserID:
@@ -180,7 +188,7 @@ def push_random_invite(UserID, success, disappear):
                 invite['回報次數'] += 1
                 write_user_point(UserID, 1)
             if disappear:
-                invite['失效'] = 1
+                invite['失效'] += 1
                 write_user_point(UserID, 1)
             found = True
             break
@@ -189,9 +197,9 @@ def push_random_invite(UserID, success, disappear):
     return found
 
 def Invite_check_data(filename: str) -> None:
-    data = read_json_file(filename)
+    global invites
     modify = False
-    for item in data:
+    for item in invites:
         if "類別" not in item:
             item["類別"] = 0
             modify = True
@@ -211,17 +219,19 @@ def Invite_check_data(filename: str) -> None:
             item["檢查者"] = ""
             modify = True
     if modify:
-        write_json_file(filename, data)
+        write_json_file(filename, invites)
 
 def Invite_clear_data(filename: str) -> None:
-    data = read_json_file(filename)
+    global invites
     modify = False
-    for item in data:
+    for item in invites:
         if "檢查者":
             item["檢查者"] = ""
             modify = True
     if modify:
-        write_json_file(filename, data)
+        write_json_file(filename, invites)
+
+invites = read_json_file(LINE_INVITE)
 
 Invite_check_data(LINE_INVITE)
 Invite_clear_data(LINE_INVITE)

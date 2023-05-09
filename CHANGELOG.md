@@ -8,6 +8,7 @@
   * 調整 獨立Point.py並改為載入記憶體中
   * 調整 儲存資料夾結構
   * 調整 LineBot顯示
+  * 調整 LineBot檢舉規則
 
 * 20230508 Update
   * 加入 DownloadServer Log
