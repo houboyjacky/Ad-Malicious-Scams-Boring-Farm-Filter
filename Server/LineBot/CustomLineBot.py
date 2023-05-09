@@ -66,6 +66,7 @@ admins = setting['ADMIN']
 handler = WebhookHandler(setting['CHANNEL_SECRET'])
 line_bot_api = LineBotApi(setting['CHANNEL_ACCESS_TOKEN'])
 NEW_SCAM_WEBSITE_FOR_ADG = setting['BLACKLISTFORADG']
+BLACKUSERID = setting['BLACKUSERID']
 rule = setting['RULE']
 
 @app.before_request
@@ -202,6 +203,10 @@ def handle_message_text(event):
 
     # 取得發訊者的 ID
     user_id = event.source.user_id
+
+    if user_id in BLACKUSERID:
+        message_reply(event.reply_token, "管理員管制中...請稍後嘗試")
+        return
 
     # 讀取使用者傳來的文字訊息
     user_text = event.message.text.lower()
