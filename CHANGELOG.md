@@ -5,10 +5,11 @@
   * 加入 開關辨識功能
   * 加入 黑單機制
   * 加入 網友投稿詐騙事件與檢閱機制
+  * 調整 獨立JsonRW
   * 調整 獨立Point.py並改為載入記憶體中
   * 調整 儲存資料夾結構
-  * 調整 LineBot顯示
   * 調整 LineBot檢舉規則
+  * 調整 LineBot顯示
 
 * 20230508 Update
   * 加入 DownloadServer Log

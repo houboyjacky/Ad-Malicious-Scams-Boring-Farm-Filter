@@ -22,9 +22,8 @@ THE SOFTWARE.
 
 import json
 import re
-import tldextract
-from typing import Optional
 from Point import write_user_point
+from JsonRW import read_json_file, write_json_file
 
 # 讀取設定檔
 # NETIZEN => LINE Invite Site List
@@ -32,17 +31,6 @@ with open('setting.json', 'r') as f:
     setting = json.load(f)
 
 NETIZEN = setting['NETIZEN']
-
-def read_json_file(filename: str) -> list:
-    try:
-        with open(filename, "r", encoding="utf-8") as file:
-            return json.load(file)
-    except (FileNotFoundError, json.JSONDecodeError):
-        return []
-
-def write_json_file(filename: str, data: list) -> None:
-    with open(filename, "w", encoding="utf-8") as file:
-        json.dump(data, file, ensure_ascii=False, indent=2)
 
 line_domains = ["lin.ee", "line.me", "lineblog.me", "linecorp.com", "line-scdn.net", "line.naver.jp", "line.biz"]
 
@@ -52,6 +40,8 @@ twitter_domains = ["twitter.com", "t.co", "twimg.com", "twittercommunity.com", "
 
 instagram_domains =["instagram.com", "instagram-brand.com", "ig.me", "instagr.am"]
 
+netizens = read_json_file(NETIZEN)
+
 def is_check_url(url, domains: list) -> bool:
     for domain in domains:
         pattern = r"(^|\W)" + re.escape(domain) + r"($|\W)"
@@ -59,28 +49,15 @@ def is_check_url(url, domains: list) -> bool:
             return True
     return False
 
-def is_same_data(user_text:str, results:list) -> int:
-    results = read_json_file(NETIZEN)
-    if not result:
-        return 1
-
-    count = 0
-    for result in results:
-        count +=1
-        if user_text == result['內容']:
-            return 0
-    count += 1
-    return count
-
 def write_new_netizen_file(user_id:str, user_name:str, user_text:str) -> bool:
-    results = read_json_file(NETIZEN)
-    if not results:
+    global netizens
+    if not netizens:
         number = 1
     else:
         number = 0
-        for result in results:
+        for netizen in netizens:
             number +=1
-            if user_text == result['內容']:
+            if user_text == netizen['內容']:
                 return True
         number +=1
 
@@ -108,45 +85,45 @@ def write_new_netizen_file(user_id:str, user_name:str, user_text:str) -> bool:
             }
 
     # 新增結果
-    results.append(struct)
+    netizens.append(struct)
 
-    write_json_file(NETIZEN, results)
+    write_json_file(NETIZEN, netizens)
 
     write_user_point(user_id, 1)
 
     return False
 
 def get_netizen_file(user_id:str):
-    results = read_json_file(NETIZEN)
-    for result in results:
-        if result["完成"] == 0 and result["失效"] == 0:
-            result['檢查者'] = user_id
-            write_json_file(NETIZEN, results)
-            return result["內容"]
+    global netizens
+    for netizen in netizens:
+        if netizen["完成"] == 0 and netizen["失效"] == 0:
+            netizen['檢查者'] = user_id
+            write_json_file(NETIZEN, netizens)
+            return netizen["內容"]
     return ""
 
 def push_netizen_file(UserID, success, disappear):
-    results = read_json_file(NETIZEN)
+    global netizens
     found = False
-    for result in results:
-        if result['檢查者'] == UserID:
-            result['檢查者'] = ""
+    for netizen in netizens:
+        if netizen['檢查者'] == UserID:
+            netizen['檢查者'] = ""
             if success:
-                result['完成'] = 1
+                netizen['完成'] = 1
                 write_user_point(UserID, 2)
             if disappear:
-                result['失效'] = 1
+                netizen['失效'] = 1
                 write_user_point(UserID, 2)
             found = True
             break
     if found:
-        write_json_file(NETIZEN, results)
+        write_json_file(NETIZEN, netizens)
     return found
 
 def Invite_check_data(filename: str) -> None:
-    data = read_json_file(filename)
+    global netizens
     modify = False
-    for item in data:
+    for item in netizens:
         if "序號" not in item:
             item["序號"] = 0
             modify = True
@@ -172,6 +149,6 @@ def Invite_check_data(filename: str) -> None:
             item["檢查者"] = ""
             modify = True
     if modify:
-        write_json_file(filename, data)
+        write_json_file(filename, netizens)
 
 Invite_check_data(NETIZEN)

@@ -308,7 +308,7 @@ def handle_message_text(event):
         found = push_random_invite(user_id, True, False)
         found2 = push_netizen_file(user_id, True, False)
         if found or found2:
-            rmessage = "感謝你的回報\n輸入「檢舉」/「遊戲」\n進行下一波行動\n輸入「積分」\n可以查詢你的積分排名"
+            rmessage = "感謝你的回報\n輸入「遊戲」\n進行下一波行動\n輸入「積分」\n可以查詢你的積分排名"
         else:
             rmessage = "程式有誤，請勿繼續使用"
 
@@ -319,7 +319,7 @@ def handle_message_text(event):
         found = push_random_invite(user_id, False, True)
         found2 = push_netizen_file(user_id, False, True)
         if found or found2:
-            rmessage = "感謝你的回報\n輸入「檢舉」/「遊戲」\n進行下一波行動\n輸入「積分」\n可以查詢你的積分排名"
+            rmessage = "感謝你的回報\n輸入「遊戲」\n進行下一波行動\n輸入「積分」\n可以查詢你的積分排名"
         else:
             rmessage = "程式有誤，請勿繼續使用"
         message_reply(event.reply_token, rmessage)

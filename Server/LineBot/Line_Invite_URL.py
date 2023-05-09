@@ -29,7 +29,7 @@ from Logger import logger
 from typing import Optional
 from Query_Line_ID import user_add_lineid, user_query_lineid_sub
 from Point import write_user_point
-from filelock import FileLock
+from JsonRW import read_json_file, write_json_file
 
 # 讀取設定檔
 # LINE_INVITE => LINE Invite Site List
@@ -38,7 +38,7 @@ with open('setting.json', 'r') as f:
 
 LINE_INVITE = setting['LINE_INVITE']
 
-invites = []
+invites = read_json_file(LINE_INVITE)
 
 def analyze_line_invite_url(user_text:str) -> Optional[dict]:
     # 定義邀請類型的正則表達式
@@ -101,23 +101,6 @@ def analyze_line_invite_url(user_text:str) -> Optional[dict]:
     struct =  {"類別": category, "邀請碼": invite_code, "原始網址": user_text, "回報次數": 0, "失效": 0, "檢查者": ""}
 
     return struct
-
-def read_json_file(filename: str) -> list:
-    try:
-        with open(filename, "r", encoding="utf-8") as file:
-            return json.load(file)
-    except (FileNotFoundError, json.JSONDecodeError):
-        return []
-
-def write_json_file(filename: str, data: list) -> None:
-    # 創建一個檔案鎖定對象
-    lock_file = FileLock(f"{filename}.lock")
-
-    # 使用 with 陳述式自動管理檔案鎖定
-    with lock_file:
-        # 打開檔案並寫入數據
-        with open(filename, "w", encoding="utf-8") as file:
-            json.dump(data, file, ensure_ascii=False, indent=2)
 
 def add_sort_lineinvite(result, results):
     # 查找是否有重複的邀請碼和類別
@@ -230,8 +213,6 @@ def Invite_clear_data(filename: str) -> None:
             modify = True
     if modify:
         write_json_file(filename, invites)
-
-invites = read_json_file(LINE_INVITE)
 
 Invite_check_data(LINE_INVITE)
 Invite_clear_data(LINE_INVITE)
