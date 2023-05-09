@@ -59,6 +59,8 @@ app = Flask(__name__)
 # PRIVKEY => Lets Encrypt Private Key Path
 # RULE => Reply message by rule
 
+image_analysis = True
+
 with open('setting.json', 'r') as f:
     setting = json.load(f)
 
@@ -121,7 +123,7 @@ def message_reply(reply_token, text):
     line_bot_api.reply_message(reply_token, message)
 
 # 管理員操作
-def admin_process(user_text):
+def handle_admin_message_text(user_text):
     global setting
     rmessage = ''
 
@@ -202,7 +204,7 @@ def admin_process(user_text):
     return rmessage
 
 def handle_message_text(event):
-
+    global image_analysis
     # 取得發訊者的 ID
     user_id = event.source.user_id
 
@@ -262,9 +264,19 @@ def handle_message_text(event):
                 rmessage = "目前沒有需要檢閱的資料"
             message_reply(event.reply_token, rmessage)
             return
+        elif user_text == "關閉辨識":
+            image_analysis = False
+            rmessage = "已關閉辨識"
+            message_reply(event.reply_token, rmessage)
+            return
+        elif user_text == "開啟辨識":
+            image_analysis = True
+            rmessage = "已開啟辨識"
+            message_reply(event.reply_token, rmessage)
+            return
         elif user_text.startswith("加入"):
             user_text = event.message.text
-            rmessage = admin_process(user_text)
+            rmessage = handle_admin_message_text(user_text)
             if rmessage:
                 message_reply(event.reply_token, rmessage)
                 return
@@ -355,7 +367,6 @@ def handle_message_text(event):
     return
 
 def handle_message_image(event):
-
     # 儲存照片的目錄
     IMAGE_DIR = "image/"
     website_list = []
@@ -381,21 +392,22 @@ def handle_message_image(event):
     with open(filename, "wb") as f:
         f.write(message_content.content)
 
-    # 辨識文字
-    text_msg = pytesseract.image_to_string(image, lang='eng+chi_tra+chi_sim', config='--psm 12')
+    if user_id in admins and image_analysis:
+        # 辨識文字
+        text_msg = pytesseract.image_to_string(image, lang='eng+chi_tra+chi_sim', config='--psm 12')
 
-    # 判斷是否有網址
-    url_pattern = re.compile(r"http[s]?://\S+")
-    website_list = url_pattern.findall(text_msg)
+        # 判斷是否有網址
+        url_pattern = re.compile(r"(http|https)://[^\s]+")
+        website_list = url_pattern.findall(text_msg)
 
-    # 回應訊息
-    if website_list:
-        website_msg = "\n".join(website_list)
-    else:
-        website_msg = "無"
+        # 回應訊息
+        if website_list:
+            website_msg = "\n".join(website_list)
+        else:
+            website_msg = "無"
 
-    rmessage = f"網站：\n{website_msg}\n\n判斷文字：\n{text_msg}"
-    message_reply(event.reply_token, rmessage)
+        rmessage += f"網站：\n{website_msg}\n\n判斷文字：\n{text_msg}"
+        message_reply(event.reply_token, rmessage)
     return
 
 def handle_message_file(event):
@@ -448,12 +460,10 @@ def handle_message(event):
 
     message_type = event.message.type
 
-    if message_type == 'image' and user_id in admins:
-        # 讀取使用者傳來的文字訊息
+    if message_type == 'image':
         logger.info('UserMessage = image message')
         handle_message_image(event)
     elif message_type == 'text':
-        # 讀取使用者傳來的文字訊息
         user_text = event.message.text.lower()
         logger.info('UserMessage = '+ event.message.text)
         handle_message_text(event)
