@@ -47,6 +47,7 @@ from Query_Line_ID import user_query_lineid, user_download_lineid, user_add_line
 from Query_URL import user_query_website, update_blacklist, check_blacklisted_site
 from Security_Check import get_cf_ips, download_cf_ips
 from Point import read_user_point, get_user_rank
+from GetFromNetizen import push_netizen_file, write_new_netizen_file, get_netizen_file
 
 app = Flask(__name__)
 # 讀取設定檔
@@ -121,6 +122,7 @@ def message_reply(reply_token, text):
 
 # 管理員操作
 def admin_process(user_text):
+    global setting
     rmessage = ''
 
     if match := re.search(rule[0], user_text):
@@ -243,27 +245,55 @@ def handle_message_text(event):
         return
 
     # 管理員操作
-    if user_text.startswith("加入") and user_id in admins:
-        user_text = event.message.text
-        rmessage = admin_process(user_text)
-        if rmessage:
+    if user_id in admins:
+        if user_text == "重讀":
+            setting = ''
+            with open('setting.json', 'r') as f:
+                setting = json.load(f)
+            logger.info("Reload setting.json")
+            rmessage = "設定已重新載入"
             message_reply(event.reply_token, rmessage)
             return
+        elif user_text == "檢閱":
+            content = get_netizen_file(user_id)
+            if content:
+                rmessage = "內容：\n\n" + content + "\n\n參閱與處置後\n請輸入「完成」或「失效」"
+            else:
+                rmessage = "目前沒有需要檢閱的資料"
+            message_reply(event.reply_token, rmessage)
+            return
+        elif user_text.startswith("加入"):
+            user_text = event.message.text
+            rmessage = admin_process(user_text)
+            if rmessage:
+                message_reply(event.reply_token, rmessage)
+                return
+        else:
+            pass
 
-    if user_text == "檢舉":
+    if user_text.startswith("詐騙"):
+        user_name = line_bot_api.get_profile(user_id).display_name
+        user_text = event.message.text
+        write_new_netizen_file(user_id, user_name, event.message.text)
+        rmessage = "謝謝你提供的情報\n輸入「積分」\n可以查詢你的積分排名"
+        message_reply(event.reply_token, rmessage)
+        return
+
+    if user_text == "遊戲":
         site = get_random_invite(user_id)
         if not site:
-            rmessage = "目前暫停檢舉喔~"
+            rmessage = "目前暫停檢舉遊戲喔~"
         else:
-            rmessage = "請開始你的檢舉\n" + site + "\n若「完成」請回報「完成」\n若「失效」請回傳「失效」"
+            rmessage = "請開始你的檢舉遊戲\n" + site + "\n若「完成」請回報「完成」\n若「失效」請回傳「失效」"
 
         message_reply(event.reply_token, rmessage)
         return
 
     if user_text == "完成":
         found = push_random_invite(user_id, True, False)
-        if found:
-            rmessage = "感謝你的檢舉\n輸入「檢舉」\n進行下一波行動"
+        found2 = push_netizen_file(user_id, True, False)
+        if found or found2:
+            rmessage = "感謝你的回報\n輸入「檢舉」/「遊戲」\n進行下一波行動\n輸入「積分」\n可以查詢你的積分排名"
         else:
             rmessage = "程式有誤，請勿繼續使用"
 
@@ -272,8 +302,9 @@ def handle_message_text(event):
 
     if user_text == "失效":
         found = push_random_invite(user_id, False, True)
-        if found:
-            rmessage = "感謝你的回報\n輸入「檢舉」\n進行下一波行動"
+        found2 = push_netizen_file(user_id, False, True)
+        if found or found2:
+            rmessage = "感謝你的回報\n輸入「檢舉」/「遊戲」\n進行下一波行動\n輸入「積分」\n可以查詢你的積分排名"
         else:
             rmessage = "程式有誤，請勿繼續使用"
         message_reply(event.reply_token, rmessage)
@@ -393,7 +424,7 @@ def handle_message_file(event):
     if not os.path.isdir(FILE_DIR):
         os.mkdir(FILE_DIR)
 
-    logger.info('UserMessage = '+ event.message.text)
+    logger.info('UserType = '+ file_type)
 
     # 儲存檔案
     user_id = event.source.user_id
