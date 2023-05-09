@@ -369,6 +369,16 @@ def handle_message_text(event):
         return
     return
 
+def format_elapsed_time(seconds):
+    m, s = divmod(seconds, 60)
+    h, m = divmod(m, 60)
+    if h > 0:
+        return f"{h}小{m}分{s:.0f}秒"
+    elif m > 0:
+        return f"{m}分{s:.0f}秒"
+    else:
+        return f"{s:.2f}秒"
+
 def handle_message_image(event):
     # 儲存照片的目錄
     IMAGE_DIR = "image/"
@@ -397,6 +407,8 @@ def handle_message_image(event):
         f.write(message_content.content)
 
     if user_id in admins and image_analysis:
+        # 取得開始時間
+        start_time = time.time()
         # 辨識文字
         text_msg = pytesseract.image_to_string(image, lang='eng+chi_tra+chi_sim', config='--psm 12')
 
@@ -410,7 +422,16 @@ def handle_message_image(event):
         else:
             website_msg = "無"
 
-        rmessage += f"網站：\n{website_msg}\n\n判斷文字：\n{text_msg}"
+        # 取得結束時間
+        end_time = time.time()
+
+        # 計算耗時
+        elapsed_time = end_time - start_time
+
+        # 轉換格式
+        elapsed_time_str = format_elapsed_time(elapsed_time)
+
+        rmessage += f"網站：\n{website_msg}\n\n耗時：{elapsed_time_str}\n\n判斷文字：\n{text_msg}"
         message_reply(event.reply_token, rmessage)
     return
 
