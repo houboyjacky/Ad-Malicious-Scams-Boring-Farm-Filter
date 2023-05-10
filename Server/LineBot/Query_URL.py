@@ -93,6 +93,7 @@ def read_rule(filename):
                 blacklist.append(line)
             else:
                 continue  # 忽略該行文字
+    return
 
 def update_blacklist():
     global blacklist
@@ -112,6 +113,12 @@ def update_blacklist():
 
     blacklist = sorted(list(set(blacklist)))
     logger.info("Update blacklist finish!")
+    return
+
+def update_part_blacklist(add_rule):
+    global blacklist
+    blacklist.append(add_rule)
+    return True
 
 # 黑名單判斷
 def check_blacklisted_site(user_text):

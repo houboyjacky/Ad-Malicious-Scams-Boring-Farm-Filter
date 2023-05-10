@@ -2,9 +2,10 @@
 
 * 20230510 Update
   * 更新 個人不想看與網友匯報廣告或網站
+  * 修復 欠缺讀入參數
+  * 調整 加速更新BlackList
   * 調整 獨立Tools.py與PrintText.py
   * 調整 LineBot API區分與整併
-  * 修復 欠缺讀入參數
 
 * 20230509 Update
   * 加入 訊息長度限制

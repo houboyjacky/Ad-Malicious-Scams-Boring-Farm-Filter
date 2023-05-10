@@ -38,7 +38,7 @@ from PIL import Image
 from Point import read_user_point, get_user_rank
 from PrintText import user_guide
 from Query_Line_ID import user_query_lineid, user_add_lineid, user_query_lineid_sub
-from Query_URL import update_blacklist
+from Query_URL import update_part_blacklist
 from Query_URL import user_query_website, check_blacklisted_site
 
 image_analysis = True
@@ -67,9 +67,6 @@ def handle_admin_message_text(user_text):
             else:
                 rmessage = "邀請黑名單更新失敗"
         else:
-            # 取得開始時間
-            start_time = time.time()
-
             user_text = user_text.lower()
 
             match = re.search(Tools.RULE[0], user_text)
@@ -90,16 +87,12 @@ def handle_admin_message_text(user_text):
                 f.write(new_rule)
 
             r = check_blacklisted_site(url)
-            if r == True :
+            if r:
                 rmessage = "網址黑名單已存在"
             else:
                 # 提早執行更新
-                update_blacklist()
-                # 取得結束時間
-                end_time = time.time()
-                # 計算耗時
-                elapsed_time = end_time - start_time
-                rmessage = "網址黑名單更新完成，耗時 " + str(int(elapsed_time)) + " 秒"
+                update_part_blacklist(new_rule)
+                rmessage = "網址黑名單更新完成"
 
     elif match := re.search(Tools.RULE[1], user_text):
 
