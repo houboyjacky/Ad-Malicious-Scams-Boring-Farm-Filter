@@ -271,11 +271,11 @@ def handle_message_text(event):
         return
 
     # 內容包含網址，立即查詢第一個網址
-    found_url = Tools.find_url(user_text)
-    if found_url and not user_id in Tools.ADMINS:
-        rmessage = user_query_website(user_text)
-        message_reply(event.reply_token, rmessage)
-        return
+    # found_url = Tools.find_url(user_text)
+    # if found_url and not user_id in Tools.ADMINS:
+    #     rmessage = user_query_website(user_text)
+    #     message_reply(event.reply_token, rmessage)
+    #     return
     return
 
 def handle_message_image(event):
