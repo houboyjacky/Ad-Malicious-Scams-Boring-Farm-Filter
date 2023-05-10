@@ -21,27 +21,18 @@ THE SOFTWARE.
 '''
 
 import hashlib
-import json
 import os
 import re
 import requests
 import tldextract
 import whois
+import Tools
 
 from datetime import datetime
 from urllib.parse import urlparse
 from Logger import logger
 
 FILTER_DIR = "filter"
-
-# 讀取設定檔
-# SCAM_WEBSITE_LIST => Download blackliste
-# BLACKLISTFORADG => Blacklist for Adguard Home Download
-with open('setting.json', 'r') as f:
-    setting = json.load(f)
-
-SCAM_WEBSITE_LIST = setting['SCAM_WEBSITE_LIST']
-NEW_SCAM_WEBSITE_FOR_ADG = setting['BLACKLISTFORADG']
 
 blacklist = []
 
@@ -105,7 +96,7 @@ def read_rule(filename):
 
 def update_blacklist():
     global blacklist
-    with open(SCAM_WEBSITE_LIST, "r") as f:
+    with open(Tools.SCAM_WEBSITE_LIST, "r") as f:
         urls = f.readlines()
 
     for url in urls:
@@ -117,7 +108,7 @@ def update_blacklist():
             continue
         read_rule(filename)
 
-    read_rule(NEW_SCAM_WEBSITE_FOR_ADG)
+    read_rule(Tools.NEW_SCAM_WEBSITE_FOR_ADG)
 
     blacklist = sorted(list(set(blacklist)))
     logger.info("Update blacklist finish!")
@@ -139,7 +130,7 @@ def check_blacklisted_site(user_text):
             regex = line.replace("*", ".+")
             if re.fullmatch(regex, domain + "." + suffix):
                 # 特別有*號規則直接可以寫入Adguard規則
-                with open(NEW_SCAM_WEBSITE_FOR_ADG, "a", encoding="utf-8", newline='') as f:
+                with open(Tools.NEW_SCAM_WEBSITE_FOR_ADG, "a", encoding="utf-8", newline='') as f:
                     f.write("||"+ domain + "." + suffix + "^\n")
                 return True
         elif domain + "." + suffix == line:

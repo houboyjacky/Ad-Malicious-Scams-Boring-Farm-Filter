@@ -20,18 +20,11 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 '''
 
-import json
 import logging
 import logging.handlers
 import os
 import re
-
-# 讀取設定檔
-# LOGFILE => Linebot Log Path
-with open('setting.json', 'r') as f:
-    setting = json.load(f)
-
-LOGFILE = setting['LOGFILE']
+import Tools
 
 # 設定logger
 logger = logging.getLogger(__name__)
@@ -41,7 +34,7 @@ logger.setLevel(logging.INFO)
 log_formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
 
 # 設定FileHandler
-file_handler = logging.FileHandler(LOGFILE)
+file_handler = logging.FileHandler(Tools.LOGFILE)
 file_handler.setFormatter(log_formatter)
 logger.addHandler(file_handler)
 
@@ -50,7 +43,7 @@ def Logger_Transfer(pre_close = True):
     file_handler.close()
 
     # 讀取LineBot.log內容，寫入當日的log檔案
-    with open(LOGFILE, 'r') as f:
+    with open(Tools.LOGFILE, 'r') as f:
         log_lines = f.readlines()
 
     current_date_str = None
@@ -63,9 +56,9 @@ def Logger_Transfer(pre_close = True):
         if date_match or not current_log_file:
             year, month, day = date_match.groups()
             current_date_str = year + month + day
-            basename = LOGFILE.split('.')[0]
+            basename = Tools.LOGFILE.split('.')[0]
             current_log_file = basename + "_" + current_date_str + ".log"
-        
+
         if os.path.exists(current_log_file):
             with open(current_log_file, 'a', encoding='utf-8', newline='') as f:
                 f.write(line + '\n')
@@ -74,7 +67,7 @@ def Logger_Transfer(pre_close = True):
                 f.write(line + '\n')
 
     # 移除LineBot.log
-    open(LOGFILE, 'w').close()
+    open(Tools.LOGFILE, 'w').close()
 
     if not pre_close:
         logger.addHandler(file_handler)

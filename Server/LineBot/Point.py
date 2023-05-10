@@ -21,22 +21,15 @@ THE SOFTWARE.
 '''
 
 import os
-import json
-
-# 讀取設定檔
-# LINE_INVITE => LINE Invite Site List
-with open('setting.json', 'r') as f:
-    setting = json.load(f)
-
-USER_POINT = setting['USER_POINT']
+import Tools
 
 # global 變數，用來儲存點數列表
 Point_List = {}
 
 def load_point_file():
     global Point_List
-    if os.path.exists(USER_POINT):
-        with open(USER_POINT, "r") as f:
+    if os.path.exists(Tools.USER_POINT):
+        with open(Tools.USER_POINT, "r") as f:
             lines = f.readlines()
             for line in lines:
                 uid, point = line.strip().split(":")
@@ -44,7 +37,7 @@ def load_point_file():
 
 def write_point_file():
     global Point_List
-    with open(USER_POINT, "w") as f:
+    with open(Tools.USER_POINT, "w") as f:
         for uid, point in Point_List.items():
             f.write(f"{uid}:{point}\n")
 

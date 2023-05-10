@@ -21,21 +21,11 @@ THE SOFTWARE.
 '''
 
 import hashlib
-import json
 import requests
 import time
 import os
-
 from Logger import logger
-
-# 讀取設定檔
-# LINEID_LOCAL => LINE ID local file
-# LINEID_WEB => LINE ID Download from Web
-with open('setting.json', 'r') as f:
-    setting = json.load(f)
-
-LINEID_LOCAL = setting['LINEID_LOCAL']
-LINEID_WEB = setting['LINEID_WEB']
+import Tools
 
 lineid_list = []
 lineid_download_hash = None
@@ -44,7 +34,7 @@ lineid_download_last_time = 0
 # 使用者下載Line ID
 def user_download_lineid():
     global lineid_list, lineid_download_hash, lineid_download_last_time
-    url = LINEID_WEB.strip()
+    url = Tools.LINEID_WEB.strip()
     if lineid_list:
         if time.time() - lineid_download_last_time < 86400:
             return
@@ -62,13 +52,13 @@ def user_download_lineid():
     lineid_list = response.text.splitlines()
     lineid_download_last_time = time.time()
 
-    filename = "config/" + os.path.basename(LINEID_WEB)
+    filename = "config/" + os.path.basename(Tools.LINEID_WEB)
     with open(filename, "w", encoding="utf-8") as f:
         f.write('\n'.join(lineid_list))
 
     logger.info("Download Line ID Finish")
 
-    with open(LINEID_LOCAL, "r", encoding="utf-8") as f:
+    with open(Tools.LINEID_LOCAL, "r", encoding="utf-8") as f:
         lineid_local = f.read().splitlines()
 
     lineid_list = sorted(set(lineid_list + lineid_local))
@@ -99,18 +89,18 @@ def user_query_lineid(lineid):
 # 加入詐騙Line ID
 def user_add_lineid(text):
     global lineid_list
-    if not os.path.exists(LINEID_LOCAL):
-        with open(LINEID_LOCAL, 'w', encoding='utf-8', newline='') as f:
+    if not os.path.exists(Tools.LINEID_LOCAL):
+        with open(Tools.LINEID_LOCAL, 'w', encoding='utf-8', newline='') as f:
             pass
 
-    with open(LINEID_LOCAL, "r", encoding="utf-8") as f:
+    with open(Tools.LINEID_LOCAL, "r", encoding="utf-8") as f:
         lineid_local = f.read().splitlines()
 
     # 加入text並去除重複
     lineid_local = list(set(lineid_local + [text]))
 
     # 寫回LINEID_LOCAL
-    with open(LINEID_LOCAL, "w", encoding="utf-8", newline='') as f:
+    with open(Tools.LINEID_LOCAL, "w", encoding="utf-8", newline='') as f:
         f.write('\n'.join(sorted(lineid_local)))
 
     lineid_list = sorted(set(lineid_list + lineid_local))

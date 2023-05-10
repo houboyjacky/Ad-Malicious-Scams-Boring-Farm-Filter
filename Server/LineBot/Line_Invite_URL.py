@@ -29,16 +29,9 @@ from Logger import logger
 from typing import Optional
 from Query_Line_ID import user_add_lineid, user_query_lineid_sub
 from Point import write_user_point
-from JsonRW import read_json_file, write_json_file
+import Tools
 
-# 讀取設定檔
-# LINE_INVITE => LINE Invite Site List
-with open('setting.json', 'r') as f:
-    setting = json.load(f)
-
-LINE_INVITE = setting['LINE_INVITE']
-
-invites = read_json_file(LINE_INVITE)
+invites = Tools.read_json_file(Tools.LINE_INVITE)
 
 def analyze_line_invite_url(user_text:str) -> Optional[dict]:
     # 定義邀請類型的正則表達式
@@ -124,7 +117,7 @@ def lineinvite_write_file(user_text:str) -> bool:
             LineID = result["邀請碼"].replace("~", "")
             user_add_lineid(LineID)
         add_sort_lineinvite(result,invites)
-        write_json_file(LINE_INVITE, invites)
+        Tools.write_json_file(Tools.LINE_INVITE, invites)
         logger.info("分析完成，結果已寫入")
         return True
     else:
@@ -144,7 +137,7 @@ def lineinvite_read_file(user_text:str) -> int:
         return True
     return False
 
-def get_random_invite(UserID):
+def get_random_invite(UserID) -> str:
     global invites
     if not invites:  # 如果 invites 是空的 list
         return None
@@ -158,8 +151,9 @@ def get_random_invite(UserID):
             break
         count += 1
     if found:
-        write_json_file(LINE_INVITE, invites)
-    return invite['原始網址']
+        Tools.write_json_file(Tools.LINE_INVITE, invites)
+    site = invite['原始網址']
+    return site
 
 def push_random_invite(UserID, success, disappear):
     global invites
@@ -176,7 +170,7 @@ def push_random_invite(UserID, success, disappear):
             found = True
             break
     if found:
-        write_json_file(LINE_INVITE, invites)
+        Tools.write_json_file(Tools.LINE_INVITE, invites)
     return found
 
 def Invite_check_data(filename: str) -> None:
@@ -202,7 +196,7 @@ def Invite_check_data(filename: str) -> None:
             item["檢查者"] = ""
             modify = True
     if modify:
-        write_json_file(filename, invites)
+        Tools.write_json_file(filename, invites)
 
 def Invite_clear_data(filename: str) -> None:
     global invites
@@ -212,7 +206,7 @@ def Invite_clear_data(filename: str) -> None:
             item["檢查者"] = ""
             modify = True
     if modify:
-        write_json_file(filename, invites)
+        Tools.write_json_file(filename, invites)
 
-Invite_check_data(LINE_INVITE)
-Invite_clear_data(LINE_INVITE)
+Invite_check_data(Tools.LINE_INVITE)
+Invite_clear_data(Tools.LINE_INVITE)

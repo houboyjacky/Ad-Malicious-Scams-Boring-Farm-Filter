@@ -1,7 +1,7 @@
 {
     "ADMIN":"",
     "BLACKLISTFORADG":"",
-    "BLACKUSERID":"",
+    "BLACKUSERID":["","",""],
     "CERT":"",
     "CHANNEL_ACCESS_TOKEN":"",
     "CHANNEL_SECRET":"",

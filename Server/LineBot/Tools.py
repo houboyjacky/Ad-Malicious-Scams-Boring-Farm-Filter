@@ -21,7 +21,32 @@ THE SOFTWARE.
 '''
 
 import json
+import re
 from filelock import FileLock
+
+with open('setting.json', 'r') as f:
+    setting = json.load(f)
+
+# 讀取設定檔
+
+# ADMIN => Linebot Admin
+ADMINS = setting['ADMIN']
+# CERT => Lets Encrypt Certificate Path
+CERT = setting['CERT']
+# PRIVKEY => Lets Encrypt Private Key Path
+PRIVKEY = setting['PRIVKEY']
+# BLACKLISTFORADG => Blacklist for Adguard Home Download
+NEW_SCAM_WEBSITE_FOR_ADG = setting['BLACKLISTFORADG']
+# BLACKUSERID => BLACK USER
+BLACKUSERID = setting['BLACKUSERID']
+# CHANNEL_ACCESS_TOKEN => Linebot Token
+CHANNEL_ACCESS_TOKEN = setting['CHANNEL_ACCESS_TOKEN']
+# CHANNEL_SECRET => Linebot Secret
+CHANNEL_SECRET = setting['CHANNEL_SECRET']
+# NETIZEN => Netizen Report
+NETIZEN = setting['NETIZEN']
+# RULE => Reply message by rule
+RULE = setting['RULE']
 
 def read_json_file(filename: str) -> list:
     try:
@@ -39,3 +64,21 @@ def write_json_file(filename: str, data: list) -> None:
         # 打開檔案並寫入數據
         with open(filename, "w", encoding="utf-8") as file:
             json.dump(data, file, ensure_ascii=False, indent=2)
+
+def format_elapsed_time(seconds):
+    m, s = divmod(seconds, 60)
+    h, m = divmod(m, 60)
+    if h > 0:
+        return f"{h}小{m}分{s:.0f}秒"
+    elif m > 0:
+        return f"{m}分{s:.0f}秒"
+    else:
+        return f"{s:.2f}秒"
+
+def find_url(text):
+    url_pattern = re.compile(r"http[s]?://\S+")
+    match = url_pattern.search(text)
+    if match:
+        return match.group()
+    else:
+        return None

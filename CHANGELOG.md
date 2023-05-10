@@ -1,11 +1,16 @@
 # 歷史更新 History Update
 
+* 20230510 Update
+  * 更新 個人不想看與網友匯報廣告或網站
+  * 調整 獨立Tools.py與PrintText.py
+  * 調整 LineBot API區分與整併
+
 * 20230509 Update
   * 加入 訊息長度限制
   * 加入 開關辨識功能
   * 加入 黑單機制
   * 加入 網友投稿詐騙事件與檢閱機制
-  * 調整 獨立JsonRW
+  * 調整 獨立Tools.py與PrintText.py
   * 調整 獨立Point.py並改為載入記憶體中
   * 調整 儲存資料夾結構
   * 調整 LineBot檢舉規則

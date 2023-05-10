@@ -20,17 +20,9 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 '''
 
-import json
 import re
+import Tools
 from Point import write_user_point
-from JsonRW import read_json_file, write_json_file
-
-# 讀取設定檔
-# NETIZEN => LINE Invite Site List
-with open('setting.json', 'r') as f:
-    setting = json.load(f)
-
-NETIZEN = setting['NETIZEN']
 
 line_domains = ["lin.ee", "line.me", "lineblog.me", "linecorp.com", "line-scdn.net", "line.naver.jp", "line.biz"]
 
@@ -40,7 +32,7 @@ twitter_domains = ["twitter.com", "t.co", "twimg.com", "twittercommunity.com", "
 
 instagram_domains =["instagram.com", "instagram-brand.com", "ig.me", "instagr.am"]
 
-netizens = read_json_file(NETIZEN)
+netizens = Tools.read_json_file(Tools.NETIZEN)
 
 def is_check_url(url, domains: list) -> bool:
     for domain in domains:
@@ -87,7 +79,7 @@ def write_new_netizen_file(user_id:str, user_name:str, user_text:str) -> bool:
     # 新增結果
     netizens.append(struct)
 
-    write_json_file(NETIZEN, netizens)
+    Tools.write_json_file(Tools.NETIZEN, netizens)
 
     write_user_point(user_id, 1)
 
@@ -98,7 +90,7 @@ def get_netizen_file(user_id:str):
     for netizen in netizens:
         if netizen["完成"] == 0 and netizen["失效"] == 0:
             netizen['檢查者'] = user_id
-            write_json_file(NETIZEN, netizens)
+            Tools.write_json_file(Tools.NETIZEN, netizens)
             return netizen["內容"]
     return ""
 
@@ -117,7 +109,7 @@ def push_netizen_file(UserID, success, disappear):
             found = True
             break
     if found:
-        write_json_file(NETIZEN, netizens)
+        Tools.write_json_file(Tools.NETIZEN, netizens)
     return found
 
 def Invite_check_data(filename: str) -> None:
@@ -149,6 +141,4 @@ def Invite_check_data(filename: str) -> None:
             item["檢查者"] = ""
             modify = True
     if modify:
-        write_json_file(filename, netizens)
-
-Invite_check_data(NETIZEN)
+        Tools.write_json_file(filename, netizens)
