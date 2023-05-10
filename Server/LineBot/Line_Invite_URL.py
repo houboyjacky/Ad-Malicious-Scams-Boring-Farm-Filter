@@ -100,14 +100,15 @@ def add_sort_lineinvite(result, results):
     for r in results:
         if r['邀請碼'] == result['邀請碼'] and r['類別'] == result['類別']:
             # 邀請碼和類別相同，但原始網址不同，則加入原始網址
-            if r['原始網址'] != result['原始網址']:
-                r['原始網址'] = [r['原始網址'], result['原始網址']]
-            return
+            if not r['原始網址'] in result['原始網址']:
+                r['原始網址'].append(result['原始網址'])
+            return 1
 
     # 新增結果
     results.append(result)
+    return 0
 
-def lineinvite_write_file(user_text:str) -> bool:
+def lineinvite_write_file(user_text:str) -> int:
     global invites
     result = analyze_line_invite_url(user_text)
     if result:
@@ -116,13 +117,13 @@ def lineinvite_write_file(user_text:str) -> bool:
         elif "~" in result["邀請碼"]:
             LineID = result["邀請碼"].replace("~", "")
             user_add_lineid(LineID)
-        add_sort_lineinvite(result,invites)
+        r = add_sort_lineinvite(result,invites)
         Tools.write_json_file(Tools.LINE_INVITE, invites)
         logger.info("分析完成，結果已寫入")
-        return True
+        return r
     else:
         logger.info("無法分析網址")
-        return False
+        return -1
 
 def lineinvite_read_file(user_text:str) -> int:
     global invites

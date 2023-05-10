@@ -58,11 +58,17 @@ def handle_admin_message_text(user_text):
     if match := re.search(Tools.RULE[0], user_text):
         if match := re.search(r"https://line\.me/R?/?ti/p/~(.+)", user_text):
             lineid = match.group(1)
-            # 加入新line id
-            user_add_lineid(lineid)
-            rmessage = "邀請黑名單與賴黑名單更新完成" + lineid
+            if user_query_lineid_sub(lineid):
+                rmessage = "邀請黑名單與賴黑名單已存在" + lineid
+            else:
+                # 加入新line id
+                user_add_lineid(lineid)
+                rmessage = "邀請黑名單與賴黑名單更新完成" + lineid
         elif match := re.search(r"https://.*(line|lin)\.(me|ee)/.+", user_text):
-            if lineinvite_write_file(user_text):
+            r =  lineinvite_write_file(user_text)
+            if r == 1:
+                rmessage = "邀請黑名單已存在"
+            elif r == 0:
                 rmessage = "邀請黑名單更新完成"
             else:
                 rmessage = "邀請黑名單更新失敗"
