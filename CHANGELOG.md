@@ -1,6 +1,7 @@
 # 歷史更新 History Update
 
 * 20230511 Update
+  * 更新 個人不想看與網友匯報廣告或網站
   * 調整 LineBot 減少寫入次數
 
 * 20230510 Update
