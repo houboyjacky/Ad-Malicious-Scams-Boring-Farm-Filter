@@ -4,6 +4,7 @@
   * 更新 個人不想看與網友匯報廣告或網站
   * 調整 獨立Tools.py與PrintText.py
   * 調整 LineBot API區分與整併
+  * 修復 欠缺讀入參數
 
 * 20230509 Update
   * 加入 訊息長度限制

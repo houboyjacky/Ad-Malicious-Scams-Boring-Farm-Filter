@@ -47,6 +47,18 @@ CHANNEL_SECRET = setting['CHANNEL_SECRET']
 NETIZEN = setting['NETIZEN']
 # RULE => Reply message by rule
 RULE = setting['RULE']
+# LOGFILE => Log File Path
+LOGFILE = setting['LOGFILE']
+# USER_POINT => User Point Record
+USER_POINT = setting['USER_POINT']
+# LINE_INVITE => Black Line invite site
+LINE_INVITE = setting['LINE_INVITE']
+# LINEID_WEB => Line ID from Web
+LINEID_WEB = setting['LINEID_WEB']
+# LINEID_LOCAL => Line ID from Local
+LINEID_LOCAL = setting['LINEID_LOCAL']
+# SCAM_WEBSITE_LIST => SCAM WEBSITE LIST
+SCAM_WEBSITE_LIST = setting['SCAM_WEBSITE_LIST']
 
 def read_json_file(filename: str) -> list:
     try:

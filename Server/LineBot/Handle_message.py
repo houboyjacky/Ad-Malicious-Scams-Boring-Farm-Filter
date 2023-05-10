@@ -138,14 +138,14 @@ def handle_message_text(event):
     logger.info('UserID = '+ event.source.user_id)
 
     if user_id in Tools.BLACKUSERID:
-        Tools.message_reply(event.reply_token, "管理員管制中...請稍後嘗試")
+        message_reply(event.reply_token, "管理員管制中...請稍後嘗試")
         return
 
     # 讀取使用者傳來的文字訊息
     user_text = event.message.text.lower()
 
     if user_text.startswith("使用指南"):
-        Tools.message_reply(event.reply_token, user_guide)
+        message_reply(event.reply_token, user_guide)
         return
 
     # 管理員操作
@@ -156,7 +156,7 @@ def handle_message_text(event):
                 setting = json.load(f)
             logger.info("Reload setting.json")
             rmessage = "設定已重新載入"
-            Tools.message_reply(event.reply_token, rmessage)
+            message_reply(event.reply_token, rmessage)
             return
         elif user_text == "檢閱":
             content = get_netizen_file(user_id)
@@ -164,23 +164,23 @@ def handle_message_text(event):
                 rmessage = "內容：\n\n" + content + "\n\n參閱與處置後\n請輸入「完成」或「失效」"
             else:
                 rmessage = "目前沒有需要檢閱的資料"
-            Tools.message_reply(event.reply_token, rmessage)
+            message_reply(event.reply_token, rmessage)
             return
         elif user_text == "關閉辨識":
             image_analysis = False
             rmessage = "已關閉辨識"
-            Tools.message_reply(event.reply_token, rmessage)
+            message_reply(event.reply_token, rmessage)
             return
         elif user_text == "開啟辨識":
             image_analysis = True
             rmessage = "已開啟辨識"
-            Tools.message_reply(event.reply_token, rmessage)
+            message_reply(event.reply_token, rmessage)
             return
         elif user_text.startswith("加入"):
             user_text = event.message.text
             rmessage = handle_admin_message_text(user_text)
             if rmessage:
-                Tools.message_reply(event.reply_token, rmessage)
+                message_reply(event.reply_token, rmessage)
                 return
         else:
             pass
@@ -193,7 +193,7 @@ def handle_message_text(event):
             user_text = event.message.text
             write_new_netizen_file(user_id, user_name, event.message.text)
             rmessage = "謝謝你提供的情報\n輸入「積分」\n可以查詢你的積分排名"
-        Tools.message_reply(event.reply_token, rmessage)
+        message_reply(event.reply_token, rmessage)
         return
 
     if user_text == "遊戲":
@@ -203,7 +203,7 @@ def handle_message_text(event):
         else:
             rmessage = "請開始你的檢舉遊戲\n" + site + "\n若「完成」請回報「完成」\n若「失效」請回傳「失效」"
 
-        Tools.message_reply(event.reply_token, rmessage)
+        message_reply(event.reply_token, rmessage)
         return
 
     if user_text == "完成":
@@ -214,7 +214,7 @@ def handle_message_text(event):
         else:
             rmessage = "程式有誤，請勿繼續使用"
 
-        Tools.message_reply(event.reply_token, rmessage)
+        message_reply(event.reply_token, rmessage)
         return
 
     if user_text == "失效":
@@ -224,7 +224,7 @@ def handle_message_text(event):
             rmessage = "感謝你的回報\n輸入「遊戲」\n進行下一波行動\n輸入「積分」\n可以查詢你的積分排名"
         else:
             rmessage = "程式有誤，請勿繼續使用"
-        Tools.message_reply(event.reply_token, rmessage)
+        message_reply(event.reply_token, rmessage)
         return
 
     if user_text == "積分":
@@ -232,7 +232,7 @@ def handle_message_text(event):
         rank = get_user_rank(user_id)
 
         rmessage = "你的檢舉積分是" + str(point) + "分\n排名第" + str(rank) + "名"
-        Tools.message_reply(event.reply_token, rmessage)
+        message_reply(event.reply_token, rmessage)
         return
 
     # 查詢line邀請網址
@@ -254,27 +254,27 @@ def handle_message_text(event):
                         "「不是」已知詐騙邀請網址\n"
                         "若認為問題，請補充描述\n"
                         "感恩")
-        Tools.message_reply(event.reply_token, rmessage)
+        message_reply(event.reply_token, rmessage)
         return
 
     # 如果用戶輸入的網址沒有以 http 或 https 開頭，則不回應訊息
     if user_text.startswith("http://") or user_text.startswith("https://"):
         rmessage = user_query_website(user_text)
-        Tools.message_reply(event.reply_token, rmessage)
+        message_reply(event.reply_token, rmessage)
         return
 
     # 查詢Line ID
     if user_text.startswith("賴") and re.search(Tools.RULE[3], user_text):
         lineid = user_text.replace("賴", "")
         rmessage = user_query_lineid(lineid)
-        Tools.message_reply(event.reply_token, rmessage)
+        message_reply(event.reply_token, rmessage)
         return
 
     # 內容包含網址，立即查詢第一個網址
     found_url = Tools.find_url(user_text)
     if found_url and not user_id in Tools.ADMINS:
         rmessage = user_query_website(user_text)
-        Tools.message_reply(event.reply_token, rmessage)
+        message_reply(event.reply_token, rmessage)
         return
     return
 
@@ -334,7 +334,7 @@ def handle_message_image(event):
         elapsed_time_str = Tools.format_elapsed_time(elapsed_time)
 
         rmessage += f"網站：\n{website_msg}\n\n耗時：{elapsed_time_str}\n\n判斷文字：\n{text_msg}"
-        Tools.message_reply(event.reply_token, rmessage)
+        message_reply(event.reply_token, rmessage)
     return
 
 def handle_message_file(event):
@@ -379,5 +379,5 @@ def handle_message_file(event):
             f.write(chunk)
 
     # 回覆使用者已收到檔案
-    Tools.message_reply(event.reply_token, "")
+    message_reply(event.reply_token, "")
     return
