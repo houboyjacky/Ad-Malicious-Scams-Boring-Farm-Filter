@@ -258,7 +258,11 @@ def handle_message_text(event):
 
     # 如果用戶輸入的網址沒有以 http 或 https 開頭，則不回應訊息
     if user_text.startswith("http://") or user_text.startswith("https://"):
-        rmessage = user_query_website(user_text)
+        if user_text.startswith("https://lm.facebook.com"):
+            url = Tools.decode_facebook_url(user_text)
+            rmessage = "你想輸入的網址是不是\n「 " + url + " 」\n請複製貼上對話框\n才能正確判斷"
+        else:
+            rmessage = user_query_website(user_text)
         message_reply(event.reply_token, rmessage)
         return
 

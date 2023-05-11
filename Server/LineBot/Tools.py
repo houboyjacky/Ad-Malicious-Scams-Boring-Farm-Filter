@@ -23,12 +23,12 @@ THE SOFTWARE.
 import json
 import re
 from filelock import FileLock
+from urllib.parse import urlparse, unquote
 
 with open('setting.json', 'r') as f:
     setting = json.load(f)
 
 # 讀取設定檔
-
 # ADMIN => Linebot Admin
 ADMINS = setting['ADMIN']
 # CERT => Lets Encrypt Certificate Path
@@ -94,3 +94,15 @@ def find_url(text):
         return match.group()
     else:
         return None
+
+def decode_facebook_url(url:str):
+    # 解析 URL
+    parsed_url = urlparse(url)
+
+    # 提取出 u 參數的值
+    u_value = parsed_url.query.split("&")[0].split("=")[1]
+
+    # 解碼 u 參數的值
+    decoded_url = unquote(u_value)
+
+    return decoded_url
