@@ -117,7 +117,7 @@ def handle_admin_message_text(user_text):
     elif match := re.search(Tools.RULE[2], user_text):
 
         # 取得文字
-        lineid = match.group(1)
+        lineid = match.group(1).lower()
         r = user_query_lineid_sub(lineid)
         if r:
             rmessage = "賴黑名單已存在" + lineid
