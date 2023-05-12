@@ -66,6 +66,7 @@
 /coinbase.+\..+$/
 /coincheck\.[a-z]+/
 /coinrule.*\.*/
+/costco.+\.com/
 /cwgforexp[a-z0-9]*\.com/
 /dbag[a-z]{3}\.com/
 /dbgmarke[a-z0-9]*\.com/
