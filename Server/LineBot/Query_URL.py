@@ -95,8 +95,17 @@ def read_rule(filename):
                 continue  # 忽略該行文字
     return
 
+is_running = False
+
 def update_blacklist():
     global blacklist
+    global is_running
+    if is_running:
+        logger.info("Updating blacklist!")
+        return
+    else:
+        pass
+    is_running = True
     with open(Tools.SCAM_WEBSITE_LIST, "r") as f:
         urls = f.readlines()
 
@@ -113,6 +122,7 @@ def update_blacklist():
 
     blacklist = sorted(list(set(blacklist)))
     logger.info("Update blacklist finish!")
+    is_running = False
     return
 
 def update_part_blacklist(add_rule):
@@ -211,7 +221,9 @@ def user_query_website(user_text):
                     "建立時間：" + creation_date + "\n"
                     "距離今天差" + str(diff_days) + "天\n"
                     "雖然目前尚未在資料庫中\n"
-                    "但提醒你，天數差距越小\n"
+                    "但提醒你！\n"
+                    "建立時間是晚於2022/01/01\n"
+                    "或天數差距越小\n"
                     "詐騙與可疑程度越高\n"
                     "敬請格外謹慎\n"
                     "此外若認為問題，請補充描述\n"

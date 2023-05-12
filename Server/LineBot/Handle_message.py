@@ -41,7 +41,7 @@ from Query_Line_ID import user_query_lineid, user_add_lineid, user_query_lineid_
 from Query_URL import update_part_blacklist
 from Query_URL import user_query_website, check_blacklisted_site
 
-image_analysis = True
+image_analysis = False
 line_bot_api = LineBotApi(Tools.CHANNEL_ACCESS_TOKEN)
 
 # 回應訊息的函式
@@ -49,6 +49,8 @@ def message_reply(reply_token, text):
     message = TextSendMessage(text=text)
     line_bot_api.reply_message(reply_token, message)
     return
+
+allowlist = { "facebook.com", "instagram.com", "google.com"}
 
 # 管理員操作
 def handle_admin_message_text(user_text):
@@ -84,6 +86,8 @@ def handle_admin_message_text(user_text):
             extracted = tldextract.extract(url)
             domain = extracted.domain
             suffix = extracted.suffix
+            if domain in allowlist:
+                rmessage = "網址封鎖有誤，不允許"+domain + "." + suffix
 
             # 組合成新的規則
             new_rule = "||"+ domain + "." + suffix + "^\n"
@@ -97,7 +101,7 @@ def handle_admin_message_text(user_text):
                 rmessage = "網址黑名單已存在"
             else:
                 # 提早執行更新
-                update_part_blacklist(new_rule)
+                update_part_blacklist(domain + "." + suffix)
                 rmessage = "網址黑名單更新完成"
 
     elif match := re.search(Tools.RULE[1], user_text):
