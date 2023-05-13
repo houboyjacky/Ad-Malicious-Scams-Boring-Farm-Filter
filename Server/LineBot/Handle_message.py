@@ -24,7 +24,6 @@ import json
 import os
 import pytesseract
 import re
-import re
 import time
 import tldextract
 import Tools

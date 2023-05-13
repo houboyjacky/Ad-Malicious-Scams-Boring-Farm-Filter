@@ -25,6 +25,7 @@
 /aaex\.(asia|club|in|win)/
 /aava-[a-z]+\.[a-z]/
 /aavaepro[0-9]+\.xyz
+/aclar.+\.com/
 /aitechstock\.(co|tw|vip)/
 /alliancegrowth.+\.[a-z]+/
 /amazon[0-9]+\.mobi/
@@ -142,6 +143,7 @@
 /rakuten[0-9]+\.com/
 /reactivate-page-[a-z0-9]+\.click/
 /risheng[0-9]+\.com/
+/ruten.+\.com/
 /ruten[0-9]+\.tw/
 /saintrich[a-z0-9]*\.com/
 /schw[a-z]+\.com/
