@@ -38,6 +38,8 @@ with open('setting.json', 'r') as f:
 
 DOWNLOAD_DIRECTORY = setting['CONFIG_SIGN']
 
+cf_ips = []
+
 app = Flask(__name__)
 
 # 設定允許下載的檔案類型
@@ -45,7 +47,7 @@ ALLOWED_EXTENSIONS = {'mobileconfig'}
 
 @app.before_request
 def limit_remote_addr():
-    cf_ips = get_cf_ips()
+    global cf_ips
     for cf_ip in cf_ips:
         if ipaddress.IPv4Address(request.remote_addr) in ipaddress.ip_network(cf_ip):
             return None
@@ -63,6 +65,13 @@ def download(filename):
     if allowed_file(filename):
         # 若檔案存在，則進行下載
         if os.path.exists(os.path.join(DOWNLOAD_DIRECTORY, filename)):
+
+            # 取得使用者的 IP 位址
+            user_ip = request.remote_addr
+
+            # 印出使用者的 IP 位址與所下載的檔案
+            logger.info(f"User IP: {user_ip} and Downloaded file: {filename}")
+
             return send_from_directory(DOWNLOAD_DIRECTORY, filename, as_attachment=True)
         # 若檔案不存在，則回傳錯誤訊息
         else:
@@ -92,6 +101,8 @@ if __name__ == '__main__':
 
     signal.signal(signal.SIGINT, signal_handler)
     signal.signal(signal.SIGTERM, signal_handler)
+
+    cf_ips = get_cf_ips()
 
     SignMobileconfig()
     logger.info("Finish SignMobileconfig")
