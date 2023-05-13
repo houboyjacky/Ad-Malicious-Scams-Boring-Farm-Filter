@@ -100,7 +100,7 @@ def add_sort_lineinvite(result, results):
     for r in results:
         if r['邀請碼'] == result['邀請碼'] and r['類別'] == result['類別']:
             # 邀請碼和類別相同，但原始網址不同，則加入原始網址
-            if not r['原始網址'] in result['原始網址']:
+            if result['原始網址'] not in r['原始網址']:
                 r['原始網址'].append(result['原始網址'])
             return 1
 
@@ -185,7 +185,10 @@ def Invite_check_data(filename: str) -> None:
             item["邀請碼"] = 0
             modify = True
         if "原始網址" not in item:
-            item["原始網址"] = 0
+            item["原始網址"] = []
+            modify = True
+        if type(item['原始網址']) == str:
+            item["原始網址"] = [item['原始網址']]
             modify = True
         if "回報次數" not in item:
             item["回報次數"] = 0
