@@ -1,6 +1,8 @@
 # 歷史更新 History Update
 
 * 20230514 Update
+  * 更新 個人不想看與網友匯報廣告或網站
+  * 更新 FB網友提供清單
   * 修復 whois資料問題
 
 * 20230513 Update
