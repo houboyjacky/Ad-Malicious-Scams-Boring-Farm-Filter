@@ -1,6 +1,9 @@
 # 歷史更新 History Update
 
-* 20230512 Update
+* 20230514 Update
+  * 修復 whois資料問題
+
+* 20230513 Update
   * 更新 個人不想看與網友匯報廣告或網站
   * 調整 不需要一直檢查cloudflare的ip位置
   * 修復 加入問題

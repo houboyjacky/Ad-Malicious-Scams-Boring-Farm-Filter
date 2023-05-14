@@ -169,11 +169,11 @@ def user_query_website(user_text):
     except whois.parser.PywhoisError: # 判斷原因 whois.parser.PywhoisError: No match for "FXACAP.COM"
         w = None
         Error = True
-    #logger.info(w)
+    logger.info(w)
     #判斷網站
     checkresult = check_blacklisted_site(user_text)
 
-    if Error or not w.domain_name:
+    if Error or not w.domain_name or not w.creation_date:
         if checkresult:
             rmessage = ("所輸入的網址\n"
                         "「 " + user_text + " 」\n"
