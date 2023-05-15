@@ -29,6 +29,7 @@ import whois
 import Tools
 
 from datetime import datetime
+from dateutil import parser
 from urllib.parse import urlparse
 from Logger import logger
 
@@ -193,16 +194,21 @@ def user_query_website(user_text):
         return rmessage
 
     # 提取創建時間和最後更新時間
-    today = datetime.today().date()  # 取得當天日期
     if isinstance(w.creation_date, list):
-        creation_date = min(w.creation_date)
+        parsed_dates = [date_obj for date_obj in w.creation_date]
+        creation_date = min(parsed_dates)
     else:
         creation_date = w.creation_date
+
+    if isinstance(creation_date, str):
+        creation_date = datetime.strptime(creation_date, "%Y-%m-%d %H:%M:%S")
+
+    today = datetime.today().date()  # 取得當天日期
     diff_days = (today - creation_date.date()).days  # 相差幾天
-    creation_date = creation_date.strftime('%Y-%m-%d %H:%M:%S')  # 轉換成字串
+    creation_date_str = creation_date.strftime('%Y-%m-%d %H:%M:%S')  # 轉換成字串
 
     logger.info("Website : " + user_text)
-    logger.info("Create Date : " + creation_date)
+    logger.info("Create Date : " + creation_date_str)
     logger.info("Diff Days : " + str(diff_days))
 
     #判斷網站
