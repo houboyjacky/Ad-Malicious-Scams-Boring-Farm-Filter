@@ -360,6 +360,7 @@
 ||darraninvest.com^
 ||dasqf.asia^
 ||datesrud.com^
+||daumoon.com^
 ||dayicha.shop^
 ||dayone1.live^
 ||dbagvmi.com^
@@ -551,6 +552,7 @@
 ||freedlinestore.com^
 ||freegame.cash^
 ||friedmancall.space^
+||frubitpro.com^
 ||fsngov.com^
 ||fucgov.tv^
 ||fuckyoudouble.com^
@@ -726,6 +728,8 @@
 ||hukea.com^
 ||hukmarket.com^
 ||humanflies.xyz^
+||huobi.com.bo^
+||huobi.com.by^
 ||huohua.cn^
 ||husevon.com^
 ||huwnll.com^
@@ -747,6 +751,7 @@
 ||ice-snowmalls.com^
 ||icreatecourse.com^
 ||icrmsynquote.com^
+||icrowncenterga.top^
 ||icrowncentertw.top^
 ||icrowntradecentertw.top^
 ||ictngsmnspcltdy.com^
@@ -801,6 +806,7 @@
 ||jackpresident.com.tw^
 ||jajpholdings.lt.acemlnb.com^
 ||jauty.shop^
+||jcpenneyshops.com^
 ||jcwufo.shop^
 ||jdcgov.com^
 ||jdf88.com^
@@ -827,6 +833,7 @@
 ||jk8.ceo^
 ||jk8asia.com^
 ||jksfa.shop^
+||jlde22.top^
 ||jm17888.com^
 ||jnqkzsh.cn^
 ||joy.link^
@@ -881,6 +888,7 @@
 ||kkdu.asia^
 ||kl-latestproperty.com^
 ||kl-luxury-properties.com^
+||klde22.top^
 ||kldng.shop^
 ||kmbangtw.com^
 ||kmslot.com^
@@ -1126,6 +1134,7 @@
 ||ok5sk.cn^
 ||okalla.shop^
 ||okxvew.com^
+||omdo.cc^
 ||oncheou.com^
 ||onead.onevision.com.tw^
 ||oneegrou.net^
@@ -1284,12 +1293,14 @@
 ||sakfkw323455.com^
 ||samconsultant.online^
 ||sanlinew.com^
+||sator.live^
 ||saulcommerce.online^
 ||scaleonlinecourse.com^
 ||scnleee.com^
 ||scratchhappyiness.com^
 ||scyjdm.com.tw^
 ||sdkfld.vip^
+||sdnap.shop^
 ||seagenx.com^
 ||seb131.net^
 ||sedu.tw^
@@ -1372,6 +1383,7 @@
 ||stocker-tw.com^
 ||stocking01.com^
 ||stockinvincible.top^
+||stocks-rrbw.com^
 ||stockszxy.live^
 ||storehiesncm.shop^
 ||storejissna.shop^
@@ -1478,6 +1490,7 @@
 ||trkwis.com^
 ||trpcdn.net^
 ||trrgov.com^
+||trustapiapp.com^
 ||trxcitymalaysia.com^
 ||ts-778.com^
 ||ts178.com.tw^
@@ -1570,6 +1583,7 @@
 ||uh1sdf.top^
 ||uhongm.site^
 ||uiopg.shop^
+||ujbsiu4.top^
 ||ukwwx.com^
 ||uncleblockglobal.com^
 ||uncleforex.pro^
@@ -1742,6 +1756,7 @@
 ||yaeclass.com^
 ||yafengmaoyi.com^
 ||yahoocaijing.com^
+||yamascasino.com^
 ||yangyyy.shop^
 ||yasenfinancial.live^
 ||yau.buzz^
