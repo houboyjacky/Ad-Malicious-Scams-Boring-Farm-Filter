@@ -60,19 +60,19 @@ def handle_admin_message_text(user_text):
         if match := re.search(r"https://line\.me/R?/?ti/p/~(.+)", user_text):
             lineid = match.group(1)
             if user_query_lineid_sub(lineid):
-                rmessage = "邀請黑名單與賴黑名單已存在" + lineid
+                rmessage = f"邀請黑名單與賴黑名單已存在{lineid}"
             else:
                 # 加入新line id
                 user_add_lineid(lineid)
-                rmessage = "邀請黑名單與賴黑名單更新完成" + lineid
+                rmessage = f"邀請黑名單與賴黑名單更新完成{lineid}"
         elif match := re.search(r"https://.*(line|lin)\.(me|ee)/.+", user_text):
             r =  lineinvite_write_file(user_text)
             if r == 1:
-                rmessage = "邀請黑名單已存在"
+                rmessage = f"邀請黑名單已存在"
             elif r == 0:
-                rmessage = "邀請黑名單更新完成"
+                rmessage = f"邀請黑名單更新完成"
             else:
-                rmessage = "邀請黑名單更新失敗"
+                rmessage = f"邀請黑名單更新失敗"
         else:
             user_text = user_text.lower()
 
@@ -86,7 +86,7 @@ def handle_admin_message_text(user_text):
             domain = extracted.domain
             suffix = extracted.suffix
             if domain in allowlist:
-                rmessage = "網址封鎖有誤，不允許"+domain + "." + suffix
+                rmessage = f"網址封鎖有誤，不允許{domain}.{suffix}"
 
             # 組合成新的規則
             new_rule = "||"+ domain + "." + suffix + "^\n"
@@ -97,11 +97,11 @@ def handle_admin_message_text(user_text):
 
             r = check_blacklisted_site(url)
             if r:
-                rmessage = "網址黑名單已存在"
+                rmessage = f"網址黑名單已存在"
             else:
                 # 提早執行更新
                 update_part_blacklist(domain + "." + suffix)
-                rmessage = "網址黑名單更新完成"
+                rmessage = f"網址黑名單更新完成"
 
     elif match := re.search(Tools.RULE[1], user_text):
 
@@ -115,7 +115,7 @@ def handle_admin_message_text(user_text):
         with open(Tools.NEW_SCAM_WEBSITE_FOR_ADG, "a", encoding="utf-8", newline='') as f:
             f.write(new_rule)
 
-        rmessage = "網址名單更新完成"
+        rmessage = f"網址名單更新完成"
 
     elif match := re.search(Tools.RULE[2], user_text):
 
@@ -123,11 +123,11 @@ def handle_admin_message_text(user_text):
         lineid = match.group(1).lower()
         r = user_query_lineid_sub(lineid)
         if r:
-            rmessage = "賴黑名單已存在" + lineid
+            rmessage = f"賴黑名單已存在" + lineid
         else:
             # 加入新line id
             user_add_lineid(lineid)
-            rmessage = "賴黑名單已加入" + lineid
+            rmessage = f"賴黑名單已加入" + lineid
     else:
         pass
 
@@ -157,25 +157,25 @@ def handle_message_text(event):
             with open('setting.json', 'r') as f:
                 setting = json.load(f)
             logger.info("Reload setting.json")
-            rmessage = "設定已重新載入"
+            rmessage = f"設定已重新載入"
             message_reply(event.reply_token, rmessage)
             return
         elif user_text == "檢閱":
             content = get_netizen_file(user_id)
             if content:
-                rmessage = "內容：\n\n" + content + "\n\n參閱與處置後\n請輸入「完成」或「失效」"
+                rmessage = f"內容：\n\n{content}\n\n參閱與處置後\n請輸入「完成」或「失效」"
             else:
-                rmessage = "目前沒有需要檢閱的資料"
+                rmessage = f"目前沒有需要檢閱的資料"
             message_reply(event.reply_token, rmessage)
             return
         elif user_text == "關閉辨識":
             image_analysis = False
-            rmessage = "已關閉辨識"
+            rmessage = f"已關閉辨識"
             message_reply(event.reply_token, rmessage)
             return
         elif user_text == "開啟辨識":
             image_analysis = True
-            rmessage = "已開啟辨識"
+            rmessage = f"已開啟辨識"
             message_reply(event.reply_token, rmessage)
             return
         elif user_text.startswith("加入"):
@@ -189,21 +189,21 @@ def handle_message_text(event):
 
     if user_text.startswith("詐騙"):
         if len(event.message.text) > 1000:
-            rmessage = "謝謝你提供的情報\n請縮短長度或分段傳送"
+            rmessage = f"謝謝你提供的情報\n請縮短長度或分段傳送"
         else:
             user_name = line_bot_api.get_profile(user_id).display_name
             user_text = event.message.text
             write_new_netizen_file(user_id, user_name, event.message.text)
-            rmessage = "謝謝你提供的情報\n輸入「積分」\n可以查詢你的積分排名"
+            rmessage = f"謝謝你提供的情報\n輸入「積分」\n可以查詢你的積分排名"
         message_reply(event.reply_token, rmessage)
         return
 
     if user_text == "遊戲":
         site = get_random_invite(user_id)
         if not site:
-            rmessage = "目前暫停檢舉遊戲喔~"
+            rmessage = f"目前暫停檢舉遊戲喔~"
         else:
-            rmessage = "請開始你的檢舉遊戲\n" + site + "\n若「完成」請回報「完成」\n若「失效」請回傳「失效」"
+            rmessage = f"請開始你的檢舉遊戲\n{site}\n若「完成」請回報「完成」\n若「失效」請回傳「失效」"
 
         message_reply(event.reply_token, rmessage)
         return
@@ -212,9 +212,9 @@ def handle_message_text(event):
         found = push_random_invite(user_id, True, False)
         found2 = push_netizen_file(user_id, True, False)
         if found or found2:
-            rmessage = "感謝你的回報\n輸入「遊戲」\n進行下一波行動\n輸入「積分」\n可以查詢你的積分排名"
+            rmessage = f"感謝你的回報\n輸入「遊戲」\n進行下一波行動\n輸入「積分」\n可以查詢你的積分排名"
         else:
-            rmessage = "程式有誤，請勿繼續使用"
+            rmessage = f"程式有誤，請勿繼續使用"
 
         message_reply(event.reply_token, rmessage)
         return
@@ -223,9 +223,9 @@ def handle_message_text(event):
         found = push_random_invite(user_id, False, True)
         found2 = push_netizen_file(user_id, False, True)
         if found or found2:
-            rmessage = "感謝你的回報\n輸入「遊戲」\n進行下一波行動\n輸入「積分」\n可以查詢你的積分排名"
+            rmessage = f"感謝你的回報\n輸入「遊戲」\n進行下一波行動\n輸入「積分」\n可以查詢你的積分排名"
         else:
-            rmessage = "程式有誤，請勿繼續使用"
+            rmessage = f"程式有誤，請勿繼續使用"
         message_reply(event.reply_token, rmessage)
         return
 
@@ -233,7 +233,7 @@ def handle_message_text(event):
         point = read_user_point(user_id)
         rank = get_user_rank(user_id)
 
-        rmessage = "你的檢舉積分是" + str(point) + "分\n排名第" + str(rank) + "名"
+        rmessage = f"你的檢舉積分是{str(point)}分\n排名第{str(rank)}名"
         message_reply(event.reply_token, rmessage)
         return
 
@@ -242,20 +242,22 @@ def handle_message_text(event):
         user_text = event.message.text
         r = lineinvite_read_file(user_text)
         if r == -1:
-            rmessage = ("「 " + user_text + " 」\n"
-                        "輸入有誤，請重新確認\n"
-                        "感恩")
+            rmessage = (f"「 {user_text} 」\n"
+                        f"輸入有誤，請重新確認\n"
+                        f"感恩"
+                        )
         elif r == True:
-            rmessage = ("「 " + user_text + " 」\n"
-                        "「是」已知詐騙Line邀請網址\n"
-                        "請勿輕易信任此Line ID的\n"
-                        "文字、圖像、語音和連結\n"
-                        "感恩")
+            rmessage = (f"「 {user_text} 」\n"
+                        f"「是」已知詐騙Line邀請網址\n"
+                        f"請勿輕易信任此Line ID的\n"
+                        f"文字、圖像、語音和連結\n"
+                        f"感恩"
+                        )
         else:
-            rmessage = ("「 " + user_text + " 」\n"
-                        "「不是」已知詐騙邀請網址\n"
-                        "若認為問題，請補充描述\n"
-                        "感恩")
+            rmessage = (f"「 {user_text} 」\n"
+                        f"「不是」已知詐騙邀請網址\n"
+                        f"若認為問題，請補充描述\n"
+                        f"感恩")
         message_reply(event.reply_token, rmessage)
         return
 
@@ -263,7 +265,7 @@ def handle_message_text(event):
     if user_text.startswith("http://") or user_text.startswith("https://"):
         if user_text.startswith("https://lm.facebook.com"):
             url = Tools.decode_facebook_url(user_text)
-            rmessage = "你想輸入的網址是不是\n「 " + url + " 」\n請複製貼上對話框\n才能正確判斷"
+            rmessage = f"你想輸入的網址是不是\n「 {url} 」\n請複製貼上對話框\n才能正確判斷"
         else:
             rmessage = user_query_website(user_text)
         message_reply(event.reply_token, rmessage)

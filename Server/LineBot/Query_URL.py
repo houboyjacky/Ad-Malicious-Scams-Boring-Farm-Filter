@@ -176,21 +176,22 @@ def user_query_website(user_text):
 
     if Error or not w.domain_name or not w.creation_date:
         if checkresult:
-            rmessage = ("所輸入的網址\n"
-                        "「 " + user_text + " 」\n"
-                        "被判定是詐騙／可疑網站\n"
-                        "請勿相信此網站\n"
-                        "若認為誤通報，請補充描述\n"
-                        "感恩")
+            rmessage = (f"所輸入的網址\n"
+                        f"「 {user_text} 」\n"
+                        f"被判定是詐騙／可疑網站\n"
+                        f"請勿相信此網站\n"
+                        f"若認為誤通報，請補充描述\n"
+                        f"感恩"
+                    )
         else:
-            rmessage = ("所輸入的網址\n"
-                        "「 " + user_text + " 」\n"
-                        "目前尚未在資料庫中\n"
-                        "敬請小心謹慎\n"
-                        "此外若認為問題，請補充描述\n"
-                        "放入相關描述、連結、截圖圖等\n"
-                        "協助考證\n"
-                        "感恩")
+            rmessage = (f"所輸入的網址\n"
+                        f"「 {user_text} 」\n"
+                        f"目前尚未在資料庫中\n"
+                        f"敬請小心謹慎\n"
+                        f"此外若認為問題，請補充描述\n"
+                        f"放入相關描述、連結、截圖圖等\n"
+                        f"協助考證\n"
+                        f"感恩")
         return rmessage
 
     # 提取創建時間和最後更新時間
