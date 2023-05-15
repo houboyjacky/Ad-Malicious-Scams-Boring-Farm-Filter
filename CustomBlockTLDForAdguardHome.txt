@@ -203,6 +203,12 @@
 #||bar^
 #||ml^
 #||xyz^
+||ada-defi.*^
+||goldstar.*^
+||gstha.*^
+||jimmyconnie.*^
+||sc.*.cn^
+||twcaijin.*^
 ||*.at^
 ||*.cyou^
 ||*.icu^

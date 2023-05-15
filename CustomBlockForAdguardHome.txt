@@ -614,7 +614,6 @@
 ||gold-blockchain.cc^
 ||goldcfd.cc^
 ||goldim.cc^
-||goldstar.*^
 ||goldstar.asia^
 ||gomarketing.com.tw^
 ||goodluckdog.space^
@@ -636,7 +635,6 @@
 ||greatstocks.xyz^
 ||growin.pse.is^
 ||growin.tv^
-||gstha.*^
 ||gstha.homes^
 ||gstha.xyz^
 ||gtcfs.site^
@@ -815,7 +813,6 @@
 ||jieerfd.asia^
 ||jijiany.cn^
 ||jill.buzz^
-||jimmyconnie.*^
 ||jimmyconnie.com^
 ||jimmyconnie.xyz^
 ||jingji8.xyz^
@@ -1288,7 +1285,6 @@
 ||samconsultant.online^
 ||sanlinew.com^
 ||saulcommerce.online^
-||sc.*.cn^
 ||scaleonlinecourse.com^
 ||scnleee.com^
 ||scratchhappyiness.com^
@@ -1508,7 +1504,6 @@
 ||tw666.vip^
 ||tw777.vip^
 ||twbiaogu.com^
-||twcaijin.*^
 ||twcaijin.fan^
 ||twcaijin.online^
 ||twcarousell.top^
