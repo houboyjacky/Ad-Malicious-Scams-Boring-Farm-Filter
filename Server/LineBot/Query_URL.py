@@ -211,30 +211,45 @@ def user_query_website(user_text):
     logger.info("Create Date : " + creation_date_str)
     logger.info("Diff Days : " + str(diff_days))
 
+    # 建立輸出字串
+    rmessage_creation_date = "建立時間：" + creation_date_str
+    rmessage_diff_days = "距離今天差" + str(diff_days) + "天"
+
+    if w.country:
+        country_str = Tools.translate_country(w.country)
+        rmessage_country = "註冊國家：" + country_str + "\n"
+    else:
+        rmessage_country = ""
+
     #判斷網站
     if checkresult is True:
-        rmessage = ("所輸入的網址\n"
-                    "「 " + user_text + " 」\n"
-                    "建立時間：" + creation_date + "\n"
-                    "距離今天差" + str(diff_days) + "天\n"
-                    "已經被列入是詐騙／可疑網站名單中\n"
-                    "請勿相信此網站\n"
-                    "若認為誤通報，請補充描述\n"
-                    "感恩")
+        rmessage = (f"所輸入的網址\n"
+                    f"「 {user_text} 」\n"
+                    f"{rmessage_country}"
+                    f"{rmessage_creation_date}\n"
+                    f"{rmessage_diff_days}\n"
+                    f"已經被列入是詐騙／可疑網站名單中\n"
+                    f"請勿相信此網站\n"
+                    f"若認為誤通報，請補充描述\n"
+                    f"感恩"
+        )
     else:
-        rmessage = ("所輸入的網址\n"
-                    "「 " + user_text + " 」\n"
-                    "建立時間：" + creation_date + "\n"
-                    "距離今天差" + str(diff_days) + "天\n"
-                    "雖然目前尚未在資料庫中\n"
-                    "但提醒你！\n"
-                    "建立時間是晚於2022/01/01\n"
-                    "或天數差距越小\n"
-                    "詐騙與可疑程度越高\n"
-                    "敬請格外謹慎\n"
-                    "此外若認為問題，請補充描述\n"
-                    "放入相關描述、連結、截圖圖等\n"
-                    "以協助考證\n"
-                    "感恩")
+        rmessage = (f"所輸入的網址\n"
+                    f"「 {user_text} 」\n"
+                    f"{rmessage_country}"
+                    f"{rmessage_creation_date}\n"
+                    f"{rmessage_diff_days}\n"
+                    f"雖然目前尚未在資料庫中\n"
+                    f"但提醒你！\n"
+                    f"建立時間是晚於2022/01/01\n"
+                    f"或天數差距越小\n"
+                    f"或註冊國家非台灣\n"
+                    f"而詐騙與可疑程度越高\n"
+                    f"敬請格外謹慎\n"
+                    f"此外若認為問題，請補充描述\n"
+                    f"放入相關描述、連結、截圖圖等\n"
+                    f"以協助考證\n"
+                    f"感恩"
+        )
 
     return rmessage

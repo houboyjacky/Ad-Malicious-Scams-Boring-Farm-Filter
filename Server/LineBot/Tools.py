@@ -22,6 +22,7 @@ THE SOFTWARE.
 
 import json
 import re
+import pycountry
 from filelock import FileLock
 from urllib.parse import urlparse, unquote
 
@@ -106,3 +107,10 @@ def decode_facebook_url(url:str):
     decoded_url = unquote(u_value)
 
     return decoded_url
+
+def translate_country(country_code):
+    try:
+        country = pycountry.countries.lookup(country_code)
+        return country.name
+    except LookupError:
+        return "Unknown"

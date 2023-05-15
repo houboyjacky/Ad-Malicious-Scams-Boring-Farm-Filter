@@ -28,7 +28,7 @@ import sys
 import threading
 import time
 import Tools
-# pip3 install schedule tldextract flask line-bot-sdk whois beautifulsoup4 pytesseract
+# pip3 install schedule tldextract flask line-bot-sdk whois beautifulsoup4 pytesseract pycountry python-dateutil
 # pytesseract
 # sudo apt install tesseract-ocr tesseract-ocr-eng tesseract-ocr-chi-tra tesseract-ocr-chi-tra-vert tesseract-ocr-chi-sim tesseract-ocr-chi-sim-vert
 
@@ -111,14 +111,14 @@ def handle_message(event):
 def Update_url_schedule(stop_event):
     schedule.every(1).hours.do(update_blacklist)
     while not stop_event.is_set():
-        schedule.run_pending()
         time.sleep(1)
+        schedule.run_pending()
 
 def Logger_schedule(stop_event):
     schedule.every().day.at("23:00").do(Logger_Transfer, pre_close=False)
     while not stop_event.is_set():
-        schedule.run_pending()
         time.sleep(1)
+        schedule.run_pending()
 
 def signal_handler(sig, frame):
     logger.info('Received signal : ' + str(sig))

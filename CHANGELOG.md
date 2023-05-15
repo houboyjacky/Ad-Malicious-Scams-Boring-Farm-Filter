@@ -1,6 +1,7 @@
 # 歷史更新 History Update
 
 * 20230515 Update
+  * 加入 whois註冊國家名稱
   * 修復 可能會出現時區導致錯誤
 
 * 20230514 Update
