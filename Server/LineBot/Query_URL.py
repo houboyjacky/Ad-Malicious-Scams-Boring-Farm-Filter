@@ -218,7 +218,7 @@ def user_query_website(user_text):
 
     if w.country:
         country_str = Tools.translate_country(w.country)
-        if country_str == "Unknown"
+        if country_str == "Unknown":
             rmessage_country = "註冊國家：" + w.country + "\n"
     else:
         rmessage_country = ""
