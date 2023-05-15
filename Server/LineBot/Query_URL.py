@@ -29,7 +29,6 @@ import whois
 import Tools
 
 from datetime import datetime
-from dateutil import parser
 from urllib.parse import urlparse
 from Logger import logger
 
