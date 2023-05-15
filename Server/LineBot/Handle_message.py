@@ -187,7 +187,7 @@ def handle_message_text(event):
         else:
             pass
 
-    if user_text.startswith("詐騙"):
+    if user_text.startswith("詐騙回報"):
         if len(event.message.text) > 1000:
             rmessage = f"謝謝你提供的情報\n請縮短長度或分段傳送"
         else:
