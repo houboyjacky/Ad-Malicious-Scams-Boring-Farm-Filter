@@ -182,7 +182,7 @@ def user_query_website(user_text):
                         f"請勿相信此網站\n"
                         f"若認為誤通報，請補充描述\n"
                         f"感恩"
-                    )
+            )
         else:
             rmessage = (f"所輸入的網址\n"
                         f"「 {user_text} 」\n"
@@ -191,7 +191,8 @@ def user_query_website(user_text):
                         f"此外若認為問題，請補充描述\n"
                         f"放入相關描述、連結、截圖圖等\n"
                         f"協助考證\n"
-                        f"感恩")
+                        f"感恩"
+            )
         return rmessage
 
     # 提取創建時間和最後更新時間
@@ -213,8 +214,8 @@ def user_query_website(user_text):
     logger.info("Diff Days : " + str(diff_days))
 
     # 建立輸出字串
-    rmessage_creation_date = "建立時間：" + creation_date_str
-    rmessage_diff_days = "距離今天差" + str(diff_days) + "天"
+    rmessage_creation_date = f"建立時間：{creation_date_str}"
+    rmessage_diff_days = f"距離今天差{str(diff_days)}天"
 
     if w.country:
         country_str = Tools.translate_country(w.country)
@@ -226,7 +227,7 @@ def user_query_website(user_text):
         rmessage_country = ""
 
     #判斷網站
-    if checkresult is True:
+    if checkresult:
         rmessage = (f"所輸入的網址\n"
                     f"「 {user_text} 」\n"
                     f"{rmessage_country}"
