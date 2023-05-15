@@ -156,11 +156,17 @@ def check_blacklisted_site(user_text):
 
 # 使用者查詢網址
 def user_query_website(user_text):
+
     #解析網址
-    parsed_url = urlparse(user_text)
+    extracted = tldextract.extract(user_text)
+    domain = extracted.domain
+    suffix = extracted.suffix
+
+    if not domain or not suffix:
+        return
 
     #取得網域
-    user_text = parsed_url.netloc
+    user_text = f"{domain}.{suffix}"
 
     #從 WHOIS 服務器獲取 WHOIS 信息
     try:

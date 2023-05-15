@@ -143,6 +143,11 @@ def handle_message_text(event):
         message_reply(event.reply_token, "管理員管制中...請稍後嘗試")
         return
 
+    if len(event.message.text) > 1000:
+        rmessage = f"謝謝你提供的情報\n請縮短長度或分段傳送"
+        message_reply(event.reply_token, rmessage)
+        return
+
     # 讀取使用者傳來的文字訊息
     user_text = event.message.text.lower()
 
@@ -188,13 +193,10 @@ def handle_message_text(event):
             pass
 
     if user_text.startswith("詐騙回報"):
-        if len(event.message.text) > 1000:
-            rmessage = f"謝謝你提供的情報\n請縮短長度或分段傳送"
-        else:
-            user_name = line_bot_api.get_profile(user_id).display_name
-            user_text = event.message.text
-            write_new_netizen_file(user_id, user_name, event.message.text)
-            rmessage = f"謝謝你提供的情報\n輸入「積分」\n可以查詢你的積分排名"
+        user_name = line_bot_api.get_profile(user_id).display_name
+        user_text = event.message.text
+        write_new_netizen_file(user_id, user_name, event.message.text)
+        rmessage = f"謝謝你提供的情報\n輸入「積分」\n可以查詢你的積分排名"
         message_reply(event.reply_token, rmessage)
         return
 
