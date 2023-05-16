@@ -87,6 +87,7 @@ def handle_admin_message_text(user_text):
             suffix = extracted.suffix
             if domain in allowlist:
                 rmessage = f"網址封鎖有誤，不允許{domain}.{suffix}"
+                return rmessage
 
             # 組合成新的規則
             new_rule = "||"+ domain + "." + suffix + "^\n"
