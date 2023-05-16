@@ -160,8 +160,7 @@ def handle_message_text(event):
     if user_id in Tools.ADMINS:
         if user_text == "重讀":
             setting = ''
-            with open('setting.json', 'r') as f:
-                setting = json.load(f)
+            Tools.reloadSetting()
             logger.info("Reload setting.json")
             rmessage = f"設定已重新載入"
             message_reply(event.reply_token, rmessage)
