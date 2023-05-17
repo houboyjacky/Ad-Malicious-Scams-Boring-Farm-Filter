@@ -138,7 +138,7 @@ def handle_message_text(event):
     global image_analysis
     # 取得發訊者的 ID
     user_id = event.source.user_id
-    logger.info('UserID = '+ event.source.user_id)
+    logger.info(f'UserID = {event.source.user_id}\nUserMessage = {event.message.text}')
 
     if user_id in Tools.BLACKUSERID:
         message_reply(event.reply_token, "管理員管制中...請稍後嘗試")
@@ -290,7 +290,7 @@ def handle_message_text(event):
 
 def handle_message_image(event):
     # 取得發訊者的 ID
-    logger.info('UserID = '+ event.source.user_id)
+    logger.info(f'UserID = {event.source.user_id}\nUserMessage = image message')
 
     # 儲存照片的目錄
     IMAGE_DIR = "image/"

@@ -97,10 +97,8 @@ def message_callback():
 def handle_message(event):
     message_type = event.message.type
     if message_type == 'image':
-        logger.info('UserMessage = image message')
         handle_message_image(event)
     elif message_type == 'text':
-        logger.info('UserMessage = '+ event.message.text)
         handle_message_text(event)
     elif message_type == 'video' or message_type == 'audio' or message_type == 'file':
         handle_message_file(event)
