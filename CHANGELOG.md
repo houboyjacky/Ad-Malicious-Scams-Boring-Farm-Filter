@@ -1,6 +1,7 @@
 # 歷史更新 History Update
 
 * 20230517 Update
+  * 更新 ScamAdviser電子報
   * 調整 Log紀錄順序
 
 * 20230516 Update
