@@ -1309,7 +1309,6 @@
 ||vantwnow.live^
 ||vantwnow.net^
 ||vantwnow.xyz^
-||vantwnow.*^
 ! 詐騙投資 https://www.dcard.tw/f/anti_fraud/p/241914022
 ||bstustb.com^
 ! 詐騙購物 https://www.dcard.tw/f/anti_fraud/p/241927280
@@ -1320,3 +1319,8 @@
 ||jnkp.shop^
 ! 詐騙母親節 https://www.dcard.tw/f/persona_drmessage/p/242056997
 ||linestickers.org^
+! 網路詐騙順豐快遞未送達 https://www.dcard.tw/f/anti_fraud/p/242123159
+||sfexpress-help.com^
+||sfexpress-help.info^
+! 縮網址列入觀察
+||imob.tw^
