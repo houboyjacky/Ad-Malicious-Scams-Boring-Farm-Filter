@@ -35,7 +35,7 @@ invites = Tools.read_json_file(Tools.LINE_INVITE)
 
 def analyze_line_invite_url(user_text:str) -> Optional[dict]:
     # 定義邀請類型的正則表達式
-    PATTERN = r'https:\/\/line\.me\/R?\/?ti\/(p|g|g2)\/([a-zA-Z0-9_~@-]+)[#~?]*\S*'
+    PATTERN = r'[h|H][t|T][t|T][p|P][s|S]?:\/\/line\.me\/R?\/?ti\/(p|g|g2)\/([a-zA-Z0-9_~@-]+)[#~?]*\S*'
 
     user_text = user_text.replace("加入", "")
     user_text = user_text.replace("%40", "@")
