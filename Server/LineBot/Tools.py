@@ -46,8 +46,8 @@ CHANNEL_ACCESS_TOKEN = setting['CHANNEL_ACCESS_TOKEN']
 CHANNEL_SECRET = setting['CHANNEL_SECRET']
 # NETIZEN => Netizen Report
 NETIZEN = setting['NETIZEN']
-# RULE => Reply message by rule
-RULE = setting['RULE']
+# KEYWORD => Receive message by keyword
+KEYWORD = setting['KEYWORD']
 # LOGFILE => Log File Path
 LOGFILE = setting['LOGFILE']
 # USER_POINT => User Point Record
@@ -63,7 +63,7 @@ SCAM_WEBSITE_LIST = setting['SCAM_WEBSITE_LIST']
 
 def reloadSetting():
     global ADMINS, CERT, PRIVKEY, NEW_SCAM_WEBSITE_FOR_ADG, BLACKUSERID
-    global CHANNEL_ACCESS_TOKEN, CHANNEL_SECRET, NETIZEN, RULE, LOGFILE
+    global CHANNEL_ACCESS_TOKEN, CHANNEL_SECRET, NETIZEN, KEYWORD, LOGFILE
     global USER_POINT, LINE_INVITE, LINEID_WEB, LINEID_LOCAL, SCAM_WEBSITE_LIST
     global setting
     setting = ''
@@ -87,8 +87,8 @@ def reloadSetting():
     CHANNEL_SECRET = setting['CHANNEL_SECRET']
     # NETIZEN => Netizen Report
     NETIZEN = setting['NETIZEN']
-    # RULE => Reply message by rule
-    RULE = setting['RULE']
+    # KEYWORD => Reply message by rule
+    KEYWORD = setting['KEYWORD']
     # LOGFILE => Log File Path
     LOGFILE = setting['LOGFILE']
     # USER_POINT => User Point Record

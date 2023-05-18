@@ -34,23 +34,25 @@ import Tools
 invites = Tools.read_json_file(Tools.LINE_INVITE)
 
 def analyze_line_invite_url(user_text:str) -> Optional[dict]:
-    # 定義邀請類型的正則表達式
-    PATTERN = r'[h|H][t|T][t|T][p|P][s|S]?:\/\/line\.me\/R?\/?ti\/(p|g|g2)\/([a-zA-Z0-9_~@-]+)[#~?]*\S*'
 
     user_text = user_text.replace("加入", "")
     user_text = user_text.replace("%40", "@")
 
-    if user_text.startswith("https://lin.ee") or user_text.startswith("https://page.line.me"):
-        response = requests.get(user_text)
+    orgin_text = user_text
+    lower_text = user_text.lower()
+
+    if lower_text.startswith("https://lin.ee") or lower_text.startswith("https://page.line.me"):
+        response = requests.get(orgin_text)
         if response.status_code != 200:
             logger.error("lin.ee邀請網址解析失敗")
             return False
 
         redirected_url = response.url
         logger.info("Redirected_url = " + redirected_url)
-        match = re.match(PATTERN, redirected_url)
-    elif user_text.startswith("https://liff.line.me"):
-        response = requests.get(user_text)
+        match = re.match(Tools.KEYWORD[6], redirected_url)
+
+    elif lower_text.startswith("https://liff.line.me"):
+        response = requests.get(orgin_text)
         if response.status_code != 200:
             logger.error("liff.line.me邀請網址解析失敗")
             return False
@@ -69,9 +71,9 @@ def analyze_line_invite_url(user_text:str) -> Optional[dict]:
 
         logger.info("Redirected_url 2 = " + redirected_url)
 
-        match = re.match(PATTERN, redirected_url)
+        match = re.match(Tools.KEYWORD[6], redirected_url)
     else:
-        match = re.match(PATTERN, user_text)
+        match = re.match(Tools.KEYWORD[6], orgin_text)
         if not match:
             logger.error('line.me邀請網址解析失敗')
             return False

@@ -56,55 +56,58 @@ def handle_admin_message_text(user_text):
     global setting
     rmessage = ''
 
-    if match := re.search(Tools.RULE[0], user_text):
-        if match := re.search(r"https://line\.me/R?/?ti/p/~(.+)", user_text):
-            lineid = match.group(1)
-            if user_query_lineid(lineid):
-                rmessage = f"邀請黑名單與賴黑名單已存在{lineid}"
-            else:
-                # 加入新line id
-                user_add_lineid(lineid)
-                rmessage = f"邀請黑名單與賴黑名單更新完成{lineid}"
-        elif match := re.search(r"https://.*(line|lin)\.(me|ee)/.+", user_text):
-            r =  lineinvite_write_file(user_text)
-            if r == 1:
-                rmessage = f"邀請黑名單已存在"
-            elif r == 0:
-                rmessage = f"邀請黑名單更新完成"
-            else:
-                rmessage = f"邀請黑名單更新失敗"
+    orgin_text = user_text
+    lower_text = user_text.lower()
+
+    if match := re.search(Tools.KEYWORD[5], lower_text):
+        lineid = match.group(1)
+        if user_query_lineid(lineid):
+            rmessage = f"邀請黑名單與賴黑名單已存在{lineid}"
         else:
-            user_text = user_text.lower()
+            # 加入新line id
+            user_add_lineid(lineid)
+            rmessage = f"邀請黑名單與賴黑名單更新完成{lineid}"
 
-            match = re.search(Tools.RULE[0], user_text)
+    elif match := re.search(Tools.KEYWORD[4], lower_text):
+        r =  lineinvite_write_file(orgin_text)
+        if r == 1:
+            rmessage = f"邀請黑名單已存在"
+        elif r == 0:
+            rmessage = f"邀請黑名單更新完成"
+        else:
+            rmessage = f"邀請黑名單更新失敗"
 
-            # 取得網址
-            url = match.group(1)
+    elif match := re.search(Tools.KEYWORD[0], lower_text):
 
-            # 使用 tldextract 取得網域
-            extracted = tldextract.extract(url)
-            domain = extracted.domain
-            suffix = extracted.suffix
-            if domain in allowlist:
-                rmessage = f"網址封鎖有誤，不允許{domain}.{suffix}"
-                return rmessage
+        match = re.search(Tools.KEYWORD[0], lower_text)
 
-            # 組合成新的規則
-            new_rule = "||"+ domain + "." + suffix + "^\n"
+        # 取得網址
+        url = match.group(1)
 
-            # 將Adguard規則寫入檔案
-            with open(Tools.NEW_SCAM_WEBSITE_FOR_ADG, "a", encoding="utf-8", newline='') as f:
-                f.write(new_rule)
+        # 使用 tldextract 取得網域
+        extracted = tldextract.extract(url)
+        domain = extracted.domain
+        suffix = extracted.suffix
+        if domain in allowlist:
+            rmessage = f"網址封鎖有誤，不允許{domain}.{suffix}"
+            return rmessage
 
-            r = check_blacklisted_site(url)
-            if r:
-                rmessage = f"網址黑名單已存在"
-            else:
-                # 提早執行更新
-                update_part_blacklist(domain + "." + suffix)
-                rmessage = f"網址黑名單更新完成"
+        # 組合成新的規則
+        new_rule = "||"+ domain + "." + suffix + "^\n"
 
-    elif match := re.search(Tools.RULE[1], user_text):
+        # 將Adguard規則寫入檔案
+        with open(Tools.NEW_SCAM_WEBSITE_FOR_ADG, "a", encoding="utf-8", newline='') as f:
+            f.write(new_rule)
+
+        r = check_blacklisted_site(url)
+        if r:
+            rmessage = f"網址黑名單已存在"
+        else:
+            # 提早執行更新
+            update_part_blacklist(domain + "." + suffix)
+            rmessage = f"網址黑名單更新完成"
+
+    elif match := re.search(Tools.KEYWORD[1], orgin_text):
 
         # 取得文字
         text = match.group(1)
@@ -118,10 +121,10 @@ def handle_admin_message_text(user_text):
 
         rmessage = f"網址名單更新完成"
 
-    elif match := re.search(Tools.RULE[2], user_text):
+    elif match := re.search(Tools.KEYWORD[2], lower_text):
 
         # 取得文字
-        lineid = match.group(1).lower()
+        lineid = match.group(1)
         r = user_query_lineid(lineid)
         if r:
             rmessage = f"賴黑名單已存在" + lineid
@@ -142,34 +145,35 @@ def handle_message_text(event):
     logger.info(f'UserID = {event.source.user_id}')
     logger.info(f'UserMessage = {event.message.text}')
 
+    # 讀取使用者傳來的文字訊息
+    orgin_text = event.message.text
+    lower_text = event.message.text.lower()
+
     if user_id in Tools.BLACKUSERID:
         warningsign=["嘿嘿等到你來了:D", "測試人員來上班了啊～","封鎖、刪除、再加入，手會痠嗎？","我已經鎖定你囉！"]
         random_sign = random.choice(warningsign)
         message_reply(event.reply_token, random_sign)
         return
 
-    if len(event.message.text) > 1000:
+    if len(orgin_text) > 1000:
         rmessage = f"謝謝你提供的情報\n請縮短長度或分段傳送"
         message_reply(event.reply_token, rmessage)
         return
 
-    # 讀取使用者傳來的文字訊息
-    user_text = event.message.text.lower()
-
-    if user_text.startswith("使用指南"):
+    if orgin_text.startswith("使用指南"):
         message_reply(event.reply_token, user_guide)
         return
 
     # 管理員操作
     if user_id in Tools.ADMINS:
-        if user_text == "重讀":
+        if orgin_text == "重讀":
             setting = ''
             Tools.reloadSetting()
             logger.info("Reload setting.json")
             rmessage = f"設定已重新載入"
             message_reply(event.reply_token, rmessage)
             return
-        elif user_text == "檢閱":
+        elif orgin_text == "檢閱":
             content = get_netizen_file(user_id)
             if content:
                 rmessage = f"內容：\n\n{content}\n\n參閱與處置後\n請輸入「完成」或「失效」"
@@ -177,34 +181,32 @@ def handle_message_text(event):
                 rmessage = f"目前沒有需要檢閱的資料"
             message_reply(event.reply_token, rmessage)
             return
-        elif user_text == "關閉辨識":
+        elif orgin_text == "關閉辨識":
             image_analysis = False
             rmessage = f"已關閉辨識"
             message_reply(event.reply_token, rmessage)
             return
-        elif user_text == "開啟辨識":
+        elif orgin_text == "開啟辨識":
             image_analysis = True
             rmessage = f"已開啟辨識"
             message_reply(event.reply_token, rmessage)
             return
-        elif user_text.startswith("加入"):
-            user_text = event.message.text
-            rmessage = handle_admin_message_text(user_text)
+        elif orgin_text.startswith("加入"):
+            rmessage = handle_admin_message_text(orgin_text)
             if rmessage:
                 message_reply(event.reply_token, rmessage)
                 return
         else:
             pass
 
-    if user_text.startswith("詐騙回報"):
+    if orgin_text.startswith("詐騙回報"):
         user_name = line_bot_api.get_profile(user_id).display_name
-        user_text = event.message.text
-        write_new_netizen_file(user_id, user_name, event.message.text)
+        write_new_netizen_file(user_id, user_name, orgin_text)
         rmessage = f"謝謝你提供的情報\n輸入「積分」\n可以查詢你的積分排名"
         message_reply(event.reply_token, rmessage)
         return
 
-    if user_text == "遊戲":
+    if orgin_text == "遊戲":
         site = get_random_invite(user_id)
         if not site:
             rmessage = f"目前暫停檢舉遊戲喔~"
@@ -214,7 +216,7 @@ def handle_message_text(event):
         message_reply(event.reply_token, rmessage)
         return
 
-    if user_text == "完成":
+    if orgin_text == "完成":
         found = push_random_invite(user_id, True, False)
         found2 = push_netizen_file(user_id, True, False)
         if found or found2:
@@ -225,7 +227,7 @@ def handle_message_text(event):
         message_reply(event.reply_token, rmessage)
         return
 
-    if user_text == "失效":
+    if orgin_text == "失效":
         found = push_random_invite(user_id, False, True)
         found2 = push_netizen_file(user_id, False, True)
         if found or found2:
@@ -235,7 +237,7 @@ def handle_message_text(event):
         message_reply(event.reply_token, rmessage)
         return
 
-    if user_text == "積分":
+    if orgin_text == "積分":
         point = read_user_point(user_id)
         rank = get_user_rank(user_id)
 
@@ -244,23 +246,22 @@ def handle_message_text(event):
         return
 
     # 查詢line邀請網址
-    if re.match(r'.*(line|lin)\.(me|ee)', user_text):
-        user_text = event.message.text
-        r = lineinvite_read_file(user_text)
+    if re.match(Tools.KEYWORD[7], lower_text):
+        r = lineinvite_read_file(orgin_text)
         if r == -1:
-            rmessage = (f"「 {user_text} 」\n"
+            rmessage = (f"「 {orgin_text} 」\n"
                         f"輸入有誤，請重新確認\n"
                         f"感恩"
                         )
         elif r == True:
-            rmessage = (f"「 {user_text} 」\n"
+            rmessage = (f"「 {orgin_text} 」\n"
                         f"「是」已知詐騙Line邀請網址\n"
                         f"請勿輕易信任此Line ID的\n"
                         f"文字、圖像、語音和連結\n"
                         f"感恩"
                         )
         else:
-            rmessage = (f"「 {user_text} 」\n"
+            rmessage = (f"「 {orgin_text} 」\n"
                         f"「不是」已知詐騙邀請網址\n"
                         f"並不代表沒問題，請繼續觀察"
                         f"有任何問題，請補充描述\n"
@@ -270,18 +271,18 @@ def handle_message_text(event):
         return
 
     # 如果用戶輸入的網址沒有以 http 或 https 開頭，則不回應訊息
-    if user_text.startswith("http://") or user_text.startswith("https://"):
-        if user_text.startswith("https://lm.facebook.com"):
-            url = Tools.decode_facebook_url(user_text)
+    if re.match(Tools.KEYWORD[8], lower_text):
+        if lower_text.startswith("https://lm.facebook.com"):
+            url = Tools.decode_facebook_url(lower_text)
             rmessage = f"你想輸入的網址是不是\n「 {url} 」\n請複製貼上對話框\n才能正確判斷"
         else:
-            rmessage = user_query_website(user_text)
+            rmessage = user_query_website(lower_text)
         message_reply(event.reply_token, rmessage)
         return
 
     # 查詢Line ID
-    if user_text.startswith("賴") and re.search(Tools.RULE[3], user_text):
-        lineid = user_text.replace("賴", "")
+    if re.search(Tools.KEYWORD[3], lower_text):
+        lineid = lower_text.replace("賴", "")
         if user_query_lineid(lineid):
             rmessage = (f"「{lineid}」\n"
                         f"「是」詐騙Line ID\n"
@@ -299,12 +300,6 @@ def handle_message_text(event):
         message_reply(event.reply_token, rmessage)
         return
 
-    # 內容包含網址，立即查詢第一個網址
-    # found_url = Tools.find_url(user_text)
-    # if found_url and not user_id in Tools.ADMINS:
-    #     rmessage = user_query_website(user_text)
-    #     message_reply(event.reply_token, rmessage)
-    #     return
     return
 
 def handle_message_image(event):
