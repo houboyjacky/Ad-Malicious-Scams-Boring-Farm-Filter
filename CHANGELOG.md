@@ -1,5 +1,8 @@
 # 歷史更新 History Update
 
+* 20230518 Update
+  * 調整 API責任歸屬
+
 * 20230517 Update
   * 更新 ScamAdviser電子報
   * 調整 Log紀錄順序

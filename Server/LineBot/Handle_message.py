@@ -20,9 +20,9 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 '''
 
-import json
 import os
 import pytesseract
+import random
 import re
 import time
 import tldextract
@@ -36,7 +36,7 @@ from Logger import logger
 from PIL import Image
 from Point import read_user_point, get_user_rank
 from PrintText import user_guide
-from Query_Line_ID import user_query_lineid, user_add_lineid, user_query_lineid_sub
+from Query_Line_ID import user_query_lineid, user_add_lineid
 from Query_URL import update_part_blacklist
 from Query_URL import user_query_website, check_blacklisted_site
 
@@ -59,7 +59,7 @@ def handle_admin_message_text(user_text):
     if match := re.search(Tools.RULE[0], user_text):
         if match := re.search(r"https://line\.me/R?/?ti/p/~(.+)", user_text):
             lineid = match.group(1)
-            if user_query_lineid_sub(lineid):
+            if user_query_lineid(lineid):
                 rmessage = f"邀請黑名單與賴黑名單已存在{lineid}"
             else:
                 # 加入新line id
@@ -122,7 +122,7 @@ def handle_admin_message_text(user_text):
 
         # 取得文字
         lineid = match.group(1).lower()
-        r = user_query_lineid_sub(lineid)
+        r = user_query_lineid(lineid)
         if r:
             rmessage = f"賴黑名單已存在" + lineid
         else:
@@ -136,12 +136,16 @@ def handle_admin_message_text(user_text):
 
 def handle_message_text(event):
     global image_analysis
+
     # 取得發訊者的 ID
     user_id = event.source.user_id
-    logger.info(f'UserID = {event.source.user_id}\nUserMessage = {event.message.text}')
+    logger.info(f'UserID = {event.source.user_id}')
+    logger.info(f'UserMessage = {event.message.text}')
 
     if user_id in Tools.BLACKUSERID:
-        message_reply(event.reply_token, "管理員管制中...請稍後嘗試")
+        warningsign=["嘿嘿等到你來了:D", "測試人員來上班了啊～","封鎖、刪除、再加入，手會痠嗎？","我已經鎖定你囉！"]
+        random_sign = random.choice(warningsign)
+        message_reply(event.reply_token, random_sign)
         return
 
     if len(event.message.text) > 1000:
@@ -258,7 +262,9 @@ def handle_message_text(event):
         else:
             rmessage = (f"「 {user_text} 」\n"
                         f"「不是」已知詐騙邀請網址\n"
-                        f"若認為問題，請補充描述\n"
+                        f"並不代表沒問題，請繼續觀察"
+                        f"有任何問題，請補充描述\n"
+                        f"讓大家繼續幫助大家"
                         f"感恩")
         message_reply(event.reply_token, rmessage)
         return
@@ -276,7 +282,20 @@ def handle_message_text(event):
     # 查詢Line ID
     if user_text.startswith("賴") and re.search(Tools.RULE[3], user_text):
         lineid = user_text.replace("賴", "")
-        rmessage = user_query_lineid(lineid)
+        if user_query_lineid(lineid):
+            rmessage = (f"「{lineid}」\n"
+                        f"「是」詐騙Line ID\n"
+                        f"請勿輕易信任此Line ID的\n"
+                        f"文字、圖像、語音和連結\n"
+                        f"感恩")
+        else:
+            rmessage = (f"「{lineid}」\n"
+                        f"目前不在詐騙黑名單中\n"
+                        f"並不代表沒問題，請繼續觀察\n"
+                        f"有任何問題，請補充描述\n"
+                        f"讓大家繼續幫助大家\n"
+                        f"感恩")
+
         message_reply(event.reply_token, rmessage)
         return
 
@@ -290,7 +309,8 @@ def handle_message_text(event):
 
 def handle_message_image(event):
     # 取得發訊者的 ID
-    logger.info(f'UserID = {event.source.user_id}\nUserMessage = image message')
+    logger.info(f'UserID = {event.source.user_id}')
+    logger.info(f'UserMessage = image message')
 
     # 儲存照片的目錄
     IMAGE_DIR = "image/"
