@@ -38,6 +38,7 @@ def analyze_line_invite_url(user_text:str) -> Optional[dict]:
     PATTERN = r'https:\/\/line\.me\/R?\/?ti\/(p|g|g2)\/([a-zA-Z0-9_~@-]+)[#~?]*\S*'
 
     user_text = user_text.replace("加入", "")
+    user_text = user_text.replace("%40", "@")
 
     if user_text.startswith("https://lin.ee") or user_text.startswith("https://page.line.me"):
         response = requests.get(user_text)

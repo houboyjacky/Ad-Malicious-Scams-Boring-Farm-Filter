@@ -2,6 +2,7 @@
 
 * 20230518 Update
   * 調整 API責任歸屬
+  * 調整 @可能被%40取代
 
 * 20230517 Update
   * 更新 ScamAdviser電子報
