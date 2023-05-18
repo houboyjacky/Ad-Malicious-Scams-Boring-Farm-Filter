@@ -222,8 +222,12 @@ def user_query_website(user_text):
     rmessage_creation_date = f"建立時間：{creation_date_str}"
     rmessage_diff_days = f"距離今天差{str(diff_days)}天"
 
-    if w.country:
-        country_str = Tools.translate_country(w.country)
+    if w.country or w.registrant_country:
+        if w.country:
+            country_str = Tools.translate_country(w.country)
+        elif w.registrant_country:
+            country_str = Tools.translate_country(w.registrant_country)
+
         if country_str == "Unknown":
             rmessage_country = f"註冊國家：{w.country}\n"
         else:
