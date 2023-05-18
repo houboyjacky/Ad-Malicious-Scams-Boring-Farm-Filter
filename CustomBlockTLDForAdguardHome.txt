@@ -26,6 +26,7 @@
 /aava-[a-z]+\.[a-z]/
 /aavaepro[0-9]+\.xyz
 /aclar.+\.com/
+/aisme.+\.com/
 /aitechstock\.(co|tw|vip)/
 /alliancegrowth.+\.[a-z]+/
 /amazon[0-9]+\.mobi/
@@ -106,6 +107,7 @@
 /galaxytrad[a-z]+\.com/
 /gaosheng[a-z0-9]*\.com/
 /garda[a-z0-9]+\.com/
+/gbay-?shop.*\..+/
 /gdf999.[a-z]+/
 /gexcoin\.(co|io|me)/
 /global-exp[a-z0-9]+rade\.com/
