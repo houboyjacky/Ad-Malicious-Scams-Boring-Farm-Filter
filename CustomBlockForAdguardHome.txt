@@ -212,6 +212,7 @@
 ||blendedsearch.com^
 ||blenderelements.com^
 ||blogdodge.shop^
+||blsyg.top^
 ||blueskymonday.com^
 ||bm-in.net^
 ||bmfuturesig.space^
@@ -255,6 +256,7 @@
 ||c8tw.com^
 ||cafsk.shop^
 ||caifuzhuanlan.com^
+||caijing-tw.com^
 ||caijing.life^
 ||caijing.live^
 ||caijing.world^
@@ -408,6 +410,7 @@
 ||dragon-legend.cc^
 ||drbuttar.lt.acemlnb.com^
 ||dream9453.com^
+||dreambxn.com^
 ||drhojyo.com.hk^
 ||drich.online^
 ||drich01.com^
@@ -665,6 +668,7 @@
 ||gzjuning.com^
 ||gzjysd.com^
 ||hagjjrtw.com^
+||hai-gou.top^
 ||haldiramcontact.com^
 ||hana_xb.com^
 ||haowan.com.tw^
@@ -753,8 +757,10 @@
 ||i3course.de^
 ||iamjackiechou.com^
 ||ibetfun.com^
+||icmarkets.top^
 ||icreatecourse.com^
 ||icrmsynquote.com^
+||icrowncenterga.top^
 ||icrowncentertw.top^
 ||ictngsmnspcltdy.com^
 ||idyouxi.com^
@@ -875,11 +881,13 @@
 ||kelbyone.lt.acemlnb.com^
 ||kevfutur.online^
 ||kevinevents.com^
+||keywordh.com^
 ||kfc-vip.vip^
 ||kfdshop.xyz^
 ||kga34.vip^
 ||kgi-pro.com.tw^
 ||kgosf.com^
+||kianashop.shop^
 ||kilby.buzz^
 ||king888.one^
 ||kingmiya.shop^
@@ -1163,6 +1171,7 @@
 ||ozfhlr.shop^
 ||paiatialdates.net^
 ||paktormeet.com^
+||pampxe.com^
 ||payeshop.site^
 ||pcgameslab.net^
 ||pcgws.com^
@@ -1247,6 +1256,7 @@
 ||rankclub.io^
 ||ranshop.online^
 ||rdshdnw.online^
+||rduve.com^
 ||realgame.ink^
 ||rebuildemporium.online^
 ||rehrnq.asia^
@@ -1291,6 +1301,7 @@
 ||sanlinews.shop^
 ||sator.live^
 ||saulcommerce.online^
+||sbeio.top^
 ||scaleonlinecourse.com^
 ||scnleee.com^
 ||scratchhappyiness.com^
@@ -1298,6 +1309,7 @@
 ||sdkfld.vip^
 ||sdnap.shop^
 ||seagenx.com^
+||seagull-pro.com^
 ||seb131.net^
 ||sedu.tw^
 ||seductivevisions.com^
@@ -1539,6 +1551,7 @@
 ||twmoie.com^
 ||twmqn.me^
 ||twnjkgov.com^
+||twqlbest.top^
 ||twruten1688.cn^
 ||twsgov.me^
 ||twshares.com^
@@ -1552,6 +1565,7 @@
 ||twswahewa.com^
 ||twswan5.club^
 ||twswawjfwj.com^
+||twtines.com.tw^
 ||twtla.me^
 ||twtouzi.shop^
 ||twtwdfjgov.xyz^
@@ -1743,6 +1757,7 @@
 ||xnmzaa.asia^
 ||xnuzxwm.com^
 ||xone1dd.xyz^
+||xouni.shop^
 ||xp688.net^
 ||xsgny.top^
 ||xtrendspeed.com^
@@ -1765,6 +1780,7 @@
 ||ycxgov.tv^
 ||yhznmdd.asia^
 ||yitoy.store^
+||ylaid.top^
 ||ymsgov.com^
 ||ynrgov.com^
 ||yoelw.top^
@@ -1810,6 +1826,7 @@
 ||zhanmeipai.cn^
 ||zhihan.xyz^
 ||zhuichadaodi.com^
+||znnsaw.vip^
 ||zousy.online^
 ||zsveejops.com^
 ||zsybt.shop^

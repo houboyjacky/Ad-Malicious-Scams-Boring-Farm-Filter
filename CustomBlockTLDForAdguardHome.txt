@@ -52,7 +52,7 @@
 /btcbox[a-z]{1,3}\.com/
 /bycp[a-z0-9]*\.com/
 /caifuyiha[a-z0-9]*\.club/
-/caijing\w*\.w*/
+/caijing/
 /caixin[0-9]+yule\.com/
 /capita[a-z0-9]*\.com/
 /carousel[a-z0-9-]*tw\.(com|xyz)/
@@ -149,6 +149,7 @@
 /ruten[0-9]+\.tw/
 /saintrich[a-z0-9]*\.com/
 /schw[a-z]+\.com/
+/sfexpress-.+\.(com|info)/
 /sgx[0-9a-z]+\.cyou/
 /shopee-[a-z0-9]+\.tw/
 /shopping-[a-z]+\.com/

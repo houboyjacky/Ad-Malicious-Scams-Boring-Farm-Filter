@@ -1322,5 +1322,6 @@
 ! 網路詐騙順豐快遞未送達 https://www.dcard.tw/f/anti_fraud/p/242123159
 ||sfexpress-help.com^
 ||sfexpress-help.info^
+||sfexpress-delivery.com^
 ! 縮網址列入觀察
 ||imob.tw^
