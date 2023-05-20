@@ -6,6 +6,7 @@
     "CHANNEL_ACCESS_TOKEN":"",
     "CHANNEL_SECRET":"",
     "NETIZEN":"",
+    "WEB_LEADERBOARD_FILE":"",
     "LINEID_WEB":"",
     "LOGFILE":"",
     "PRIVKEY":"",

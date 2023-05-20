@@ -29,12 +29,91 @@ import whois
 import Tools
 
 from datetime import datetime
+from collections import defaultdict
 from urllib.parse import urlparse
 from Logger import logger
 
 FILTER_DIR = "filter"
 
 blacklist = []
+
+def update_web_leaderboard(input_url):
+    # 取得當天的年月日
+    today = datetime.now().strftime("%Y%m%d")
+    # 要寫入的資料
+    data_to_write = f"{today}:{input_url}:1\n"
+    # 檢查是否已經存在相同的當天日期和網址
+    exists = False
+
+    with open(Tools.WEB_LEADERBOARD_FILE, "r+") as file:
+        lines = file.readlines()
+        file.seek(0)  # 回到檔案開頭
+        for line in lines:
+            line_parts = line.strip().split(":")
+            if len(line_parts) == 3 and line_parts[0] == today and line_parts[1] == input_url:
+                # 更新次數
+                line_parts[2] = str(int(line_parts[2]) + 1)
+                line = ":".join(line_parts) + "\n"
+                exists = True
+            file.write(line)
+
+        if not exists:
+            file.write(data_to_write)
+        file.truncate()  # 截斷多餘的內容
+
+    return
+
+def get_web_leaderboard():
+
+    # 讀取 Web_leaderboard.txt
+    with open(Tools.WEB_LEADERBOARD_FILE, 'r') as file:
+        lines = file.readlines()
+
+    # 計算每個網址的查詢次數
+    url_counts = defaultdict(int)
+    for line in lines:
+        parts = line.strip().split(":")
+        if len(parts) == 3:
+            url = parts[1]
+            count = int(parts[2])
+            url_counts[url] += count
+
+    # 根據查詢次數由大到小排序
+    sorted_urls = sorted(url_counts.items(), key=lambda x: x[1], reverse=True)
+
+    # 檢查總項目數是否小於等於十個
+    if len(sorted_urls) <= 10:
+        top_10 = sorted_urls
+    else:
+        # 超過十個項目，找到最早的日期
+        today = datetime.date.today()
+        start_date = today - datetime.timedelta(days=7)
+        while len(sorted_urls) > 10 and start_date >= datetime.date.today() - datetime.timedelta(days=30):
+            url_counts = defaultdict(int)
+            for line in lines:
+                parts = line.strip().split(":")
+                if len(parts) == 3:
+                    date = datetime.strptime(parts[0], "%Y%m%d").date()
+                    if date >= start_date:
+                        url = parts[1]
+                        count = int(parts[2])
+                        url_counts[url] += count
+
+            sorted_urls = sorted(url_counts.items(), key=lambda x: x[1], reverse=True)
+            start_date -= datetime.timedelta(days=1)
+
+        top_10 = sorted_urls[:10]
+
+    # 格式化輸出結果
+    output = "近期網站查詢次數排行榜\n"
+    for i, (url, count) in enumerate(top_10, start=1):
+        if check_blacklisted_site(url):
+            output += f"{i:02d}. {url}=>可疑或詐騙網站\n"
+        else:
+            output += f"{i:02d}. {url}=>暫時安全的網站\n"
+
+    return output
+
 
 def download_file(url):
     response = requests.get(url)
@@ -167,6 +246,8 @@ def user_query_website(user_text):
 
     #取得網域
     user_text = f"{domain}.{suffix}"
+
+    update_web_leaderboard(user_text)
 
     #從 WHOIS 服務器獲取 WHOIS 信息
     try:

@@ -37,8 +37,7 @@ from PIL import Image
 from Point import read_user_point, get_user_rank
 from PrintText import user_guide
 from Query_Line_ID import user_query_lineid, user_add_lineid
-from Query_URL import update_part_blacklist
-from Query_URL import user_query_website, check_blacklisted_site
+from Query_URL import user_query_website, check_blacklisted_site, get_web_leaderboard, update_part_blacklist
 
 image_analysis = False
 line_bot_api = LineBotApi(Tools.CHANNEL_ACCESS_TOKEN)
@@ -203,6 +202,11 @@ def handle_message_text(event):
         user_name = line_bot_api.get_profile(user_id).display_name
         write_new_netizen_file(user_id, user_name, orgin_text)
         rmessage = f"謝謝你提供的情報\n輸入「積分」\n可以查詢你的積分排名"
+        message_reply(event.reply_token, rmessage)
+        return
+
+    if orgin_text == "網站排行榜":
+        rmessage = get_web_leaderboard()
         message_reply(event.reply_token, rmessage)
         return
 

@@ -1,6 +1,7 @@
 # 歷史更新 History Update
 
 * 20230521 Update
+  * 加入 網站查詢排行榜
   * 調整 補充功能說明
 
 * 20230519 Update
