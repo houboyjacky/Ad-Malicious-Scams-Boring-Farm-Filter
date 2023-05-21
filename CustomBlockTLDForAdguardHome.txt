@@ -159,6 +159,7 @@
 /sichcapital[a-z0-9]+x\.com/
 /snx.+\.com/
 /so[0-9]+\.com/
+/sotck[a-z]+\.com/
 /stablecoin.+\..+/
 /starha[a-z]+\.com/
 /starhal[a-z]+\.com/
