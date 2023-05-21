@@ -27,10 +27,8 @@ import requests
 import tldextract
 import whois
 import Tools
-
-from datetime import datetime
+from datetime import datetime, timedelta
 from collections import defaultdict
-from urllib.parse import urlparse
 from Logger import logger
 
 FILTER_DIR = "filter"
@@ -86,9 +84,9 @@ def get_web_leaderboard():
         top_10 = sorted_urls
     else:
         # 超過十個項目，找到最早的日期
-        today = datetime.date.today()
-        start_date = today - datetime.timedelta(days=7)
-        while len(sorted_urls) > 10 and start_date >= datetime.date.today() - datetime.timedelta(days=30):
+        today = datetime.today().date()
+        start_date = today - timedelta(days=7)
+        while len(sorted_urls) > 10 and start_date >= datetime.today().date() - timedelta(days=30):
             url_counts = defaultdict(int)
             for line in lines:
                 parts = line.strip().split(":")
@@ -100,7 +98,7 @@ def get_web_leaderboard():
                         url_counts[url] += count
 
             sorted_urls = sorted(url_counts.items(), key=lambda x: x[1], reverse=True)
-            start_date -= datetime.timedelta(days=1)
+            start_date -= timedelta(days=1)
 
         top_10 = sorted_urls[:10]
 
