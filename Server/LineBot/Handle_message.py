@@ -48,7 +48,7 @@ def message_reply(reply_token, text):
     line_bot_api.reply_message(reply_token, message)
     return
 
-allowlist = { "facebook.com", "instagram.com", "google.com"}
+allowlist = { "facebook.com", "instagram.com", "google.com", "youtube.com", "youtu.be" }
 
 # 管理員操作
 def handle_admin_message_text(user_text):
@@ -255,21 +255,22 @@ def handle_message_text(event):
         if r == -1:
             rmessage = (f"「 {orgin_text} 」\n"
                         f"輸入有誤，請重新確認\n"
-                        f"感恩"
-                        )
+                        f"感恩")
         elif r == True:
             rmessage = (f"「 {orgin_text} 」\n"
                         f"「是」已知詐騙Line邀請網址\n"
                         f"請勿輕易信任此Line ID的\n"
                         f"文字、圖像、語音和連結\n"
-                        f"感恩"
-                        )
+                        f"感恩")
         else:
             rmessage = (f"「 {orgin_text} 」\n"
                         f"「不是」已知詐騙邀請網址\n"
-                        f"並不代表沒問題，請繼續觀察"
-                        f"有任何問題，請補充描述\n"
+                        f"並不代表沒問題\n"
+                        f"請繼續觀察\n"
+                        f"有任何問題\n"
+                        f"請補充描述與截圖\n"
                         f"讓大家繼續幫助大家"
+                        f"讓社會越來越好\n"
                         f"感恩")
         message_reply(event.reply_token, rmessage)
         return
@@ -296,9 +297,12 @@ def handle_message_text(event):
         else:
             rmessage = (f"「{lineid}」\n"
                         f"目前不在詐騙黑名單中\n"
-                        f"並不代表沒問題，請繼續觀察\n"
-                        f"有任何問題，請補充描述\n"
+                        f"並不代表沒問題\n"
+                        f"請繼續觀察\n"
+                        f"有任何問題\n"
+                        f"請補充描述與截圖\n"
                         f"讓大家繼續幫助大家\n"
+                        f"讓社會越來越好\n"
                         f"感恩")
 
         message_reply(event.reply_token, rmessage)
