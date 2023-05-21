@@ -280,7 +280,7 @@ def handle_message_text(event):
             url = Tools.decode_facebook_url(lower_text)
             rmessage = f"你想輸入的網址是不是\n「 {url} 」\n請複製貼上對話框\n才能正確判斷"
         else:
-            rmessage = user_query_website(lower_text)
+            rmessage = user_query_website(orgin_text)
         message_reply(event.reply_token, rmessage)
         return
 

@@ -35,6 +35,15 @@ FILTER_DIR = "filter"
 
 blacklist = []
 
+def resolve_redirects(url):
+    try:
+        response = requests.head(url, allow_redirects=True)
+        final_url = response.url
+        return final_url
+    except requests.exceptions.RequestException as e:
+        print("Error occurred:", e)
+        return None
+
 def update_web_leaderboard(input_url):
     # 取得當天的年月日
     today = datetime.now().strftime("%Y%m%d")
@@ -111,7 +120,6 @@ def get_web_leaderboard():
             output += f"{i:02d}. {url}=>暫時安全的網站\n"
 
     return output
-
 
 def download_file(url):
     response = requests.get(url)
@@ -231,11 +239,34 @@ def user_query_website(user_text):
 
     #解析網址
     extracted = tldextract.extract(user_text)
-    domain = extracted.domain
-    suffix = extracted.suffix
+    domain = extracted.domain.lower()
+    suffix = extracted.suffix.lower()
 
     if not domain or not suffix:
         return
+
+    #縮網址判斷
+    shorturl_message = ""
+    shorturls = {   "t.ly"          , "ppt.cc"  , "reurl.cc"    , "bit.ly"  , "goo.gl"  ,
+                    "tinyurl.com"   , "is.gd"   , "t.co"        , "cutt.ly" , "lurl.cc" ,
+                    "picsee.io"     , "lihi.io" , "wenk.io"     , "risu.io"
+                }
+    domain_name = f"{domain}.{suffix}"
+    if domain_name in shorturls:
+        logger.info(f"domain_name={domain_name}")
+        result = resolve_redirects(user_text)
+        extracted = tldextract.extract(result)
+        domain = extracted.domain
+        suffix = extracted.suffix
+        logger.info(f"result={result}")
+        if f"{domain}.{suffix}" == domain_name:
+            shorturl_message = f"「 {user_text} 」是縮網址\n目前縮網址已失效\n"
+            return shorturl_message
+        elif result:
+            shorturl_message = f"「 {domain_name} 」是縮網址\n原始網址為"
+    else:
+        shorturl_message = ""
+        pass
 
     #取得網域
     user_text = f"{domain}.{suffix}"
@@ -256,7 +287,7 @@ def user_query_website(user_text):
     if Error or not w.domain_name or not w.creation_date:
         if checkresult:
             rmessage = (f"所輸入的網址\n"
-                        f"「 {user_text} 」\n"
+                        f"{shorturl_message}「 {user_text} 」\n"
                         f"被判定是詐騙／可疑網站\n"
                         f"請勿相信此網站\n"
                         f"若認為誤通報，請補充描述\n"
@@ -264,7 +295,7 @@ def user_query_website(user_text):
             )
         else:
             rmessage = (f"所輸入的網址\n"
-                        f"「 {user_text} 」\n"
+                        f"{shorturl_message}「 {user_text} 」\n"
                         f"目前尚未在資料庫中\n"
                         f"敬請小心謹慎\n"
                         f"此外若認為問題，請補充描述\n"
@@ -314,7 +345,7 @@ def user_query_website(user_text):
     #判斷網站
     if checkresult:
         rmessage = (f"所輸入的網址\n"
-                    f"「 {user_text} 」\n"
+                    f"{shorturl_message}「 {user_text} 」\n"
                     f"{rmessage_country}"
                     f"{rmessage_creation_date}\n"
                     f"{rmessage_diff_days}\n"
@@ -325,7 +356,7 @@ def user_query_website(user_text):
         )
     else:
         rmessage = (f"所輸入的網址\n"
-                    f"「 {user_text} 」\n"
+                    f"{shorturl_message}「 {user_text} 」\n"
                     f"{rmessage_country}"
                     f"{rmessage_creation_date}\n"
                     f"{rmessage_diff_days}\n"
