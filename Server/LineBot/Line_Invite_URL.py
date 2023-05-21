@@ -49,6 +49,8 @@ def analyze_line_invite_url(user_text:str) -> Optional[dict]:
 
         redirected_url = response.url
         logger.info("Redirected_url = " + redirected_url)
+        if redirected_url.startswith("https://store.line.me"):
+            return False
         match = re.match(Tools.KEYWORD[6], redirected_url)
 
     elif lower_text.startswith("https://liff.line.me"):
