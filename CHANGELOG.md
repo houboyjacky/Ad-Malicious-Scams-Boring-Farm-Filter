@@ -1,6 +1,7 @@
 # 歷史更新 History Update
 
 * 20230522 Update
+  * 加入 導向scamadviser評分網頁
   * 加入 縮網址尋找原始網址再加以判斷
   * 調整 回應用詞與排版
 
