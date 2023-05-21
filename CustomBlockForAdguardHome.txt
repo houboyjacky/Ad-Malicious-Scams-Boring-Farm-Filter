@@ -10,6 +10,7 @@
 #||lihi1.me^
 #||pages-wildcard.weebly.com^
 #||phicdn.net^
+#||shopline.tw^
 ||00000255123135324.ml^
 ||029482.shop^
 ||0857online.net
@@ -1336,7 +1337,6 @@
 ||shopeeo.online^
 ||shopfdhgn.club^
 ||shoping688.com^
-||shopline.tw^
 ||shopmetw.weebly.com^
 ||shopping99.com^
 ||shopppkaojggdfg.store^
