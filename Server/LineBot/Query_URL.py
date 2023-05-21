@@ -211,25 +211,20 @@ def update_part_blacklist(add_rule):
 
 # 黑名單判斷
 def check_blacklisted_site(user_text):
-    user_text = user_text.lower()
-    # 解析黑名單中的域名
-    extracted = tldextract.extract(user_text)
-    domain = extracted.domain
-    suffix = extracted.suffix
     for line in blacklist:
         line = line.strip().lower()  # 去除開頭或結尾的空白和轉成小寫
         if line.startswith("/") and line.endswith("/"):
             regex = re.compile(line[1:-1])
-            if regex.match(domain + "." + suffix):
+            if regex.search(user_text):
                 return True
         elif "*" in line:
             regex = line.replace("*", ".+")
-            if re.fullmatch(regex, domain + "." + suffix):
+            if re.fullmatch(regex, user_text):
                 # 特別有*號規則直接可以寫入Adguard規則
                 with open(Tools.NEW_SCAM_WEBSITE_FOR_ADG, "a", encoding="utf-8", newline='') as f:
-                    f.write("||"+ domain + "." + suffix + "^\n")
+                    f.write("||"+ user_text + "^\n")
                 return True
-        elif domain + "." + suffix == line:
+        elif user_text == line:
             return True
     return False
 
