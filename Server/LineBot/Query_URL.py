@@ -35,14 +35,27 @@ FILTER_DIR = "filter"
 
 blacklist = []
 
-def resolve_redirects(url:str):
+# 目前不支援 "t.ly" "reurl.cc" "bit.ly" "tinyurl.com" "is.gd" "lurl.cc" "risu.io"
+# 未知 "picsee.io" "lihi.io" "wenk.io" "lihi.tv" "lihi1.com" "lihi1.me"
+def resolve_redirects(url):
     try:
         response = requests.head(url, allow_redirects=True)
         final_url = response.url
+        logger.info(f"final_url1 = {final_url}")
         return final_url
     except requests.exceptions.RequestException as e:
         logger.info("Error occurred:", e)
-        return None
+
+    try:
+        response = requests.get(url, allow_redirects=False)
+        if response.status_code == 301 or response.status_code == 302:
+            final_url = response.headers['Location']
+            logger.info(f"final_url2 = {final_url}")
+            return final_url
+    except requests.exceptions.RequestException as e:
+        logger.info("Error occurred:", e)
+
+    return None
 
 def update_web_leaderboard(input_url):
     # 取得當天的年月日
@@ -249,16 +262,20 @@ def user_query_website(user_text):
     shorturl_message = ""
     domain_name = f"{domain}.{suffix}"
     if domain_name in Tools.SHORT_URL_LIST:
-        logger.info(f"domain_name={domain_name}")
+        logger.info(f"domain_name = {domain_name}")
         logger.info(f"user_text={user_text}")
         result = resolve_redirects(user_text)
-        extracted = tldextract.extract(result)
-        if extracted:
+        logger.info(f"result={result}")
+
+        if result:
+            extracted = tldextract.extract(result)
             domain = extracted.domain
             suffix = extracted.suffix
-            logger.info(f"result={result}")
             if f"{domain}.{suffix}" == domain_name:
                 shorturl_message = f"「 {user_text} 」是縮網址\n目前縮網址已失效\n"
+                return shorturl_message
+            elif f"{domain}.{suffix}" == "line.me":
+                shorturl_message = f"「 {user_text} 」是縮網址\n原始網址為\n「 {result} 」\n請複製網址重新查詢\n"
                 return shorturl_message
             elif result:
                 shorturl_message = f"「 {domain_name} 」是縮網址\n原始網址為"
