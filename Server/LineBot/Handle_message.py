@@ -159,7 +159,7 @@ def handle_message_text(event):
         message_reply(event.reply_token, rmessage)
         return
 
-    if orgin_text.startswith("使用指南"):
+    if orgin_text.startswith("備用指南"):
         message_reply(event.reply_token, user_guide)
         return
 
@@ -254,7 +254,7 @@ def handle_message_text(event):
         r = lineinvite_read_file(orgin_text)
         if r == -1:
             rmessage = (f"「 {orgin_text} 」\n"
-                        f"輸入有誤，請重新確認\n"
+                        f"輸入有誤或不支援\n"
                         f"感恩")
         elif r == True:
             rmessage = (f"「 {orgin_text} 」\n"
