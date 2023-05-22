@@ -41,7 +41,12 @@ def analyze_line_invite_url(user_text:str) -> Optional[dict]:
     orgin_text = user_text
     lower_text = user_text.lower()
 
-    if lower_text.startswith("https://lin.ee") or lower_text.startswith("https://page.line.me"):
+    if lower_text.startswith("https://linevoom.line.me"):
+        match = re.match(Tools.KEYWORD[9], orgin_text)
+        invite_code = match.groups()
+        struct =  {"類別": "Voom", "邀請碼": invite_code, "原始網址": orgin_text, "回報次數": 0, "失效": 0, "檢查者": ""}
+        return struct
+    elif lower_text.startswith("https://lin.ee") or lower_text.startswith("https://page.line.me"):
         response = requests.get(orgin_text)
         if response.status_code != 200:
             logger.error("lin.ee邀請網址解析失敗")
@@ -51,6 +56,7 @@ def analyze_line_invite_url(user_text:str) -> Optional[dict]:
         logger.info("Redirected_url = " + redirected_url)
         if redirected_url.startswith("https://store.line.me"):
             return False
+        redirected_url = redirected_url.replace("%40", "@")
         match = re.match(Tools.KEYWORD[6], redirected_url)
 
     elif lower_text.startswith("https://liff.line.me"):
@@ -96,7 +102,7 @@ def analyze_line_invite_url(user_text:str) -> Optional[dict]:
         logger.error('無法解析類別')
         return None
 
-    struct =  {"類別": category, "邀請碼": invite_code, "原始網址": user_text, "回報次數": 0, "失效": 0, "檢查者": ""}
+    struct =  {"類別": category, "邀請碼": invite_code, "原始網址": orgin_text, "回報次數": 0, "失效": 0, "檢查者": ""}
 
     return struct
 
