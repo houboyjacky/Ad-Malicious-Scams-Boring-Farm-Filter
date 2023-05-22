@@ -1325,3 +1325,7 @@
 ||sfexpress-delivery.com^
 ! 縮網址列入觀察
 ||imob.tw^
+! etag簡訊詐騙 https://www.dcard.tw/f/anti_fraud/p/242324717
+||etc77.oss-ap-southeast-1.aliyuncs.com^
+! 詐騙交友 https://www.dcard.tw/f/anti_fraud/p/242323600
+||obybook.com^

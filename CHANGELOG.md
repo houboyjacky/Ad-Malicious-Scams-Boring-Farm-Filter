@@ -1,9 +1,11 @@
 # 歷史更新 History Update
 
 * 20230522 Update
+  * 加入 判斷LINE VOOM
   * 加入 導向scamadviser評分網頁
   * 加入 縮網址尋找原始網址再加以判斷
-  * 加入 判斷LINE VOOM
+  * 更新 個人不想看與網友匯報廣告或網站
+  * 更新 Dcard受害文章
   * 調整 回應用詞與排版
   * 調整 縮網址清單改以參數檔控制
   * 調整 scamadviser顯示中文
