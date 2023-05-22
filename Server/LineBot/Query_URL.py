@@ -30,28 +30,40 @@ import Tools
 from datetime import datetime, timedelta
 from collections import defaultdict
 from Logger import logger
+from urllib.request import urlopen
+from urllib.error import HTTPError, URLError
 
 FILTER_DIR = "filter"
 
 blacklist = []
 
-# 目前不支援 "t.ly" "reurl.cc" "bit.ly" "tinyurl.com" "is.gd" "lurl.cc" "risu.io"
-# 未知 "picsee.io" "lihi.io" "wenk.io" "lihi.tv" "lihi1.com" "lihi1.me"
+# 目前不支援 "lurl.cc" "risu.io" "imob.tw" "wenk.io"
+# 未知 "picsee.io" "lihi.io"
 def resolve_redirects(url):
+
     try:
-        response = requests.head(url, allow_redirects=True)
-        final_url = response.url
-        logger.info(f"final_url1 = {final_url}")
-        return final_url
-    except requests.exceptions.RequestException as e:
-        logger.info("Error occurred:", e)
+        response = urlopen(url)
+        final_url = response.geturl()
+        if final_url != url:
+            logger.info(f"final_url1 = {final_url}")
+            return final_url
+    except (HTTPError, URLError) as e:
+        logger.info(f"Error occurred: {e}")
 
     try:
         response = requests.get(url, allow_redirects=False)
         if response.status_code == 301 or response.status_code == 302:
             final_url = response.headers['Location']
-            logger.info(f"final_url2 = {final_url}")
+            logger.info(f"final_url 2 = {final_url}")
             return final_url
+    except requests.exceptions.RequestException as e:
+        logger.info("Error occurred:", e)
+
+    try:
+        response = requests.head(url, allow_redirects=True)
+        final_url = response.url
+        logger.info(f"final_url 3 = {final_url}")
+        return final_url
     except requests.exceptions.RequestException as e:
         logger.info("Error occurred:", e)
 
@@ -260,6 +272,7 @@ def user_query_website(user_text):
 
     #縮網址判斷與找到原始網址
     shorturl_message = ""
+    is_shorturl_get = False
     domain_name = f"{domain}.{suffix}"
     if domain_name in Tools.SHORT_URL_LIST:
         logger.info(f"domain_name = {domain_name}")
@@ -278,7 +291,8 @@ def user_query_website(user_text):
                 shorturl_message = f"「 {user_text} 」是縮網址\n原始網址為\n「 {result} 」\n請複製網址重新查詢\n"
                 return shorturl_message
             elif result:
-                shorturl_message = f"「 {domain_name} 」是縮網址\n原始網址為"
+                is_shorturl_get = True
+                shorturl_message = f"「 {domain_name} 」是縮網址\n原始網址為\n"
     else:
         shorturl_message = ""
         pass
@@ -299,10 +313,14 @@ def user_query_website(user_text):
     #判斷網站
     checkresult = check_blacklisted_site(user_text)
 
+    website = user_text
+    if is_shorturl_get:
+        website = result
+
     if Error or not w.domain_name or not w.creation_date:
         if checkresult:
             rmessage = (f"所輸入的網址\n"
-                        f"{shorturl_message}「 {user_text} 」\n"
+                        f"{shorturl_message}「 {website} 」\n"
                         f"被判定是詐騙／可疑網站\n"
                         f"請勿相信此網站\n"
                         f"若認為誤通報，請補充描述\n"
@@ -310,7 +328,7 @@ def user_query_website(user_text):
             )
         else:
             rmessage = (f"所輸入的網址\n"
-                        f"{shorturl_message}「 {user_text} 」\n"
+                        f"{shorturl_message}「 {website} 」\n"
                         f"目前尚未在資料庫中\n"
                         f"敬請小心謹慎\n"
                         f"\n"
@@ -361,10 +379,13 @@ def user_query_website(user_text):
     else:
         rmessage_country = ""
 
+    website = user_text
+    if is_shorturl_get:
+        website = result
     #判斷網站
     if checkresult:
         rmessage = (f"所輸入的網址\n"
-                    f"{shorturl_message}「 {user_text} 」\n"
+                    f"{shorturl_message}「 {website} 」\n"
                     f"{rmessage_country}"
                     f"{rmessage_creation_date}\n"
                     f"{rmessage_diff_days}\n"
@@ -375,7 +396,7 @@ def user_query_website(user_text):
         )
     else:
         rmessage = (f"所輸入的網址\n"
-                    f"{shorturl_message}「 {user_text} 」\n"
+                    f"{shorturl_message}「 {website} 」\n"
                     f"{rmessage_country}"
                     f"{rmessage_creation_date}\n"
                     f"{rmessage_diff_days}\n"
