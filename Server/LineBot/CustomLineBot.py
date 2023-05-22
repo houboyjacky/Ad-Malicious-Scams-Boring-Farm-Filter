@@ -95,6 +95,10 @@ def message_callback():
 # 每當收到 LINE 聊天機器人的訊息時，觸發此函式
 @handler.add(MessageEvent)
 def handle_message(event):
+
+    if event.source.user_id in Tools.BLACKUSERID:
+        return
+
     message_type = event.message.type
     if message_type == 'image':
         handle_message_image(event)

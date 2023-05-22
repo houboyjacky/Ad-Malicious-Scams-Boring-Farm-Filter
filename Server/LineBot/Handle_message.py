@@ -148,12 +148,6 @@ def handle_message_text(event):
     orgin_text = event.message.text
     lower_text = event.message.text.lower()
 
-    if user_id in Tools.BLACKUSERID:
-        warningsign=["嘿嘿等到你來了:D", "測試人員來上班了啊～","封鎖、刪除、再加入，手會痠嗎？","我已經鎖定你囉！"]
-        random_sign = random.choice(warningsign)
-        message_reply(event.reply_token, random_sign)
-        return
-
     if len(orgin_text) > 1000:
         rmessage = f"謝謝你提供的情報\n請縮短長度或分段傳送"
         message_reply(event.reply_token, rmessage)
@@ -282,6 +276,11 @@ def handle_message_text(event):
             rmessage = f"你想輸入的網址是不是\n「 {url} 」\n請複製貼上對話框\n才能正確判斷"
         else:
             rmessage = user_query_website(orgin_text)
+        message_reply(event.reply_token, rmessage)
+        return
+
+    if orgin_text.startswith("賴 "):
+        rmessage = "「賴」後面直接輸入ID/電話就好，不需要空白"
         message_reply(event.reply_token, rmessage)
         return
 
