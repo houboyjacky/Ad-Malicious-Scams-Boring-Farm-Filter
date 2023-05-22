@@ -1,5 +1,8 @@
 # 歷史更新 History Update
 
+* 20230523 Update
+  * 加入 縮網址特殊規則
+
 * 20230522 Update
   * 加入 判斷LINE VOOM
   * 加入 導向scamadviser評分網頁

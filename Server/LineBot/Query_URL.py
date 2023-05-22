@@ -21,6 +21,7 @@ THE SOFTWARE.
 '''
 
 import hashlib
+import html
 import os
 import re
 import requests
@@ -32,14 +33,57 @@ from collections import defaultdict
 from Logger import logger
 from urllib.request import urlopen
 from urllib.error import HTTPError, URLError
+from bs4 import BeautifulSoup
 
 FILTER_DIR = "filter"
 
 blacklist = []
 
-# 目前不支援 "lurl.cc" "risu.io" "imob.tw" "wenk.io"
+# 目前不支援 "lurl.cc" "risu.io"
 # 未知 "picsee.io" "lihi.io"
+
+def resolve_redirects＿wenkio(url):
+    try:
+        response = requests.get(url)
+        if response.status_code == 200:
+            start_index = response.text.find('url:"')+5
+            end_index = response.text.find('"', start_index)
+            if start_index >= 0 and end_index >= 0:
+                parsed_url = response.text[start_index:end_index]
+                decoded_url = html.unescape(parsed_url.encode().decode('unicode_escape'))
+                return decoded_url
+    except requests.exceptions.RequestException as e:
+        logger.info(f"Error occurred: {e}")
+
+    return None
+
+def resolve_redirects＿recurlcc(url):
+    try:
+        response = requests.get(url)
+        if response.status_code == 200:
+            soup = BeautifulSoup(response.content, 'html.parser')
+            target_url_input = soup.find('input', id='url')
+            if target_url_input:
+                target_url = target_url_input['value']
+                return target_url
+    except requests.exceptions.RequestException as e:
+        logger.info(f"Error occurred: {e}")
+
+    return None
+
 def resolve_redirects(url):
+
+    if url.lower().startswith("https://wenk.io"):
+        final_url = resolve_redirects＿wenkio(url)
+        if final_url != url:
+            logger.info(f"resolve_redirects＿wenkio = {final_url}")
+            return final_url
+
+    if url.lower().startswith("https://reurl.cc"):
+        final_url = resolve_redirects＿recurlcc(url)
+        if final_url != url:
+            logger.info(f"resolve_redirects＿recurlcc = {final_url}")
+            return final_url
 
     try:
         response = urlopen(url)
