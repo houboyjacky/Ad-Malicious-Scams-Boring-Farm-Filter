@@ -62,6 +62,8 @@ LINEID_LOCAL = setting['LINEID_LOCAL']
 SCAM_WEBSITE_LIST = setting['SCAM_WEBSITE_LIST']
 # WEB_LEADERBOARD_FILE => Query Website times leaderboard from file
 WEB_LEADERBOARD_FILE = setting['WEB_LEADERBOARD_FILE']
+# SHORT_URL_LIST => Short url list
+SHORT_URL_LIST = setting['SHORT_URL_LIST']
 
 def reloadSetting():
     global ADMINS, CERT, PRIVKEY, NEW_SCAM_WEBSITE_FOR_ADG, BLACKUSERID

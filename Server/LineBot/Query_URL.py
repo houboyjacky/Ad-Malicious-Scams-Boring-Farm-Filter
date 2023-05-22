@@ -35,13 +35,13 @@ FILTER_DIR = "filter"
 
 blacklist = []
 
-def resolve_redirects(url):
+def resolve_redirects(url:str):
     try:
         response = requests.head(url, allow_redirects=True)
         final_url = response.url
         return final_url
     except requests.exceptions.RequestException as e:
-        print("Error occurred:", e)
+        logger.info("Error occurred:", e)
         return None
 
 def update_web_leaderboard(input_url):
@@ -245,25 +245,23 @@ def user_query_website(user_text):
     if not domain or not suffix:
         return
 
-    #縮網址判斷
+    #縮網址判斷與找到原始網址
     shorturl_message = ""
-    shorturls = {   "t.ly"          , "ppt.cc"  , "reurl.cc"    , "bit.ly"  , "goo.gl"  ,
-                    "tinyurl.com"   , "is.gd"   , "t.co"        , "cutt.ly" , "lurl.cc" ,
-                    "picsee.io"     , "lihi.io" , "wenk.io"     , "risu.io"
-                }
     domain_name = f"{domain}.{suffix}"
-    if domain_name in shorturls:
+    if domain_name in Tools.SHORT_URL_LIST:
         logger.info(f"domain_name={domain_name}")
+        logger.info(f"user_text={user_text}")
         result = resolve_redirects(user_text)
         extracted = tldextract.extract(result)
-        domain = extracted.domain
-        suffix = extracted.suffix
-        logger.info(f"result={result}")
-        if f"{domain}.{suffix}" == domain_name:
-            shorturl_message = f"「 {user_text} 」是縮網址\n目前縮網址已失效\n"
-            return shorturl_message
-        elif result:
-            shorturl_message = f"「 {domain_name} 」是縮網址\n原始網址為"
+        if extracted:
+            domain = extracted.domain
+            suffix = extracted.suffix
+            logger.info(f"result={result}")
+            if f"{domain}.{suffix}" == domain_name:
+                shorturl_message = f"「 {user_text} 」是縮網址\n目前縮網址已失效\n"
+                return shorturl_message
+            elif result:
+                shorturl_message = f"「 {domain_name} 」是縮網址\n原始網址為"
     else:
         shorturl_message = ""
         pass
