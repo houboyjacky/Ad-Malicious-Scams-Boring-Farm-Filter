@@ -359,7 +359,16 @@ def check_blacklisted_site(user_text):
                 return True
         elif user_text == line:
             return True
+        elif user_text.endswith(line) and line in Special_SubWebsite:
+            # 特別子網域規則直接可以寫入Adguard規則
+            with open(Tools.NEW_SCAM_WEBSITE_FOR_ADG, "a", encoding="utf-8", newline='') as f:
+                f.write("||"+ user_text + "^\n")
+            return True
     return False
+
+Special_SubWebsite = [
+    "wixsite.com"
+]
 
 # 使用者查詢網址
 def user_query_website(user_text):
@@ -412,8 +421,14 @@ def user_query_website(user_text):
         w = None
         Error = True
     logger.info(w)
+
     #判斷網站
-    checkresult = check_blacklisted_site(user_text)
+    if user_text in Special_SubWebsite:
+        full_domain_name = f"{extracted.subdomain.lower()}.{domain}.{suffix}"
+        logger.info(f"full_domain_name = {full_domain_name}")
+        checkresult = check_blacklisted_site(full_domain_name)
+    else:
+        checkresult = check_blacklisted_site(user_text)
 
     website = user_text
     if is_shorturl_get:

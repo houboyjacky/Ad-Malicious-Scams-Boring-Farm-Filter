@@ -124,7 +124,6 @@
 /js[0-9]+\.cn/
 /kicurency.+\..+/
 /kimomi\.[a-z]+/
-/ko-.+\..+/
 /kpcb[a-z0-9]*\.com/
 /linebank\.(beauty|click|homes|lol|one|mom|xyz|pics|skin|hair|shop)/
 /linedown.(beauty|click|homes|lol|one|mom|xyz|pics|skin|hair|shop)/
