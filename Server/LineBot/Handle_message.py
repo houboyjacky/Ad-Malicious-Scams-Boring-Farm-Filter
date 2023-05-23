@@ -261,13 +261,14 @@ def handle_message_text(event):
                         f"「不是」已知詐騙邀請網址\n"
                         f"並不代表沒問題\n"
                         f"\n"
-                        f"若該LINE邀請人是「沒見過面」的\n"
-                        f"「網友」\n"
+                        f"若該LINE邀請人\n"
+                        f"是「沒見過面」的「網友」\n"
                         f"又介紹能帶你一起賺錢\n"
                         f"１００％就是有問題\n"
                         f"\n"
-                        f"若想尋求協助\n"
-                        f"請貼出截圖與對話\n"
+                        f"若想「舉發」或「協助」\n"
+                        f"可以貼出截圖與對話\n"
+                        f"以利後續幫忙\n"
                         f"\n"
                         f"讓大家繼續幫助大家\n"
                         f"讓社會越來越好\n"
@@ -277,9 +278,15 @@ def handle_message_text(event):
 
     # 如果用戶輸入的網址沒有以 http 或 https 開頭，則不回應訊息
     if re.match(Tools.KEYWORD[8], lower_text):
-        if lower_text.startswith("https://lm.facebook.com"):
+        if lower_text.startswith("https://lm.facebook.com") or lower_text.startswith("https://l.facebook.com"):
             url = Tools.decode_facebook_url(lower_text)
-            rmessage = f"你想輸入的網址是不是\n「 {url} 」\n請複製貼上對話框\n才能正確判斷"
+            rmessage = user_query_website(url)
+
+            #取得原網址
+            extracted = tldextract.extract(lower_text)
+            domain = f"{extracted.subdomain.lower()}.{extracted.domain.lower()}"
+
+            rmessage = f"原網址為「 {domain} 」的轉址\n實際{rmessage}"
         else:
             rmessage = user_query_website(orgin_text)
         message_reply(event.reply_token, rmessage)
@@ -304,13 +311,14 @@ def handle_message_text(event):
                         f"目前不在詐騙黑名單中\n"
                         f"並不代表沒問題\n"
                         f"\n"
-                        f"若該LINE ID是「沒見過面」的\n"
-                        f"「網友」\n"
+                        f"若該LINE ID\n"
+                        f"是「沒見過面」的「網友」\n"
                         f"又介紹能帶你一起賺錢\n"
                         f"１００％就是有問題\n"
                         f"\n"
-                        f"若想尋求協助\n"
-                        f"請貼出截圖與對話\n"
+                        f"若想「舉發」或「協助」\n"
+                        f"可以貼出截圖與對話\n"
+                        f"以利後續幫忙\n"
                         f"\n"
                         f"讓大家繼續幫助大家\n"
                         f"讓社會越來越好\n"
