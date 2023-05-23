@@ -10,10 +10,9 @@ def calculate_hash(file_path):
 
 def get_txt_files(directory):
     txt_files = []
-    for root, dirs, files in os.walk(directory):
-        for file in files:
-            if file.endswith('.txt'):
-                txt_files.append(os.path.join(root, file))
+    for file in os.listdir(directory):
+        if file.endswith('.txt') and os.path.isfile(os.path.join(directory, file)):
+            txt_files.append(os.path.join(directory, file))
     return txt_files
 
 def generate_hash_json(directory):
