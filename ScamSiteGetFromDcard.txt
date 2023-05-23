@@ -1346,3 +1346,11 @@
 ||booking-reservation-page.cloud^
 ! 詐騙電商 https://www.dcard.tw/f/buyonline/p/242331876
 ||mixue-global.com^
+! 詐騙虛擬貨幣 https://www.dcard.tw/f/anti_fraud/p/242341480
+||seagenxes.com^
+! 詐騙遊戲帳號 https://www.dcard.tw/f/aov/p/242341663
+||abo8v.top^
+! 詐騙購物 https://www.dcard.tw/f/anti_fraud/p/242340012
+||newmall.space^
+! 詐騙投資 https://www.dcard.tw/f/money/p/242338240
+||stgjpt.net^
