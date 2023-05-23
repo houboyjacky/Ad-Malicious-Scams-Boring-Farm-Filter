@@ -73,6 +73,9 @@ def resolve_redirects＿recurlcc(url):
 
 def resolve_redirects(url):
 
+    if url.lower().startswith("http://"):
+        url = "https://" + url[7:]
+
     if url.lower().startswith("https://wenk.io"):
         final_url = resolve_redirects＿wenkio(url)
         if final_url != url:
