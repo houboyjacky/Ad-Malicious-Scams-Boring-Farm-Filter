@@ -1,10 +1,12 @@
 # 歷史更新 History Update
 
 * 20230523 Update
+  * 加入 提前計算hash
   * 加入 縮網址特殊規則
   * 調整 下載檔案機制，降低下載頻率
-  * 調整 Facebook轉址自動查詢
   * 調整 回應用詞與排版
+  * 調整 Facebook轉址自動查詢
+  * 調整 Log顯示
 
 * 20230522 Update
   * 加入 判斷LINE VOOM

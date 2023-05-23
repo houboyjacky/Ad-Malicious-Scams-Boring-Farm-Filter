@@ -138,7 +138,6 @@ if __name__ == "__main__":
 
     user_download_lineid()
     download_cf_ips()
-    logger.info('download_cf_ips Finish')
     update_blacklist()
     Invite_check_data(Tools.NETIZEN)
 

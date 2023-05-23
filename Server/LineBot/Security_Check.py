@@ -23,6 +23,7 @@ THE SOFTWARE.
 import os
 import hashlib
 import requests
+from Logger import logger
 
 CF_IPS_URL = "https://www.cloudflare.com/ips-v4"
 CF_IPS_LOCAL = "config/Cloudflare_ipv4.txt"
@@ -44,6 +45,8 @@ def download_cf_ips():
         if not os.path.exists(CF_IPS_LOCAL) or hash_cf_ips != get_local_ips_hash():
             with open(CF_IPS_LOCAL, "w") as f:
                 f.write(cf_ips)
+
+        logger.info('Download cf_ips Finish')
     else:
         raise Exception("Unable to download Cloudflare IPs.")
 
