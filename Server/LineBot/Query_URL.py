@@ -28,6 +28,7 @@ import requests
 import tldextract
 import whois
 import Tools
+import json
 from datetime import datetime, timedelta
 from collections import defaultdict
 from Logger import logger
@@ -193,37 +194,89 @@ def get_web_leaderboard():
 
     return output
 
+def calculate_hash(file_path):
+    with open(file_path, 'rb') as file:
+        content = file.read()
+        hash_value = hashlib.md5(content).hexdigest()
+        return hash_value
+
+remote_hash_dict = {}
+
+def hashes_download():
+    global remote_hash_dict
+    # 下載 hashes.json
+    response = requests.get(Tools.HASH_FILE)
+    if response.status_code != 200:
+        logger.error(url + " download failed")
+        return None
+
+    remote_hash_dict = json.loads(response.content)
+    logger.info('hashes_download Finish')
+    return
+
 def download_file(url):
     response = requests.get(url)
     if response.status_code != 200:
-        logger.error(url + "download fail")
+        logger.error(f"{url} download fail")
         return None
+    return response.content
 
-    content = response.content
+def write_to_file(content, file_path):
+    with open(file_path, "wb") as f:
+        f.write(response.content)
+    return
+
+def download_write_file(url, file_path):
+    content = download_file(url)
+    if not content:
+        return None
+    write_to_file(content, file_path)
+    return file_path
+
+def check_download_file(url):
     # 使用 url 的最後一部分作為檔名
-    filename = os.path.join(FILTER_DIR, url.split("/")[-1])
+    Local_file_path = os.path.join(FILTER_DIR, url.split("/")[-1])
+    Local_file_name = url.split("/")[-1]
+    Local_file_hash = calculate_hash(Local_file_path)
 
     # 如果檔案不存在，則直接下載
-    if not os.path.exists(filename):
-        with open(filename, "wb") as f:
-            f.write(content)
-        logger.info(filename + " is download")
-        return filename
+    if not os.path.exists(Local_file_path):
+        if download_write_file(url, Local_file_path):
+            logger.info(f"{Local_file_name} is new download")
+            return Local_file_path
+        else:
+            logger.info(f"{Local_file_name} is fail to new download")
+            return None
 
-    # 如果檔案已存在，則比對雜湊值
-    with open(filename, "rb") as f:
-        existing_content = f.read()
-    existing_hash = hashlib.sha1(existing_content).hexdigest()
-    new_hash = hashlib.sha1(content).hexdigest()
-    if existing_hash != new_hash:
-        # 雜湊值不同，代表內容有更新，需要下載
-        with open(filename, "wb") as f:
-            f.write(content)
-        logger.info(filename + " is download")
-        return filename
+    # 如果檔案已存在，則比對hash值
+    #logger.info(f"Local_file_name = [{Local_file_name}]")
+    #logger.info(f"Local_file_hash = [{Local_file_hash}]")
+    # 比較 hash 值
+    for remote_file_name, remote_file_hash in remote_hash_dict.items():
+        #logger.info(f"remote_file_name = [{remote_file_name}]")
+        #logger.info(f"remote_file_hash = [{remote_file_hash}]")
+        if Local_file_name == remote_file_name:
+            if Local_file_hash == remote_file_hash:
+                #logger.info(f"{remote_file_name} is same")
+                return Local_file_path
+            if download_write_file(url, Local_file_path):
+                logger.info(f"{Local_file_name} is download")
+            #即便下載失敗也得讀取本地資料
+            return Local_file_path
 
-    # 雜湊值相同，代表檔案已經是最新的，不需要下載
-    return filename
+    # 不在清單內的直接處理hash
+    content = download_file(url)
+    if not content:
+        logger.info(f"{Local_file_name} is fail to download")
+        #即便下載失敗也得讀取本地資料
+        return Local_file_path
+
+    remote_file_hash = hashlib.md5(content).hexdigest()
+
+    if(remote_file_hash != Local_file_hash):
+        write_to_file(content, file_path)
+        #logger.info(f"{Local_file_name} is download")
+    return Local_file_path
 
 def read_rule(filename):
     global blacklist
@@ -260,9 +313,11 @@ def update_blacklist():
     if is_running:
         logger.info("Updating blacklist!")
         return
-    else:
-        pass
+
     is_running = True
+
+    hashes_download()
+
     with open(Tools.SCAM_WEBSITE_LIST, "r") as f:
         urls = f.readlines()
 
@@ -270,7 +325,7 @@ def update_blacklist():
         url = url.strip()  # 去除換行符號
         if not url.startswith('http'):
             continue
-        filename = download_file(url)
+        filename = check_download_file(url)
         if not filename:
             continue
         read_rule(filename)

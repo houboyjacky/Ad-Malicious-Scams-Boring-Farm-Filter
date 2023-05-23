@@ -64,11 +64,14 @@ SCAM_WEBSITE_LIST = setting['SCAM_WEBSITE_LIST']
 WEB_LEADERBOARD_FILE = setting['WEB_LEADERBOARD_FILE']
 # SHORT_URL_LIST => Short url list
 SHORT_URL_LIST = setting['SHORT_URL_LIST']
+# HASH_FILE => HASH INF IN FILE
+HASH_FILE = setting['HASH_FILE']
 
 def reloadSetting():
     global ADMINS, CERT, PRIVKEY, NEW_SCAM_WEBSITE_FOR_ADG, BLACKUSERID
     global CHANNEL_ACCESS_TOKEN, CHANNEL_SECRET, NETIZEN, KEYWORD, LOGFILE
     global USER_POINT, LINE_INVITE, LINEID_WEB, LINEID_LOCAL, SCAM_WEBSITE_LIST
+    global WEB_LEADERBOARD_FILE, SHORT_URL_LIST, HASH_FILE
     global setting
     setting = ''
     with open('setting.json', 'r') as f:
@@ -105,6 +108,12 @@ def reloadSetting():
     LINEID_LOCAL = setting['LINEID_LOCAL']
     # SCAM_WEBSITE_LIST => SCAM WEBSITE LIST
     SCAM_WEBSITE_LIST = setting['SCAM_WEBSITE_LIST']
+    # WEB_LEADERBOARD_FILE => Query Website times leaderboard from file
+    WEB_LEADERBOARD_FILE = setting['WEB_LEADERBOARD_FILE']
+    # SHORT_URL_LIST => Short url list
+    SHORT_URL_LIST = setting['SHORT_URL_LIST']
+    # HASH_FILE => HASH INF IN FILE
+    HASH_FILE = setting['HASH_FILE']
 
 def read_json_file(filename: str) -> list:
     try:

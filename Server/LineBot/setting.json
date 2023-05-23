@@ -5,13 +5,16 @@
     "CERT":"",
     "CHANNEL_ACCESS_TOKEN":"",
     "CHANNEL_SECRET":"",
-    "NETIZEN":"",
-    "WEB_LEADERBOARD_FILE":"",
+    "HASH_FILE":"",
+    "KEYWORD":["","",""],
+    "LINEID_LOCAL":"",
+    "LINE_INVITE":"",
     "LINEID_WEB":"",
     "LOGFILE":"",
+    "NETIZEN":"",
     "PRIVKEY":"",
-    "KEYWORD":["","",""],
     "SCAM_WEBSITE_LIST":"",
     "SHORT_URL_LIST":["","",""],
-	"USER_POINT":""
+    "WEB_LEADERBOARD_FILE":"",
+    "USER_POINT":""
 }
