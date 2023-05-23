@@ -207,7 +207,7 @@ def hashes_download():
     # 下載 hashes.json
     response = requests.get(Tools.HASH_FILE)
     if response.status_code != 200:
-        logger.error(url + " download failed")
+        logger.error(f"{Tools.HASH_FILE} download failed")
         return None
 
     remote_hash_dict = json.loads(response.content)
@@ -223,7 +223,7 @@ def download_file(url):
 
 def write_to_file(content, file_path):
     with open(file_path, "wb") as f:
-        f.write(response.content)
+        f.write(content)
     return
 
 def download_write_file(url, file_path):
@@ -274,7 +274,7 @@ def check_download_file(url):
     remote_file_hash = hashlib.md5(content).hexdigest()
 
     if(remote_file_hash != Local_file_hash):
-        write_to_file(content, file_path)
+        write_to_file(content, Local_file_path)
         #logger.info(f"{Local_file_name} is download")
     return Local_file_path
 
