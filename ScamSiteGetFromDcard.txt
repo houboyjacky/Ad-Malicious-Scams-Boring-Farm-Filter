@@ -1329,3 +1329,20 @@
 ||etc77.oss-ap-southeast-1.aliyuncs.com^
 ! 詐騙交友 https://www.dcard.tw/f/anti_fraud/p/242323600
 ||obybook.com^
+! 購物詐騙 https://www.dcard.tw/f/buyonline/p/242337898
+||biepena.com^
+! 旋轉詐騙 https://www.dcard.tw/f/buyonline/p/242336482
+||twcarousell.bond^
+||twcarousell.xyz^
+! 詐騙交友 https://www.dcard.tw/f/anti_fraud/p/242323600
+||obybook.com^
+||xotimes.com^
+||mudoe.com^
+! 詐騙投資廣告 https://www.dcard.tw/f/meme/p/242336733
+||twbgushi.com^
+||twstockx.shop^
+||stocksty.shop^
+! 詐騙訂房網站 https://www.dcard.tw/f/travel/p/242323353
+||booking-reservation-page.cloud^
+! 詐騙電商 https://www.dcard.tw/f/buyonline/p/242331876
+||mixue-global.com^
