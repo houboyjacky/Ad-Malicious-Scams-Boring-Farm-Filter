@@ -242,91 +242,108 @@ def handle_message_text(event):
         rmessage = f"你的檢舉積分是{str(point)}分\n排名第{str(rank)}名"
         message_reply(event.reply_token, rmessage)
         return
+    prefix = ""
+    while True:
+        # 查詢line邀請網址
+        if re.match(Tools.KEYWORD[7], lower_text):
+            r = lineinvite_read_file(orgin_text)
+            if r == -1:
+                rmessage = (f"{prefix}「 {orgin_text} 」\n"
+                            f"輸入有誤或不支援\n"
+                            f"感恩")
+            elif r == True:
+                rmessage = (f"{prefix}「 {orgin_text} 」\n"
+                            f"「是」已知詐騙Line邀請網址\n"
+                            f"請勿輕易信任此Line ID的\n"
+                            f"文字、圖像、語音和連結\n"
+                            f"感恩")
+            else:
+                rmessage = (f"{prefix}「 {orgin_text} 」\n"
+                            f"「不是」已知詐騙邀請網址\n"
+                            f"並不代表沒問題\n"
+                            f"\n"
+                            f"若該LINE邀請人\n"
+                            f"是「沒見過面」的「網友」\n"
+                            f"又介紹能帶你一起賺錢\n"
+                            f"１００％就是有問題\n"
+                            f"\n"
+                            f"若想「舉發」或「協助」\n"
+                            f"可以貼出截圖與對話\n"
+                            f"以利後續幫忙\n"
+                            f"\n"
+                            f"讓大家繼續幫助大家\n"
+                            f"讓社會越來越好\n"
+                            f"感恩")
+            message_reply(event.reply_token, rmessage)
+            break
 
-    # 查詢line邀請網址
-    if re.match(Tools.KEYWORD[7], lower_text):
-        r = lineinvite_read_file(orgin_text)
-        if r == -1:
-            rmessage = (f"「 {orgin_text} 」\n"
-                        f"輸入有誤或不支援\n"
-                        f"感恩")
-        elif r == True:
-            rmessage = (f"「 {orgin_text} 」\n"
-                        f"「是」已知詐騙Line邀請網址\n"
-                        f"請勿輕易信任此Line ID的\n"
-                        f"文字、圖像、語音和連結\n"
-                        f"感恩")
-        else:
-            rmessage = (f"「 {orgin_text} 」\n"
-                        f"「不是」已知詐騙邀請網址\n"
-                        f"並不代表沒問題\n"
-                        f"\n"
-                        f"若該LINE邀請人\n"
-                        f"是「沒見過面」的「網友」\n"
-                        f"又介紹能帶你一起賺錢\n"
-                        f"１００％就是有問題\n"
-                        f"\n"
-                        f"若想「舉發」或「協助」\n"
-                        f"可以貼出截圖與對話\n"
-                        f"以利後續幫忙\n"
-                        f"\n"
-                        f"讓大家繼續幫助大家\n"
-                        f"讓社會越來越好\n"
-                        f"感恩")
-        message_reply(event.reply_token, rmessage)
-        return
+        # 如果用戶輸入的網址沒有以 http 或 https 開頭，則不回應訊息
+        redirects_list = ["https://lm.facebook.com", "https://l.facebook.com", "https://l.instagram.com"]
+        if re.match(Tools.KEYWORD[8], lower_text):
+            if any(lower_text.startswith(redirect) for redirect in redirects_list):
+                url = Tools.decode_facebook_url(lower_text)
+                logger.info(f"url = {url}")
 
-    # 如果用戶輸入的網址沒有以 http 或 https 開頭，則不回應訊息
-    if re.match(Tools.KEYWORD[8], lower_text):
-        if lower_text.startswith("https://lm.facebook.com") or lower_text.startswith("https://l.facebook.com"):
-            url = Tools.decode_facebook_url(lower_text)
-            rmessage = user_query_website(url)
+                source_url = tldextract.extract(lower_text)
+                source_domain = f"{source_url.subdomain.lower()}.{source_url.domain.lower()}"
 
-            #取得原網址
-            extracted = tldextract.extract(lower_text)
-            domain = f"{extracted.subdomain.lower()}.{extracted.domain.lower()}"
+                result_url = tldextract.extract(url)
+                result_domain = f"{result_url.domain.lower()}.{result_url.suffix.lower()}"
 
-            rmessage = f"原網址為「 {domain} 」的轉址\n實際{rmessage}"
-        else:
-            rmessage = user_query_website(orgin_text)
-        message_reply(event.reply_token, rmessage)
-        return
+                if result_domain == "line.me" or result_domain == "lin.ee":
+                    prefix = f"「 {source_domain} 」轉址到\n"
+                    lower_text = url
+                    orgin_text = url
+                    continue
+                else:
+                    rmessage = user_query_website(url)
 
-    if orgin_text.startswith("賴 "):
-        rmessage = "「賴」後面直接輸入ID/電話就好，不需要空白"
-        message_reply(event.reply_token, rmessage)
-        return
+                    #取得原網址
+                    extracted = tldextract.extract(lower_text)
+                    domain = f"{extracted.subdomain.lower()}.{extracted.domain.lower()}"
 
-    # 查詢Line ID
-    if re.search(Tools.KEYWORD[3], lower_text):
-        lineid = lower_text.replace("賴", "")
-        if user_query_lineid(lineid):
-            rmessage = (f"「{lineid}」\n"
-                        f"「是」詐騙Line ID\n"
-                        f"請勿輕易信任此Line ID的\n"
-                        f"文字、圖像、語音和連結\n"
-                        f"感恩")
-        else:
-            rmessage = (f"「{lineid}」\n"
-                        f"目前不在詐騙黑名單中\n"
-                        f"並不代表沒問題\n"
-                        f"\n"
-                        f"若該LINE ID\n"
-                        f"是「沒見過面」的「網友」\n"
-                        f"又介紹能帶你一起賺錢\n"
-                        f"１００％就是有問題\n"
-                        f"\n"
-                        f"若想「舉發」或「協助」\n"
-                        f"可以貼出截圖與對話\n"
-                        f"以利後續幫忙\n"
-                        f"\n"
-                        f"讓大家繼續幫助大家\n"
-                        f"讓社會越來越好\n"
-                        f"感恩")
+                    rmessage = f"原網址為「 {domain} 」的轉址\n實際{rmessage}"
+            else:
+                rmessage = user_query_website(orgin_text)
 
-        message_reply(event.reply_token, rmessage)
-        return
+            message_reply(event.reply_token, rmessage)
+            break
 
+        if orgin_text.startswith("賴 "):
+            rmessage = "「賴」後面直接輸入ID/電話就好，不需要空白"
+            message_reply(event.reply_token, rmessage)
+            break
+
+        # 查詢Line ID
+        if re.search(Tools.KEYWORD[3], lower_text):
+            lineid = lower_text.replace("賴", "")
+            if user_query_lineid(lineid):
+                rmessage = (f"{prefix}「{lineid}」\n"
+                            f"「是」詐騙Line ID\n"
+                            f"請勿輕易信任此Line ID的\n"
+                            f"文字、圖像、語音和連結\n"
+                            f"感恩")
+            else:
+                rmessage = (f"{prefix}「{lineid}」\n"
+                            f"目前不在詐騙黑名單中\n"
+                            f"並不代表沒問題\n"
+                            f"\n"
+                            f"若該LINE ID\n"
+                            f"是「沒見過面」的「網友」\n"
+                            f"又介紹能帶你一起賺錢\n"
+                            f"１００％就是有問題\n"
+                            f"\n"
+                            f"若想「舉發」或「協助」\n"
+                            f"可以貼出截圖與對話\n"
+                            f"以利後續幫忙\n"
+                            f"\n"
+                            f"讓大家繼續幫助大家\n"
+                            f"讓社會越來越好\n"
+                            f"感恩")
+
+            message_reply(event.reply_token, rmessage)
+            break
+        break
     return
 
 def handle_message_image(event):
