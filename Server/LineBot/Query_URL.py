@@ -117,7 +117,17 @@ def resolve_redirects(url):
 
     return None
 
+Not_to_Add_site = ["facebook.com", "google.com", "instagram.com", "youtube.com"]
+
 def update_web_leaderboard(input_url):
+
+    input_url = input_url.lower()
+
+    if input_url in Not_to_Add_site:
+        return
+    if input_url in Tools.SHORT_URL_LIST:
+        return
+
     # 取得當天的年月日
     today = datetime.now().strftime("%Y%m%d")
     # 要寫入的資料
