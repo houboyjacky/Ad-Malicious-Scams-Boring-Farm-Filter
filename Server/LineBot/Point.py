@@ -20,26 +20,10 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 '''
 
-import os
 import Tools
 
 # global 變數，用來儲存點數列表
 Point_List = {}
-
-def load_point_file():
-    global Point_List
-    if os.path.exists(Tools.USER_POINT):
-        with open(Tools.USER_POINT, "r") as f:
-            lines = f.readlines()
-            for line in lines:
-                uid, point = line.strip().split(":")
-                Point_List[uid] = int(point)
-
-def write_point_file():
-    global Point_List
-    with open(Tools.USER_POINT, "w") as f:
-        for uid, point in Point_List.items():
-            f.write(f"{uid}:{point}\n")
 
 def write_user_point(user_id, addpoint):
     global Point_List
@@ -47,7 +31,7 @@ def write_user_point(user_id, addpoint):
         Point_List[user_id] = addpoint
     else:
         Point_List[user_id] += addpoint
-    write_point_file()
+    Tools.write_count_file()
 
 def read_user_point(user_id) -> int:
     global Point_List
@@ -71,4 +55,4 @@ def get_user_rank(user_id):
     return rank
 
 # 在程式一開始呼叫讀取檔案函式，將檔案內容存入 Point_List
-load_point_file()
+Tools.load_count_file(Tools.USER_POINT, Point_List)

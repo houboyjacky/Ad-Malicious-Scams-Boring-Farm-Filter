@@ -20,6 +20,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 '''
 
+import os
 import json
 import re
 import pycountry
@@ -172,3 +173,16 @@ def translate_country(country_code):
         return country.name
     except LookupError:
         return "Unknown"
+
+def load_count_file(filename:str, List:list):
+    if os.path.exists(filename):
+        with open(filename, "r") as f:
+            lines = f.readlines()
+            for line in lines:
+                uid, point = line.strip().split(":")
+                List[uid] = int(point)
+                
+def write_count_file(filename:str, List:list):
+    with open(filename, "w") as f:
+        for uid, point in List.items():
+            f.write(f"{uid}:{point}\n")

@@ -22,7 +22,6 @@ THE SOFTWARE.
 
 import os
 import pytesseract
-import random
 import re
 import time
 import tldextract
