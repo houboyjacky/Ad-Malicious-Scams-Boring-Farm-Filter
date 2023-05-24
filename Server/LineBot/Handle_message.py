@@ -250,7 +250,7 @@ def handle_message_text(event):
             r = lineinvite_read_file(orgin_text)
             if r == -1:
                 rmessage = (f"{prefix}「 {orgin_text} 」\n"
-                            f"輸入有誤或不支援\n"
+                            f"輸入有誤、網址失效或不支援\n"
                             f"感恩")
             elif r == True:
                 rmessage = (f"{prefix}「 {orgin_text} 」\n"

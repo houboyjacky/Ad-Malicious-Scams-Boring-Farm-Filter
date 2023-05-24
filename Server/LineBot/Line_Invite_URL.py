@@ -79,6 +79,10 @@ def analyze_line_invite_url(user_text:str) -> Optional[dict]:
 
         logger.info("Redirected_url 2 = " + redirected_url)
 
+        if redirected_url == "https://store.line.me/officialaccount/" :
+            logger.info("該官方帳號已無效")
+            return False
+
         match = re.match(Tools.KEYWORD[6], redirected_url)
     else:
         match = re.match(Tools.KEYWORD[6], orgin_text)
