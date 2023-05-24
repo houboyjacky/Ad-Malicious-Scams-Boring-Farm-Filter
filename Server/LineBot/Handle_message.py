@@ -38,6 +38,7 @@ from Point import read_user_point, get_user_rank
 from PrintText import user_guide
 from Query_Line_ID import user_query_lineid, user_add_lineid
 from Query_URL import user_query_website, check_blacklisted_site, get_web_leaderboard, update_part_blacklist
+from Query_Instagram import IG_read_file, IG_write_file
 
 image_analysis = False
 line_bot_api = LineBotApi(Tools.CHANNEL_ACCESS_TOKEN)
@@ -75,10 +76,15 @@ def handle_admin_message_text(user_text):
             rmessage = f"邀請黑名單更新完成"
         else:
             rmessage = f"邀請黑名單更新失敗"
-
+    elif match := re.search(Tools.KEYWORD[12], lower_text):
+        r = IG_write_file(orgin_text)
+        if r == 1:
+            rmessage = f"IG名單已存在"
+        elif r == 0:
+            rmessage = f"IG黑名單更新完成"
+        else:
+            rmessage = f"IG黑名單更新失敗"
     elif match := re.search(Tools.KEYWORD[0], lower_text):
-
-        match = re.search(Tools.KEYWORD[0], lower_text)
 
         # 取得網址
         url = match.group(1)
@@ -87,7 +93,7 @@ def handle_admin_message_text(user_text):
         extracted = tldextract.extract(url)
         domain = extracted.domain
         suffix = extracted.suffix
-        if domain in allowlist:
+        if f"{domain}.{suffix}" in allowlist:
             rmessage = f"網址封鎖有誤，不允許{domain}.{suffix}"
             return rmessage
 
@@ -267,6 +273,40 @@ def handle_message_text(event):
                             f"是「沒見過面」的「網友」\n"
                             f"又介紹能帶你一起賺錢\n"
                             f"１００％就是有問題\n"
+                            f"\n"
+                            f"若想「舉發」或「協助」\n"
+                            f"可以貼出截圖與對話\n"
+                            f"以利後續幫忙\n"
+                            f"\n"
+                            f"讓大家繼續幫助大家\n"
+                            f"讓社會越來越好\n"
+                            f"感恩")
+            message_reply(event.reply_token, rmessage)
+            break
+
+        # 判斷IG帳戶、貼文或影片
+        if re.match(Tools.KEYWORD[13], lower_text):
+            r = IG_read_file(orgin_text)
+            if r == -1:
+                rmessage = (f"「 {orgin_text} 」\n"
+                            f"IG網址有誤、網址失效或不支援\n"
+                            f"感恩")
+            elif r == True:
+                rmessage = (f"「 {orgin_text} 」\n"
+                            f"「是」已知詐騙/可疑的IG\n"
+                            f"請勿輕易信任此IG的\n"
+                            f"文字、圖像、語音和連結\n"
+                            f"感恩")
+            else:
+                rmessage = (f"「 {orgin_text} 」\n"
+                            f"「不是」已知詐騙/可疑的IG\n"
+                            f"並不代表沒問題\n"
+                            f"\n"
+                            f"若該IG帳號的貼文\n"
+                            f"1. 能帶你一起賺錢\n"
+                            f"2. 炫富式貼文\n"
+                            f"3. IG追蹤太少\n"
+                            f"有極大的機率是有問題的\n"
                             f"\n"
                             f"若想「舉發」或「協助」\n"
                             f"可以貼出截圖與對話\n"

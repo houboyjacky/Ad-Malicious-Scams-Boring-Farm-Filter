@@ -66,12 +66,14 @@ WEB_LEADERBOARD_FILE = setting['WEB_LEADERBOARD_FILE']
 SHORT_URL_LIST = setting['SHORT_URL_LIST']
 # HASH_FILE => HASH INF IN FILE
 HASH_FILE = setting['HASH_FILE']
+# IG_BLACKLIST => Blacklist for IG
+IG_BLACKLIST = setting['IG_BLACKLIST']
 
 def reloadSetting():
     global ADMINS, CERT, PRIVKEY, NEW_SCAM_WEBSITE_FOR_ADG, BLACKUSERID
     global CHANNEL_ACCESS_TOKEN, CHANNEL_SECRET, NETIZEN, KEYWORD, LOGFILE
     global USER_POINT, LINE_INVITE, LINEID_WEB, LINEID_LOCAL, SCAM_WEBSITE_LIST
-    global WEB_LEADERBOARD_FILE, SHORT_URL_LIST, HASH_FILE
+    global WEB_LEADERBOARD_FILE, SHORT_URL_LIST, HASH_FILE, IG_BLACKLIST
     global setting
     setting = ''
     with open('setting.json', 'r') as f:
@@ -114,6 +116,8 @@ def reloadSetting():
     SHORT_URL_LIST = setting['SHORT_URL_LIST']
     # HASH_FILE => HASH INF IN FILE
     HASH_FILE = setting['HASH_FILE']
+    # IG_BLACKLIST => Blacklist for IG
+    IG_BLACKLIST = setting['IG_BLACKLIST']
 
 def read_json_file(filename: str) -> list:
     try:

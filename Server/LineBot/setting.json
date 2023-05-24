@@ -6,6 +6,7 @@
     "CHANNEL_ACCESS_TOKEN":"",
     "CHANNEL_SECRET":"",
     "HASH_FILE":"",
+    "IG_BLACKLIST":"",
     "KEYWORD":["","",""],
     "LINEID_LOCAL":"",
     "LINE_INVITE":"",
