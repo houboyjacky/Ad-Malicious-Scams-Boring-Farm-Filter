@@ -90,17 +90,22 @@ def IG_read_file(user_text:str) -> int:
     if not analyze:
         return -1
 
-    for result in IG_list:
-        if result["識別碼"] == analyze["識別碼"]:
-            return True
+    if analyze["識別碼"]:
+        for result in IG_list:
+            if result["識別碼"] == analyze["識別碼"]:
+                return True
+    elif analyze["帳號"]:
+        for result in IG_list:
+            if result["帳號"] == analyze["帳號"]:
+                return True
     return False
 
 def IG_check_data(filename: str) -> None:
     global IG_list
     modify = False
     for item in IG_list:
-        if "類別" not in item:
-            item["類別"] = ""
+        if "帳號" not in item:
+            item["帳號"] = ""
             modify = True
         if "識別碼" not in item:
             item["識別碼"] = ""

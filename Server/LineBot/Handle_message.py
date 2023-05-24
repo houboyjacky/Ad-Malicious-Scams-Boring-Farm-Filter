@@ -21,8 +21,8 @@ THE SOFTWARE.
 '''
 
 import os
-import pytesseract
 import re
+import pytesseract
 import time
 import tldextract
 import Tools
@@ -66,7 +66,6 @@ def handle_admin_message_text(user_text):
             # 加入新line id
             user_add_lineid(lineid)
             rmessage = f"邀請黑名單與賴黑名單更新完成{lineid}"
-
     elif match := re.search(Tools.KEYWORD[4], lower_text):
         r =  lineinvite_write_file(orgin_text)
         if r == 1:
@@ -83,8 +82,19 @@ def handle_admin_message_text(user_text):
             rmessage = f"IG黑名單更新完成"
         else:
             rmessage = f"IG黑名單更新失敗"
+    elif match := re.search(Tools.KEYWORD[14], orgin_text):
+        ig_account = match.group(1).lower()
+        logger.info(f"ig_account = {ig_account}")
+        url = f"https://www.instagram.com/{ig_account}/"
+        logger.info(f"url = {url}")
+        r = IG_write_file(url)
+        if r == 1:
+            rmessage = f"IG名單已存在"
+        elif r == 0:
+            rmessage = f"IG黑名單更新完成"
+        else:
+            rmessage = f"IG黑名單更新失敗"
     elif match := re.search(Tools.KEYWORD[0], lower_text):
-
         # 取得網址
         url = match.group(1)
 
@@ -112,7 +122,6 @@ def handle_admin_message_text(user_text):
             rmessage = f"網址黑名單更新完成"
 
     elif match := re.search(Tools.KEYWORD[1], orgin_text):
-
         # 取得文字
         text = match.group(1)
 
@@ -126,7 +135,6 @@ def handle_admin_message_text(user_text):
         rmessage = f"網址名單更新完成"
 
     elif match := re.search(Tools.KEYWORD[2], lower_text):
-
         # 取得文字
         lineid = match.group(1)
         r = user_query_lineid(lineid)
