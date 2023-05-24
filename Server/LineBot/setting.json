@@ -13,6 +13,8 @@
     "LINEID_WEB":"",
     "LOGFILE":"",
     "NETIZEN":"",
+    "NOTICE_BOARD":"",
+    "NOTICE_BOARD_LIST":"",
     "PRIVKEY":"",
     "SCAM_WEBSITE_LIST":"",
     "SHORT_URL_LIST":["","",""],

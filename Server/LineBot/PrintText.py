@@ -20,6 +20,8 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 '''
 
+import Tools
+
 user_guide = (  f"目前有五項功能\n"
                 f"1. 查詢危險網址：\n"
                 f"加上「http://」或者「https://」網址即可\n"
@@ -58,3 +60,32 @@ user_guide = (  f"目前有五項功能\n"
                 f"回覆慢還請見諒\n"
                 f"感恩"
             )
+
+Notice_Board_List = []
+notice_text = ""
+
+def reload_user_record():
+    global Notice_Board_List
+    Notice_Board_List = Tools.read_file_to_list(Tools.NOTICE_BOARD_LIST)
+
+def check_user_need_news(user_id) -> bool:
+    global Notice_Board_List
+
+    # 如果沒有要公佈，不需要檢查後續
+    if Tools.is_file_len(Tools.NOTICE_BOARD) == 0:
+        return False
+
+    # 如果已經發過公布，就會在紀錄上
+    if user_id in Notice_Board_List:
+        return False
+
+    Notice_Board_List.append(user_id)
+    Tools.write_list_to_file(Tools.NOTICE_BOARD_LIST, Notice_Board_List)
+    return True
+
+def reload_notice_board():
+    global notice_text
+    notice_text = Tools.read_file(Tools.NOTICE_BOARD)
+
+reload_notice_board()
+reload_user_record()

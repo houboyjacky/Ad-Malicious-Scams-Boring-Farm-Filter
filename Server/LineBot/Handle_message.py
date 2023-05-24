@@ -34,7 +34,7 @@ from linebot.models import TextSendMessage
 from Logger import logger
 from PIL import Image
 from Point import read_user_point, get_user_rank
-from PrintText import user_guide
+from PrintText import user_guide, check_user_need_news, reload_user_record, reload_notice_board, notice_text
 from Query_Line_ID import user_query_lineid, user_add_lineid
 from Query_URL import user_query_website, check_blacklisted_site, get_web_leaderboard, update_part_blacklist
 from Query_Instagram import IG_read_file, IG_write_file
@@ -43,9 +43,11 @@ image_analysis = False
 line_bot_api = LineBotApi(Tools.CHANNEL_ACCESS_TOKEN)
 
 # 回應訊息的函式
-def message_reply(reply_token, text):
+def message_reply(event, text):
+    if check_user_need_news(event.source.user_id):
+        text = f"{text}\n\n{notice_text}"
     message = TextSendMessage(text=text)
-    line_bot_api.reply_message(reply_token, message)
+    line_bot_api.reply_message(event.reply_token, message)
     return
 
 allowlist = { "facebook.com", "instagram.com", "google.com", "youtube.com", "youtu.be" }
@@ -163,11 +165,11 @@ def handle_message_text(event):
 
     if len(orgin_text) > 1000:
         rmessage = f"謝謝你提供的情報\n請縮短長度或分段傳送"
-        message_reply(event.reply_token, rmessage)
+        message_reply(event, rmessage)
         return
 
     if orgin_text.startswith("備用指南"):
-        message_reply(event.reply_token, user_guide)
+        message_reply(event, user_guide)
         return
 
     # 管理員操作
@@ -175,9 +177,11 @@ def handle_message_text(event):
         if orgin_text == "重讀":
             setting = ''
             Tools.reloadSetting()
+            reload_user_record()
+            reload_notice_board()
             logger.info("Reload setting.json")
             rmessage = f"設定已重新載入"
-            message_reply(event.reply_token, rmessage)
+            message_reply(event, rmessage)
             return
         elif orgin_text == "檢閱":
             content = get_netizen_file(user_id)
@@ -185,22 +189,22 @@ def handle_message_text(event):
                 rmessage = f"內容：\n\n{content}\n\n參閱與處置後\n請輸入「完成」或「失效」"
             else:
                 rmessage = f"目前沒有需要檢閱的資料"
-            message_reply(event.reply_token, rmessage)
+            message_reply(event, rmessage)
             return
         elif orgin_text == "關閉辨識":
             image_analysis = False
             rmessage = f"已關閉辨識"
-            message_reply(event.reply_token, rmessage)
+            message_reply(event, rmessage)
             return
         elif orgin_text == "開啟辨識":
             image_analysis = True
             rmessage = f"已開啟辨識"
-            message_reply(event.reply_token, rmessage)
+            message_reply(event, rmessage)
             return
         elif orgin_text.startswith("加入"):
             rmessage = handle_admin_message_text(orgin_text)
             if rmessage:
-                message_reply(event.reply_token, rmessage)
+                message_reply(event, rmessage)
                 return
         else:
             pass
@@ -209,12 +213,12 @@ def handle_message_text(event):
         user_name = line_bot_api.get_profile(user_id).display_name
         write_new_netizen_file(user_id, user_name, orgin_text)
         rmessage = f"謝謝你提供的情報\n輸入「積分」\n可以查詢你的積分排名"
-        message_reply(event.reply_token, rmessage)
+        message_reply(event, rmessage)
         return
 
     if orgin_text == "網站排行榜":
         rmessage = get_web_leaderboard()
-        message_reply(event.reply_token, rmessage)
+        message_reply(event, rmessage)
         return
 
     if orgin_text == "遊戲":
@@ -224,7 +228,7 @@ def handle_message_text(event):
         else:
             rmessage = f"請開始你的檢舉遊戲\n{site}\n若「完成」請回報「完成」\n若「失效」請回傳「失效」"
 
-        message_reply(event.reply_token, rmessage)
+        message_reply(event, rmessage)
         return
 
     if orgin_text == "完成":
@@ -235,7 +239,7 @@ def handle_message_text(event):
         else:
             rmessage = f"程式有誤，請勿繼續使用"
 
-        message_reply(event.reply_token, rmessage)
+        message_reply(event, rmessage)
         return
 
     if orgin_text == "失效":
@@ -245,7 +249,7 @@ def handle_message_text(event):
             rmessage = f"感謝你的回報\n輸入「遊戲」\n進行下一波行動\n輸入「積分」\n可以查詢你的積分排名"
         else:
             rmessage = f"程式有誤，請勿繼續使用"
-        message_reply(event.reply_token, rmessage)
+        message_reply(event, rmessage)
         return
 
     if orgin_text == "積分":
@@ -253,7 +257,7 @@ def handle_message_text(event):
         rank = get_user_rank(user_id)
 
         rmessage = f"你的檢舉積分是{str(point)}分\n排名第{str(rank)}名"
-        message_reply(event.reply_token, rmessage)
+        message_reply(event, rmessage)
         return
 
     prefix = ""
@@ -288,7 +292,7 @@ def handle_message_text(event):
                             f"讓大家繼續幫助大家\n"
                             f"讓社會越來越好\n"
                             f"感恩")
-            message_reply(event.reply_token, rmessage)
+            message_reply(event, rmessage)
             break
 
         # 判斷IG帳戶、貼文或影片
@@ -322,7 +326,7 @@ def handle_message_text(event):
                             f"讓大家繼續幫助大家\n"
                             f"讓社會越來越好\n"
                             f"感恩")
-            message_reply(event.reply_token, rmessage)
+            message_reply(event, rmessage)
             break
 
         # 如果用戶輸入的網址沒有以 http 或 https 開頭，則不回應訊息
@@ -355,12 +359,12 @@ def handle_message_text(event):
             else:
                 rmessage = user_query_website(orgin_text)
 
-            message_reply(event.reply_token, rmessage)
+            message_reply(event, rmessage)
             break
 
         if orgin_text.startswith("賴 "):
             rmessage = "「賴」後面直接輸入ID/電話就好，不需要空白"
-            message_reply(event.reply_token, rmessage)
+            message_reply(event, rmessage)
             break
 
         # 查詢Line ID
@@ -390,7 +394,7 @@ def handle_message_text(event):
                             f"讓社會越來越好\n"
                             f"感恩")
 
-            message_reply(event.reply_token, rmessage)
+            message_reply(event, rmessage)
             break
 
         break
@@ -454,7 +458,7 @@ def handle_message_image(event):
         elapsed_time_str = Tools.format_elapsed_time(elapsed_time)
 
         rmessage += f"網站：\n{website_msg}\n\n耗時：{elapsed_time_str}\n\n判斷文字：\n{text_msg}"
-        message_reply(event.reply_token, rmessage)
+        message_reply(event, rmessage)
     return
 
 def handle_message_file(event):
@@ -499,5 +503,5 @@ def handle_message_file(event):
             f.write(chunk)
 
     # 回覆使用者已收到檔案
-    message_reply(event.reply_token, "")
+    message_reply(event, "")
     return

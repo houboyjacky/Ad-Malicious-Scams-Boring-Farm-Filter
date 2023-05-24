@@ -69,12 +69,17 @@ SHORT_URL_LIST = setting['SHORT_URL_LIST']
 HASH_FILE = setting['HASH_FILE']
 # IG_BLACKLIST => Blacklist for IG
 IG_BLACKLIST = setting['IG_BLACKLIST']
+# NOTICE_BOARD => NOTICE BOARD
+NOTICE_BOARD = setting['NOTICE_BOARD']
+# NOTICE_BOARD_LIST => NOTICE BOARD LIST
+NOTICE_BOARD_LIST = setting['NOTICE_BOARD_LIST']
 
 def reloadSetting():
     global ADMINS, CERT, PRIVKEY, NEW_SCAM_WEBSITE_FOR_ADG, BLACKUSERID
     global CHANNEL_ACCESS_TOKEN, CHANNEL_SECRET, NETIZEN, KEYWORD, LOGFILE
     global USER_POINT, LINE_INVITE, LINEID_WEB, LINEID_LOCAL, SCAM_WEBSITE_LIST
     global WEB_LEADERBOARD_FILE, SHORT_URL_LIST, HASH_FILE, IG_BLACKLIST
+    global NOTICE_BOARD, NOTICE_BOARD_LIST
     global setting
     setting = ''
     with open('setting.json', 'r') as f:
@@ -119,6 +124,10 @@ def reloadSetting():
     HASH_FILE = setting['HASH_FILE']
     # IG_BLACKLIST => Blacklist for IG
     IG_BLACKLIST = setting['IG_BLACKLIST']
+    # NOTICE_BOARD => NOTICE BOARD
+    NOTICE_BOARD = setting['NOTICE_BOARD']
+    # NOTICE_BOARD_LIST => NOTICE BOARD LIST
+    NOTICE_BOARD_LIST = setting['NOTICE_BOARD_LIST']
 
 def read_json_file(filename: str) -> list:
     try:
@@ -181,8 +190,31 @@ def load_count_file(filename:str, List:list):
             for line in lines:
                 uid, point = line.strip().split(":")
                 List[uid] = int(point)
-                
+
 def write_count_file(filename:str, List:list):
     with open(filename, "w") as f:
         for uid, point in List.items():
             f.write(f"{uid}:{point}\n")
+
+def read_file_to_list(file_path):
+    # 讀取檔案並將內容轉換為清單
+    with open(file_path, 'r') as file:
+        lines = file.readlines()
+    # 移除每行的換行符號並返回清單
+    return [line.strip() for line in lines]
+
+def write_list_to_file(file_path, data_list):
+    # 將清單中的內容寫入檔案
+    with open(file_path, 'w') as file:
+        for item in data_list:
+            file.write(item + '\n')
+
+def is_file_len(file_path):
+    with open(file_path, 'r') as file:
+        content = file.read()
+    return len(content)
+
+def read_file(file_path):
+    with open(file_path, 'r') as file:
+        lines = file.readlines()
+    return ''.join(lines)
