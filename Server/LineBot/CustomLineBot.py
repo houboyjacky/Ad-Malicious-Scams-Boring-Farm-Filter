@@ -123,7 +123,7 @@ def Logger_schedule(stop_event):
         schedule.run_pending()
 
 def signal_handler(sig, frame):
-    logger.info('Received signal : ' + str(sig))
+    logger.info(f"Received signal : {str(sig)}")
     stop_event.set()
     Logger_Transfer()
     sys.exit(0)

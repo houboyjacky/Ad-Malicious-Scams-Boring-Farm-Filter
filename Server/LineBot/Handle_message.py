@@ -242,6 +242,7 @@ def handle_message_text(event):
         rmessage = f"你的檢舉積分是{str(point)}分\n排名第{str(rank)}名"
         message_reply(event.reply_token, rmessage)
         return
+
     prefix = ""
     while True:
         # 查詢line邀請網址
@@ -290,6 +291,7 @@ def handle_message_text(event):
                 result_url = tldextract.extract(url)
                 result_domain = f"{result_url.domain.lower()}.{result_url.suffix.lower()}"
 
+                # 遇到line的連結直接重新判斷
                 if result_domain == "line.me" or result_domain == "lin.ee":
                     prefix = f"「 {source_domain} 」轉址到\n"
                     lower_text = url
@@ -318,13 +320,13 @@ def handle_message_text(event):
         if re.search(Tools.KEYWORD[3], lower_text):
             lineid = lower_text.replace("賴", "")
             if user_query_lineid(lineid):
-                rmessage = (f"{prefix}「{lineid}」\n"
+                rmessage = (f"「{lineid}」\n"
                             f"「是」詐騙Line ID\n"
                             f"請勿輕易信任此Line ID的\n"
                             f"文字、圖像、語音和連結\n"
                             f"感恩")
             else:
-                rmessage = (f"{prefix}「{lineid}」\n"
+                rmessage = (f"「{lineid}」\n"
                             f"目前不在詐騙黑名單中\n"
                             f"並不代表沒問題\n"
                             f"\n"
@@ -343,7 +345,9 @@ def handle_message_text(event):
 
             message_reply(event.reply_token, rmessage)
             break
+
         break
+
     return
 
 def handle_message_image(event):
