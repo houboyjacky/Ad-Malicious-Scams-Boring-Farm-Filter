@@ -385,6 +385,7 @@ def user_query_website(user_text):
 
     #解析網址
     extracted = tldextract.extract(user_text)
+    subdomain = extracted.subdomain.lower()
     domain = extracted.domain.lower()
     suffix = extracted.suffix.lower()
 
@@ -394,9 +395,14 @@ def user_query_website(user_text):
     #縮網址判斷與找到原始網址
     shorturl_message = ""
     is_shorturl_get = False
-    domain_name = f"{domain}.{suffix}"
+
+    if subdomain:
+        domain_name = f"{subdomain}.{domain}.{suffix}"
+    else:
+        domain_name = f"{domain}.{suffix}"
+    logger.info(f"domain_name = {domain_name}")
+
     if domain_name in Tools.SHORT_URL_LIST:
-        logger.info(f"domain_name = {domain_name}")
         logger.info(f"user_text={user_text}")
         result = resolve_redirects(user_text)
         logger.info(f"result={result}")
@@ -405,12 +411,15 @@ def user_query_website(user_text):
             extracted = tldextract.extract(result)
             domain = extracted.domain
             suffix = extracted.suffix
+            # 網址都一樣，不是真的已失效，就是被網站阻擋
             if f"{domain}.{suffix}" == domain_name:
                 shorturl_message = f"「 {user_text} 」是縮網址\n目前縮網址已失效\n"
                 return shorturl_message
+            # 直接回傳是賴的字串，讓使用者重新輸入
             elif f"{domain}.{suffix}" == "line.me":
                 shorturl_message = f"「 {user_text} 」是縮網址\n原始網址為\n「 {result} 」\n請複製網址重新查詢\n"
                 return shorturl_message
+            # 讓他繼續Go下去
             elif result:
                 is_shorturl_get = True
                 shorturl_message = f"「 {domain_name} 」是縮網址\n原始網址為\n"
