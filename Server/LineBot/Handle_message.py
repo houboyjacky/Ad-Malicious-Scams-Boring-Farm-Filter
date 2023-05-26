@@ -28,17 +28,17 @@ import tldextract
 import Tools
 from GetFromNetizen import push_netizen_file, write_new_netizen_file, get_netizen_file
 from io import BytesIO
-from Line_Invite_URL import lineinvite_write_file, lineinvite_read_file, get_random_invite, push_random_invite
 from linebot import LineBotApi
 from linebot.models import TextSendMessage
 from Logger import logger
 from PIL import Image
 from Point import read_user_point, get_user_rank
 from PrintText import user_guide, check_user_need_news, reload_user_record, reload_notice_board, return_notice_text, suffix_for_call
-from Query_Line_ID import user_query_lineid, user_add_lineid
-from Query_URL import user_query_website, check_blacklisted_site, get_web_leaderboard, update_part_blacklist
-from Query_Instagram import IG_read_file, IG_write_file
 from Query_Facebook import FB_read_file, FB_write_file
+from Query_Instagram import IG_read_file, IG_write_file
+from Query_Line_ID import user_query_lineid, user_add_lineid
+from Query_Line_Invite import lineinvite_write_file, lineinvite_read_file, get_random_invite, push_random_invite
+from Query_URL import user_query_website, check_blacklisted_site, get_web_leaderboard, update_part_blacklist
 
 image_analysis = False
 line_bot_api = LineBotApi(Tools.CHANNEL_ACCESS_TOKEN)
