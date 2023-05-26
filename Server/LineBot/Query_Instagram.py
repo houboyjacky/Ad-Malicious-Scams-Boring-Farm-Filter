@@ -54,11 +54,9 @@ def analyze_IG_url(user_text:str) -> Optional[dict]:
 
 def add_sort_IG(input, results):
     # 查找是否有重複的識別碼和帳號
-    Is_Find = False
     if input['識別碼']:
         for r in results:
             if input['識別碼'] == r['識別碼']:
-                Is_Find = True
                 if not r['帳號'] and input['帳號']:
                     r['帳號'] = input['帳號']
                     return 0
@@ -66,7 +64,6 @@ def add_sort_IG(input, results):
     elif input['帳號']:
         for r in results:
             if r['帳號'] == input['帳號']:
-                Is_Find = True
                 return 1
     results.append(input)
     return 0
@@ -129,7 +126,7 @@ def IG_clear_data(filename: str) -> None:
     global IG_list
     modify = False
     for item in IG_list:
-        if "檢查者":
+        if item["檢查者"]:
             item["檢查者"] = ""
             modify = True
     if modify:

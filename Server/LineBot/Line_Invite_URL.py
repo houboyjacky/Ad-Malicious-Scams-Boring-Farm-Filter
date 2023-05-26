@@ -221,7 +221,7 @@ def Invite_clear_data(filename: str) -> None:
     global invites
     modify = False
     for item in invites:
-        if "檢查者":
+        if item["檢查者"]:
             item["檢查者"] = ""
             modify = True
     if modify:
