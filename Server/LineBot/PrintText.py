@@ -61,6 +61,14 @@ user_guide = (  f"目前有五項功能\n"
                 f"感恩"
             )
 
+suffix_for_call = ( f"可以繼續貼出截圖與對話\n"
+                    f"向我「舉發」\n"
+                    f"以利加入黑名單與後續協助\n"
+                    f"\n"
+                    f"讓大家繼續幫助大家\n"
+                    f"讓社會越來越好\n"
+                    f"感恩")
+
 Notice_Board_List = []
 notice_text = ""
 

@@ -285,13 +285,11 @@ def handle_message_text(event):
                             f"又介紹能帶你一起賺錢\n"
                             f"１００％就是有問題\n"
                             f"\n"
-                            f"若想「舉發」或「協助」\n"
-                            f"可以貼出截圖與對話\n"
-                            f"以利後續幫忙\n"
+                            f"{suffix_for_call}")
+            message_reply(event, rmessage)
+            break
                             f"\n"
-                            f"讓大家繼續幫助大家\n"
-                            f"讓社會越來越好\n"
-                            f"感恩")
+                            f"{suffix_for_call}")
             message_reply(event, rmessage)
             break
 
@@ -299,33 +297,27 @@ def handle_message_text(event):
         if re.match(Tools.KEYWORD[13], lower_text):
             r = IG_read_file(orgin_text)
             if r == -1:
-                rmessage = (f"「 {orgin_text} 」\n"
+                rmessage = (f"所輸入的\n「 {orgin_text} 」\n"
                             f"IG網址有誤、網址失效或不支援\n"
                             f"感恩")
             elif r == True:
-                rmessage = (f"「 {orgin_text} 」\n"
+                rmessage = (f"所輸入的\n「 {orgin_text} 」\n"
                             f"「是」已知詐騙/可疑的IG\n"
                             f"請勿輕易信任此IG的\n"
                             f"文字、圖像、語音和連結\n"
                             f"感恩")
             else:
-                rmessage = (f"「 {orgin_text} 」\n"
+                rmessage = (f"所輸入的\n「 {orgin_text} 」\n"
                             f"「不是」已知詐騙/可疑的IG\n"
-                            f"並不代表沒問題\n"
+                            f"但並不代表沒問題\n"
                             f"\n"
                             f"若該IG帳號的貼文\n"
                             f"1. 能帶你一起賺錢\n"
                             f"2. 炫富式貼文\n"
-                            f"3. IG追蹤太少\n"
+                            f"3. IG廣告，但追蹤太少\n"
                             f"有極大的機率是有問題的\n"
                             f"\n"
-                            f"若想「舉發」或「協助」\n"
-                            f"可以貼出截圖與對話\n"
-                            f"以利後續幫忙\n"
-                            f"\n"
-                            f"讓大家繼續幫助大家\n"
-                            f"讓社會越來越好\n"
-                            f"感恩")
+                            f"{suffix_for_call}")
             message_reply(event, rmessage)
             break
 
@@ -371,28 +363,22 @@ def handle_message_text(event):
         if re.search(Tools.KEYWORD[3], lower_text):
             lineid = lower_text.replace("賴", "")
             if user_query_lineid(lineid):
-                rmessage = (f"「{lineid}」\n"
+                rmessage = (f"所輸入的「{lineid}」\n"
                             f"「是」詐騙Line ID\n"
                             f"請勿輕易信任此Line ID的\n"
                             f"文字、圖像、語音和連結\n"
                             f"感恩")
             else:
-                rmessage = (f"「{lineid}」\n"
+                rmessage = (f"所輸入的「{lineid}」\n"
                             f"目前不在詐騙黑名單中\n"
-                            f"並不代表沒問題\n"
+                            f"但並不代表沒問題\n"
                             f"\n"
                             f"若該LINE ID\n"
                             f"是「沒見過面」的「網友」\n"
-                            f"又介紹能帶你一起賺錢\n"
+                            f"又能帶你一起賺錢或兼職\n"
                             f"１００％就是有問題\n"
                             f"\n"
-                            f"若想「舉發」或「協助」\n"
-                            f"可以貼出截圖與對話\n"
-                            f"以利後續幫忙\n"
-                            f"\n"
-                            f"讓大家繼續幫助大家\n"
-                            f"讓社會越來越好\n"
-                            f"感恩")
+                            f"{suffix_for_call}")
 
             message_reply(event, rmessage)
             break

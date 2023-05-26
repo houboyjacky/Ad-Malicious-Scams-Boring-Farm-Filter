@@ -35,6 +35,7 @@ from Logger import logger
 from urllib.request import urlopen
 from urllib.error import HTTPError, URLError
 from bs4 import BeautifulSoup
+from PrintText import suffix_for_call
 
 FILTER_DIR = "filter"
 
@@ -221,7 +222,7 @@ def hashes_download():
         return None
 
     remote_hash_dict = json.loads(response.content)
-    logger.info('hashes_download Finish')
+    logger.info('Download Hashes Finish')
     return
 
 def download_file(url):
@@ -471,10 +472,7 @@ def user_query_website(user_text):
                         f"網站評分參考：\n"
                         f"「 https://www.scamadviser.com/zh/check-website/{user_text} 」\n"
                         f"\n"
-                        f"此外若認為問題，請補充描述\n"
-                        f"放入相關描述、連結、截圖圖等\n"
-                        f"協助考證\n"
-                        f"感恩"
+                        f"{suffix_for_call}\n"
             )
         return rmessage
 
@@ -549,10 +547,7 @@ def user_query_website(user_text):
                     f"詐騙與可疑程度越高\n"
                     f"符合第4點一定是詐騙\n"
                     f"\n"
-                    f"此外若尋求協助，請補充描述\n"
-                    f"描述過程、貼上連結、截圖等\n"
-                    f"以協助考證\n"
-                    f"感恩"
+                    f"{suffix_for_call}"
         )
 
     return rmessage
