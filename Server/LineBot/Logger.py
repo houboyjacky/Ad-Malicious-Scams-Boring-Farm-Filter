@@ -71,4 +71,3 @@ def Logger_Transfer(pre_close = True):
 
     if not pre_close:
         logger.addHandler(file_handler)
-

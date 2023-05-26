@@ -23,6 +23,8 @@ THE SOFTWARE.
 import re
 import Tools
 from Point import write_user_point
+from datetime import datetime
+import pytz
 
 line_domains = ["lin.ee", "line.me", "lineblog.me", "linecorp.com", "line-scdn.net", "line.naver.jp", "line.biz"]
 
@@ -66,14 +68,28 @@ def write_new_netizen_file(user_id:str, user_name:str, user_text:str) -> bool:
     else:
         category = "Other"
 
+    # 取得當下時間
+    current_time = datetime.now()
+
+    # 設定東八區的時區
+    timezone = pytz.timezone('Asia/Taipei')
+
+    # 將當下時間轉換為東八區的時間
+    current_time_eight = current_time.astimezone(timezone)
+
+    # 將東八區時間轉換為字串
+    timenow = current_time_eight.strftime('%Y-%m-%d %H:%M:%S')
+
     struct =  { "序號": number,
+                "時間": timenow,
                 "類別": category,
                 "提交者": user_name,
                 "提交者ID": user_id,
                 "內容": user_text,
                 "完成": 0,
                 "失效": 0,
-                "檢查者": ""
+                "檢查者": "",
+                "已報案":0
             }
 
     # 新增結果
@@ -88,7 +104,7 @@ def write_new_netizen_file(user_id:str, user_name:str, user_text:str) -> bool:
 def get_netizen_file(user_id:str):
     global netizens
     for netizen in netizens:
-        if netizen["完成"] == 0 and netizen["失效"] == 0:
+        if netizen["完成"] == 0 and netizen["失效"] == 0 and netizen["已報案"] == 0:
             netizen['檢查者'] = user_id
             Tools.write_json_file(Tools.NETIZEN, netizens)
             return netizen["內容"]
@@ -111,34 +127,3 @@ def push_netizen_file(UserID, success, disappear):
     if found:
         Tools.write_json_file(Tools.NETIZEN, netizens)
     return found
-
-def Invite_check_data(filename: str) -> None:
-    global netizens
-    modify = False
-    for item in netizens:
-        if "序號" not in item:
-            item["序號"] = 0
-            modify = True
-        if "類別" not in item:
-            item["類別"] = 0
-            modify = True
-        if "提交者" not in item:
-            item["提交者"] = 0
-            modify = True
-        if "提交者ID" not in item:
-            item["提交者ID"] = 0
-            modify = True
-        if "內容" not in item:
-            item["內容"] = 0
-            modify = True
-        if "完成" not in item:
-            item["完成"] = 0
-            modify = True
-        if "失效" not in item:
-            item["失效"] = 0
-            modify = True
-        if "檢查者" not in item:
-            item["檢查者"] = ""
-            modify = True
-    if modify:
-        Tools.write_json_file(filename, netizens)

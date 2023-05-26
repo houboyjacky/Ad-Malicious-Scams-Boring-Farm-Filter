@@ -28,7 +28,7 @@ import sys
 import threading
 import time
 import Tools
-# pip3 install schedule tldextract flask line-bot-sdk whois beautifulsoup4 pytesseract pycountry python-dateutil
+# pip3 install schedule tldextract flask line-bot-sdk whois beautifulsoup4 pytesseract pycountry python-dateutil pytz
 # pytesseract
 # sudo apt install tesseract-ocr tesseract-ocr-eng tesseract-ocr-chi-tra tesseract-ocr-chi-tra-vert tesseract-ocr-chi-sim tesseract-ocr-chi-sim-vert
 
@@ -41,7 +41,6 @@ from Query_Line_ID import user_download_lineid
 from Query_URL import update_blacklist
 from Security_Check import get_cf_ips, download_cf_ips
 from Handle_message import handle_message_file, handle_message_image, handle_message_text
-from GetFromNetizen import Invite_check_data
 
 app = Flask(__name__)
 
@@ -139,7 +138,6 @@ if __name__ == "__main__":
     user_download_lineid()
     download_cf_ips()
     update_blacklist()
-    Invite_check_data(Tools.NETIZEN)
 
     # 建立 thread
     update_thread = threading.Thread(target=Update_url_schedule, args=(stop_event,))

@@ -31,7 +31,7 @@ def write_user_point(user_id, addpoint):
         Point_List[user_id] = addpoint
     else:
         Point_List[user_id] += addpoint
-    Tools.write_count_file()
+    Tools.write_count_file(Tools.USER_POINT, Point_List)
 
 def read_user_point(user_id) -> int:
     global Point_List
