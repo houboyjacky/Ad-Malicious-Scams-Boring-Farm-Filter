@@ -81,6 +81,10 @@ KEYWORD_LINE = setting['KEYWORD_LINE']
 KEYWORD_IG = setting['KEYWORD_IG']
 # KEYWORD_FB => Keyword for FB
 KEYWORD_FB = setting['KEYWORD_FB']
+# TELEGRAM_LOCAL => Blacklist for Blacklist
+TELEGRAM_LOCAL = setting['TELEGRAM_LOCAL']
+# KEYWORD_TELEGRAM => Keyword for TELEGRAM
+KEYWORD_TELEGRAM = setting['KEYWORD_TELEGRAM']
 
 def reloadSetting():
     global ADMINS, CERT, PRIVKEY, NEW_SCAM_WEBSITE_FOR_ADG, BLACKUSERID
@@ -88,7 +92,7 @@ def reloadSetting():
     global USER_POINT, LINE_INVITE, LINEID_WEB, LINEID_LOCAL, SCAM_WEBSITE_LIST
     global WEB_LEADERBOARD_FILE, SHORT_URL_LIST, HASH_FILE, IG_BLACKLIST
     global NOTICE_BOARD, NOTICE_BOARD_LIST, FB_BLACKLIST, KEYWORD_URL
-    global KEYWORD_LINE, KEYWORD_FB, KEYWORD_IG
+    global KEYWORD_LINE, KEYWORD_FB, KEYWORD_IG, TELEGRAM_LOCAL, KEYWORD_TELEGRAM
     global setting
 
     setting = ''
@@ -121,6 +125,8 @@ def reloadSetting():
     KEYWORD_LINE = setting['KEYWORD_LINE']
     KEYWORD_FB = setting['KEYWORD_FB']
     KEYWORD_IG = setting['KEYWORD_IG']
+    TELEGRAM_LOCAL = setting['TELEGRAM_LOCAL']
+    KEYWORD_TELEGRAM = setting['KEYWORD_TELEGRAM']
     return
 
 def read_json_file(filename: str) -> list:

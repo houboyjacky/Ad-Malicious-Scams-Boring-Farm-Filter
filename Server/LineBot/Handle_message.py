@@ -38,6 +38,7 @@ from Query_Facebook import FB_read_file, FB_write_file
 from Query_Instagram import IG_read_file, IG_write_file
 from Query_Line_ID import user_query_lineid, user_add_lineid
 from Query_Line_Invite import lineinvite_write_file, lineinvite_read_file, get_random_invite, push_random_invite
+from Query_Telegram import user_query_telegram_id, user_add_telegram_id
 from Query_URL import user_query_website, check_blacklisted_site, get_web_leaderboard, update_part_blacklist
 
 image_analysis = False
@@ -155,6 +156,17 @@ def handle_admin_message_text(user_text):
             # 加入新line id
             user_add_lineid(lineid)
             rmessage = f"賴黑名單已加入" + lineid
+
+    elif match := re.search(Tools.KEYWORD_TELEGRAM[1], lower_text):
+        # 取得文字
+        telegram_id = match.group(1)
+        r = user_query_telegram_id(telegram_id)
+        if r:
+            rmessage = f"Telegram黑名單已存在" + telegram_id
+        else:
+            # 加入新telegram id
+            user_add_telegram_id(telegram_id)
+            rmessage = f"Telegram黑名單已加入" + telegram_id
     else:
         pass
 
@@ -280,7 +292,7 @@ def handle_message_text(event):
                             f"感恩")
             elif r == True:
                 rmessage = (f"{prefix}「 {orgin_text} 」\n"
-                            f"「是」已知詐騙Line邀請網址\n"
+                            f"「是」已知詐騙/可疑Line邀請網址\n"
                             f"請勿輕易信任此Line ID的\n"
                             f"文字、圖像、語音和連結\n"
                             f"感恩")
@@ -396,12 +408,17 @@ def handle_message_text(event):
             message_reply(event, rmessage)
             break
 
+        if orgin_text.startswith("TG "):
+            rmessage = "「TG」後面直接輸入ID就好，不需要空白"
+            message_reply(event, rmessage)
+            break
+
         # 查詢Line ID
         if re.search(Tools.KEYWORD_LINE[1], lower_text):
             lineid = lower_text.replace("賴", "")
             if user_query_lineid(lineid):
                 rmessage = (f"所輸入的「{lineid}」\n"
-                            f"「是」詐騙Line ID\n"
+                            f"「是」詐騙/可疑Line ID\n"
                             f"請勿輕易信任此Line ID的\n"
                             f"文字、圖像、語音和連結\n"
                             f"感恩")
@@ -411,6 +428,30 @@ def handle_message_text(event):
                             f"但並不代表沒問題\n"
                             f"\n"
                             f"若該LINE ID\n"
+                            f"是「沒見過面」的「網友」\n"
+                            f"又能帶你一起賺錢或兼職\n"
+                            f"１００％就是有問題\n"
+                            f"\n"
+                            f"{suffix_for_call}")
+
+            message_reply(event, rmessage)
+            break
+
+        # 查詢Telegram ID
+        if re.search(Tools.KEYWORD_TELEGRAM[0], orgin_text):
+            telegram_id = lower_text[2:]
+            if user_query_telegram_id(telegram_id):
+                rmessage = (f"所輸入的「{telegram_id}」\n"
+                            f"「是」詐騙/可疑Telegram ID\n"
+                            f"請勿輕易信任此Telegram ID的\n"
+                            f"文字、圖像、語音和連結\n"
+                            f"感恩")
+            else:
+                rmessage = (f"所輸入的「{telegram_id}」\n"
+                            f"目前不在詐騙黑名單中\n"
+                            f"但並不代表沒問題\n"
+                            f"\n"
+                            f"若該Telegram ID\n"
                             f"是「沒見過面」的「網友」\n"
                             f"又能帶你一起賺錢或兼職\n"
                             f"１００％就是有問題\n"

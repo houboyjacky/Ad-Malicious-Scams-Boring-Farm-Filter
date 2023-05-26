@@ -28,7 +28,7 @@ import sys
 import threading
 import time
 import Tools
-# pip3 install schedule tldextract flask line-bot-sdk whois beautifulsoup4 pytesseract pycountry python-dateutil pytz
+# pip3 install schedule tldextract flask line-bot-sdk whois beautifulsoup4 pytesseract pycountry python-dateutil
 # pytesseract
 # sudo apt install tesseract-ocr tesseract-ocr-eng tesseract-ocr-chi-tra tesseract-ocr-chi-tra-vert tesseract-ocr-chi-sim tesseract-ocr-chi-sim-vert
 
