@@ -47,8 +47,6 @@ CHANNEL_ACCESS_TOKEN = setting['CHANNEL_ACCESS_TOKEN']
 CHANNEL_SECRET = setting['CHANNEL_SECRET']
 # NETIZEN => Netizen Report
 NETIZEN = setting['NETIZEN']
-# KEYWORD => Receive message by keyword
-KEYWORD = setting['KEYWORD']
 # LOGFILE => Log File Path
 LOGFILE = setting['LOGFILE']
 # USER_POINT => User Point Record
@@ -75,63 +73,55 @@ NOTICE_BOARD = setting['NOTICE_BOARD']
 NOTICE_BOARD_LIST = setting['NOTICE_BOARD_LIST']
 # FB_BLACKLIST => Blacklist for Facebook
 FB_BLACKLIST = setting['FB_BLACKLIST']
+# KEYWORD_URL => Keyword for url
+KEYWORD_URL = setting['KEYWORD_URL']
+# KEYWORD_LINE => Keyword for LINE
+KEYWORD_LINE = setting['KEYWORD_LINE']
+# KEYWORD_IG => Keyword for IG
+KEYWORD_IG = setting['KEYWORD_IG']
+# KEYWORD_FB => Keyword for FB
+KEYWORD_FB = setting['KEYWORD_FB']
 
 def reloadSetting():
     global ADMINS, CERT, PRIVKEY, NEW_SCAM_WEBSITE_FOR_ADG, BLACKUSERID
-    global CHANNEL_ACCESS_TOKEN, CHANNEL_SECRET, NETIZEN, KEYWORD, LOGFILE
+    global CHANNEL_ACCESS_TOKEN, CHANNEL_SECRET, NETIZEN, LOGFILE
     global USER_POINT, LINE_INVITE, LINEID_WEB, LINEID_LOCAL, SCAM_WEBSITE_LIST
     global WEB_LEADERBOARD_FILE, SHORT_URL_LIST, HASH_FILE, IG_BLACKLIST
-    global NOTICE_BOARD, NOTICE_BOARD_LIST, FB_BLACKLIST
+    global NOTICE_BOARD, NOTICE_BOARD_LIST, FB_BLACKLIST, KEYWORD_URL
+    global KEYWORD_LINE, KEYWORD_FB, KEYWORD_IG
     global setting
+
     setting = ''
     with open('setting.json', 'r') as f:
         setting = json.load(f)
 
-    # 讀取設定檔
-    # ADMIN => Linebot Admin
+    #重讀設定檔
     ADMINS = setting['ADMIN']
-    # CERT => Lets Encrypt Certificate Path
     CERT = setting['CERT']
-    # PRIVKEY => Lets Encrypt Private Key Path
     PRIVKEY = setting['PRIVKEY']
-    # BLACKLISTFORADG => Blacklist for Adguard Home Download
     NEW_SCAM_WEBSITE_FOR_ADG = setting['BLACKLISTFORADG']
-    # BLACKUSERID => BLACK USER
     BLACKUSERID = setting['BLACKUSERID']
-    # CHANNEL_ACCESS_TOKEN => Linebot Token
     CHANNEL_ACCESS_TOKEN = setting['CHANNEL_ACCESS_TOKEN']
-    # CHANNEL_SECRET => Linebot Secret
     CHANNEL_SECRET = setting['CHANNEL_SECRET']
-    # NETIZEN => Netizen Report
     NETIZEN = setting['NETIZEN']
-    # KEYWORD => Reply message by rule
-    KEYWORD = setting['KEYWORD']
-    # LOGFILE => Log File Path
     LOGFILE = setting['LOGFILE']
-    # USER_POINT => User Point Record
     USER_POINT = setting['USER_POINT']
-    # LINE_INVITE => Black Line invite site
     LINE_INVITE = setting['LINE_INVITE']
-    # LINEID_WEB => Line ID from Web
     LINEID_WEB = setting['LINEID_WEB']
-    # LINEID_LOCAL => Line ID from Local
     LINEID_LOCAL = setting['LINEID_LOCAL']
-    # SCAM_WEBSITE_LIST => SCAM WEBSITE LIST
     SCAM_WEBSITE_LIST = setting['SCAM_WEBSITE_LIST']
-    # WEB_LEADERBOARD_FILE => Query Website times leaderboard from file
     WEB_LEADERBOARD_FILE = setting['WEB_LEADERBOARD_FILE']
-    # SHORT_URL_LIST => Short url list
     SHORT_URL_LIST = setting['SHORT_URL_LIST']
-    # HASH_FILE => HASH INF IN FILE
     HASH_FILE = setting['HASH_FILE']
-    # IG_BLACKLIST => Blacklist for IG
     IG_BLACKLIST = setting['IG_BLACKLIST']
-    # NOTICE_BOARD => NOTICE BOARD
     NOTICE_BOARD = setting['NOTICE_BOARD']
-    # NOTICE_BOARD_LIST => NOTICE BOARD LIST
     NOTICE_BOARD_LIST = setting['NOTICE_BOARD_LIST']
-    # FB_BLACKLIST => Blacklist for Facebook
     FB_BLACKLIST = setting['FB_BLACKLIST']
+    KEYWORD_URL = setting['KEYWORD_URL']
+    KEYWORD_LINE = setting['KEYWORD_LINE']
+    KEYWORD_FB = setting['KEYWORD_FB']
+    KEYWORD_IG = setting['KEYWORD_IG']
+    return
 
 def read_json_file(filename: str) -> list:
     try:
@@ -222,7 +212,6 @@ def read_file(file_path):
     with open(file_path, 'r') as file:
         lines = file.readlines()
     return ''.join(lines)
-
 
 def write_empty_file(file_path):
     open(file_path, 'w').close()

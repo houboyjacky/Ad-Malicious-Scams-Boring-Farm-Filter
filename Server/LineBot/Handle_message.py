@@ -61,7 +61,7 @@ def handle_admin_message_text(user_text):
     orgin_text = user_text
     lower_text = user_text.lower()
 
-    if match := re.search(Tools.KEYWORD[5], lower_text):
+    if match := re.search(Tools.KEYWORD_LINE[1], lower_text):
         lineid = match.group(1)
         if user_query_lineid(lineid):
             rmessage = f"邀請黑名單與賴黑名單已存在{lineid}"
@@ -69,7 +69,7 @@ def handle_admin_message_text(user_text):
             # 加入新line id
             user_add_lineid(lineid)
             rmessage = f"邀請黑名單與賴黑名單更新完成{lineid}"
-    elif match := re.search(Tools.KEYWORD[4], lower_text):
+    elif match := re.search(Tools.KEYWORD_LINE[2], lower_text):
         r =  lineinvite_write_file(orgin_text)
         if r == 1:
             rmessage = f"邀請黑名單已存在"
@@ -77,7 +77,7 @@ def handle_admin_message_text(user_text):
             rmessage = f"邀請黑名單更新完成"
         else:
             rmessage = f"邀請黑名單更新失敗"
-    elif match := re.search(Tools.KEYWORD[12], lower_text):
+    elif match := re.search(Tools.KEYWORD_IG[2], lower_text):
         r = IG_write_file(orgin_text)
         if r == 1:
             rmessage = f"IG名單已存在"
@@ -85,7 +85,7 @@ def handle_admin_message_text(user_text):
             rmessage = f"IG黑名單更新完成"
         else:
             rmessage = f"IG黑名單更新失敗"
-    elif match := re.search(Tools.KEYWORD[18], lower_text):
+    elif match := re.search(Tools.KEYWORD_FB[3], lower_text):
         r = FB_write_file(orgin_text)
         if r == 1:
             rmessage = f"FB名單已存在"
@@ -93,7 +93,7 @@ def handle_admin_message_text(user_text):
             rmessage = f"FB黑名單更新完成"
         else:
             rmessage = f"FB黑名單更新失敗"
-    elif match := re.search(Tools.KEYWORD[14], orgin_text):
+    elif match := re.search(Tools.KEYWORD_IG[4], orgin_text):
         ig_account = match.group(1).lower()
         logger.info(f"ig_account = {ig_account}")
         url = f"https://www.instagram.com/{ig_account}/"
@@ -105,7 +105,7 @@ def handle_admin_message_text(user_text):
             rmessage = f"IG黑名單更新完成"
         else:
             rmessage = f"IG黑名單更新失敗"
-    elif match := re.search(Tools.KEYWORD[0], lower_text):
+    elif match := re.search(Tools.KEYWORD_URL[0], lower_text):
         # 取得網址
         url = match.group(1)
 
@@ -132,7 +132,7 @@ def handle_admin_message_text(user_text):
             update_part_blacklist(domain + "." + suffix)
             rmessage = f"網址黑名單更新完成"
 
-    elif match := re.search(Tools.KEYWORD[1], orgin_text):
+    elif match := re.search(Tools.KEYWORD_URL[1], orgin_text):
         # 取得文字
         text = match.group(1)
 
@@ -145,7 +145,7 @@ def handle_admin_message_text(user_text):
 
         rmessage = f"網址名單更新完成"
 
-    elif match := re.search(Tools.KEYWORD[2], lower_text):
+    elif match := re.search(Tools.KEYWORD_LINE[0], lower_text):
         # 取得文字
         lineid = match.group(1)
         r = user_query_lineid(lineid)
@@ -272,7 +272,7 @@ def handle_message_text(event):
     prefix = ""
     while True:
         # 查詢line邀請網址
-        if re.match(Tools.KEYWORD[7], lower_text):
+        if re.match(Tools.KEYWORD_LINE[5], lower_text):
             r = lineinvite_read_file(orgin_text)
             if r == -1:
                 rmessage = (f"{prefix}「 {orgin_text} 」\n"
@@ -299,7 +299,7 @@ def handle_message_text(event):
             break
 
         # 判斷FB帳戶
-        if re.match(Tools.KEYWORD[17], lower_text):
+        if re.match(Tools.KEYWORD_FB[2], lower_text):
             r = FB_read_file(orgin_text)
             if r == -1:
                 rmessage = (f"所輸入的\n「 {orgin_text} 」\n"
@@ -331,7 +331,7 @@ def handle_message_text(event):
             break
 
         # 判斷IG帳戶、貼文或影片
-        if re.match(Tools.KEYWORD[13], lower_text):
+        if re.match(Tools.KEYWORD_IG[3], lower_text):
             r = IG_read_file(orgin_text)
             if r == -1:
                 rmessage = (f"所輸入的\n「 {orgin_text} 」\n"
@@ -360,7 +360,7 @@ def handle_message_text(event):
 
         # 如果用戶輸入的網址沒有以 http 或 https 開頭，則不回應訊息
         redirects_list = ["https://lm.facebook.com", "https://l.facebook.com", "https://l.instagram.com"]
-        if re.match(Tools.KEYWORD[8], lower_text):
+        if re.match(Tools.KEYWORD_URL[2], lower_text):
             if any(lower_text.startswith(redirect) for redirect in redirects_list):
                 url = Tools.decode_facebook_url(lower_text)
                 logger.info(f"url = {url}")
@@ -397,7 +397,7 @@ def handle_message_text(event):
             break
 
         # 查詢Line ID
-        if re.search(Tools.KEYWORD[3], lower_text):
+        if re.search(Tools.KEYWORD_LINE[1], lower_text):
             lineid = lower_text.replace("賴", "")
             if user_query_lineid(lineid):
                 rmessage = (f"所輸入的「{lineid}」\n"

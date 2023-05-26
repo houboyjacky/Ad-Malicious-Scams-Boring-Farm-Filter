@@ -42,7 +42,7 @@ def analyze_line_invite_url(user_text:str) -> Optional[dict]:
     lower_text = user_text.lower()
 
     if lower_text.startswith("https://linevoom.line.me"):
-        match = re.match(Tools.KEYWORD[9], orgin_text)
+        match = re.match(Tools.KEYWORD_LINE[6], orgin_text)
         invite_code = match.groups()
         struct =  {"類別": "Voom", "邀請碼": invite_code, "原始網址": orgin_text, "回報次數": 0, "失效": 0, "檢查者": ""}
         return struct
@@ -57,7 +57,7 @@ def analyze_line_invite_url(user_text:str) -> Optional[dict]:
         if redirected_url.startswith("https://store.line.me"):
             return False
         redirected_url = redirected_url.replace("%40", "@")
-        match = re.match(Tools.KEYWORD[6], redirected_url)
+        match = re.match(Tools.KEYWORD_LINE[4], redirected_url)
 
     elif lower_text.startswith("https://liff.line.me"):
         response = requests.get(orgin_text)
@@ -83,9 +83,9 @@ def analyze_line_invite_url(user_text:str) -> Optional[dict]:
             logger.info("該官方帳號已無效")
             return False
 
-        match = re.match(Tools.KEYWORD[6], redirected_url)
+        match = re.match(Tools.KEYWORD_LINE[4], redirected_url)
     else:
-        match = re.match(Tools.KEYWORD[6], orgin_text)
+        match = re.match(Tools.KEYWORD_LINE[4], orgin_text)
         if not match:
             logger.error('line.me邀請網址解析失敗')
             return False

@@ -33,14 +33,11 @@ def analyze_FB_url(user_text:str) -> Optional[dict]:
 
     logger.info(f"user_text: {user_text}")
 
-    if match := re.search(Tools.KEYWORD[15], user_text):
-        logger.info(f"Rule = {Tools.KEYWORD[15]}")
+    if match := re.search(Tools.KEYWORD_FB[0], user_text):
         Username = match.group(1)
-    elif match := re.search(Tools.KEYWORD[19], user_text):
-        logger.info(f"Rule = {Tools.KEYWORD[19]}")
+    elif match := re.search(Tools.KEYWORD_FB[4], user_text):
         return None
-    elif match := re.search(Tools.KEYWORD[16], user_text):
-        logger.info(f"Rule = {Tools.KEYWORD[16]}")
+    elif match := re.search(Tools.KEYWORD_FB[1], user_text):
         Username = match.group(1)
     else:
         return None
