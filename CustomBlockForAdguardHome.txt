@@ -175,6 +175,7 @@
 ||axi-china.net^
 ||b1win.godaddysites.com^
 ||b8e63d.com^
+||b8y.fit^
 ||b9bb.cc^
 ||b9be.cc^
 ||ba1dwinadvisors.online^
@@ -369,6 +370,7 @@
 ||compgoo.com^
 ||copmusionu.shop^
 ||copyrichacademy.com^
+||core1nvest.com^
 ||cos.ap-guangzhou.myqcloud.com^
 ||cos258.com^
 ||costcoclock.com^
@@ -814,6 +816,7 @@
 ||htxfinance.com^
 ||huatai888.vip^
 ||huaweicloudwaf.com^
+||huaxin09.tw^
 ||huaxiu4.com^
 ||huayuebb.top^
 ||hublaud.com^
@@ -1244,6 +1247,7 @@
 ||odesrn.com^
 ||odfmny.xyz^
 ||odmqq.asia^
+||ofa12.com^
 ||ofa55.net^
 ||ofa91918.online^
 ||ofa99.net^
@@ -1460,6 +1464,8 @@
 ||sfexpress-delivery.life^
 ||sfexpress-status.com^
 ||sfrebh.com^
+||sfsoeks.com^
+||sfsoudes.com^
 ||sfzao.com^
 ||sgtazn.xyz^
 ||sh03.vip^
