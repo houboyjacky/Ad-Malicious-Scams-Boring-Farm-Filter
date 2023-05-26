@@ -73,13 +73,15 @@ IG_BLACKLIST = setting['IG_BLACKLIST']
 NOTICE_BOARD = setting['NOTICE_BOARD']
 # NOTICE_BOARD_LIST => NOTICE BOARD LIST
 NOTICE_BOARD_LIST = setting['NOTICE_BOARD_LIST']
+# FB_BLACKLIST => Blacklist for Facebook
+FB_BLACKLIST = setting['FB_BLACKLIST']
 
 def reloadSetting():
     global ADMINS, CERT, PRIVKEY, NEW_SCAM_WEBSITE_FOR_ADG, BLACKUSERID
     global CHANNEL_ACCESS_TOKEN, CHANNEL_SECRET, NETIZEN, KEYWORD, LOGFILE
     global USER_POINT, LINE_INVITE, LINEID_WEB, LINEID_LOCAL, SCAM_WEBSITE_LIST
     global WEB_LEADERBOARD_FILE, SHORT_URL_LIST, HASH_FILE, IG_BLACKLIST
-    global NOTICE_BOARD, NOTICE_BOARD_LIST
+    global NOTICE_BOARD, NOTICE_BOARD_LIST, FB_BLACKLIST
     global setting
     setting = ''
     with open('setting.json', 'r') as f:
@@ -128,6 +130,8 @@ def reloadSetting():
     NOTICE_BOARD = setting['NOTICE_BOARD']
     # NOTICE_BOARD_LIST => NOTICE BOARD LIST
     NOTICE_BOARD_LIST = setting['NOTICE_BOARD_LIST']
+    # FB_BLACKLIST => Blacklist for Facebook
+    FB_BLACKLIST = setting['FB_BLACKLIST']
 
 def read_json_file(filename: str) -> list:
     try:
@@ -218,6 +222,7 @@ def read_file(file_path):
     with open(file_path, 'r') as file:
         lines = file.readlines()
     return ''.join(lines)
+
 
 def write_empty_file(file_path):
     open(file_path, 'w').close()

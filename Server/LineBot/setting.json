@@ -5,6 +5,7 @@
     "CERT":"",
     "CHANNEL_ACCESS_TOKEN":"",
     "CHANNEL_SECRET":"",
+    "FB_BLACKLIST":"",
     "HASH_FILE":"",
     "IG_BLACKLIST":"",
     "KEYWORD":["","",""],
