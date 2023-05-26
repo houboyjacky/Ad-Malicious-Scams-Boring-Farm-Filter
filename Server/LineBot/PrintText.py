@@ -66,7 +66,9 @@ notice_text = ""
 
 def reload_user_record():
     global Notice_Board_List
+    Notice_Board_List = []
     Notice_Board_List = Tools.read_file_to_list(Tools.NOTICE_BOARD_LIST)
+    return
 
 def check_user_need_news(user_id) -> bool:
     global Notice_Board_List
@@ -85,7 +87,13 @@ def check_user_need_news(user_id) -> bool:
 
 def reload_notice_board():
     global notice_text
+    notice_text = None
     notice_text = Tools.read_file(Tools.NOTICE_BOARD)
+    return
+
+def return_notice_text():
+    global notice_text
+    return notice_text
 
 reload_notice_board()
 reload_user_record()

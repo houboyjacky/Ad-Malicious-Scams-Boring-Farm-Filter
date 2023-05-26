@@ -34,7 +34,7 @@ from linebot.models import TextSendMessage
 from Logger import logger
 from PIL import Image
 from Point import read_user_point, get_user_rank
-from PrintText import user_guide, check_user_need_news, reload_user_record, reload_notice_board, notice_text
+from PrintText import user_guide, check_user_need_news, reload_user_record, reload_notice_board, return_notice_text
 from Query_Line_ID import user_query_lineid, user_add_lineid
 from Query_URL import user_query_website, check_blacklisted_site, get_web_leaderboard, update_part_blacklist
 from Query_Instagram import IG_read_file, IG_write_file
@@ -45,7 +45,7 @@ line_bot_api = LineBotApi(Tools.CHANNEL_ACCESS_TOKEN)
 # 回應訊息的函式
 def message_reply(event, text):
     if check_user_need_news(event.source.user_id):
-        text = f"{text}\n\n{notice_text}"
+        text = f"{text}\n\n{return_notice_text()}"
     message = TextSendMessage(text=text)
     line_bot_api.reply_message(event.reply_token, message)
     return
@@ -177,11 +177,11 @@ def handle_message_text(event):
         if orgin_text == "重讀":
             setting = ''
             Tools.reloadSetting()
-            reload_user_record()
             reload_notice_board()
             logger.info("Reload setting.json")
             rmessage = f"設定已重新載入"
             message_reply(event, rmessage)
+            reload_user_record()
             return
         elif orgin_text == "檢閱":
             content = get_netizen_file(user_id)
