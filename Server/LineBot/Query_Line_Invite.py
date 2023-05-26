@@ -30,6 +30,7 @@ from typing import Optional
 from Query_Line_ID import user_add_lineid, user_query_lineid
 from Point import write_user_point
 import Tools
+from Whistle_blower import  Clear_List_Checker
 
 invites = Tools.read_json_file(Tools.LINE_INVITE)
 
@@ -44,7 +45,7 @@ def analyze_line_invite_url(user_text:str) -> Optional[dict]:
     if lower_text.startswith("https://linevoom.line.me"):
         match = re.match(Tools.KEYWORD_LINE[6], orgin_text)
         invite_code = match.groups()
-        struct =  {"類別": "Voom", "邀請碼": invite_code, "原始網址": orgin_text, "回報次數": 0, "失效": 0, "檢查者": ""}
+        struct =  {"類別": "Voom", "識別碼": invite_code, "原始網址": orgin_text, "回報次數": 0, "失效": 0, "檢查者": ""}
         return struct
     elif lower_text.startswith("https://lin.ee") or lower_text.startswith("https://page.line.me"):
         response = requests.get(orgin_text)
@@ -106,17 +107,14 @@ def analyze_line_invite_url(user_text:str) -> Optional[dict]:
         logger.error('無法解析類別')
         return None
 
-    struct =  {"類別": category, "邀請碼": invite_code, "原始網址": orgin_text, "回報次數": 0, "失效": 0, "檢查者": ""}
+    struct =  {"類別": category, "帳號": "", "識別碼": invite_code, "原始網址": orgin_text, "回報次數": 0, "失效": 0, "檢查者": ""}
 
     return struct
 
 def add_sort_lineinvite(result, results):
-    # 查找是否有重複的邀請碼和類別
+    # 查找是否有重複的識別碼和類別
     for r in results:
-        if r['邀請碼'] == result['邀請碼'] and r['類別'] == result['類別']:
-            # 邀請碼和類別相同，但原始網址不同，則加入原始網址
-            if result['原始網址'] not in r['原始網址']:
-                r['原始網址'].append(result['原始網址'])
+        if r['識別碼'] == result['識別碼'] and r['類別'] == result['類別']:
             return 1
 
     # 新增結果
@@ -127,10 +125,10 @@ def lineinvite_write_file(user_text:str) -> int:
     global invites
     result = analyze_line_invite_url(user_text)
     if result:
-        if "@" in result["邀請碼"]:
-            user_add_lineid(result["邀請碼"])
-        elif "~" in result["邀請碼"]:
-            LineID = result["邀請碼"].replace("~", "")
+        if "@" in result["識別碼"]:
+            user_add_lineid(result["識別碼"])
+        elif "~" in result["識別碼"]:
+            LineID = result["識別碼"].replace("~", "")
             user_add_lineid(LineID)
         r = add_sort_lineinvite(result,invites)
         Tools.write_json_file(Tools.LINE_INVITE, invites)
@@ -147,9 +145,9 @@ def lineinvite_read_file(user_text:str) -> int:
         return -1
 
     for result in invites:
-        if result["邀請碼"] == analyze["邀請碼"]:
+        if result["識別碼"] == analyze["識別碼"]:
             return True
-    if user_query_lineid(analyze["邀請碼"]):
+    if user_query_lineid(analyze["識別碼"]):
         return True
     return False
 
@@ -159,7 +157,7 @@ def get_random_invite(UserID) -> str:
         return None
     found = False
     count = 0
-    while count < 1000:  # 最多找 100 次，避免無限迴圈
+    while count < 1000:  # 最多找 1000 次，避免無限迴圈
         invite = random.choice(invites)
         if invite['檢查者'] == "" and invite['失效'] < 50:
             invite['檢查者'] = UserID
@@ -189,43 +187,4 @@ def push_random_invite(UserID, success, disappear):
         Tools.write_json_file(Tools.LINE_INVITE, invites)
     return found
 
-def Invite_check_data(filename: str) -> None:
-    global invites
-    modify = False
-    for item in invites:
-        if "類別" not in item:
-            item["類別"] = 0
-            modify = True
-        if "邀請碼" not in item:
-            item["邀請碼"] = 0
-            modify = True
-        if "原始網址" not in item:
-            item["原始網址"] = []
-            modify = True
-        if type(item['原始網址']) == str:
-            item["原始網址"] = [item['原始網址']]
-            modify = True
-        if "回報次數" not in item:
-            item["回報次數"] = 0
-            modify = True
-        if "失效" not in item:
-            item["失效"] = 0
-            modify = True
-        if "檢查者" not in item:
-            item["檢查者"] = ""
-            modify = True
-    if modify:
-        Tools.write_json_file(filename, invites)
-
-def Invite_clear_data(filename: str) -> None:
-    global invites
-    modify = False
-    for item in invites:
-        if item["檢查者"]:
-            item["檢查者"] = ""
-            modify = True
-    if modify:
-        Tools.write_json_file(filename, invites)
-
-Invite_check_data(Tools.LINE_INVITE)
-Invite_clear_data(Tools.LINE_INVITE)
+Clear_List_Checker(Tools.LINE_INVITE, invites)

@@ -24,6 +24,7 @@ import re
 from Logger import logger
 from typing import Optional
 import Tools
+from Whistle_blower import  Clear_List_Checker
 
 FB_list = Tools.read_json_file(Tools.FB_BLACKLIST)
 
@@ -44,7 +45,7 @@ def analyze_FB_url(user_text:str) -> Optional[dict]:
 
     logger.info(f"Username = {Username}")
 
-    struct =  {"帳號": Username, "原始網址": user_text, "回報次數": 0, "失效": 0, "檢查者": ""}
+    struct =  {"類別":"", "帳號": Username, "原始網址": user_text, "回報次數": 0, "失效": 0, "檢查者": ""}
 
     return struct
 
@@ -79,37 +80,4 @@ def FB_read_file(user_text:str) -> int:
             return True
     return False
 
-def FB_check_data(filename: str) -> None:
-    global FB_list
-    modify = False
-    for item in FB_list:
-        if "帳號" not in item:
-            item["帳號"] = ""
-            modify = True
-        if "原始網址" not in item:
-            item["原始網址"] = ""
-            modify = True
-        if "回報次數" not in item:
-            item["回報次數"] = 0
-            modify = True
-        if "失效" not in item:
-            item["失效"] = 0
-            modify = True
-        if "檢查者" not in item:
-            item["檢查者"] = ""
-            modify = True
-    if modify:
-        Tools.write_json_file(filename, FB_list)
-
-def FB_clear_data(filename: str) -> None:
-    global FB_list
-    modify = False
-    for item in FB_list:
-        if item["檢查者"]:
-            item["檢查者"] = ""
-            modify = True
-    if modify:
-        Tools.write_json_file(filename, FB_list)
-
-FB_check_data(Tools.FB_BLACKLIST)
-FB_clear_data(Tools.FB_BLACKLIST)
+Clear_List_Checker(Tools.FB_BLACKLIST, FB_list)

@@ -24,6 +24,7 @@ import re
 from Logger import logger
 from typing import Optional
 import Tools
+from Whistle_blower import  Clear_List_Checker
 
 IG_list = Tools.read_json_file(Tools.IG_BLACKLIST)
 
@@ -48,7 +49,7 @@ def analyze_IG_url(user_text:str) -> Optional[dict]:
     logger.info(f"Username: {Username}")
     logger.info(f"Code: {Code}")
 
-    struct =  {"帳號": Username, "識別碼": Code, "原始網址": user_text, "回報次數": 0, "失效": 0, "檢查者": ""}
+    struct =  {"類別":"", "帳號": Username, "識別碼": Code, "原始網址": user_text, "回報次數": 0, "失效": 0, "檢查者": ""}
 
     return struct
 
@@ -97,40 +98,4 @@ def IG_read_file(user_text:str) -> int:
                 return True
     return False
 
-def IG_check_data(filename: str) -> None:
-    global IG_list
-    modify = False
-    for item in IG_list:
-        if "帳號" not in item:
-            item["帳號"] = ""
-            modify = True
-        if "識別碼" not in item:
-            item["識別碼"] = ""
-            modify = True
-        if "原始網址" not in item:
-            item["原始網址"] = ""
-            modify = True
-        if "回報次數" not in item:
-            item["回報次數"] = 0
-            modify = True
-        if "失效" not in item:
-            item["失效"] = 0
-            modify = True
-        if "檢查者" not in item:
-            item["檢查者"] = ""
-            modify = True
-    if modify:
-        Tools.write_json_file(filename, IG_list)
-
-def IG_clear_data(filename: str) -> None:
-    global IG_list
-    modify = False
-    for item in IG_list:
-        if item["檢查者"]:
-            item["檢查者"] = ""
-            modify = True
-    if modify:
-        Tools.write_json_file(filename, IG_list)
-
-IG_check_data(Tools.IG_BLACKLIST)
-IG_clear_data(Tools.IG_BLACKLIST)
+Clear_List_Checker(Tools.IG_BLACKLIST, IG_list)
