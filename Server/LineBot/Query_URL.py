@@ -44,7 +44,7 @@ blacklist = []
 # 目前不支援 "lurl.cc" "risu.io"
 # 未知 "picsee.io" "lihi.io"
 
-def resolve_redirects＿wenkio(url):
+def resolve_redirects_wenkio(url):
     try:
         response = requests.get(url)
         if response.status_code == 200:
@@ -53,13 +53,14 @@ def resolve_redirects＿wenkio(url):
             if start_index >= 0 and end_index >= 0:
                 parsed_url = response.text[start_index:end_index]
                 decoded_url = html.unescape(parsed_url.encode().decode('unicode_escape'))
+                logger.info(f"final_url_wenkio = {decoded_url}")
                 return decoded_url
     except requests.exceptions.RequestException as e:
         logger.info(f"Error occurred: {e}")
 
     return None
 
-def resolve_redirects＿recurlcc(url):
+def resolve_redirects_recurlcc(url):
     try:
         response = requests.get(url)
         if response.status_code == 200:
@@ -67,7 +68,69 @@ def resolve_redirects＿recurlcc(url):
             target_url_input = soup.find('input', id='url')
             if target_url_input:
                 target_url = target_url_input['value']
+                logger.info(f"final_url_recurlcc = {target_url}")
                 return target_url
+    except requests.exceptions.RequestException as e:
+        logger.info(f"Error occurred: {e}")
+
+    return None
+
+def resolve_redirects_iiilio(url):
+    headers = {
+        "Accept-Language": "zh-TW,zh;q=0.9",
+        "Accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+        "Cache-Control": "no-cache",
+        "Dnt": "1",
+        "Sec-Ch-Ua-Mobile": "?0",
+        "Sec-Ch-Ua-Platform":"Windows",
+        "Sec-Ch-Ua": '"Google Chrome";v="113", "Chromium";v="113", "Not-A.Brand";v="24"',
+        "Sec-Fetch-Dest":"document",
+        "Sec-Fetch-Mode":"navigate",
+        "Sec-Fetch-Site": "none",
+        "Sec-Fetch-User": "?1",
+        "Upgrade-Insecure-Requests": "1",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36"
+    }
+
+    iiil_io_pattern = r'window\.location\.replace\("([^"]+)"\)'
+
+    try:
+        response = requests.get(url, headers=headers, allow_redirects=True)
+        logger.info(f"response = {response.content}")
+        if response.status_code == 200:
+            if match := re.search(iiil_io_pattern, response.content.decode("utf-8")):
+                final_url = match.group(1)
+
+            logger.info(f"final_url_iiilio = {final_url}")
+            return final_url
+    except requests.exceptions.RequestException as e:
+        logger.info(f"Error occurred: {e}")
+
+    return None
+
+def resolve_redirects_other(url):
+    headers = {
+        "Accept-Language": "zh-TW,zh;q=0.9",
+        "Accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
+        "Cache-Control": "no-cache",
+        "Dnt": "1",
+        "Sec-Ch-Ua-Mobile": "?0",
+        "Sec-Ch-Ua-Platform":"Windows",
+        "Sec-Ch-Ua": '"Google Chrome";v="113", "Chromium";v="113", "Not-A.Brand";v="24"',
+        "Sec-Fetch-Dest":"document",
+        "Sec-Fetch-Mode":"navigate",
+        "Sec-Fetch-Site": "none",
+        "Sec-Fetch-User": "?1",
+        "Upgrade-Insecure-Requests": "1",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36"
+    }
+
+    try:
+        response = requests.get(url, headers=headers, allow_redirects=True)
+        logger.info(f"response = {response.content}")
+        final_url = response.url
+        logger.info(f"resolve_redirects_other = {final_url}")
+        return final_url
     except requests.exceptions.RequestException as e:
         logger.info(f"Error occurred: {e}")
 
@@ -78,16 +141,28 @@ def resolve_redirects(url):
     if url.lower().startswith("http://"):
         url = "https://" + url[7:]
 
-    if url.lower().startswith("https://wenk.io"):
-        final_url = resolve_redirects＿wenkio(url)
+    if url.lower().startswith("https://risu.io") or url.lower().startswith("https://lurl.cc"):
+        final_url = resolve_redirects_other(url)
         if final_url != url:
-            logger.info(f"resolve_redirects＿wenkio = {final_url}")
+            logger.info(f"resolve_redirects_other = {final_url}")
+            return final_url
+
+    if url.lower().startswith("https://iiil.io"):
+        final_url = resolve_redirects_iiilio(url)
+        if final_url != url:
+            logger.info(f"resolve_redirects_iiilio = {final_url}")
+            return final_url
+
+    if url.lower().startswith("https://wenk.io"):
+        final_url = resolve_redirects_wenkio(url)
+        if final_url != url:
+            logger.info(f"resolve_redirects_wenkio = {final_url}")
             return final_url
 
     if url.lower().startswith("https://reurl.cc"):
-        final_url = resolve_redirects＿recurlcc(url)
+        final_url = resolve_redirects_recurlcc(url)
         if final_url != url:
-            logger.info(f"resolve_redirects＿recurlcc = {final_url}")
+            logger.info(f"resolve_redirects_recurlcc = {final_url}")
             return final_url
 
     try:
