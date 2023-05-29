@@ -370,6 +370,30 @@ def handle_message_text(event):
             message_reply(event, rmessage)
             break
 
+        # 查詢Telegram網址
+        if match := re.search(Tools.KEYWORD_TELEGRAM[2], lower_text):
+            telegram_id = match.group(1)
+            if user_query_telegram_id(telegram_id):
+                rmessage = (f"所輸入的「{telegram_id}」\n"
+                            f"「是」詐騙/可疑Telegram ID\n"
+                            f"請勿輕易信任此Telegram ID的\n"
+                            f"文字、圖像、語音和連結\n"
+                            f"感恩")
+            else:
+                rmessage = (f"所輸入的「{telegram_id}」\n"
+                            f"目前不在詐騙黑名單中\n"
+                            f"但並不代表沒問題\n"
+                            f"\n"
+                            f"若該Telegram ID\n"
+                            f"是「沒見過面」的「網友」\n"
+                            f"又能帶你一起賺錢或兼職\n"
+                            f"１００％就是有問題\n"
+                            f"\n"
+                            f"{suffix_for_call}")
+
+            message_reply(event, rmessage)
+            break
+
         # 如果用戶輸入的網址沒有以 http 或 https 開頭，則不回應訊息
         redirects_list = ["https://lm.facebook.com", "https://l.facebook.com", "https://l.instagram.com"]
         if re.match(Tools.KEYWORD_URL[2], lower_text):
