@@ -317,35 +317,38 @@ def handle_message_text(event):
 
         # 判斷FB帳戶
         if re.match(Tools.KEYWORD_FB[2], lower_text):
-            r = FB_read_file(orgin_text)
-            if r == -1:
-                rmessage = (f"所輸入的\n「 {orgin_text} 」\n"
-                            f"FB網址找不到真實ID\n"
-                            f"麻煩找到該貼文的\n"
-                            f"人物/粉絲團主頁\n"
-                            f"才能夠判別\n"
-                            f"感恩")
-            elif r == True:
-                rmessage = (f"所輸入的\n「 {orgin_text} 」\n"
-                            f"「是」已知詐騙/可疑的FB\n"
-                            f"請勿輕易信任此FB的\n"
-                            f"文字、圖像、語音和連結\n"
-                            f"感恩")
+            if "lm.facebook.com" in lower_text or "l.facebook.com" in lower_text:
+                pass
             else:
-                rmessage = (f"所輸入的\n「 {orgin_text} 」\n"
-                            f"「不是」已知詐騙/可疑的FB\n"
-                            f"但並不代表沒問題\n"
-                            f"\n"
-                            f"若該FB帳號的貼文\n"
-                            f"1. 兼職打工\n"
-                            f"2. 能帶你一起賺錢\n"
-                            f"3. 炫富式貼文\n"
-                            f"4. FB廣告，但追蹤太少\n"
-                            f"有極大的機率是有問題的\n"
-                            f"\n"
-                            f"{suffix_for_call}")
-            message_reply(event, rmessage)
-            break
+                r = FB_read_file(orgin_text)
+                if r == -1:
+                    rmessage = (f"所輸入的\n「 {orgin_text} 」\n"
+                                f"FB網址找不到真實ID\n"
+                                f"麻煩找到該貼文的\n"
+                                f"人物/粉絲團主頁\n"
+                                f"才能夠判別\n"
+                                f"感恩")
+                elif r == True:
+                    rmessage = (f"所輸入的\n「 {orgin_text} 」\n"
+                                f"「是」已知詐騙/可疑的FB\n"
+                                f"請勿輕易信任此FB的\n"
+                                f"文字、圖像、語音和連結\n"
+                                f"感恩")
+                else:
+                    rmessage = (f"所輸入的\n「 {orgin_text} 」\n"
+                                f"「不是」已知詐騙/可疑的FB\n"
+                                f"但並不代表沒問題\n"
+                                f"\n"
+                                f"若該FB帳號的貼文\n"
+                                f"1. 兼職打工\n"
+                                f"2. 能帶你一起賺錢\n"
+                                f"3. 炫富式貼文\n"
+                                f"4. FB廣告，但追蹤太少\n"
+                                f"有極大的機率是有問題的\n"
+                                f"\n"
+                                f"{suffix_for_call}")
+                message_reply(event, rmessage)
+                break
 
         # 判斷IG帳戶、貼文或影片
         if re.match(Tools.KEYWORD_IG[3], lower_text):
