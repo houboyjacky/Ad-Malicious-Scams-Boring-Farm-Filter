@@ -100,7 +100,7 @@ def IG_read_file(user_text:str):
             logger.info("分析完成，找不到相同資料")
             status = 0
     else:
-        rmessage = f"IG黑名單查詢失敗"
+        logger.info("IG黑名單查詢失敗")
         status = -1
 
     return rmessage, status

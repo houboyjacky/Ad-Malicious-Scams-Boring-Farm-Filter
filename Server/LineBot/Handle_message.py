@@ -83,22 +83,17 @@ def handle_message_text_admin(event):
     elif orgin_text == "開啟辨識":
         image_analysis = True
         rmessage = f"已開啟辨識"
-    elif match := re.search(Tools.KEYWORD_LINE[1], lower_text):
+    elif match := re.search(Tools.KEYWORD_LINE[0], lower_text):
+        # 取得文字
         lineid = match.group(1)
         if user_query_lineid(lineid):
-            rmessage = f"邀請黑名單與賴黑名單已存在{lineid}"
+            rmessage = f"賴黑名單已存在「{lineid}」"
         else:
             # 加入新line id
             user_add_lineid(lineid)
-            rmessage = f"邀請黑名單與賴黑名單更新完成{lineid}"
+            rmessage = f"賴黑名單已加入「{lineid}」"
     elif match := re.search(Tools.KEYWORD_LINE[2], lower_text):
-        r =  lineinvite_write_file(orgin_text)
-        if r == 1:
-            rmessage = f"邀請黑名單已存在"
-        elif r == 0:
-            rmessage = f"邀請黑名單更新完成"
-        else:
-            rmessage = f"邀請黑名單更新失敗"
+        rmessage = lineinvite_write_file(orgin_text)
     elif match := re.search(Tools.KEYWORD_IG[2], lower_text):
         rmessage = IG_write_file(orgin_text)
     elif match := re.search(Tools.KEYWORD_FB[3], lower_text):
@@ -143,15 +138,6 @@ def handle_message_text_admin(event):
         with open(Tools.NEW_SCAM_WEBSITE_FOR_ADG, "a", encoding="utf-8", newline='') as f:
             f.write(new_rule)
         rmessage = f"網址名單更新完成"
-    elif match := re.search(Tools.KEYWORD_LINE[0], lower_text):
-        # 取得文字
-        lineid = match.group(1)
-        if user_query_lineid(lineid):
-            rmessage = f"賴黑名單已存在「{lineid}」"
-        else:
-            # 加入新line id
-            user_add_lineid(lineid)
-            rmessage = f"賴黑名單已加入「{lineid}」"
     elif match := re.search(Tools.KEYWORD_TELEGRAM[1], lower_text):
         # 取得文字
         telegram_id = match.group(1)
@@ -256,20 +242,20 @@ def handle_message_text(event):
     prefix = ""
     while True:
         # 查詢line邀請網址
-        if re.match(Tools.KEYWORD_LINE[5], lower_text):
-            r = lineinvite_read_file(orgin_text)
-            if r == -1:
+        if re.match(Tools.KEYWORD_LINE[4], lower_text):
+            message, status = lineinvite_read_file(orgin_text)
+            if status == -1:
                 rmessage = (f"{prefix}「 {orgin_text} 」\n"
                             f"輸入有誤、網址失效或不支援\n"
                             f"感恩")
-            elif r == True:
-                rmessage = (f"{prefix}「 {orgin_text} 」\n"
+            elif status == 1:
+                rmessage = (f"{prefix}{message}\n"
                             f"「是」已知詐騙/可疑Line邀請網址\n"
                             f"請勿輕易信任此Line ID的\n"
                             f"文字、圖像、語音和連結\n"
                             f"感恩")
             else:
-                rmessage = (f"{prefix}「 {orgin_text} 」\n"
+                rmessage = (f"{prefix}{message}\n"
                             f"「不是」已知詐騙邀請網址\n"
                             f"並不代表沒問題\n"
                             f"\n"

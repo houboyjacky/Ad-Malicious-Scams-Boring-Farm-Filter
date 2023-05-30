@@ -30,7 +30,8 @@ from typing import Optional
 from Query_Line_ID import user_add_lineid, user_query_lineid
 from Point import write_user_point
 import Tools
-from Whistle_blower import  Clear_List_Checker
+from Whistle_blower import Clear_List_Checker
+from Query_URL import resolve_redirects
 
 invites = Tools.read_json_file(Tools.LINE_INVITE)
 
@@ -42,60 +43,46 @@ def analyze_line_invite_url(user_text:str) -> Optional[dict]:
     orgin_text = user_text
     lower_text = user_text.lower()
 
-    if lower_text.startswith("https://linevoom.line.me"):
-        match = re.match(Tools.KEYWORD_LINE[6], orgin_text)
+    if match := re.search(Tools.KEYWORD_LINE[5], orgin_text):
         invite_code = match.groups()
         struct =  {"類別": "Voom", "識別碼": invite_code, "原始網址": orgin_text, "回報次數": 0, "失效": 0, "檢查者": ""}
+        logger.info(struct)
         return struct
     elif lower_text.startswith("https://lin.ee") or lower_text.startswith("https://page.line.me"):
-        response = requests.get(orgin_text)
-        if response.status_code != 200:
-            logger.error("lin.ee邀請網址解析失敗")
-            return False
-
-        redirected_url = response.url
-        logger.info("Redirected_url = " + redirected_url)
+        redirected_url = resolve_redirects(orgin_text)
+        logger.info(f"Redirected_url = {redirected_url}")
         if redirected_url.startswith("https://store.line.me"):
-            return False
+            return None
         redirected_url = redirected_url.replace("%40", "@")
-        match = re.match(Tools.KEYWORD_LINE[4], redirected_url)
-
+        match = re.match(Tools.KEYWORD_LINE[3], redirected_url)
     elif lower_text.startswith("https://liff.line.me"):
         response = requests.get(orgin_text)
         if response.status_code != 200:
             logger.error("liff.line.me邀請網址解析失敗")
-            return False
+            return None
 
         soup = BeautifulSoup(response.content, 'html.parser')
         redirected_url1 = soup.find('a')['href']
+        logger.info(f"Redirected_url 1 = {redirected_url1}")
 
-        logger.info("Redirected_url 1 = " + redirected_url1)
-
-        response = requests.get(redirected_url1)
-        if response.status_code != 200:
-            logger.error("page.line.me邀請網址解析失敗")
-            return False
-
-        redirected_url = response.url
-
-        logger.info("Redirected_url 2 = " + redirected_url)
-
+        redirected_url = resolve_redirects(redirected_url1)
+        logger.info(f"Redirected_url 2 = {redirected_url}")
         if redirected_url == "https://store.line.me/officialaccount/" :
             logger.info("該官方帳號已無效")
-            return False
+            return None
 
-        match = re.match(Tools.KEYWORD_LINE[4], redirected_url)
+        match = re.match(Tools.KEYWORD_LINE[3], redirected_url)
     else:
-        match = re.match(Tools.KEYWORD_LINE[4], orgin_text)
+        match = re.match(Tools.KEYWORD_LINE[3], orgin_text)
         if not match:
             logger.error('line.me邀請網址解析失敗')
-            return False
+            return None
 
     Type, invite_code = match.groups()
     if Type:
-        logger.info("Type : " + Type)
+        logger.info(f"Type : {Type}")
     if invite_code:
-        logger.info("invite_code : " + invite_code)
+        logger.info(f"invite_code : {invite_code}")
 
     if "@" in invite_code:
         category = "官方"
@@ -111,45 +98,57 @@ def analyze_line_invite_url(user_text:str) -> Optional[dict]:
 
     return struct
 
-def add_sort_lineinvite(result, results):
-    # 查找是否有重複的識別碼和類別
-    for r in results:
-        if r['識別碼'] == result['識別碼'] and r['類別'] == result['類別']:
-            return 1
-
-    # 新增結果
-    results.append(result)
-    return 0
-
-def lineinvite_write_file(user_text:str) -> int:
+def add_sort_lineinvite(result):
     global invites
-    result = analyze_line_invite_url(user_text)
-    if result:
-        if "@" in result["識別碼"]:
-            user_add_lineid(result["識別碼"])
-        elif "~" in result["識別碼"]:
-            LineID = result["識別碼"].replace("~", "")
+    # 查找是否有重複的識別碼和類別
+    for r in invites:
+        if r['識別碼'] == result['識別碼'] and r['類別'] == result['類別']:
+            return True
+    return False
+
+def lineinvite_write_file(user_text:str):
+    global invites
+    rmessage = ""
+    if analyze := analyze_line_invite_url(user_text):
+        if "@" in analyze["識別碼"]:
+            user_add_lineid(analyze["識別碼"])
+        elif "~" in analyze["識別碼"]:
+            LineID = analyze["識別碼"].replace("~", "")
             user_add_lineid(LineID)
-        r = add_sort_lineinvite(result,invites)
-        Tools.write_json_file(Tools.LINE_INVITE, invites)
-        logger.info("分析完成，結果已寫入")
-        return r
+
+        if add_sort_lineinvite(analyze):
+            logger.info("分析完成，找到相同資料")
+            rmessage = f"LINE邀請網址\n黑名單找到相同網址\n「 {analyze['識別碼'] } 」"
+        else:
+            invites.append(analyze)
+            Tools.write_json_file(Tools.LINE_INVITE, invites)
+            logger.info("分析完成，結果已寫入")
+            rmessage = f"LINE邀請網址\n黑名單成功加入網址\n「 {analyze['識別碼'] } 」"
     else:
         logger.info("無法分析網址")
-        return -1
+        rmessage = f"LINE邀請網址加入失敗，無法分析網址"
+    return rmessage
 
-def lineinvite_read_file(user_text:str) -> int:
+def lineinvite_read_file(user_text:str):
     global invites
-    analyze = analyze_line_invite_url(user_text)
-    if not analyze:
-        return -1
-
-    for result in invites:
-        if result["識別碼"] == analyze["識別碼"]:
-            return True
-    if user_query_lineid(analyze["識別碼"]):
-        return True
-    return False
+    status = 0
+    rmessage = ""
+    if analyze := analyze_line_invite_url(user_text):
+        rmessage = f"所輸入的LINE邀請網址ID是\n「 {analyze['識別碼'] } 」"
+        if user_query_lineid(analyze["識別碼"]):
+            status = 1
+        else:
+            for invite in invites:
+                if invite["識別碼"] == analyze["識別碼"]:
+                    status = 1
+        if status:
+            logger.info("分析完成，找到相同資料")
+        else:
+            logger.info("分析完成，找不到相同資料")
+    else:
+        logger.info("LINE邀請網址查詢失敗")
+        status = -1
+    return rmessage, status
 
 def get_random_invite(UserID) -> str:
     global invites
