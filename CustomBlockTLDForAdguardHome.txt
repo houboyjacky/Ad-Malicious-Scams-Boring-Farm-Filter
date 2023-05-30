@@ -132,6 +132,7 @@
 /long[0-9]\.net/
 /metoocofstimrgpaged-[a-z0-9]+\.online/
 /netflti[a-z]*.com/
+/news-spe\d+\.com/
 /nymex.+tw\.com/
 /oandg[a-z0-9]*\.com/
 /odintw[a-z0-9]*\.com/
@@ -193,6 +194,7 @@
 /wns[0-9]+\.com/
 /wnsr[a-z0-9]*\.com/
 /worldfistw\.[a-z]+/
+/wsfl\w+gov\.xyz/
 /www-?post-?gov-?tw\.sytes\.net/
 /xpj[0-9]{4,5}\.com/
 /xpromarkets\.[a-z]+/

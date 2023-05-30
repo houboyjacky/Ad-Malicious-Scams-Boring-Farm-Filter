@@ -1,16 +1,16 @@
 {
-    "Content-Farm_Multi-Redirection.txt": "2495a31aeef835698e02ff64ddc168b4",
-    "Content-Farm_Multi-RedirectionForAdguardHome.txt": "b250ff6b54ba2d1c40cc4d91c1353217",
-    "Content-Farm_Multi-RedirectionForUblackList.txt": "7d95d3a012b1778b3503d9f1396d046f",
-    "CustomAllowForAdguardHome.txt": "05a64cb0ce4617108fb7fbdf63eef2ca",
-    "CustomBlockForAdguardHome.txt": "99c021e91716ec0eb73f959521d12f18",
-    "CustomBlockTLDForAdguardHome.txt": "0b2ecfc76228151224d504d6b97f05f8",
-    "GetFromGovernmentInf_LineID.txt": "5eadccf3c08e8cf97793572a0abb3f38",
     "ScamSiteForPetScams.txt": "475552e45ace6c8b22a4dd67a0a1556e",
-    "ScamSiteGetFromDcard.txt": "8e19458ee1f25ddcdeb9c396090a853b",
-    "ScamSiteGetFromFX110.txt": "081551a38eb92083c26951df6bb3606c",
+    "CustomBlockTLDForAdguardHome.txt": "dba58e8bcbba692c8a1ab5d824808eee",
+    "Content-Farm_Multi-RedirectionForAdguardHome.txt": "b250ff6b54ba2d1c40cc4d91c1353217",
+    "CustomAllowForAdguardHome.txt": "05a64cb0ce4617108fb7fbdf63eef2ca",
+    "CustomBlockForAdguardHome.txt": "cadf5f373a043b17deda6fe801d6f156",
     "ScamSiteGetFromGlobalAntiScamOrg.txt": "59ae342e1af9d0db23ba504dd7dabbdd",
-    "ScamSiteGetFromScamAdviserNewsletter.txt": "cd4c9b584d1051adfd8619c666f74977",
+    "GetFromGovernmentInf_LineID.txt": "5eadccf3c08e8cf97793572a0abb3f38",
     "ScamSiteGetFromTaiwan165.txt": "f501ced8d553f35a8b362055327e64bf",
-    "ScamsSiteGetFromFB_TonyNey.txt": "f2ea4036b75e1861f67b50ad81506e87"
+    "ScamsSiteGetFromFB_TonyNey.txt": "f2ea4036b75e1861f67b50ad81506e87",
+    "ScamSiteGetFromScamAdviserNewsletter.txt": "cd4c9b584d1051adfd8619c666f74977",
+    "Content-Farm_Multi-RedirectionForUblackList.txt": "7d95d3a012b1778b3503d9f1396d046f",
+    "ScamSiteGetFromFX110.txt": "081551a38eb92083c26951df6bb3606c",
+    "Content-Farm_Multi-Redirection.txt": "2495a31aeef835698e02ff64ddc168b4",
+    "ScamSiteGetFromDcard.txt": "3e67ac56ea99d7fd50b01499b70bcb70"
 }
