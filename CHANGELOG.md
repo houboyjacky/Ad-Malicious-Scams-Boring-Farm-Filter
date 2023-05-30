@@ -1,5 +1,7 @@
 # 歷史更新 History Update
 
+* 20230530 Update
+  * 加入 輸入電話提醒
 * 20230529 Update
   * 加入 Telegram網址查詢支援
   * 更新 個人不想看與網友匯報廣告或網站

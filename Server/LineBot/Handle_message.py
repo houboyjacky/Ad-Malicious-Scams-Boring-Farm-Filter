@@ -193,6 +193,11 @@ def handle_message_text(event):
         message_reply(event, user_guide)
         return
 
+    if re.match(r"^09\d+", orgin_text):
+        rmessage = f"謝謝你提供的電話號碼\n「{orgin_text}」\n若要查詢電話\n建議使用Whoscall\n若要查詢是否是詐騙賴\n輸入「賴+電話」\n例如：賴0912345678"
+        message_reply(event, rmessage)
+        return
+
     # 管理員操作
     if user_id in Tools.ADMINS:
         if orgin_text == "重讀":
