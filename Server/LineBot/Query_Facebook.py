@@ -30,8 +30,6 @@ FB_list = Tools.read_json_file(Tools.FB_BLACKLIST)
 
 def analyze_FB_url(user_text:str) -> Optional[dict]:
 
-    user_text = user_text.replace("加入", "")
-
     logger.info(f"user_text: {user_text}")
 
     if match := re.search(Tools.KEYWORD_FB[0], user_text):
@@ -49,35 +47,48 @@ def analyze_FB_url(user_text:str) -> Optional[dict]:
 
     return struct
 
-def add_sort_FB(input, results):
-    # 查找是否有重複的識別碼和帳號
-    for r in results:
+def Search_Same_FB(input):
+    global FB_list
+    # 查找是否有重複的帳號
+    for r in FB_list:
         if r['帳號'] == input['帳號']:
-            return 1
-    results.append(input)
-    return 0
-
-def FB_write_file(user_text:str) -> int:
-    global FB_list
-    result = analyze_FB_url(user_text)
-    if result:
-        r = add_sort_FB(result,FB_list)
-        if r == 0 :
-            Tools.write_json_file(Tools.FB_BLACKLIST, FB_list)
-        logger.info("分析完成，結果已寫入")
-        return r
-    else:
-        logger.info("無法分析網址")
-        return -1
-
-def FB_read_file(user_text:str) -> int:
-    global FB_list
-    analyze = analyze_FB_url(user_text)
-    if not analyze:
-        return -1
-    for result in FB_list:
-        if result["帳號"] == analyze["帳號"]:
             return True
     return False
+
+def FB_write_file(user_text:str):
+    global FB_list
+
+    if analyze := analyze_FB_url(user_text):
+        if Search_Same_FB(analyze):
+            logger.info("分析完成，找到相同資料")
+            rmessage = f"FB黑名單找到相同帳號\n「 {analyze['帳號'] } 」"
+        else:
+            logger.info("分析完成，寫入結果")
+            FB_list.append(analyze)
+            Tools.write_json_file(Tools.FB_BLACKLIST, FB_list)
+            rmessage = f"FB黑名單成功加入帳號\n「 {analyze['帳號']} 」"
+    else:
+        logger.info("無法分析網址")
+        rmessage = f"FB黑名單加入失敗，無法分析網址"
+
+    return rmessage
+
+def FB_read_file(user_text:str):
+    global FB_list
+    rmessage = ""
+    if analyze := analyze_FB_url(user_text):
+        rmessage = f"所輸入的FB帳號\n「 {analyze['帳號'] } 」"
+
+        if Search_Same_FB(analyze):
+            logger.info("分析完成，找到相同資料")
+            status = 1
+        else:
+            logger.info("分析完成，找不到相同資料")
+            status = 0
+    else:
+        rmessage = f"FB黑名單查詢失敗"
+        status = -1
+
+    return rmessage, status
 
 Clear_List_Checker(Tools.FB_BLACKLIST, FB_list)

@@ -102,13 +102,7 @@ def handle_message_text_admin(event):
     elif match := re.search(Tools.KEYWORD_IG[2], lower_text):
         rmessage = IG_write_file(orgin_text)
     elif match := re.search(Tools.KEYWORD_FB[3], lower_text):
-        r = FB_write_file(orgin_text)
-        if r == 1:
-            rmessage = f"FB名單已存在"
-        elif r == 0:
-            rmessage = f"FB黑名單更新完成"
-        else:
-            rmessage = f"FB黑名單更新失敗"
+        rmessage = FB_write_file(orgin_text)
     elif match := re.search(Tools.KEYWORD_IG[4], orgin_text):
         ig_account = match.group(1).lower()
         logger.info(f"ig_account = {ig_account}")
@@ -293,22 +287,22 @@ def handle_message_text(event):
             if "lm.facebook.com" in lower_text or "l.facebook.com" in lower_text:
                 pass
             else:
-                r = FB_read_file(orgin_text)
-                if r == -1:
+                message, status = FB_read_file(orgin_text)
+                if status == -1:
                     rmessage = (f"所輸入的\n「 {orgin_text} 」\n"
                                 f"FB網址找不到真實ID\n"
                                 f"麻煩找到該貼文的\n"
                                 f"人物/粉絲團主頁\n"
                                 f"才能夠判別\n"
                                 f"感恩")
-                elif r == True:
-                    rmessage = (f"所輸入的\n「 {orgin_text} 」\n"
+                elif status == 1:
+                    rmessage = (f"{message}\n"
                                 f"「是」已知詐騙/可疑的FB\n"
                                 f"請勿輕易信任此FB的\n"
                                 f"文字、圖像、語音和連結\n"
                                 f"感恩")
                 else:
-                    rmessage = (f"所輸入的\n「 {orgin_text} 」\n"
+                    rmessage = (f"{message}\n"
                                 f"「不是」已知詐騙/可疑的FB\n"
                                 f"但並不代表沒問題\n"
                                 f"\n"
