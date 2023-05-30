@@ -2,8 +2,9 @@
 
 * 20230530 Update
   * 加入 輸入電話提醒
-  * 調整 Facebook縮網址判別
+  * 調整 重整IG判別與輸出用字
   * 調整 程式碼
+  * 調整 Facebook縮網址判別
 
 * 20230529 Update
   * 加入 Telegram網址查詢支援

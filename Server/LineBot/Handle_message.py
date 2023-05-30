@@ -100,13 +100,7 @@ def handle_message_text_admin(event):
         else:
             rmessage = f"邀請黑名單更新失敗"
     elif match := re.search(Tools.KEYWORD_IG[2], lower_text):
-        r = IG_write_file(orgin_text)
-        if r == 1:
-            rmessage = f"IG名單已存在"
-        elif r == 0:
-            rmessage = f"IG黑名單更新完成"
-        else:
-            rmessage = f"IG黑名單更新失敗"
+        rmessage = IG_write_file(orgin_text)
     elif match := re.search(Tools.KEYWORD_FB[3], lower_text):
         r = FB_write_file(orgin_text)
         if r == 1:
@@ -120,13 +114,7 @@ def handle_message_text_admin(event):
         logger.info(f"ig_account = {ig_account}")
         url = f"https://www.instagram.com/{ig_account}/"
         logger.info(f"url = {url}")
-        r = IG_write_file(url)
-        if r == 1:
-            rmessage = f"IG名單已存在"
-        elif r == 0:
-            rmessage = f"IG黑名單更新完成"
-        else:
-            rmessage = f"IG黑名單更新失敗"
+        rmessage = IG_write_file(url)
     elif match := re.search(Tools.KEYWORD_URL[0], lower_text):
         # 取得網址
         url = match.group(1)
@@ -337,19 +325,19 @@ def handle_message_text(event):
 
         # 判斷IG帳戶、貼文或影片
         if re.match(Tools.KEYWORD_IG[3], lower_text):
-            r = IG_read_file(orgin_text)
-            if r == -1:
+            message, status = IG_read_file(orgin_text)
+            if status == -1:
                 rmessage = (f"所輸入的\n「 {orgin_text} 」\n"
                             f"IG網址有誤、網址失效或不支援\n"
                             f"感恩")
-            elif r == True:
-                rmessage = (f"所輸入的\n「 {orgin_text} 」\n"
+            elif status == 1:
+                rmessage = (f"{message}\n"
                             f"「是」已知詐騙/可疑的IG\n"
                             f"請勿輕易信任此IG的\n"
                             f"文字、圖像、語音和連結\n"
                             f"感恩")
             else:
-                rmessage = (f"所輸入的\n「 {orgin_text} 」\n"
+                rmessage = (f"{message}\n"
                             f"「不是」已知詐騙/可疑的IG\n"
                             f"但並不代表沒問題\n"
                             f"\n"
