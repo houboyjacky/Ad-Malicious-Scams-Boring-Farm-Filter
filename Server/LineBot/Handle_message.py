@@ -55,14 +55,35 @@ def message_reply(event, text):
 allowlist = { "facebook.com", "instagram.com", "google.com", "youtube.com", "youtu.be" }
 
 # 管理員操作
-def handle_admin_message_text(user_text):
-    global setting
+def handle_message_text_admin(event):
+    global image_analysis
     rmessage = ''
 
-    orgin_text = user_text
-    lower_text = user_text.lower()
+    # 取得發訊者的 ID
+    user_id = event.source.user_id
 
-    if match := re.search(Tools.KEYWORD_LINE[1], lower_text):
+    # 讀取使用者傳來的文字訊息
+    orgin_text = event.message.text
+    lower_text = event.message.text.lower()
+
+    if orgin_text == "重讀":
+        Tools.reloadSetting()
+        reload_notice_board()
+        logger.info("Reload setting.json")
+        rmessage = f"設定已重新載入"
+    elif orgin_text == "檢閱":
+        content = get_netizen_file(user_id)
+        if content:
+            rmessage = f"內容：\n\n{content}\n\n參閱與處置後\n請輸入「完成」或「失效」"
+        else:
+            rmessage = f"目前沒有需要檢閱的資料"
+    elif orgin_text == "關閉辨識":
+        image_analysis = False
+        rmessage = f"已關閉辨識"
+    elif orgin_text == "開啟辨識":
+        image_analysis = True
+        rmessage = f"已開啟辨識"
+    elif match := re.search(Tools.KEYWORD_LINE[1], lower_text):
         lineid = match.group(1)
         if user_query_lineid(lineid):
             rmessage = f"邀請黑名單與賴黑名單已存在{lineid}"
@@ -125,56 +146,104 @@ def handle_admin_message_text(user_text):
         with open(Tools.NEW_SCAM_WEBSITE_FOR_ADG, "a", encoding="utf-8", newline='') as f:
             f.write(new_rule)
 
-        r = check_blacklisted_site(url)
-        if r:
+        if check_blacklisted_site(url):
             rmessage = f"網址黑名單已存在"
         else:
             # 提早執行更新
             update_part_blacklist(domain + "." + suffix)
             rmessage = f"網址黑名單更新完成"
-
     elif match := re.search(Tools.KEYWORD_URL[1], orgin_text):
         # 取得文字
         text = match.group(1)
-
         # 組合成新的規則
         new_rule = "! " + text + "\n"
-
         # 將文字寫入
         with open(Tools.NEW_SCAM_WEBSITE_FOR_ADG, "a", encoding="utf-8", newline='') as f:
             f.write(new_rule)
-
         rmessage = f"網址名單更新完成"
-
     elif match := re.search(Tools.KEYWORD_LINE[0], lower_text):
         # 取得文字
         lineid = match.group(1)
-        r = user_query_lineid(lineid)
-        if r:
-            rmessage = f"賴黑名單已存在" + lineid
+        if user_query_lineid(lineid):
+            rmessage = f"賴黑名單已存在「{lineid}」"
         else:
             # 加入新line id
             user_add_lineid(lineid)
-            rmessage = f"賴黑名單已加入" + lineid
-
+            rmessage = f"賴黑名單已加入「{lineid}」"
     elif match := re.search(Tools.KEYWORD_TELEGRAM[1], lower_text):
         # 取得文字
         telegram_id = match.group(1)
-        r = user_query_telegram_id(telegram_id)
-        if r:
-            rmessage = f"Telegram黑名單已存在" + telegram_id
+        if user_query_telegram_id(telegram_id):
+            rmessage = f"Telegram黑名單已存在「{telegram_id}」"
         else:
             # 加入新telegram id
             user_add_telegram_id(telegram_id)
-            rmessage = f"Telegram黑名單已加入" + telegram_id
+            rmessage = f"Telegram黑名單已加入「{telegram_id}」"
     else:
-        pass
+        rmessage = None
 
     return rmessage
 
-def handle_message_text(event):
-    global image_analysis
+def handle_message_text_front(user_text) -> str:
+    if len(user_text) > 1000:
+        rmessage = f"謝謝你提供的情報\n請縮短長度或分段傳送"
+        return rmessage
 
+    if user_text == "備用指南":
+        return user_guide
+
+    if re.match(r"^09\d+", user_text):
+        rmessage = f"謝謝你提供的電話號碼\n「{user_text}」\n若要查詢電話\n建議使用Whoscall\n若要查詢是否是詐騙賴\n輸入「賴+電話」\n例如：賴0912345678"
+        return rmessage
+
+    if user_text == "網站排行榜":
+        rmessage = get_web_leaderboard()
+        return rmessage
+
+    return None
+
+def handle_message_text_game(user_id, user_text) -> str:
+    if user_text.startswith("詐騙回報"):
+        user_name = line_bot_api.get_profile(user_id).display_name
+        write_new_netizen_file(user_id, user_name, user_text)
+        rmessage = f"謝謝你提供的情報\n輸入「積分」\n可以查詢你的積分排名"
+        return rmessage
+
+    if user_text == "遊戲":
+        site = get_random_invite(user_id)
+        if not site:
+            rmessage = f"目前暫停檢舉遊戲喔~"
+        else:
+            rmessage = f"請開始你的檢舉遊戲\n{site}\n若「完成」請回報「完成」\n若「失效」請回傳「失效」"
+        return rmessage
+
+    if user_text == "完成":
+        found = push_random_invite(user_id, True, False)
+        found2 = push_netizen_file(user_id, True, False)
+        if found or found2:
+            rmessage = f"感謝你的回報\n輸入「遊戲」\n進行下一波行動\n輸入「積分」\n可以查詢你的積分排名"
+        else:
+            rmessage = f"程式有誤，請勿繼續使用"
+        return rmessage
+
+    if user_text == "失效":
+        found = push_random_invite(user_id, False, True)
+        found2 = push_netizen_file(user_id, False, True)
+        if found or found2:
+            rmessage = f"感謝你的回報\n輸入「遊戲」\n進行下一波行動\n輸入「積分」\n可以查詢你的積分排名"
+        else:
+            rmessage = f"程式有誤，請勿繼續使用"
+        return rmessage
+
+    if user_text == "積分":
+        point = read_user_point(user_id)
+        rank = get_user_rank(user_id)
+
+        rmessage = f"你的檢舉積分是{str(point)}分\n排名第{str(rank)}名"
+        return rmessage
+    return None
+
+def handle_message_text(event):
     # 取得發訊者的 ID
     user_id = event.source.user_id
     logger.info(f'UserID = {event.source.user_id}')
@@ -184,107 +253,23 @@ def handle_message_text(event):
     orgin_text = event.message.text
     lower_text = event.message.text.lower()
 
-    if len(orgin_text) > 1000:
-        rmessage = f"謝謝你提供的情報\n請縮短長度或分段傳送"
+    # 長度控管、備用指南、電話、網站排行榜
+    if rmessage := handle_message_text_front(orgin_text):
         message_reply(event, rmessage)
         return
 
-    if orgin_text.startswith("備用指南"):
-        message_reply(event, user_guide)
-        return
-
-    if re.match(r"^09\d+", orgin_text):
-        rmessage = f"謝謝你提供的電話號碼\n「{orgin_text}」\n若要查詢電話\n建議使用Whoscall\n若要查詢是否是詐騙賴\n輸入「賴+電話」\n例如：賴0912345678"
+    # 遊戲模式
+    if rmessage := handle_message_text_game(user_id, orgin_text):
         message_reply(event, rmessage)
         return
 
     # 管理員操作
     if user_id in Tools.ADMINS:
-        if orgin_text == "重讀":
-            setting = ''
-            Tools.reloadSetting()
-            reload_notice_board()
-            logger.info("Reload setting.json")
-            rmessage = f"設定已重新載入"
+        if rmessage:=handle_message_text_admin(event):
             message_reply(event, rmessage)
-            reload_user_record()
+            if orgin_text == "重讀":
+                reload_user_record()
             return
-        elif orgin_text == "檢閱":
-            content = get_netizen_file(user_id)
-            if content:
-                rmessage = f"內容：\n\n{content}\n\n參閱與處置後\n請輸入「完成」或「失效」"
-            else:
-                rmessage = f"目前沒有需要檢閱的資料"
-            message_reply(event, rmessage)
-            return
-        elif orgin_text == "關閉辨識":
-            image_analysis = False
-            rmessage = f"已關閉辨識"
-            message_reply(event, rmessage)
-            return
-        elif orgin_text == "開啟辨識":
-            image_analysis = True
-            rmessage = f"已開啟辨識"
-            message_reply(event, rmessage)
-            return
-        elif orgin_text.startswith("加入"):
-            rmessage = handle_admin_message_text(orgin_text)
-            if rmessage:
-                message_reply(event, rmessage)
-                return
-        else:
-            pass
-
-    if orgin_text.startswith("詐騙回報"):
-        user_name = line_bot_api.get_profile(user_id).display_name
-        write_new_netizen_file(user_id, user_name, orgin_text)
-        rmessage = f"謝謝你提供的情報\n輸入「積分」\n可以查詢你的積分排名"
-        message_reply(event, rmessage)
-        return
-
-    if orgin_text == "網站排行榜":
-        rmessage = get_web_leaderboard()
-        message_reply(event, rmessage)
-        return
-
-    if orgin_text == "遊戲":
-        site = get_random_invite(user_id)
-        if not site:
-            rmessage = f"目前暫停檢舉遊戲喔~"
-        else:
-            rmessage = f"請開始你的檢舉遊戲\n{site}\n若「完成」請回報「完成」\n若「失效」請回傳「失效」"
-
-        message_reply(event, rmessage)
-        return
-
-    if orgin_text == "完成":
-        found = push_random_invite(user_id, True, False)
-        found2 = push_netizen_file(user_id, True, False)
-        if found or found2:
-            rmessage = f"感謝你的回報\n輸入「遊戲」\n進行下一波行動\n輸入「積分」\n可以查詢你的積分排名"
-        else:
-            rmessage = f"程式有誤，請勿繼續使用"
-
-        message_reply(event, rmessage)
-        return
-
-    if orgin_text == "失效":
-        found = push_random_invite(user_id, False, True)
-        found2 = push_netizen_file(user_id, False, True)
-        if found or found2:
-            rmessage = f"感謝你的回報\n輸入「遊戲」\n進行下一波行動\n輸入「積分」\n可以查詢你的積分排名"
-        else:
-            rmessage = f"程式有誤，請勿繼續使用"
-        message_reply(event, rmessage)
-        return
-
-    if orgin_text == "積分":
-        point = read_user_point(user_id)
-        rank = get_user_rank(user_id)
-
-        rmessage = f"你的檢舉積分是{str(point)}分\n排名第{str(rank)}名"
-        message_reply(event, rmessage)
-        return
 
     prefix = ""
     while True:
