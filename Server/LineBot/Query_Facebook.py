@@ -37,9 +37,14 @@ def analyze_FB_url(user_text:str) -> Optional[dict]:
     elif match := re.search(Tools.KEYWORD_FB[4], user_text):
         return None
     elif match := re.search(Tools.KEYWORD_FB[1], user_text):
-        Username = match.group(1)
-    elif match := re.search(Tools.KEYWORD_FB[5], user_text):
-        Username = match.group(1)
+        name = match.group(1)
+        pattern = r"(?<=-)(\d+)$"
+        if match := re.search(pattern, name):
+            Username = match.group(1)
+        elif name.isdigit():
+            Username = name
+        else:
+            return None
     else:
         return None
 

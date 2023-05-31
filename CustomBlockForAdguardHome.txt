@@ -4,6 +4,7 @@
 ! 疑似詐騙或不良的網站
 @@||pestyle.online^important
 #||fontawesomes.com^
+#||learningpa.cc^
 #||lihi.tv^
 #||lihi1.cc^
 #||lihi1.com^
@@ -1085,7 +1086,6 @@
 ||leadquizzes.com^
 ||leanote.xyz^
 ||learnguitarplaying.com^
-||learningpa.cc^
 ||lenal.shop^
 ||leo-traders.com^
 ||leo5288.com^
