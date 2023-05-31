@@ -36,7 +36,7 @@ def user_download_lineid():
     global lineid_list, lineid_download_hash, lineid_download_last_time
     url = Tools.LINEID_WEB.strip()
     if lineid_list:
-        if time.time() - lineid_download_last_time < 86400:
+        if time.time() - lineid_download_last_time < 3600:
             return
 
     response = requests.get(url)
@@ -52,7 +52,7 @@ def user_download_lineid():
     lineid_list = response.text.splitlines()
     lineid_download_last_time = time.time()
 
-    filename = "config/" + os.path.basename(Tools.LINEID_WEB)
+    filename = f"config/{os.path.basename(Tools.LINEID_WEB)}"
     with open(filename, "w", encoding="utf-8") as f:
         f.write('\n'.join(lineid_list))
 
