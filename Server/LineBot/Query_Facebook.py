@@ -38,6 +38,8 @@ def analyze_FB_url(user_text:str) -> Optional[dict]:
         return None
     elif match := re.search(Tools.KEYWORD_FB[1], user_text):
         Username = match.group(1)
+    elif match := re.search(Tools.KEYWORD_FB[5], user_text):
+        Username = match.group(1)
     else:
         return None
 

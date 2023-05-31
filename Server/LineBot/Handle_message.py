@@ -363,7 +363,7 @@ def handle_message_text(event):
             prefix_msg = f"分析出"
 
         if status == -1:
-            rmessage = (f"{prefix_msg}\n"
+            rmessage = (f"「 {orgin_text} 」\n"
                         f"FB網址找不到真實ID\n"
                         f"麻煩找到該貼文的\n"
                         f"人物/粉絲團主頁\n"
