@@ -25,7 +25,6 @@ import json
 import re
 import pycountry
 from filelock import FileLock
-from urllib.parse import urlparse, unquote
 
 with open('setting.json', 'r') as f:
     setting = json.load(f)
@@ -163,18 +162,6 @@ def find_url(text):
         return match.group()
     else:
         return None
-
-def decode_facebook_url(url:str):
-    # 解析 URL
-    parsed_url = urlparse(url)
-
-    # 提取出 u 參數的值
-    u_value = parsed_url.query.split("&")[0].split("=")[1]
-
-    # 解碼 u 參數的值
-    decoded_url = unquote(u_value)
-
-    return decoded_url
 
 def translate_country(country_code):
     try:

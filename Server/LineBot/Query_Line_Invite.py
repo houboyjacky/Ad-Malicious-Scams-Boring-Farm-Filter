@@ -44,17 +44,10 @@ def analyze_line_invite_url(user_text:str) -> Optional[dict]:
     lower_text = user_text.lower()
 
     if match := re.search(Tools.KEYWORD_LINE[5], orgin_text):
-        invite_code = match.groups()
+        invite_code = match.group(1)
         struct =  {"類別": "Voom", "識別碼": invite_code, "原始網址": orgin_text, "回報次數": 0, "失效": 0, "檢查者": ""}
         logger.info(struct)
         return struct
-    elif lower_text.startswith("https://lin.ee") or lower_text.startswith("https://page.line.me"):
-        redirected_url = resolve_redirects(orgin_text)
-        logger.info(f"Redirected_url = {redirected_url}")
-        if redirected_url.startswith("https://store.line.me"):
-            return None
-        redirected_url = redirected_url.replace("%40", "@")
-        match = re.match(Tools.KEYWORD_LINE[3], redirected_url)
     elif lower_text.startswith("https://liff.line.me"):
         response = requests.get(orgin_text)
         if response.status_code != 200:
@@ -67,7 +60,7 @@ def analyze_line_invite_url(user_text:str) -> Optional[dict]:
 
         redirected_url = resolve_redirects(redirected_url1)
         logger.info(f"Redirected_url 2 = {redirected_url}")
-        if redirected_url == "https://store.line.me/officialaccount/" :
+        if not redirected_url.startswith("https://line.me"):
             logger.info("該官方帳號已無效")
             return None
 
@@ -118,12 +111,12 @@ def lineinvite_write_file(user_text:str):
 
         if add_sort_lineinvite(analyze):
             logger.info("分析完成，找到相同資料")
-            rmessage = f"LINE邀請網址\n黑名單找到相同網址\n「 {analyze['識別碼'] } 」"
+            rmessage = f"LINE邀請網址\n黑名單找到相同邀請碼\n「 {analyze['識別碼'] } 」"
         else:
             invites.append(analyze)
             Tools.write_json_file(Tools.LINE_INVITE, invites)
             logger.info("分析完成，結果已寫入")
-            rmessage = f"LINE邀請網址\n黑名單成功加入網址\n「 {analyze['識別碼'] } 」"
+            rmessage = f"LINE邀請網址\n黑名單成功加入邀請碼\n「 {analyze['識別碼'] } 」"
     else:
         logger.info("無法分析網址")
         rmessage = f"LINE邀請網址加入失敗，無法分析網址"
@@ -134,7 +127,7 @@ def lineinvite_read_file(user_text:str):
     status = 0
     rmessage = ""
     if analyze := analyze_line_invite_url(user_text):
-        rmessage = f"所輸入的LINE邀請網址ID是\n「 {analyze['識別碼'] } 」"
+        rmessage = f"LINE邀請網址ID是\n「 {analyze['識別碼'] } 」"
         if user_query_lineid(analyze["識別碼"]):
             status = 1
         else:

@@ -89,9 +89,9 @@ def IG_read_file(user_text:str):
     rmessage = ""
     if analyze := analyze_IG_url(user_text):
         if analyze['帳號']:
-            rmessage = f"所輸入的IG帳號\n「 {analyze['帳號'] } 」"
+            rmessage = f"IG帳號\n「 {analyze['帳號'] } 」"
         elif analyze['識別碼']:
-            rmessage = f"所輸入的IG貼文\n「 {analyze['識別碼']} 」"
+            rmessage = f"IG貼文\n「 {analyze['識別碼']} 」"
 
         if Search_Same_IG(analyze):
             logger.info("分析完成，找到相同資料")

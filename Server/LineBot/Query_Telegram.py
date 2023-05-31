@@ -32,10 +32,10 @@ def read_telegram_id():
     return List
 
 # 使用者查詢Telegram ID
-def user_query_telegram_id(lineid):
+def user_query_telegram_id(TG_ID):
     global telegram_id_local
     # 檢查是否符合命名規範
-    if lineid in telegram_id_local:
+    if TG_ID in telegram_id_local:
         return True
     return False
 

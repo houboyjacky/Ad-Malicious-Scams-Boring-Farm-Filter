@@ -77,7 +77,7 @@ def FB_read_file(user_text:str):
     global FB_list
     rmessage = ""
     if analyze := analyze_FB_url(user_text):
-        rmessage = f"所輸入的FB帳號\n「 {analyze['帳號'] } 」"
+        rmessage = f"FB帳號\n「 {analyze['帳號'] } 」"
 
         if Search_Same_FB(analyze):
             logger.info("分析完成，找到相同資料")

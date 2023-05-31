@@ -39,7 +39,7 @@ from Query_Instagram import IG_read_file, IG_write_file
 from Query_Line_ID import user_query_lineid, user_add_lineid
 from Query_Line_Invite import lineinvite_write_file, lineinvite_read_file, get_random_invite, push_random_invite
 from Query_Telegram import user_query_telegram_id, user_add_telegram_id
-from Query_URL import user_query_website, check_blacklisted_site, get_web_leaderboard, update_part_blacklist
+from Query_URL import user_query_website, check_blacklisted_site, get_web_leaderboard, update_part_blacklist, user_query_shorturl
 
 image_analysis = False
 line_bot_api = LineBotApi(Tools.CHANNEL_ACCESS_TOKEN)
@@ -55,16 +55,12 @@ def message_reply(event, text):
 allowlist = { "facebook.com", "instagram.com", "google.com", "youtube.com", "youtu.be" }
 
 # 管理員操作
-def handle_message_text_admin(event):
+def handle_message_text_admin(user_id, orgin_text):
     global image_analysis
     rmessage = ''
 
-    # 取得發訊者的 ID
-    user_id = event.source.user_id
-
     # 讀取使用者傳來的文字訊息
-    orgin_text = event.message.text
-    lower_text = event.message.text.lower()
+    lower_text = orgin_text.lower()
 
     if orgin_text == "重讀":
         Tools.reloadSetting()
@@ -104,6 +100,24 @@ def handle_message_text_admin(event):
         url = f"https://www.instagram.com/{ig_account}/"
         logger.info(f"url = {url}")
         rmessage = IG_write_file(url)
+    elif match := re.search(Tools.KEYWORD_TELEGRAM[1], lower_text):
+        # 取得文字
+        telegram_id = match.group(1)
+        if user_query_telegram_id(telegram_id):
+            rmessage = f"Telegram黑名單已存在「{telegram_id}」"
+        else:
+            # 加入新telegram id
+            user_add_telegram_id(telegram_id)
+            rmessage = f"Telegram黑名單已加入「{telegram_id}」"
+    elif match := re.search(Tools.KEYWORD_TELEGRAM[3], lower_text):
+        # 取得文字
+        telegram_id = match.group(1)
+        if user_query_telegram_id(telegram_id):
+            rmessage = f"Telegram黑名單已存在「{telegram_id}」"
+        else:
+            # 加入新telegram id
+            user_add_telegram_id(telegram_id)
+            rmessage = f"Telegram黑名單已加入「{telegram_id}」"
     elif match := re.search(Tools.KEYWORD_URL[0], lower_text):
         # 取得網址
         url = match.group(1)
@@ -138,15 +152,8 @@ def handle_message_text_admin(event):
         with open(Tools.NEW_SCAM_WEBSITE_FOR_ADG, "a", encoding="utf-8", newline='') as f:
             f.write(new_rule)
         rmessage = f"網址名單更新完成"
-    elif match := re.search(Tools.KEYWORD_TELEGRAM[1], lower_text):
-        # 取得文字
-        telegram_id = match.group(1)
-        if user_query_telegram_id(telegram_id):
-            rmessage = f"Telegram黑名單已存在「{telegram_id}」"
-        else:
-            # 加入新telegram id
-            user_add_telegram_id(telegram_id)
-            rmessage = f"Telegram黑名單已加入「{telegram_id}」"
+    elif orgin_text.startswith("加入"):
+        rmessage = f"管理員指令參數有誤，請重新確認"
     else:
         rmessage = None
 
@@ -166,6 +173,14 @@ def handle_message_text_front(user_text) -> str:
 
     if user_text == "網站排行榜":
         rmessage = get_web_leaderboard()
+        return rmessage
+
+    if user_text.startswith("賴 "):
+        rmessage = "「賴」後面直接輸入ID/電話就好，不需要空白"
+        return rmessage
+
+    if user_text.startswith("TG "):
+        rmessage = "「TG」後面直接輸入ID就好，不需要空白"
         return rmessage
 
     return None
@@ -233,220 +248,220 @@ def handle_message_text(event):
 
     # 管理員操作
     if user_id in Tools.ADMINS:
-        if rmessage:=handle_message_text_admin(event):
+        if rmessage:=handle_message_text_admin(user_id, orgin_text):
             message_reply(event, rmessage)
             if orgin_text == "重讀":
                 reload_user_record()
             return
 
-    prefix = ""
-    while True:
-        # 查詢line邀請網址
-        if re.match(Tools.KEYWORD_LINE[4], lower_text):
-            message, status = lineinvite_read_file(orgin_text)
-            if status == -1:
-                rmessage = (f"{prefix}「 {orgin_text} 」\n"
-                            f"輸入有誤、網址失效或不支援\n"
-                            f"感恩")
-            elif status == 1:
-                rmessage = (f"{prefix}{message}\n"
-                            f"「是」已知詐騙/可疑Line邀請網址\n"
-                            f"請勿輕易信任此Line ID的\n"
-                            f"文字、圖像、語音和連結\n"
-                            f"感恩")
-            else:
-                rmessage = (f"{prefix}{message}\n"
-                            f"「不是」已知詐騙邀請網址\n"
-                            f"並不代表沒問題\n"
-                            f"\n"
-                            f"若該LINE邀請人\n"
-                            f"是「沒見過面」的「網友」\n"
-                            f"又介紹能帶你一起賺錢\n"
-                            f"１００％就是有問題\n"
-                            f"\n"
-                            f"{suffix_for_call}")
+    # 無關網址判斷
+    # 查詢Line ID
+    if match := re.search(Tools.KEYWORD_LINE[1], lower_text):
+        lineid = match.group(1)
+        if user_query_lineid(lineid):
+            rmessage = (f"所輸入的「{lineid}」\n"
+                        f"「是」詐騙/可疑Line ID\n"
+                        f"請勿輕易信任此Line ID的\n"
+                        f"文字、圖像、語音和連結\n"
+                        f"感恩")
+        else:
+            rmessage = (f"所輸入的「{lineid}」\n"
+                        f"目前不在詐騙黑名單中\n"
+                        f"但並不代表沒問題\n"
+                        f"\n"
+                        f"若該LINE ID\n"
+                        f"是「沒見過面」的「網友」\n"
+                        f"又能帶你一起賺錢或兼職\n"
+                        f"１００％就是有問題\n"
+                        f"\n"
+                        f"{suffix_for_call}")
+
+        message_reply(event, rmessage)
+        return
+
+    # 查詢Telegram ID
+    if match :=re.search(Tools.KEYWORD_TELEGRAM[0], orgin_text):
+        telegram_id = match.group(1)
+        if user_query_telegram_id(telegram_id):
+            rmessage = (f"所輸入的「{telegram_id}」\n"
+                        f"「是」詐騙/可疑Telegram ID\n"
+                        f"請勿輕易信任此Telegram ID的\n"
+                        f"文字、圖像、語音和連結\n"
+                        f"感恩")
+        else:
+            rmessage = (f"所輸入的「{telegram_id}」\n"
+                        f"目前不在詐騙黑名單中\n"
+                        f"但並不代表沒問題\n"
+                        f"\n"
+                        f"若該Telegram ID\n"
+                        f"是「沒見過面」的「網友」\n"
+                        f"又能帶你一起賺錢或兼職\n"
+                        f"１００％就是有問題\n"
+                        f"\n"
+                        f"{suffix_for_call}")
+
+        message_reply(event, rmessage)
+        return
+
+    prefix_msg = ""
+    # 縮網址展開
+    prefix_msg, expendurl, go_state = user_query_shorturl(orgin_text)
+    # 是縮網址，取代原本網址，繼續走
+    if go_state and expendurl:
+        orgin_text = expendurl
+        lower_text = expendurl
+    # 不是縮網址，繼續走
+    elif go_state and not expendurl:
+       pass
+    # 失效或有誤，回應錯誤
+    else:
+        message_reply(event, prefix_msg)
+        return
+
+    # 查詢line邀請網址
+    if re.match(Tools.KEYWORD_LINE[4], lower_text):
+        message, status = lineinvite_read_file(orgin_text)
+
+        if prefix_msg:
+            prefix_msg = f"{prefix_msg}「 {orgin_text} 」\n"
+        else:
+            prefix_msg = f"分析出"
+
+        # 若查詢失敗就繼續go到最後，直接查網址
+        if status == -1:
+            prefix_msg = ""
+            pass
+        elif status == 1:
+            rmessage = (f"{prefix_msg}{message}\n\n"
+                        f"「是」已知詐騙/可疑Line邀請網址\n"
+                        f"請勿輕易信任此Line ID的\n"
+                        f"文字、圖像、語音和連結\n"
+                        f"感恩")
             message_reply(event, rmessage)
-            break
-
-        # 判斷FB帳戶
-        if re.match(Tools.KEYWORD_FB[2], lower_text):
-            if "lm.facebook.com" in lower_text or "l.facebook.com" in lower_text:
-                pass
-            else:
-                message, status = FB_read_file(orgin_text)
-                if status == -1:
-                    rmessage = (f"所輸入的\n「 {orgin_text} 」\n"
-                                f"FB網址找不到真實ID\n"
-                                f"麻煩找到該貼文的\n"
-                                f"人物/粉絲團主頁\n"
-                                f"才能夠判別\n"
-                                f"感恩")
-                elif status == 1:
-                    rmessage = (f"{message}\n"
-                                f"「是」已知詐騙/可疑的FB\n"
-                                f"請勿輕易信任此FB的\n"
-                                f"文字、圖像、語音和連結\n"
-                                f"感恩")
-                else:
-                    rmessage = (f"{message}\n"
-                                f"「不是」已知詐騙/可疑的FB\n"
-                                f"但並不代表沒問題\n"
-                                f"\n"
-                                f"若該FB帳號的貼文\n"
-                                f"1. 兼職打工\n"
-                                f"2. 能帶你一起賺錢\n"
-                                f"3. 炫富式貼文\n"
-                                f"4. FB廣告，但追蹤太少\n"
-                                f"有極大的機率是有問題的\n"
-                                f"\n"
-                                f"{suffix_for_call}")
-                message_reply(event, rmessage)
-                break
-
-        # 判斷IG帳戶、貼文或影片
-        if re.match(Tools.KEYWORD_IG[3], lower_text):
-            message, status = IG_read_file(orgin_text)
-            if status == -1:
-                rmessage = (f"所輸入的\n「 {orgin_text} 」\n"
-                            f"IG網址有誤、網址失效或不支援\n"
-                            f"感恩")
-            elif status == 1:
-                rmessage = (f"{message}\n"
-                            f"「是」已知詐騙/可疑的IG\n"
-                            f"請勿輕易信任此IG的\n"
-                            f"文字、圖像、語音和連結\n"
-                            f"感恩")
-            else:
-                rmessage = (f"{message}\n"
-                            f"「不是」已知詐騙/可疑的IG\n"
-                            f"但並不代表沒問題\n"
-                            f"\n"
-                            f"若該IG帳號的貼文\n"
-                            f"1. 能帶你一起賺錢\n"
-                            f"2. 炫富式貼文\n"
-                            f"3. IG廣告，但追蹤太少\n"
-                            f"有極大的機率是有問題的\n"
-                            f"\n"
-                            f"{suffix_for_call}")
+            return
+        else:
+            rmessage = (f"{prefix_msg}{message}\n\n"
+                        f"「不是」已知詐騙邀請網址\n"
+                        f"並不代表沒問題\n"
+                        f"\n"
+                        f"若該LINE邀請人\n"
+                        f"是「沒見過面」的「網友」\n"
+                        f"又介紹能帶你一起賺錢\n"
+                        f"１００％就是有問題\n"
+                        f"\n"
+                        f"{suffix_for_call}")
             message_reply(event, rmessage)
-            break
+            return
 
-        # 查詢Telegram網址
-        if match := re.search(Tools.KEYWORD_TELEGRAM[2], lower_text):
-            telegram_id = match.group(1)
-            if user_query_telegram_id(telegram_id):
-                rmessage = (f"所輸入的「{telegram_id}」\n"
-                            f"「是」詐騙/可疑Telegram ID\n"
-                            f"請勿輕易信任此Telegram ID的\n"
-                            f"文字、圖像、語音和連結\n"
-                            f"感恩")
-            else:
-                rmessage = (f"所輸入的「{telegram_id}」\n"
-                            f"目前不在詐騙黑名單中\n"
-                            f"但並不代表沒問題\n"
-                            f"\n"
-                            f"若該Telegram ID\n"
-                            f"是「沒見過面」的「網友」\n"
-                            f"又能帶你一起賺錢或兼職\n"
-                            f"１００％就是有問題\n"
-                            f"\n"
-                            f"{suffix_for_call}")
+    # 判斷FB帳戶
+    if re.match(Tools.KEYWORD_FB[2], lower_text):
+        message, status = FB_read_file(orgin_text)
 
-            message_reply(event, rmessage)
-            break
+        if prefix_msg:
+            prefix_msg = f"{prefix_msg}「 {orgin_text} 」\n"
+        else:
+            prefix_msg = f"分析出"
 
-        # 如果用戶輸入的網址沒有以 http 或 https 開頭，則不回應訊息
-        redirects_list = ["https://lm.facebook.com", "https://l.facebook.com", "https://l.instagram.com"]
-        if re.match(Tools.KEYWORD_URL[2], lower_text):
-            if any(lower_text.startswith(redirect) for redirect in redirects_list):
-                url = Tools.decode_facebook_url(lower_text)
-                logger.info(f"url = {url}")
+        if status == -1:
+            rmessage = (f"{prefix_msg}\n"
+                        f"FB網址找不到真實ID\n"
+                        f"麻煩找到該貼文的\n"
+                        f"人物/粉絲團主頁\n"
+                        f"才能夠判別\n"
+                        f"感恩")
+        elif status == 1:
+            rmessage = (f"{prefix_msg}{message}\n\n"
+                        f"「是」已知詐騙/可疑的FB\n"
+                        f"請勿輕易信任此FB的\n"
+                        f"文字、圖像、語音和連結\n"
+                        f"感恩")
+        else:
+            rmessage = (f"{prefix_msg}{message}\n\n"
+                        f"「不是」已知詐騙/可疑的FB\n"
+                        f"但並不代表沒問題\n"
+                        f"\n"
+                        f"若該FB帳號的貼文\n"
+                        f"1. 兼職打工\n"
+                        f"2. 能帶你一起賺錢\n"
+                        f"3. 炫富式貼文\n"
+                        f"4. FB廣告，但追蹤太少\n"
+                        f"有極大的機率是有問題的\n"
+                        f"\n"
+                        f"{suffix_for_call}")
+        message_reply(event, rmessage)
+        return
 
-                source_url = tldextract.extract(lower_text)
-                source_domain = f"{source_url.subdomain.lower()}.{source_url.domain.lower()}"
+    # 判斷IG帳戶、貼文或影片
+    if re.match(Tools.KEYWORD_IG[3], lower_text):
+        message, status = IG_read_file(orgin_text)
+        if prefix_msg:
+            prefix_msg = f"{prefix_msg}「 {orgin_text} 」\n"
+        else:
+            prefix_msg = f"所輸入的"
 
-                result_url = tldextract.extract(url)
-                result_domain = f"{result_url.domain.lower()}.{result_url.suffix.lower()}"
+        if status == -1:
+            rmessage = (f"{prefix_msg}\n"
+                        f"IG網址有誤、網址失效或不支援\n"
+                        f"感恩")
+        elif status == 1:
+            rmessage = (f"{prefix_msg}{message}\n\n"
+                        f"「是」已知詐騙/可疑的IG\n"
+                        f"請勿輕易信任此IG的\n"
+                        f"文字、圖像、語音和連結\n"
+                        f"感恩")
+        else:
+            rmessage = (f"{prefix_msg}{message}\n\n"
+                        f"「不是」已知詐騙/可疑的IG\n"
+                        f"但並不代表沒問題\n"
+                        f"\n"
+                        f"若該IG帳號的貼文\n"
+                        f"1. 能帶你一起賺錢\n"
+                        f"2. 炫富式貼文\n"
+                        f"3. IG廣告，但追蹤太少\n"
+                        f"有極大的機率是有問題的\n"
+                        f"\n"
+                        f"{suffix_for_call}")
+        message_reply(event, rmessage)
+        return
 
-                # 遇到line的連結直接重新判斷
-                if result_domain == "line.me" or result_domain == "lin.ee":
-                    prefix = f"「 {source_domain} 」轉址到\n"
-                    lower_text = url
-                    orgin_text = url
-                    continue
-                else:
-                    rmessage = user_query_website(url)
+    # 查詢Telegram網址
+    if match := re.search(Tools.KEYWORD_TELEGRAM[2], lower_text):
+        telegram_id = match.group(1)
+        if prefix_msg:
+            prefix_msg = f"{prefix_msg}「 {orgin_text} 」\nTelegram ID為\n"
+        else:
+            prefix_msg = f"所輸入的Telegram ID為\n"
 
-                    #取得原網址
-                    extracted = tldextract.extract(lower_text)
-                    domain = f"{extracted.subdomain.lower()}.{extracted.domain.lower()}"
+        if user_query_telegram_id(telegram_id):
+            rmessage = (f"{prefix_msg}「{telegram_id}」\n\n"
+                        f"「是」詐騙/可疑Telegram ID\n"
+                        f"請勿輕易信任此Telegram ID的\n"
+                        f"文字、圖像、語音和連結\n"
+                        f"感恩")
+        else:
+            rmessage = (f"{prefix_msg}「{telegram_id}」\n\n"
+                        f"目前不在詐騙黑名單中\n"
+                        f"但並不代表沒問題\n"
+                        f"\n"
+                        f"若該Telegram ID\n"
+                        f"是「沒見過面」的「網友」\n"
+                        f"又能帶你一起賺錢或兼職\n"
+                        f"１００％就是有問題\n"
+                        f"\n"
+                        f"{suffix_for_call}")
 
-                    rmessage = f"原網址為「 {domain} 」的轉址\n實際{rmessage}"
-            else:
-                rmessage = user_query_website(orgin_text)
+        message_reply(event, rmessage)
+        return
 
-            message_reply(event, rmessage)
-            break
-
-        if orgin_text.startswith("賴 "):
-            rmessage = "「賴」後面直接輸入ID/電話就好，不需要空白"
-            message_reply(event, rmessage)
-            break
-
-        if orgin_text.startswith("TG "):
-            rmessage = "「TG」後面直接輸入ID就好，不需要空白"
-            message_reply(event, rmessage)
-            break
-
-        # 查詢Line ID
-        if re.search(Tools.KEYWORD_LINE[1], lower_text):
-            lineid = lower_text.replace("賴", "")
-            if user_query_lineid(lineid):
-                rmessage = (f"所輸入的「{lineid}」\n"
-                            f"「是」詐騙/可疑Line ID\n"
-                            f"請勿輕易信任此Line ID的\n"
-                            f"文字、圖像、語音和連結\n"
-                            f"感恩")
-            else:
-                rmessage = (f"所輸入的「{lineid}」\n"
-                            f"目前不在詐騙黑名單中\n"
-                            f"但並不代表沒問題\n"
-                            f"\n"
-                            f"若該LINE ID\n"
-                            f"是「沒見過面」的「網友」\n"
-                            f"又能帶你一起賺錢或兼職\n"
-                            f"１００％就是有問題\n"
-                            f"\n"
-                            f"{suffix_for_call}")
-
-            message_reply(event, rmessage)
-            break
-
-        # 查詢Telegram ID
-        if re.search(Tools.KEYWORD_TELEGRAM[0], orgin_text):
-            telegram_id = lower_text[2:]
-            if user_query_telegram_id(telegram_id):
-                rmessage = (f"所輸入的「{telegram_id}」\n"
-                            f"「是」詐騙/可疑Telegram ID\n"
-                            f"請勿輕易信任此Telegram ID的\n"
-                            f"文字、圖像、語音和連結\n"
-                            f"感恩")
-            else:
-                rmessage = (f"所輸入的「{telegram_id}」\n"
-                            f"目前不在詐騙黑名單中\n"
-                            f"但並不代表沒問題\n"
-                            f"\n"
-                            f"若該Telegram ID\n"
-                            f"是「沒見過面」的「網友」\n"
-                            f"又能帶你一起賺錢或兼職\n"
-                            f"１００％就是有問題\n"
-                            f"\n"
-                            f"{suffix_for_call}")
-
-            message_reply(event, rmessage)
-            break
-
-        break
+    # 如果用戶輸入的網址沒有以 http 或 https 開頭，則不回應訊息
+    if re.match(Tools.KEYWORD_URL[2], lower_text):
+        rmessage = user_query_website(orgin_text)
+        if prefix_msg:
+            rmessage = f"{prefix_msg}{rmessage}"
+        else:
+            rmessage = f"所輸入的{rmessage}"
+        message_reply(event, rmessage)
+        return
 
     return
 

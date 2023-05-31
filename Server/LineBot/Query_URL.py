@@ -34,6 +34,7 @@ from collections import defaultdict
 from Logger import logger
 from urllib.request import urlopen
 from urllib.error import HTTPError, URLError
+from urllib.parse import urlparse, unquote
 from bs4 import BeautifulSoup
 from PrintText import suffix_for_call
 
@@ -456,6 +457,100 @@ Special_SubWebsite = [
     "wixsite.com"
 ]
 
+def user_query_shorturl_normal(user_text):
+
+    #解析網址
+    extracted = tldextract.extract(user_text)
+    subdomain = extracted.subdomain.lower()
+    domain = extracted.domain.lower()
+    suffix = extracted.suffix.lower()
+
+    if subdomain:
+        domain_name = f"{subdomain}.{domain}.{suffix}"
+    else:
+        domain_name = f"{domain}.{suffix}"
+    logger.info(f"domain_name = {domain_name}")
+
+    keep_go_status = False
+    logger.info(f"user_text={user_text}")
+    result = resolve_redirects(user_text)
+    logger.info(f"result={result}")
+
+    extracted = tldextract.extract(result)
+    domain = extracted.domain
+    suffix = extracted.suffix
+    # 網址都一樣，不是真的已失效，就是被網站阻擋
+    if f"{domain}.{suffix}" == domain_name:
+        rmessage = f"「 {user_text} 」是縮網址\n目前縮網址已失效\n"
+        keep_go_status = False
+        logger.info("縮網址失效")
+    # 讓他繼續Go下去
+    elif not result:
+        rmessage = f"「 {user_text} 」輸入錯誤\n"
+        result = ""
+        keep_go_status = False
+        logger.info("縮網址無資料")
+    else:
+        rmessage = f"「 {domain_name} 」是縮網址\n原始網址為\n"
+        keep_go_status = True
+        logger.info("縮網址找到資料")
+
+    return rmessage, result, keep_go_status
+
+def user_query_shorturl_meta(user_text):
+
+    logger.info(f"user_text={user_text}")
+
+    # 解析 URL
+    parsed_url = urlparse(user_text)
+
+    # 提取出 u 參數的值
+    u_value = parsed_url.query.split("&")[0].split("=")[1]
+
+    # 解碼 u 參數的值
+    url = unquote(u_value)
+    logger.info(f"url = {url}")
+
+    source_url = tldextract.extract(user_text.lower())
+    subdomain = source_url.subdomain.lower()
+    domain = source_url.domain.lower()
+    suffix = source_url.suffix.lower()
+    source_domain = f"{subdomain}.{domain}.{suffix}"
+
+    rmessage = f"「 {source_domain} 」是縮網址\n原始網址為\n"
+    keep_go_status = True
+    logger.info("meta縮網址找到資料")
+
+    return rmessage, url, keep_go_status
+
+def user_query_shorturl(user_text):
+
+    rmessage = ""
+    result = ""
+    keep_go_status = False
+    meta_redirects_list = ["lm.facebook.com", "l.facebook.com", "l.instagram.com"]
+
+    #解析網址
+    extracted = tldextract.extract(user_text)
+    subdomain = extracted.subdomain.lower()
+    domain = extracted.domain.lower()
+    suffix = extracted.suffix.lower()
+
+    if subdomain:
+        domain_name = f"{subdomain}.{domain}.{suffix}"
+    else:
+        domain_name = f"{domain}.{suffix}"
+
+    if domain_name in meta_redirects_list:
+        rmessage, result, keep_go_status = user_query_shorturl_meta(user_text)
+        return rmessage, result, keep_go_status
+
+    if domain_name in Tools.SHORT_URL_LIST:
+        rmessage, result, keep_go_status = user_query_shorturl_normal(user_text)
+        return rmessage, result, keep_go_status
+
+    return rmessage, result, True
+
 # 使用者查詢網址
 def user_query_website(user_text):
 
@@ -468,49 +563,14 @@ def user_query_website(user_text):
     if not domain or not suffix:
         return
 
-    #縮網址判斷與找到原始網址
-    shorturl_message = ""
-    is_shorturl_get = False
-
-    if subdomain:
-        domain_name = f"{subdomain}.{domain}.{suffix}"
-    else:
-        domain_name = f"{domain}.{suffix}"
-    logger.info(f"domain_name = {domain_name}")
-
-    if domain_name in Tools.SHORT_URL_LIST:
-        logger.info(f"user_text={user_text}")
-        result = resolve_redirects(user_text)
-        logger.info(f"result={result}")
-
-        if result:
-            extracted = tldextract.extract(result)
-            domain = extracted.domain
-            suffix = extracted.suffix
-            # 網址都一樣，不是真的已失效，就是被網站阻擋
-            if f"{domain}.{suffix}" == domain_name:
-                shorturl_message = f"「 {user_text} 」是縮網址\n目前縮網址已失效\n"
-                return shorturl_message
-            # 直接回傳是賴的字串，讓使用者重新輸入
-            elif f"{domain}.{suffix}" == "line.me":
-                shorturl_message = f"「 {user_text} 」是縮網址\n原始網址為\n「 {result} 」\n請複製網址重新查詢\n"
-                return shorturl_message
-            # 讓他繼續Go下去
-            elif result:
-                is_shorturl_get = True
-                shorturl_message = f"「 {domain_name} 」是縮網址\n原始網址為\n"
-    else:
-        shorturl_message = ""
-        pass
-
     #取得網域
-    user_text = f"{domain}.{suffix}"
+    domain_name = f"{domain}.{suffix}"
 
-    update_web_leaderboard(user_text)
+    update_web_leaderboard(domain_name)
 
     #從 WHOIS 服務器獲取 WHOIS 信息
     try:
-        w = whois.whois(user_text)
+        w = whois.whois(domain_name)
         Error = False
     except whois.parser.PywhoisError: # 判斷原因 whois.parser.PywhoisError: No match for "FXACAP.COM"
         w = None
@@ -518,34 +578,28 @@ def user_query_website(user_text):
     logger.info(w)
 
     #判斷網站
-    if user_text in Special_SubWebsite:
+    if domain_name in Special_SubWebsite:
         full_domain_name = f"{extracted.subdomain.lower()}.{domain}.{suffix}"
         logger.info(f"full_domain_name = {full_domain_name}")
         checkresult = check_blacklisted_site(full_domain_name)
     else:
-        checkresult = check_blacklisted_site(user_text)
-
-    website = user_text
-    if is_shorturl_get:
-        website = result
+        checkresult = check_blacklisted_site(domain_name)
 
     if Error or not w.domain_name or not w.creation_date:
         if checkresult:
-            rmessage = (f"所輸入的網址\n"
-                        f"{shorturl_message}「 {website} 」\n"
-                        f"被判定是詐騙／可疑網站\n"
+            rmessage = (f"「 {domain_name} 」\n\n"
+                        f"被判定「是」詐騙/可疑網站\n"
                         f"請勿相信此網站\n"
                         f"若認為誤通報，請補充描述\n"
                         f"感恩"
             )
         else:
-            rmessage = (f"所輸入的網址\n"
-                        f"{shorturl_message}「 {website} 」\n"
-                        f"目前尚未在資料庫中\n"
+            rmessage = (f"「 {domain_name} 」\n\n"
+                        f"目前「尚未」在資料庫中\n"
                         f"敬請小心謹慎\n"
                         f"\n"
                         f"網站評分參考：\n"
-                        f"「 https://www.scamadviser.com/zh/check-website/{user_text} 」\n"
+                        f"「 https://www.scamadviser.com/zh/check-website/{domain_name} 」\n"
                         f"\n"
                         f"{suffix_for_call}\n"
             )
@@ -565,7 +619,7 @@ def user_query_website(user_text):
     diff_days = (today - creation_date.date()).days  # 相差幾天
     creation_date_str = creation_date.strftime('%Y-%m-%d %H:%M:%S')  # 轉換成字串
 
-    logger.info("Website : " + user_text)
+    logger.info("Website : " + domain_name)
     logger.info("Create Date : " + creation_date_str)
     logger.info("Diff Days : " + str(diff_days))
 
@@ -588,31 +642,26 @@ def user_query_website(user_text):
     else:
         rmessage_country = ""
 
-    website = user_text
-    if is_shorturl_get:
-        website = result
     #判斷網站
     if checkresult:
-        rmessage = (f"所輸入的網址\n"
-                    f"{shorturl_message}「 {website} 」\n"
+        rmessage = (f"「 {domain_name} 」\n"
                     f"{rmessage_country}"
                     f"{rmessage_creation_date}\n"
-                    f"{rmessage_diff_days}\n"
-                    f"已經被列入是詐騙／可疑網站名單中\n"
+                    f"{rmessage_diff_days}\n\n"
+                    f"已經被列入「是」詐騙/可疑網站名單中\n"
                     f"請勿相信此網站\n"
                     f"若認為誤通報，請補充描述\n"
                     f"感恩"
         )
     else:
-        rmessage = (f"所輸入的網址\n"
-                    f"{shorturl_message}「 {website} 」\n"
+        rmessage = (f"「 {domain_name} 」\n"
                     f"{rmessage_country}"
                     f"{rmessage_creation_date}\n"
                     f"{rmessage_diff_days}\n"
                     f"網站評分參考：\n"
-                    f"「 https://www.scamadviser.com/zh/check-website/{user_text} 」\n"
+                    f"「 https://www.scamadviser.com/zh/check-website/{domain_name} 」\n"
                     f"\n"
-                    f"雖然目前尚未在資料庫中\n"
+                    f"雖然目前「尚未」在資料庫中\n"
                     f"但提醒你！\n"
                     f"1. 建立時間是晚於2022/01/01\n"
                     f"2. 天數差距越小\n"
