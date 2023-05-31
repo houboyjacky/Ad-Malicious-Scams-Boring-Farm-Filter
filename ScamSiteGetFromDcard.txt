@@ -691,7 +691,7 @@
 ||shoppmjebgg.store^
 ||tbserp.com^
 ||osstbs.shop^
-||trust-provider.cn^
+#||trust-provider.cn^
 ||iowune.com^
 ! IG網購詐騙 https://www.dcard.tw/f/mood/p/241034836
 ||adamwitheve.com^

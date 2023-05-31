@@ -13,6 +13,8 @@ def get_txt_files(directory):
     for file in os.listdir(directory):
         if file.endswith('.txt') and os.path.isfile(os.path.join(directory, file)):
             txt_files.append(os.path.join(directory, file))
+
+    txt_files.sort()  # 對列表進行排序
     return txt_files
 
 def generate_hash_json(directory):
