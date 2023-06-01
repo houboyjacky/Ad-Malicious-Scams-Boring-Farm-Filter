@@ -152,7 +152,7 @@ def handle_message_text_admin(user_id, orgin_text):
         # 取得文字
         text = match.group(1)
         # 組合成新的規則
-        new_rule = "! " + text + "\n"
+        new_rule = f"! {text}\n"
         # 將文字寫入
         with open(Tools.NEW_SCAM_WEBSITE_FOR_ADG, "a", encoding="utf-8", newline='') as f:
             f.write(new_rule)

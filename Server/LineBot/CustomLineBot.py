@@ -68,7 +68,7 @@ def log_request(response):
     return response
 
 filename = os.path.basename(Tools.NEW_SCAM_WEBSITE_FOR_ADG)
-@app.route('/'+filename)
+@app.route(f"/{filename}")
 def tmp_blacklisted_site():
     return Response(open(Tools.NEW_SCAM_WEBSITE_FOR_ADG, "rb"), mimetype="text/plain")
 

@@ -55,16 +55,16 @@ def Logger_Transfer(pre_close = True):
         date_match = re.match(r'^(\d{4})-(\d{2})-(\d{2})', line)
         if date_match or not current_log_file:
             year, month, day = date_match.groups()
-            current_date_str = year + month + day
+            current_date_str = f"{year}{month}{day}"
             basename = Tools.LOGFILE.split('.')[0]
-            current_log_file = basename + "_" + current_date_str + ".log"
+            current_log_file = f"{basename}_{current_date_str}.log"
 
         if os.path.exists(current_log_file):
             with open(current_log_file, 'a', encoding='utf-8', newline='') as f:
-                f.write(line + '\n')
+                f.write(f"{line}\n")
         else:
             with open(current_log_file, 'w', encoding='utf-8', newline='') as f:
-                f.write(line + '\n')
+                f.write(f"{line}\n")
 
     # 移除LineBot.log
     open(Tools.LOGFILE, 'w').close()

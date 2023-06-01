@@ -198,7 +198,7 @@ def write_list_to_file(file_path, data_list):
     # 將清單中的內容寫入檔案
     with open(file_path, 'w') as file:
         for item in data_list:
-            file.write(item + '\n')
+            file.write(f"{item}\n")
 
 def is_file_len(file_path):
     with open(file_path, 'r') as file:

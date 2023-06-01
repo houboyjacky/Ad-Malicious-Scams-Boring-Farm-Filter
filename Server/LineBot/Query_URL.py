@@ -140,7 +140,7 @@ def resolve_redirects_other(url):
 def resolve_redirects(url):
 
     if url.lower().startswith("http://"):
-        url = "https://" + url[7:]
+        url = f"https://{url[7:]}"
 
     if url.lower().startswith("https://risu.io") or url.lower().startswith("https://lurl.cc"):
         final_url = resolve_redirects_other(url)
@@ -617,9 +617,9 @@ def user_query_website(user_text):
     diff_days = (today - creation_date.date()).days  # 相差幾天
     creation_date_str = creation_date.strftime('%Y-%m-%d %H:%M:%S')  # 轉換成字串
 
-    logger.info("Website : " + domain_name)
-    logger.info("Create Date : " + creation_date_str)
-    logger.info("Diff Days : " + str(diff_days))
+    logger.info(f"Website : {domain_name}")
+    logger.info(f"Create Date : {creation_date_str}")
+    logger.info(f"Diff Days : {str(diff_days)}")
 
     # 建立輸出字串
     rmessage_creation_date = f"建立時間：{creation_date_str}"
