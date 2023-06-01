@@ -84,3 +84,9 @@
 !
 ! 有用的網站
 @@||techrabbit.biz^$important
+!
+! 部分網站會用到
+@@||mail.mystrikingly.com^$important
+!
+! 影響淘寶
+@@||h-adashx.ut.taobao.com^$important
