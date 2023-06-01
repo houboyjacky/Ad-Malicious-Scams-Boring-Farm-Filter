@@ -442,14 +442,14 @@ def check_blacklisted_site(user_text):
             if re.fullmatch(regex, user_text):
                 # 特別有*號規則直接可以寫入Adguard規則
                 with open(Tools.NEW_SCAM_WEBSITE_FOR_ADG, "a", encoding="utf-8", newline='') as f:
-                    f.write("||"+ user_text + "^\n")
+                    f.write(f"||{user_text}^\n")
                 return True
         elif user_text == line:
             return True
         elif user_text.endswith(line) and line in Special_SubWebsite:
             # 特別子網域規則直接可以寫入Adguard規則
             with open(Tools.NEW_SCAM_WEBSITE_FOR_ADG, "a", encoding="utf-8", newline='') as f:
-                f.write("||"+ user_text + "^\n")
+                f.write(f"||{user_text}^\n")
             return True
     return False
 
@@ -561,14 +561,14 @@ def user_query_website(user_text):
     suffix = extracted.suffix.lower()
 
     if not domain or not suffix:
-        return
+        return None
 
-    #取得網域
+    # 取得網域
     domain_name = f"{domain}.{suffix}"
 
     update_web_leaderboard(domain_name)
 
-    #從 WHOIS 服務器獲取 WHOIS 信息
+    # 從 WHOIS 服務器獲取 WHOIS 信息
     try:
         w = whois.whois(domain_name)
         Error = False
@@ -592,6 +592,8 @@ def user_query_website(user_text):
                         f"請勿相信此網站\n"
                         f"若認為誤通報，請補充描述\n"
                         f"感恩"
+                        f"\n"
+                        f"{suffix_for_call}"
             )
         else:
             rmessage = (f"「 {domain_name} 」\n\n"
@@ -652,6 +654,8 @@ def user_query_website(user_text):
                     f"請勿相信此網站\n"
                     f"若認為誤通報，請補充描述\n"
                     f"感恩"
+                    f"\n"
+                    f"{suffix_for_call}"
         )
     else:
         rmessage = (f"「 {domain_name} 」\n"
