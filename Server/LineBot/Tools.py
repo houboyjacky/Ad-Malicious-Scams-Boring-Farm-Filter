@@ -84,6 +84,8 @@ KEYWORD_FB = setting['KEYWORD_FB']
 TELEGRAM_LOCAL = setting['TELEGRAM_LOCAL']
 # KEYWORD_TELEGRAM => Keyword for TELEGRAM
 KEYWORD_TELEGRAM = setting['KEYWORD_TELEGRAM']
+# SPECIAL_SUBWEBSITE => Special Subwebsite need to block sub website
+SPECIAL_SUBWEBSITE = setting['SPECIAL_SUBWEBSITE']
 
 def reloadSetting():
     global ADMINS, CERT, PRIVKEY, NEW_SCAM_WEBSITE_FOR_ADG, BLACKUSERID
@@ -92,6 +94,7 @@ def reloadSetting():
     global WEB_LEADERBOARD_FILE, SHORT_URL_LIST, HASH_FILE, IG_BLACKLIST
     global NOTICE_BOARD, NOTICE_BOARD_LIST, FB_BLACKLIST, KEYWORD_URL
     global KEYWORD_LINE, KEYWORD_FB, KEYWORD_IG, TELEGRAM_LOCAL, KEYWORD_TELEGRAM
+    global SPECIAL_SUBWEBSITE
     global setting
 
     setting = ''
@@ -126,6 +129,7 @@ def reloadSetting():
     KEYWORD_IG = setting['KEYWORD_IG']
     TELEGRAM_LOCAL = setting['TELEGRAM_LOCAL']
     KEYWORD_TELEGRAM = setting['KEYWORD_TELEGRAM']
+    SPECIAL_SUBWEBSITE = setting['SPECIAL_SUBWEBSITE']
     return
 
 def read_json_file(filename: str) -> list:

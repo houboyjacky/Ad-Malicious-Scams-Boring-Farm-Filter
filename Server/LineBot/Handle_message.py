@@ -124,25 +124,29 @@ def handle_message_text_admin(user_id, orgin_text):
 
         # 使用 tldextract 取得網域
         extracted = tldextract.extract(url)
-        domain = extracted.domain
-        suffix = extracted.suffix
+        subdomain = extracted.subdomain.lower()
+        domain = extracted.domain.lower()
+        suffix = extracted.suffix.lower()
+
         domain_name = f"{domain}.{suffix}"
         if domain_name in allowlist:
             rmessage = f"網址封鎖有誤，不允許{domain_name}"
             return rmessage
 
+        if domain_name in Tools.SPECIAL_SUBWEBSITE:
+            domain_name = f"{subdomain}.{domain}.{suffix}"
+
         # 組合成新的規則
         new_rule = f"||{domain_name}^\n"
 
-        # 將Adguard規則寫入檔案
-        with open(Tools.NEW_SCAM_WEBSITE_FOR_ADG, "a", encoding="utf-8", newline='') as f:
-            f.write(new_rule)
-
-        if check_blacklisted_site(url):
+        if check_blacklisted_site(domain_name):
             rmessage = f"網址黑名單已存在"
         else:
             # 提早執行更新
             update_part_blacklist(domain_name)
+            # 將Adguard規則寫入檔案
+            with open(Tools.NEW_SCAM_WEBSITE_FOR_ADG, "a", encoding="utf-8", newline='') as f:
+                f.write(new_rule)
             rmessage = f"網址黑名單更新完成"
     elif match := re.search(Tools.KEYWORD_URL[1], orgin_text):
         # 取得文字
