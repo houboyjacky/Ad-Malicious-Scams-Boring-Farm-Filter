@@ -126,12 +126,13 @@ def handle_message_text_admin(user_id, orgin_text):
         extracted = tldextract.extract(url)
         domain = extracted.domain
         suffix = extracted.suffix
-        if f"{domain}.{suffix}" in allowlist:
-            rmessage = f"網址封鎖有誤，不允許{domain}.{suffix}"
+        domain_name = f"{domain}.{suffix}"
+        if domain_name in allowlist:
+            rmessage = f"網址封鎖有誤，不允許{domain_name}"
             return rmessage
 
         # 組合成新的規則
-        new_rule = "||"+ domain + "." + suffix + "^\n"
+        new_rule = f"||{domain_name}^\n"
 
         # 將Adguard規則寫入檔案
         with open(Tools.NEW_SCAM_WEBSITE_FOR_ADG, "a", encoding="utf-8", newline='') as f:
@@ -141,7 +142,7 @@ def handle_message_text_admin(user_id, orgin_text):
             rmessage = f"網址黑名單已存在"
         else:
             # 提早執行更新
-            update_part_blacklist(domain + "." + suffix)
+            update_part_blacklist(domain_name)
             rmessage = f"網址黑名單更新完成"
     elif match := re.search(Tools.KEYWORD_URL[1], orgin_text):
         # 取得文字
@@ -258,24 +259,42 @@ def handle_message_text(event):
     # 查詢Line ID
     if match := re.search(Tools.KEYWORD_LINE[1], lower_text):
         lineid = match.group(1)
-        if user_query_lineid(lineid):
-            rmessage = (f"所輸入的「{lineid}」\n"
-                        f"「是」詐騙/可疑Line ID\n"
-                        f"請勿輕易信任此Line ID的\n"
-                        f"文字、圖像、語音和連結\n"
-                        f"感恩")
-        else:
-            rmessage = (f"所輸入的「{lineid}」\n"
-                        f"目前不在詐騙黑名單中\n"
-                        f"但並不代表沒問題\n"
-                        f"\n"
-                        f"若該LINE ID\n"
-                        f"是「沒見過面」的「網友」\n"
-                        f"又能帶你一起賺錢或兼職\n"
-                        f"１００％就是有問題\n"
-                        f"\n"
-                        f"{suffix_for_call}")
 
+        if "+" in lineid:
+            phone = lineid.replace("+", "")
+            phone = phone.replace(" ", "")
+            if phone.isdigit():
+                lineid = phone
+            else:
+                rmessage = (f"所輸入的「{lineid}」\n"
+                            f"不是正確的電話號碼\n"
+                            f"台灣電話號碼09開頭\n"
+                            f"其他國家請加上國碼\n"
+                            f"例如香港+85261234567\n"
+                            )
+        elif " " in lineid:
+            rmessage = (f"所輸入的「{lineid}」\n"
+                        f"包含不正確的空白符號\n"
+                        f"請重新輸入\n"
+                        )
+        if not rmessage:
+            if user_query_lineid(lineid):
+                rmessage = (f"所輸入的「{lineid}」\n"
+                            f"「是」詐騙/可疑Line ID\n"
+                            f"請勿輕易信任此Line ID的\n"
+                            f"文字、圖像、語音和連結\n"
+                            f"感恩")
+            else:
+                rmessage = (f"所輸入的「{lineid}」\n"
+                            f"目前不在詐騙黑名單中\n"
+                            f"但並不代表沒問題\n"
+                            f"\n"
+                            f"若該LINE ID\n"
+                            f"是「沒見過面」的「網友」\n"
+                            f"又能帶你一起賺錢或兼職\n"
+                            f"１００％就是有問題\n"
+                            f"\n"
+                            f"{suffix_for_call}")
         message_reply(event, rmessage)
         return
 
