@@ -41,8 +41,13 @@ def analyze_FB_url(user_text:str) -> Optional[dict]:
         pattern = r"(?<=-)(\d+)$"
         if match := re.search(pattern, name):
             Username = match.group(1)
+            logger.info("取得最後ID")
         elif name.isdigit():
             Username = name
+            logger.info("取得純數字ID")
+        elif "-" not in name:
+            Username = name
+            logger.info("取得不含-的ID")
         else:
             return None
     else:
