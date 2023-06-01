@@ -117,6 +117,7 @@
 ||langsnotaryplus.com^
 ||laticka-cargo.com^
 ||lienz-logistic.com^
+||lifetimehealth.shop^
 ||lightyspatter.com^
 ||liquorty.com^
 ||lolameraz.com^
@@ -162,6 +163,7 @@
 ||onlinehome.us^
 ||onlyexpert.com^
 ||onydouglasllc.com^
+||or-poll.net^
 ||orfiuph.com^
 ||osini.co^
 ||oveltr.com^
@@ -173,6 +175,7 @@
 ||pfizergroup.be^
 ||pfizersgroup.com^
 ||phatdigits.com^
+||pouheds.shop^
 ||premiuminsuranceassets.com^
 ||presec.us^
 ||primefood.shop^
@@ -192,12 +195,14 @@
 ||shareasale.com
 ||shipdlstics.info^
 ||shipfastus.com^
+||shiptourists.shop^
 ||siasky.net^
 ||silkyyincline.com^
 ||slu.gg^
 ||spiritsandwhiskey.com^
 ||spmailtechnolo.com^
 ||ssoscw.com^
+||strawpropellergourmetfoods.com^
 ||strongpointinvestments.com^
 ||submit-services.us^
 ||subserouslsdgroundable.com^
@@ -242,3 +247,4 @@
 ||yosoftinfo.online^
 ||yougetgreen.com^
 ||zenkit.com^
+||zincatetumpil.com^
