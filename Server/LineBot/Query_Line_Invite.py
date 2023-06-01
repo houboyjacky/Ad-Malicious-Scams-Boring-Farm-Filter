@@ -158,7 +158,7 @@ def get_random_invite(UserID) -> str:
         count += 1
     if found:
         Tools.write_json_file(Tools.LINE_INVITE, invites)
-    site = invite['原始網址'][0]
+    site = invite['原始網址']
     return site
 
 def push_random_invite(UserID, success, disappear):
