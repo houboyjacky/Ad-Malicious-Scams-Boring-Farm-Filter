@@ -197,3 +197,13 @@ def read_file(file_path):
 def write_empty_file(file_path):
     open(file_path, 'w').close()
     return
+
+def Clear_List_Checker(filename: str, blacklists) -> None:
+    modify = False
+    for blacklist in blacklists:
+        if blacklist["檢查者"]:
+            blacklist["檢查者"] = ""
+            modify = True
+    if modify:
+        write_json_file(filename, blacklists)
+    return

@@ -20,20 +20,22 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 '''
 
-import re
-import requests
-import json
-import random
 from bs4 import BeautifulSoup
 from Logger import logger
-from typing import Optional
-from Query_Line_ID import user_add_lineid, user_query_lineid
 from Point import write_user_point
-import Tools
-from Whistle_blower import Clear_List_Checker
+from Query_Line_ID import user_add_lineid, user_query_lineid
 from Query_URL import resolve_redirects
+from typing import Optional
+import random
+import re
+import requests
+import Tools
 
-invites = Tools.read_json_file(Tools.LINE_INVITE)
+line_invites_list = Tools.read_json_file(Tools.LINE_INVITE)
+
+def get_line_invites_list_len():
+    global line_invites_list
+    return len(line_invites_list)
 
 def analyze_line_invite_url(user_text:str) -> Optional[dict]:
 
@@ -92,15 +94,15 @@ def analyze_line_invite_url(user_text:str) -> Optional[dict]:
     return struct
 
 def add_sort_lineinvite(result):
-    global invites
+    global line_invites_list
     # 查找是否有重複的識別碼和類別
-    for r in invites:
+    for r in line_invites_list:
         if r['識別碼'] == result['識別碼'] and r['類別'] == result['類別']:
             return True
     return False
 
 def lineinvite_write_file(user_text:str):
-    global invites
+    global line_invites_list
     rmessage = ""
     if analyze := analyze_line_invite_url(user_text):
         if "@" in analyze["識別碼"]:
@@ -113,8 +115,8 @@ def lineinvite_write_file(user_text:str):
             logger.info("分析完成，找到相同資料")
             rmessage = f"LINE邀請網址\n黑名單找到相同邀請碼\n「 {analyze['識別碼'] } 」"
         else:
-            invites.append(analyze)
-            Tools.write_json_file(Tools.LINE_INVITE, invites)
+            line_invites_list.append(analyze)
+            Tools.write_json_file(Tools.LINE_INVITE, line_invites_list)
             logger.info("分析完成，結果已寫入")
             rmessage = f"LINE邀請網址\n黑名單成功加入邀請碼\n「 {analyze['識別碼'] } 」"
     else:
@@ -123,7 +125,7 @@ def lineinvite_write_file(user_text:str):
     return rmessage
 
 def lineinvite_read_file(user_text:str):
-    global invites
+    global line_invites_list
     status = 0
     rmessage = ""
     if analyze := analyze_line_invite_url(user_text):
@@ -131,7 +133,7 @@ def lineinvite_read_file(user_text:str):
         if user_query_lineid(analyze["識別碼"]):
             status = 1
         else:
-            for invite in invites:
+            for invite in line_invites_list:
                 if invite["識別碼"] == analyze["識別碼"]:
                     status = 1
         if status:
@@ -143,40 +145,60 @@ def lineinvite_read_file(user_text:str):
         status = -1
     return rmessage, status
 
-def get_random_invite(UserID) -> str:
-    global invites
-    if not invites:  # 如果 invites 是空的 list
-        return None
+LINE_INVITE_Record_players = []
+
+def get_random_line_invite_blacklist(UserID) -> str:
+    global LINE_INVITE_Record_players
     found = False
     count = 0
     while count < 1000:  # 最多找 1000 次，避免無限迴圈
-        invite = random.choice(invites)
-        if invite['檢查者'] == "" and invite['失效'] < 50:
-            invite['檢查者'] = UserID
+        line_invite_blacklist = random.choice(line_invites_list)
+        if line_invite_blacklist['檢查者'] == "" and line_invite_blacklist['失效'] < 50:
+            line_invite_blacklist['檢查者'] = UserID
             found = True
             break
         count += 1
+
     if found:
-        Tools.write_json_file(Tools.LINE_INVITE, invites)
-    site = invite['原始網址']
+        Tools.write_json_file(Tools.LINE_INVITE, line_invites_list)
+
+    Player = {'檢查者':UserID}
+
+    LINE_INVITE_Record_players.append(Player)
+
+    site = line_invite_blacklist['原始網址']
     return site
 
-def push_random_invite(UserID, success, disappear):
-    global invites
+def push_random_line_invite_blacklist(UserID, success, disappear):
+    global LINE_INVITE_Record_players
     found = False
-    for invite in invites:
-        if invite['檢查者'] == UserID:
-            invite['檢查者'] = ""
+    for record in LINE_INVITE_Record_players:
+        if record['檢查者'] == UserID:
+            found = True
+            LINE_INVITE_Record_players.remove(record)  # 移除該筆記錄
+            break
+
+    if not found:
+        #logger.info("資料庫選擇有誤或該使用者不存在資料庫中")
+        return found
+
+    found = False
+    for line_invite_blacklist in line_invites_list:
+        if line_invite_blacklist['檢查者'] == UserID:
+            line_invite_blacklist['檢查者'] = ""
             if success:
-                invite['回報次數'] += 1
+                line_invite_blacklist['回報次數'] += 1
                 write_user_point(UserID, 1)
             if disappear:
-                invite['失效'] += 1
+                line_invite_blacklist['失效'] += 1
                 write_user_point(UserID, 1)
             found = True
             break
     if found:
-        Tools.write_json_file(Tools.LINE_INVITE, invites)
+        Tools.write_json_file(Tools.LINE_INVITE, line_invites_list)
+    else:
+        logger.info("找不到檢查者")
+
     return found
 
-Clear_List_Checker(Tools.LINE_INVITE, invites)
+Tools.Clear_List_Checker(Tools.LINE_INVITE, line_invites_list)

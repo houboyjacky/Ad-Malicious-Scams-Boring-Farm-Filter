@@ -20,13 +20,18 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 '''
 
-import re
 from Logger import logger
+from Point import write_user_point
 from typing import Optional
+import random
+import re
 import Tools
-from Whistle_blower import  Clear_List_Checker
 
 FB_list = Tools.read_json_file(Tools.FB_BLACKLIST)
+
+def get_fb_list_len():
+    global FB_list
+    return len(FB_list)
 
 def analyze_FB_url(user_text:str) -> Optional[dict]:
 
@@ -103,4 +108,60 @@ def FB_read_file(user_text:str):
 
     return rmessage, status
 
-Clear_List_Checker(Tools.FB_BLACKLIST, FB_list)
+FB_Record_players = []
+
+def get_random_fb_blacklist(UserID) -> str:
+    global FB_Record_players
+    found = False
+    count = 0
+    while count < 1000:  # 最多找 1000 次，避免無限迴圈
+        fb_blacklist = random.choice(FB_list)
+        if fb_blacklist['檢查者'] == "" and fb_blacklist['失效'] < 50:
+            fb_blacklist['檢查者'] = UserID
+            found = True
+            break
+        count += 1
+
+    if found:
+        Tools.write_json_file(Tools.FB_BLACKLIST, FB_list)
+
+    Player = {'檢查者':UserID}
+
+    FB_Record_players.append(Player)
+
+    site = fb_blacklist['原始網址']
+    return site
+
+def push_random_fb_blacklist(UserID, success, disappear):
+    global FB_Record_players
+    found = False
+    for record in FB_Record_players:
+        if record['檢查者'] == UserID:
+            found = True
+            FB_Record_players.remove(record)  # 移除該筆記錄
+            break
+
+    if not found:
+        #logger.info("資料庫選擇有誤或該使用者不存在資料庫中")
+        return found
+
+    found = False
+    for fb_blacklist in FB_list:
+        if fb_blacklist['檢查者'] == UserID:
+            fb_blacklist['檢查者'] = ""
+            if success:
+                fb_blacklist['回報次數'] += 1
+                write_user_point(UserID, 1)
+            if disappear:
+                fb_blacklist['失效'] += 1
+                write_user_point(UserID, 1)
+            found = True
+            break
+    if found:
+        Tools.write_json_file(Tools.FB_BLACKLIST, FB_list)
+    else:
+        logger.info("找不到檢查者")
+
+    return found
+
+Tools.Clear_List_Checker(Tools.FB_BLACKLIST, FB_list)

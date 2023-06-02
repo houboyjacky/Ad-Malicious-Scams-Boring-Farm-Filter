@@ -21,8 +21,9 @@ THE SOFTWARE.
 '''
 
 import os
-import re
 import pytesseract
+import random
+import re
 import time
 import tldextract
 import Tools
@@ -34,15 +35,59 @@ from Logger import logger
 from PIL import Image
 from Point import read_user_point, get_user_rank
 from PrintText import user_guide, check_user_need_news, reload_user_record, reload_notice_board, return_notice_text, suffix_for_call
-from Query_Facebook import FB_read_file, FB_write_file
-from Query_Instagram import IG_read_file, IG_write_file
+from Query_Facebook import FB_read_file, FB_write_file, get_fb_list_len, get_random_fb_blacklist, push_random_fb_blacklist
+from Query_Instagram import IG_read_file, IG_write_file, get_ig_list_len, get_random_ig_blacklist, push_random_ig_blacklist
 from Query_Line_ID import user_query_lineid, user_add_lineid
-from Query_Line_Invite import lineinvite_write_file, lineinvite_read_file, get_random_invite, push_random_invite
+from Query_Line_Invite import lineinvite_write_file, lineinvite_read_file, get_line_invites_list_len, get_random_line_invite_blacklist, push_random_line_invite_blacklist
 from Query_Telegram import user_query_telegram_id, user_add_telegram_id
 from Query_URL import user_query_website, check_blacklisted_site, get_web_leaderboard, update_part_blacklist, user_query_shorturl
 
 image_analysis = False
 line_bot_api = LineBotApi(Tools.CHANNEL_ACCESS_TOKEN)
+
+FB_list_len = 0
+IG_list_len = 0
+line_invites_list_len = 0
+
+def Random_get_List(UserID):
+    global FB_list_len, IG_list_len, line_invites_list_len
+    if not FB_list_len:
+        FB_list_len = get_fb_list_len()
+        logger.info(f"FB_list_len = {FB_list_len}")
+    if not IG_list_len:
+        IG_list_len = get_ig_list_len()
+        logger.info(f"IG_list_len = {IG_list_len}")
+    if not line_invites_list_len:
+        line_invites_list_len = get_line_invites_list_len()
+        logger.info(f"line_invites_list_len = {line_invites_list_len}")
+
+    items = ["FB", "IG", "LINE"]
+    weights = []
+    weights.append(FB_list_len)
+    weights.append(IG_list_len)
+    weights.append(line_invites_list_len)
+
+    selected_item = random.choices(items, weights=weights)[0]
+    logger.info(f"selected_item = {selected_item}")
+    if selected_item == "FB":
+        return get_random_fb_blacklist(UserID)
+    elif selected_item == "IG":
+        return get_random_ig_blacklist(UserID)
+    elif selected_item == "LINE":
+        return get_random_line_invite_blacklist(UserID)
+    else:
+        return None, None
+
+def push_random_blacklist(UserID, success, disappear):
+    result = False
+    if result := push_random_fb_blacklist(UserID, success, disappear):
+        return result
+    if result := push_random_ig_blacklist(UserID, success, disappear):
+        return result
+    if result := push_random_line_invite_blacklist(UserID, success, disappear):
+        return result
+    return result
+
 
 # 回應訊息的函式
 def message_reply(event, text):
@@ -140,14 +185,14 @@ def handle_message_text_admin(user_id, orgin_text):
         new_rule = f"||{domain_name}^\n"
 
         if check_blacklisted_site(domain_name):
-            rmessage = f"網址黑名單已存在網址\n「{domain_name}」"
+            rmessage = f"網址黑名單已存在網址\n「 {domain_name} 」"
         else:
             # 提早執行更新
             update_part_blacklist(domain_name)
             # 將Adguard規則寫入檔案
             with open(Tools.NEW_SCAM_WEBSITE_FOR_ADG, "a", encoding="utf-8", newline='') as f:
                 f.write(new_rule)
-            rmessage = f"網址黑名單已加入網址\n「{domain_name}」"
+            rmessage = f"網址黑名單已加入網址\n「 {domain_name} 」"
     elif match := re.search(Tools.KEYWORD_URL[1], orgin_text):
         # 取得文字
         text = match.group(1)
@@ -156,7 +201,7 @@ def handle_message_text_admin(user_id, orgin_text):
         # 將文字寫入
         with open(Tools.NEW_SCAM_WEBSITE_FOR_ADG, "a", encoding="utf-8", newline='') as f:
             f.write(new_rule)
-        rmessage = f"網址黑名單已加入註解「{text}」"
+        rmessage = f"網址黑名單已加入註解「 {text} 」"
     elif orgin_text.startswith("加入"):
         rmessage = f"管理員指令參數有誤，請重新確認"
     else:
@@ -198,7 +243,7 @@ def handle_message_text_game(user_id, user_text) -> str:
         return rmessage
 
     if user_text == "遊戲":
-        site = get_random_invite(user_id)
+        site = Random_get_List(user_id)
         if not site:
             rmessage = f"目前暫停檢舉遊戲喔~"
         else:
@@ -206,21 +251,29 @@ def handle_message_text_game(user_id, user_text) -> str:
         return rmessage
 
     if user_text == "完成":
-        found = push_random_invite(user_id, True, False)
+        found = push_random_blacklist(user_id, True, False)
         found2 = push_netizen_file(user_id, True, False)
-        if found or found2:
+        if found and not found2 :
             rmessage = f"感謝你的回報\n輸入「遊戲」\n進行下一波行動\n輸入「積分」\n可以查詢你的積分排名"
+        elif not found and found2 :
+            rmessage = f"感謝你的回報\n輸入「檢閱」\n進行下一波行動\n輸入「積分」\n可以查詢你的積分排名"
+        elif found and found2:
+            rmessage = f"感謝你的回報\n輸入「遊戲/檢閱」\n進行下一波行動\n輸入「積分」\n可以查詢你的積分排名"
         else:
-            rmessage = f"程式有誤，請勿繼續使用"
+            rmessage = f"資料庫找不到你的相關資訊"
         return rmessage
 
     if user_text == "失效":
-        found = push_random_invite(user_id, False, True)
+        found = push_random_blacklist(user_id, False, True)
         found2 = push_netizen_file(user_id, False, True)
-        if found or found2:
+        if found and not found2 :
             rmessage = f"感謝你的回報\n輸入「遊戲」\n進行下一波行動\n輸入「積分」\n可以查詢你的積分排名"
+        elif not found and found2 :
+            rmessage = f"感謝你的回報\n輸入「檢閱」\n進行下一波行動\n輸入「積分」\n可以查詢你的積分排名"
+        elif found and found2:
+            rmessage = f"感謝你的回報\n輸入「遊戲/檢閱」\n進行下一波行動\n輸入「積分」\n可以查詢你的積分排名"
         else:
-            rmessage = f"程式有誤，請勿繼續使用"
+            rmessage = f"資料庫找不到你的相關資訊"
         return rmessage
 
     if user_text == "積分":

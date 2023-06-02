@@ -20,13 +20,18 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 '''
 
-import re
 from Logger import logger
+from Point import write_user_point
 from typing import Optional
+import random
+import re
 import Tools
-from Whistle_blower import  Clear_List_Checker
 
 IG_list = Tools.read_json_file(Tools.IG_BLACKLIST)
+
+def get_ig_list_len():
+    global IG_list
+    return len(IG_list)
 
 def analyze_IG_url(user_text:str) -> Optional[dict]:
 
@@ -105,4 +110,60 @@ def IG_read_file(user_text:str):
 
     return rmessage, status
 
-Clear_List_Checker(Tools.IG_BLACKLIST, IG_list)
+IG_Record_players = []
+
+def get_random_ig_blacklist(UserID) -> str:
+    global IG_Record_players
+    found = False
+    count = 0
+    while count < 1000:  # 最多找 1000 次，避免無限迴圈
+        ig_blacklist = random.choice(IG_list)
+        if ig_blacklist['檢查者'] == "" and ig_blacklist['失效'] < 50:
+            ig_blacklist['檢查者'] = UserID
+            found = True
+            break
+        count += 1
+
+    if found:
+        Tools.write_json_file(Tools.IG_BLACKLIST, IG_list)
+
+    Player = {'檢查者':UserID}
+
+    IG_Record_players.append(Player)
+
+    site = ig_blacklist['原始網址']
+    return site
+
+def push_random_ig_blacklist(UserID, success, disappear):
+    global IG_Record_players
+    found = False
+    for record in IG_Record_players:
+        if record['檢查者'] == UserID:
+            found = True
+            IG_Record_players.remove(record)  # 移除該筆記錄
+            break
+
+    if not found:
+        #logger.info("資料庫選擇有誤或該使用者不存在資料庫中")
+        return found
+
+    found = False
+    for ig_blacklist in IG_list:
+        if ig_blacklist['檢查者'] == UserID:
+            ig_blacklist['檢查者'] = ""
+            if success:
+                ig_blacklist['回報次數'] += 1
+                write_user_point(UserID, 1)
+            if disappear:
+                ig_blacklist['失效'] += 1
+                write_user_point(UserID, 1)
+            found = True
+            break
+    if found:
+        Tools.write_json_file(Tools.IG_BLACKLIST, IG_list)
+    else:
+        logger.info("找不到檢查者")
+
+    return found
+
+Tools.Clear_List_Checker(Tools.IG_BLACKLIST, IG_list)
