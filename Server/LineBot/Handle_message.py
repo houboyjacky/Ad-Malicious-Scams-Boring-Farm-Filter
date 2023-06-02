@@ -88,7 +88,6 @@ def push_random_blacklist(UserID, success, disappear):
         return result
     return result
 
-
 # 回應訊息的函式
 def message_reply(event, text):
     if check_user_need_news(event.source.user_id):
@@ -287,8 +286,9 @@ def handle_message_text_game(user_id, user_text) -> str:
 def handle_message_text(event):
     # 取得發訊者的 ID
     user_id = event.source.user_id
+    display_name = line_bot_api.get_profile(user_id).display_name
     logger.info(f'UserID = {event.source.user_id}')
-    logger.info(f'UserMessage = {event.message.text}')
+    logger.info(f'{display_name} => {event.message.text}')
 
     # 讀取使用者傳來的文字訊息
     orgin_text = event.message.text
