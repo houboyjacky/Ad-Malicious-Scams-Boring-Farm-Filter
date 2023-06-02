@@ -140,14 +140,14 @@ def handle_message_text_admin(user_id, orgin_text):
         new_rule = f"||{domain_name}^\n"
 
         if check_blacklisted_site(domain_name):
-            rmessage = f"網址黑名單已存在"
+            rmessage = f"網址黑名單已存在網址\n「{domain_name}」"
         else:
             # 提早執行更新
             update_part_blacklist(domain_name)
             # 將Adguard規則寫入檔案
             with open(Tools.NEW_SCAM_WEBSITE_FOR_ADG, "a", encoding="utf-8", newline='') as f:
                 f.write(new_rule)
-            rmessage = f"網址黑名單更新完成"
+            rmessage = f"網址黑名單已加入網址\n「{domain_name}」"
     elif match := re.search(Tools.KEYWORD_URL[1], orgin_text):
         # 取得文字
         text = match.group(1)
@@ -156,7 +156,7 @@ def handle_message_text_admin(user_id, orgin_text):
         # 將文字寫入
         with open(Tools.NEW_SCAM_WEBSITE_FOR_ADG, "a", encoding="utf-8", newline='') as f:
             f.write(new_rule)
-        rmessage = f"網址名單更新完成"
+        rmessage = f"網址黑名單已加入註解「{text}」"
     elif orgin_text.startswith("加入"):
         rmessage = f"管理員指令參數有誤，請重新確認"
     else:
