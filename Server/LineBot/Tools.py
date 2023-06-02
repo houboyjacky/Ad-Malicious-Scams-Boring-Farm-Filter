@@ -20,81 +20,58 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 '''
 
-import os
-import json
-import re
-import pycountry
 from filelock import FileLock
+import json
+import os
+import pycountry
+import re
 
 with open('setting.json', 'r') as f:
     setting = json.load(f)
 
+
 # 讀取設定檔
-# ADMIN => Linebot Admin
-ADMINS = setting['ADMIN']
-# CERT => Lets Encrypt Certificate Path
-CERT = setting['CERT']
-# PRIVKEY => Lets Encrypt Private Key Path
-PRIVKEY = setting['PRIVKEY']
-# BLACKLISTFORADG => Blacklist for Adguard Home Download
-NEW_SCAM_WEBSITE_FOR_ADG = setting['BLACKLISTFORADG']
-# BLACKUSERID => BLACK USER
-BLACKUSERID = setting['BLACKUSERID']
-# CHANNEL_ACCESS_TOKEN => Linebot Token
-CHANNEL_ACCESS_TOKEN = setting['CHANNEL_ACCESS_TOKEN']
-# CHANNEL_SECRET => Linebot Secret
-CHANNEL_SECRET = setting['CHANNEL_SECRET']
-# NETIZEN => Netizen Report
-NETIZEN = setting['NETIZEN']
-# LOGFILE => Log File Path
-LOGFILE = setting['LOGFILE']
-# USER_POINT => User Point Record
-USER_POINT = setting['USER_POINT']
-# LINE_INVITE => Black Line invite site
-LINE_INVITE = setting['LINE_INVITE']
-# LINEID_WEB => Line ID from Web
-LINEID_WEB = setting['LINEID_WEB']
-# LINEID_LOCAL => Line ID from Local
-LINEID_LOCAL = setting['LINEID_LOCAL']
-# SCAM_WEBSITE_LIST => SCAM WEBSITE LIST
-SCAM_WEBSITE_LIST = setting['SCAM_WEBSITE_LIST']
-# WEB_LEADERBOARD_FILE => Query Website times leaderboard from file
-WEB_LEADERBOARD_FILE = setting['WEB_LEADERBOARD_FILE']
-# SHORT_URL_LIST => Short url list
-SHORT_URL_LIST = setting['SHORT_URL_LIST']
-# HASH_FILE => HASH INF IN FILE
-HASH_FILE = setting['HASH_FILE']
-# IG_BLACKLIST => Blacklist for IG
-IG_BLACKLIST = setting['IG_BLACKLIST']
-# NOTICE_BOARD => NOTICE BOARD
-NOTICE_BOARD = setting['NOTICE_BOARD']
-# NOTICE_BOARD_LIST => NOTICE BOARD LIST
-NOTICE_BOARD_LIST = setting['NOTICE_BOARD_LIST']
-# FB_BLACKLIST => Blacklist for Facebook
-FB_BLACKLIST = setting['FB_BLACKLIST']
-# KEYWORD_URL => Keyword for url
-KEYWORD_URL = setting['KEYWORD_URL']
-# KEYWORD_LINE => Keyword for LINE
-KEYWORD_LINE = setting['KEYWORD_LINE']
-# KEYWORD_IG => Keyword for IG
-KEYWORD_IG = setting['KEYWORD_IG']
-# KEYWORD_FB => Keyword for FB
-KEYWORD_FB = setting['KEYWORD_FB']
-# TELEGRAM_LOCAL => Blacklist for Blacklist
-TELEGRAM_LOCAL = setting['TELEGRAM_LOCAL']
-# KEYWORD_TELEGRAM => Keyword for TELEGRAM
-KEYWORD_TELEGRAM = setting['KEYWORD_TELEGRAM']
-# SPECIAL_SUBWEBSITE => Special Subwebsite need to block sub website
-SPECIAL_SUBWEBSITE = setting['SPECIAL_SUBWEBSITE']
+ADMINS = setting['ADMIN']                               # ADMIN => Linebot Admin
+BackupDIR = setting['CONFIG_BACKUP']                    # Backup Signed mobileconfig
+BLACKUSERID = setting['BLACKUSERID']                    # BLACKUSERID => BLACK USER
+CERT = setting['CERT']                                  # CERT => Lets Encrypt Certificate Path File
+CHANNEL_ACCESS_TOKEN = setting['CHANNEL_ACCESS_TOKEN']  # CHANNEL_ACCESS_TOKEN => Linebot Token
+CHANNEL_SECRET = setting['CHANNEL_SECRET']              # CHANNEL_SECRET => Linebot Token
+FB_BLACKLIST = setting['FB_BLACKLIST']                  # FB_BLACKLIST => Blacklist for Facebook
+HASH_FILE = setting['HASH_FILE']                        # HASH_FILE => HASH INF IN FILE
+IG_BLACKLIST = setting['IG_BLACKLIST']                  # IG_BLACKLIST => Blacklist for IG
+KEYWORD_FB = setting['KEYWORD_FB']                      # KEYWORD_FB => Keyword for FB
+KEYWORD_IG = setting['KEYWORD_IG']                      # KEYWORD_IG => Keyword for IG
+KEYWORD_LINE = setting['KEYWORD_LINE']                  # KEYWORD_LINE => Keyword for LINE
+KEYWORD_TELEGRAM = setting['KEYWORD_TELEGRAM']          # KEYWORD_TELEGRAM => Keyword for TELEGRAM
+KEYWORD_URL = setting['KEYWORD_URL']                    # KEYWORD_URL => Keyword for url
+LINE_INVITE = setting['LINE_INVITE']                    # LINE_INVITE => Black Line invite site
+LINEID_LOCAL = setting['LINEID_LOCAL']                  # LINEID_LOCAL => Line ID from Local
+LINEID_WEB = setting['LINEID_WEB']                      # LINEID_WEB => Line ID from Web
+LOGFILE = setting['LOGFILE']                            # LOGFILE => Log File Path
+MobileConfigDIR = setting['CONFIG_ORIGIN']              # Modify mobileconfig
+NETIZEN = setting['NETIZEN']                            # NETIZEN => Netizen Report
+NEW_SCAM_WEBSITE_FOR_ADG = setting['BLACKLISTFORADG']   # BLACKLISTFORADG => Blacklist for Adguard Home Download
+NOTICE_BOARD = setting['NOTICE_BOARD']                  # NOTICE_BOARD => NOTICE BOARD
+NOTICE_BOARD_LIST = setting['NOTICE_BOARD_LIST']        # NOTICE_BOARD_LIST => NOTICE BOARD LIST
+PEM_DIR = setting['PEM_DIR']                            # PEM_DIR => Lets Encrypt Certificate Path
+PRIVKEY = setting['PRIVKEY']                            # PRIVKEY => Lets Encrypt Private Key Path File
+SCAM_WEBSITE_LIST = setting['SCAM_WEBSITE_LIST']        # SCAM_WEBSITE_LIST => SCAM WEBSITE LIST
+SHORT_URL_LIST = setting['SHORT_URL_LIST']              # SHORT_URL_LIST => Short url list
+SPECIAL_SUBWEBSITE = setting['SPECIAL_SUBWEBSITE']      # SPECIAL_SUBWEBSITE => Special Subwebsite need to block sub website
+TARGET_DIR = setting['CONFIG_SIGN']                     # New Signed mobileconfig
+TELEGRAM_LOCAL = setting['TELEGRAM_LOCAL']              # TELEGRAM_LOCAL => Blacklist for Blacklist
+USER_POINT = setting['USER_POINT']                      # USER_POINT => User Point Record
+WEB_LEADERBOARD_FILE = setting['WEB_LEADERBOARD_FILE']  # WEB_LEADERBOARD_FILE => Query Website times leaderboard from file
 
 def reloadSetting():
-    global ADMINS, CERT, PRIVKEY, NEW_SCAM_WEBSITE_FOR_ADG, BLACKUSERID
-    global CHANNEL_ACCESS_TOKEN, CHANNEL_SECRET, NETIZEN, LOGFILE
-    global USER_POINT, LINE_INVITE, LINEID_WEB, LINEID_LOCAL, SCAM_WEBSITE_LIST
-    global WEB_LEADERBOARD_FILE, SHORT_URL_LIST, HASH_FILE, IG_BLACKLIST
-    global NOTICE_BOARD, NOTICE_BOARD_LIST, FB_BLACKLIST, KEYWORD_URL
-    global KEYWORD_LINE, KEYWORD_FB, KEYWORD_IG, TELEGRAM_LOCAL, KEYWORD_TELEGRAM
-    global SPECIAL_SUBWEBSITE
+    global ADMINS, BackupDIR, BLACKUSERID, CERT, CHANNEL_ACCESS_TOKEN
+    global CHANNEL_SECRET, FB_BLACKLIST, HASH_FILE, IG_BLACKLIST, KEYWORD_FB
+    global KEYWORD_IG, KEYWORD_LINE, KEYWORD_TELEGRAM, KEYWORD_URL, LINEID_LOCAL
+    global LINEID_WEB, LINE_INVITE, LOGFILE, MobileConfigDIR, NETIZEN
+    global NEW_SCAM_WEBSITE_FOR_ADG, NOTICE_BOARD, NOTICE_BOARD_LIST, PEM_DIR, PRIVKEY
+    global SCAM_WEBSITE_LIST, SHORT_URL_LIST, SPECIAL_SUBWEBSITE, TARGET_DIR, TELEGRAM_LOCAL
+    global USER_POINT, WEB_LEADERBOARD_FILE
     global setting
 
     setting = ''
@@ -103,33 +80,37 @@ def reloadSetting():
 
     #重讀設定檔
     ADMINS = setting['ADMIN']
-    CERT = setting['CERT']
-    PRIVKEY = setting['PRIVKEY']
-    NEW_SCAM_WEBSITE_FOR_ADG = setting['BLACKLISTFORADG']
+    BackupDIR = setting['CONFIG_BACKUP']
     BLACKUSERID = setting['BLACKUSERID']
+    CERT = setting['CERT']
     CHANNEL_ACCESS_TOKEN = setting['CHANNEL_ACCESS_TOKEN']
     CHANNEL_SECRET = setting['CHANNEL_SECRET']
-    NETIZEN = setting['NETIZEN']
-    LOGFILE = setting['LOGFILE']
-    USER_POINT = setting['USER_POINT']
-    LINE_INVITE = setting['LINE_INVITE']
-    LINEID_WEB = setting['LINEID_WEB']
-    LINEID_LOCAL = setting['LINEID_LOCAL']
-    SCAM_WEBSITE_LIST = setting['SCAM_WEBSITE_LIST']
-    WEB_LEADERBOARD_FILE = setting['WEB_LEADERBOARD_FILE']
-    SHORT_URL_LIST = setting['SHORT_URL_LIST']
+    FB_BLACKLIST = setting['FB_BLACKLIST']
     HASH_FILE = setting['HASH_FILE']
     IG_BLACKLIST = setting['IG_BLACKLIST']
-    NOTICE_BOARD = setting['NOTICE_BOARD']
-    NOTICE_BOARD_LIST = setting['NOTICE_BOARD_LIST']
-    FB_BLACKLIST = setting['FB_BLACKLIST']
-    KEYWORD_URL = setting['KEYWORD_URL']
-    KEYWORD_LINE = setting['KEYWORD_LINE']
     KEYWORD_FB = setting['KEYWORD_FB']
     KEYWORD_IG = setting['KEYWORD_IG']
-    TELEGRAM_LOCAL = setting['TELEGRAM_LOCAL']
+    KEYWORD_LINE = setting['KEYWORD_LINE']
     KEYWORD_TELEGRAM = setting['KEYWORD_TELEGRAM']
+    KEYWORD_URL = setting['KEYWORD_URL']
+    LINE_INVITE = setting['LINE_INVITE']
+    LINEID_LOCAL = setting['LINEID_LOCAL']
+    LINEID_WEB = setting['LINEID_WEB']
+    LOGFILE = setting['LOGFILE']
+    MobileConfigDIR = setting['CONFIG_ORIGIN']
+    NETIZEN = setting['NETIZEN']
+    NEW_SCAM_WEBSITE_FOR_ADG = setting['BLACKLISTFORADG']
+    NOTICE_BOARD = setting['NOTICE_BOARD']
+    NOTICE_BOARD_LIST = setting['NOTICE_BOARD_LIST']
+    PEM_DIR = setting['PEM_DIR']
+    PRIVKEY = setting['PRIVKEY']
+    SCAM_WEBSITE_LIST = setting['SCAM_WEBSITE_LIST']
+    SHORT_URL_LIST = setting['SHORT_URL_LIST']
     SPECIAL_SUBWEBSITE = setting['SPECIAL_SUBWEBSITE']
+    TARGET_DIR = setting['CONFIG_SIGN']
+    TELEGRAM_LOCAL = setting['TELEGRAM_LOCAL']
+    USER_POINT = setting['USER_POINT']
+    WEB_LEADERBOARD_FILE = setting['WEB_LEADERBOARD_FILE']
     return
 
 def read_json_file(filename: str) -> list:
@@ -148,6 +129,7 @@ def write_json_file(filename: str, data: list) -> None:
         # 打開檔案並寫入數據
         with open(filename, "w", encoding="utf-8") as file:
             json.dump(data, file, ensure_ascii=False, indent=2)
+    return
 
 def format_elapsed_time(seconds):
     m, s = divmod(seconds, 60)
@@ -183,9 +165,11 @@ def load_count_file(filename:str, List:list):
                 List[uid] = int(point)
 
 def write_count_file(filename:str, List:list):
-    with open(filename, "w") as f:
-        for uid, point in List.items():
-            f.write(f"{uid}:{point}\n")
+    lock_file = FileLock(f"{filename}.lock")
+    with lock_file:
+        with open(filename, "w") as f:
+            for uid, point in List.items():
+                f.write(f"{uid}:{point}\n")
 
 def read_file_to_list(file_path):
     # 讀取檔案並將內容轉換為清單

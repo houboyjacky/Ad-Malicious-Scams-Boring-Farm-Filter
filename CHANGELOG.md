@@ -1,5 +1,8 @@
 # 歷史更新 History Update
 
+* 20230603 Update
+  * 合併 Download Server功能
+
 * 20230602 Update
   * 調整 管理員加入網址的回覆
 

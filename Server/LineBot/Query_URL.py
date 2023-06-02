@@ -406,18 +406,19 @@ def update_blacklist():
     hashes_download()
 
     with open(Tools.SCAM_WEBSITE_LIST, "r") as f:
-        urls = f.readlines()
+        urls = f.read().splitlines()
+
+    filenames = []
 
     for url in urls:
-        url = url.strip()  # 去除換行符號
-        if not url.startswith('http'):
-            continue
         filename = check_download_file(url)
-        if not filename:
-            continue
-        read_rule(filename)
+        if filename:
+            filenames.append(filename)
 
-    read_rule(Tools.NEW_SCAM_WEBSITE_FOR_ADG)
+    filenames.append(Tools.NEW_SCAM_WEBSITE_FOR_ADG)
+
+    for filename in filenames:
+        read_rule(filename)
 
     blacklist = sorted(list(set(blacklist)))
     logger.info("Update blacklist finish!")

@@ -28,11 +28,10 @@ import sys
 import threading
 import time
 import Tools
-# pip3 install schedule tldextract flask line-bot-sdk whois beautifulsoup4 pytesseract pycountry python-dateutil
-# pytesseract
+# pip3 install schedule tldextract flask line-bot-sdk python-whois beautifulsoup4 pytesseract pycountry python-dateutil geocoder geocoder[geonames]
 # sudo apt install tesseract-ocr tesseract-ocr-eng tesseract-ocr-chi-tra tesseract-ocr-chi-tra-vert tesseract-ocr-chi-sim tesseract-ocr-chi-sim-vert
-
-from flask import Flask, Response, request, abort, send_file
+from flask import Flask, Response, request, abort, send_file, render_template, send_from_directory
+from Handle_message import handle_message_file, handle_message_image, handle_message_text
 from linebot import WebhookHandler
 from linebot.exceptions import InvalidSignatureError
 from linebot.models import MessageEvent
@@ -40,7 +39,7 @@ from Logger import logger, Logger_Transfer
 from Query_Line_ID import user_download_lineid
 from Query_URL import update_blacklist
 from Security_Check import get_cf_ips, download_cf_ips
-from Handle_message import handle_message_file, handle_message_image, handle_message_text
+from SignConfig import SignMobileconfig
 
 app = Flask(__name__)
 
@@ -67,15 +66,42 @@ def log_request(response):
     logger.error(log_message)
     return response
 
-filename = os.path.basename(Tools.NEW_SCAM_WEBSITE_FOR_ADG)
-@app.route(f"/{filename}")
-def tmp_blacklisted_site():
-    return Response(open(Tools.NEW_SCAM_WEBSITE_FOR_ADG, "rb"), mimetype="text/plain")
-
 @app.route('/config/robots.txt')
 def robots():
     logger.info('Downloaded robots.txt')
     return send_file('robots.txt', mimetype='text/plain')
+
+# 設定允許下載的檔案類型
+ALLOWED_EXTENSIONS = {'mobileconfig'}
+
+def allowed_file(filename):
+    # 檢查檔案類型是否合法
+    return '.' in filename and \
+           filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+
+@app.route('/<filename>')
+def download(filename):
+    if filename == os.path.basename(Tools.NEW_SCAM_WEBSITE_FOR_ADG):
+        return Response(open(Tools.NEW_SCAM_WEBSITE_FOR_ADG, "rb"), mimetype="text/plain")
+
+    if allowed_file(filename):
+        # 若檔案存在，則進行下載
+        if os.path.exists(os.path.join(Tools.TARGET_DIR, filename)):
+            # 取得使用者的 IP 位址
+            user_ip = request.remote_addr
+
+            # 印出使用者的 IP 位址與所下載的檔案
+            logger.info(f"User IP: {user_ip} and Downloaded file: {filename}")
+
+            return send_from_directory(Tools.TARGET_DIR, filename, as_attachment=True)
+        # 若檔案不存在，則回傳 404 錯誤
+        else:
+            logger.info("Allowed file but not found")
+            abort(404)
+    # 若檔案類型不合法，則回傳 404 錯誤
+    else:
+        logger.info("Not allowed file")
+        abort(404)
 
 # 當 LINE 聊天機器人接收到「訊息事件」時，進行回應
 @app.route("/callback", methods=['POST'])
@@ -135,6 +161,7 @@ if __name__ == "__main__":
     signal.signal(signal.SIGINT, signal_handler)
     signal.signal(signal.SIGTERM, signal_handler)
 
+    SignMobileconfig()
     user_download_lineid()
     download_cf_ips()
     update_blacklist()
