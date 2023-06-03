@@ -1,9 +1,9 @@
 {
-    "Content-Farm_Multi-Redirection.txt": "2495a31aeef835698e02ff64ddc168b4",
-    "Content-Farm_Multi-RedirectionForAdguardHome.txt": "b250ff6b54ba2d1c40cc4d91c1353217",
-    "Content-Farm_Multi-RedirectionForUblackList.txt": "7d95d3a012b1778b3503d9f1396d046f",
+    "Content-Farm_Multi-Redirection.txt": "aeaaa5df4720df912eb0edd54b8b4f87",
+    "Content-Farm_Multi-RedirectionForAdguardHome.txt": "7504d09a45844842b4c679100e6c4b4e",
+    "Content-Farm_Multi-RedirectionForUblackList.txt": "f77ef7043e22b65ee95af74aa78e8c6c",
     "CustomAllowForAdguardHome.txt": "d4324baee504f3a91bd5d6122a854943",
-    "CustomBlockForAdguardHome.txt": "dc418b6f10947a1432c3bc0c44d5dba5",
+    "CustomBlockForAdguardHome.txt": "bc5dfd144a6447f1f24237593bbea8d6",
     "CustomBlockTLDForAdguardHome.txt": "dba58e8bcbba692c8a1ab5d824808eee",
     "GetFromGovernmentInf_LineID.txt": "147f89b59739fd181b75dddce21fd9d7",
     "ScamSiteForPetScams.txt": "475552e45ace6c8b22a4dd67a0a1556e",
