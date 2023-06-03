@@ -22,13 +22,14 @@ THE SOFTWARE.
 
 import hashlib
 import html
+import json
 import os
 import re
 import requests
+import ssl
 import tldextract
-import whois
 import Tools
-import json
+import whois
 from datetime import datetime, timedelta
 from collections import defaultdict
 from Logger import logger
@@ -166,8 +167,13 @@ def resolve_redirects(url):
             logger.info(f"resolve_redirects_recurlcc = {final_url}")
             return final_url
 
+    # 創建忽略 SSL 驗證錯誤的上下文
+    context = ssl.create_default_context()
+    context.check_hostname = False
+    context.verify_mode = ssl.CERT_NONE
+
     try:
-        response = urlopen(url)
+        response = urlopen(url, context=context)
         final_url = response.geturl()
         if final_url != url:
             logger.info(f"final_url1 = {final_url}")

@@ -1,5 +1,8 @@
 # 歷史更新 History Update
 
+* 20230604 Update
+  * 調整 縮網址SSL Certificate錯誤繼續執行
+
 * 20230603 Update
   * 加入 遊戲功能涵蓋FB、IG、LINE
   * 加入 whois cache機制
