@@ -25,5 +25,6 @@
     "SHORT_URL_LIST":["","",""],
     "SPECIAL_SUBWEBSITE":[""],
     "WEB_LEADERBOARD_FILE":"",
-    "USER_POINT":""
+    "USER_POINT":"",
+	"WHOIS_QUERY_LIST":""
 }

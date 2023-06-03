@@ -548,8 +548,15 @@ def user_query_shorturl(user_text):
 
     return rmessage, result, True
 
+# 全域列表儲存網址和 whois 資料
+whois_list = []
+
 # 使用者查詢網址
 def user_query_website(user_text):
+    global whois_list
+
+    if not whois_list:
+        whois_list = Tools.read_json_file(Tools.WHOIS_QUERY_LIST)
 
     #解析網址
     extracted = tldextract.extract(user_text)
@@ -566,13 +573,49 @@ def user_query_website(user_text):
 
     update_web_leaderboard(domain_name)
 
-    # 從 WHOIS 服務器獲取 WHOIS 信息
-    try:
-        w = whois.whois(domain_name)
-        Error = False
-    except whois.parser.PywhoisError: # 判斷原因 whois.parser.PywhoisError: No match for "FXACAP.COM"
-        w = None
-        Error = True
+    w = None
+    whois_domain = ""
+    whois_creation_date = ""
+    whois_country = ""
+    whois_registrant_country = ""
+    # 檢查全域列表是否存在相同的網址
+    for item in whois_list:
+        if item['網址'] == domain_name:
+            saved_date = datetime.strptime(item['日期'], '%Y%m%d')
+            current_date = datetime.now()
+            time_diff = current_date - saved_date
+            if time_diff.days >= 30:
+                w = None
+                whois_list.remove(item)
+            else:
+                w = True
+                whois_domain = item['whois_domain']
+                whois_creation_date = item['whois_creation_date']
+                whois_country = item['whois_country']
+                whois_registrant_country = item['whois_registrant_country']
+
+    Error = False
+    if not w:
+        # 從 WHOIS 服務器獲取 WHOIS 信息
+        try:
+            w = whois.whois(domain_name)
+            # 儲存查詢結果到全域列表
+            whois_domain = w.domain_name
+            whois_creation_date = str(w.creation_date)
+            whois_country = w.country
+            whois_registrant_country = w.registrant_count
+            whois_list.append({
+                '網址': domain_name,
+                'whois_domain': whois_domain,
+                'whois_creation_date': whois_creation_date,
+                'whois_country':whois_country,
+                'whois_registrant_country':whois_registrant_country,
+                '日期': datetime.now().strftime('%Y%m%d')
+            })
+            Tools.write_json_file(Tools.WHOIS_QUERY_LIST, whois_list)
+        except whois.parser.PywhoisError: # 判斷原因 whois.parser.PywhoisError: No match for "FXACAP.COM"
+            Error = True
+
     logger.info(w)
 
     # 判斷是否為黑名單
@@ -583,7 +626,7 @@ def user_query_website(user_text):
         domain_name = f"{subdomain}.{domain}.{suffix}\n的{domain}.{suffix}"
     logger.info(f"domain_name = {domain_name}")
 
-    if Error or not w.domain_name or not w.creation_date:
+    if Error or not whois_domain or not whois_creation_date:
         if checkresult:
             rmessage = (f"「 {domain_name} 」\n\n"
                         f"被判定「是」詐騙/可疑網站\n"
@@ -606,11 +649,11 @@ def user_query_website(user_text):
         return rmessage
 
     # 提取創建時間和最後更新時間
-    if isinstance(w.creation_date, list):
-        parsed_dates = [date_obj for date_obj in w.creation_date]
+    if isinstance(whois_creation_date, list):
+        parsed_dates = [date_obj for date_obj in whois_creation_date]
         creation_date = min(parsed_dates)
     else:
-        creation_date = w.creation_date
+        creation_date = datetime.strptime(whois_creation_date, "%Y-%m-%d %H:%M:%S")  # 將字串解析為日期物件
 
     if isinstance(creation_date, str):
         creation_date = datetime.strptime(creation_date, "%Y-%m-%d %H:%M:%S")
@@ -627,16 +670,16 @@ def user_query_website(user_text):
     rmessage_creation_date = f"建立時間：{creation_date_str}"
     rmessage_diff_days = f"距離今天差{str(diff_days)}天"
 
-    if w.country:
-        country_str = Tools.translate_country(w.country)
+    if whois_country:
+        country_str = Tools.translate_country(whois_country)
         if country_str == "Unknown":
-            rmessage_country = f"註冊國家：{w.country}\n"
+            rmessage_country = f"註冊國家：{whois_country}\n"
         else:
             rmessage_country = f"註冊國家：{country_str}\n"
-    elif w.registrant_country:
-        country_str = Tools.translate_country(w.registrant_country)
+    elif whois_registrant_country:
+        country_str = Tools.translate_country(whois_registrant_country)
         if country_str == "Unknown":
-            rmessage_country = f"註冊國家：{w.registrant_country}\n"
+            rmessage_country = f"註冊國家：{whois_registrant_country}\n"
         else:
             rmessage_country = f"註冊國家：{country_str}\n"
     else:

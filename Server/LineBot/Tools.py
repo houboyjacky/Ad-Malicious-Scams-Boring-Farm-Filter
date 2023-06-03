@@ -63,6 +63,7 @@ TARGET_DIR = setting['CONFIG_SIGN']                     # New Signed mobileconfi
 TELEGRAM_LOCAL = setting['TELEGRAM_LOCAL']              # TELEGRAM_LOCAL => Blacklist for Blacklist
 USER_POINT = setting['USER_POINT']                      # USER_POINT => User Point Record
 WEB_LEADERBOARD_FILE = setting['WEB_LEADERBOARD_FILE']  # WEB_LEADERBOARD_FILE => Query Website times leaderboard from file
+WHOIS_QUERY_LIST = setting['WHOIS_QUERY_LIST']          # WHOIS_QUERY_LIST => Save whois data
 
 def reloadSetting():
     global ADMINS, BackupDIR, BLACKUSERID, CERT, CHANNEL_ACCESS_TOKEN
@@ -71,7 +72,7 @@ def reloadSetting():
     global LINEID_WEB, LINE_INVITE, LOGFILE, MobileConfigDIR, NETIZEN
     global NEW_SCAM_WEBSITE_FOR_ADG, NOTICE_BOARD, NOTICE_BOARD_LIST, PEM_DIR, PRIVKEY
     global SCAM_WEBSITE_LIST, SHORT_URL_LIST, SPECIAL_SUBWEBSITE, TARGET_DIR, TELEGRAM_LOCAL
-    global USER_POINT, WEB_LEADERBOARD_FILE
+    global USER_POINT, WEB_LEADERBOARD_FILE, WHOIS_QUERY_LIST
     global setting
 
     setting = ''
@@ -111,6 +112,7 @@ def reloadSetting():
     TELEGRAM_LOCAL = setting['TELEGRAM_LOCAL']
     USER_POINT = setting['USER_POINT']
     WEB_LEADERBOARD_FILE = setting['WEB_LEADERBOARD_FILE']
+    WHOIS_QUERY_LIST = setting['WHOIS_QUERY_LIST']
     return
 
 def read_json_file(filename: str) -> list:
