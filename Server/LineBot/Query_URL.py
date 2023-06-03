@@ -558,7 +558,8 @@ def user_query_website(user_text):
     suffix = extracted.suffix.lower()
 
     if not domain or not suffix:
-        return None
+        rmessage = f"\n「 {user_text} 」\n無法構成網址\n請重新輸入"
+        return rmessage
 
     # 取得網域
     domain_name = f"{domain}.{suffix}"

@@ -166,6 +166,10 @@ def handle_message_text_admin(user_id, orgin_text):
         # 取得網址
         url = match.group(1)
 
+        if '.' not in url:
+            rmessage = f"所輸入的文字\n「 {domain_name} 」\n無法構成網址\n請重新輸入"
+            return rmessage
+
         # 使用 tldextract 取得網域
         extracted = tldextract.extract(url)
         subdomain = extracted.subdomain.lower()
