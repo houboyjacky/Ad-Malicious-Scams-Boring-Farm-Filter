@@ -576,6 +576,9 @@ def user_query_website(user_text):
 
     # 取得網域
     domain_name = f"{domain}.{suffix}"
+    if domain_name in Tools.SPECIAL_SUBWEBSITE:
+        domain_name = f"{subdomain}.{domain}.{suffix}"
+    logger.info(f"domain_name = {domain_name}")
 
     update_web_leaderboard(domain_name)
 
@@ -605,6 +608,7 @@ def user_query_website(user_text):
         # 從 WHOIS 服務器獲取 WHOIS 信息
         try:
             w = whois.whois(domain_name)
+            logger.info(w)
             # 儲存查詢結果到全域列表
             whois_domain = w.domain_name
             whois_creation_date = str(w.creation_date)
@@ -622,15 +626,8 @@ def user_query_website(user_text):
         except whois.parser.PywhoisError: # 判斷原因 whois.parser.PywhoisError: No match for "FXACAP.COM"
             Error = True
 
-    logger.info(w)
-
     # 判斷是否為黑名單
     checkresult = check_blacklisted_site(domain_name)
-
-    # 判斷特別網站，供應商販售子網域
-    if domain_name in Tools.SPECIAL_SUBWEBSITE:
-        domain_name = f"{subdomain}.{domain}.{suffix}\n的{domain}.{suffix}"
-    logger.info(f"domain_name = {domain_name}")
 
     if Error or not whois_domain or not whois_creation_date:
         if checkresult:
