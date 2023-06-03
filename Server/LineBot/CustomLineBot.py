@@ -87,8 +87,8 @@ def download(filename):
     if allowed_file(filename):
         # 若檔案存在，則進行下載
         if os.path.exists(os.path.join(Tools.TARGET_DIR, filename)):
-            # 取得使用者的 IP 位址
-            user_ip = request.remote_addr
+            # 取得使用者的真實 IP 位址
+            user_ip = request.headers.get('CF-Connecting-IP')
 
             # 印出使用者的 IP 位址與所下載的檔案
             logger.info(f"User IP: {user_ip} and Downloaded file: {filename}")
