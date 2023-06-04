@@ -7,6 +7,7 @@
   * 調整 特別完整網址比對
   * 調整 縮網址SSL Certificate錯誤繼續執行
   * 調整 Facebook規則
+  * 調整 linktree特別提醒
 
 * 20230603 Update
   * 加入 遊戲功能涵蓋FB、IG、LINE
