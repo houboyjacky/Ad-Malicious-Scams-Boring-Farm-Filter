@@ -574,16 +574,17 @@ def user_query_website(user_text):
         rmessage = f"\n「 {user_text} 」\n無法構成網址\n請重新輸入"
         return rmessage
 
-    Special_domain = ["linktr.ee"]
-    if domain in Tools.Special_domain:
-        rmessage = f"\n「 {user_text} 」\n是正常的網站\n但內含連結是存在詐騙/可疑\n請輸入那些連結"
-        return rmessage
-
     # 取得網域
     domain_name = f"{domain}.{suffix}"
     if domain_name in Tools.SPECIAL_SUBWEBSITE:
         domain_name = f"{subdomain}.{domain}.{suffix}"
     logger.info(f"domain_name = {domain_name}")
+
+    # 特殊提示
+    Special_domain = ["linktr.ee"]
+    if domain_name in Tools.Special_domain:
+        rmessage = f"\n「 {user_text} 」\n是正常的網站\n但內含連結是存在詐騙/可疑\n請輸入那些連結"
+        return rmessage
 
     update_web_leaderboard(domain_name)
 
