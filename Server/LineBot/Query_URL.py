@@ -611,7 +611,14 @@ def user_query_website(user_text):
             logger.info(w)
             # 儲存查詢結果到全域列表
             whois_domain = w.domain_name
-            whois_creation_date = str(w.creation_date)
+            if not w.creation_date:
+                whois_creation_date = None
+            elif isinstance(w.creation_date, list):
+                parsed_dates = [date_obj for date_obj in w.creation_date]
+                whois_creation_date = Tools.datetime_to_string(min(parsed_dates))
+            else:
+                whois_creation_date = Tools.datetime_to_string(w.creation_date)
+
             whois_country = w.country
             whois_registrant_country = w.registrant_count
             whois_list.append({
@@ -652,14 +659,8 @@ def user_query_website(user_text):
         return rmessage
 
     # 提取創建時間和最後更新時間
-    if isinstance(whois_creation_date, list):
-        parsed_dates = [date_obj for date_obj in whois_creation_date]
-        creation_date = min(parsed_dates)
-    else:
-        creation_date = datetime.strptime(whois_creation_date, "%Y-%m-%d %H:%M:%S")  # 將字串解析為日期物件
-
-    if isinstance(creation_date, str):
-        creation_date = datetime.strptime(creation_date, "%Y-%m-%d %H:%M:%S")
+    if isinstance(whois_creation_date, str):
+        creation_date = Tools.string_to_datetime(whois_creation_date)
 
     today = datetime.today().date()  # 取得當天日期
     diff_days = (today - creation_date.date()).days  # 相差幾天

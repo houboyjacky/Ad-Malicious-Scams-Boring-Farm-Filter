@@ -19,7 +19,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 '''
-
+from datetime import datetime
 from filelock import FileLock
 import json
 import os
@@ -29,9 +29,9 @@ import re
 with open('setting.json', 'r') as f:
     setting = json.load(f)
 
-
 # 讀取設定檔
 ADMINS = setting['ADMIN']                               # ADMIN => Linebot Admin
+ALLOW_DOMAIN_LIST = setting['ALLOW_DOMAIN_LIST']        # ALLOW_DOMAIN_LIST => Allow Domain can't add blacklist
 BackupDIR = setting['CONFIG_BACKUP']                    # Backup Signed mobileconfig
 BLACKUSERID = setting['BLACKUSERID']                    # BLACKUSERID => BLACK USER
 CERT = setting['CERT']                                  # CERT => Lets Encrypt Certificate Path File
@@ -115,6 +115,12 @@ def reloadSetting():
     WEB_LEADERBOARD_FILE = setting['WEB_LEADERBOARD_FILE']
     WHOIS_QUERY_LIST = setting['WHOIS_QUERY_LIST']
     return
+
+def datetime_to_string(dt):
+    return dt.strftime("%Y%m%d%H%M%S")
+
+def string_to_datetime(string):
+    return datetime.strptime(string, "%Y%m%d%H%M%S")
 
 def read_json_file(filename: str) -> list:
     try:
