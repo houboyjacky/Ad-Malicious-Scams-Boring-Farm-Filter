@@ -582,8 +582,11 @@ def user_query_website(user_text):
 
     # 特殊提示
     Special_domain = ["linktr.ee"]
-    if domain_name in Tools.Special_domain:
-        rmessage = f"\n「 {user_text} 」\n是正常的網站\n但內含連結是存在詐騙/可疑\n請輸入那些連結"
+    if domain_name in Special_domain:
+        output = user_text
+        if "?" in output :
+            output = output.split('?')[0]
+        rmessage = f"\n「 {output} 」\n是正常的網站\n但內含連結是存在詐騙/可疑\n請輸入那些連結"
         return rmessage
 
     update_web_leaderboard(domain_name)
