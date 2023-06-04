@@ -96,8 +96,6 @@ def message_reply(event, text):
     line_bot_api.reply_message(event.reply_token, message)
     return
 
-allowlist = { "facebook.com", "instagram.com", "google.com", "youtube.com", "youtu.be" }
-
 # 管理員操作
 def handle_message_text_admin(user_id, orgin_text):
     global image_analysis
@@ -177,7 +175,7 @@ def handle_message_text_admin(user_id, orgin_text):
         suffix = extracted.suffix.lower()
 
         domain_name = f"{domain}.{suffix}"
-        if domain_name in allowlist:
+        if domain_name in Tools.ALLOW_DOMAIN_LIST:
             rmessage = f"網址封鎖有誤，不允許{domain_name}"
             return rmessage
 

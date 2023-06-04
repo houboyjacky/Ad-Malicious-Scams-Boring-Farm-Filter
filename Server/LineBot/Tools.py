@@ -72,7 +72,7 @@ def reloadSetting():
     global LINEID_WEB, LINE_INVITE, LOGFILE, MobileConfigDIR, NETIZEN
     global NEW_SCAM_WEBSITE_FOR_ADG, NOTICE_BOARD, NOTICE_BOARD_LIST, PEM_DIR, PRIVKEY
     global SCAM_WEBSITE_LIST, SHORT_URL_LIST, SPECIAL_SUBWEBSITE, TARGET_DIR, TELEGRAM_LOCAL
-    global USER_POINT, WEB_LEADERBOARD_FILE, WHOIS_QUERY_LIST
+    global USER_POINT, WEB_LEADERBOARD_FILE, WHOIS_QUERY_LIST, ALLOW_DOMAIN_LIST
     global setting
 
     setting = ''
@@ -81,6 +81,7 @@ def reloadSetting():
 
     #重讀設定檔
     ADMINS = setting['ADMIN']
+    ALLOW_DOMAIN_LIST = setting['ALLOW_DOMAIN_LIST']
     BackupDIR = setting['CONFIG_BACKUP']
     BLACKUSERID = setting['BLACKUSERID']
     CERT = setting['CERT']
