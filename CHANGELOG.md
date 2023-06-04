@@ -1,5 +1,9 @@
 # 歷史更新 History Update
 
+* 20230605 Update
+  * 更新 個人不想看與網友匯報廣告或網站
+  * 更新 Dcard受害文章
+
 * 20230604 Update
   * 加入 部份不封鎖名單
   * 修復 whois cache機制
