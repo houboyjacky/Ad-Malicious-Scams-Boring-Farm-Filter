@@ -1,6 +1,7 @@
 # 歷史更新 History Update
 
 * 20230604 Update
+  * 加入 部份不封鎖名單
   * 調整 下載IP取得真實IP
   * 調整 特別完整網址比對
   * 調整 縮網址SSL Certificate錯誤繼續執行
