@@ -4,6 +4,7 @@
 ! 封鎖HaGeZi's The World's Most Abused TLD 已定義bar、online、ml
 ! TLD直接封鎖(建議放在Adguard Home最末端)
 /.*nanotch.com/
+/.+etc.+\.oss-ap-\w+-1\.aliyuncs\.com/
 /[0-9]+chat\.win/
 /[0-9a-z]+\.co\.vu/
 /[a-z\-]*shopee[a-z\-]*\.(club|store)/
