@@ -50,7 +50,7 @@ def analyze_FB_url(user_text:str) -> Optional[dict]:
         elif name.isdigit():
             Username = name
             logger.info("取得純數字ID")
-        elif "?" in namme:
+        elif "?" in name:
             Username = name.split('?')[0]
             logger.info("取得?以前的ID")
         elif "-" not in name:
