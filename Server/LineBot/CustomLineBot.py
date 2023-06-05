@@ -40,6 +40,11 @@ from Query_Line_ID import user_download_lineid
 from Query_URL import update_blacklist
 from Security_Check import get_cf_ips, download_cf_ips
 from SignConfig import SignMobileconfig
+from ip2geotools.databases.noncommercial import DbIpCity
+
+def WhereAreYou(IP):
+    res = DbIpCity.get(IP, api_key="free")
+    return f"User IP : {res.ip_address}, Location: {res.city}, {res.region}, {res.country} "
 
 app = Flask(__name__)
 
@@ -51,8 +56,9 @@ def limit_remote_addr():
     for cf_ip in cf_ips:
         if ipaddress.IPv4Address(request.remote_addr) in ipaddress.ip_network(cf_ip):
             return None
+    msg = WhereAreYou(request.remote_addr)
     # 記錄403錯誤
-    log_message = '403 Error: %s %s %s' % (request.remote_addr, request.method, request.url)
+    log_message = '403 Error: %s %s %s' % (msg, request.method, request.url)
     logger.error(log_message)
     return "Forbidden", 403
 
@@ -61,8 +67,9 @@ def log_request(response):
     if response.status_code != 404:
         return response
 
+    msg = WhereAreYou(request.remote_addr)
     # 記錄404錯誤
-    log_message = '404 Error: %s %s %s' % (request.remote_addr, request.method, request.url)
+    log_message = '404 Error: %s %s %s' % (msg, request.method, request.url)
     logger.error(log_message)
     return response
 
@@ -90,8 +97,10 @@ def download(filename):
             # 取得使用者的真實 IP 位址
             user_ip = request.headers.get('CF-Connecting-IP')
 
+            msg = WhereAreYou(user_ip)
+
             # 印出使用者的 IP 位址與所下載的檔案
-            logger.info(f"User IP: {user_ip} and Downloaded file: {filename}")
+            logger.info(f"{msg} and Downloaded file: {filename}")
 
             return send_from_directory(Tools.TARGET_DIR, filename, as_attachment=True)
         # 若檔案不存在，則回傳 404 錯誤
