@@ -28,7 +28,7 @@ import sys
 import threading
 import time
 import Tools
-# pip3 install schedule tldextract flask line-bot-sdk python-whois beautifulsoup4 pytesseract pycountry python-dateutil geocoder geocoder[geonames]
+# pip3 install schedule tldextract flask line-bot-sdk python-whois beautifulsoup4 pytesseract pycountry python-dateutil geocoder geocoder[geonames] ip2geotools
 # sudo apt install tesseract-ocr tesseract-ocr-eng tesseract-ocr-chi-tra tesseract-ocr-chi-tra-vert tesseract-ocr-chi-sim tesseract-ocr-chi-sim-vert
 from flask import Flask, Response, request, abort, send_file, render_template, send_from_directory
 from Handle_message import handle_message_file, handle_message_image, handle_message_text
@@ -67,7 +67,14 @@ def log_request(response):
     if response.status_code != 404:
         return response
 
-    msg = WhereAreYou(request.remote_addr)
+    ip = request.remote_addr
+
+    cf_ips = get_cf_ips()
+    for cf_ip in cf_ips:
+        if ipaddress.IPv4Address(request.remote_addr) in ipaddress.ip_network(cf_ip):
+            ip = request.headers.get('CF-Connecting-IP')
+
+    msg = WhereAreYou(ip)
     # 記錄404錯誤
     log_message = '404 Error: %s %s %s' % (msg, request.method, request.url)
     logger.error(log_message)

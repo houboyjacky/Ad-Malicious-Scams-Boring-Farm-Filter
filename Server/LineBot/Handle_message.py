@@ -92,6 +92,11 @@ def push_random_blacklist(UserID, success, disappear):
 def message_reply(event, text):
     if check_user_need_news(event.source.user_id):
         text = f"{text}\n\n{return_notice_text()}"
+
+    if event.source.user_id not in Tools.ADMINS:
+        user_name = line_bot_api.get_profile(event.source.user_id).display_name
+        write_new_netizen_file(event.source.user_id, user_name, event.message.text, True)
+
     message = TextSendMessage(text=text)
     line_bot_api.reply_message(event.reply_token, message)
     return
@@ -110,11 +115,14 @@ def handle_message_text_admin(user_id, orgin_text):
         logger.info("Reload setting.json")
         rmessage = f"設定已重新載入"
     elif orgin_text == "檢閱":
-        content = get_netizen_file(user_id)
-        if content:
-            rmessage = f"內容：\n\n{content}\n\n參閱與處置後\n請輸入「完成」或「失效」"
-        else:
+        content, isSystem = get_netizen_file(user_id)
+        if not content:
             rmessage = f"目前沒有需要檢閱的資料"
+        else:
+            if isSystem :
+                rmessage = f"系統轉送使用者查詢：\n\n{content}\n\n參閱與處置後\n請輸入「完成」或「失效」"
+            else:
+                rmessage = f"使用者詐騙回報內容：\n\n{content}\n\n參閱與處置後\n請輸入「完成」或「失效」"
     elif orgin_text == "關閉辨識":
         image_analysis = False
         rmessage = f"已關閉辨識"
@@ -239,7 +247,7 @@ def handle_message_text_front(user_text) -> str:
 def handle_message_text_game(user_id, user_text) -> str:
     if user_text.startswith("詐騙回報"):
         user_name = line_bot_api.get_profile(user_id).display_name
-        write_new_netizen_file(user_id, user_name, user_text)
+        write_new_netizen_file(user_id, user_name, user_text, False)
         rmessage = f"謝謝你提供的情報\n輸入「積分」\n可以查詢你的積分排名"
         return rmessage
 

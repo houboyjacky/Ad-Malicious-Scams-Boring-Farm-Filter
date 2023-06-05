@@ -43,7 +43,7 @@ def is_check_url(url, domains: list) -> bool:
             return True
     return False
 
-def write_new_netizen_file(user_id:str, user_name:str, user_text:str) -> bool:
+def write_new_netizen_file(user_id:str, user_name:str, user_text:str, isSystem:bool) -> bool:
     global netizens
     if not netizens:
         number = 1
@@ -89,7 +89,8 @@ def write_new_netizen_file(user_id:str, user_name:str, user_text:str) -> bool:
                 "完成": 0,
                 "失效": 0,
                 "檢查者": "",
-                "已報案":0
+                "已報案":0,
+                "系統轉送": isSystem
             }
 
     # 新增結果
@@ -107,7 +108,7 @@ def get_netizen_file(user_id:str):
         if netizen["完成"] == 0 and netizen["失效"] == 0 and netizen["已報案"] == 0:
             netizen['檢查者'] = user_id
             Tools.write_json_file(Tools.NETIZEN, netizens)
-            return netizen["內容"]
+            return netizen["內容"], netizen["系統轉送"]
     return ""
 
 def push_netizen_file(UserID, success, disappear):
