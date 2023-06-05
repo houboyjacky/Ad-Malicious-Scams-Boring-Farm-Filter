@@ -4,6 +4,7 @@
 @@||pingshangyang.webnode.tw^$important
 #||cdn77.org^
 #||fx110.com^
+#||github.io^
 #||mystrikingly.com^
 #||weebly.com^
 ||0066666.co^
@@ -1945,7 +1946,6 @@
 ||gintfim168.com^
 ||gintfim5588.com^
 ||gintfim58.net^
-||github.io^
 ||gitz888.com^
 ||gjfcgme.com^
 ||gjodjgk.com^
