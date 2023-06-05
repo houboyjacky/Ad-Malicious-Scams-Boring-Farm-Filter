@@ -89,6 +89,15 @@ def push_random_blacklist(UserID, success, disappear):
     return result
 
 # 回應訊息的函式
+def message_reply_basic(event, text):
+    if check_user_need_news(event.source.user_id):
+        text = f"{text}\n\n{return_notice_text()}"
+
+    message = TextSendMessage(text=text)
+    line_bot_api.reply_message(event.reply_token, message)
+    return
+
+# 回應訊息的函式
 def message_reply(event, text):
     if check_user_need_news(event.source.user_id):
         text = f"{text}\n\n{return_notice_text()}"
@@ -306,18 +315,18 @@ def handle_message_text(event):
 
     # 長度控管、備用指南、電話、網站排行榜
     if rmessage := handle_message_text_front(orgin_text):
-        message_reply(event, rmessage)
+        message_reply_basic(event, rmessage)
         return
 
     # 遊戲模式
     if rmessage := handle_message_text_game(user_id, orgin_text):
-        message_reply(event, rmessage)
+        message_reply_basic(event, rmessage)
         return
 
     # 管理員操作
     if user_id in Tools.ADMINS:
         if rmessage:=handle_message_text_admin(user_id, orgin_text):
-            message_reply(event, rmessage)
+            message_reply_basic(event, rmessage)
             if orgin_text == "重讀":
                 reload_user_record()
             return
