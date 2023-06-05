@@ -26,7 +26,7 @@ def generate_hash_json(directory):
         hash_value = calculate_hash(file_path)
         hash_dict[file_name] = hash_value
 
-    with open('hashes.json', 'w') as json_file:
+    with open('hashes.json', 'w', encoding='utf-8', newline='') as json_file:
         json.dump(hash_dict, json_file, indent=4)
 
 # 執行範例
