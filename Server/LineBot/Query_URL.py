@@ -482,10 +482,25 @@ def update_blacklist():
     is_running = False
     return
 
-def update_part_blacklist(add_rule):
+def update_part_blacklist_rule(domain_name):
     global blacklist
-    blacklist.append(add_rule)
-    return True
+    blacklist.append(domain_name)
+
+    # 組合成新的規則
+    new_rule = f"||{domain_name}^\n"
+    # 將Adguard規則寫入檔案
+    with open(Tools.NEW_SCAM_WEBSITE_FOR_ADG, "a", encoding="utf-8", newline='') as f:
+        f.write(new_rule)
+    return
+
+def update_part_blacklist_comment(msg):
+    global blacklist
+    # 組合成新的規則
+    new_rule = f"! {msg}\n"
+    # 將Adguard規則寫入檔案
+    with open(Tools.NEW_SCAM_WEBSITE_FOR_ADG, "a", encoding="utf-8", newline='') as f:
+        f.write(new_rule)
+    return
 
 # ===============================================
 # 黑名單判斷
@@ -736,6 +751,13 @@ def user_query_website(user_text):
     # 建立輸出字串
     rmessage_creation_date = f"建立時間：{creation_date_str}"
     rmessage_diff_days = f"距離今天差{str(diff_days)}天"
+
+    # 天數太少自動加入黑名單
+    if diff_days <= 10:
+        today_str = today.strftime('%Y-%m-%d')
+        msg = f"{domain_name}距離{today_str}差{str(diff_days)}天"
+        update_part_blacklist_comment(msg)
+        update_part_blacklist_rule(domain_name)
 
     if whois_country:
         country_str = Tools.translate_country(whois_country)

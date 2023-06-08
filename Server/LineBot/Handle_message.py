@@ -40,7 +40,7 @@ from Query_Instagram import IG_read_file, IG_write_file, get_ig_list_len, get_ra
 from Query_Line_ID import user_query_lineid, user_add_lineid
 from Query_Line_Invite import lineinvite_write_file, lineinvite_read_file, get_line_invites_list_len, get_random_line_invite_blacklist, push_random_line_invite_blacklist
 from Query_Telegram import user_query_telegram_id, user_add_telegram_id
-from Query_URL import user_query_website, check_blacklisted_site, get_web_leaderboard, update_part_blacklist, user_query_shorturl, get_external_links
+from Query_URL import user_query_website, check_blacklisted_site, get_web_leaderboard, update_part_blacklist_rule, user_query_shorturl, get_external_links, update_part_blacklist_comment
 
 image_analysis = False
 line_bot_api = LineBotApi(Tools.CHANNEL_ACCESS_TOKEN)
@@ -205,21 +205,13 @@ def handle_message_text_admin(user_id, orgin_text):
         if check_blacklisted_site(domain_name):
             rmessage = f"網址黑名單已存在網址\n「 {domain_name} 」"
         else:
-            # 提早執行更新
+            update_part_blacklist_rule(domain_name)
             rmessage = f"網址黑名單成功加入網址\n「 {domain_name} 」"
-            # 將Adguard規則寫入檔案
-            with open(Tools.NEW_SCAM_WEBSITE_FOR_ADG, "a", encoding="utf-8", newline='') as f:
-                f.write(new_rule)
-            rmessage = f"網址黑名單已加入網址\n「 {domain_name} 」"
     elif match := re.search(Tools.KEYWORD_URL[1], orgin_text):
         # 取得文字
         text = match.group(1)
-        # 組合成新的規則
+        update_part_blacklist_comment(text)
         rmessage = f"網址黑名單成功加入註解「 {text} 」"
-        # 將文字寫入
-        with open(Tools.NEW_SCAM_WEBSITE_FOR_ADG, "a", encoding="utf-8", newline='') as f:
-            f.write(new_rule)
-        rmessage = f"網址黑名單已加入註解「 {text} 」"
     elif orgin_text.startswith("加入"):
         rmessage = f"管理員指令參數有誤，請重新確認"
     else:
