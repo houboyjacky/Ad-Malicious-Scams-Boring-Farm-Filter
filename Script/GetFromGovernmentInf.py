@@ -4,8 +4,11 @@ import tldextract
 import unicodedata
 
 # 設定API的網址
+# Line ID
+# https://165.npa.gov.tw/#/lineId
 # https://data.gov.tw/dataset/78432
 line_url = 'https://od.moi.gov.tw/api/v1/rest/datastore/A01010000C-001277-053'
+# URL
 # https://data.gov.tw/dataset/160055
 scams_url2 = 'https://od.moi.gov.tw/api/v1/rest/datastore/A01010000C-002150-013'
 lineid = '../GetFromGovernmentInf_LineID.txt'
