@@ -116,6 +116,11 @@ def reloadSetting():
     WHOIS_QUERY_LIST = setting['WHOIS_QUERY_LIST']
     return
 
+def IsAdmin(ID):
+    if ID in ADMINS:
+        return True
+    return False
+
 def datetime_to_string(dt):
     return dt.strftime("%Y%m%d%H%M%S")
 

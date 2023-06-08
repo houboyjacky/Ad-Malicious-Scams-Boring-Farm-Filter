@@ -102,7 +102,7 @@ def message_reply(event, text):
     if check_user_need_news(event.source.user_id):
         text = f"{text}\n\n{return_notice_text()}"
 
-    if event.source.user_id not in Tools.ADMINS:
+    if not Tools.IsAdmin(event.source.user_id):
         user_name = line_bot_api.get_profile(event.source.user_id).display_name
         write_new_netizen_file(event.source.user_id, user_name, event.message.text, True)
 
@@ -324,7 +324,7 @@ def handle_message_text(event):
         return
 
     # 管理員操作
-    if user_id in Tools.ADMINS:
+    if Tools.IsAdmin(user_id):
         if rmessage:=handle_message_text_admin(user_id, orgin_text):
             message_reply_basic(event, rmessage)
             if orgin_text == "重讀":
@@ -591,7 +591,7 @@ def handle_message_image(event):
     with open(filename, "wb") as f:
         f.write(message_content.content)
 
-    if user_id in Tools.ADMINS and image_analysis:
+    if Tools.IsAdmin(user_id) and image_analysis:
         # 取得開始時間
         start_time = time.time()
         # 辨識文字

@@ -39,9 +39,9 @@ from urllib.parse import urlparse, unquote
 from bs4 import BeautifulSoup
 from PrintText import suffix_for_call
 
-FILTER_DIR = "filter"
-
 blacklist = []
+
+# ===============================================
 
 # 目前不支援 "lurl.cc" "risu.io"
 # 未知 "picsee.io" "lihi.io"
@@ -328,7 +328,7 @@ def download_write_file(url, file_path):
 
 def check_download_file(url):
     # 使用 url 的最後一部分作為檔名
-    Local_file_path = os.path.join(FILTER_DIR, url.split("/")[-1])
+    Local_file_path = os.path.join("filter", url.split("/")[-1])
     Local_file_name = url.split("/")[-1]
     Local_file_hash = calculate_hash(Local_file_path)
 
