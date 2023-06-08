@@ -146,7 +146,7 @@ def handle_message_text_admin(user_id, orgin_text):
         else:
             # 加入新line id
             user_add_lineid(lineid)
-            rmessage = f"賴黑名單已加入「{lineid}」"
+            rmessage = f"賴黑名單成功加入「{lineid}」"
     elif match := re.search(Tools.KEYWORD_LINE[2], lower_text):
         rmessage = lineinvite_write_file(orgin_text)
     elif match := re.search(Tools.KEYWORD_IG[2], lower_text):
@@ -167,7 +167,7 @@ def handle_message_text_admin(user_id, orgin_text):
         else:
             # 加入新telegram id
             user_add_telegram_id(telegram_id)
-            rmessage = f"Telegram黑名單已加入「{telegram_id}」"
+            rmessage = f"Telegram黑名單成功加入「{telegram_id}」"
     elif match := re.search(Tools.KEYWORD_TELEGRAM[3], lower_text):
         # 取得文字
         telegram_id = match.group(1)
@@ -176,7 +176,7 @@ def handle_message_text_admin(user_id, orgin_text):
         else:
             # 加入新telegram id
             user_add_telegram_id(telegram_id)
-            rmessage = f"Telegram黑名單已加入「{telegram_id}」"
+            rmessage = f"Telegram黑名單成功加入「{telegram_id}」"
     elif match := re.search(Tools.KEYWORD_URL[0], lower_text):
         # 取得網址
         url = match.group(1)
@@ -206,7 +206,7 @@ def handle_message_text_admin(user_id, orgin_text):
             rmessage = f"網址黑名單已存在網址\n「 {domain_name} 」"
         else:
             # 提早執行更新
-            update_part_blacklist(domain_name)
+            rmessage = f"網址黑名單成功加入網址\n「 {domain_name} 」"
             # 將Adguard規則寫入檔案
             with open(Tools.NEW_SCAM_WEBSITE_FOR_ADG, "a", encoding="utf-8", newline='') as f:
                 f.write(new_rule)
@@ -215,7 +215,7 @@ def handle_message_text_admin(user_id, orgin_text):
         # 取得文字
         text = match.group(1)
         # 組合成新的規則
-        new_rule = f"! {text}\n"
+        rmessage = f"網址黑名單成功加入註解「 {text} 」"
         # 將文字寫入
         with open(Tools.NEW_SCAM_WEBSITE_FOR_ADG, "a", encoding="utf-8", newline='') as f:
             f.write(new_rule)
