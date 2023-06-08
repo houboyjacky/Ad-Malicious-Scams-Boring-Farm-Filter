@@ -21,6 +21,7 @@
 /24pchome[a-z0-9]*\.com/
 /3456[0-9]+\.xyz/
 /6[0Oo]{3}(?:gov)?\.tw/
+/7-eleven\w+\.cc/
 /711-tw[0-9]+.tech/
 /8legend\.[a-z]+/
 /aaex\.(asia|club|in|win)/
