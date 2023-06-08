@@ -40,7 +40,7 @@ from Query_Instagram import IG_read_file, IG_write_file, get_ig_list_len, get_ra
 from Query_Line_ID import user_query_lineid, user_add_lineid
 from Query_Line_Invite import lineinvite_write_file, lineinvite_read_file, get_line_invites_list_len, get_random_line_invite_blacklist, push_random_line_invite_blacklist
 from Query_Telegram import user_query_telegram_id, user_add_telegram_id
-from Query_URL import user_query_website, check_blacklisted_site, get_web_leaderboard, update_part_blacklist, user_query_shorturl
+from Query_URL import user_query_website, check_blacklisted_site, get_web_leaderboard, update_part_blacklist, user_query_shorturl, get_external_links
 
 image_analysis = False
 line_bot_api = LineBotApi(Tools.CHANNEL_ACCESS_TOKEN)
@@ -555,6 +555,15 @@ def handle_message_text(event):
             rmessage = f"{prefix_msg}{rmessage}"
         else:
             rmessage = f"所輸入的{rmessage}"
+
+        if Tools.IsAdmin(user_id):
+            if links := get_external_links(orgin_text):
+                msg = '\n\n=\n網站背後資訊(管理員only)\n'
+                for link in links:
+                    msg = f"{msg}「 {link} 」\n"
+                msg = f"{msg}=\n"
+                rmessage = f"{rmessage}{msg}"
+
         message_reply(event, rmessage)
         return
 

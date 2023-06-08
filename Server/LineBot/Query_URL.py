@@ -35,14 +35,57 @@ from collections import defaultdict
 from Logger import logger
 from urllib.request import urlopen
 from urllib.error import HTTPError, URLError
-from urllib.parse import urlparse, unquote
+from urllib.parse import urlparse, unquote, urljoin
 from bs4 import BeautifulSoup
 from PrintText import suffix_for_call
 
 blacklist = []
 
 # ===============================================
+# 進一步搜尋
+# ===============================================
 
+def get_external_links(url):
+    parsed_url = urlparse(url)
+    extracted = tldextract.extract(parsed_url.netloc)
+    domain = extracted.domain
+    suffix = extracted.suffix
+
+    if f"{domain}.{suffix}" in Tools.ALLOW_DOMAIN_LIST:
+        return set()
+
+    try:
+        response = requests.get(url)
+        response.raise_for_status()
+    except requests.exceptions.RequestException as e:
+        logger.error(f"Error occurred: {e}")
+        return set()
+
+    soup = BeautifulSoup(response.text, 'html.parser')
+    parsed_url = urlparse(url)
+    base_url = f"{parsed_url.scheme}://{parsed_url.netloc}"
+    external_links = set()
+
+    for tag in soup.find_all(True):
+        if href := tag.get('href'):
+            pass
+        elif href := tag.get('src'):
+            pass
+        else:
+            continue
+
+        if href and href.startswith('http') and not urlparse(href).netloc.endswith(parsed_url.netloc):
+            external_links.add(href)
+        else:
+            absolute_url = urljoin(base_url, href)
+            if absolute_url.startswith('http') and not urlparse(absolute_url).netloc.endswith(parsed_url.netloc):
+                external_links.add(absolute_url)
+
+    return external_links
+
+# ===============================================
+# 縮網址
+# ===============================================
 # 目前不支援 "lurl.cc" "risu.io"
 # 未知 "picsee.io" "lihi.io"
 
@@ -200,6 +243,10 @@ def resolve_redirects(url):
 
     return None
 
+# ===============================================
+# 排行榜
+# ===============================================
+
 Not_to_Add_site = ["facebook.com", "google.com", "instagram.com", "youtube.com"]
 
 def update_web_leaderboard(input_url):
@@ -292,6 +339,10 @@ def calculate_hash(file_path):
         content = file.read()
         hash_value = hashlib.md5(content).hexdigest()
         return hash_value
+
+# ===============================================
+# 下載黑名單
+# ===============================================
 
 remote_hash_dict = {}
 
@@ -436,7 +487,10 @@ def update_part_blacklist(add_rule):
     blacklist.append(add_rule)
     return True
 
+# ===============================================
 # 黑名單判斷
+# ===============================================
+
 def check_blacklisted_site(user_text):
     for line in blacklist:
         line = line.strip().lower()  # 去除開頭或結尾的空白和轉成小寫
