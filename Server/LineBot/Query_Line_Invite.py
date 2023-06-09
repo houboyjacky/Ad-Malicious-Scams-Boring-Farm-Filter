@@ -68,6 +68,8 @@ def analyze_line_invite_url(user_text:str) -> Optional[dict]:
 
         match = re.match(Tools.KEYWORD_LINE[3], redirected_url)
     else:
+        if lower_text.startswith("https://lin.ee"):
+            orgin_text = resolve_redirects(orgin_text)
         match = re.match(Tools.KEYWORD_LINE[3], orgin_text)
         if not match:
             logger.error('line.me邀請網址解析失敗')
