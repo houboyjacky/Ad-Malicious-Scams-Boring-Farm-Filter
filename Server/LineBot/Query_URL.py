@@ -576,6 +576,10 @@ def user_query_shorturl_normal(user_text):
         result = ""
         keep_go_status = False
         logger.info("縮網址無資料")
+    elif not result.startswith("http"):
+        rmessage = f"「 {domain_name} 」是縮網址\n原始網址為\n「 {result} 」\n該連結為特殊APP網址\n需要特定APP才能啟動"
+        logger.info("縮網址為APP啟動網址")
+        keep_go_status = False
     else:
         rmessage = f"「 {domain_name} 」是縮網址\n原始網址為\n"
         keep_go_status = True

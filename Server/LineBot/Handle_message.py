@@ -393,6 +393,7 @@ def handle_message_text(event):
     prefix_msg = ""
     # 縮網址展開
     prefix_msg, expendurl, go_state = user_query_shorturl(orgin_text)
+
     # 是縮網址，取代原本網址，繼續走
     if go_state and expendurl:
         orgin_text = expendurl
