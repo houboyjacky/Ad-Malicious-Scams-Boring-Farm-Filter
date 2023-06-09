@@ -83,6 +83,7 @@ def analyze_line_invite_url(user_text:str) -> Optional[dict]:
         category = "官方"
     elif Type == "p" or "~" in invite_code:
         category = "個人"
+        invite_code = invite_code.replace("~","")
     elif Type in ["g", "g2"]:
         category = "群組"
     else:
