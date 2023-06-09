@@ -50,6 +50,7 @@
 /bityard.+\.com/
 /bjwex[0-9]+\.com/
 /blueberrypro\..+/
+/booking-\w+\.cloud/
 /btc[0-9]{4}\.com/
 /btcbox[a-z]{1,3}\.com/
 /bycp[a-z0-9]*\.com/
@@ -70,6 +71,7 @@
 /coinbase.+\..+$/
 /coincheck\.[a-z]+/
 /coinrule.*\.*/
+/com-id\w+.cloud/
 /costco.+\.com/
 /cwgforexp[a-z0-9]*\.com/
 /dbag[a-z]{3}\.com/
