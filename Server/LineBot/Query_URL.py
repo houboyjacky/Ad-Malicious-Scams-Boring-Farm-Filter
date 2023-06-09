@@ -84,11 +84,15 @@ def get_external_links(url):
 
         if href:
             extracted = tldextract.extract(href)
-            domain = extracted.domain
-            suffix = extracted.suffix
+            subdomain = extracted.subdomain.lower()
+            domain = extracted.domain.lower()
+            suffix = extracted.suffix.lower()
             if not domain or not suffix:
                 continue
-            external_links.add(f"{domain}.{suffix}")
+            if subdomain:
+                external_links.add(f"{subdomain}.{domain}.{suffix}")
+            else:
+                external_links.add(f"{domain}.{suffix}")
             logger.info(f"網站內容連結 = {href}")
 
     return external_links
@@ -763,7 +767,7 @@ def user_query_website(user_text):
     rmessage_diff_days = f"距離今天差{str(diff_days)}天"
 
     # 天數太少自動加入黑名單並直接轉為黑名單
-    if diff_days <= 10:
+    if diff_days <= 10 and not checkresult:
         today_str = today.strftime('%Y-%m-%d')
         msg = f"{domain_name}距離{today_str}差{str(diff_days)}天"
         update_part_blacklist_comment(msg)
