@@ -551,10 +551,10 @@ def handle_message_text(event):
 
         if Tools.IsAdmin(user_id):
             if links := get_external_links(orgin_text):
-                msg = '\n\n=\n網站背後資訊(管理員only)\n'
+                msg = '\n\n＝＝＝＝＝＝＝＝＝＝＝＝\n網站背後資訊(管理員only)\n'
                 for link in links:
                     msg = f"{msg}「 {link} 」\n"
-                msg = f"{msg}=\n"
+                msg = f"{msg}＝＝＝＝＝＝＝＝＝＝＝＝\n"
                 rmessage = f"{rmessage}{msg}"
 
         message_reply(event, rmessage)
