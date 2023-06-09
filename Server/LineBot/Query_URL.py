@@ -67,6 +67,7 @@ def get_external_links(url):
     external_links = set()
 
     for tag in soup.find_all(True):
+        href = ""
         if href := tag.get('href'):
             pass
         elif href := tag.get('src'):
@@ -75,11 +76,20 @@ def get_external_links(url):
             continue
 
         if href and href.startswith('http') and not urlparse(href).netloc.endswith(parsed_url.netloc):
-            external_links.add(href)
+            pass
         else:
             absolute_url = urljoin(base_url, href)
             if absolute_url.startswith('http') and not urlparse(absolute_url).netloc.endswith(parsed_url.netloc):
-                external_links.add(absolute_url)
+                href = absolute_url
+
+        if href:
+            extracted = tldextract.extract(href)
+            domain = extracted.domain
+            suffix = extracted.suffix
+            if not domain or not suffix:
+                continue
+            external_links.add(f"{domain}.{suffix}")
+            logger.info(f"網站內容連結 = {href}")
 
     return external_links
 
