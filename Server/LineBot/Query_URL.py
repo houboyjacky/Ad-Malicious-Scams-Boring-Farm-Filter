@@ -752,12 +752,13 @@ def user_query_website(user_text):
     rmessage_creation_date = f"建立時間：{creation_date_str}"
     rmessage_diff_days = f"距離今天差{str(diff_days)}天"
 
-    # 天數太少自動加入黑名單
+    # 天數太少自動加入黑名單並直接轉為黑名單
     if diff_days <= 10:
         today_str = today.strftime('%Y-%m-%d')
         msg = f"{domain_name}距離{today_str}差{str(diff_days)}天"
         update_part_blacklist_comment(msg)
         update_part_blacklist_rule(domain_name)
+        checkresult = True
 
     if whois_country:
         country_str = Tools.translate_country(whois_country)
