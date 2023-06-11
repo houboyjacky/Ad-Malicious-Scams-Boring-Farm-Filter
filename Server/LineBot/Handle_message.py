@@ -43,6 +43,7 @@ from Query_Telegram import user_query_telegram_id, user_add_telegram_id
 from Query_URL import user_query_website, check_blacklisted_site, get_web_leaderboard, update_part_blacklist_rule, user_query_shorturl, get_external_links, update_part_blacklist_comment
 
 image_analysis = False
+forward_inquiry = False
 line_bot_api = LineBotApi(Tools.CHANNEL_ACCESS_TOKEN)
 
 FB_list_len = 0
@@ -99,12 +100,14 @@ def message_reply_basic(event, text):
 
 # 回應訊息的函式
 def message_reply(event, text):
+    global forward_inquiry
     if check_user_need_news(event.source.user_id):
         text = f"{text}\n\n{return_notice_text()}"
 
-    if not Tools.IsAdmin(event.source.user_id):
+    if not Tools.IsAdmin(event.source.user_id) and forward_inquiry:
         user_name = line_bot_api.get_profile(event.source.user_id).display_name
-        write_new_netizen_file(event.source.user_id, user_name, event.message.text, True)
+        write_new_netizen_file(event.source.user_id,
+                               user_name, event.message.text, True)
 
     message = TextSendMessage(text=text)
     line_bot_api.reply_message(event.reply_token, message)
@@ -112,7 +115,7 @@ def message_reply(event, text):
 
 # 管理員操作
 def handle_message_text_admin(user_id, orgin_text):
-    global image_analysis
+    global image_analysis, forward_inquiry
     rmessage = ''
 
     # 讀取使用者傳來的文字訊息
@@ -138,6 +141,12 @@ def handle_message_text_admin(user_id, orgin_text):
     elif orgin_text == "開啟辨識":
         image_analysis = True
         rmessage = f"已開啟辨識"
+    elif orgin_text == "開啟轉送":
+        forward_inquiry = True
+        rmessage = f"已開啟辨識"
+    elif orgin_text == "關閉轉送":
+        forward_inquiry = False
+        rmessage = f"已關閉轉送"
     elif match := re.search(Tools.KEYWORD_LINE[0], lower_text):
         # 取得文字
         lineid = match.group(1)
