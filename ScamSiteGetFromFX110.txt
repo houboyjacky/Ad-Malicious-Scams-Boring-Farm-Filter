@@ -1,6 +1,7 @@
 ! 2023/05/19 Update
 ! FX110 https://www.fx110.com.tw/
 @@||metamask.io^
+#||wixsite.com^
 ||00fa.com^
 ||0852288.com^
 ||096n.com^
@@ -6932,7 +6933,6 @@
 ||wisetradefx.com^
 ||wisfx.com^
 ||wixi.io^
-||wixsite.com^
 ||wizeras.com^
 ||wk-international.com^
 ||wkgml.us^
