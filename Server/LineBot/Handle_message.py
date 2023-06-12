@@ -40,6 +40,7 @@ from Query_Instagram import IG_read_file, IG_write_file, get_ig_list_len, get_ra
 from Query_Line_ID import user_query_lineid, user_add_lineid
 from Query_Line_Invite import lineinvite_write_file, lineinvite_read_file, get_line_invites_list_len, get_random_line_invite_blacklist, push_random_line_invite_blacklist
 from Query_Telegram import user_query_telegram_id, user_add_telegram_id
+from Query_Twitter import Twitter_read_file, Twitter_write_file, get_Twitter_list_len, get_random_Twitter_blacklist, push_random_Twitter_blacklist
 from Query_URL import user_query_website, check_blacklisted_site, get_web_leaderboard, update_part_blacklist_rule, user_query_shorturl, get_external_links, update_part_blacklist_comment
 
 image_analysis = False
@@ -49,6 +50,7 @@ line_bot_api = LineBotApi(Tools.CHANNEL_ACCESS_TOKEN)
 FB_list_len = 0
 IG_list_len = 0
 line_invites_list_len = 0
+Twitter_list_len = 0
 
 def Random_get_List(UserID):
     global FB_list_len, IG_list_len, line_invites_list_len
@@ -61,12 +63,16 @@ def Random_get_List(UserID):
     if not line_invites_list_len:
         line_invites_list_len = get_line_invites_list_len()
         logger.info(f"line_invites_list_len = {line_invites_list_len}")
+    if not Twitter_list_len:
+        Twitter_list_len = get_Twitter_list_len()
+        logger.info(f"Twitter_list_len = {Twitter_list_len}")
 
-    items = ["FB", "IG", "LINE"]
+    items = ["FB", "IG", "LINE", "TWITTER"]
     weights = []
     weights.append(FB_list_len)
     weights.append(IG_list_len)
     weights.append(line_invites_list_len)
+    weights.append(Twitter_list_len)
 
     selected_item = random.choices(items, weights=weights)[0]
     logger.info(f"selected_item = {selected_item}")
@@ -76,6 +82,8 @@ def Random_get_List(UserID):
         return get_random_ig_blacklist(UserID)
     elif selected_item == "LINE":
         return get_random_line_invite_blacklist(UserID)
+    elif selected_item == "TWITTER":
+        return get_random_Twitter_blacklist(UserID)
     else:
         return None, None
 
@@ -86,6 +94,8 @@ def push_random_blacklist(UserID, success, disappear):
     if result := push_random_ig_blacklist(UserID, success, disappear):
         return result
     if result := push_random_line_invite_blacklist(UserID, success, disappear):
+        return result
+    if result := push_random_Twitter_blacklist(UserID, success, disappear):
         return result
     return result
 
@@ -186,6 +196,12 @@ def handle_message_text_admin(user_id, orgin_text):
             # 加入新telegram id
             user_add_telegram_id(telegram_id)
             rmessage = f"Telegram黑名單成功加入「{telegram_id}」"
+    elif match := re.search(Tools.KEYWORD_TWITTER[1], lower_text): # Twitter ID
+        twitter_id = match.group(1)
+        url = f"https://twitter.com/{twitter_id}"
+        rmessage = Twitter_write_file(url)
+    elif match := re.search(Tools.KEYWORD_TWITTER[3], lower_text): # 網址
+        rmessage = Twitter_write_file(orgin_text)
     elif match := re.search(Tools.KEYWORD_URL[0], lower_text):
         # 取得網址
         url = match.group(1)
@@ -399,6 +415,35 @@ def handle_message_text(event):
         message_reply(event, rmessage)
         return
 
+    # 查詢Twitter ID
+    if match := re.search(Tools.KEYWORD_TWITTER[0], orgin_text):
+        twitter_id = match.group(1)
+        message, status = Twitter_read_file(orgin_text)
+        if status == -1:
+            rmessage = (f"所輸入的「 {twitter_id} 」\n"
+                        f"Twitter網址有誤、網址失效或不支援\n"
+                        f"感恩")
+        elif status == 1:
+            rmessage = (f"所輸入的「 {twitter_id} 」\n\n"
+                        f"「是」已知詐騙/可疑的Twitter ID\n"
+                        f"請勿輕易信任此Twitter ID的\n"
+                        f"文字、圖像、語音和連結\n"
+                        f"感恩")
+        else:
+            rmessage = (f"所輸入的「 {twitter_id} 」\n\n"
+                        f"「不是」已知詐騙/可疑的Twitter ID\n"
+                        f"但並不代表沒問題\n"
+                        f"\n"
+                        f"若該Twitter帳號的貼文\n"
+                        f"1. 能帶你一起賺錢\n"
+                        f"2. 炫富式貼文\n"
+                        f"3. Twitter廣告，但追蹤太少\n"
+                        f"有極大的機率是有問題的\n"
+                        f"\n"
+                        f"{suffix_for_call}")
+        message_reply(event, rmessage)
+        return
+
     prefix_msg = ""
     # 縮網址展開
     prefix_msg, expendurl, go_state = user_query_shorturl(orgin_text)
@@ -450,7 +495,7 @@ def handle_message_text(event):
             message_reply(event, rmessage)
             return
 
-    # 判斷FB帳戶
+    # 判斷FB帳戶網址
     if re.match(Tools.KEYWORD_FB[2], lower_text):
         message, status = FB_read_file(orgin_text)
 
@@ -488,7 +533,7 @@ def handle_message_text(event):
         message_reply(event, rmessage)
         return
 
-    # 判斷IG帳戶、貼文或影片
+    # 判斷IG帳戶、貼文或影片網址
     if re.match(Tools.KEYWORD_IG[3], lower_text):
         message, status = IG_read_file(orgin_text)
         if prefix_msg:
@@ -547,6 +592,40 @@ def handle_message_text(event):
                         f"\n"
                         f"{suffix_for_call}")
 
+        message_reply(event, rmessage)
+        return
+
+    # 查詢Twitter網址
+    if match := re.search(Tools.KEYWORD_TWITTER[2], lower_text):
+        twitter_id = match.group(1)
+        message, status = Twitter_read_file(orgin_text)
+        if prefix_msg:
+            prefix_msg = f"{prefix_msg}「 {orgin_text} 」\n"
+        else:
+            prefix_msg = f"所輸入的"
+
+        if status == -1:
+            rmessage = (f"{prefix_msg}\n"
+                        f"Twitter網址有誤、網址失效或不支援\n"
+                        f"感恩")
+        elif status == 1:
+            rmessage = (f"{prefix_msg}{message}\n\n"
+                        f"「是」已知詐騙/可疑的Twitter ID\n"
+                        f"請勿輕易信任此Twitter ID的\n"
+                        f"文字、圖像、語音和連結\n"
+                        f"感恩")
+        else:
+            rmessage = (f"{prefix_msg}{message}\n\n"
+                        f"「不是」已知詐騙/可疑的Twitter ID\n"
+                        f"但並不代表沒問題\n"
+                        f"\n"
+                        f"若該Twitter帳號的貼文\n"
+                        f"1. 能帶你一起賺錢\n"
+                        f"2. 炫富式貼文\n"
+                        f"3. Twitter廣告，但追蹤太少\n"
+                        f"有極大的機率是有問題的\n"
+                        f"\n"
+                        f"{suffix_for_call}")
         message_reply(event, rmessage)
         return
 
