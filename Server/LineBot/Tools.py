@@ -44,6 +44,7 @@ KEYWORD_FB = setting['KEYWORD_FB']                      # KEYWORD_FB => Keyword 
 KEYWORD_IG = setting['KEYWORD_IG']                      # KEYWORD_IG => Keyword for IG
 KEYWORD_LINE = setting['KEYWORD_LINE']                  # KEYWORD_LINE => Keyword for LINE
 KEYWORD_MAIL = setting['KEYWORD_MAIL']                  # KEYWORD_MAIL => Keyword for MAIL
+KEYWORD_SMALLREDBOOK = setting['KEYWORD_SMALLREDBOOK']  # KEYWORD_SMALLREDBOOK => Keyword for SMALL Red Book
 KEYWORD_TELEGRAM = setting['KEYWORD_TELEGRAM']          # KEYWORD_TELEGRAM => Keyword for TELEGRAM
 KEYWORD_TIKTOK = setting['KEYWORD_TIKTOK']              # KEYWORD_TIKTOK => Keyword for TIKTOK
 KEYWORD_TWITTER = setting['KEYWORD_TWITTER']            # KEYWORD_TWITTER => KEYWORD for TWITTER
@@ -63,6 +64,7 @@ PEM_DIR = setting['PEM_DIR']                            # PEM_DIR => Lets Encryp
 PRIVKEY = setting['PRIVKEY']                            # PRIVKEY => Lets Encrypt Private Key Path File
 SCAM_WEBSITE_LIST = setting['SCAM_WEBSITE_LIST']        # SCAM_WEBSITE_LIST => SCAM WEBSITE LIST
 SHORT_URL_LIST = setting['SHORT_URL_LIST']              # SHORT_URL_LIST => Short url list
+SMALLREDBOOK_LIST = setting['SMALLREDBOOK_LIST']        # SMALLREDBOOK_LIST => SMALL RED BOOK LIST
 SPECIAL_SUBWEBSITE = setting['SPECIAL_SUBWEBSITE']      # SPECIAL_SUBWEBSITE => Special Subwebsite need to block sub website
 TARGET_DIR = setting['CONFIG_SIGN']                     # New Signed mobileconfig
 TELEGRAM_LOCAL = setting['TELEGRAM_LOCAL']              # TELEGRAM_LOCAL => Blacklist for Blacklist
@@ -82,7 +84,8 @@ def reloadSetting():
     global SCAM_WEBSITE_LIST, SHORT_URL_LIST, SPECIAL_SUBWEBSITE, TARGET_DIR, TELEGRAM_LOCAL
     global USER_POINT, WEB_LEADERBOARD_FILE, WHOIS_QUERY_LIST, ALLOW_DOMAIN_LIST
     global TWITTER_BLACKLIST, KEYWORD_TWITTER, KEYWORD_MAIL, MAIL_BLACKLIST, KEYWORD_WHATSAPP
-    global WHATSAPP_BLACKLIST, KEYWORD_TIKTOK, TIKTOK_BLACKLIST
+    global WHATSAPP_BLACKLIST, KEYWORD_TIKTOK, TIKTOK_BLACKLIST, SMALLREDBOOK_LIST
+    global KEYWORD_SMALLREDBOOK
     global setting
 
     setting = ''
@@ -104,6 +107,7 @@ def reloadSetting():
     KEYWORD_IG = setting['KEYWORD_IG']
     KEYWORD_LINE = setting['KEYWORD_LINE']
     KEYWORD_MAIL = setting['KEYWORD_MAIL']
+    KEYWORD_SMALLREDBOOK = setting['KEYWORD_SMALLREDBOOK']
     KEYWORD_TELEGRAM = setting['KEYWORD_TELEGRAM']
     KEYWORD_TIKTOK = setting['KEYWORD_TIKTOK']
     KEYWORD_TWITTER = setting['KEYWORD_TWITTER']
@@ -123,6 +127,7 @@ def reloadSetting():
     PRIVKEY = setting['PRIVKEY']
     SCAM_WEBSITE_LIST = setting['SCAM_WEBSITE_LIST']
     SHORT_URL_LIST = setting['SHORT_URL_LIST']
+    SMALLREDBOOK_LIST = setting['SMALLREDBOOK_LIST']
     SPECIAL_SUBWEBSITE = setting['SPECIAL_SUBWEBSITE']
     TARGET_DIR = setting['CONFIG_SIGN']
     TELEGRAM_LOCAL = setting['TELEGRAM_LOCAL']
