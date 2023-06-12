@@ -1,6 +1,7 @@
 # 歷史更新 History Update
 
 * 20230612 Update
+  * 修復 參數宣告不全
   * 調整 分析網站特別印出line連結
   * 調整 Telegram ID有區分大小寫
 

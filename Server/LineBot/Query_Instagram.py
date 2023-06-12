@@ -113,7 +113,7 @@ def IG_read_file(user_text:str):
 IG_Record_players = []
 
 def get_random_ig_blacklist(UserID) -> str:
-    global IG_Record_players
+    global IG_Record_players, IG_list
     found = False
     count = 0
     while count < 1000:  # 最多找 1000 次，避免無限迴圈
@@ -135,7 +135,7 @@ def get_random_ig_blacklist(UserID) -> str:
     return site
 
 def push_random_ig_blacklist(UserID, success, disappear):
-    global IG_Record_players
+    global IG_Record_players, IG_list
     found = False
     for record in IG_Record_players:
         if record['檢查者'] == UserID:
