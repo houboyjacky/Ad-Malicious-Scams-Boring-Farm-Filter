@@ -1,5 +1,8 @@
 # 歷史更新 History Update
 
+* 20230613 Update
+  * 調整 備用公告
+
 * 20230612 Update
   * 加入 小紅書黑名單
   * 加入 Email黑名單
