@@ -43,6 +43,7 @@ from Query_Mail import user_query_mail, user_add_mail
 from Query_Telegram import user_query_telegram_id, user_add_telegram_id
 from Query_Twitter import Twitter_read_file, Twitter_write_file, get_Twitter_list_len, get_random_Twitter_blacklist, push_random_Twitter_blacklist
 from Query_URL import user_query_website, check_blacklisted_site, get_web_leaderboard, update_part_blacklist_rule, user_query_shorturl, get_external_links, update_part_blacklist_comment
+from Query_Whatsapp import user_add_whatsapp_id, user_query_whatsapp_id
 
 image_analysis = False
 forward_inquiry = False
@@ -210,6 +211,24 @@ def handle_message_text_admin(user_id, orgin_text):
         else:
             user_add_mail(mail)
             rmessage = f"Email黑名單成功加入「 {mail} 」"
+    elif match := re.search(Tools.KEYWORD_WHATSAPP[1], orgin_text):
+        # 取得文字
+        whatsapp_id = match.group(1)
+        if user_query_whatsapp_id(whatsapp_id):
+            rmessage = f"WhatsApp個人黑名單已存在「{whatsapp_id}」"
+        else:
+            # 加入新whatsapp id
+            user_add_whatsapp_id(whatsapp_id)
+            rmessage = f"WhatsApp個人黑名單成功加入「{whatsapp_id}」"
+    elif match := re.search(Tools.KEYWORD_WHATSAPP[3], orgin_text):
+        # 取得文字
+        whatsapp_id = match.group(1)
+        if user_query_whatsapp_id(whatsapp_id):
+            rmessage = f"WhatsApp群組黑名單已存在「{whatsapp_id}」"
+        else:
+            # 加入新whatsapp id
+            user_add_whatsapp_id(whatsapp_id)
+            rmessage = f"WhatsApp群組黑名單成功加入「{whatsapp_id}」"
     elif match := re.search(Tools.KEYWORD_URL[0], lower_text):
 
         # 直接使用IP連線
@@ -654,6 +673,64 @@ def handle_message_text(event):
                         f"有極大的機率是有問題的\n"
                         f"\n"
                         f"{suffix_for_call}")
+        message_reply(event, rmessage)
+        return
+
+    # 查詢Whatsapp個人網址
+    if match := re.search(Tools.KEYWORD_WHATSAPP[0], lower_text):
+        whatsapp_id = match.group(1)
+        if prefix_msg:
+            prefix_msg = f"{prefix_msg}「 {orgin_text} 」\nWhatsApp ID為\n"
+        else:
+            prefix_msg = f"所輸入的WhatsApp ID為\n"
+
+        if user_query_whatsapp_id(whatsapp_id):
+            rmessage = (f"{prefix_msg}「{whatsapp_id}」\n\n"
+                        f"「是」詐騙/可疑WhatsApp ID\n"
+                        f"請勿輕易信任此WhatsApp ID的\n"
+                        f"文字、圖像、語音和連結\n"
+                        f"感恩")
+        else:
+            rmessage = (f"{prefix_msg}「{whatsapp_id}」\n\n"
+                        f"目前不在詐騙黑名單中\n"
+                        f"但並不代表沒問題\n"
+                        f"\n"
+                        f"若該WhatsApp ID\n"
+                        f"是「沒見過面」的「網友」\n"
+                        f"又能帶你一起賺錢或兼職\n"
+                        f"１００％就是有問題\n"
+                        f"\n"
+                        f"{suffix_for_call}")
+
+        message_reply(event, rmessage)
+        return
+
+    # 查詢Whatsapp群組網址
+    if match := re.search(Tools.KEYWORD_WHATSAPP[2], lower_text):
+        whatsapp_id = match.group(1)
+        if prefix_msg:
+            prefix_msg = f"{prefix_msg}「 {orgin_text} 」\nWhatsApp群組ID為\n"
+        else:
+            prefix_msg = f"所輸入的WhatsApp群組ID為\n"
+
+        if user_query_whatsapp_id(whatsapp_id):
+            rmessage = (f"{prefix_msg}「{whatsapp_id}」\n\n"
+                        f"「是」詐騙/可疑WhatsApp群組ID\n"
+                        f"請勿輕易信任此WhatsApp群組ID的\n"
+                        f"文字、圖像、語音和連結\n"
+                        f"感恩")
+        else:
+            rmessage = (f"{prefix_msg}「{whatsapp_id}」\n\n"
+                        f"目前不在詐騙黑名單中\n"
+                        f"但並不代表沒問題\n"
+                        f"\n"
+                        f"若該WhatsApp群組ID\n"
+                        f"是「沒見過面」的「網友」\n"
+                        f"又能帶你一起賺錢或兼職\n"
+                        f"１００％就是有問題\n"
+                        f"\n"
+                        f"{suffix_for_call}")
+
         message_reply(event, rmessage)
         return
 

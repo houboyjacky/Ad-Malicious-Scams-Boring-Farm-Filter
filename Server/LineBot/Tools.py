@@ -47,6 +47,7 @@ KEYWORD_MAIL = setting['KEYWORD_MAIL']                  # KEYWORD_MAIL => Keywor
 KEYWORD_TELEGRAM = setting['KEYWORD_TELEGRAM']          # KEYWORD_TELEGRAM => Keyword for TELEGRAM
 KEYWORD_TWITTER = setting['KEYWORD_TWITTER']            # KEYWORD_TWITTER => KEYWORD for TWITTER
 KEYWORD_URL = setting['KEYWORD_URL']                    # KEYWORD_URL => Keyword for url
+KEYWORD_WHATSAPP = setting['KEYWORD_WHATSAPP']          # KEYWORD_WHATSAPP => Keyword for WhatsApp
 LINE_INVITE = setting['LINE_INVITE']                    # LINE_INVITE => Black Line invite site
 LINEID_LOCAL = setting['LINEID_LOCAL']                  # LINEID_LOCAL => Line ID from Local
 LINEID_WEB = setting['LINEID_WEB']                      # LINEID_WEB => Line ID from Web
@@ -68,6 +69,7 @@ TWITTER_BLACKLIST = setting['TWITTER_BLACKLIST']        # TWITTER_BLACKLIST => B
 USER_POINT = setting['USER_POINT']                      # USER_POINT => User Point Record
 WEB_LEADERBOARD_FILE = setting['WEB_LEADERBOARD_FILE']  # WEB_LEADERBOARD_FILE => Query Website times leaderboard from file
 WHOIS_QUERY_LIST = setting['WHOIS_QUERY_LIST']          # WHOIS_QUERY_LIST => Save whois data
+WHATSAPP_BLACKLIST = setting['WHATSAPP_BLACKLIST']      # WHATSAPP_BLACKLIST => Blacklist for WhatsApp
 
 def reloadSetting():
     global ADMINS, BackupDIR, BLACKUSERID, CERT, CHANNEL_ACCESS_TOKEN
@@ -77,7 +79,8 @@ def reloadSetting():
     global NEW_SCAM_WEBSITE_FOR_ADG, NOTICE_BOARD, NOTICE_BOARD_LIST, PEM_DIR, PRIVKEY
     global SCAM_WEBSITE_LIST, SHORT_URL_LIST, SPECIAL_SUBWEBSITE, TARGET_DIR, TELEGRAM_LOCAL
     global USER_POINT, WEB_LEADERBOARD_FILE, WHOIS_QUERY_LIST, ALLOW_DOMAIN_LIST
-    global TWITTER_BLACKLIST, KEYWORD_TWITTER, KEYWORD_MAIL, MAIL_BLACKLIST
+    global TWITTER_BLACKLIST, KEYWORD_TWITTER, KEYWORD_MAIL, MAIL_BLACKLIST, KEYWORD_WHATSAPP
+    global WHATSAPP_BLACKLIST
     global setting
 
     setting = ''
@@ -102,6 +105,7 @@ def reloadSetting():
     KEYWORD_TELEGRAM = setting['KEYWORD_TELEGRAM']
     KEYWORD_TWITTER = setting['KEYWORD_TWITTER']
     KEYWORD_URL = setting['KEYWORD_URL']
+    KEYWORD_WHATSAPP = setting['KEYWORD_WHATSAPP']
     LINE_INVITE = setting['LINE_INVITE']
     LINEID_LOCAL = setting['LINEID_LOCAL']
     LINEID_WEB = setting['LINEID_WEB']
@@ -122,7 +126,9 @@ def reloadSetting():
     TWITTER_BLACKLIST = setting['TWITTER_BLACKLIST']
     USER_POINT = setting['USER_POINT']
     WEB_LEADERBOARD_FILE = setting['WEB_LEADERBOARD_FILE']
+    WHATSAPP_BLACKLIST = setting['WHATSAPP_BLACKLIST']
     WHOIS_QUERY_LIST = setting['WHOIS_QUERY_LIST']
+
     return
 
 def IsAdmin(ID):

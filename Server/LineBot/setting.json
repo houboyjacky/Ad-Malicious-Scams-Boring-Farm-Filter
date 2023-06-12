@@ -19,6 +19,7 @@
 	"KEYWORD_TELEGRAM":["",""],
 	"KEYWORD_TWITTER":["",""],
 	"KEYWORD_URL":["",""],
+	"KEYWORD_WHATSAPP":["",""],
 	"LINE_INVITE":"",
     "LINEID_LOCAL":"",
 	"LINEID_WEB":"",
@@ -36,5 +37,6 @@
     "TWITTER_BLACKLIST":"",
 	"USER_POINT":"",
     "WEB_LEADERBOARD_FILE":"",
+	"WHATSAPP_BLACKLIST":"",
 	"WHOIS_QUERY_LIST":""
 }
