@@ -967,7 +967,7 @@
 ||dailyprettygirls.page.link^
 ||gracefulgirl.page.link^
 ||peaceful-beignet-9a1e54.netlify.app^
-||rb.gy^
+#||rb.gy^
 ||securedsmcd.com^
 ||smartsecuredt.com^
 ||taipecuteegirl.page.link^
