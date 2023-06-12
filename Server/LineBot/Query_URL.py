@@ -22,6 +22,7 @@ THE SOFTWARE.
 
 import hashlib
 import html
+import ipaddress
 import json
 import os
 import re
@@ -46,6 +47,20 @@ blacklist = []
 # ===============================================
 
 def get_external_links(url):
+
+    # 內部IP pass分析
+    if match := re.search(Tools.KEYWORD_URL[3], url):
+        ip = match.group(1)
+        try:
+            ip_obj = ipaddress.ip_address(ip)
+            if ip_obj.is_private:
+                return set()
+            else:
+                pass
+        except ValueError:
+            logger.error(f"Error occurred: {ValueError}")
+            return set()
+
     parsed_url = urlparse(url)
     extracted = tldextract.extract(parsed_url.netloc)
     domain = extracted.domain
@@ -649,6 +664,27 @@ whois_list = []
 # 使用者查詢網址
 def user_query_website(user_text):
     global whois_list
+
+    # 直接使用IP連線
+    if match := re.search(Tools.KEYWORD_URL[3], user_text):
+        ip = match.group(1)
+        if check_blacklisted_site(ip):
+            rmessage = (f"「 {ip} 」\n\n"
+                        f"被判定「是」詐騙/可疑網站\n"
+                        f"請勿相信此網站\n"
+                        f"若認為誤通報，請補充描述\n"
+                        f"感恩"
+                        f"\n"
+                        f"{suffix_for_call}"
+            )
+        else:
+            rmessage = (f"「 {ip} 」\n\n"
+                        f"目前「尚未」在資料庫中\n"
+                        f"敬請小心謹慎\n"
+                        f"\n"
+                        f"{suffix_for_call}\n"
+            )
+        return rmessage
 
     if not whois_list:
         whois_list = Tools.read_json_file(Tools.WHOIS_QUERY_LIST)

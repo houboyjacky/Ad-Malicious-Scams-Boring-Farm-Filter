@@ -203,29 +203,31 @@ def handle_message_text_admin(user_id, orgin_text):
     elif match := re.search(Tools.KEYWORD_TWITTER[3], lower_text): # 網址
         rmessage = Twitter_write_file(orgin_text)
     elif match := re.search(Tools.KEYWORD_URL[0], lower_text):
-        # 取得網址
-        url = match.group(1)
 
-        if '.' not in url:
-            rmessage = f"所輸入的文字\n「 {domain_name} 」\n無法構成網址\n請重新輸入"
-            return rmessage
+        # 直接使用IP連線
+        if ipmatch := re.search(Tools.KEYWORD_URL[3], lower_text):
+            domain_name = ipmatch.group(1)
+        else: # 網址
+            # 取得網址
+            url = match.group(1)
 
-        # 使用 tldextract 取得網域
-        extracted = tldextract.extract(url)
-        subdomain = extracted.subdomain.lower()
-        domain = extracted.domain.lower()
-        suffix = extracted.suffix.lower()
+            if '.' not in url:
+                rmessage = f"所輸入的文字\n「 {domain_name} 」\n無法構成網址\n請重新輸入"
+                return rmessage
 
-        domain_name = f"{domain}.{suffix}"
-        if domain_name in Tools.ALLOW_DOMAIN_LIST:
-            rmessage = f"網址封鎖有誤，不允許{domain_name}"
-            return rmessage
+            # 使用 tldextract 取得網域
+            extracted = tldextract.extract(url)
+            subdomain = extracted.subdomain.lower()
+            domain = extracted.domain.lower()
+            suffix = extracted.suffix.lower()
 
-        if domain_name in Tools.SPECIAL_SUBWEBSITE:
-            domain_name = f"{subdomain}.{domain}.{suffix}"
+            domain_name = f"{domain}.{suffix}"
+            if domain_name in Tools.ALLOW_DOMAIN_LIST:
+                rmessage = f"網址封鎖有誤，不允許{domain_name}"
+                return rmessage
 
-        # 組合成新的規則
-        new_rule = f"||{domain_name}^\n"
+            if domain_name in Tools.SPECIAL_SUBWEBSITE:
+                domain_name = f"{subdomain}.{domain}.{suffix}"
 
         if check_blacklisted_site(domain_name):
             rmessage = f"網址黑名單已存在網址\n「 {domain_name} 」"
