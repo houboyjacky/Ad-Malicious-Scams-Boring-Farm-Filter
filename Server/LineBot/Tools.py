@@ -45,6 +45,7 @@ KEYWORD_IG = setting['KEYWORD_IG']                      # KEYWORD_IG => Keyword 
 KEYWORD_LINE = setting['KEYWORD_LINE']                  # KEYWORD_LINE => Keyword for LINE
 KEYWORD_MAIL = setting['KEYWORD_MAIL']                  # KEYWORD_MAIL => Keyword for MAIL
 KEYWORD_TELEGRAM = setting['KEYWORD_TELEGRAM']          # KEYWORD_TELEGRAM => Keyword for TELEGRAM
+KEYWORD_TIKTOK = setting['KEYWORD_TIKTOK']              # KEYWORD_TIKTOK => Keyword for TIKTOK
 KEYWORD_TWITTER = setting['KEYWORD_TWITTER']            # KEYWORD_TWITTER => KEYWORD for TWITTER
 KEYWORD_URL = setting['KEYWORD_URL']                    # KEYWORD_URL => Keyword for url
 KEYWORD_WHATSAPP = setting['KEYWORD_WHATSAPP']          # KEYWORD_WHATSAPP => Keyword for WhatsApp
@@ -65,11 +66,12 @@ SHORT_URL_LIST = setting['SHORT_URL_LIST']              # SHORT_URL_LIST => Shor
 SPECIAL_SUBWEBSITE = setting['SPECIAL_SUBWEBSITE']      # SPECIAL_SUBWEBSITE => Special Subwebsite need to block sub website
 TARGET_DIR = setting['CONFIG_SIGN']                     # New Signed mobileconfig
 TELEGRAM_LOCAL = setting['TELEGRAM_LOCAL']              # TELEGRAM_LOCAL => Blacklist for Blacklist
+TIKTOK_BLACKLIST = setting['TIKTOK_BLACKLIST']          # TIKTOK_BLACKLIST => Blacklist for Tiktok
 TWITTER_BLACKLIST = setting['TWITTER_BLACKLIST']        # TWITTER_BLACKLIST => Blacklist for Twitter
 USER_POINT = setting['USER_POINT']                      # USER_POINT => User Point Record
 WEB_LEADERBOARD_FILE = setting['WEB_LEADERBOARD_FILE']  # WEB_LEADERBOARD_FILE => Query Website times leaderboard from file
-WHOIS_QUERY_LIST = setting['WHOIS_QUERY_LIST']          # WHOIS_QUERY_LIST => Save whois data
 WHATSAPP_BLACKLIST = setting['WHATSAPP_BLACKLIST']      # WHATSAPP_BLACKLIST => Blacklist for WhatsApp
+WHOIS_QUERY_LIST = setting['WHOIS_QUERY_LIST']          # WHOIS_QUERY_LIST => Save whois data
 
 def reloadSetting():
     global ADMINS, BackupDIR, BLACKUSERID, CERT, CHANNEL_ACCESS_TOKEN
@@ -80,7 +82,7 @@ def reloadSetting():
     global SCAM_WEBSITE_LIST, SHORT_URL_LIST, SPECIAL_SUBWEBSITE, TARGET_DIR, TELEGRAM_LOCAL
     global USER_POINT, WEB_LEADERBOARD_FILE, WHOIS_QUERY_LIST, ALLOW_DOMAIN_LIST
     global TWITTER_BLACKLIST, KEYWORD_TWITTER, KEYWORD_MAIL, MAIL_BLACKLIST, KEYWORD_WHATSAPP
-    global WHATSAPP_BLACKLIST
+    global WHATSAPP_BLACKLIST, KEYWORD_TIKTOK, TIKTOK_BLACKLIST
     global setting
 
     setting = ''
@@ -103,6 +105,7 @@ def reloadSetting():
     KEYWORD_LINE = setting['KEYWORD_LINE']
     KEYWORD_MAIL = setting['KEYWORD_MAIL']
     KEYWORD_TELEGRAM = setting['KEYWORD_TELEGRAM']
+    KEYWORD_TIKTOK = setting['KEYWORD_TIKTOK']
     KEYWORD_TWITTER = setting['KEYWORD_TWITTER']
     KEYWORD_URL = setting['KEYWORD_URL']
     KEYWORD_WHATSAPP = setting['KEYWORD_WHATSAPP']
@@ -123,6 +126,7 @@ def reloadSetting():
     SPECIAL_SUBWEBSITE = setting['SPECIAL_SUBWEBSITE']
     TARGET_DIR = setting['CONFIG_SIGN']
     TELEGRAM_LOCAL = setting['TELEGRAM_LOCAL']
+    TIKTOK_BLACKLIST = setting['TIKTOK_BLACKLIST']
     TWITTER_BLACKLIST = setting['TWITTER_BLACKLIST']
     USER_POINT = setting['USER_POINT']
     WEB_LEADERBOARD_FILE = setting['WEB_LEADERBOARD_FILE']

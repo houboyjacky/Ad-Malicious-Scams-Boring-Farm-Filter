@@ -3,6 +3,7 @@
 * 20230612 Update
   * 加入 Email黑名單
   * 加入 IPv4判斷
+  * 加入 Tiktok黑名單
   * 加入 Twitter黑名單
   * 加入 WhatsApp黑名單
   * 修復 參數宣告不全

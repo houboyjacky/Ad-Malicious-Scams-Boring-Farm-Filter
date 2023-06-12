@@ -41,6 +41,7 @@ from Query_Line_ID import user_query_lineid, user_add_lineid
 from Query_Line_Invite import lineinvite_write_file, lineinvite_read_file, get_line_invites_list_len, get_random_line_invite_blacklist, push_random_line_invite_blacklist
 from Query_Mail import user_query_mail, user_add_mail
 from Query_Telegram import user_query_telegram_id, user_add_telegram_id
+from Query_Tiktok import Tiktok_write_file, Tiktok_read_file, push_random_Tiktok_blacklist, get_random_Tiktok_blacklist, get_Tiktok_list_len
 from Query_Twitter import Twitter_read_file, Twitter_write_file, get_Twitter_list_len, get_random_Twitter_blacklist, push_random_Twitter_blacklist
 from Query_URL import user_query_website, check_blacklisted_site, get_web_leaderboard, update_part_blacklist_rule, user_query_shorturl, get_external_links, update_part_blacklist_comment
 from Query_Whatsapp import user_add_whatsapp_id, user_query_whatsapp_id
@@ -53,9 +54,10 @@ FB_list_len = 0
 IG_list_len = 0
 line_invites_list_len = 0
 Twitter_list_len = 0
+Tiktok_len = 0
 
 def Random_get_List(UserID):
-    global FB_list_len, IG_list_len, line_invites_list_len
+    global FB_list_len, IG_list_len, line_invites_list_len, Twitter_list_len, Tiktok_len
     if not FB_list_len:
         FB_list_len = get_fb_list_len()
         logger.info(f"FB_list_len = {FB_list_len}")
@@ -68,13 +70,17 @@ def Random_get_List(UserID):
     if not Twitter_list_len:
         Twitter_list_len = get_Twitter_list_len()
         logger.info(f"Twitter_list_len = {Twitter_list_len}")
+    if not Tiktok_len:
+        Tiktok_len = get_Tiktok_list_len()
+        logger.info(f"Tiktok_len = {Tiktok_len}")
 
-    items = ["FB", "IG", "LINE", "TWITTER"]
+    items = ["FB", "IG", "LINE", "TWITTER", "TIKTOK"]
     weights = []
     weights.append(FB_list_len)
     weights.append(IG_list_len)
     weights.append(line_invites_list_len)
     weights.append(Twitter_list_len)
+    weights.append(Tiktok_len)
 
     selected_item = random.choices(items, weights=weights)[0]
     logger.info(f"selected_item = {selected_item}")
@@ -86,6 +92,8 @@ def Random_get_List(UserID):
         return get_random_line_invite_blacklist(UserID)
     elif selected_item == "TWITTER":
         return get_random_Twitter_blacklist(UserID)
+    elif selected_item == "TIKTOK":
+        return get_random_Tiktok_blacklist(UserID)
     else:
         return None, None
 
@@ -98,6 +106,8 @@ def push_random_blacklist(UserID, success, disappear):
     if result := push_random_line_invite_blacklist(UserID, success, disappear):
         return result
     if result := push_random_Twitter_blacklist(UserID, success, disappear):
+        return result
+    if result := push_random_Tiktok_blacklist(UserID, success, disappear):
         return result
     return result
 
@@ -229,6 +239,8 @@ def handle_message_text_admin(user_id, orgin_text):
             # 加入新whatsapp id
             user_add_whatsapp_id(whatsapp_id)
             rmessage = f"WhatsApp群組黑名單成功加入「{whatsapp_id}」"
+    elif match := re.search(Tools.KEYWORD_TIKTOK[1], orgin_text):
+        rmessage = Tiktok_write_file(orgin_text)
     elif match := re.search(Tools.KEYWORD_URL[0], lower_text):
 
         # 直接使用IP連線
@@ -731,6 +743,38 @@ def handle_message_text(event):
                         f"\n"
                         f"{suffix_for_call}")
 
+        message_reply(event, rmessage)
+        return
+
+    # 查詢Tiktok網址
+    if re.match(Tools.KEYWORD_TIKTOK[0], lower_text):
+        message, status = Tiktok_read_file(orgin_text)
+        if prefix_msg:
+            prefix_msg = f"{prefix_msg}「 {orgin_text} 」\n"
+        else:
+            prefix_msg = f"所輸入的"
+
+        if status == -1:
+            rmessage = (f"{prefix_msg}\n"
+                        f"Tiktok網址有誤、網址失效或不支援\n"
+                        f"感恩")
+        elif status == 1:
+            rmessage = (f"{prefix_msg}{message}\n\n"
+                        f"「是」已知詐騙/可疑的Tiktok\n"
+                        f"請勿輕易信任此Tiktok的\n"
+                        f"文字、圖像、語音和連結\n"
+                        f"感恩")
+        else:
+            rmessage = (f"{prefix_msg}{message}\n\n"
+                        f"「不是」已知詐騙/可疑的Tiktok\n"
+                        f"但並不代表沒問題\n"
+                        f"\n"
+                        f"若該Tiktok帳號的影片\n"
+                        f"1. 能帶你一起賺錢\n"
+                        f"2. 炫富式貼文\n"
+                        f"有極大的機率是有問題的\n"
+                        f"\n"
+                        f"{suffix_for_call}")
         message_reply(event, rmessage)
         return
 
