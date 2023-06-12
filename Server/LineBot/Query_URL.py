@@ -656,6 +656,12 @@ def user_query_shorturl(user_text):
         rmessage, result, keep_go_status = user_query_shorturl_normal(user_text)
         return rmessage, result, keep_go_status
 
+    # 能夠判斷到縮網址的子網域 Ex. ricbtw.page.link
+    domain_name = f"{domain}.{suffix}"
+    if domain_name in Tools.SHORT_URL_LIST:
+        rmessage, result, keep_go_status = user_query_shorturl_normal(user_text)
+        return rmessage, result, keep_go_status
+
     return rmessage, result, True
 
 # 全域列表儲存網址和 whois 資料
