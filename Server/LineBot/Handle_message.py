@@ -39,6 +39,7 @@ from Query_Facebook import FB_read_file, FB_write_file, get_fb_list_len, get_ran
 from Query_Instagram import IG_read_file, IG_write_file, get_ig_list_len, get_random_ig_blacklist, push_random_ig_blacklist
 from Query_Line_ID import user_query_lineid, user_add_lineid
 from Query_Line_Invite import lineinvite_write_file, lineinvite_read_file, get_line_invites_list_len, get_random_line_invite_blacklist, push_random_line_invite_blacklist
+from Query_Mail import user_query_mail, user_add_mail
 from Query_Telegram import user_query_telegram_id, user_add_telegram_id
 from Query_Twitter import Twitter_read_file, Twitter_write_file, get_Twitter_list_len, get_random_Twitter_blacklist, push_random_Twitter_blacklist
 from Query_URL import user_query_website, check_blacklisted_site, get_web_leaderboard, update_part_blacklist_rule, user_query_shorturl, get_external_links, update_part_blacklist_comment
@@ -202,6 +203,13 @@ def handle_message_text_admin(user_id, orgin_text):
         rmessage = Twitter_write_file(url)
     elif match := re.search(Tools.KEYWORD_TWITTER[3], lower_text): # 網址
         rmessage = Twitter_write_file(orgin_text)
+    elif match := re.match(Tools.KEYWORD_MAIL[1], lower_text):
+        mail = match.group(1)
+        if user_query_mail(mail):
+            rmessage = f"Email黑名單已存在「 {mail} 」"
+        else:
+            user_add_mail(mail)
+            rmessage = f"Email黑名單成功加入「 {mail} 」"
     elif match := re.search(Tools.KEYWORD_URL[0], lower_text):
 
         # 直接使用IP連線
@@ -443,6 +451,24 @@ def handle_message_text(event):
                         f"有極大的機率是有問題的\n"
                         f"\n"
                         f"{suffix_for_call}")
+        message_reply(event, rmessage)
+        return
+
+    # 查詢 Email
+    if re.match(Tools.KEYWORD_MAIL[0], lower_text):
+        if user_query_mail(lower_text):
+            rmessage = (f"所輸入的\n「{lower_text}」\n"
+                        f"「是」詐騙/可疑E-mail\n"
+                        f"請勿輕易信任此E-mail的\n"
+                        f"文字、圖像、語音和連結\n"
+                        f"感恩")
+        else:
+            rmessage = (f"所輸入的\n「{lower_text}」\n"
+                        f"目前不在詐騙黑名單中\n"
+                        f"但並不代表沒問題\n"
+                        f"\n"
+                        f"{suffix_for_call}")
+
         message_reply(event, rmessage)
         return
 

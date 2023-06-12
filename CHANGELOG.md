@@ -1,6 +1,7 @@
 # 歷史更新 History Update
 
 * 20230612 Update
+  * 加入 Email黑名單
   * 加入 IPv4判斷
   * 加入 Twitter黑名單
   * 修復 參數宣告不全

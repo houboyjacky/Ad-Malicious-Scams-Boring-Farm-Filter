@@ -30,7 +30,7 @@ import time
 import Tools
 # pip3 install schedule tldextract flask line-bot-sdk python-whois beautifulsoup4 pytesseract pycountry python-dateutil geocoder geocoder[geonames] ip2geotools
 # sudo apt install tesseract-ocr tesseract-ocr-eng tesseract-ocr-chi-tra tesseract-ocr-chi-tra-vert tesseract-ocr-chi-sim tesseract-ocr-chi-sim-vert
-from flask import Flask, Response, request, abort, send_file, render_template, send_from_directory
+from flask import Flask, Response, request, abort, send_file, send_from_directory
 from Handle_message import handle_message_file, handle_message_image, handle_message_text
 from linebot import WebhookHandler
 from linebot.exceptions import InvalidSignatureError

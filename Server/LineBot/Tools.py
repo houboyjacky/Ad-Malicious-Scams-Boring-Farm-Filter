@@ -43,6 +43,7 @@ IG_BLACKLIST = setting['IG_BLACKLIST']                  # IG_BLACKLIST => Blackl
 KEYWORD_FB = setting['KEYWORD_FB']                      # KEYWORD_FB => Keyword for FB
 KEYWORD_IG = setting['KEYWORD_IG']                      # KEYWORD_IG => Keyword for IG
 KEYWORD_LINE = setting['KEYWORD_LINE']                  # KEYWORD_LINE => Keyword for LINE
+KEYWORD_MAIL = setting['KEYWORD_MAIL']                  # KEYWORD_MAIL => Keyword for MAIL
 KEYWORD_TELEGRAM = setting['KEYWORD_TELEGRAM']          # KEYWORD_TELEGRAM => Keyword for TELEGRAM
 KEYWORD_TWITTER = setting['KEYWORD_TWITTER']            # KEYWORD_TWITTER => KEYWORD for TWITTER
 KEYWORD_URL = setting['KEYWORD_URL']                    # KEYWORD_URL => Keyword for url
@@ -50,6 +51,7 @@ LINE_INVITE = setting['LINE_INVITE']                    # LINE_INVITE => Black L
 LINEID_LOCAL = setting['LINEID_LOCAL']                  # LINEID_LOCAL => Line ID from Local
 LINEID_WEB = setting['LINEID_WEB']                      # LINEID_WEB => Line ID from Web
 LOGFILE = setting['LOGFILE']                            # LOGFILE => Log File Path
+MAIL_BLACKLIST = setting['MAIL_BLACKLIST']              # MAIL_BLACKLIST => Mail Black List
 MobileConfigDIR = setting['CONFIG_ORIGIN']              # Modify mobileconfig
 NETIZEN = setting['NETIZEN']                            # NETIZEN => Netizen Report
 NEW_SCAM_WEBSITE_FOR_ADG = setting['BLACKLISTFORADG']   # BLACKLISTFORADG => Blacklist for Adguard Home Download
@@ -75,7 +77,7 @@ def reloadSetting():
     global NEW_SCAM_WEBSITE_FOR_ADG, NOTICE_BOARD, NOTICE_BOARD_LIST, PEM_DIR, PRIVKEY
     global SCAM_WEBSITE_LIST, SHORT_URL_LIST, SPECIAL_SUBWEBSITE, TARGET_DIR, TELEGRAM_LOCAL
     global USER_POINT, WEB_LEADERBOARD_FILE, WHOIS_QUERY_LIST, ALLOW_DOMAIN_LIST
-    global TWITTER_BLACKLIST, KEYWORD_TWITTER
+    global TWITTER_BLACKLIST, KEYWORD_TWITTER, KEYWORD_MAIL, MAIL_BLACKLIST
     global setting
 
     setting = ''
@@ -96,6 +98,7 @@ def reloadSetting():
     KEYWORD_FB = setting['KEYWORD_FB']
     KEYWORD_IG = setting['KEYWORD_IG']
     KEYWORD_LINE = setting['KEYWORD_LINE']
+    KEYWORD_MAIL = setting['KEYWORD_MAIL']
     KEYWORD_TELEGRAM = setting['KEYWORD_TELEGRAM']
     KEYWORD_TWITTER = setting['KEYWORD_TWITTER']
     KEYWORD_URL = setting['KEYWORD_URL']
@@ -103,6 +106,7 @@ def reloadSetting():
     LINEID_LOCAL = setting['LINEID_LOCAL']
     LINEID_WEB = setting['LINEID_WEB']
     LOGFILE = setting['LOGFILE']
+    MAIL_BLACKLIST = setting['MAIL_BLACKLIST']
     MobileConfigDIR = setting['CONFIG_ORIGIN']
     NETIZEN = setting['NETIZEN']
     NEW_SCAM_WEBSITE_FOR_ADG = setting['BLACKLISTFORADG']
