@@ -131,7 +131,7 @@ def handle_message_text_admin(user_id, orgin_text):
         if not content:
             rmessage = f"目前沒有需要檢閱的資料"
         else:
-            if isSystem :
+            if isSystem:
                 rmessage = f"系統轉送使用者查詢：\n\n{content}\n\n參閱與處置後\n請輸入「完成」或「失效」"
             else:
                 rmessage = f"使用者詐騙回報內容：\n\n{content}\n\n參閱與處置後\n請輸入「完成」或「失效」"
@@ -168,7 +168,7 @@ def handle_message_text_admin(user_id, orgin_text):
         url = f"https://www.instagram.com/{ig_account}/"
         logger.info(f"url = {url}")
         rmessage = IG_write_file(url)
-    elif match := re.search(Tools.KEYWORD_TELEGRAM[1], lower_text):
+    elif match := re.search(Tools.KEYWORD_TELEGRAM[1], orgin_text):
         # 取得文字
         telegram_id = match.group(1)
         if user_query_telegram_id(telegram_id):
@@ -177,7 +177,7 @@ def handle_message_text_admin(user_id, orgin_text):
             # 加入新telegram id
             user_add_telegram_id(telegram_id)
             rmessage = f"Telegram黑名單成功加入「{telegram_id}」"
-    elif match := re.search(Tools.KEYWORD_TELEGRAM[3], lower_text):
+    elif match := re.search(Tools.KEYWORD_TELEGRAM[3], orgin_text):
         # 取得文字
         telegram_id = match.group(1)
         if user_query_telegram_id(telegram_id):
@@ -272,9 +272,9 @@ def handle_message_text_game(user_id, user_text) -> str:
     if user_text == "完成":
         found = push_random_blacklist(user_id, True, False)
         found2 = push_netizen_file(user_id, True, False)
-        if found and not found2 :
+        if found and not found2:
             rmessage = f"感謝你的回報\n輸入「遊戲」\n進行下一波行動\n輸入「積分」\n可以查詢你的積分排名"
-        elif not found and found2 :
+        elif not found and found2:
             rmessage = f"感謝你的回報\n輸入「檢閱」\n進行下一波行動\n輸入「積分」\n可以查詢你的積分排名"
         elif found and found2:
             rmessage = f"感謝你的回報\n輸入「遊戲/檢閱」\n進行下一波行動\n輸入「積分」\n可以查詢你的積分排名"
@@ -285,9 +285,9 @@ def handle_message_text_game(user_id, user_text) -> str:
     if user_text == "失效":
         found = push_random_blacklist(user_id, False, True)
         found2 = push_netizen_file(user_id, False, True)
-        if found and not found2 :
+        if found and not found2:
             rmessage = f"感謝你的回報\n輸入「遊戲」\n進行下一波行動\n輸入「積分」\n可以查詢你的積分排名"
-        elif not found and found2 :
+        elif not found and found2:
             rmessage = f"感謝你的回報\n輸入「檢閱」\n進行下一波行動\n輸入「積分」\n可以查詢你的積分排名"
         elif found and found2:
             rmessage = f"感謝你的回報\n輸入「遊戲/檢閱」\n進行下一波行動\n輸入「積分」\n可以查詢你的積分排名"
@@ -326,7 +326,7 @@ def handle_message_text(event):
 
     # 管理員操作
     if Tools.IsAdmin(user_id):
-        if rmessage:=handle_message_text_admin(user_id, orgin_text):
+        if rmessage := handle_message_text_admin(user_id, orgin_text):
             message_reply_basic(event, rmessage)
             if orgin_text == "重讀":
                 reload_user_record()
@@ -376,7 +376,7 @@ def handle_message_text(event):
         return
 
     # 查詢Telegram ID
-    if match :=re.search(Tools.KEYWORD_TELEGRAM[0], orgin_text):
+    if match := re.search(Tools.KEYWORD_TELEGRAM[0], orgin_text):
         telegram_id = match.group(1)
         if user_query_telegram_id(telegram_id):
             rmessage = (f"所輸入的「{telegram_id}」\n"
@@ -409,7 +409,7 @@ def handle_message_text(event):
         lower_text = expendurl
     # 不是縮網址，繼續走
     elif go_state and not expendurl:
-       pass
+        pass
     # 失效或有誤，回應錯誤
     else:
         message_reply(event, prefix_msg)
@@ -606,7 +606,8 @@ def handle_message_image(event):
         # 取得開始時間
         start_time = time.time()
         # 辨識文字
-        text_msg = pytesseract.image_to_string(image, lang='eng+chi_tra+chi_sim', config='--psm 12')
+        text_msg = pytesseract.image_to_string(
+            image, lang='eng+chi_tra+chi_sim', config='--psm 12')
 
         # 判斷是否有網址
         url_pattern = re.compile(r"(http|https)://[^\s]+")
@@ -634,7 +635,7 @@ def handle_message_image(event):
 def handle_message_file(event):
 
     # 取得發訊者的 ID
-    logger.info('UserID = '+ event.source.user_id)
+    logger.info('UserID = ' + event.source.user_id)
 
     # 設定儲存檔案的目錄
     FILE_DIR = ""
@@ -654,14 +655,14 @@ def handle_message_file(event):
     elif file_type == "file":
         FILE_DIR = "file/"
         file_name = event.message.file_name.split(".")[0]
-        file_extension = "." + file_name.split(".")[-1] # 取得最後一個'.'後的副檔名
+        file_extension = "." + file_name.split(".")[-1]  # 取得最後一個'.'後的副檔名
     else:
         return
 
     if not os.path.isdir(FILE_DIR):
         os.mkdir(FILE_DIR)
 
-    logger.info('UserType = '+ file_type)
+    logger.info('UserType = ' + file_type)
 
     # 儲存檔案
     user_id = event.source.user_id
