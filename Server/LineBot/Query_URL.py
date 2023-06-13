@@ -104,7 +104,13 @@ def get_external_links(url):
             suffix = extracted.suffix.lower()
             if not domain or not suffix:
                 continue
-            if f"{domain}.{suffix}" == "line.me" or f"{domain}.{suffix}" == "lin.ee":
+            if f"{domain}.{suffix}" == "line.me":
+                external_links.add(href)
+            elif f"{domain}.{suffix}" == "lin.ee":
+                external_links.add(href)
+            elif f"{domain}.{suffix}" == "wa.me":
+                external_links.add(href)
+            elif f"{domain}.{suffix}" == "t.me":
                 external_links.add(href)
             elif subdomain:
                 external_links.add(f"{subdomain}.{domain}.{suffix}")
