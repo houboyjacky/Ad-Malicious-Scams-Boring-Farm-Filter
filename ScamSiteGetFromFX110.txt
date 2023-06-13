@@ -1,4 +1,4 @@
-! 2023/05/19 Update
+! 2023/06/13 Update
 ! FX110 https://www.fx110.com.tw/
 @@||metamask.io^
 #||wixsite.com^
@@ -213,6 +213,7 @@
 ||admis.asia^
 ||adotrading.com^
 ||adrianfx.com^
+||adrswap.com^
 ||adsmfc.com^
 ||adstraders.com^
 ||advancestox.com^
@@ -401,6 +402,7 @@
 ||amefx.com^
 ||amegafx.com^
 ||amelinvestment.com^
+||americancourt.com^
 ||americanfxbasetrade.com^
 ||amgcapital.co.uk^
 ||amihxgj.com^
@@ -417,6 +419,7 @@
 ||amtopfx.com^
 ||amtoppd.com^
 ||amtopwd.com^
+||amtradex.com^
 ||amttraders.com^
 ||amyfx.com^
 ||analyc.com^
@@ -495,6 +498,7 @@
 ||argontrades.com^
 ||arielsystem.pro^
 ||arjsecurities.com^
+||arktecmarkets.com^
 ||arlefx.cn^
 ||armfx.top^
 ||arnofx.net^
@@ -576,6 +580,7 @@
 ||astromarket.net^
 ||asxmarkets.com^
 ||atbcrypto.com^
+||atexcoin.ltd^
 ||atfxglobalmarkets.co^
 ||atfxglobalmarkets.com^
 ||atfxtrade.com^
@@ -816,6 +821,7 @@
 ||bflfx.net^
 ||bfmarket.com^
 ||bfmfx.com^
+||bforexpro.com^
 ||bfsforexonline.com^
 ||bfslfx.com^
 ||bftzfx.com^
@@ -838,6 +844,7 @@
 ||bigboss-financial.com^
 ||biggloballtd.com^
 ||biglimited.net^
+||bigmofx.com^
 ||bigstonemax.com^
 ||bigtradeltd.com^
 ||biguncle.online^
@@ -1133,6 +1140,7 @@
 ||capital-assets.world^
 ||capital-forex.ltd^
 ||capital-forexlive.com^
+||capital-hub.io^
 ||capital-index.com^
 ||capital-markets.trade^
 ||capital-swiss.com^
@@ -1236,6 +1244,7 @@
 ||cedarfx.com^
 ||cedarsignals.live^
 ||cedcapitalltd.com^
+||celercoin.com^
 ||cemx-international.com^
 ||centerpointsecurities.com^
 ||centfx.com^
@@ -1405,6 +1414,7 @@
 ||cocdfx.com^
 ||cofinancial.net^
 ||coin-crypto.top^
+||coin-royal.com^
 ||coinbaseglobal.net^
 ||coinboost247.com^
 ||coincapitalsltd.com^
@@ -2251,6 +2261,7 @@
 ||fcmarketpro.net^
 ||fcmarketsltd.com^
 ||fcnwtmarket.com^
+||fcoecxe.vip^
 ||fcrown.xyz^
 ||fcs-markets.com^
 ||fctnzl.net^
@@ -2377,6 +2388,7 @@
 ||finseas.com^
 ||finsroyal.com^
 ||fintechfx.com^
+||fintechmarket.consulting^
 ||fintechonlinefx.com^
 ||fintechplatform.pro^
 ||fintegral.fund^
@@ -2425,6 +2437,7 @@
 ||flokifx.net^
 ||florisiprime.com^
 ||flossfx.com^
+||flowbank.com^
 ||flsoptions.com^
 ||flyoxtrade.com^
 ||fm-fund.com^
@@ -2581,6 +2594,7 @@
 ||frubitvip.com^
 ||frxe.com^
 ||frxmarkets.com^
+||fscoptions.com^
 ||fsdsinvest.com^
 ||fslfx.com^
 ||fsmsmart.com^
@@ -2616,6 +2630,7 @@
 ||fundiza.org^
 ||fundiza.site^
 ||fundrise-globalinvest.com^
+||fundstradefx.com^
 ||fundzotrading.com^
 ||fuqi-hui.com^
 ||furdfx.com^
@@ -2770,6 +2785,7 @@
 ||fxgfrm.com^
 ||fxglk.com^
 ||fxglobalcfd.com^
+||fxglobaltd.com^
 ||fxglobaltrade.live^
 ||fxglobaltraders.com^
 ||fxglobalxm.com^
@@ -2843,6 +2859,7 @@
 ||fxoum.com^
 ||fxp360.com^
 ||fxpdtrade.com^
+||fxperfectrade.com^
 ||fxperking.com^
 ||fxplanb.com^
 ||fxplus.pro^
@@ -3283,6 +3300,7 @@
 ||grovefxchina.com^
 ||growbrokers.com^
 ||growdeposits.com^
+||growfundsfx.com^
 ||growfxtrade.com^
 ||growpromarkets.com^
 ||growthsec.com^
@@ -3725,6 +3743,7 @@
 ||infinitycapitalg.com^
 ||infinityfx.live^
 ||infintix.com^
+||inflowmax.com^
 ||inforexeu.com^
 ||infratrader.com^
 ||inftrade.com^
@@ -3992,6 +4011,7 @@
 ||jupiterholdingsltd.com^
 ||jussimple.com^
 ||just2trade.live^
+||just2trading.pro^
 ||justforex.asia^
 ||justforex.com^
 ||juxinfxchina.com^
@@ -4017,6 +4037,7 @@
 ||kaisfx.com^
 ||kaistp.com^
 ||kalecryptoinvestment.com^
+||kalefxglobal.com^
 ||kalofx.com^
 ||kam6fx.com^
 ||kanacapitals.com^
@@ -4198,6 +4219,7 @@
 ||lenniumgate.com^
 ||lennox-fxtrades.com^
 ||lenotecfx.com^
+||lenzcapital.pro^
 ||leommarket.com^
 ||lepusproprietarytrading.com.au^
 ||letstrade.com^
@@ -4348,6 +4370,7 @@
 ||maintrade.co^
 ||majestrade.com^
 ||majorprimefx.com^
+||makforex.com^
 ||makocm.com^
 ||malboxcorp.com^
 ||mallonfx.com^
@@ -4372,6 +4395,7 @@
 ||marginfxpro.com^
 ||marineforex.com^
 ||marke.^
+||markersfin.com^
 ||market-4fx.com^
 ||market-gold.com^
 ||market-in.trade^
@@ -4708,6 +4732,7 @@
 ||mvccn.com^
 ||mwngglobal.com^
 ||mwngmarket.com^
+||mx-international.com^
 ||mxbitcoininvestment.com^
 ||mxfxpro.com^
 ||my24-coin.com^
@@ -5080,6 +5105,7 @@
 ||pegasus-invest.com^
 ||pemaxx.com^
 ||penzolead.com^
+||perfect-markets.com^
 ||perfectchoicetrade.com^
 ||perfectminingtrading.com^
 ||perfektfx.com^
@@ -5132,6 +5158,7 @@
 ||pipsforex.com^
 ||pipsignal.org^
 ||pipsinfullfxltd.com^
+||pixpalpro.com^
 ||placeatrade.com^
 ||platinafx.com^
 ||platinex.co^
@@ -5161,6 +5188,7 @@
 ||pofx.net^
 ||poias.co^
 ||pointfxltd.com^
+||polar-capital.net^
 ||polarbtc.com^
 ||pop-smart.com^
 ||populusfx.com^
@@ -5510,6 +5538,7 @@
 ||robboforex.com^
 ||robertsonrx.com^
 ||robinfinan.net^
+||robo-investor.co^
 ||robofxmarkets.com^
 ||roboinvest.at^
 ||robospreadfrx.com^
@@ -5708,6 +5737,7 @@
 ||shardmarkets.com^
 ||shareeqfx.com^
 ||sharesforextrade.com^
+||sharkfx.io^
 ||sharkoption.com^
 ||shengfxchina.com^
 ||shenghuigroupax.com^
@@ -5801,6 +5831,7 @@
 ||smarttopgm.com^
 ||smarttrade-cfd.com^
 ||smarttradecfd.com^
+||smarttrader.com^
 ||smarttradesfx.online^
 ||smgbroker.com^
 ||smifx-uk.com^
@@ -5952,6 +5983,7 @@
 ||stockfx.co^
 ||stockhome.io^
 ||stockhutfxinc.com^
+||stockinvestmentfx.com^
 ||stocklux.co^
 ||stockmarketdynamics.co.za^
 ||stockmarketinvestpro.com^
@@ -5997,6 +6029,7 @@
 ||suntonfx.id^
 ||suntonfx.xyz^
 ||supcenters.com^
+||superb-trading.cc^
 ||superb-trading.cc^
 ||superbinary.com^
 ||supercryptooptions.com^
@@ -6122,6 +6155,7 @@
 ||tenxtrade.com^
 ||teratrade.co^
 ||tercmarkets.com^
+||ternarygroupfx.com^
 ||tescoinvest.com^
 ||tescoplctrade.com^
 ||tesla-capital.com^
@@ -6259,6 +6293,7 @@
 ||toptradegroup.com^
 ||toptrades.co^
 ||topwealthgroup.com^
+||torexwealth.co.za^
 ||tosalfx.com^
 ||toxmen.com^
 ||toyqj.com^
@@ -6359,6 +6394,7 @@
 ||tradeworks4u.com^
 ||tradexn.com^
 ||tradexten.com^
+||tradextraders.com^
 ||tradientprofits.com^
 ||trading-coast.com^
 ||trading-forex.asia^
@@ -6499,6 +6535,7 @@
 ||ueeglobal.com^
 ||uestates.com^
 ||uetrades.com^
+||uezmarkets.com^
 ||ufltd.com^
 ||ufx.biz^
 ||ugforex.com^
@@ -6678,6 +6715,7 @@
 ||vennfx.com^
 ||venomtrading.com^
 ||venteragroup.com^
+||ventrade.org^
 ||venusfx.co^
 ||veracitymarkets.com^
 ||verasouls.uk^
@@ -6710,6 +6748,7 @@
 ||victoriadk.com^
 ||victoriatradingltd.com^
 ||victory-fx.com^
+||victory-fx.com^
 ||victoryfx.uk^
 ||vidafonefx.com^
 ||vidamarkets.com^
@@ -6722,6 +6761,7 @@
 ||vinvestpro.com^
 ||vip-treasury.com^
 ||vipbusinesses.com^
+||vipcoin.ch^
 ||vipforexpro.com^
 ||vipotor.com^
 ||viptrade.eu^
@@ -6844,6 +6884,7 @@
 ||wealthaccumulate.com^
 ||wealthavendmcc.com^
 ||wealthcryptomine.com^
+||wealthflowcrypto.online^
 ||wealthmax.fm^
 ||wealthsailingfx.com^
 ||wealthwayinc.com^
@@ -6954,6 +6995,7 @@
 ||world-trade-center.io^
 ||worldaw.com^
 ||worldcapitalgroup.net^
+||worldclassfin.com^
 ||worldcryptofx.com^
 ||worldex1.pro^
 ||worldexpertcryptozone.com^
@@ -7038,6 +7080,8 @@
 ||xinyamall.com^
 ||xinyeclub.com^
 ||xinywof.com^
+||xipcapitalsgroup.com^
+||xipcapitalsgroups.com^
 ||xl-re.com^
 ||xlntrade.com^
 ||xltrade.net^
