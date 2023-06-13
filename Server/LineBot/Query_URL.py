@@ -229,6 +229,12 @@ def resolve_redirects(url):
             logger.info(f"resolve_redirects_other = {final_url}")
             return final_url
 
+    if url.lower().startswith("https://rb.gy"):
+        final_url = resolve_redirects_other(url)
+        if final_url != url:
+            logger.info(f"resolve_redirects_other = {final_url}")
+            return final_url
+
     if url.lower().startswith("https://iiil.io"):
         final_url = resolve_redirects_iiilio(url)
         if final_url != url:

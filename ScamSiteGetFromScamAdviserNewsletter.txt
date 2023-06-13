@@ -1,6 +1,7 @@
 ! scamadviser電子報
 !||sendgrid.net^ 縮網址遭到阻擋 to.imagenomic.com
 #||amazonaws.com^
+#||rb.gy^
 #||windows.net^
 ||45.88.169.3^
 ||5onsup.online^
@@ -189,7 +190,6 @@
 ||psaxalg.in^
 ||pxlme.me^
 ||qhsvrye.in^
-||rb.gy^
 ||Recovery-System.net^
 ||refforalupop.com^
 ||rusita.uk^
