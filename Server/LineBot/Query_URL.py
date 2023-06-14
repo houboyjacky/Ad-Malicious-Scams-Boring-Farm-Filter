@@ -415,19 +415,20 @@ def get_web_leaderboard():
         parts = line.strip().split(":")
         if len(parts) == 3:
             url = parts[1]
+            tld = tldextract.extract(url).suffix
             count = int(parts[2])
-            url_counts[url] += count
+            url_counts[tld] += count
 
     # 根據查詢次數由大到小排序
     sorted_urls = sorted(url_counts.items(), key=lambda x: x[1], reverse=True)
 
     # 檢查總項目數是否小於等於十個
     if len(sorted_urls) <= 10:
-        top_10 = sorted_urls
+        top_list = sorted_urls
     else:
         # 超過十個項目，找到最早的日期
         today = datetime.today().date()
-        start_date = today - timedelta(days=7)
+        start_date = today - timedelta(days=15)
         while len(sorted_urls) > 10 and start_date >= datetime.today().date() - timedelta(days=30):
             url_counts = defaultdict(int)
             for line in lines:
@@ -436,22 +437,20 @@ def get_web_leaderboard():
                     date = datetime.strptime(parts[0], "%Y%m%d").date()
                     if date >= start_date:
                         url = parts[1]
+                        tld = tldextract.extract(url).suffix
                         count = int(parts[2])
-                        url_counts[url] += count
+                        url_counts[tld] += count
 
             sorted_urls = sorted(url_counts.items(), key=lambda x: x[1], reverse=True)
             start_date -= timedelta(days=1)
 
-        top_10 = sorted_urls[:10]
+        top_list = sorted_urls[:30]
 
+    days = (today - start_date).days
     # 格式化輸出結果
-    output = "近期網站查詢次數排行榜\n"
-    for i, (url, count) in enumerate(top_10, start=1):
-        if check_blacklisted_site(url):
-            output += f"{i:02d}. {url}=>可疑或詐騙網站\n"
-        else:
-            output += f"{i:02d}. {url}=>暫時安全的網站\n"
-
+    output = f"近期{days}天的TLD網域查詢次數排行榜\n"
+    for i, (url, count) in enumerate(top_list, start=1):
+        output += f"{i:02d}. \t{url}\t\t=>{count}次\n"
     return output
 
 def calculate_hash(file_path):

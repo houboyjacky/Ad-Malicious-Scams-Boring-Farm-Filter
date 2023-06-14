@@ -2,6 +2,7 @@
 
 * 20230614 Update
   * 加入 辨識伺服器所在位置
+  * 調整 排行榜改為TLD統計
   * 調整 cloudflare IP位置判斷包含ipv6
   * 調整 line邀請網址用詞
 
