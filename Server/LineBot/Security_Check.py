@@ -21,12 +21,12 @@ THE SOFTWARE.
 '''
 
 import os
-import hashlib
 import requests
 from Logger import logger
 
-CF_IPS_URL = "https://www.cloudflare.com/ips-v4"
-CF_IPS_LOCAL = "config/Cloudflare_ipv4.txt"
+CF_IPS_URL_IPV4 = "https://www.cloudflare.com/ips-v4"
+CF_IPS_URL_IPV6 = "https://www.cloudflare.com/ips-v6"
+CF_IPS_LOCAL = "config/Cloudflare_IPs.txt"
 
 def get_cf_ips():
     if not os.path.exists(CF_IPS_LOCAL):
@@ -38,22 +38,26 @@ def get_cf_ips():
     return cf_ips
 
 def download_cf_ips():
-    response = requests.get(CF_IPS_URL)
+    response = requests.get(CF_IPS_URL_IPV4)
     if response.status_code == 200:
         cf_ips = response.text.strip()
-        hash_cf_ips = hashlib.md5(cf_ips.encode("utf-8")).hexdigest()
-        if not os.path.exists(CF_IPS_LOCAL) or hash_cf_ips != get_local_ips_hash():
-            with open(CF_IPS_LOCAL, "w") as f:
-                f.write(cf_ips)
-
-        logger.info('Download cf_ips Finish')
+        with open(CF_IPS_LOCAL, "w") as f:
+            f.write(cf_ips)
+        logger.info('Download Cloudflare_ipv4 Finish')
     else:
-        raise Exception("Unable to download Cloudflare IPs.")
+        raise Exception("Unable to download Cloudflare IPv4s.")
 
-def get_local_ips_hash():
-    if os.path.exists(CF_IPS_LOCAL):
-        with open(CF_IPS_LOCAL, "rb") as f:
-            content = f.read()
-            return hashlib.md5(content).hexdigest()
+    with open(CF_IPS_LOCAL, "a") as f:
+        f.write("\n")
+
+    response = requests.get(CF_IPS_URL_IPV6)
+    if response.status_code == 200:
+        cf_ips = response.text.strip()
+        with open(CF_IPS_LOCAL, "a") as f:
+            f.write(cf_ips)
+
+        logger.info('Download Cloudflare_ipv6 Finish')
     else:
-        return None
+        raise Exception("Unable to download Cloudflare IPv6s.")
+
+    return

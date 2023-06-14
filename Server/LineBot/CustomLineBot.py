@@ -54,7 +54,7 @@ handler = WebhookHandler(Tools.CHANNEL_SECRET)
 def limit_remote_addr():
     cf_ips = get_cf_ips()
     for cf_ip in cf_ips:
-        if ipaddress.IPv4Address(request.remote_addr) in ipaddress.ip_network(cf_ip):
+        if ipaddress.ip_address(request.remote_addr) in ipaddress.ip_network(cf_ip):
             return None
     msg = WhereAreYou(request.remote_addr)
     # 記錄403錯誤
