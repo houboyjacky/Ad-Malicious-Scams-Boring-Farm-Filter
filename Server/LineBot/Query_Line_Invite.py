@@ -68,7 +68,7 @@ def analyze_line_invite_url(user_text:str) -> Optional[dict]:
 
         match = re.match(Tools.KEYWORD_LINE[3], redirected_url)
     else:
-        if lower_text.startswith("https://lin.ee"):
+        if lower_text.startswith("https://lin.ee") or lower_text.startswith("https://page.line.me"):
             orgin_text = resolve_redirects(orgin_text)
         match = re.match(Tools.KEYWORD_LINE[3], orgin_text)
         if not match:
@@ -132,7 +132,7 @@ def lineinvite_read_file(user_text:str):
     status = 0
     rmessage = ""
     if analyze := analyze_line_invite_url(user_text):
-        rmessage = f"LINE邀請網址ID是\n「 {analyze['識別碼'] } 」"
+        rmessage = f"LINE邀請網址識別碼是\n「 {analyze['識別碼'] } 」"
         if user_query_lineid(analyze["識別碼"]):
             status = 1
         else:
