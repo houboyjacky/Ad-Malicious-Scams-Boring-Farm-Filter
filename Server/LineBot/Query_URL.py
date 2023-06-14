@@ -27,20 +27,97 @@ import json
 import os
 import re
 import requests
+import socket
 import ssl
 import tldextract
 import Tools
 import whois
-from datetime import datetime, timedelta
+from bs4 import BeautifulSoup
 from collections import defaultdict
+from datetime import datetime, timedelta
+from ip2geotools.databases.noncommercial import DbIpCity
 from Logger import logger
-from urllib.request import urlopen
+from PrintText import suffix_for_call
 from urllib.error import HTTPError, URLError
 from urllib.parse import urlparse, unquote, urljoin
-from bs4 import BeautifulSoup
-from PrintText import suffix_for_call
+from urllib.request import urlopen
+from Security_Check import get_cf_ips
 
 blacklist = []
+
+# ===============================================
+# 原始伺服器
+# ===============================================
+
+def get_country_by_ip(ip):
+    try:
+        response = DbIpCity.get(ip, api_key='free')
+        return response.country
+    except Exception as e:
+        print(f"Error occurred while getting country for IP {ip}: {e}")
+        return None
+
+def get_ips_by_hostname(hostname):
+    try:
+        ip_list = socket.gethostbyname_ex(hostname)[2]
+        return ip_list
+    except Exception as e:
+        print(f"Error occurred while getting IP addresses for hostname {hostname}: {e}")
+        return []
+
+def get_server_ip(url):
+
+    extracted = tldextract.extract(url)
+    subdomain = extracted.subdomain.lower()
+    domain = extracted.domain.lower()
+    suffix = extracted.suffix.lower()
+
+    if subdomain:
+        hostname = f"{subdomain}.{domain}.{suffix}"
+    else:
+        hostname = f"{domain}.{suffix}"
+
+    logger.info(f"hostname = {hostname}")
+
+    output = []
+    ip_list = get_ips_by_hostname(hostname)
+    if not ip_list:
+        return ""
+
+    cf_ips = get_cf_ips()
+    logger.info("====================")
+
+    is_get_first_country = False
+    country_list = []
+    for ip in ip_list:
+        is_cloudflare = False
+        for cf_ip in cf_ips:
+            if ipaddress.ip_address(ip) in ipaddress.ip_network(cf_ip):
+                is_cloudflare = True
+                break
+
+        if is_cloudflare:
+            logger.info(f"{ip} => Cloudflare")
+            continue
+        else:
+            # 減少查詢真實位置次數
+            if not is_get_first_country:
+                country = get_country_by_ip(ip)
+                country_str = Tools.translate_country(country)
+                country_list.append(country_str)
+                logger.info(f"{ip} => {country}")
+                is_get_first_country = True
+            logger.info(f"{ip}")
+    logger.info("====================")
+
+    country_list = sorted(list(set(country_list)))
+    output.append("＝＝＝＝＝＝＝＝＝＝")
+    output.append("伺服器可能位置在")
+    for countrys in country_list:
+        output.append(countrys)
+    output.append("＝＝＝＝＝＝＝＝＝＝")
+
+    return '\n'.join(output)
 
 # ===============================================
 # 進一步搜尋
@@ -686,12 +763,21 @@ def user_query_website(user_text):
     # 直接使用IP連線
     if match := re.search(Tools.KEYWORD_URL[3], user_text):
         ip = match.group(1)
+        country = get_country_by_ip(ip)
+        country_str = Tools.translate_country(country)
+        if country_str == "Unknown" or not country_str:
+            output = f"伺服器位置：{country}\n"
+        else:
+            output = f"伺服器位置：{country_str}\n"
+
         if check_blacklisted_site(ip):
             rmessage = (f"「 {ip} 」\n\n"
                         f"被判定「是」詐騙/可疑網站\n"
                         f"請勿相信此網站\n"
                         f"若認為誤通報，請補充描述\n"
                         f"感恩"
+                        f"\n"
+                        f"{output}"
                         f"\n"
                         f"{suffix_for_call}"
             )
@@ -700,9 +786,13 @@ def user_query_website(user_text):
                         f"目前「尚未」在資料庫中\n"
                         f"敬請小心謹慎\n"
                         f"\n"
+                        f"{output}"
+                        f"\n"
                         f"{suffix_for_call}\n"
             )
         return rmessage
+
+    IP_info_msg = get_server_ip(user_text)
 
     if not whois_list:
         whois_list = Tools.read_json_file(Tools.WHOIS_QUERY_LIST)
@@ -796,12 +886,16 @@ def user_query_website(user_text):
                         f"若認為誤通報，請補充描述\n"
                         f"感恩"
                         f"\n"
+                        f"{IP_info_msg}"
+                        f"\n"
                         f"{suffix_for_call}"
             )
         else:
             rmessage = (f"「 {domain_name} 」\n\n"
                         f"目前「尚未」在資料庫中\n"
                         f"敬請小心謹慎\n"
+                        f"\n"
+                        f"{IP_info_msg}"
                         f"\n"
                         f"網站評分參考：\n"
                         f"「 https://www.scamadviser.com/zh/check-website/{domain_name} 」\n"
@@ -836,13 +930,13 @@ def user_query_website(user_text):
 
     if whois_country:
         country_str = Tools.translate_country(whois_country)
-        if country_str == "Unknown":
+        if country_str == "Unknown" or not country_str:
             rmessage_country = f"註冊國家：{whois_country}\n"
         else:
             rmessage_country = f"註冊國家：{country_str}\n"
     elif whois_registrant_country:
         country_str = Tools.translate_country(whois_registrant_country)
-        if country_str == "Unknown":
+        if country_str == "Unknown" or not country_str:
             rmessage_country = f"註冊國家：{whois_registrant_country}\n"
         else:
             rmessage_country = f"註冊國家：{country_str}\n"
@@ -859,6 +953,8 @@ def user_query_website(user_text):
                     f"請勿相信此網站\n"
                     f"若認為誤通報，請補充描述\n"
                     f"感恩"
+                    f"\n"
+                    f"{IP_info_msg}"
                     f"\n"
                     f"{suffix_for_call}"
         )
@@ -879,6 +975,8 @@ def user_query_website(user_text):
                     f"符合以上幾點越多\n"
                     f"詐騙與可疑程度越高\n"
                     f"符合第4點一定是詐騙\n"
+                    f"\n"
+                    f"{IP_info_msg}"
                     f"\n"
                     f"{suffix_for_call}"
         )
