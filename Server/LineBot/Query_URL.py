@@ -114,6 +114,8 @@ def get_server_ip(url):
     output.append("＝＝＝＝＝＝＝＝＝＝")
     msg = f"伺服器可能位置在："
     country_count = len(country_list)
+    if country_count == 0:
+        return ""
     count = 0
     for countrys in country_list:
         msg += f"{countrys}"
@@ -801,6 +803,13 @@ def user_query_website(user_text):
 
     if not whois_list:
         whois_list = Tools.read_json_file(Tools.WHOIS_QUERY_LIST)
+
+    max_records = 200
+
+    # 檢查列表的長度是否超過最大記錄數
+    if len(whois_list) > max_records:
+        whois_list = whois_list[-max_records:]  # 只保留最新的兩百筆資料
+        Tools.write_json_file(Tools.WHOIS_QUERY_LIST, whois_list)
 
     #解析網址
     extracted = tldextract.extract(user_text)
