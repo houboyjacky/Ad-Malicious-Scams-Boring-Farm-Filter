@@ -112,9 +112,15 @@ def get_server_ip(url):
 
     country_list = sorted(list(set(country_list)))
     output.append("＝＝＝＝＝＝＝＝＝＝")
-    output.append("伺服器可能位置在")
+    msg = f"伺服器可能位置在："
+    country_count = len(country_list)
+    count = 0
     for countrys in country_list:
-        output.append(countrys)
+        msg += f"{countrys}"
+        count += 1
+        if count != country_count:
+            msg += f"、"
+    output.append(f"{msg}")
     output.append("＝＝＝＝＝＝＝＝＝＝")
 
     return '\n'.join(output)
