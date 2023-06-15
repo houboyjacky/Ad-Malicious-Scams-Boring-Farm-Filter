@@ -729,34 +729,48 @@ def user_query_shorturl_meta(user_text):
 def user_query_shorturl(user_text):
 
     rmessage = ""
+    msg = ""
     result = ""
     keep_go_status = False
     meta_redirects_list = ["lm.facebook.com", "l.facebook.com", "l.instagram.com"]
 
-    #解析網址
-    extracted = tldextract.extract(user_text)
-    subdomain = extracted.subdomain.lower()
-    domain = extracted.domain.lower()
-    suffix = extracted.suffix.lower()
+    url = user_text
+    while(url):
+        #解析網址
+        extracted = tldextract.extract(url)
+        subdomain = extracted.subdomain.lower()
+        domain = extracted.domain.lower()
+        suffix = extracted.suffix.lower()
 
-    if subdomain:
-        domain_name = f"{subdomain}.{domain}.{suffix}"
-    else:
+        if subdomain:
+            domain_name = f"{subdomain}.{domain}.{suffix}"
+        else:
+            domain_name = f"{domain}.{suffix}"
+
+        if domain_name in meta_redirects_list:
+            msg, result, keep_go_status = user_query_shorturl_meta(url)
+            url = result
+            rmessage = f"{msg}{rmessage}"
+            continue
+
+        if domain_name in Tools.SHORT_URL_LIST:
+            rmessage, result, keep_go_status = user_query_shorturl_normal(url)
+            url = result
+            rmessage = f"{msg}{rmessage}"
+            continue
+
+        # 能夠判斷到縮網址的子網域 Ex. ricbtw.page.link
         domain_name = f"{domain}.{suffix}"
+        if domain_name in Tools.SHORT_URL_LIST:
+            rmessage, result, keep_go_status = user_query_shorturl_normal(url)
+            url = result
+            rmessage = f"{msg}{rmessage}"
+            continue
 
-    if domain_name in meta_redirects_list:
-        rmessage, result, keep_go_status = user_query_shorturl_meta(user_text)
-        return rmessage, result, keep_go_status
-
-    if domain_name in Tools.SHORT_URL_LIST:
-        rmessage, result, keep_go_status = user_query_shorturl_normal(user_text)
-        return rmessage, result, keep_go_status
-
-    # 能夠判斷到縮網址的子網域 Ex. ricbtw.page.link
-    domain_name = f"{domain}.{suffix}"
-    if domain_name in Tools.SHORT_URL_LIST:
-        rmessage, result, keep_go_status = user_query_shorturl_normal(user_text)
-        return rmessage, result, keep_go_status
+        if result :
+            return rmessage, result, keep_go_status
+        else:
+            break
 
     return rmessage, result, True
 
