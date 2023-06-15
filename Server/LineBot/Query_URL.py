@@ -818,11 +818,11 @@ def user_query_website(user_text):
     if not whois_list:
         whois_list = Tools.read_json_file(Tools.WHOIS_QUERY_LIST)
 
-    max_records = 200
+    max_records = 1000
 
     # 檢查列表的長度是否超過最大記錄數
     if len(whois_list) > max_records:
-        whois_list = whois_list[-max_records:]  # 只保留最新的兩百筆資料
+        whois_list = whois_list[-max_records:]  # 只保留最新的max_records筆資料
         Tools.write_json_file(Tools.WHOIS_QUERY_LIST, whois_list)
 
     #解析網址
