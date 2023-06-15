@@ -1,5 +1,5 @@
 import tldextract
-import os
+
 input_file_path = "Format_input.txt"
 output_file_pathA = "Format_outputForAdguard.txt"
 output_file_pathB = "Format_outputForExtensions.txt"
