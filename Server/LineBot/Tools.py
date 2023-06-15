@@ -25,6 +25,7 @@ import json
 import os
 import pycountry
 import re
+import tldextract
 
 with open('setting.json', 'r') as f:
     setting = json.load(f)
@@ -245,3 +246,11 @@ def Clear_List_Checker(filename: str, blacklists) -> None:
     if modify:
         write_json_file(filename, blacklists)
     return
+
+def domain_analysis(url):
+    extracted = tldextract.extract(url)
+    subdomain = extracted.subdomain.lower()
+    domain = extracted.domain.lower()
+    suffix = extracted.suffix.lower()
+
+    return subdomain, domain, suffix

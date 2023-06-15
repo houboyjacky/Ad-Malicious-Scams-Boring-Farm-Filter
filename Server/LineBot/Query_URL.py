@@ -29,9 +29,11 @@ import re
 import requests
 import socket
 import ssl
+import threading
 import tldextract
 import Tools
 import whois
+import time
 from bs4 import BeautifulSoup
 from collections import defaultdict
 from datetime import datetime, timedelta
@@ -65,7 +67,7 @@ def get_ips_by_hostname(hostname):
         print(f"Error occurred while getting IP addresses for hostname {hostname}: {e}")
         return []
 
-def get_server_ip(url):
+def get_server_ip(url, result_list):
 
     extracted = tldextract.extract(url)
     subdomain = extracted.subdomain.lower()
@@ -82,7 +84,8 @@ def get_server_ip(url):
     output = []
     ip_list = get_ips_by_hostname(hostname)
     if not ip_list:
-        return ""
+        result_list.append(("IP_info_msg", ""))
+        return
 
     cf_ips = get_cf_ips()
     logger.info("====================")
@@ -115,17 +118,19 @@ def get_server_ip(url):
     msg = f"伺服器可能位置在："
     country_count = len(country_list)
     if country_count == 0:
-        return ""
-    count = 0
-    for countrys in country_list:
-        msg += f"{countrys}"
-        count += 1
-        if count != country_count:
-            msg += f"、"
-    output.append(f"{msg}")
-    output.append("＝＝＝＝＝＝＝＝＝＝")
+        result_list.append(("IP_info_msg", ""))
+    else:
+        count = 0
+        for countrys in country_list:
+            msg += f"{countrys}"
+            count += 1
+            if count != country_count:
+                msg += f"、"
+        output.append(f"{msg}")
+        output.append("＝＝＝＝＝＝＝＝＝＝")
 
-    return '\n'.join(output)
+        result_list.append(("IP_info_msg", '\n'.join(output)))
+    return
 
 # ===============================================
 # 進一步搜尋
@@ -777,43 +782,39 @@ def user_query_shorturl(user_text):
 # 全域列表儲存網址和 whois 資料
 whois_list = []
 
-# 使用者查詢網址
-def user_query_website(user_text):
+def user_query_website_by_IP(IP):
+    country = get_country_by_ip(IP)
+    country_str = Tools.translate_country(country)
+    if country_str == "Unknown" or not country_str:
+        output = f"伺服器位置：{country}\n"
+    else:
+        output = f"伺服器位置：{country_str}\n"
+
+    if check_blacklisted_site(IP):
+        rmessage = (f"「 {IP} 」\n\n"
+                    f"被判定「是」詐騙/可疑網站\n"
+                    f"請勿相信此網站\n"
+                    f"若認為誤通報，請補充描述\n"
+                    f"感恩"
+                    f"\n"
+                    f"{output}"
+                    f"\n"
+                    f"{suffix_for_call}"
+        )
+    else:
+        rmessage = (f"「 {IP} 」\n\n"
+                    f"目前「尚未」在資料庫中\n"
+                    f"敬請小心謹慎\n"
+                    f"\n"
+                    f"{output}"
+                    f"\n"
+                    f"{suffix_for_call}\n"
+        )
+
+    return rmessage
+
+def user_query_website_by_DNS(domain_name, result_list):
     global whois_list
-
-    # 直接使用IP連線
-    if match := re.search(Tools.KEYWORD_URL[3], user_text):
-        ip = match.group(1)
-        country = get_country_by_ip(ip)
-        country_str = Tools.translate_country(country)
-        if country_str == "Unknown" or not country_str:
-            output = f"伺服器位置：{country}\n"
-        else:
-            output = f"伺服器位置：{country_str}\n"
-
-        if check_blacklisted_site(ip):
-            rmessage = (f"「 {ip} 」\n\n"
-                        f"被判定「是」詐騙/可疑網站\n"
-                        f"請勿相信此網站\n"
-                        f"若認為誤通報，請補充描述\n"
-                        f"感恩"
-                        f"\n"
-                        f"{output}"
-                        f"\n"
-                        f"{suffix_for_call}"
-            )
-        else:
-            rmessage = (f"「 {ip} 」\n\n"
-                        f"目前「尚未」在資料庫中\n"
-                        f"敬請小心謹慎\n"
-                        f"\n"
-                        f"{output}"
-                        f"\n"
-                        f"{suffix_for_call}\n"
-            )
-        return rmessage
-
-    IP_info_msg = get_server_ip(user_text)
 
     if not whois_list:
         whois_list = Tools.read_json_file(Tools.WHOIS_QUERY_LIST)
@@ -825,38 +826,12 @@ def user_query_website(user_text):
         whois_list = whois_list[-max_records:]  # 只保留最新的max_records筆資料
         Tools.write_json_file(Tools.WHOIS_QUERY_LIST, whois_list)
 
-    #解析網址
-    extracted = tldextract.extract(user_text)
-    subdomain = extracted.subdomain.lower()
-    domain = extracted.domain.lower()
-    suffix = extracted.suffix.lower()
-
-    if not domain or not suffix:
-        rmessage = f"\n「 {user_text} 」\n無法構成網址\n請重新輸入"
-        return rmessage
-
-    # 取得網域
-    domain_name = f"{domain}.{suffix}"
-    if domain_name in Tools.SPECIAL_SUBWEBSITE:
-        domain_name = f"{subdomain}.{domain}.{suffix}"
-    logger.info(f"domain_name = {domain_name}")
-
-    # 特殊提示
-    Special_domain = ["linktr.ee","lit.link"]
-    if domain_name in Special_domain:
-        output = user_text
-        if "?" in output :
-            output = output.split('?')[0]
-        rmessage = f"\n「 {output} 」\n是正常的網站\n但內含連結是存在詐騙/可疑\n請輸入那些連結"
-        return rmessage
-
-    update_web_leaderboard(domain_name)
-
     w = None
     whois_domain = ""
     whois_creation_date = ""
     whois_country = ""
     whois_registrant_country = ""
+    whois_query_error = False
     # 檢查全域列表是否存在相同的網址
     for item in whois_list:
         if item['網址'] == domain_name:
@@ -873,7 +848,6 @@ def user_query_website(user_text):
                 whois_country = item['whois_country']
                 whois_registrant_country = item['whois_registrant_country']
 
-    Error = False
     if not w:
         # 從 WHOIS 服務器獲取 WHOIS 信息
         try:
@@ -901,12 +875,87 @@ def user_query_website(user_text):
             })
             Tools.write_json_file(Tools.WHOIS_QUERY_LIST, whois_list)
         except whois.parser.PywhoisError: # 判斷原因 whois.parser.PywhoisError: No match for "FXACAP.COM"
-            Error = True
+            whois_query_error = True
 
-    # 判斷是否為黑名單
+    result_list.append(("whois_query_error",whois_query_error))
+    result_list.append(("whois_domain",whois_domain))
+    result_list.append(("whois_creation_date",whois_creation_date))
+    result_list.append(("whois_country",whois_country))
+    result_list.append(("whois_registrant_country",whois_registrant_country))
+    return
+
+def thread_check_blacklisted_site(domain_name, result_list):
     checkresult = check_blacklisted_site(domain_name)
+    result_list.append(("checkresult",checkresult))
+    return
 
-    if Error or not whois_domain or not whois_creation_date:
+# 使用者查詢網址
+def user_query_website(user_text):
+    start_time = time.time()
+    result_list = []
+
+    IP_info_msg = ""
+    whois_domain = ""
+    whois_creation_date = ""
+    whois_country = ""
+    whois_registrant_country = ""
+    whois_query_error = False
+
+    # 直接使用IP連線
+    if match := re.search(Tools.KEYWORD_URL[3], user_text):
+        ip = match.group(1)
+        return user_query_website_by_IP(ip)
+
+    #解析網址
+    subdomain, domain, suffix = Tools.domain_analysis(user_text)
+
+    if not domain or not suffix:
+        rmessage = f"\n「 {user_text} 」\n無法構成網址\n請重新輸入"
+        return rmessage
+
+    # 取得網域
+    domain_name = f"{domain}.{suffix}"
+    if domain_name in Tools.SPECIAL_SUBWEBSITE:
+        domain_name = f"{subdomain}.{domain}.{suffix}"
+    logger.info(f"domain_name = {domain_name}")
+
+    # 特殊提示
+    Special_domain = ["linktr.ee","lit.link"]
+    if domain_name in Special_domain:
+        output = user_text
+        if "?" in output :
+            output = output.split('?')[0]
+        rmessage = f"\n「 {output} 」\n是正常的網站\n但內含連結是存在詐騙/可疑\n請輸入那些連結"
+        return rmessage
+
+    thread1 = threading.Thread(target=get_server_ip, args=(user_text,result_list))
+    thread2 = threading.Thread(target=update_web_leaderboard, args=(user_text,))
+    thread3 = threading.Thread(target=user_query_website_by_DNS, args=(domain_name,result_list))
+    thread4 = threading.Thread(target=thread_check_blacklisted_site, args=(domain_name,result_list))
+    thread1.start()
+    thread2.start()
+    thread3.start()
+    thread4.start()
+    thread1.join()
+    thread2.join()
+    thread3.join()
+    thread4.join()
+
+    results = dict(result_list)
+
+    IP_info_msg = results['IP_info_msg']
+    whois_query_error = results['whois_query_error']
+    whois_domain = results['whois_domain']
+    whois_creation_date = results['whois_creation_date']
+    whois_country = results['whois_country']
+    whois_registrant_country = results['whois_registrant_country']
+    checkresult = results['checkresult']
+
+    end_time = time.time()
+    elapsed_time = end_time - start_time
+    logger.info("查詢耗時：{:.2f}秒".format(elapsed_time))
+
+    if whois_query_error or not whois_domain or not whois_creation_date:
         if checkresult:
             rmessage = (f"「 {domain_name} 」\n\n"
                         f"被判定「是」詐騙/可疑網站\n"
