@@ -67,7 +67,7 @@ def get_ips_by_hostname(hostname):
         print(f"Error occurred while getting IP addresses for hostname {hostname}: {e}")
         return []
 
-def get_server_ip(url, result_list):
+def get_server_ip(url, result_list, lock):
 
     subdomain, domain, suffix = Tools.domain_analysis(url)
 
@@ -81,7 +81,8 @@ def get_server_ip(url, result_list):
     output = []
     ip_list = get_ips_by_hostname(hostname)
     if not ip_list:
-        result_list.append(("IP_info_msg", ""))
+        with lock:
+            result_list.append(("IP_info_msg", ""))
         return
 
     cf_ips = get_cf_ips()
@@ -115,7 +116,8 @@ def get_server_ip(url, result_list):
     msg = f"伺服器可能位置在："
     country_count = len(country_list)
     if country_count == 0:
-        result_list.append(("IP_info_msg", ""))
+        with lock:
+            result_list.append(("IP_info_msg", ""))
     else:
         count = 0
         for countrys in country_list:
@@ -125,8 +127,8 @@ def get_server_ip(url, result_list):
                 msg += f"、"
         output.append(f"{msg}")
         output.append("＝＝＝＝＝＝＝＝＝＝")
-
-        result_list.append(("IP_info_msg", '\n'.join(output)))
+        with lock:
+            result_list.append(("IP_info_msg", '\n'.join(output)))
     return
 
 # ===============================================
@@ -795,7 +797,7 @@ def user_query_website_by_IP(IP):
 
     return rmessage
 
-def user_query_website_by_DNS(domain_name, result_list):
+def user_query_website_by_DNS(domain_name, result_list, lock):
     global whois_list
 
     if not whois_list:
@@ -858,17 +860,18 @@ def user_query_website_by_DNS(domain_name, result_list):
             Tools.write_json_file(Tools.WHOIS_QUERY_LIST, whois_list)
         except whois.parser.PywhoisError: # 判斷原因 whois.parser.PywhoisError: No match for "FXACAP.COM"
             whois_query_error = True
-
-    result_list.append(("whois_query_error",whois_query_error))
-    result_list.append(("whois_domain",whois_domain))
-    result_list.append(("whois_creation_date",whois_creation_date))
-    result_list.append(("whois_country",whois_country))
-    result_list.append(("whois_registrant_country",whois_registrant_country))
+    with lock:
+        result_list.append(("whois_query_error",whois_query_error))
+        result_list.append(("whois_domain",whois_domain))
+        result_list.append(("whois_creation_date",whois_creation_date))
+        result_list.append(("whois_country",whois_country))
+        result_list.append(("whois_registrant_country",whois_registrant_country))
     return
 
-def thread_check_blacklisted_site(domain_name, result_list):
+def thread_check_blacklisted_site(domain_name, result_list, lock):
     checkresult = check_blacklisted_site(domain_name)
-    result_list.append(("checkresult",checkresult))
+    with lock:
+        result_list.append(("checkresult", checkresult))
     return
 
 # 使用者查詢網址
@@ -882,6 +885,7 @@ def user_query_website(user_text):
     whois_country = ""
     whois_registrant_country = ""
     whois_query_error = False
+    lock = threading.Lock()
 
     # 直接使用IP連線
     if match := re.search(Tools.KEYWORD_URL[3], user_text):
@@ -910,10 +914,10 @@ def user_query_website(user_text):
         rmessage = f"\n「 {output} 」\n是正常的網站\n但內含連結是存在詐騙/可疑\n請輸入那些連結"
         return rmessage
 
-    thread1 = threading.Thread(target=get_server_ip, args=(user_text,result_list))
+    thread1 = threading.Thread(target=get_server_ip, args=(user_text,result_list, lock))
     thread2 = threading.Thread(target=update_web_leaderboard, args=(user_text,))
-    thread3 = threading.Thread(target=user_query_website_by_DNS, args=(domain_name,result_list))
-    thread4 = threading.Thread(target=thread_check_blacklisted_site, args=(domain_name,result_list))
+    thread3 = threading.Thread(target=user_query_website_by_DNS, args=(domain_name,result_list, lock))
+    thread4 = threading.Thread(target=thread_check_blacklisted_site, args=(domain_name,result_list, lock))
     thread1.start()
     thread2.start()
     thread3.start()

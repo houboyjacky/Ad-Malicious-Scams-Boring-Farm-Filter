@@ -1,7 +1,7 @@
 # 歷史更新 History Update
 
 * 20230615 Update
-  * 調整 查詢網址使用threads
+  * 調整 查詢網址使用threads與lock機制
   * 調整 查詢ip可能撲空
   * 調整 解析網址共用API
   * 調整 縮網址可重複查詢
