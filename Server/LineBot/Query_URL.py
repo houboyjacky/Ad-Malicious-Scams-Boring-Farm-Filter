@@ -157,7 +157,7 @@ def get_external_links(url):
         return set()
 
     try:
-        response = requests.get(url)
+        response = requests.get(url, timeout=10)
         response.raise_for_status()
     except requests.exceptions.RequestException as e:
         logger.error(f"Error occurred: {e}")
