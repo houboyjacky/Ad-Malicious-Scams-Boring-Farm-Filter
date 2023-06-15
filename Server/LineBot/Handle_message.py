@@ -517,6 +517,15 @@ def handle_message_text(event):
         orgin_text = match.group(1)
         logger.info(f"社群轉貼")
 
+    # 防呆機制
+    if not lower_text.startswith("http") and re.match(r'^[a-zA-Z._-]+$', lower_text):
+        subdomain, domain, suffix = Tools.domain_analysis(orgin_text)
+        logger.info(f"{subdomain}, {domain}, {suffix}")
+        if subdomain or suffix:
+            rmessage = f"若輸入的是網址，開頭記得加上「 http:// 」或「 https:// 」喔~"
+            message_reply(event, rmessage)
+            return
+
     prefix_msg = ""
     # 縮網址展開
     prefix_msg, expendurl, go_state = user_query_shorturl(orgin_text)

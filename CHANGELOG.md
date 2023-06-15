@@ -1,6 +1,7 @@
 # 歷史更新 History Update
 
 * 20230615 Update
+  * 調整 沒有輸入http的防呆機制
   * 調整 社群轉貼方便直接判別
   * 調整 查詢網址使用threads與lock機制
   * 調整 查詢ip可能撲空
