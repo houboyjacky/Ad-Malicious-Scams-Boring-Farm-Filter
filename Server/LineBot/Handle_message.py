@@ -511,6 +511,12 @@ def handle_message_text(event):
         message_reply(event, rmessage)
         return
 
+    # 查詢line邀請網址
+    if match := re.search(Tools.KEYWORD_LINE[6], orgin_text):
+        lower_text = match.group(1).lower()
+        orgin_text = match.group(1)
+        logger.info(f"社群轉貼")
+
     prefix_msg = ""
     # 縮網址展開
     prefix_msg, expendurl, go_state = user_query_shorturl(orgin_text)
