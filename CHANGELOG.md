@@ -1,6 +1,9 @@
 # 歷史更新 History Update
 
 * 20230615 Update
+  * 更新 165反詐騙諮詢專線-詐騙LINE ID(112/6/12)
+  * 更新 個人不想看與網友匯報廣告或網站
+  * 更新 ScamAdviser電子報
   * 調整 沒有輸入http的防呆機制
   * 調整 社群轉貼方便直接判別
   * 調整 查詢網址使用threads與lock機制
