@@ -25,7 +25,6 @@ import pytesseract
 import random
 import re
 import time
-import tldextract
 import Tools
 from GetFromNetizen import push_netizen_file, write_new_netizen_file, get_netizen_file
 from io import BytesIO
@@ -267,10 +266,7 @@ def handle_message_text_admin(user_id, orgin_text):
                 return rmessage
 
             # 使用 tldextract 取得網域
-            extracted = tldextract.extract(url)
-            subdomain = extracted.subdomain.lower()
-            domain = extracted.domain.lower()
-            suffix = extracted.suffix.lower()
+            subdomain, domain, suffix = Tools.domain_analysis(url)
 
             domain_name = f"{domain}.{suffix}"
             if domain_name in Tools.ALLOW_DOMAIN_LIST:

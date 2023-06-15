@@ -69,10 +69,7 @@ def get_ips_by_hostname(hostname):
 
 def get_server_ip(url, result_list):
 
-    extracted = tldextract.extract(url)
-    subdomain = extracted.subdomain.lower()
-    domain = extracted.domain.lower()
-    suffix = extracted.suffix.lower()
+    subdomain, domain, suffix = Tools.domain_analysis(url)
 
     if subdomain:
         hostname = f"{subdomain}.{domain}.{suffix}"
@@ -152,9 +149,7 @@ def get_external_links(url):
             return set()
 
     parsed_url = urlparse(url)
-    extracted = tldextract.extract(parsed_url.netloc)
-    domain = extracted.domain
-    suffix = extracted.suffix
+    subdomain, domain, suffix = Tools.domain_analysis(parsed_url.netloc)
 
     if f"{domain}.{suffix}" in Tools.ALLOW_DOMAIN_LIST:
         return set()
@@ -188,10 +183,7 @@ def get_external_links(url):
                 href = absolute_url
 
         if href:
-            extracted = tldextract.extract(href)
-            subdomain = extracted.subdomain.lower()
-            domain = extracted.domain.lower()
-            suffix = extracted.suffix.lower()
+            subdomain, domain, suffix = Tools.domain_analysis(href)
             if not domain or not suffix:
                 continue
             if f"{domain}.{suffix}" == "line.me":
@@ -664,10 +656,7 @@ def check_blacklisted_site(user_text):
 def user_query_shorturl_normal(user_text):
 
     #解析網址
-    extracted = tldextract.extract(user_text)
-    subdomain = extracted.subdomain.lower()
-    domain = extracted.domain.lower()
-    suffix = extracted.suffix.lower()
+    subdomain, domain, suffix = Tools.domain_analysis(user_text)
 
     if subdomain:
         domain_name = f"{subdomain}.{domain}.{suffix}"
@@ -680,9 +669,8 @@ def user_query_shorturl_normal(user_text):
     result = resolve_redirects(user_text)
     logger.info(f"result={result}")
 
-    extracted = tldextract.extract(result)
-    domain = extracted.domain
-    suffix = extracted.suffix
+    subdomain, domain, suffix = Tools.domain_analysis(result)
+
     # 網址都一樣，不是真的已失效，就是被網站阻擋
     if f"{domain}.{suffix}" == domain_name:
         rmessage = f"「 {user_text} 」是縮網址\n目前縮網址已失效\n"
@@ -719,10 +707,7 @@ def user_query_shorturl_meta(user_text):
     url = unquote(u_value)
     logger.info(f"url = {url}")
 
-    source_url = tldextract.extract(user_text.lower())
-    subdomain = source_url.subdomain.lower()
-    domain = source_url.domain.lower()
-    suffix = source_url.suffix.lower()
+    subdomain, domain, suffix = Tools.domain_analysis(user_text.lower())
     source_domain = f"{subdomain}.{domain}.{suffix}"
 
     rmessage = f"「 {source_domain} 」是縮網址\n原始網址為\n"
@@ -742,10 +727,7 @@ def user_query_shorturl(user_text):
     url = user_text
     while(url):
         #解析網址
-        extracted = tldextract.extract(url)
-        subdomain = extracted.subdomain.lower()
-        domain = extracted.domain.lower()
-        suffix = extracted.suffix.lower()
+        subdomain, domain, suffix = Tools.domain_analysis(url)
 
         if subdomain:
             domain_name = f"{subdomain}.{domain}.{suffix}"
