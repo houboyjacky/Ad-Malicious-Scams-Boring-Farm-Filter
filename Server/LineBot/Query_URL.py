@@ -341,9 +341,9 @@ def resolve_redirects(url):
     context = ssl.create_default_context()
     context.check_hostname = False
     context.verify_mode = ssl.CERT_NONE
-
+    timeout = 10
     try:
-        response = urlopen(url, context=context)
+        response = urlopen(url, context=context, timeout=timeout)
         final_url = response.geturl()
         if final_url != url:
             logger.info(f"final_url1 = {final_url}")
