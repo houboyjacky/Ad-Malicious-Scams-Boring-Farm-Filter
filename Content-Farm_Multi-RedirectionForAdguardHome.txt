@@ -17,6 +17,7 @@
 ||abo24.it^
 ||abovee.sbs^
 ||accesswire.com^
+||acizlevideo.online^
 ||actual.wiki^
 ||adwinli.tk^
 ||afraid.cfd^
@@ -57,6 +58,7 @@
 ||aver.com^
 ||axel-chevre.fr^
 ||ayurveda-massage-erlangen.de^
+||babadanogulanesil.online^
 ||balance4you.ch^
 ||bangqu.com^
 ||bastaujana.cz^
@@ -68,6 +70,8 @@
 ||biloop.it^
 ||binco.pl^
 ||bitcoinmixer.wiki^
+||bizedevideo.online^
+||bizideizlerlermi.online^
 ||bknsk.ru^
 ||blacktiechauffeur.fr^
 ||blessyourcart.org^
@@ -105,6 +109,7 @@
 ||chiaraceschini.it^
 ||chiarasassorestauri.it^
 ||chickencorner.fr^
+||chinaglobal.online^
 ||chinahomestay.org^
 ||chlebickypraha.cz^
 ||choctaw.it^
@@ -112,6 +117,7 @@
 ||cinesium.fr^
 ||cleancare-reinigung.de^
 ||clinicadentalmilenio.es^
+||clirc.online^
 ||coco01.cc^
 ||coco01.me^
 ||coco01.net^
@@ -123,6 +129,7 @@
 ||coder.work^
 ||codertw.com^
 ||coiffeur-luthern.ch^
+||commanderr.online^
 ||comms.si^
 ||congresomedicosjubilados-sevilla2022.es^
 ||countrybank.com^
@@ -157,6 +164,7 @@
 ||damn.wiki^
 ||dedsec.wiki^
 ||deem.cz^
+||deterjanazam.online^
 ||detsad23samara.ru^
 ||di02.biz^
 ||diamond-bs.de^
@@ -165,6 +173,7 @@
 ||dm20.biz^
 ||dniprorada.gov.ua^
 ||dolinaszpakow.pl^
+||dorfmitte-kaisten.ch^
 ||dpncostruzionigenerali.it^
 ||dradvice.asia^
 ||dragon-gifts.ru^
@@ -179,6 +188,7 @@
 ||edurusotels.com^
 ||egficneo.tk^
 ||eight.wiki^
+||eiskill.it^
 ||either.wiki^
 ||empirsteak.cz^
 ||empreendejovem.pt^
@@ -186,6 +196,7 @@
 ||entrlock.cz^
 ||esicez.online^
 ||essentio.fi^
+||estirbaba.online^
 ||ets2mods.online^
 ||eujen.space^
 ||eumed-gateway.eu^
@@ -223,12 +234,15 @@
 ||gabistore.cz^
 ||galacticwraps.at^
 ||gameinfo.io^
+||geldikknk.online^
 ||geliusiena.lt^
 ||gesundheit-coaching-berlin.de^
 ||ghirlandaioflorence.it^
 ||gidrotech74.ru^
 ||gioelucysposi.it^
 ||giovannimattia.it^
+||gitmekall.online^
+||gitmeknki.online^
 ||glnge.me^
 ||gojigo.me^
 ||golden-memories.nl^
@@ -248,6 +262,7 @@
 ||heidetoller.de^
 ||hemass.me^
 ||herkuk.online^
+||herseyezamm.online^
 ||hklocalpress.com^
 ||hnlxyz.com^
 ||hobbigame.com^
@@ -255,6 +270,7 @@
 ||homedesigntutor.com^
 ||howgrewchi.live^
 ||hsg-dhfk-badminton.de^
+||huzurbe.online^
 ||icaro-research.eu^
 ||ice-legend.ru^
 ||idayle.co^
@@ -284,6 +300,7 @@
 ||itpc.it^
 ||itread01.com^
 ||iwiki.tw^
+||izlebizdesizde.online^
 ||janjarolim.cz^
 ||januaryprivilege.me^
 ||jb51.net^
@@ -305,6 +322,7 @@
 ||kbt-duesseldorf.de^
 ||keepgame.ru^
 ||keizai.biz^
+||kingofman.online^
 ||kirche-halsdorf.de^
 ||kknews.cc^
 ||km-bueroservice.de^
@@ -377,10 +395,12 @@
 ||mo08.biz^
 ||mo13.biz^
 ||moneydj.com^
+||moneymanx.online^
 ||moniques-fotografie.nl^
 ||moptt.tw^
 ||morethan.fi^
 ||moseltau.de^
+||mossit.pl^
 ||mrmaccaroni.it^
 ||ms-hellriegel.de^
 ||mss-antikspielzeug-onlineshop.de^
@@ -388,6 +408,7 @@
 ||muttonisa.ch^
 ||myendnoteweb.com^
 ||mypresentsshop.de^
+||myqnapcloud.com^
 ||mystickah.fr^
 ||na-madagaskar.sk^
 ||namtoo.co^
@@ -429,6 +450,7 @@
 ||peekme.cc^
 ||peoplecontent.de^
 ||pergift.online^
+||personel.pw^
 ||perspektivwechsel-seeheim.de^
 ||pharmaie-jolivet.fr^
 ||pipesurfshop.it^
@@ -446,6 +468,7 @@
 ||presslocalhk.com^
 ||pressyourmum.com^
 ||prestigelublin.eu^
+||priceglobal.online^
 ||primariabrezoaele.ro^
 ||prizesense.life^
 ||prizesenses.life^
@@ -454,6 +477,7 @@
 ||pro12.ru^
 ||probably.wiki^
 ||project-iwts20.eu^
+||promisec.net^
 ||przeciwdzialaniepraniupieniedzy.pl^
 ||psdelier.nl^
 ||psicologarominaleone.it^
@@ -474,10 +498,12 @@
 ||rebldo.co^
 ||recepcni-pulty.cz^
 ||recordatio.co.uk^
+||redkitman.online^
 ||regaltechnik.cz^
 ||regional-kraft.de^
 ||regionalfuchs.de^
 ||regopazos.com.br^
+||relativetype.pw^
 ||rena-s-art.de^
 ||renaultpassonxperience.co^
 ||reportry.co^
@@ -491,6 +517,7 @@
 ||robtex.com^
 ||rockfitness.cz^
 ||roekhorst.nl^
+||rohrspatzundwollmeise.de^
 ||ronellotoplastiken.de^
 ||rosies-thun.ch^
 ||rshs2019.ru^
@@ -500,14 +527,22 @@
 ||sa123.cc^
 ||saldaturarobot.it^
 ||saludarmonia.cl^
+||sanal.pw^
+||sancak.pw^
+||sandalye.pw^
 ||sanjamitrovic.me^
 ||sanjuandelrio.gob.mx^
 ||saraya.pro^
+||sariyer.pw^
+||savas.pw^
 ||schneerosenrallye.at^
 ||schoah-initiative.de^
 ||schwebebad-hameln.de^
+||sebze.pw^
 ||sedamed.ch^
 ||seeland-nottwil.ch^
+||selim.pw^
+||sengelmesennpcz.online^
 ||senioripribram.cz^
 ||sergiofoto.lv^
 ||seriess.cfd^
@@ -516,11 +551,16 @@
 ||shar365.ru^
 ||shoot.wiki^
 ||shoott.cfd^
+||shopglobaal.online^
 ||shophann.co^
+||shopmoney.online^
 ||shoulderr.cfd^
 ||shusuien.co^
 ||sicedu.org.uk^
+||sigarayazam.online^
 ||signorinacucinagolosa.it^
+||sigorta.pw^
+||silifke.pw^
 ||silvanoguardiani.it^
 ||sisustusliikemokka.fi^
 ||sitecltd.ru^
@@ -529,11 +569,13 @@
 ||smart-city.fi^
 ||smb-konkret.ch^
 ||softwarebrother.com^
+||soganazam.online^
 ||solinotes.sk^
 ||somebodysplanet.de^
 ||sparkrestaurant.cz^
 ||spb.ru^
 ||stackoom.com^
+||standard-studio.es^
 ||start-deutsch-a1.ru^
 ||steundester.nl^
 ||strefa-ubran.pl^
@@ -546,6 +588,7 @@
 ||suomenkonekauppa.fi^
 ||superdls.online^
 ||superm.cl^
+||sussanabe.online^
 ||sussexcinemahire.co.uk^
 ||svm-invest.ru^
 ||swiat-pomyslow.pl^
@@ -564,6 +607,7 @@
 ||thinbug.com^
 ||thuisbijmau.nl^
 ||thuvienphapluat.vn^
+||thxshop.online^
 ||tierheilpraxis-tuendern.de^
 ||tiktokfinder.shop^
 ||tocadosysombreros.com^
@@ -571,6 +615,7 @@
 ||topawardhere.life^
 ||topedo-shop.de^
 ||toprestito.it^
+||totaaldesinfectie.nl^
 ||toutiao.com^
 ||trampolinfm.cl^
 ||tresandco.es^
@@ -622,10 +667,15 @@
 ||xn--28-6kcaibtab1im.xn--p1ai^
 ||xn--80aaebnvkb5ajldfb2a0m.xn--p1ai^
 ||xn--e1akieng6a.xn--p1ai^
+||xxvideochina.online^
+||xxvideoizleyen.online^
 ||yapbiguzellik.co.uk^
+||yoruldukbe.online^
 ||your-recruiting.de^
+||yukir.online^
 ||yuutoday.com^
 ||zahranaserii.ir^
+||zamlaradurde.online^
 ||zarkuk.online^
 ||zartsana.online^
 ||zerkuk.online^
@@ -634,4 +684,5 @@
 ||zlobek-ruczaj.pl^
 ||zoomzoom-fotografie.de^
 ||zorteind.online^
+||zuckk.online^
 ||zwmkt.online^
