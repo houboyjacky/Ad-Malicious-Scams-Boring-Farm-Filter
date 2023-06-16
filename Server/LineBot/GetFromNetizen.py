@@ -20,11 +20,11 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 '''
 
+from datetime import datetime
+from Point import write_user_point
+import pytz
 import re
 import Tools
-from Point import write_user_point
-from datetime import datetime
-import pytz
 
 line_domains = ["lin.ee", "line.me", "lineblog.me", "linecorp.com", "line-scdn.net", "line.naver.jp", "line.biz"]
 

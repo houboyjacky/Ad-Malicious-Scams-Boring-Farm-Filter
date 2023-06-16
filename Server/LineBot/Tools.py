@@ -31,50 +31,52 @@ with open('setting.json', 'r') as f:
     setting = json.load(f)
 
 # 讀取設定檔
-ADMINS = setting['ADMIN']                               # ADMIN => Linebot Admin
-ALLOW_DOMAIN_LIST = setting['ALLOW_DOMAIN_LIST']        # ALLOW_DOMAIN_LIST => Allow Domain can't add blacklist
-BackupDIR = setting['CONFIG_BACKUP']                    # Backup Signed mobileconfig
-BLACKUSERID = setting['BLACKUSERID']                    # BLACKUSERID => BLACK USER
-CERT = setting['CERT']                                  # CERT => Lets Encrypt Certificate Path File
-CHANNEL_ACCESS_TOKEN = setting['CHANNEL_ACCESS_TOKEN']  # CHANNEL_ACCESS_TOKEN => Linebot Token
-CHANNEL_SECRET = setting['CHANNEL_SECRET']              # CHANNEL_SECRET => Linebot Token
-FB_BLACKLIST = setting['FB_BLACKLIST']                  # FB_BLACKLIST => Blacklist for Facebook
-HASH_FILE = setting['HASH_FILE']                        # HASH_FILE => HASH INF IN FILE
-IG_BLACKLIST = setting['IG_BLACKLIST']                  # IG_BLACKLIST => Blacklist for IG
-KEYWORD_FB = setting['KEYWORD_FB']                      # KEYWORD_FB => Keyword for FB
-KEYWORD_IG = setting['KEYWORD_IG']                      # KEYWORD_IG => Keyword for IG
-KEYWORD_LINE = setting['KEYWORD_LINE']                  # KEYWORD_LINE => Keyword for LINE
-KEYWORD_MAIL = setting['KEYWORD_MAIL']                  # KEYWORD_MAIL => Keyword for MAIL
-KEYWORD_SMALLREDBOOK = setting['KEYWORD_SMALLREDBOOK']  # KEYWORD_SMALLREDBOOK => Keyword for SMALL Red Book
-KEYWORD_TELEGRAM = setting['KEYWORD_TELEGRAM']          # KEYWORD_TELEGRAM => Keyword for TELEGRAM
-KEYWORD_TIKTOK = setting['KEYWORD_TIKTOK']              # KEYWORD_TIKTOK => Keyword for TIKTOK
-KEYWORD_TWITTER = setting['KEYWORD_TWITTER']            # KEYWORD_TWITTER => KEYWORD for TWITTER
-KEYWORD_URL = setting['KEYWORD_URL']                    # KEYWORD_URL => Keyword for url
-KEYWORD_WHATSAPP = setting['KEYWORD_WHATSAPP']          # KEYWORD_WHATSAPP => Keyword for WhatsApp
-LINE_INVITE = setting['LINE_INVITE']                    # LINE_INVITE => Black Line invite site
-LINEID_LOCAL = setting['LINEID_LOCAL']                  # LINEID_LOCAL => Line ID from Local
-LINEID_WEB = setting['LINEID_WEB']                      # LINEID_WEB => Line ID from Web
-LOGFILE = setting['LOGFILE']                            # LOGFILE => Log File Path
-MAIL_BLACKLIST = setting['MAIL_BLACKLIST']              # MAIL_BLACKLIST => Mail Black List
-MobileConfigDIR = setting['CONFIG_ORIGIN']              # Modify mobileconfig
-NETIZEN = setting['NETIZEN']                            # NETIZEN => Netizen Report
-NEW_SCAM_WEBSITE_FOR_ADG = setting['BLACKLISTFORADG']   # BLACKLISTFORADG => Blacklist for Adguard Home Download
-NOTICE_BOARD = setting['NOTICE_BOARD']                  # NOTICE_BOARD => NOTICE BOARD
-NOTICE_BOARD_LIST = setting['NOTICE_BOARD_LIST']        # NOTICE_BOARD_LIST => NOTICE BOARD LIST
-PEM_DIR = setting['PEM_DIR']                            # PEM_DIR => Lets Encrypt Certificate Path
-PRIVKEY = setting['PRIVKEY']                            # PRIVKEY => Lets Encrypt Private Key Path File
-SCAM_WEBSITE_LIST = setting['SCAM_WEBSITE_LIST']        # SCAM_WEBSITE_LIST => SCAM WEBSITE LIST
-SHORT_URL_LIST = setting['SHORT_URL_LIST']              # SHORT_URL_LIST => Short url list
-SMALLREDBOOK_LIST = setting['SMALLREDBOOK_LIST']        # SMALLREDBOOK_LIST => SMALL RED BOOK LIST
-SPECIAL_SUBWEBSITE = setting['SPECIAL_SUBWEBSITE']      # SPECIAL_SUBWEBSITE => Special Subwebsite need to block sub website
-TARGET_DIR = setting['CONFIG_SIGN']                     # New Signed mobileconfig
-TELEGRAM_LOCAL = setting['TELEGRAM_LOCAL']              # TELEGRAM_LOCAL => Blacklist for Blacklist
-TIKTOK_BLACKLIST = setting['TIKTOK_BLACKLIST']          # TIKTOK_BLACKLIST => Blacklist for Tiktok
-TWITTER_BLACKLIST = setting['TWITTER_BLACKLIST']        # TWITTER_BLACKLIST => Blacklist for Twitter
-USER_POINT = setting['USER_POINT']                      # USER_POINT => User Point Record
-WEB_LEADERBOARD_FILE = setting['WEB_LEADERBOARD_FILE']  # WEB_LEADERBOARD_FILE => Query Website times leaderboard from file
-WHATSAPP_BLACKLIST = setting['WHATSAPP_BLACKLIST']      # WHATSAPP_BLACKLIST => Blacklist for WhatsApp
-WHOIS_QUERY_LIST = setting['WHOIS_QUERY_LIST']          # WHOIS_QUERY_LIST => Save whois data
+ADMINS = setting['ADMIN']                                       # ADMIN => Linebot Admin
+ALLOW_DOMAIN_LIST = setting['ALLOW_DOMAIN_LIST']                # ALLOW_DOMAIN_LIST => Allow Domain can't add blacklist
+BackupDIR = setting['CONFIG_BACKUP']                            # Backup Signed mobileconfig
+BLACKUSERID = setting['BLACKUSERID']                            # BLACKUSERID => BLACK USER
+CERT = setting['CERT']                                          # CERT => Lets Encrypt Certificate Path File
+CHANNEL_ACCESS_TOKEN = setting['CHANNEL_ACCESS_TOKEN']          # CHANNEL_ACCESS_TOKEN => Linebot Token
+CHANNEL_SECRET = setting['CHANNEL_SECRET']                      # CHANNEL_SECRET => Linebot Token
+FB_BLACKLIST = setting['FB_BLACKLIST']                          # FB_BLACKLIST => Blacklist for Facebook
+HASH_FILE = setting['HASH_FILE']                                # HASH_FILE => HASH INF IN FILE
+IG_BLACKLIST = setting['IG_BLACKLIST']                          # IG_BLACKLIST => Blacklist for IG
+KEYWORD_FB = setting['KEYWORD_FB']                              # KEYWORD_FB => Keyword for FB
+KEYWORD_IG = setting['KEYWORD_IG']                              # KEYWORD_IG => Keyword for IG
+KEYWORD_LINE = setting['KEYWORD_LINE']                          # KEYWORD_LINE => Keyword for LINE
+KEYWORD_MAIL = setting['KEYWORD_MAIL']                          # KEYWORD_MAIL => Keyword for MAIL
+KEYWORD_SMALLREDBOOK = setting['KEYWORD_SMALLREDBOOK']          # KEYWORD_SMALLREDBOOK => Keyword for SMALL Red Book
+KEYWORD_TELEGRAM = setting['KEYWORD_TELEGRAM']                  # KEYWORD_TELEGRAM => Keyword for TELEGRAM
+KEYWORD_TIKTOK = setting['KEYWORD_TIKTOK']                      # KEYWORD_TIKTOK => Keyword for TIKTOK
+KEYWORD_TWITTER = setting['KEYWORD_TWITTER']                    # KEYWORD_TWITTER => KEYWORD for TWITTER
+KEYWORD_URL = setting['KEYWORD_URL']                            # KEYWORD_URL => Keyword for url
+KEYWORD_VIRTUAL_MONEY = setting['KEYWORD_VIRTUAL_MONEY']        # KEYWORD_VIRTUAL_MONEY => Keyword for virtual money
+KEYWORD_WHATSAPP = setting['KEYWORD_WHATSAPP']                  # KEYWORD_WHATSAPP => Keyword for WhatsApp
+LINE_INVITE = setting['LINE_INVITE']                            # LINE_INVITE => Black Line invite site
+LINEID_LOCAL = setting['LINEID_LOCAL']                          # LINEID_LOCAL => Line ID from Local
+LINEID_WEB = setting['LINEID_WEB']                              # LINEID_WEB => Line ID from Web
+LOGFILE = setting['LOGFILE']                                    # LOGFILE => Log File Path
+MAIL_BLACKLIST = setting['MAIL_BLACKLIST']                      # MAIL_BLACKLIST => Mail Black List
+MobileConfigDIR = setting['CONFIG_ORIGIN']                      # Modify mobileconfig
+NETIZEN = setting['NETIZEN']                                    # NETIZEN => Netizen Report
+NEW_SCAM_WEBSITE_FOR_ADG = setting['BLACKLISTFORADG']           # BLACKLISTFORADG => Blacklist for Adguard Home Download
+NOTICE_BOARD = setting['NOTICE_BOARD']                          # NOTICE_BOARD => NOTICE BOARD
+NOTICE_BOARD_LIST = setting['NOTICE_BOARD_LIST']                # NOTICE_BOARD_LIST => NOTICE BOARD LIST
+PEM_DIR = setting['PEM_DIR']                                    # PEM_DIR => Lets Encrypt Certificate Path
+PRIVKEY = setting['PRIVKEY']                                    # PRIVKEY => Lets Encrypt Private Key Path File
+SCAM_WEBSITE_LIST = setting['SCAM_WEBSITE_LIST']                # SCAM_WEBSITE_LIST => SCAM WEBSITE LIST
+SHORT_URL_LIST = setting['SHORT_URL_LIST']                      # SHORT_URL_LIST => Short url list
+SMALLREDBOOK_LIST = setting['SMALLREDBOOK_LIST']                # SMALLREDBOOK_LIST => SMALL RED BOOK LIST
+SPECIAL_SUBWEBSITE = setting['SPECIAL_SUBWEBSITE']              # SPECIAL_SUBWEBSITE => Special Subwebsite need to block sub website
+TARGET_DIR = setting['CONFIG_SIGN']                             # New Signed mobileconfig
+TELEGRAM_LOCAL = setting['TELEGRAM_LOCAL']                      # TELEGRAM_LOCAL => Blacklist for Blacklist
+TIKTOK_BLACKLIST = setting['TIKTOK_BLACKLIST']                  # TIKTOK_BLACKLIST => Blacklist for Tiktok
+TWITTER_BLACKLIST = setting['TWITTER_BLACKLIST']                # TWITTER_BLACKLIST => Blacklist for Twitter
+USER_POINT = setting['USER_POINT']                              # USER_POINT => User Point Record
+VIRTUAL_MONEY_BLACKLIST = setting['VIRTUAL_MONEY_BLACKLIST']    # VIRTUAL_MONEY_BLACKLIST => Blacklist for
+WEB_LEADERBOARD_FILE = setting['WEB_LEADERBOARD_FILE']          # WEB_LEADERBOARD_FILE => Query Website times leaderboard from file
+WHATSAPP_BLACKLIST = setting['WHATSAPP_BLACKLIST']              # WHATSAPP_BLACKLIST => Blacklist for WhatsApp
+WHOIS_QUERY_LIST = setting['WHOIS_QUERY_LIST']                  # WHOIS_QUERY_LIST => Save whois data
 
 def reloadSetting():
     global ADMINS, BackupDIR, BLACKUSERID, CERT, CHANNEL_ACCESS_TOKEN
@@ -86,7 +88,7 @@ def reloadSetting():
     global USER_POINT, WEB_LEADERBOARD_FILE, WHOIS_QUERY_LIST, ALLOW_DOMAIN_LIST
     global TWITTER_BLACKLIST, KEYWORD_TWITTER, KEYWORD_MAIL, MAIL_BLACKLIST, KEYWORD_WHATSAPP
     global WHATSAPP_BLACKLIST, KEYWORD_TIKTOK, TIKTOK_BLACKLIST, SMALLREDBOOK_LIST
-    global KEYWORD_SMALLREDBOOK
+    global KEYWORD_SMALLREDBOOK, VIRTUAL_MONEY_BLACKLIST, KEYWORD_VIRTUAL_MONEY
     global setting
 
     setting = ''
@@ -113,6 +115,7 @@ def reloadSetting():
     KEYWORD_TIKTOK = setting['KEYWORD_TIKTOK']
     KEYWORD_TWITTER = setting['KEYWORD_TWITTER']
     KEYWORD_URL = setting['KEYWORD_URL']
+    KEYWORD_VIRTUAL_MONEY = setting['KEYWORD_VIRTUAL_MONEY']
     KEYWORD_WHATSAPP = setting['KEYWORD_WHATSAPP']
     LINE_INVITE = setting['LINE_INVITE']
     LINEID_LOCAL = setting['LINEID_LOCAL']
@@ -135,6 +138,7 @@ def reloadSetting():
     TIKTOK_BLACKLIST = setting['TIKTOK_BLACKLIST']
     TWITTER_BLACKLIST = setting['TWITTER_BLACKLIST']
     USER_POINT = setting['USER_POINT']
+    VIRTUAL_MONEY_BLACKLIST = setting['VIRTUAL_MONEY_BLACKLIST']
     WEB_LEADERBOARD_FILE = setting['WEB_LEADERBOARD_FILE']
     WHATSAPP_BLACKLIST = setting['WHATSAPP_BLACKLIST']
     WHOIS_QUERY_LIST = setting['WHOIS_QUERY_LIST']
@@ -252,5 +256,4 @@ def domain_analysis(url):
     subdomain = extracted.subdomain.lower()
     domain = extracted.domain.lower()
     suffix = extracted.suffix.lower()
-
     return subdomain, domain, suffix

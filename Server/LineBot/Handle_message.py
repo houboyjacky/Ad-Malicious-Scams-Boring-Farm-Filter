@@ -45,6 +45,7 @@ from Query_Tiktok import Tiktok_write_file, Tiktok_read_file, push_random_Tiktok
 from Query_Twitter import Twitter_read_file, Twitter_write_file, get_Twitter_list_len, get_random_Twitter_blacklist, push_random_Twitter_blacklist
 from Query_URL import user_query_website, check_blacklisted_site, get_web_leaderboard, update_part_blacklist_rule, user_query_shorturl, get_external_links, update_part_blacklist_comment
 from Query_Whatsapp import user_add_whatsapp_id, user_query_whatsapp_id
+from Query_VirtualMoney import Virtual_Money_read_file, Virtual_Money_write_file
 
 image_analysis = False
 forward_inquiry = False
@@ -178,6 +179,8 @@ def handle_message_text_admin(user_id, orgin_text):
     elif orgin_text == "關閉轉送":
         forward_inquiry = False
         rmessage = f"已關閉轉送"
+    elif re.match(Tools.KEYWORD_VIRTUAL_MONEY[1], orgin_text):
+        rmessage = Virtual_Money_write_file(orgin_text)
     elif match := re.search(Tools.KEYWORD_LINE[0], lower_text):
         # 取得文字
         lineid = match.group(1)
@@ -398,6 +401,23 @@ def handle_message_text(event):
             return
 
     # 無關網址判斷
+    if re.match(Tools.KEYWORD_VIRTUAL_MONEY[0], orgin_text):
+        msg, status = Virtual_Money_read_file(orgin_text)
+        if status:
+            rmessage = (f"所輸入的{msg}\n\n"
+                        f"「是」已知詐騙/可疑的虛擬貨幣地址\n"
+                        f"請勿匯款到該虛擬貨幣地址\n"
+                        f"感恩")
+        else:
+            rmessage = (f"所輸入的「 {msg} 」\n\n"
+                        f"「不存在」虛擬貨幣地址黑名單內\n"
+                        f"但敬請小心，請勿輕易聽信他人匯款\n"
+                        f"感恩"
+                        f"\n"
+                        f"{suffix_for_call}")
+        message_reply(event, rmessage)
+        return
+
     # 查詢Line ID
     if match := re.search(Tools.KEYWORD_LINE[1], lower_text):
         lineid = match.group(1)
