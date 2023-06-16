@@ -160,8 +160,19 @@ def get_external_links(url):
         response = requests.get(url, timeout=10)
         response.raise_for_status()
     except requests.exceptions.RequestException as e:
-        logger.error(f"Error occurred: {e}")
-        return set()
+        try:
+            if isinstance(e, requests.exceptions.SSLError):
+                logger.info("第一次SSL錯誤")
+                response = requests.get(url, timeout=10, verify=False)
+                response.raise_for_status()
+            else:
+                logger.info("第一次發生非SSL錯誤")
+                logger.error(f"Error occurred: {e}")
+                return set()
+        except requests.exceptions.RequestException as e:
+            logger.info("第二次錯誤")
+            logger.error(f"Error occurred: {e}")
+            return set()
 
     soup = BeautifulSoup(response.text, 'html.parser')
     parsed_url = urlparse(url)
