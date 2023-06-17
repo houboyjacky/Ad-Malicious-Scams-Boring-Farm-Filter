@@ -749,12 +749,16 @@ def user_query_shorturl(user_text):
 
         if domain_name in meta_redirects_list:
             msg, result, keep_go_status = user_query_shorturl_meta(url)
+            if not keep_go_status:
+                return rmessage, result, keep_go_status
             url = result
             rmessage = f"{msg}{rmessage}"
             continue
 
         if domain_name in Tools.SHORT_URL_LIST:
             rmessage, result, keep_go_status = user_query_shorturl_normal(url)
+            if not keep_go_status:
+                return rmessage, result, keep_go_status
             url = result
             rmessage = f"{msg}{rmessage}"
             continue
@@ -763,6 +767,8 @@ def user_query_shorturl(user_text):
         domain_name = f"{domain}.{suffix}"
         if domain_name in Tools.SHORT_URL_LIST:
             rmessage, result, keep_go_status = user_query_shorturl_normal(url)
+            if not keep_go_status:
+                return rmessage, result, keep_go_status
             url = result
             rmessage = f"{msg}{rmessage}"
             continue
