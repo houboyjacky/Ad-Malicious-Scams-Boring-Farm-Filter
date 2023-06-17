@@ -562,8 +562,10 @@ def check_download_file(url):
         #logger.info(f"{Local_file_name} is download")
     return Local_file_path
 
+whitelist = []
+
 def read_rule(filename):
-    global blacklist
+    global blacklist, whitelist
     with open(filename, "r", encoding="utf-8") as f:
         lines = f.readlines()
         for line in lines:
@@ -585,6 +587,10 @@ def read_rule(filename):
                 blacklist.append(line)
             elif line.startswith('/'):
                 blacklist.append(line)
+            elif line.startswith('@@||'):
+                line = line[4:]
+                line = line.split('^')[0]  # 去除^以後的文字
+                whitelist.append(line)
             else:
                 continue  # 忽略該行文字
     return
@@ -592,7 +598,7 @@ def read_rule(filename):
 is_running = False
 
 def update_blacklist():
-    global blacklist
+    global blacklist, whitelist
     global is_running
     if is_running:
         logger.info("Updating blacklist!")
@@ -647,6 +653,12 @@ def update_part_blacklist_comment(msg):
 # ===============================================
 
 def check_blacklisted_site(user_text):
+    global blacklist, whitelist
+
+    if user_text in whitelist:
+        logger.info(f"{user_text}在白名單內")
+        return False
+
     for line in blacklist:
         line = line.strip().lower()  # 去除開頭或結尾的空白和轉成小寫
         if line.startswith("/") and line.endswith("/"):
