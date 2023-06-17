@@ -910,10 +910,12 @@ def user_query_website(user_text):
         rmessage = f"\n「 {user_text} 」\n無法構成網址\n請重新輸入"
         return rmessage
 
+    special_tip = ""
     # 取得網域
     domain_name = f"{domain}.{suffix}"
     if domain_name in Tools.SPECIAL_SUBWEBSITE:
         domain_name = f"{subdomain}.{domain}.{suffix}"
+        special_tip = f"\n為「 {domain}.{suffix} 」的子網域"
     logger.info(f"domain_name = {domain_name}")
 
     # 特殊提示
@@ -954,7 +956,7 @@ def user_query_website(user_text):
 
     if whois_query_error or not whois_domain or not whois_creation_date:
         if checkresult:
-            rmessage = (f"「 {domain_name} 」\n\n"
+            rmessage = (f"「 {domain_name} 」{special_tip}\n\n"
                         f"被判定「是」詐騙/可疑網站\n"
                         f"請勿相信此網站\n"
                         f"若認為誤通報，請補充描述\n"
@@ -965,7 +967,7 @@ def user_query_website(user_text):
                         f"{suffix_for_call}"
             )
         else:
-            rmessage = (f"「 {domain_name} 」\n\n"
+            rmessage = (f"「 {domain_name} 」{special_tip}\n\n"
                         f"目前「尚未」在資料庫中\n"
                         f"敬請小心謹慎\n"
                         f"\n"
@@ -1019,7 +1021,7 @@ def user_query_website(user_text):
 
     #判斷網站
     if checkresult:
-        rmessage = (f"「 {domain_name} 」\n"
+        rmessage = (f"「 {domain_name} 」{special_tip}\n"
                     f"{rmessage_country}"
                     f"{rmessage_creation_date}\n"
                     f"{rmessage_diff_days}\n\n"
@@ -1033,7 +1035,7 @@ def user_query_website(user_text):
                     f"{suffix_for_call}"
         )
     else:
-        rmessage = (f"「 {domain_name} 」\n"
+        rmessage = (f"「 {domain_name} 」{special_tip}\n"
                     f"{rmessage_country}"
                     f"{rmessage_creation_date}\n"
                     f"{rmessage_diff_days}\n"
