@@ -515,10 +515,12 @@ def download_write_file(url, file_path):
     return file_path
 
 def check_download_file(url):
+    #logger.info(f"url = [{url}]")
     # 使用 url 的最後一部分作為檔名
     Local_file_path = os.path.join("filter", url.split("/")[-1])
+    #logger.info(f"Local_file_path = [{Local_file_path}]")
     Local_file_name = url.split("/")[-1]
-    Local_file_hash = calculate_hash(Local_file_path)
+    #logger.info(f"Local_file_name = [{Local_file_name}]")
 
     # 如果檔案不存在，則直接下載
     if not os.path.exists(Local_file_path):
@@ -529,9 +531,10 @@ def check_download_file(url):
             logger.info(f"{Local_file_name} is fail to new download")
             return None
 
-    # 如果檔案已存在，則比對hash值
-    #logger.info(f"Local_file_name = [{Local_file_name}]")
+    Local_file_hash = calculate_hash(Local_file_path)
     #logger.info(f"Local_file_hash = [{Local_file_hash}]")
+
+    # 如果檔案已存在，則比對hash值
     # 比較 hash 值
     for remote_file_name, remote_file_hash in remote_hash_dict.items():
         #logger.info(f"remote_file_name = [{remote_file_name}]")
