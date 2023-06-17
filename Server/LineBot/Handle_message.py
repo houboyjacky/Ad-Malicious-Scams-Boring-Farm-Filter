@@ -146,40 +146,10 @@ def message_reply(event, text):
     return
 
 # 管理員操作
-def handle_message_text_admin(user_id, orgin_text):
-    global image_analysis, forward_inquiry
-    rmessage = ''
+def handle_message_text_admin_sub(orgin_text):
 
-    # 讀取使用者傳來的文字訊息
     lower_text = orgin_text.lower()
-
-    if orgin_text == "重讀":
-        Tools.reloadSetting()
-        reload_notice_board()
-        logger.info("Reload setting.json")
-        rmessage = f"設定已重新載入"
-    elif orgin_text == "檢閱":
-        content, isSystem = get_netizen_file(user_id)
-        if not content:
-            rmessage = f"目前沒有需要檢閱的資料"
-        else:
-            if isSystem:
-                rmessage = f"系統轉送使用者查詢：\n\n{content}\n\n參閱與處置後\n請輸入「完成」或「失效」"
-            else:
-                rmessage = f"使用者詐騙回報內容：\n\n{content}\n\n參閱與處置後\n請輸入「完成」或「失效」"
-    elif orgin_text == "關閉辨識":
-        image_analysis = False
-        rmessage = f"已關閉辨識"
-    elif orgin_text == "開啟辨識":
-        image_analysis = True
-        rmessage = f"已開啟辨識"
-    elif orgin_text == "開啟轉送":
-        forward_inquiry = True
-        rmessage = f"已開啟辨識"
-    elif orgin_text == "關閉轉送":
-        forward_inquiry = False
-        rmessage = f"已關閉轉送"
-    elif re.match(Tools.KEYWORD_VIRTUAL_MONEY[1], orgin_text):
+    if re.match(Tools.KEYWORD_VIRTUAL_MONEY[1], orgin_text):
         rmessage = Virtual_Money_write_file(orgin_text)
     elif match := re.search(Tools.KEYWORD_LINE[0], lower_text):
         # 取得文字
@@ -293,6 +263,49 @@ def handle_message_text_admin(user_id, orgin_text):
         rmessage = f"管理員指令參數有誤，請重新確認"
     else:
         rmessage = None
+
+    return rmessage
+
+def handle_message_text_admin(user_id, orgin_text):
+    global image_analysis, forward_inquiry
+    rmessage = ''
+
+    if orgin_text == "重讀":
+        Tools.reloadSetting()
+        reload_notice_board()
+        logger.info("Reload setting.json")
+        rmessage = f"設定已重新載入"
+    elif orgin_text == "檢閱":
+        content, isSystem = get_netizen_file(user_id)
+        if not content:
+            rmessage = f"目前沒有需要檢閱的資料"
+        else:
+            if isSystem:
+                rmessage = f"系統轉送使用者查詢：\n\n{content}\n\n參閱與處置後\n請輸入「完成」或「失效」"
+            else:
+                rmessage = f"使用者詐騙回報內容：\n\n{content}\n\n參閱與處置後\n請輸入「完成」或「失效」"
+    elif orgin_text == "關閉辨識":
+        image_analysis = False
+        rmessage = f"已關閉辨識"
+    elif orgin_text == "開啟辨識":
+        image_analysis = True
+        rmessage = f"已開啟辨識"
+    elif orgin_text == "開啟轉送":
+        forward_inquiry = True
+        rmessage = f"已開啟辨識"
+    elif orgin_text == "關閉轉送":
+        forward_inquiry = False
+        rmessage = f"已關閉轉送"
+
+    # 批次加入
+    if orgin_text.startswith("批次加入"):
+        lines = orgin_text.split("\n")
+        for line in lines:
+            url = line.replace("批次", "").strip()
+            msg = handle_message_text_admin_sub(url)
+            rmessage += f"{msg}\n"
+    else: # 一般加入
+        rmessage = handle_message_text_admin_sub(orgin_text)
 
     return rmessage
 
