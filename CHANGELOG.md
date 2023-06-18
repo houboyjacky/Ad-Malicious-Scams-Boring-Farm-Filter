@@ -1,5 +1,8 @@
 # 歷史更新 History Update
 
+* 20230618 Update
+  * 修復 ru.by縮網址錯誤
+
 * 20230617 Update
   * 加入 白名單網址
   * 加入 批次匯入資料
