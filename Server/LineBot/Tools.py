@@ -40,6 +40,7 @@ CHANNEL_ACCESS_TOKEN = setting['CHANNEL_ACCESS_TOKEN']          # CHANNEL_ACCESS
 CHANNEL_SECRET = setting['CHANNEL_SECRET']                      # CHANNEL_SECRET => Linebot Token
 FB_BLACKLIST = setting['FB_BLACKLIST']                          # FB_BLACKLIST => Blacklist for Facebook
 HASH_FILE = setting['HASH_FILE']                                # HASH_FILE => HASH INF IN FILE
+HTTP_HEADERS = setting['HTTP_HEADERS']                          # HTTP_HEADERS => Http Headers
 IG_BLACKLIST = setting['IG_BLACKLIST']                          # IG_BLACKLIST => Blacklist for IG
 KEYWORD_FB = setting['KEYWORD_FB']                              # KEYWORD_FB => Keyword for FB
 KEYWORD_IG = setting['KEYWORD_IG']                              # KEYWORD_IG => Keyword for IG
@@ -89,6 +90,7 @@ def reloadSetting():
     global TWITTER_BLACKLIST, KEYWORD_TWITTER, KEYWORD_MAIL, MAIL_BLACKLIST, KEYWORD_WHATSAPP
     global WHATSAPP_BLACKLIST, KEYWORD_TIKTOK, TIKTOK_BLACKLIST, SMALLREDBOOK_LIST
     global KEYWORD_SMALLREDBOOK, VIRTUAL_MONEY_BLACKLIST, KEYWORD_VIRTUAL_MONEY
+    global HTTP_HEADERS
     global setting
 
     setting = ''
@@ -105,6 +107,7 @@ def reloadSetting():
     CHANNEL_SECRET = setting['CHANNEL_SECRET']
     FB_BLACKLIST = setting['FB_BLACKLIST']
     HASH_FILE = setting['HASH_FILE']
+    HTTP_HEADERS = setting['HTTP_HEADERS']
     IG_BLACKLIST = setting['IG_BLACKLIST']
     KEYWORD_FB = setting['KEYWORD_FB']
     KEYWORD_IG = setting['KEYWORD_IG']

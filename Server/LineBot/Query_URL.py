@@ -221,6 +221,8 @@ def get_external_links(url):
 # 目前不支援 "lurl.cc" "risu.io"
 # 未知 "picsee.io" "lihi.io"
 
+HTTP_HEADERS_LIST = Tools.read_json_file(Tools.HTTP_HEADERS)
+
 def resolve_redirects_wenkio(url):
     try:
         response = requests.get(url)
@@ -253,21 +255,12 @@ def resolve_redirects_recurlcc(url):
     return None
 
 def resolve_redirects_iiilio(url):
-    headers = {
-        "Accept-Language": "zh-TW,zh;q=0.9",
-        "Accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
-        "Cache-Control": "no-cache",
-        "Dnt": "1",
-        "Sec-Ch-Ua-Mobile": "?0",
-        "Sec-Ch-Ua-Platform":"Windows",
-        "Sec-Ch-Ua": '"Google Chrome";v="113", "Chromium";v="113", "Not-A.Brand";v="24"',
-        "Sec-Fetch-Dest":"document",
-        "Sec-Fetch-Mode":"navigate",
-        "Sec-Fetch-Site": "none",
-        "Sec-Fetch-User": "?1",
-        "Upgrade-Insecure-Requests": "1",
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36"
-    }
+    global HTTP_HEADERS_LIST
+
+    for data in HTTP_HEADERS_LIST:
+        if data["Name"] == "iiil.io":
+            headers = data["Headers"]
+            break
 
     iiil_io_pattern = r'window\.location\.replace\("([^"]+)"\)'
 
@@ -286,22 +279,12 @@ def resolve_redirects_iiilio(url):
     return None
 
 def resolve_redirects_ruby(url):
-    headers = {
-        "Accept-Encoding":"gzip, deflate, br",
-        "Accept-Language": "zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7",
-        "Accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
-        "Cache-Control": "no-cache",
-        "Dnt": "1",
-        "Sec-Ch-Ua-Mobile": "?0",
-        "Sec-Ch-Ua-Platform":"Windows",
-        "Sec-Ch-Ua": '"Not.A/Brand";v="8", "Chromium";v="114", "Google Chrome";v="114"',
-        "Sec-Fetch-Dest":"document",
-        "Sec-Fetch-Mode":"navigate",
-        "Sec-Fetch-Site": "none",
-        "Sec-Fetch-User": "?1",
-        "Upgrade-Insecure-Requests": "1",
-        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
-    }
+    global HTTP_HEADERS_LIST
+    headers = {}
+    for data in HTTP_HEADERS_LIST:
+        if data["Name"] == "ru.by":
+            headers = data["Headers"]
+            break
 
     try:
         response = requests.head(url, headers=headers, allow_redirects=False)
@@ -315,22 +298,12 @@ def resolve_redirects_ruby(url):
     return None
 
 def resolve_redirects_other(url):
-    headers = {
-        "Accept-Encoding":"gzip, deflate, br",
-        "Accept-Language": "zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7",
-        "Accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7",
-        "Cache-Control": "no-cache",
-        "Dnt": "1",
-        "Sec-Ch-Ua-Mobile": "?0",
-        "Sec-Ch-Ua-Platform":"Windows",
-        "Sec-Ch-Ua": '"Not.A/Brand";v="8", "Chromium";v="114", "Google Chrome";v="114"',
-        "Sec-Fetch-Dest":"document",
-        "Sec-Fetch-Mode":"navigate",
-        "Sec-Fetch-Site": "none",
-        "Sec-Fetch-User": "?1",
-        "Upgrade-Insecure-Requests": "1",
-        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
-    }
+    global HTTP_HEADERS_LIST
+
+    for data in HTTP_HEADERS_LIST:
+        if data["Name"] == "other":
+            headers = data["Headers"]
+            break
 
     try:
         response = requests.get(url, headers=headers, allow_redirects=True)
