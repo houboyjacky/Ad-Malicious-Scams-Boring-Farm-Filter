@@ -43,7 +43,7 @@ from Query_SmallRedBook import get_SmallRedBook_list_len, SmallRedBook_write_fil
 from Query_Telegram import user_query_telegram_id, user_add_telegram_id
 from Query_Tiktok import Tiktok_write_file, Tiktok_read_file, push_random_Tiktok_blacklist, get_random_Tiktok_blacklist, get_Tiktok_list_len
 from Query_Twitter import Twitter_read_file, Twitter_write_file, get_Twitter_list_len, get_random_Twitter_blacklist, push_random_Twitter_blacklist
-from Query_URL import user_query_website, check_blacklisted_site, get_web_leaderboard, update_part_blacklist_rule, user_query_shorturl, get_external_links, update_part_blacklist_comment
+from Query_URL import user_query_website, check_blacklisted_site, get_web_leaderboard, update_part_blacklist_rule, user_query_shorturl, get_external_links, update_part_blacklist_comment, user_query_shorturl_normal
 from Query_Whatsapp import user_add_whatsapp_id, user_query_whatsapp_id
 from Query_VirtualMoney import Virtual_Money_read_file, Virtual_Money_write_file
 
@@ -296,6 +296,18 @@ def handle_message_text_admin(user_id, orgin_text):
     elif orgin_text == "關閉轉送":
         forward_inquiry = False
         rmessage = f"已關閉轉送"
+    elif orgin_text.startswith("縮網址http"):
+        orgin_text = orgin_text.replace("縮網址","")
+        rmessage, result, keep_go_status = user_query_shorturl_normal(orgin_text)
+        rmessage = f"{rmessage}「 {result} 」"
+    elif orgin_text.startswith("分析http"):
+        orgin_text = orgin_text.replace("分析","")
+        if links := get_external_links(orgin_text):
+                msg = f'＝＝＝＝＝＝＝＝＝＝＝＝\n網站背後資訊(管理員only)\n'
+                for link in links:
+                    msg = f"{msg}「 {link} 」\n"
+                msg = f"{msg}＝＝＝＝＝＝＝＝＝＝＝＝\n"
+                rmessage = f"{rmessage}{msg}"
 
     if rmessage:
         return rmessage
