@@ -297,6 +297,9 @@ def handle_message_text_admin(user_id, orgin_text):
         forward_inquiry = False
         rmessage = f"已關閉轉送"
 
+    if rmessage:
+        return rmessage
+
     # 批次加入
     if orgin_text.startswith("批次加入"):
         lines = orgin_text.split("\n")
