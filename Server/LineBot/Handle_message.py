@@ -314,7 +314,11 @@ def handle_message_text_admin(user_id, orgin_text):
 
 def handle_message_text_front(user_text) -> str:
     if len(user_text) > 1000:
-        rmessage = f"謝謝你提供的情報\n請縮短長度或分段傳送"
+        if user_text.startwith("http"):
+            subdomain, domain, suffix = Tools.domain_analysis(user_text)
+            rmessage = f"謝謝你提供的情報\n但網址過長，請直接輸入\n「 http://{domain}.{suffix} 」\n就好"
+        else:
+            rmessage = f"謝謝你提供的情報\n請縮短長度或分段傳送"
         return rmessage
 
     if user_text == "備用指南":
