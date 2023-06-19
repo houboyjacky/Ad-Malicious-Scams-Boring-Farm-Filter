@@ -306,7 +306,7 @@ def handle_message_text_admin(user_id, orgin_text):
         for line in lines:
             url = line.replace("批次", "").strip()
             msg = handle_message_text_admin_sub(url)
-            rmessage += f"{msg}\n"
+            rmessage += f"{msg}\n\n"
     else: # 一般加入
         rmessage = handle_message_text_admin_sub(orgin_text)
 
