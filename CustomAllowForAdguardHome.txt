@@ -66,3 +66,5 @@
 @@||surveycake.com^$important
 ! 虛擬貨幣查詢
 @@||wikifx.com^$important
+! 工作資訊分享
+@@||goodjob.life^$important
