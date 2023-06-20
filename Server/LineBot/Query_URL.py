@@ -320,34 +320,36 @@ def resolve_redirects_other(url):
 
 def resolve_redirects(url):
 
-    if url.lower().startswith("http://"):
-        url = f"https://{url[7:]}"
+    subdomain, domain, suffix = Tools.domain_analysis(url.lower())
+    domain_name = f"{domain}.{suffix}"
 
-    if url.lower().startswith("https://risu.io") or url.lower().startswith("https://lurl.cc"):
+    if  domain_name == "risu.io" or \
+        domain_name == "lurl.cc" or \
+        domain_name == "psee.io" :
         final_url = resolve_redirects_other(url)
         if final_url != url:
             logger.info(f"resolve_redirects_other = {final_url}")
             return final_url
 
-    if url.lower().startswith("https://rb.gy"):
+    if domain_name == "rb.gy":
        final_url = resolve_redirects_ruby(url)
        if final_url != url:
            logger.info(f"resolve_redirects_rugy = {final_url}")
            return final_url
 
-    if url.lower().startswith("https://iiil.io"):
+    if domain_name == "iiil.io":
         final_url = resolve_redirects_iiilio(url)
         if final_url != url:
             logger.info(f"resolve_redirects_iiilio = {final_url}")
             return final_url
 
-    if url.lower().startswith("https://wenk.io"):
+    if domain_name == "wenk.io":
         final_url = resolve_redirects_wenkio(url)
         if final_url != url:
             logger.info(f"resolve_redirects_wenkio = {final_url}")
             return final_url
 
-    if url.lower().startswith("https://reurl.cc"):
+    if domain_name == "reurl.cc":
         final_url = resolve_redirects_recurlcc(url)
         if final_url != url:
             logger.info(f"resolve_redirects_recurlcc = {final_url}")
