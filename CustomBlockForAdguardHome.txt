@@ -10,6 +10,7 @@
 #||lihi1.cc^
 #||lihi1.com^
 #||lihi1.me^
+#||onelink.me^
 #||pages-wildcard.weebly.com^
 #||phicdn.net^
 #||shopline.tw^
@@ -1602,7 +1603,6 @@
 ||onead.onevision.com.tw^
 ||onebeos.com^
 ||oneegrou.net^
-||onelink.me^
 ||onenightfriend.com^
 ||onenightsrsr.wiki^
 ||onika.shop^
