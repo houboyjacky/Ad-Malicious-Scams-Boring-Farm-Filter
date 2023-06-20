@@ -267,10 +267,12 @@ def resolve_redirects_iiilio(url):
     try:
         response = requests.get(url, headers=headers, allow_redirects=True)
         logger.info(f"response = {response.content}")
+
         if response.status_code == 200:
             if match := re.search(iiil_io_pattern, response.content.decode("utf-8")):
                 final_url = match.group(1)
-
+            else:
+                final_url = url
             logger.info(f"final_url_iiilio = {final_url}")
             return final_url
     except requests.exceptions.RequestException as e:
