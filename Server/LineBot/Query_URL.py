@@ -310,8 +310,12 @@ def resolve_redirects_other(url):
     try:
         response = requests.get(url, headers=headers, allow_redirects=True)
         logger.info(f"response = {response.content}")
-        final_url = response.url
-        logger.info(f"resolve_redirects_other = {final_url}")
+        if response.status_code == 301 or response.status_code == 302:
+            final_url = response.headers['Location']
+            logger.info(f"resolve_redirects_other Location = {final_url}")
+        else:
+            final_url = response.url
+            logger.info(f"resolve_redirects_other = {final_url}")
         return final_url
     except requests.exceptions.RequestException as e:
         logger.info(f"Error occurred: {e}")
@@ -325,7 +329,8 @@ def resolve_redirects(url):
 
     if  domain_name == "risu.io" or \
         domain_name == "lurl.cc" or \
-        domain_name == "psee.io" :
+        domain_name == "psee.io" or \
+        domain_name == "zecz.ec":
         final_url = resolve_redirects_other(url)
         if final_url != url:
             logger.info(f"resolve_redirects_other = {final_url}")
