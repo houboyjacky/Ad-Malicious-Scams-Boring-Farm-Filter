@@ -109,7 +109,7 @@ def get_netizen_file(user_id:str):
             netizen['檢查者'] = user_id
             Tools.write_json_file(Tools.NETIZEN, netizens)
             return f"{str(netizen['序號'])}/{str(len(netizens))}", netizen["內容"], netizen["系統轉送"]
-    return ""
+    return "", "", ""
 
 def push_netizen_file(UserID, success, disappear):
     global netizens

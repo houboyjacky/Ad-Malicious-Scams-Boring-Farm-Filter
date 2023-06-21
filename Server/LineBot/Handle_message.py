@@ -128,6 +128,8 @@ def message_reply_basic(event, text):
 
     message = TextSendMessage(text=text)
     line_bot_api.reply_message(event.reply_token, message)
+    display_name = line_bot_api.get_profile(event.source.user_id).display_name
+    logger.info(f"reply to {display_name}")
     return
 
 # 回應訊息的函式
@@ -143,6 +145,8 @@ def message_reply(event, text):
 
     message = TextSendMessage(text=text)
     line_bot_api.reply_message(event.reply_token, message)
+    display_name = line_bot_api.get_profile(event.source.user_id).display_name
+    logger.info(f"reply to {display_name}")
     return
 
 # 管理員操作
@@ -281,7 +285,8 @@ def handle_message_text_admin(user_id, orgin_text):
             rmessage = f"目前沒有需要檢閱的資料"
         else:
             if isSystem:
-                rmessage = f"{pos}\n系統轉送使用者查詢：\n\n{content}\n\n參閱與處置後\n請輸入「完成」或「失效」"
+                msg = handle_message_text_sub("0", content)
+                rmessage = f"{pos}\n系統轉送使用者查詢：\n{content}\n=====\n自動查詢:\n\n{msg}\n\n=====\n參閱與處置後\n請輸入「完成」或「失效」"
             else:
                 rmessage = f"{pos}\n使用者詐騙回報內容：\n\n{content}\n\n參閱與處置後\n請輸入「完成」或「失效」"
     elif orgin_text == "關閉辨識":
@@ -406,34 +411,11 @@ def handle_message_text_game(user_id, user_text) -> str:
         return rmessage
     return None
 
-def handle_message_text(event):
-    # 取得發訊者的 ID
-    user_id = event.source.user_id
-    display_name = line_bot_api.get_profile(user_id).display_name
-    logger.info(f'UserID = {event.source.user_id}')
-    logger.info(f'{display_name} => {event.message.text}')
+def handle_message_text_sub(user_id, orgin_text):
 
-    # 讀取使用者傳來的文字訊息
-    orgin_text = event.message.text.strip()
+    rmessage = ""
+
     lower_text = orgin_text.lower()
-
-    # 長度控管、備用指南、電話、網站排行榜
-    if rmessage := handle_message_text_front(orgin_text):
-        message_reply_basic(event, rmessage)
-        return
-
-    # 遊戲模式
-    if rmessage := handle_message_text_game(user_id, orgin_text):
-        message_reply_basic(event, rmessage)
-        return
-
-    # 管理員操作
-    if Tools.IsAdmin(user_id):
-        if rmessage := handle_message_text_admin(user_id, orgin_text):
-            message_reply_basic(event, rmessage)
-            if orgin_text == "重讀":
-                reload_user_record()
-            return
 
     # 無關網址判斷
     if re.match(Tools.KEYWORD_VIRTUAL_MONEY[0], orgin_text):
@@ -450,8 +432,7 @@ def handle_message_text(event):
                         f"感恩"
                         f"\n"
                         f"{suffix_for_call}")
-        message_reply(event, rmessage)
-        return
+        return rmessage
 
     # 查詢Line ID
     if match := re.search(Tools.KEYWORD_LINE[1], lower_text):
@@ -492,8 +473,7 @@ def handle_message_text(event):
                             f"１００％就是有問題\n"
                             f"\n"
                             f"{suffix_for_call}")
-        message_reply(event, rmessage)
-        return
+        return rmessage
 
     # 查詢Telegram ID
     if match := re.search(Tools.KEYWORD_TELEGRAM[0], orgin_text):
@@ -515,9 +495,7 @@ def handle_message_text(event):
                         f"１００％就是有問題\n"
                         f"\n"
                         f"{suffix_for_call}")
-
-        message_reply(event, rmessage)
-        return
+        return rmessage
 
     # 查詢Twitter ID
     if match := re.search(Tools.KEYWORD_TWITTER[0], orgin_text):
@@ -545,8 +523,7 @@ def handle_message_text(event):
                         f"有極大的機率是有問題的\n"
                         f"\n"
                         f"{suffix_for_call}")
-        message_reply(event, rmessage)
-        return
+        return rmessage
 
     # 查詢 Email
     if re.match(Tools.KEYWORD_MAIL[0], lower_text):
@@ -562,9 +539,7 @@ def handle_message_text(event):
                         f"但並不代表沒問題\n"
                         f"\n"
                         f"{suffix_for_call}")
-
-        message_reply(event, rmessage)
-        return
+        return rmessage
 
     # 查詢line邀請網址
     if match := re.search(Tools.KEYWORD_LINE[6], orgin_text):
@@ -578,8 +553,7 @@ def handle_message_text(event):
         logger.info(f"{subdomain}, {domain}, {suffix}")
         if subdomain or suffix:
             rmessage = f"若輸入的是網址，開頭記得加上「 http:// 」或「 https:// 」喔~"
-            message_reply(event, rmessage)
-            return
+            return rmessage
 
     prefix_msg = ""
     # 縮網址展開
@@ -594,8 +568,7 @@ def handle_message_text(event):
         pass
     # 失效或有誤，回應錯誤
     else:
-        message_reply(event, prefix_msg)
-        return
+        return prefix_msg
 
     # 查詢line邀請網址
     if re.match(Tools.KEYWORD_LINE[4], lower_text):
@@ -616,8 +589,7 @@ def handle_message_text(event):
                         f"請勿輕易信任此Line ID的\n"
                         f"文字、圖像、語音和連結\n"
                         f"感恩")
-            message_reply(event, rmessage)
-            return
+            return rmessage
         else:
             rmessage = (f"{prefix_msg}{message}\n\n"
                         f"「不是」已知詐騙邀請網址\n"
@@ -629,8 +601,7 @@ def handle_message_text(event):
                         f"１００％就是有問題\n"
                         f"\n"
                         f"{suffix_for_call}")
-            message_reply(event, rmessage)
-            return
+            return rmessage
 
     # 判斷FB帳戶網址
     if re.match(Tools.KEYWORD_FB[2], lower_text):
@@ -667,8 +638,7 @@ def handle_message_text(event):
                         f"有極大的機率是有問題的\n"
                         f"\n"
                         f"{suffix_for_call}")
-        message_reply(event, rmessage)
-        return
+        return rmessage
 
     # 判斷IG帳戶、貼文或影片網址
     if re.match(Tools.KEYWORD_IG[3], lower_text):
@@ -700,8 +670,7 @@ def handle_message_text(event):
                         f"有極大的機率是有問題的\n"
                         f"\n"
                         f"{suffix_for_call}")
-        message_reply(event, rmessage)
-        return
+        return rmessage
 
     # 查詢Telegram網址
     if match := re.search(Tools.KEYWORD_TELEGRAM[2], lower_text):
@@ -728,9 +697,7 @@ def handle_message_text(event):
                         f"１００％就是有問題\n"
                         f"\n"
                         f"{suffix_for_call}")
-
-        message_reply(event, rmessage)
-        return
+        return rmessage
 
     # 查詢Twitter網址
     if match := re.search(Tools.KEYWORD_TWITTER[2], lower_text):
@@ -763,8 +730,7 @@ def handle_message_text(event):
                         f"有極大的機率是有問題的\n"
                         f"\n"
                         f"{suffix_for_call}")
-        message_reply(event, rmessage)
-        return
+        return rmessage
 
     # 查詢Whatsapp個人網址
     if match := re.search(Tools.KEYWORD_WHATSAPP[0], lower_text):
@@ -791,9 +757,7 @@ def handle_message_text(event):
                         f"１００％就是有問題\n"
                         f"\n"
                         f"{suffix_for_call}")
-
-        message_reply(event, rmessage)
-        return
+        return rmessage
 
     # 查詢Whatsapp群組網址
     if match := re.search(Tools.KEYWORD_WHATSAPP[2], lower_text):
@@ -820,9 +784,7 @@ def handle_message_text(event):
                         f"１００％就是有問題\n"
                         f"\n"
                         f"{suffix_for_call}")
-
-        message_reply(event, rmessage)
-        return
+        return rmessage
 
     # 查詢Tiktok網址
     if re.match(Tools.KEYWORD_TIKTOK[0], lower_text):
@@ -853,8 +815,7 @@ def handle_message_text(event):
                         f"有極大的機率是有問題的\n"
                         f"\n"
                         f"{suffix_for_call}")
-        message_reply(event, rmessage)
-        return
+        return rmessage
 
     # 查詢小紅書網址
     if re.match(Tools.KEYWORD_SMALLREDBOOK[0], lower_text):
@@ -885,8 +846,7 @@ def handle_message_text(event):
                         f"有極大的機率是有問題的\n"
                         f"\n"
                         f"{suffix_for_call}")
-        message_reply(event, rmessage)
-        return
+        return rmessage
 
     # 如果用戶輸入的網址沒有以 http 或 https 開頭，則不回應訊息
     if re.match(Tools.KEYWORD_URL[2], lower_text):
@@ -903,10 +863,42 @@ def handle_message_text(event):
                     msg = f"{msg}「 {link} 」\n"
                 msg = f"{msg}＝＝＝＝＝＝＝＝＝＝＝＝\n"
                 rmessage = f"{rmessage}{msg}"
+        return rmessage
 
-        message_reply(event, rmessage)
+    return
+
+def handle_message_text(event):
+    # 取得發訊者的 ID
+    user_id = event.source.user_id
+    display_name = line_bot_api.get_profile(user_id).display_name
+    logger.info(f'UserID = {event.source.user_id}')
+    logger.info(f'{display_name} => {event.message.text}')
+
+    # 讀取使用者傳來的文字訊息
+    orgin_text = event.message.text.strip()
+    lower_text = orgin_text.lower()
+
+    # 長度控管、備用指南、電話、網站排行榜
+    if rmessage := handle_message_text_front(orgin_text):
+        message_reply_basic(event, rmessage)
         return
 
+    # 遊戲模式
+    if rmessage := handle_message_text_game(user_id, orgin_text):
+        message_reply_basic(event, rmessage)
+        return
+
+    # 管理員操作
+    if Tools.IsAdmin(user_id):
+        if rmessage := handle_message_text_admin(user_id, orgin_text):
+            message_reply_basic(event, rmessage)
+            if orgin_text == "重讀":
+                reload_user_record()
+            return
+
+    # 一般操作
+    if rmessage := handle_message_text_sub(user_id, orgin_text):
+        message_reply(event, rmessage)
     return
 
 def handle_message_image(event):
