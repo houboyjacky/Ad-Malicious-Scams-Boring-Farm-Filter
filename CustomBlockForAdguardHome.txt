@@ -5,6 +5,7 @@
 @@||pestyle.online^important
 #||buffettonlineschool.com.tw^
 #||fontawesomes.com^
+#||ig.com^
 #||learningpa.cc^
 #||lihi.tv^
 #||lihi1.cc^
@@ -1116,7 +1117,6 @@
 ||ietwn.site^
 ||ifinancego.com^
 ||ifinancego.online^
-||ig.com^
 ||iigov.xyz^
 ||iiuawa.site^
 ||ij2hr.top^
