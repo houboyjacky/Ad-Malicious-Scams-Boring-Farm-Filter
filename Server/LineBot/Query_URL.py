@@ -157,7 +157,7 @@ def get_external_links(url):
         return set()
 
     try:
-        response = requests.get(url, timeout=10)
+        response = requests.get(url, timeout=(10,30))
         response.raise_for_status()
     except requests.exceptions.RequestException as e:
         try:
