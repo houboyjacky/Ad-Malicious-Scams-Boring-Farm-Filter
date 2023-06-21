@@ -276,14 +276,14 @@ def handle_message_text_admin(user_id, orgin_text):
         logger.info("Reload setting.json")
         rmessage = f"設定已重新載入"
     elif orgin_text == "檢閱":
-        content, isSystem = get_netizen_file(user_id)
+        pos, content, isSystem = get_netizen_file(user_id)
         if not content:
             rmessage = f"目前沒有需要檢閱的資料"
         else:
             if isSystem:
-                rmessage = f"系統轉送使用者查詢：\n\n{content}\n\n參閱與處置後\n請輸入「完成」或「失效」"
+                rmessage = f"{pos}\n系統轉送使用者查詢：\n\n{content}\n\n參閱與處置後\n請輸入「完成」或「失效」"
             else:
-                rmessage = f"使用者詐騙回報內容：\n\n{content}\n\n參閱與處置後\n請輸入「完成」或「失效」"
+                rmessage = f"{pos}\n使用者詐騙回報內容：\n\n{content}\n\n參閱與處置後\n請輸入「完成」或「失效」"
     elif orgin_text == "關閉辨識":
         image_analysis = False
         rmessage = f"已關閉辨識"

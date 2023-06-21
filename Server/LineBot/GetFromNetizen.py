@@ -108,7 +108,7 @@ def get_netizen_file(user_id:str):
         if netizen["完成"] == 0 and netizen["失效"] == 0 and netizen["已報案"] == 0:
             netizen['檢查者'] = user_id
             Tools.write_json_file(Tools.NETIZEN, netizens)
-            return netizen["內容"], netizen["系統轉送"]
+            return f"{str(netizen['序號'])}/{str(len(netizens))}", netizen["內容"], netizen["系統轉送"]
     return ""
 
 def push_netizen_file(UserID, success, disappear):
