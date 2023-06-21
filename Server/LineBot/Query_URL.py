@@ -897,8 +897,10 @@ def user_query_website_by_DNS(domain_name, result_list, lock):
                 '日期': datetime.now().strftime('%Y%m%d')
             })
             Tools.write_json_file(Tools.WHOIS_QUERY_LIST, whois_list)
-        except whois.parser.PywhoisError: # 判斷原因 whois.parser.PywhoisError: No match for "FXACAP.COM"
+        except Exception as e: # 判斷原因 whois.parser.PywhoisError: No match for "FXACAP.COM"
             whois_query_error = True
+            logger.error(f"An error occurred: {e}")
+
     with lock:
         result_list.append(("whois_query_error",whois_query_error))
         result_list.append(("whois_domain",whois_domain))
