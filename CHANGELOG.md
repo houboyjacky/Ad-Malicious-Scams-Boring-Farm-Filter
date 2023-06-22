@@ -1,5 +1,8 @@
 # 歷史更新 History Update
 
+* 20230623 Update
+  * 調整 whois查詢台灣字樣修改
+
 * 20230622 Update
   * 調整 修改文字
 

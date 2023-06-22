@@ -1054,13 +1054,16 @@ def user_query_website(user_text):
     else:
         rmessage_country = ""
 
+    if re.search("taiwan", rmessage_country, re.IGNORECASE):
+        rmessage_country = f"註冊國家：台灣\n"
+
     #判斷網站
     if checkresult:
         rmessage = (f"「 {domain_name} 」{special_tip}\n"
                     f"{rmessage_country}"
                     f"{rmessage_creation_date}\n"
                     f"{rmessage_diff_days}\n\n"
-                    f"「是」詐騙/可疑網站\n"
+                    f"「是」詐騙/可疑網站\n\n"
                     f"請勿相信此網站\n"
                     f"若認為誤通報，請補充描述\n"
                     f"感恩"
