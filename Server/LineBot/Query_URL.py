@@ -992,7 +992,7 @@ def user_query_website(user_text):
     if whois_query_error or not whois_domain or not whois_creation_date:
         if checkresult:
             rmessage = (f"「 {domain_name} 」{special_tip}\n\n"
-                        f"被判定「是」詐騙/可疑網站\n"
+                        f"「是」詐騙/可疑網站\n"
                         f"請勿相信此網站\n"
                         f"若認為誤通報，請補充描述\n"
                         f"感恩"
@@ -1060,7 +1060,7 @@ def user_query_website(user_text):
                     f"{rmessage_country}"
                     f"{rmessage_creation_date}\n"
                     f"{rmessage_diff_days}\n\n"
-                    f"已經被列入「是」詐騙/可疑網站名單中\n"
+                    f"「是」詐騙/可疑網站\n"
                     f"請勿相信此網站\n"
                     f"若認為誤通報，請補充描述\n"
                     f"感恩"
