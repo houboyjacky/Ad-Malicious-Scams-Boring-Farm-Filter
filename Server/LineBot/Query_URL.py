@@ -765,7 +765,12 @@ def user_query_shorturl(user_text):
     meta_redirects_list = ["lm.facebook.com", "l.facebook.com", "l.instagram.com"]
 
     url = user_text
+    times = 0
     while(url):
+        times += 1
+        if times > 10:
+            logger.info(f"縮網址times超過十次")
+            break
         #解析網址
         subdomain, domain, suffix = Tools.domain_analysis(url)
 
