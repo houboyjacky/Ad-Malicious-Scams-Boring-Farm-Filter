@@ -709,27 +709,33 @@ def user_query_shorturl_normal(user_text):
     result = resolve_redirects(user_text)
     logger.info(f"result={result}")
 
-    subdomain, domain, suffix = Tools.domain_analysis(result)
-
-    # 網址都一樣，不是真的已失效，就是被網站阻擋
-    if f"{domain}.{suffix}" == domain_name:
-        rmessage = f"「 {user_text} 」是縮網址\n目前縮網址已失效\n"
-        keep_go_status = False
-        logger.info("縮網址失效")
-    # 讓他繼續Go下去
-    elif not result:
-        rmessage = f"「 {user_text} 」輸入錯誤\n"
+    if not result:
+        rmessage = f"「 {user_text} 」輸入錯誤或網址無效\n"
         result = ""
         keep_go_status = False
         logger.info("縮網址無資料")
-    elif not result.startswith("http"):
-        rmessage = f"「 {domain_name} 」是縮網址\n原始網址為\n「 {result} 」\n該連結為特殊APP網址\n需要特定APP才能啟動"
-        logger.info("縮網址為APP啟動網址")
-        keep_go_status = False
     else:
-        rmessage = f"「 {domain_name} 」是縮網址\n原始網址為\n"
-        keep_go_status = True
-        logger.info("縮網址找到資料")
+        subdomain, domain, suffix = Tools.domain_analysis(result)
+
+        # 網址都一樣，不是真的已失效，就是被網站阻擋
+        if f"{domain}.{suffix}" == domain_name:
+            rmessage = f"「 {user_text} 」是縮網址\n目前縮網址已失效\n"
+            keep_go_status = False
+            logger.info("縮網址失效")
+        # 讓他繼續Go下去
+        elif not result:
+            rmessage = f"「 {user_text} 」輸入錯誤\n"
+            result = ""
+            keep_go_status = False
+            logger.info("縮網址無資料")
+        elif not result.startswith("http"):
+            rmessage = f"「 {domain_name} 」是縮網址\n原始網址為\n「 {result} 」\n該連結為特殊APP網址\n需要特定APP才能啟動"
+            logger.info("縮網址為APP啟動網址")
+            keep_go_status = False
+        else:
+            rmessage = f"「 {domain_name} 」是縮網址\n原始網址為\n"
+            keep_go_status = True
+            logger.info("縮網址找到資料")
 
     return rmessage, result, keep_go_status
 
