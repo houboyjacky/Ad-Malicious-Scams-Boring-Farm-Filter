@@ -105,6 +105,8 @@ def get_server_ip(url, result_list, lock):
             if not is_get_first_country:
                 country = get_country_by_ip(ip)
                 country_str = Tools.translate_country(country)
+                if re.search("taiwan", country_str, re.IGNORECASE):
+                    country_str = f"台灣"
                 country_list.append(country_str)
                 logger.info(f"{ip} => {country}")
                 is_get_first_country = True
@@ -830,13 +832,13 @@ def user_query_website_by_IP(IP):
     country = get_country_by_ip(IP)
     country_str = Tools.translate_country(country)
 
-    if re.search("taiwan", country_str, re.IGNORECASE):
-        country_str = f"台灣"
-
     if country_str == "Unknown" or not country_str:
         output = f"伺服器位置：{country}\n"
     else:
         output = f"伺服器位置：{country_str}\n"
+
+    if re.search("taiwan", output, re.IGNORECASE):
+        output = f"伺服器位置：台灣"
 
     if check_blacklisted_site(IP):
         rmessage = (f"「 {IP} 」\n\n"
