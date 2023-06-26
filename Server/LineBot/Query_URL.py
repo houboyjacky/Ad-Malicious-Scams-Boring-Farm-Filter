@@ -880,7 +880,6 @@ def user_query_website_by_DNS(domain_name, result_list, lock):
     whois_domain = ""
     whois_creation_date = ""
     whois_country = ""
-    whois_registrant_country = ""
     whois_query_error = False
     # 檢查全域列表是否存在相同的網址
     for item in whois_list:
@@ -896,15 +895,14 @@ def user_query_website_by_DNS(domain_name, result_list, lock):
                 whois_domain = item['whois_domain']
                 whois_creation_date = item['whois_creation_date']
                 whois_country = item['whois_country']
-                whois_registrant_country = item['whois_registrant_country']
 
     if not w:
         # 從 WHOIS 服務器獲取 WHOIS 信息
         try:
-            w = whois.whois(domain_name)
-            logger.info(w)
+            w = whois.query(domain_name)
+            logger.info(w.__dict__)
             # 儲存查詢結果到全域列表
-            whois_domain = w.domain_name
+            whois_domain = w.name
             if not w.creation_date:
                 whois_creation_date = None
             elif isinstance(w.creation_date, list):
@@ -913,14 +911,12 @@ def user_query_website_by_DNS(domain_name, result_list, lock):
             else:
                 whois_creation_date = Tools.datetime_to_string(w.creation_date)
 
-            whois_country = w.country
-            whois_registrant_country = w.registrant_count
+            whois_country = w.registrant_country
             whois_list.append({
                 '網址': domain_name,
                 'whois_domain': whois_domain,
                 'whois_creation_date': whois_creation_date,
                 'whois_country':whois_country,
-                'whois_registrant_country':whois_registrant_country,
                 '日期': datetime.now().strftime('%Y%m%d')
             })
             Tools.write_json_file(Tools.WHOIS_QUERY_LIST, whois_list)
@@ -933,7 +929,6 @@ def user_query_website_by_DNS(domain_name, result_list, lock):
         result_list.append(("whois_domain",whois_domain))
         result_list.append(("whois_creation_date",whois_creation_date))
         result_list.append(("whois_country",whois_country))
-        result_list.append(("whois_registrant_country",whois_registrant_country))
     return
 
 def thread_check_blacklisted_site(domain_name, result_list, lock):
@@ -962,7 +957,6 @@ def user_query_website(user_text):
 
     #解析網址
     subdomain, domain, suffix = Tools.domain_analysis(user_text)
-
     if not domain or not suffix:
         rmessage = f"\n「 {user_text} 」\n無法構成網址\n請重新輸入"
         return rmessage
@@ -1004,7 +998,6 @@ def user_query_website(user_text):
     whois_domain = results['whois_domain']
     whois_creation_date = results['whois_creation_date']
     whois_country = results['whois_country']
-    whois_registrant_country = results['whois_registrant_country']
     checkresult = results['checkresult']
 
     end_time = time.time()
@@ -1065,12 +1058,6 @@ def user_query_website(user_text):
         country_str = Tools.translate_country(whois_country)
         if country_str == "Unknown" or not country_str:
             rmessage_country = f"註冊國家：{whois_country}\n"
-        else:
-            rmessage_country = f"註冊國家：{country_str}\n"
-    elif whois_registrant_country:
-        country_str = Tools.translate_country(whois_registrant_country)
-        if country_str == "Unknown" or not country_str:
-            rmessage_country = f"註冊國家：{whois_registrant_country}\n"
         else:
             rmessage_country = f"註冊國家：{country_str}\n"
     else:
