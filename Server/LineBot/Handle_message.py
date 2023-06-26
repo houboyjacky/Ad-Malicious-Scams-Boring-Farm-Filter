@@ -374,7 +374,7 @@ def handle_message_text_game(user_id, user_text) -> str:
         if not site:
             rmessage = f"目前暫停檢舉遊戲喔~"
         else:
-            rmessage = f"請開始你的檢舉遊戲\n{site}\n若「完成」請回報「完成」\n若「失效」請回傳「失效」"
+            rmessage = f"請開始你的檢舉遊戲\n下列網址是詐騙帳號\n點開後找到檢舉進行檢舉\n\n{site}\n若「完成」請回報「完成」\n若「失效」請回傳「失效」"
         return rmessage
 
     if user_text == "完成":
