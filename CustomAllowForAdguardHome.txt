@@ -68,5 +68,8 @@
 @@||wikifx.com^$important
 ! 工作資訊分享
 @@||goodjob.life^$important
+! 其他排除
 @@||happyschool.fun^$important
 @@||capitalfutures.com.tw^$important
+@@||etherscan.io^$important
+@@||51miz.com^$important
