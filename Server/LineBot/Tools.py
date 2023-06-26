@@ -255,6 +255,8 @@ def Clear_List_Checker(filename: str, blacklists) -> None:
     return
 
 def domain_analysis(url):
+    if " " in url:
+        url = url.replace(" ","")
     extracted = tldextract.extract(url)
     subdomain = extracted.subdomain.lower()
     domain = extracted.domain.lower()
