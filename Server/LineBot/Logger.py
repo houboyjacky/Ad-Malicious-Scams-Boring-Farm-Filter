@@ -28,7 +28,7 @@ import Tools
 
 # 設定logger
 logger = logging.getLogger(__name__)
-logger.setLevel(logging.WARNING)
+logger.setLevel(logging.INFO)
 
 # 設定其格式
 log_formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
