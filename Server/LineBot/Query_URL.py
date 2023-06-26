@@ -824,6 +824,10 @@ whois_list = []
 def user_query_website_by_IP(IP):
     country = get_country_by_ip(IP)
     country_str = Tools.translate_country(country)
+
+    if re.search("taiwan", country_str, re.IGNORECASE):
+        country_str = f"台灣"
+
     if country_str == "Unknown" or not country_str:
         output = f"伺服器位置：{country}\n"
     else:
