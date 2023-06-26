@@ -876,7 +876,6 @@ def handle_message_text(event):
 
     # 讀取使用者傳來的文字訊息
     orgin_text = event.message.text.strip()
-    lower_text = orgin_text.lower()
 
     # 長度控管、備用指南、電話、網站排行榜
     if rmessage := handle_message_text_front(orgin_text):
