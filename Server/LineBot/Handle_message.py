@@ -39,7 +39,7 @@ from Query_Instagram import IG_read_file, IG_write_file, get_ig_list_len, get_ra
 from Query_Line_ID import user_query_lineid, user_add_lineid
 from Query_Line_Invite import lineinvite_write_file, lineinvite_read_file, get_line_invites_list_len, get_random_line_invite_blacklist, push_random_line_invite_blacklist
 from Query_Mail import user_query_mail, user_add_mail
-from Query_SmallRedBook import get_SmallRedBook_list_len, SmallRedBook_write_file, SmallRedBook_read_file, get_random_SmallRedBook_blacklist, push_random_SmallRedBook_blacklist
+from Query_SmallRedBook import get_SmallRedBook_list_len, SmallRedBook_write_file, SmallRedBook_read_file, get_random_SmallRedBook_blacklist, push_random_SmallRedBook_blacklist, SmallRedBook_delete_document
 from Query_Telegram import user_query_telegram_id, user_add_telegram_id
 from Query_Tiktok import Tiktok_write_file, Tiktok_read_file, push_random_Tiktok_blacklist, get_random_Tiktok_blacklist, get_Tiktok_list_len
 from Query_Twitter import Twitter_read_file, Twitter_write_file, get_Twitter_list_len, get_random_Twitter_blacklist, push_random_Twitter_blacklist
@@ -229,6 +229,8 @@ def handle_message_text_admin_sub(orgin_text):
         rmessage = Tiktok_write_file(orgin_text)
     elif match := re.search(Tools.KEYWORD_SMALLREDBOOK[1], orgin_text):
         rmessage = SmallRedBook_write_file(orgin_text)
+    elif match := re.search(Tools.KEYWORD_SMALLREDBOOK[2], orgin_text):
+        rmessage = SmallRedBook_delete_document(orgin_text)
     elif match := re.search(Tools.KEYWORD_URL[0], lower_text):
 
         # 直接使用IP連線
@@ -263,7 +265,7 @@ def handle_message_text_admin_sub(orgin_text):
         text = match.group(1)
         update_part_blacklist_comment(text)
         rmessage = f"網址黑名單成功加入註解「 {text} 」"
-    elif orgin_text.startswith("加入"):
+    elif orgin_text.startswith("加入") or orgin_text.startswith("刪除"):
         rmessage = f"管理員指令參數有誤，請重新確認"
     else:
         rmessage = None
@@ -324,6 +326,8 @@ def handle_message_text_admin(user_id, orgin_text):
             url = line.replace("批次", "").strip()
             msg = handle_message_text_admin_sub(url)
             rmessage += f"{msg}\n\n"
+    elif orgin_text.startswith("刪除") and not Tools.IsOwner(user_id):
+        pass
     else: # 一般加入
         rmessage = handle_message_text_admin_sub(orgin_text)
 

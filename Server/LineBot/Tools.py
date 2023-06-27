@@ -19,13 +19,17 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 '''
+
 from datetime import datetime
 from filelock import FileLock
 import json
 import os
 import pycountry
+import pymongo
 import re
 import tldextract
+
+db_client = ""
 
 with open('setting.json', 'r') as f:
     setting = json.load(f)
@@ -78,6 +82,9 @@ VIRTUAL_MONEY_BLACKLIST = setting['VIRTUAL_MONEY_BLACKLIST']    # VIRTUAL_MONEY_
 WEB_LEADERBOARD_FILE = setting['WEB_LEADERBOARD_FILE']          # WEB_LEADERBOARD_FILE => Query Website times leaderboard from file
 WHATSAPP_BLACKLIST = setting['WHATSAPP_BLACKLIST']              # WHATSAPP_BLACKLIST => Blacklist for WhatsApp
 WHOIS_QUERY_LIST = setting['WHOIS_QUERY_LIST']                  # WHOIS_QUERY_LIST => Save whois data
+MONGODB_USER = setting['MONGODB_USER']                          # MONGODB_USER => MONGODB User Name
+MONGODB_PWD = setting['MONGODB_PWD']                            # MONGODB_PWD => MONGODB Password
+MONGODB_URL = setting['MONGODB_URL']                            # MONGODB_URL => MONGODB Url
 
 def reloadSetting():
     global ADMINS, BackupDIR, BLACKUSERID, CERT, CHANNEL_ACCESS_TOKEN
@@ -90,7 +97,7 @@ def reloadSetting():
     global TWITTER_BLACKLIST, KEYWORD_TWITTER, KEYWORD_MAIL, MAIL_BLACKLIST, KEYWORD_WHATSAPP
     global WHATSAPP_BLACKLIST, KEYWORD_TIKTOK, TIKTOK_BLACKLIST, SMALLREDBOOK_LIST
     global KEYWORD_SMALLREDBOOK, VIRTUAL_MONEY_BLACKLIST, KEYWORD_VIRTUAL_MONEY
-    global HTTP_HEADERS
+    global HTTP_HEADERS, MONGODB_USER, MONGODB_PWD, MONGODB_URL
     global setting
 
     setting = ''
@@ -145,11 +152,19 @@ def reloadSetting():
     WEB_LEADERBOARD_FILE = setting['WEB_LEADERBOARD_FILE']
     WHATSAPP_BLACKLIST = setting['WHATSAPP_BLACKLIST']
     WHOIS_QUERY_LIST = setting['WHOIS_QUERY_LIST']
+    MONGODB_USER = setting['MONGODB_USER']
+    MONGODB_PWD = setting['MONGODB_PWD']
+    MONGODB_URL = setting['MONGODB_URL']
 
     return
 
 def IsAdmin(ID):
     if ID in ADMINS:
+        return True
+    return False
+
+def IsOwner(ID):
+    if ID == ADMINS[0]:
         return True
     return False
 
@@ -262,3 +277,33 @@ def domain_analysis(url):
     domain = extracted.domain.lower()
     suffix = extracted.suffix.lower()
     return subdomain, domain, suffix
+
+def Login_db():
+    global db_client
+    login_string = f"mongodb://{MONGODB_USER}:{MONGODB_PWD}@{MONGODB_URL}"
+    db_client = pymongo.MongoClient(login_string)
+    return
+
+def Load_db(db_name, collection_name):
+    global db_client
+    db = db_client[db_name]
+    collection = db[collection_name]
+    return collection
+
+def Query_db(collection, tagname, value):
+    document = collection.find_one({tagname:value})
+    return document
+
+def Insert_db(collection, struct):
+    document = collection.insert_one(struct)
+    return document
+
+def Update_db(collection, filter, update):
+    update_result = collection.update_one(filter, update)
+    return update_result
+
+def Delete_db(collection, filter):
+    update_result = collection.delete_one(filter)
+    return update_result
+
+Login_db()
