@@ -31,24 +31,24 @@ def SignMobileconfig():
         logger.info(f'The {Tools.PEM_DIR} is NOT exist in your system.')
         return False
 
-    if os.path.isdir(Tools.BackupDIR):
-        shutil.rmtree(Tools.BackupDIR)
+    if os.path.isdir(Tools.BACKUPDIR):
+        shutil.rmtree(Tools.BACKUPDIR)
 
-    shutil.move(Tools.TARGET_DIR, Tools.BackupDIR)
+    shutil.move(Tools.TARGET_DIR, Tools.BACKUPDIR)
     os.makedirs(Tools.TARGET_DIR)
 
-    if not os.path.isdir(Tools.MobileConfigDIR):
-        logger.info(f'The {Tools.MobileConfigDIR} is NOT exist in your system.')
+    if not os.path.isdir(Tools.MOBILECONFIGDIR):
+        logger.info(f'The {Tools.MOBILECONFIGDIR} is NOT exist in your system.')
         return False
 
     subprocess.run(['openssl', 'ec', '-in', f'{Tools.PEM_DIR}/privkey.pem', '-out', f'{Tools.TARGET_DIR}/Self_Key.key'], check=True)
 
-    filelist = os.listdir(Tools.MobileConfigDIR)
+    filelist = os.listdir(Tools.MOBILECONFIGDIR)
     for filename in filelist:
         extension = filename.split('.')[-1]
         if extension == 'mobileconfig':
             #logger.info(f'Sign {filename} Start')
-            subprocess.run(['openssl', 'smime', '-sign', '-in', f'{Tools.MobileConfigDIR}/{filename}', '-out', f'{Tools.TARGET_DIR}/{filename}', '-signer', f'{Tools.PEM_DIR}/fullchain.pem', '-inkey', f'{Tools.TARGET_DIR}/Self_Key.key', '-certfile', f'{Tools.PEM_DIR}/chain.pem', '-outform', 'der', '-nodetach'], check=True)
+            subprocess.run(['openssl', 'smime', '-sign', '-in', f'{Tools.MOBILECONFIGDIR}/{filename}', '-out', f'{Tools.TARGET_DIR}/{filename}', '-signer', f'{Tools.PEM_DIR}/fullchain.pem', '-inkey', f'{Tools.TARGET_DIR}/Self_Key.key', '-certfile', f'{Tools.PEM_DIR}/chain.pem', '-outform', 'der', '-nodetach'], check=True)
             #logger.info(f'Sign {Tools.TARGET_DIR}/{filename} Finish')
 
     logger.info("SignMobileconfig Finish")

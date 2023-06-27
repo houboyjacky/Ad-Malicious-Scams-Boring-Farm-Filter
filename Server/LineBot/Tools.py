@@ -37,7 +37,7 @@ with open('setting.json', 'r') as f:
 # 讀取設定檔
 ADMINS = setting['ADMIN']                                       # ADMIN => Linebot Admin
 ALLOW_DOMAIN_LIST = setting['ALLOW_DOMAIN_LIST']                # ALLOW_DOMAIN_LIST => Allow Domain can't add blacklist
-BackupDIR = setting['CONFIG_BACKUP']                            # Backup Signed mobileconfig
+BACKUPDIR = setting['CONFIG_BACKUP']                            # Backup Signed mobileconfig
 BLACKUSERID = setting['BLACKUSERID']                            # BLACKUSERID => BLACK USER
 CERT = setting['CERT']                                          # CERT => Lets Encrypt Certificate Path File
 CHANNEL_ACCESS_TOKEN = setting['CHANNEL_ACCESS_TOKEN']          # CHANNEL_ACCESS_TOKEN => Linebot Token
@@ -62,7 +62,7 @@ LINEID_LOCAL = setting['LINEID_LOCAL']                          # LINEID_LOCAL =
 LINEID_WEB = setting['LINEID_WEB']                              # LINEID_WEB => Line ID from Web
 LOGFILE = setting['LOGFILE']                                    # LOGFILE => Log File Path
 MAIL_BLACKLIST = setting['MAIL_BLACKLIST']                      # MAIL_BLACKLIST => Mail Black List
-MobileConfigDIR = setting['CONFIG_ORIGIN']                      # Modify mobileconfig
+MOBILECONFIGDIR = setting['CONFIG_ORIGIN']                      # Modify mobileconfig
 NETIZEN = setting['NETIZEN']                                    # NETIZEN => Netizen Report
 NEW_SCAM_WEBSITE_FOR_ADG = setting['BLACKLISTFORADG']           # BLACKLISTFORADG => Blacklist for Adguard Home Download
 NOTICE_BOARD = setting['NOTICE_BOARD']                          # NOTICE_BOARD => NOTICE BOARD
@@ -87,10 +87,10 @@ MONGODB_PWD = setting['MONGODB_PWD']                            # MONGODB_PWD =>
 MONGODB_URL = setting['MONGODB_URL']                            # MONGODB_URL => MONGODB Url
 
 def reloadSetting():
-    global ADMINS, BackupDIR, BLACKUSERID, CERT, CHANNEL_ACCESS_TOKEN
+    global ADMINS, BACKUPDIR, BLACKUSERID, CERT, CHANNEL_ACCESS_TOKEN
     global CHANNEL_SECRET, FB_BLACKLIST, HASH_FILE, IG_BLACKLIST, KEYWORD_FB
     global KEYWORD_IG, KEYWORD_LINE, KEYWORD_TELEGRAM, KEYWORD_URL, LINEID_LOCAL
-    global LINEID_WEB, LINE_INVITE, LOGFILE, MobileConfigDIR, NETIZEN
+    global LINEID_WEB, LINE_INVITE, LOGFILE, MOBILECONFIGDIR, NETIZEN
     global NEW_SCAM_WEBSITE_FOR_ADG, NOTICE_BOARD, NOTICE_BOARD_LIST, PEM_DIR, PRIVKEY
     global SCAM_WEBSITE_LIST, SHORT_URL_LIST, SPECIAL_SUBWEBSITE, TARGET_DIR, TELEGRAM_LOCAL
     global USER_POINT, WEB_LEADERBOARD_FILE, WHOIS_QUERY_LIST, ALLOW_DOMAIN_LIST
@@ -107,7 +107,7 @@ def reloadSetting():
     #重讀設定檔
     ADMINS = setting['ADMIN']
     ALLOW_DOMAIN_LIST = setting['ALLOW_DOMAIN_LIST']
-    BackupDIR = setting['CONFIG_BACKUP']
+    BACKUPDIR = setting['CONFIG_BACKUP']
     BLACKUSERID = setting['BLACKUSERID']
     CERT = setting['CERT']
     CHANNEL_ACCESS_TOKEN = setting['CHANNEL_ACCESS_TOKEN']
@@ -132,7 +132,7 @@ def reloadSetting():
     LINEID_WEB = setting['LINEID_WEB']
     LOGFILE = setting['LOGFILE']
     MAIL_BLACKLIST = setting['MAIL_BLACKLIST']
-    MobileConfigDIR = setting['CONFIG_ORIGIN']
+    MOBILECONFIGDIR = setting['CONFIG_ORIGIN']
     NETIZEN = setting['NETIZEN']
     NEW_SCAM_WEBSITE_FOR_ADG = setting['BLACKLISTFORADG']
     NOTICE_BOARD = setting['NOTICE_BOARD']
