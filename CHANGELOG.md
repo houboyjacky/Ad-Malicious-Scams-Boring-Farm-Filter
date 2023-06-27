@@ -1,6 +1,7 @@
 # 歷史更新 History Update
 
 * 20230627 Update
+  * 調整 當查詢不到資料避開錯誤
   * 調整 遇到空白仍進行判斷url
 
 * 20230626 Update

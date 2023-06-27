@@ -890,6 +890,9 @@ def user_query_website_by_DNS(domain_name, result_list, lock):
             if time_diff.days >= 30:
                 w = None
                 whois_list.remove(item)
+            elif not item['whois_creation_date']:
+                w = None
+                whois_list.remove(item)
             else:
                 w = True
                 whois_domain = item['whois_domain']
@@ -900,26 +903,27 @@ def user_query_website_by_DNS(domain_name, result_list, lock):
         # 從 WHOIS 服務器獲取 WHOIS 信息
         try:
             w = whois.query(domain_name)
-            logger.info(w.__dict__)
-            # 儲存查詢結果到全域列表
-            whois_domain = w.name
-            if not w.creation_date:
-                whois_creation_date = None
-            elif isinstance(w.creation_date, list):
-                parsed_dates = [date_obj for date_obj in w.creation_date]
-                whois_creation_date = Tools.datetime_to_string(min(parsed_dates))
-            else:
-                whois_creation_date = Tools.datetime_to_string(w.creation_date)
+            if w:
+                logger.info(w.__dict__)
+                # 儲存查詢結果到全域列表
+                whois_domain = w.name
+                if not w.creation_date:
+                    whois_creation_date = None
+                elif isinstance(w.creation_date, list):
+                    parsed_dates = [date_obj for date_obj in w.creation_date]
+                    whois_creation_date = Tools.datetime_to_string(min(parsed_dates))
+                else:
+                    whois_creation_date = Tools.datetime_to_string(w.creation_date)
 
-            whois_country = w.registrant_country
-            whois_list.append({
-                '網址': domain_name,
-                'whois_domain': whois_domain,
-                'whois_creation_date': whois_creation_date,
-                'whois_country':whois_country,
-                '日期': datetime.now().strftime('%Y%m%d')
-            })
-            Tools.write_json_file(Tools.WHOIS_QUERY_LIST, whois_list)
+                whois_country = w.registrant_country
+                whois_list.append({
+                    '網址': domain_name,
+                    'whois_domain': whois_domain,
+                    'whois_creation_date': whois_creation_date,
+                    'whois_country':whois_country,
+                    '日期': datetime.now().strftime('%Y%m%d')
+                })
+                Tools.write_json_file(Tools.WHOIS_QUERY_LIST, whois_list)
         except Exception as e: # 判斷原因 whois.parser.PywhoisError: No match for "FXACAP.COM"
             whois_query_error = True
             logger.error(f"An error occurred: {e}")
@@ -946,7 +950,6 @@ def user_query_website(user_text):
     whois_domain = ""
     whois_creation_date = ""
     whois_country = ""
-    whois_registrant_country = ""
     whois_query_error = False
     lock = threading.Lock()
 
