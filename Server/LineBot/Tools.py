@@ -71,7 +71,6 @@ PEM_DIR = setting['PEM_DIR']                                    # PEM_DIR => Let
 PRIVKEY = setting['PRIVKEY']                                    # PRIVKEY => Lets Encrypt Private Key Path File
 SCAM_WEBSITE_LIST = setting['SCAM_WEBSITE_LIST']                # SCAM_WEBSITE_LIST => SCAM WEBSITE LIST
 SHORT_URL_LIST = setting['SHORT_URL_LIST']                      # SHORT_URL_LIST => Short url list
-SMALLREDBOOK_LIST = setting['SMALLREDBOOK_LIST']                # SMALLREDBOOK_LIST => SMALL RED BOOK LIST
 SPECIAL_SUBWEBSITE = setting['SPECIAL_SUBWEBSITE']              # SPECIAL_SUBWEBSITE => Special Subwebsite need to block sub website
 TARGET_DIR = setting['CONFIG_SIGN']                             # New Signed mobileconfig
 TELEGRAM_LOCAL = setting['TELEGRAM_LOCAL']                      # TELEGRAM_LOCAL => Blacklist for Blacklist
@@ -95,7 +94,7 @@ def reloadSetting():
     global SCAM_WEBSITE_LIST, SHORT_URL_LIST, SPECIAL_SUBWEBSITE, TARGET_DIR, TELEGRAM_LOCAL
     global USER_POINT, WEB_LEADERBOARD_FILE, WHOIS_QUERY_LIST, ALLOW_DOMAIN_LIST
     global TWITTER_BLACKLIST, KEYWORD_TWITTER, KEYWORD_MAIL, MAIL_BLACKLIST, KEYWORD_WHATSAPP
-    global WHATSAPP_BLACKLIST, KEYWORD_TIKTOK, TIKTOK_BLACKLIST, SMALLREDBOOK_LIST
+    global WHATSAPP_BLACKLIST, KEYWORD_TIKTOK, TIKTOK_BLACKLIST
     global KEYWORD_SMALLREDBOOK, VIRTUAL_MONEY_BLACKLIST, KEYWORD_VIRTUAL_MONEY
     global HTTP_HEADERS, MONGODB_USER, MONGODB_PWD, MONGODB_URL
     global setting
@@ -141,7 +140,6 @@ def reloadSetting():
     PRIVKEY = setting['PRIVKEY']
     SCAM_WEBSITE_LIST = setting['SCAM_WEBSITE_LIST']
     SHORT_URL_LIST = setting['SHORT_URL_LIST']
-    SMALLREDBOOK_LIST = setting['SMALLREDBOOK_LIST']
     SPECIAL_SUBWEBSITE = setting['SPECIAL_SUBWEBSITE']
     TARGET_DIR = setting['CONFIG_SIGN']
     TELEGRAM_LOCAL = setting['TELEGRAM_LOCAL']

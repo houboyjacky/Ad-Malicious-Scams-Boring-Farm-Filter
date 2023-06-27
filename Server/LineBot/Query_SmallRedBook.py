@@ -155,7 +155,7 @@ def get_random_SmallRedBook_blacklist(UserID) -> str:
     return site
 
 def push_random_SmallRedBook_blacklist(UserID, success, disappear):
-    global SmallRedBook_Record_players, SmallRedBook_list
+    global SmallRedBook_Record_players
     found = False
     for record in SmallRedBook_Record_players:
         if record['檢查者'] == UserID:
@@ -182,4 +182,3 @@ def push_random_SmallRedBook_blacklist(UserID, success, disappear):
         logger.info("找不到檢查者")
 
     return found
-
