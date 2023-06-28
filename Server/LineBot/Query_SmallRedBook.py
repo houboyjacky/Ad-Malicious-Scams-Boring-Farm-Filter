@@ -174,9 +174,11 @@ def push_random_SmallRedBook_blacklist(UserID, success, disappear):
         if success:
             times = result['回報次數'] + 1
             update = {"$set": {'回報次數': times}}
+            write_user_point(UserID, 1)
         if disappear:
             times = result['失效'] + 1
             update = {"$set": {'失效': times}}
+            write_user_point(UserID, 1)
         Tools.Update_db(collection, filter, update)
     else:
         logger.info("找不到檢查者")
