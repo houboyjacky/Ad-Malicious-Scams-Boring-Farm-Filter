@@ -23,7 +23,7 @@ THE SOFTWARE.
 from bs4 import BeautifulSoup
 from datetime import date
 from Logger import logger
-from Query_Line_ID import user_add_lineid, user_query_lineid
+from Query_Line_ID import LineID_write_file, LineID_read_file
 from Query_URL import resolve_redirects
 from typing import Optional
 import Query_API
@@ -110,9 +110,9 @@ def lineinvite_write_file(user_text:str):
     rmessage = ""
     if analyze:
         if "@" in analyze["帳號"]:
-            user_add_lineid(analyze["帳號"])
+            LineID_write_file(analyze["帳號"].replace("~",""))
         elif "~" in analyze["帳號"]:
-            user_add_lineid(analyze["帳號"])
+            LineID_write_file(analyze["帳號"])
 
         if Query_API.Search_Same_Document(collection,"帳號", analyze['帳號']):
             logger.info("分析完成，找到相同資料")
@@ -138,8 +138,7 @@ def lineinvite_read_file(user_text:str):
         if Query_API.Search_Same_Document(collection,"帳號", analyze['帳號']):
             logger.info("分析完成，找到相同資料")
             status = 1
-        elif user_query_lineid(analyze["帳號"]):
-            logger.info("分析完成，找到相同資料")
+        elif LineID_read_file(analyze["帳號"]):
             status = 1
         else:
             logger.info("分析完成，找不到相同資料")
@@ -158,8 +157,7 @@ def lineinvite_delete_document(user_text:str):
         if Query_API.Search_Same_Document(collection,"帳號", analyze['帳號']):
             Query_API.Delete_document(collection,analyze,C_Name)
             rmessage = f"LINE邀請網址黑名單成功刪除帳號\n「 {analyze['帳號'] }」"
-        elif user_query_lineid(analyze["帳號"]):
-            logger.info("分析完成，找到相同資料")
+        elif LineID_read_file(analyze["帳號"]):
             rmessage = f"LINE邀請網址黑名單成功刪除帳號\n「 {analyze['帳號'] }」"
         else:
             logger.info("分析完成，找不到相同資料")

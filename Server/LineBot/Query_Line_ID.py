@@ -20,76 +20,112 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 '''
 
-import hashlib
-import requests
-import time
-import os
+from datetime import date
 from Logger import logger
+from typing import Optional
+import os
+import Query_API
+import requests
 import Tools
 
-lineid_list = []
-lineid_download_hash = None
-lineid_download_last_time = 0
+DB_Name = "LINE"
+C_Name = "LINE_ID"
 
-# 使用者下載Line ID
-def user_download_lineid():
-    global lineid_list, lineid_download_hash, lineid_download_last_time
-    url = Tools.LINEID_WEB.strip()
-    if lineid_list:
-        if time.time() - lineid_download_last_time < 3600:
-            return
+def LINE_ID_Download_From_165():
+    global DB_Name, C_Name
+    lineid_list = []
+    Local_file = os.path.basename(Tools.LINEID_WEB)
+    Local_file_path = f"config/{Local_file}"
+    Local_file_hash = Tools.calculate_hash(Local_file_path)
+    IsFind = False
 
-    response = requests.get(url)
-    if response.status_code != 200:
-        logger.error("Download Line ID Fail")
+    if not Tools.remote_hash_dict:
+        Tools.hashes_download()
+
+    for remote_file_name, remote_file_hash in Tools.remote_hash_dict.items():
+        if remote_file_name == Local_file:
+            if remote_file_hash != Local_file_hash:
+                response = requests.get(Tools.LINEID_WEB)
+                if response.status_code != 200:
+                    logger.error("Download Line ID Fail")
+                    return
+                logger.info("Download Line ID Finish")
+                lineid_list = response.text.splitlines()
+                with open(Local_file_path, "w", encoding="utf-8") as f:
+                    f.write('\n'.join(lineid_list))
+                IsFind = True
+                break
+            else:
+                logger.info("Not Need Download Line ID")
+                return
+
+    if not IsFind:
+        logger.info("Not find remote_file_name")
         return
 
-    new_hash = hashlib.md5(response.text.encode('utf-8')).hexdigest()
-    if new_hash == lineid_download_hash:
-        return
+    collection = Query_API.Read_DB(DB_Name,C_Name)
 
-    lineid_download_hash = new_hash
-    lineid_list = response.text.splitlines()
-    lineid_download_last_time = time.time()
+    documents_to_insert = []
+    datetime = date.today().strftime("%Y-%m-%d")
 
-    filename = f"config/{os.path.basename(Tools.LINEID_WEB)}"
-    with open(filename, "w", encoding="utf-8") as f:
-        f.write('\n'.join(lineid_list))
+    for line in lineid_list:
+        document = collection.find_one({"帳號": line})
+        if document:
+            continue
 
-    logger.info("Download Line ID Finish")
+        if "@" in line:
+            Type = "官方LINE"
+        else:
+            Type = "LINE ID"
 
-    with open(Tools.LINEID_LOCAL, "r", encoding="utf-8") as f:
-        lineid_local = f.read().splitlines()
+        source = "165反詐騙"
 
-    lineid_list = sorted(set(lineid_list + lineid_local))
-    return
+        document = {    "類別": Type,
+                        "帳號": line,
+                        "來源": source,
+                        "加入日期": datetime
+                    }
+        documents_to_insert.append(document)
 
-# 使用者查詢Line ID
-def user_query_lineid(lineid):
-    global lineid_list
-    user_download_lineid()
-    # 檢查是否符合命名規範
-    if lineid in lineid_list:
-        return True
-    return False
+    if documents_to_insert:
+        collection.insert_many(documents_to_insert)
 
-# 加入詐騙Line ID
-def user_add_lineid(text):
-    global lineid_list
-    if not os.path.exists(Tools.LINEID_LOCAL):
-        with open(Tools.LINEID_LOCAL, 'w', encoding='utf-8', newline='') as f:
-            pass
-
-    with open(Tools.LINEID_LOCAL, "r", encoding="utf-8") as f:
-        lineid_local = f.read().splitlines()
-
-    # 加入text並去除重複
-    lineid_local = list(set(lineid_local + [text]))
-
-    # 寫回LINEID_LOCAL
-    with open(Tools.LINEID_LOCAL, "w", encoding="utf-8", newline='') as f:
-        f.write('\n'.join(sorted(lineid_local)))
-
-    lineid_list = sorted(set(lineid_list + lineid_local))
+    logger.info("Load 165 Line ID to Database")
 
     return
+
+def analyze_LineID(user_text:str) -> Optional[dict]:
+
+    user_text = user_text.replace("加入","")
+    user_text = user_text.replace("刪除","")
+
+    logger.info(f"user_text: {user_text}")
+
+    logger.info(f"帳號: {user_text}")
+
+    datetime = date.today().strftime("%Y-%m-%d")
+
+    struct =  {"帳號": user_text, "來源": "report", "回報次數": 0, "失效": 0, "檢查者": "", "加入日期": datetime }
+
+    return struct
+
+def LineID_write_file(user_text:str):
+    global DB_Name, C_Name
+    collection = Query_API.Read_DB(DB_Name,C_Name)
+    analyze = analyze_LineID(user_text)
+    rmessage = Query_API.Write_Document(collection, analyze, C_Name)
+    return rmessage
+
+def LineID_read_file(user_text:str):
+    global DB_Name, C_Name
+    collection = Query_API.Read_DB(DB_Name,C_Name)
+    analyze = analyze_LineID(user_text)
+    rmessage, status = Query_API.Read_Document(collection,analyze,C_Name)
+    return rmessage, status
+
+def LineID_delete_document(user_text:str):
+    global DB_Name, C_Name
+    collection = Query_API.Read_DB(DB_Name,C_Name)
+    analyze = analyze_LineID(user_text)
+    rmessage = Query_API.Delete_document(collection,analyze,C_Name)
+    return rmessage

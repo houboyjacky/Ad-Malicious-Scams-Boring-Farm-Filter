@@ -36,7 +36,7 @@ from linebot import WebhookHandler
 from linebot.exceptions import InvalidSignatureError
 from linebot.models import MessageEvent
 from Logger import logger, Logger_Transfer
-from Query_Line_ID import user_download_lineid
+from Query_Line_ID import LINE_ID_Download_From_165
 from Query_URL import update_blacklist
 from Security_Check import get_cf_ips, download_cf_ips
 from SignConfig import SignMobileconfig
@@ -178,7 +178,7 @@ if __name__ == "__main__":
     signal.signal(signal.SIGTERM, signal_handler)
 
     SignMobileconfig()
-    user_download_lineid()
+    LINE_ID_Download_From_165()
     download_cf_ips()
     update_blacklist()
 

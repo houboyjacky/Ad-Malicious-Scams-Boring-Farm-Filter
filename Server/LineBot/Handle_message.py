@@ -36,7 +36,7 @@ from Point import read_user_point, get_user_rank
 from PrintText import user_guide, check_user_need_news, reload_user_record, reload_notice_board, return_notice_text, suffix_for_call
 from Query_Facebook import FB_read_file, FB_write_file, get_fb_list_len, get_random_fb_blacklist, push_random_fb_blacklist, FB_delete_document
 from Query_Instagram import IG_read_file, IG_write_file, get_ig_list_len, get_random_ig_blacklist, push_random_ig_blacklist, IG_delete_document
-from Query_Line_ID import user_query_lineid, user_add_lineid
+from Query_Line_ID import LineID_read_file, LineID_write_file, LineID_delete_document
 from Query_Line_Invite import lineinvite_write_file, lineinvite_read_file, get_line_invites_list_len, get_random_line_invite_blacklist, push_random_line_invite_blacklist, lineinvite_delete_document
 from Query_Mail import Mail_write_file, Mail_read_file, Mail_delete_document
 from Query_SmallRedBook import get_SmallRedBook_list_len, SmallRedBook_write_file, SmallRedBook_read_file, get_random_SmallRedBook_blacklist, push_random_SmallRedBook_blacklist, SmallRedBook_delete_document
@@ -151,19 +151,17 @@ def message_reply(event, text):
 
 # 管理員操作
 def handle_message_text_admin_sub(orgin_text):
-
     lower_text = orgin_text.lower()
     if re.match(Tools.KEYWORD_VIRTUAL_MONEY[1], orgin_text):
         rmessage = Virtual_Money_write_file(orgin_text)
     elif match := re.search(Tools.KEYWORD_LINE[0], lower_text):
-        # 取得文字
+        # 加入 LINE ID
         lineid = match.group(1)
-        if user_query_lineid(lineid):
-            rmessage = f"賴黑名單已存在「{lineid}」"
-        else:
-            # 加入新line id
-            user_add_lineid(lineid)
-            rmessage = f"賴黑名單成功加入「{lineid}」"
+        rmessage = LineID_write_file(lineid)
+    elif match := re.search(Tools.KEYWORD_LINE[8], lower_text):
+        # 刪除 LINE ID
+        lineid = match.group(1)
+        rmessage = LineID_delete_document(lineid)
     elif re.search(Tools.KEYWORD_LINE[2], lower_text):
         # 加入 LINE 網址
         rmessage = lineinvite_write_file(orgin_text)
@@ -469,35 +467,40 @@ def handle_message_text_sub(user_id, orgin_text):
             if phone.isdigit():
                 lineid = phone
             else:
-                rmessage = (f"所輸入的「{lineid}」\n"
+                rmessage = (f"所輸入的「 {lineid} 」\n"
                             f"不是正確的電話號碼\n"
                             f"台灣電話號碼09開頭\n"
                             f"其他國家請加上國碼\n"
                             f"例如香港+85261234567\n"
                             )
         elif " " in lineid:
-            rmessage = (f"所輸入的「{lineid}」\n"
+            rmessage = (f"所輸入的「 {lineid} 」\n"
                         f"包含不正確的空白符號\n"
                         f"請重新輸入\n"
                         )
-        if not rmessage:
-            if user_query_lineid(lineid):
-                rmessage = (f"所輸入的「{lineid}」\n"
-                            f"「是」詐騙/可疑Line ID\n"
-                            f"請勿輕易信任此Line ID的\n"
-                            f"文字、圖像、語音和連結\n"
-                            f"感恩")
-            else:
-                rmessage = (f"所輸入的「{lineid}」\n"
-                            f"目前不在詐騙黑名單中\n"
-                            f"但並不代表沒問題\n"
-                            f"\n"
-                            f"若該LINE ID\n"
-                            f"是「沒見過面」的「網友」\n"
-                            f"又能帶你一起賺錢或兼職\n"
-                            f"１００％就是有問題\n"
-                            f"\n"
-                            f"{suffix_for_call}")
+
+        message, status = LineID_read_file(lineid)
+        if status == -1:
+            rmessage = (f"所輸入的「 {lineid} 」\n"
+                        f"有誤、網址失效或不支援\n"
+                        f"感恩")
+        elif status == 1:
+            rmessage = (f"所輸入的「 {lineid} 」\n"
+                        f"「是」詐騙/可疑LINE ID\n"
+                        f"請勿輕易信任此LINE ID的\n"
+                        f"文字、圖像、語音和連結\n"
+                        f"感恩")
+        else:
+            rmessage = (f"所輸入的「 {lineid} 」\n"
+                        f"目前不在詐騙黑名單中\n"
+                        f"但並不代表沒問題\n"
+                        f"\n"
+                        f"若該LINE ID\n"
+                        f"是「沒見過面」的「網友」\n"
+                        f"又能帶你一起賺錢或兼職\n"
+                        f"１００％就是有問題\n"
+                        f"\n"
+                        f"{suffix_for_call}")
         return rmessage
 
     # 查詢Telegram ID

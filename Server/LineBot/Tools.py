@@ -21,11 +21,13 @@ THE SOFTWARE.
 '''
 
 from datetime import datetime
+import hashlib
 from filelock import FileLock
 import json
 import os
 import pycountry
 import re
+import requests
 import tldextract
 
 db_client = ""
@@ -275,3 +277,21 @@ def domain_analysis(url):
     suffix = extracted.suffix.lower()
     return subdomain, domain, suffix
 
+remote_hash_dict = {}
+
+def hashes_download():
+    global remote_hash_dict
+    remote_hash_dict = {}
+    # 下載 hashes.json
+    response = requests.get(HASH_FILE)
+    if response.status_code != 200:
+        return None
+
+    remote_hash_dict = json.loads(response.content)
+    return
+
+def calculate_hash(file_path):
+    with open(file_path, 'rb') as file:
+        content = file.read()
+        hash_value = hashlib.md5(content).hexdigest()
+        return hash_value

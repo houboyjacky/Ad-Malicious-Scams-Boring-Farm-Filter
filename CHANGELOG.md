@@ -1,6 +1,8 @@
 # 歷史更新 History Update
 
 * 20230629 Update
+  * 調整 架構
+  * 調整 LINE ID改為db操作
   * 調整 Mail改為db操作
 
 * 20230628 Update

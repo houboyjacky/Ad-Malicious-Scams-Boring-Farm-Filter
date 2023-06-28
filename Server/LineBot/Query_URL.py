@@ -485,29 +485,9 @@ def get_web_leaderboard():
         output += f"{i:02d}. \t{url}\t\t=>{count}次\n"
     return output
 
-def calculate_hash(file_path):
-    with open(file_path, 'rb') as file:
-        content = file.read()
-        hash_value = hashlib.md5(content).hexdigest()
-        return hash_value
-
 # ===============================================
 # 下載黑名單
 # ===============================================
-
-remote_hash_dict = {}
-
-def hashes_download():
-    global remote_hash_dict
-    # 下載 hashes.json
-    response = requests.get(Tools.HASH_FILE)
-    if response.status_code != 200:
-        logger.error(f"{Tools.HASH_FILE} download failed")
-        return None
-
-    remote_hash_dict = json.loads(response.content)
-    logger.info('Download Hashes Finish')
-    return
 
 def download_file(url):
     response = requests.get(url)
@@ -545,12 +525,12 @@ def check_download_file(url):
             logger.info(f"{Local_file_name} is fail to new download")
             return None
 
-    Local_file_hash = calculate_hash(Local_file_path)
+    Local_file_hash = Tools.calculate_hash(Local_file_path)
     #logger.info(f"Local_file_hash = [{Local_file_hash}]")
 
     # 如果檔案已存在，則比對hash值
     # 比較 hash 值
-    for remote_file_name, remote_file_hash in remote_hash_dict.items():
+    for remote_file_name, remote_file_hash in Tools.remote_hash_dict.items():
         #logger.info(f"remote_file_name = [{remote_file_name}]")
         #logger.info(f"remote_file_hash = [{remote_file_hash}]")
         if Local_file_name == remote_file_name:
@@ -620,7 +600,7 @@ def update_blacklist():
 
     is_running = True
 
-    hashes_download()
+    Tools.hashes_download()
 
     with open(Tools.SCAM_WEBSITE_LIST, "r") as f:
         urls = f.read().splitlines()
