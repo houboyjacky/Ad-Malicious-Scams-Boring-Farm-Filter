@@ -37,7 +37,7 @@ from PrintText import user_guide, check_user_need_news, reload_user_record, relo
 from Query_Facebook import FB_read_file, FB_write_file, get_fb_list_len, get_random_fb_blacklist, push_random_fb_blacklist
 from Query_Instagram import IG_read_file, IG_write_file, get_ig_list_len, get_random_ig_blacklist, push_random_ig_blacklist
 from Query_Line_ID import user_query_lineid, user_add_lineid
-from Query_Line_Invite import lineinvite_write_file, lineinvite_read_file, get_line_invites_list_len, get_random_line_invite_blacklist, push_random_line_invite_blacklist
+from Query_Line_Invite import lineinvite_write_file, lineinvite_read_file, get_line_invites_list_len, get_random_line_invite_blacklist, push_random_line_invite_blacklist, lineinvite_delete_document
 from Query_Mail import user_query_mail, user_add_mail
 from Query_SmallRedBook import get_SmallRedBook_list_len, SmallRedBook_write_file, SmallRedBook_read_file, get_random_SmallRedBook_blacklist, push_random_SmallRedBook_blacklist, SmallRedBook_delete_document
 from Query_Telegram import user_query_telegram_id, user_add_telegram_id
@@ -164,8 +164,12 @@ def handle_message_text_admin_sub(orgin_text):
             # 加入新line id
             user_add_lineid(lineid)
             rmessage = f"賴黑名單成功加入「{lineid}」"
-    elif match := re.search(Tools.KEYWORD_LINE[2], lower_text):
+    elif re.search(Tools.KEYWORD_LINE[2], lower_text):
+        # 加入 LINE 網址
         rmessage = lineinvite_write_file(orgin_text)
+    elif re.search(Tools.KEYWORD_LINE[7], lower_text):
+        # 刪除 LINE 網址
+        rmessage = lineinvite_delete_document(orgin_text)
     elif match := re.search(Tools.KEYWORD_IG[2], lower_text):
         rmessage = IG_write_file(orgin_text)
     elif match := re.search(Tools.KEYWORD_FB[3], lower_text):

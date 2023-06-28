@@ -21,33 +21,38 @@ THE SOFTWARE.
 '''
 
 from bs4 import BeautifulSoup
+from datetime import date
 from Logger import logger
-from Point import write_user_point
 from Query_Line_ID import user_add_lineid, user_query_lineid
 from Query_URL import resolve_redirects
 from typing import Optional
-import random
+import Query_API
 import re
 import requests
 import Tools
 
-line_invites_list = Tools.read_json_file(Tools.LINE_INVITE)
+DB_Name = "LINE"
+C_Name = "LINE_INVITE"
 
 def get_line_invites_list_len():
-    global line_invites_list
-    return len(line_invites_list)
+    global DB_Name, C_Name
+    document_count = Query_API.Get_DB_len(DB_Name,C_Name)
+    return document_count
 
 def analyze_line_invite_url(user_text:str) -> Optional[dict]:
 
     user_text = user_text.replace("加入", "")
     user_text = user_text.replace("%40", "@")
+    user_text = user_text.replace("刪除","")
 
     orgin_text = user_text
     lower_text = user_text.lower()
 
+    datetime = date.today().strftime("%Y-%m-%d")
+
     if match := re.search(Tools.KEYWORD_LINE[5], orgin_text):
         invite_code = match.group(1)
-        struct =  {"類別": "Voom", "識別碼": invite_code, "原始網址": orgin_text, "回報次數": 0, "失效": 0, "檢查者": ""}
+        struct =  {"類別": "Voom", "帳號": invite_code, "來源": orgin_text, "回報次數": 0, "失效": 0, "檢查者": "", "加入日期": datetime }
         logger.info(struct)
         return struct
     elif lower_text.startswith("https://liff.line.me"):
@@ -94,116 +99,85 @@ def analyze_line_invite_url(user_text:str) -> Optional[dict]:
         logger.error('無法解析類別')
         return None
 
-    struct =  {"類別": category, "帳號": "", "識別碼": invite_code, "原始網址": orgin_text, "回報次數": 0, "失效": 0, "檢查者": ""}
+    struct =  {"類別": category, "帳號": invite_code, "來源": orgin_text, "回報次數": 0, "失效": 0, "檢查者": "", "加入日期": datetime }
 
     return struct
 
-def add_sort_lineinvite(result):
-    global line_invites_list
-    # 查找是否有重複的識別碼和類別
-    for r in line_invites_list:
-        if r['識別碼'] == result['識別碼'] and r['類別'] == result['類別']:
-            return True
-    return False
-
 def lineinvite_write_file(user_text:str):
-    global line_invites_list
+    global DB_Name, C_Name
+    collection = Query_API.Read_DB(DB_Name,C_Name)
+    analyze = analyze_line_invite_url(user_text)
     rmessage = ""
-    if analyze := analyze_line_invite_url(user_text):
-        if "@" in analyze["識別碼"]:
-            user_add_lineid(analyze["識別碼"])
-        elif "~" in analyze["識別碼"]:
-            LineID = analyze["識別碼"].replace("~", "")
-            user_add_lineid(LineID)
+    if analyze:
+        if "@" in analyze["帳號"]:
+            user_add_lineid(analyze["帳號"])
+        elif "~" in analyze["帳號"]:
+            user_add_lineid(analyze["帳號"])
 
-        if add_sort_lineinvite(analyze):
+        if Query_API.Search_Same_Document(collection,"帳號", analyze['帳號']):
             logger.info("分析完成，找到相同資料")
-            rmessage = f"LINE邀請網址\n黑名單找到相同邀請碼\n「 {analyze['識別碼'] } 」"
+            rmessage = f"LINE邀請網址\n黑名單找到相同邀請碼\n「 {analyze['帳號'] } 」"
         else:
-            line_invites_list.append(analyze)
-            Tools.write_json_file(Tools.LINE_INVITE, line_invites_list)
+            Query_API.Write_Document(collection,analyze, C_Name)
             logger.info("分析完成，結果已寫入")
-            rmessage = f"LINE邀請網址\n黑名單成功加入邀請碼\n「 {analyze['識別碼'] } 」"
+            rmessage = f"LINE邀請網址\n黑名單成功加入邀請碼\n「 {analyze['帳號'] } 」"
     else:
         logger.info("無法分析網址")
         rmessage = f"LINE邀請網址加入失敗，無法分析網址"
+
     return rmessage
 
 def lineinvite_read_file(user_text:str):
-    global line_invites_list
+    global DB_Name, C_Name
     status = 0
+    collection = Query_API.Read_DB(DB_Name,C_Name)
+    analyze = analyze_line_invite_url(user_text)
     rmessage = ""
-    if analyze := analyze_line_invite_url(user_text):
-        rmessage = f"LINE邀請網址識別碼是\n「 {analyze['識別碼'] } 」"
-        if user_query_lineid(analyze["識別碼"]):
+    if analyze:
+        rmessage = f"LINE邀請網址識別碼是\n「 {analyze['帳號'] } 」"
+        if Query_API.Search_Same_Document(collection,"帳號", analyze['帳號']):
+            logger.info("分析完成，找到相同資料")
+            status = 1
+        elif user_query_lineid(analyze["帳號"]):
+            logger.info("分析完成，找到相同資料")
             status = 1
         else:
-            for invite in line_invites_list:
-                if invite["識別碼"] == analyze["識別碼"]:
-                    status = 1
-        if status:
-            logger.info("分析完成，找到相同資料")
-        else:
             logger.info("分析完成，找不到相同資料")
+            status = 0
     else:
         logger.info("LINE邀請網址查詢失敗")
         status = -1
     return rmessage, status
 
-LINE_INVITE_Record_players = []
+def lineinvite_delete_document(user_text:str):
+    global DB_Name, C_Name
+    collection = Query_API.Read_DB(DB_Name,C_Name)
+    analyze = analyze_line_invite_url(user_text)
+    rmessage = ""
+    if analyze:
+        if Query_API.Search_Same_Document(collection,"帳號", analyze['帳號']):
+            Query_API.Delete_document(collection,analyze,C_Name)
+            rmessage = f"LINE邀請網址黑名單成功刪除帳號\n「 {analyze['帳號'] }」"
+        elif user_query_lineid(analyze["帳號"]):
+            logger.info("分析完成，找到相同資料")
+            rmessage = f"LINE邀請網址黑名單成功刪除帳號\n「 {analyze['帳號'] }」"
+        else:
+            logger.info("分析完成，找不到相同資料")
+            rmessage = f"LINE邀請網址黑名單找不到帳號\n「 {analyze['帳號']} 」"
+    else:
+        logger.info("LINE邀請網址查詢失敗")
+        rmessage = f"LINE邀請網址黑名單刪除失敗，無法分析網址"
+
+    return rmessage
+
+Record_players = []
 
 def get_random_line_invite_blacklist(UserID) -> str:
-    global LINE_INVITE_Record_players
-    found = False
-    count = 0
-    while count < 1000:  # 最多找 1000 次，避免無限迴圈
-        line_invite_blacklist = random.choice(line_invites_list)
-        if line_invite_blacklist['檢查者'] == "" and line_invite_blacklist['失效'] < 50:
-            line_invite_blacklist['檢查者'] = UserID
-            found = True
-            break
-        count += 1
-
-    if found:
-        Tools.write_json_file(Tools.LINE_INVITE, line_invites_list)
-
-    Player = {'檢查者':UserID}
-
-    LINE_INVITE_Record_players.append(Player)
-
-    site = line_invite_blacklist['原始網址']
+    global DB_Name, C_Name, Record_players
+    site = Query_API.get_random_blacklist(Record_players, DB_Name, C_Name, UserID)
     return site
 
 def push_random_line_invite_blacklist(UserID, success, disappear):
-    global LINE_INVITE_Record_players
-    found = False
-    for record in LINE_INVITE_Record_players:
-        if record['檢查者'] == UserID:
-            found = True
-            LINE_INVITE_Record_players.remove(record)  # 移除該筆記錄
-            break
-
-    if not found:
-        #logger.info("資料庫選擇有誤或該使用者不存在資料庫中")
-        return found
-
-    found = False
-    for line_invite_blacklist in line_invites_list:
-        if line_invite_blacklist['檢查者'] == UserID:
-            line_invite_blacklist['檢查者'] = ""
-            if success:
-                line_invite_blacklist['回報次數'] += 1
-                write_user_point(UserID, 1)
-            if disappear:
-                line_invite_blacklist['失效'] += 1
-                write_user_point(UserID, 1)
-            found = True
-            break
-    if found:
-        Tools.write_json_file(Tools.LINE_INVITE, line_invites_list)
-    else:
-        logger.info("找不到檢查者")
-
+    global DB_Name, C_Name, Record_players
+    found = Query_API.push_random_blacklist(Record_players, DB_Name, C_Name, UserID, success, disappear)
     return found
-
-Tools.Clear_List_Checker(Tools.LINE_INVITE, line_invites_list)
