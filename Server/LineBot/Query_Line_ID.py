@@ -56,7 +56,6 @@ def LINE_ID_Download_From_165():
                 IsFind = True
                 break
             else:
-                logger.info("Not Need Download Line ID")
                 return
 
     if not IsFind:
@@ -95,6 +94,9 @@ def LINE_ID_Download_From_165():
     return
 
 def analyze_LineID(user_text:str) -> Optional[dict]:
+
+    # 分析前重新下載
+    LINE_ID_Download_From_165()
 
     user_text = user_text.replace("加入","")
     user_text = user_text.replace("刪除","")
