@@ -20,21 +20,24 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 '''
 
+from datetime import date
 from Logger import logger
-from Point import write_user_point
 from typing import Optional
-import random
+import Query_API
 import re
 import Tools
 
-FB_list = Tools.read_json_file(Tools.FB_BLACKLIST)
+Name = "Facebook"
 
 def get_fb_list_len():
-    global FB_list
-    return len(FB_list)
+    global Name
+    document_count = Query_API.Get_DB_len(Name,Name)
+    return document_count
 
 def analyze_FB_url(user_text:str) -> Optional[dict]:
 
+    user_text = user_text.replace("加入","")
+    user_text = user_text.replace("刪除","")
     logger.info(f"user_text: {user_text}")
 
     if match := re.search(Tools.KEYWORD_FB[0], user_text):
@@ -50,11 +53,10 @@ def analyze_FB_url(user_text:str) -> Optional[dict]:
         elif name.isdigit():
             Username = name
             logger.info("取得純數字ID")
-        elif "?" in name:
-            Username = name.split('?')[0]
-            logger.info("取得?以前的ID")
         elif "-" not in name:
             Username = name
+            if "?" in name:
+                Username = name.split('?')[0]
             logger.info("取得不含-的ID")
         else:
             return None
@@ -63,108 +65,41 @@ def analyze_FB_url(user_text:str) -> Optional[dict]:
 
     logger.info(f"Username = {Username}")
 
-    struct =  {"類別":"", "帳號": Username, "原始網址": user_text, "回報次數": 0, "失效": 0, "檢查者": ""}
+    datetime = date.today().strftime("%Y-%m-%d")
+
+    struct = { "帳號": Username, "來源": user_text, "回報次數": 0, "失效": 0, "檢查者": "", "加入日期": datetime }
 
     return struct
 
-def Search_Same_FB(input):
-    global FB_list
-    # 查找是否有重複的帳號
-    for r in FB_list:
-        if r['帳號'] == input['帳號']:
-            return True
-    return False
-
 def FB_write_file(user_text:str):
-    global FB_list
-
-    if analyze := analyze_FB_url(user_text):
-        if Search_Same_FB(analyze):
-            logger.info("分析完成，找到相同資料")
-            rmessage = f"FB黑名單找到相同帳號\n「 {analyze['帳號'] } 」"
-        else:
-            logger.info("分析完成，寫入結果")
-            FB_list.append(analyze)
-            Tools.write_json_file(Tools.FB_BLACKLIST, FB_list)
-            rmessage = f"FB黑名單成功加入帳號\n「 {analyze['帳號']} 」"
-    else:
-        logger.info("無法分析網址")
-        rmessage = f"FB黑名單加入失敗，無法分析網址"
-
+    global Name
+    collection = Query_API.Read_DB(Name,Name)
+    analyze = analyze_FB_url(user_text)
+    rmessage = Query_API.Write_Document(collection, analyze, Name)
     return rmessage
 
 def FB_read_file(user_text:str):
-    global FB_list
-    rmessage = ""
-    if analyze := analyze_FB_url(user_text):
-        rmessage = f"FB帳號\n「 {analyze['帳號'] } 」"
-
-        if Search_Same_FB(analyze):
-            logger.info("分析完成，找到相同資料")
-            status = 1
-        else:
-            logger.info("分析完成，找不到相同資料")
-            status = 0
-    else:
-        logger.info("FB黑名單查詢失敗")
-        status = -1
-
+    global Name
+    collection = Query_API.Read_DB(Name,Name)
+    analyze = analyze_FB_url(user_text)
+    rmessage, status = Query_API.Read_Document(collection,analyze,Name)
     return rmessage, status
 
-FB_Record_players = []
+def FB_delete_document(user_text:str):
+    global Name
+    collection = Query_API.Read_DB(Name,Name)
+    analyze = analyze_FB_url(user_text)
+    rmessage = Query_API.Delete_document(collection,analyze,Name)
+    return rmessage
+
+Record_players = []
 
 def get_random_fb_blacklist(UserID) -> str:
-    global FB_Record_players
-    found = False
-    count = 0
-    while count < 1000:  # 最多找 1000 次，避免無限迴圈
-        fb_blacklist = random.choice(FB_list)
-        if fb_blacklist['檢查者'] == "" and fb_blacklist['失效'] < 50:
-            fb_blacklist['檢查者'] = UserID
-            found = True
-            break
-        count += 1
-
-    if found:
-        Tools.write_json_file(Tools.FB_BLACKLIST, FB_list)
-
-    Player = {'檢查者':UserID}
-
-    FB_Record_players.append(Player)
-
-    site = fb_blacklist['原始網址']
+    global Name, Record_players
+    site = Query_API.get_random_blacklist(Record_players, Name, Name, UserID)
     return site
 
 def push_random_fb_blacklist(UserID, success, disappear):
-    global FB_Record_players
-    found = False
-    for record in FB_Record_players:
-        if record['檢查者'] == UserID:
-            found = True
-            FB_Record_players.remove(record)  # 移除該筆記錄
-            break
-
-    if not found:
-        #logger.info("資料庫選擇有誤或該使用者不存在資料庫中")
-        return found
-
-    found = False
-    for fb_blacklist in FB_list:
-        if fb_blacklist['檢查者'] == UserID:
-            fb_blacklist['檢查者'] = ""
-            if success:
-                fb_blacklist['回報次數'] += 1
-                write_user_point(UserID, 1)
-            if disappear:
-                fb_blacklist['失效'] += 1
-                write_user_point(UserID, 1)
-            found = True
-            break
-    if found:
-        Tools.write_json_file(Tools.FB_BLACKLIST, FB_list)
-    else:
-        logger.info("找不到檢查者")
-
+    global Name, Record_players
+    found = Query_API.push_random_blacklist(Record_players, Name, Name, UserID, success, disappear)
     return found
-
-Tools.Clear_List_Checker(Tools.FB_BLACKLIST, FB_list)

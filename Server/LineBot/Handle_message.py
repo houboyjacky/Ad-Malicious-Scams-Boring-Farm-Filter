@@ -34,7 +34,7 @@ from Logger import logger
 from PIL import Image
 from Point import read_user_point, get_user_rank
 from PrintText import user_guide, check_user_need_news, reload_user_record, reload_notice_board, return_notice_text, suffix_for_call
-from Query_Facebook import FB_read_file, FB_write_file, get_fb_list_len, get_random_fb_blacklist, push_random_fb_blacklist
+from Query_Facebook import FB_read_file, FB_write_file, get_fb_list_len, get_random_fb_blacklist, push_random_fb_blacklist, FB_delete_document
 from Query_Instagram import IG_read_file, IG_write_file, get_ig_list_len, get_random_ig_blacklist, push_random_ig_blacklist, IG_delete_document
 from Query_Line_ID import user_query_lineid, user_add_lineid
 from Query_Line_Invite import lineinvite_write_file, lineinvite_read_file, get_line_invites_list_len, get_random_line_invite_blacklist, push_random_line_invite_blacklist, lineinvite_delete_document
@@ -192,6 +192,8 @@ def handle_message_text_admin_sub(orgin_text):
         rmessage = IG_delete_document(url)
     elif match := re.search(Tools.KEYWORD_FB[3], lower_text):
         rmessage = FB_write_file(orgin_text)
+    elif match := re.search(Tools.KEYWORD_FB[5], lower_text):
+        rmessage = FB_delete_document(orgin_text)
     elif match := re.search(Tools.KEYWORD_TELEGRAM[1], orgin_text):
         # 取得文字
         telegram_id = match.group(1)
