@@ -42,7 +42,7 @@ from Query_Mail import user_query_mail, user_add_mail
 from Query_SmallRedBook import get_SmallRedBook_list_len, SmallRedBook_write_file, SmallRedBook_read_file, get_random_SmallRedBook_blacklist, push_random_SmallRedBook_blacklist, SmallRedBook_delete_document
 from Query_Telegram import user_query_telegram_id, user_add_telegram_id
 from Query_Tiktok import Tiktok_write_file, Tiktok_read_file, push_random_Tiktok_blacklist, get_random_Tiktok_blacklist, get_Tiktok_list_len, Tiktok_delete_document
-from Query_Twitter import Twitter_read_file, Twitter_write_file, get_Twitter_list_len, get_random_Twitter_blacklist, push_random_Twitter_blacklist
+from Query_Twitter import Twitter_read_file, Twitter_write_file, get_Twitter_list_len, get_random_Twitter_blacklist, push_random_Twitter_blacklist, Twitter_delete_document
 from Query_URL import user_query_website, check_blacklisted_site, get_web_leaderboard, update_part_blacklist_rule, user_query_shorturl, get_external_links, update_part_blacklist_comment, user_query_shorturl_normal
 from Query_Whatsapp import WhatsApp_write_file, WhatsApp_delete_document, WhatsApp_read_file
 from Query_VirtualMoney import Virtual_Money_read_file, Virtual_Money_write_file
@@ -194,12 +194,22 @@ def handle_message_text_admin_sub(orgin_text):
             # 加入新telegram id
             user_add_telegram_id(telegram_id)
             rmessage = f"Telegram黑名單成功加入「{telegram_id}」"
-    elif match := re.search(Tools.KEYWORD_TWITTER[1], lower_text): # Twitter ID
+    elif match := re.search(Tools.KEYWORD_TWITTER[1], lower_text):
+        # 加入Twitter ID
         twitter_id = match.group(1)
         url = f"https://twitter.com/{twitter_id}"
         rmessage = Twitter_write_file(url)
-    elif match := re.search(Tools.KEYWORD_TWITTER[3], lower_text): # 網址
+    elif re.search(Tools.KEYWORD_TWITTER[3], lower_text):
+        # 加入Twitter 網址
         rmessage = Twitter_write_file(orgin_text)
+    elif match := re.search(Tools.KEYWORD_TWITTER[4], lower_text):
+        # 刪除Twitter ID
+        twitter_id = match.group(1)
+        url = f"https://twitter.com/{twitter_id}"
+        rmessage = Twitter_delete_document(url)
+    elif re.search(Tools.KEYWORD_TWITTER[5], lower_text):
+        # 刪除Twitter 網址
+        rmessage = Twitter_delete_document(orgin_text)
     elif match := re.match(Tools.KEYWORD_MAIL[1], lower_text):
         mail = match.group(1)
         if user_query_mail(mail):
@@ -504,7 +514,7 @@ def handle_message_text_sub(user_id, orgin_text):
                         f"感恩")
         elif status == 1:
             rmessage = (f"所輸入的「 {twitter_id} 」\n\n"
-                        f"「是」已知詐騙/可疑的Twitter ID\n"
+                        f"「是」已知詐騙/可疑的Twitter ID\n\n"
                         f"請勿輕易信任此Twitter ID的\n"
                         f"文字、圖像、語音和連結\n"
                         f"感恩")
@@ -697,8 +707,7 @@ def handle_message_text_sub(user_id, orgin_text):
         return rmessage
 
     # 查詢Twitter網址
-    if match := re.search(Tools.KEYWORD_TWITTER[2], lower_text):
-        twitter_id = match.group(1)
+    if re.match(Tools.KEYWORD_TWITTER[2], lower_text):
         message, status = Twitter_read_file(orgin_text)
         if prefix_msg:
             prefix_msg = f"{prefix_msg}「 {orgin_text} 」\n"
@@ -711,13 +720,13 @@ def handle_message_text_sub(user_id, orgin_text):
                         f"感恩")
         elif status == 1:
             rmessage = (f"{prefix_msg}{message}\n\n"
-                        f"「是」已知詐騙/可疑的Twitter ID\n"
-                        f"請勿輕易信任此Twitter ID的\n"
+                        f"「是」已知詐騙/可疑的Twitter\n\n"
+                        f"請勿輕易信任此Twitter的\n"
                         f"文字、圖像、語音和連結\n"
                         f"感恩")
         else:
             rmessage = (f"{prefix_msg}{message}\n\n"
-                        f"「不是」已知詐騙/可疑的Twitter ID\n"
+                        f"「不是」已知詐騙/可疑的Twitter\n"
                         f"但並不代表沒問題\n"
                         f"\n"
                         f"若該Twitter帳號的貼文\n"
