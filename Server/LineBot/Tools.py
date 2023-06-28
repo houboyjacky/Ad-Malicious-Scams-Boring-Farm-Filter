@@ -25,7 +25,6 @@ from filelock import FileLock
 import json
 import os
 import pycountry
-import pymongo
 import re
 import tldextract
 
@@ -276,32 +275,3 @@ def domain_analysis(url):
     suffix = extracted.suffix.lower()
     return subdomain, domain, suffix
 
-def Login_db():
-    global db_client
-    login_string = f"mongodb://{MONGODB_USER}:{MONGODB_PWD}@{MONGODB_URL}"
-    db_client = pymongo.MongoClient(login_string)
-    return
-
-def Load_db(db_name, collection_name):
-    global db_client
-    db = db_client[db_name]
-    collection = db[collection_name]
-    return collection
-
-def Query_db(collection, tagname, value):
-    document = collection.find_one({tagname:value})
-    return document
-
-def Insert_db(collection, struct):
-    document = collection.insert_one(struct)
-    return document
-
-def Update_db(collection, filter, update):
-    update_result = collection.update_one(filter, update)
-    return update_result
-
-def Delete_db(collection, filter):
-    update_result = collection.delete_one(filter)
-    return update_result
-
-Login_db()
