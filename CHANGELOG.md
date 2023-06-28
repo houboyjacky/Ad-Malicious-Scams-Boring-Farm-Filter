@@ -3,7 +3,7 @@
 * 20230628 Update
   * 調整 小紅書參數
   * 調整 架構
-  * 調整 Tiktok改為db操作
+  * 調整 Tiktok、WhatsApp改為db操作
 
 * 20230627 Update
   * 移除 不需要的檔案

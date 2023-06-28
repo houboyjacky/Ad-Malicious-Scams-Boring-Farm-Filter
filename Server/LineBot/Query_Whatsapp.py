@@ -20,38 +20,57 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 '''
 
+from datetime import date
 from Logger import logger
+from typing import Optional
+import Query_API
+import re
 import Tools
 
-whatsapp_id_local = []
+Name = "WhatsApp"
 
-# 使用者載入 Whatsapp ID
-def read_whatsapp_id():
-    with open(Tools.WHATSAPP_BLACKLIST, "r", encoding="utf-8") as f:
-        List = f.read().splitlines()
-    return List
+def analyze_WhatsApp_url(user_text:str) -> Optional[dict]:
 
-# 使用者查詢 Whatsapp ID
-def user_query_whatsapp_id(Whatsapp_ID):
-    global whatsapp_id_local
-    # 檢查是否符合命名規範
-    if Whatsapp_ID in whatsapp_id_local:
-        return True
-    return False
+    user_text = user_text.replace("加入","")
+    user_text = user_text.replace("刪除","")
 
-# 加入詐騙 Whatsapp ID
-def user_add_whatsapp_id(text):
-    global whatsapp_id_local
+    logger.info(f"user_text: {user_text}")
 
-    # 將輸入值寫入whatsapp_id_local列表最後端
-    whatsapp_id_local.append(text)
+    if match := re.search(Tools.KEYWORD_WHATSAPP[0], user_text):
+        Username = match.group(1)
+    elif match := re.search(Tools.KEYWORD_WHATSAPP[2], user_text):
+        Username = match.group(1)
+    else:
+        return None
 
-    whatsapp_id_local = list(set(whatsapp_id_local))
+    if "+" in Username:
+        Username = Username.replace("+","")
 
-    # 將更新後的whatsapp_id_local寫回檔案
-    with open(Tools.WHATSAPP_BLACKLIST, "w", encoding="utf-8") as f:
-        for whatsapp_id in whatsapp_id_local:
-            f.write(whatsapp_id + "\n")
-    return
+    logger.info(f"帳號: {Username}")
 
-whatsapp_id_local = read_whatsapp_id()
+    datetime = date.today().strftime("%Y-%m-%d")
+
+    struct =  {"帳號": Username, "來源": user_text, "回報次數": 0, "失效": 0, "檢查者": "", "加入日期": datetime }
+
+    return struct
+
+def WhatsApp_write_file(user_text:str):
+    global Name
+    collection = Query_API.Read_DB(Name)
+    analyze = analyze_WhatsApp_url(user_text)
+    rmessage = Query_API.Write_Document(collection, analyze, Name)
+    return rmessage
+
+def WhatsApp_read_file(user_text:str):
+    global Name
+    collection = Query_API.Read_DB(Name)
+    analyze = analyze_WhatsApp_url(user_text)
+    rmessage, status = Query_API.Read_Document(collection,analyze,Name)
+    return rmessage, status
+
+def WhatsApp_delete_document(user_text:str):
+    global Name
+    collection = Query_API.Read_DB(Name)
+    analyze = analyze_WhatsApp_url(user_text)
+    rmessage = Query_API.Delete_document(collection,analyze,Name)
+    return rmessage
