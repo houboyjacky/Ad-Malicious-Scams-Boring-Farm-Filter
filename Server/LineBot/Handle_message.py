@@ -38,7 +38,7 @@ from Query_Facebook import FB_read_file, FB_write_file, get_fb_list_len, get_ran
 from Query_Instagram import IG_read_file, IG_write_file, get_ig_list_len, get_random_ig_blacklist, push_random_ig_blacklist, IG_delete_document
 from Query_Line_ID import user_query_lineid, user_add_lineid
 from Query_Line_Invite import lineinvite_write_file, lineinvite_read_file, get_line_invites_list_len, get_random_line_invite_blacklist, push_random_line_invite_blacklist, lineinvite_delete_document
-from Query_Mail import user_query_mail, user_add_mail
+from Query_Mail import Mail_write_file, Mail_read_file, Mail_delete_document
 from Query_SmallRedBook import get_SmallRedBook_list_len, SmallRedBook_write_file, SmallRedBook_read_file, get_random_SmallRedBook_blacklist, push_random_SmallRedBook_blacklist, SmallRedBook_delete_document
 from Query_Telegram import Telegram_read_file, Telegram_write_file, Telegram_delete_document
 from Query_Tiktok import Tiktok_write_file, Tiktok_read_file, push_random_Tiktok_blacklist, get_random_Tiktok_blacklist, get_Tiktok_list_len, Tiktok_delete_document
@@ -229,12 +229,11 @@ def handle_message_text_admin_sub(orgin_text):
         # 刪除Twitter 網址
         rmessage = Twitter_delete_document(orgin_text)
     elif match := re.match(Tools.KEYWORD_MAIL[1], lower_text):
-        mail = match.group(1)
-        if user_query_mail(mail):
-            rmessage = f"Email黑名單已存在「 {mail} 」"
-        else:
-            user_add_mail(mail)
-            rmessage = f"Email黑名單成功加入「 {mail} 」"
+        # 加入 Mail
+        rmessage = Mail_write_file(lower_text)
+    elif match := re.match(Tools.KEYWORD_MAIL[2], lower_text):
+        # 刪除 Mail
+        rmessage = Mail_delete_document(lower_text)
     elif re.search(Tools.KEYWORD_WHATSAPP[1], orgin_text) or re.search(Tools.KEYWORD_WHATSAPP[3], orgin_text):
         # 加入WhatsApp
         rmessage = WhatsApp_write_file(orgin_text)
@@ -559,15 +558,20 @@ def handle_message_text_sub(user_id, orgin_text):
 
     # 查詢 Email
     if re.match(Tools.KEYWORD_MAIL[0], lower_text):
-        if user_query_mail(lower_text):
-            rmessage = (f"所輸入的\n「{lower_text}」\n"
-                        f"「是」詐騙/可疑E-mail\n"
+        message, status = Mail_read_file(orgin_text)
+        if status == -1:
+            rmessage = (f"所輸入的「 {lower_text} 」\n"
+                        f"有誤、失效或不支援\n"
+                        f"感恩")
+        elif status == 1:
+            rmessage = (f"所輸入的「 {lower_text} 」\n\n"
+                        f"「是」已知詐騙/可疑的E-mail\n\n"
                         f"請勿輕易信任此E-mail的\n"
                         f"文字、圖像、語音和連結\n"
                         f"感恩")
         else:
-            rmessage = (f"所輸入的\n「{lower_text}」\n"
-                        f"目前不在詐騙黑名單中\n"
+            rmessage = (f"所輸入的「 {lower_text} 」\n\n"
+                        f"「不是」已知詐騙/可疑的E-mail\n"
                         f"但並不代表沒問題\n"
                         f"\n"
                         f"{suffix_for_call}")

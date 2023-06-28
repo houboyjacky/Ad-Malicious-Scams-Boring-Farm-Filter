@@ -20,38 +20,43 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 '''
 
+from datetime import date
 from Logger import logger
-import Tools
+from typing import Optional
+import Query_API
 
-mail_local = []
+def analyze_Mail_url(user_text:str) -> Optional[dict]:
 
-# 使用者載入Mail
-def read_mail():
-    with open(Tools.MAIL_BLACKLIST, "r", encoding="utf-8") as f:
-        List = f.read().splitlines()
-    return List
+    user_text = user_text.replace("加入","")
+    user_text = user_text.replace("刪除","")
 
-# 使用者查詢Mail
-def user_query_mail(TG_ID):
-    global mail_local
-    # 檢查是否符合命名規範
-    if TG_ID in mail_local:
-        return True
-    return False
+    logger.info(f"user_text: {user_text}")
 
-# 加入詐騙Mail
-def user_add_mail(text):
-    global mail_local
+    logger.info(f"帳號: {user_text}")
 
-    # 將輸入值寫入mail_local列表最後端
-    mail_local.append(text)
+    datetime = date.today().strftime("%Y-%m-%d")
 
-    mail_local = list(set(mail_local))
+    struct =  {"帳號": user_text, "來源": "report", "回報次數": 0, "失效": 0, "檢查者": "", "加入日期": datetime }
 
-    # 將更新後的mail_local寫回檔案
-    with open(Tools.MAIL_BLACKLIST, "w", encoding="utf-8") as f:
-        for mail in mail_local:
-            f.write(mail + "\n")
-    return
+    return struct
 
-mail_local = read_mail()
+def Mail_write_file(user_text:str):
+    global Name
+    collection = Query_API.Read_DB(Name,Name)
+    analyze = analyze_Mail_url(user_text)
+    rmessage = Query_API.Write_Document(collection, analyze, Name)
+    return rmessage
+
+def Mail_read_file(user_text:str):
+    global Name
+    collection = Query_API.Read_DB(Name,Name)
+    analyze = analyze_Mail_url(user_text)
+    rmessage, status = Query_API.Read_Document(collection,analyze,Name)
+    return rmessage, status
+
+def Mail_delete_document(user_text:str):
+    global Name
+    collection = Query_API.Read_DB(Name,Name)
+    analyze = analyze_Mail_url(user_text)
+    rmessage = Query_API.Delete_document(collection,analyze,Name)
+    return rmessage

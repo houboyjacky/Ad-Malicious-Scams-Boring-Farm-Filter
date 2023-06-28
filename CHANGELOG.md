@@ -1,5 +1,8 @@
 # 歷史更新 History Update
 
+* 20230629 Update
+  * 調整 Mail改為db操作
+
 * 20230628 Update
   * 調整 小紅書參數
   * 調整 架構
