@@ -3,6 +3,7 @@
 * 20230628 Update
   * 調整 小紅書參數
   * 調整 架構
+  * 調整 IG改為db操作
   * 調整 LINE網址改為db操作
   * 調整 Tiktok改為db操作
   * 調整 Twitter改為db操作

@@ -35,7 +35,7 @@ from PIL import Image
 from Point import read_user_point, get_user_rank
 from PrintText import user_guide, check_user_need_news, reload_user_record, reload_notice_board, return_notice_text, suffix_for_call
 from Query_Facebook import FB_read_file, FB_write_file, get_fb_list_len, get_random_fb_blacklist, push_random_fb_blacklist
-from Query_Instagram import IG_read_file, IG_write_file, get_ig_list_len, get_random_ig_blacklist, push_random_ig_blacklist
+from Query_Instagram import IG_read_file, IG_write_file, get_ig_list_len, get_random_ig_blacklist, push_random_ig_blacklist, IG_delete_document
 from Query_Line_ID import user_query_lineid, user_add_lineid
 from Query_Line_Invite import lineinvite_write_file, lineinvite_read_file, get_line_invites_list_len, get_random_line_invite_blacklist, push_random_line_invite_blacklist, lineinvite_delete_document
 from Query_Mail import user_query_mail, user_add_mail
@@ -171,15 +171,27 @@ def handle_message_text_admin_sub(orgin_text):
         # 刪除 LINE 網址
         rmessage = lineinvite_delete_document(orgin_text)
     elif match := re.search(Tools.KEYWORD_IG[2], lower_text):
+        # 加入 IG 網址
         rmessage = IG_write_file(orgin_text)
-    elif match := re.search(Tools.KEYWORD_FB[3], lower_text):
-        rmessage = FB_write_file(orgin_text)
     elif match := re.search(Tools.KEYWORD_IG[4], orgin_text):
+        # 加入 IG ID
         ig_account = match.group(1).lower()
         logger.info(f"ig_account = {ig_account}")
         url = f"https://www.instagram.com/{ig_account}/"
         logger.info(f"url = {url}")
         rmessage = IG_write_file(url)
+    elif match := re.search(Tools.KEYWORD_IG[5], lower_text):
+        # 刪除 IG 網址
+        rmessage = IG_delete_document(orgin_text)
+    elif match := re.search(Tools.KEYWORD_IG[6], orgin_text):
+        # 刪除 IG ID
+        ig_account = match.group(1).lower()
+        logger.info(f"ig_account = {ig_account}")
+        url = f"https://www.instagram.com/{ig_account}/"
+        logger.info(f"url = {url}")
+        rmessage = IG_delete_document(url)
+    elif match := re.search(Tools.KEYWORD_FB[3], lower_text):
+        rmessage = FB_write_file(orgin_text)
     elif match := re.search(Tools.KEYWORD_TELEGRAM[1], orgin_text):
         # 取得文字
         telegram_id = match.group(1)
@@ -381,7 +393,8 @@ def handle_message_text_game(user_id, user_text) -> str:
         return rmessage
 
     if user_text == "遊戲":
-        site = Random_get_List(user_id)
+        #site = Random_get_List(user_id)
+        site = ""
         if not site:
             rmessage = f"目前暫停檢舉遊戲喔~"
         else:
