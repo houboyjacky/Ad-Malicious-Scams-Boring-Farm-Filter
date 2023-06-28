@@ -20,38 +20,55 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 '''
 
+from datetime import date
 from Logger import logger
+from typing import Optional
+import Query_API
+import re
 import Tools
 
-telegram_id_local = []
+Name = "Telegram"
 
-# 使用者載入Telegram ID
-def read_telegram_id():
-    with open(Tools.TELEGRAM_LOCAL, "r", encoding="utf-8") as f:
-        List = f.read().splitlines()
-    return List
+def analyze_Telegram_url(user_text:str) -> Optional[dict]:
 
-# 使用者查詢Telegram ID
-def user_query_telegram_id(TG_ID):
-    global telegram_id_local
-    # 檢查是否符合命名規範
-    if TG_ID in telegram_id_local:
-        return True
-    return False
+    user_text = user_text.replace("加入","")
+    user_text = user_text.replace("刪除","")
 
-# 加入詐騙Telegram ID
-def user_add_telegram_id(text):
-    global telegram_id_local
+    logger.info(f"user_text: {user_text}")
 
-    # 將輸入值寫入telegram_id_local列表最後端
-    telegram_id_local.append(text)
+    if match := re.search(Tools.KEYWORD_TELEGRAM[2], user_text):
+        Username = match.group(1)
+    else:
+        return None
 
-    telegram_id_local = list(set(telegram_id_local))
+    Username = Username.replace("@","")
+    Username = Username.lower()
 
-    # 將更新後的telegram_id_local寫回檔案
-    with open(Tools.TELEGRAM_LOCAL, "w", encoding="utf-8") as f:
-        for telegram_id in telegram_id_local:
-            f.write(telegram_id + "\n")
-    return
+    logger.info(f"帳號: {Username}")
 
-telegram_id_local = read_telegram_id()
+    datetime = date.today().strftime("%Y-%m-%d")
+
+    struct =  {"帳號": Username, "來源": user_text, "回報次數": 0, "失效": 0, "檢查者": "", "加入日期": datetime }
+
+    return struct
+
+def Telegram_write_file(user_text:str):
+    global Name
+    collection = Query_API.Read_DB(Name,Name)
+    analyze = analyze_Telegram_url(user_text)
+    rmessage = Query_API.Write_Document(collection, analyze, Name)
+    return rmessage
+
+def Telegram_read_file(user_text:str):
+    global Name
+    collection = Query_API.Read_DB(Name,Name)
+    analyze = analyze_Telegram_url(user_text)
+    rmessage, status = Query_API.Read_Document(collection,analyze,Name)
+    return rmessage, status
+
+def Telegram_delete_document(user_text:str):
+    global Name
+    collection = Query_API.Read_DB(Name,Name)
+    analyze = analyze_Telegram_url(user_text)
+    rmessage = Query_API.Delete_document(collection,analyze,Name)
+    return rmessage

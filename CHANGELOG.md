@@ -6,6 +6,7 @@
   * 調整 FB改為db操作
   * 調整 IG改為db操作
   * 調整 LINE網址改為db操作
+  * 調整 Telegram改為db操作
   * 調整 Tiktok改為db操作
   * 調整 Twitter改為db操作
   * 調整 WhatsApp改為db操作

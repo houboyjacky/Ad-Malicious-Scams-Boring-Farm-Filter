@@ -40,7 +40,7 @@ from Query_Line_ID import user_query_lineid, user_add_lineid
 from Query_Line_Invite import lineinvite_write_file, lineinvite_read_file, get_line_invites_list_len, get_random_line_invite_blacklist, push_random_line_invite_blacklist, lineinvite_delete_document
 from Query_Mail import user_query_mail, user_add_mail
 from Query_SmallRedBook import get_SmallRedBook_list_len, SmallRedBook_write_file, SmallRedBook_read_file, get_random_SmallRedBook_blacklist, push_random_SmallRedBook_blacklist, SmallRedBook_delete_document
-from Query_Telegram import user_query_telegram_id, user_add_telegram_id
+from Query_Telegram import Telegram_read_file, Telegram_write_file, Telegram_delete_document
 from Query_Tiktok import Tiktok_write_file, Tiktok_read_file, push_random_Tiktok_blacklist, get_random_Tiktok_blacklist, get_Tiktok_list_len, Tiktok_delete_document
 from Query_Twitter import Twitter_read_file, Twitter_write_file, get_Twitter_list_len, get_random_Twitter_blacklist, push_random_Twitter_blacklist, Twitter_delete_document
 from Query_URL import user_query_website, check_blacklisted_site, get_web_leaderboard, update_part_blacklist_rule, user_query_shorturl, get_external_links, update_part_blacklist_comment, user_query_shorturl_normal
@@ -191,27 +191,27 @@ def handle_message_text_admin_sub(orgin_text):
         logger.info(f"url = {url}")
         rmessage = IG_delete_document(url)
     elif match := re.search(Tools.KEYWORD_FB[3], lower_text):
+        # 加入 FB
         rmessage = FB_write_file(orgin_text)
     elif match := re.search(Tools.KEYWORD_FB[5], lower_text):
+        # 刪除 FB
         rmessage = FB_delete_document(orgin_text)
     elif match := re.search(Tools.KEYWORD_TELEGRAM[1], orgin_text):
-        # 取得文字
+        # 加入 Telegram ID
         telegram_id = match.group(1)
-        if user_query_telegram_id(telegram_id):
-            rmessage = f"Telegram黑名單已存在「{telegram_id}」"
-        else:
-            # 加入新telegram id
-            user_add_telegram_id(telegram_id)
-            rmessage = f"Telegram黑名單成功加入「{telegram_id}」"
+        url = f"https://t.me/{telegram_id}"
+        rmessage = Telegram_write_file(url)
     elif match := re.search(Tools.KEYWORD_TELEGRAM[3], orgin_text):
-        # 取得文字
+        # 加入 Telegram 網址
+        rmessage = Telegram_write_file(orgin_text)
+    elif match := re.search(Tools.KEYWORD_TELEGRAM[4], orgin_text):
+        # 刪除 Telegram ID
         telegram_id = match.group(1)
-        if user_query_telegram_id(telegram_id):
-            rmessage = f"Telegram黑名單已存在「{telegram_id}」"
-        else:
-            # 加入新telegram id
-            user_add_telegram_id(telegram_id)
-            rmessage = f"Telegram黑名單成功加入「{telegram_id}」"
+        url = f"https://t.me/{telegram_id}"
+        rmessage = Telegram_delete_document(url)
+    elif match := re.search(Tools.KEYWORD_TELEGRAM[5], orgin_text):
+        # 刪除 Telegram 網址
+        rmessage = Telegram_delete_document(orgin_text)
     elif match := re.search(Tools.KEYWORD_TWITTER[1], lower_text):
         # 加入Twitter ID
         twitter_id = match.group(1)
@@ -504,7 +504,13 @@ def handle_message_text_sub(user_id, orgin_text):
     # 查詢Telegram ID
     if match := re.search(Tools.KEYWORD_TELEGRAM[0], orgin_text):
         telegram_id = match.group(1)
-        if user_query_telegram_id(telegram_id):
+        url = f"https://t.me/{telegram_id}"
+        message, status = Telegram_read_file(url)
+        if status == -1:
+            rmessage = (f"所輸入的「 {telegram_id} 」\n"
+                        f"有誤、網址失效或不支援\n"
+                        f"感恩")
+        elif status == 1:
             rmessage = (f"所輸入的「{telegram_id}」\n"
                         f"「是」詐騙/可疑Telegram ID\n"
                         f"請勿輕易信任此Telegram ID的\n"
@@ -529,7 +535,7 @@ def handle_message_text_sub(user_id, orgin_text):
         message, status = Twitter_read_file(orgin_text)
         if status == -1:
             rmessage = (f"所輸入的「 {twitter_id} 」\n"
-                        f"Twitter網址有誤、網址失效或不支援\n"
+                        f"網址有誤、網址失效或不支援\n"
                         f"感恩")
         elif status == 1:
             rmessage = (f"所輸入的「 {twitter_id} 」\n\n"
@@ -569,8 +575,8 @@ def handle_message_text_sub(user_id, orgin_text):
 
     # 查詢line邀請網址
     if match := re.search(Tools.KEYWORD_LINE[6], orgin_text):
-        lower_text = match.group(1).lower()
         orgin_text = match.group(1)
+        lower_text = orgin_text.lower()
         logger.info(f"社群轉貼")
 
     # 防呆機制
@@ -701,19 +707,19 @@ def handle_message_text_sub(user_id, orgin_text):
     # 查詢Telegram網址
     if match := re.search(Tools.KEYWORD_TELEGRAM[2], lower_text):
         telegram_id = match.group(1)
-        if prefix_msg:
-            prefix_msg = f"{prefix_msg}「 {orgin_text} 」\nTelegram ID為\n"
-        else:
-            prefix_msg = f"所輸入的Telegram ID為\n"
-
-        if user_query_telegram_id(telegram_id):
-            rmessage = (f"{prefix_msg}「{telegram_id}」\n\n"
+        message, status = Telegram_read_file(orgin_text)
+        if status == -1:
+            rmessage = (f"所輸入的「 {telegram_id} 」\n"
+                        f"有誤、網址失效或不支援\n"
+                        f"感恩")
+        elif status == 1:
+            rmessage = (f"所輸入的「{telegram_id}」\n"
                         f"「是」詐騙/可疑Telegram ID\n"
                         f"請勿輕易信任此Telegram ID的\n"
                         f"文字、圖像、語音和連結\n"
                         f"感恩")
         else:
-            rmessage = (f"{prefix_msg}「{telegram_id}」\n\n"
+            rmessage = (f"所輸入的「{telegram_id}」\n"
                         f"目前不在詐騙黑名單中\n"
                         f"但並不代表沒問題\n"
                         f"\n"
