@@ -41,7 +41,7 @@ from Query_Line_Invite import lineinvite_write_file, lineinvite_read_file, get_l
 from Query_Mail import user_query_mail, user_add_mail
 from Query_SmallRedBook import get_SmallRedBook_list_len, SmallRedBook_write_file, SmallRedBook_read_file, get_random_SmallRedBook_blacklist, push_random_SmallRedBook_blacklist, SmallRedBook_delete_document
 from Query_Telegram import user_query_telegram_id, user_add_telegram_id
-from Query_Tiktok import Tiktok_write_file, Tiktok_read_file, push_random_Tiktok_blacklist, get_random_Tiktok_blacklist, get_Tiktok_list_len
+from Query_Tiktok import Tiktok_write_file, Tiktok_read_file, push_random_Tiktok_blacklist, get_random_Tiktok_blacklist, get_Tiktok_list_len, Tiktok_delete_document
 from Query_Twitter import Twitter_read_file, Twitter_write_file, get_Twitter_list_len, get_random_Twitter_blacklist, push_random_Twitter_blacklist
 from Query_URL import user_query_website, check_blacklisted_site, get_web_leaderboard, update_part_blacklist_rule, user_query_shorturl, get_external_links, update_part_blacklist_comment, user_query_shorturl_normal
 from Query_Whatsapp import user_add_whatsapp_id, user_query_whatsapp_id
@@ -227,12 +227,13 @@ def handle_message_text_admin_sub(orgin_text):
             rmessage = f"WhatsApp群組黑名單成功加入「{whatsapp_id}」"
     elif match := re.search(Tools.KEYWORD_TIKTOK[1], orgin_text):
         rmessage = Tiktok_write_file(orgin_text)
+    elif match := re.search(Tools.KEYWORD_TIKTOK[2], orgin_text):
+        rmessage = Tiktok_delete_document(orgin_text)
     elif match := re.search(Tools.KEYWORD_SMALLREDBOOK[1], orgin_text):
         rmessage = SmallRedBook_write_file(orgin_text)
     elif match := re.search(Tools.KEYWORD_SMALLREDBOOK[2], orgin_text):
         rmessage = SmallRedBook_delete_document(orgin_text)
     elif match := re.search(Tools.KEYWORD_URL[0], lower_text):
-
         # 直接使用IP連線
         if ipmatch := re.search(Tools.KEYWORD_URL[3], lower_text):
             domain_name = ipmatch.group(1)
