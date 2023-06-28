@@ -30,30 +30,30 @@ def Search_Same_Document(collection, tagname, value):
     result = MongoDB.Query_db(collection, tagname, value)
     return result
 
-def Read_DB(Name):
-    collection = MongoDB.Load_db(Name,Name)
+def Read_DB(DB_Name, Collection_Name):
+    collection = MongoDB.Load_db(DB_Name,Collection_Name)
     return collection
 
-def Delete_document(collection, analyze, Name):
+def Delete_document(collection, analyze, DB_Name):
     rmessage = ""
     if analyze:
         if Search_Same_Document(collection,"帳號", analyze['帳號']):
             logger.info("分析完成，找到相同資料")
             filer = {'帳號':analyze['帳號']}
             MongoDB.Delete_db(collection, filer)
-            rmessage = f"{Name}黑名單成功刪除帳號\n「 {analyze['帳號'] }」"
+            rmessage = f"{DB_Name}黑名單成功刪除帳號\n「 {analyze['帳號'] }」"
         else:
             logger.info("分析完成，找不到資料")
-            rmessage = f"{Name}黑名單找不到帳號\n「 {analyze['帳號']} 」"
+            rmessage = f"{DB_Name}黑名單找不到帳號\n「 {analyze['帳號']} 」"
     else:
         logger.info("無法分析網址")
-        rmessage = f"{Name}黑名單刪除失敗，無法分析網址"
+        rmessage = f"{DB_Name}黑名單刪除失敗，無法分析網址"
 
     return rmessage
 
-def Read_Document(collection, analyze, name):
+def Read_Document(collection, analyze, DB_Name):
     if analyze:
-        rmessage = f"{name}帳號\n「 {analyze['帳號'] } 」"
+        rmessage = f"{DB_Name}帳號\n「 {analyze['帳號'] } 」"
         if Search_Same_Document(collection,"帳號", analyze['帳號']):
             logger.info("分析完成，找到相同資料")
             status = 1
@@ -61,51 +61,40 @@ def Read_Document(collection, analyze, name):
             logger.info("分析完成，找不到相同資料")
             status = 0
     else:
-        logger.info("小紅書黑名單查詢失敗")
+        logger.info(f"{DB_Name}黑名單查詢失敗")
         status = -1
 
     return rmessage, status
 
-def Write_Document(collection, analyze, name):
+def Write_Document(collection, analyze, DB_Name):
     if analyze:
         if Search_Same_Document(collection,"帳號", analyze['帳號']):
             logger.info("分析完成，找到相同資料")
             if analyze['帳號']:
-                rmessage = f"{name}黑名單找到相同帳號\n「 {analyze['帳號'] }」"
+                rmessage = f"{DB_Name}黑名單找到相同帳號\n「 {analyze['帳號'] }」"
             else:
                 logger.info("資料有誤")
-                rmessage = f"{name}黑名單加入失敗，資料為空"
+                rmessage = f"{DB_Name}黑名單加入失敗，資料為空"
         else:
             logger.info("分析完成，寫入結果")
             MongoDB.Insert_db(collection,analyze)
-            rmessage = f"{name}黑名單成功加入帳號\n「 {analyze['帳號']} 」"
+            rmessage = f"{DB_Name}黑名單成功加入帳號\n「 {analyze['帳號']} 」"
     else:
         logger.info("無法分析網址")
-        rmessage = f"{name}黑名單加入失敗，無法分析網址"
+        rmessage = f"{DB_Name}黑名單加入失敗，無法分析網址"
 
     return rmessage
 
-def Get_DB_len(Name):
-    collection = Read_DB(Name)
+def Get_DB_len(DB_Name, Collection_Name):
+    collection = Read_DB(DB_Name, Collection_Name)
     document_count = collection.count_documents({})
     return document_count
 
 # 檢舉
 
-Record_players = {}
+def get_random_blacklist(Record_players, DB_Name, Collection_Name, UserID) -> str:
 
-def Record_players_Init(Name):
-    global Record_players
-    if Name in Record_players:
-        pass
-    else:
-        Record_players[Name] = {}
-    return
-
-def get_random_blacklist(Name, UserID) -> str:
-    global Record_players
-    Record_players_Init(Name)
-    collection = Read_DB(Name)
+    collection = Read_DB(DB_Name, Collection_Name)
     found = False
     count = 0
 
@@ -133,20 +122,18 @@ def get_random_blacklist(Name, UserID) -> str:
 
     Player = {'檢查者':UserID}
 
-    Record_players[Name].append(Player)
+    Record_players.append(Player)
 
     site = random_document['原始網址']
     return site
 
-def push_random_blacklist(Name, UserID, success, disappear):
-    global Record_players
-    Record_players_Init(Name)
-    collection = Read_DB(Name)
+def push_random_blacklist(Record_players, DB_Name, Collection_Name, UserID, success, disappear):
+    collection = Read_DB(DB_Name, Collection_Name)
     found = False
-    for record in Record_players[Name]:
+    for record in Record_players:
         if record['檢查者'] == UserID:
             found = True
-            Record_players[Name].remove(record)  # 移除該筆記錄
+            Record_players.remove(record)  # 移除該筆記錄
             break
 
     if not found:

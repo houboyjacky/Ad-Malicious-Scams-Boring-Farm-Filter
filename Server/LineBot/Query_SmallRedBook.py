@@ -31,7 +31,7 @@ Name = "小紅書"
 
 def get_SmallRedBook_list_len():
     global Name
-    document_count = Query_API.Get_DB_len(Name)
+    document_count = Query_API.Get_DB_len(Name,Name)
     return document_count
 
 def analyze_SmallRedBook_url(user_text:str) -> Optional[dict]:
@@ -56,31 +56,33 @@ def analyze_SmallRedBook_url(user_text:str) -> Optional[dict]:
 
 def SmallRedBook_write_file(user_text:str):
     global Name
-    collection = Query_API.Read_DB(Name)
+    collection = Query_API.Read_DB(Name,Name)
     analyze = analyze_SmallRedBook_url(user_text)
     rmessage = Query_API.Write_Document(collection, analyze, Name)
     return rmessage
 
 def SmallRedBook_read_file(user_text:str):
     global Name
-    collection = Query_API.Read_DB(Name)
+    collection = Query_API.Read_DB(Name,Name)
     analyze = analyze_SmallRedBook_url(user_text)
     rmessage, status = Query_API.Read_Document(collection,analyze,Name)
     return rmessage, status
 
 def SmallRedBook_delete_document(user_text:str):
     global Name
-    collection = Query_API.Read_DB(Name)
+    collection = Query_API.Read_DB(Name,Name)
     analyze = analyze_SmallRedBook_url(user_text)
     rmessage = Query_API.Delete_document(collection,analyze,Name)
     return rmessage
 
+Record_players = []
+
 def get_random_SmallRedBook_blacklist(UserID) -> str:
-    global Name
-    site = Query_API.get_random_blacklist(Name, UserID)
+    global Name, Record_players
+    site = Query_API.get_random_blacklist(Record_players, Name, Name, UserID)
     return site
 
 def push_random_SmallRedBook_blacklist(UserID, success, disappear):
-    global Name
-    found = Query_API.push_random_blacklist(Name, UserID, success, disappear)
+    global Name, Record_players
+    found = Query_API.push_random_blacklist(Record_players, Name, Name, UserID, success, disappear)
     return found
