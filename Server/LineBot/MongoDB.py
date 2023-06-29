@@ -23,6 +23,8 @@ THE SOFTWARE.
 import pymongo
 import Tools
 
+db_client = None
+
 def Login_db():
     global db_client
     login_string = f"mongodb://{Tools.MONGODB_USER}:{Tools.MONGODB_PWD}@{Tools.MONGODB_URL}"
@@ -34,6 +36,12 @@ def Load_db(db_name, collection_name):
     db = db_client[db_name]
     collection = db[collection_name]
     return collection
+
+def Load_dbs(db_name):
+    global db_client
+    db = db_client[db_name]
+    collection_objects = [db[collection_name] for collection_name in db.list_collection_names()]
+    return collection_objects
 
 def Query_db(collection, tagname, value):
     document = collection.find_one({tagname:value})

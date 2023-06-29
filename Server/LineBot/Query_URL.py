@@ -557,43 +557,68 @@ def check_download_file(url):
         #logger.info(f"{Local_file_name} is download")
     return Local_file_path
 
-whitelist = []
+# def old_read_rule(filename):
+    # global blacklist, whitelist
+    # with open(filename, "r", encoding="utf-8") as f:
+    #     lines = f.readlines()
+    #     for line in lines:
+    #         line = line.strip().lower()  # 轉換為小寫
+    #         if line.startswith('/^'):
+    #             continue  # 略過此行
+    #         elif line.startswith('||0.0.0.0'):
+    #             line = line[9:]  # 去除"||0.0.0.0"開頭的文字
+    #             line = line.split('^')[0]  # 去除^以後的文字
+    #             blacklist.append(line)
+    #         elif line.startswith('||'):
+    #             line = line[2:]  # 去除||開頭的文字
+    #             line = line.split('^')[0]  # 去除^以後的文字
+    #             if '.' not in line:
+    #                 line = '*.' + line
+    #             blacklist.append(line)
+    #         elif line.startswith('0.0.0.0 '):
+    #             line = line[8:]  # 去除"0.0.0.0 "開頭的文字
+    #             blacklist.append(line)
+    #         elif line.startswith('/'):
+    #             blacklist.append(line)
+    #         elif line.startswith('@@||'):
+    #             line = line[4:]
+    #             line = line.split('^')[0]  # 去除^以後的文字
+    #             whitelist.append(line)
+    #         else:
+    #             continue  # 忽略該行文字
+    # return
 
 def read_rule(filename):
-    global blacklist, whitelist
+    global blacklist
     with open(filename, "r", encoding="utf-8") as f:
         lines = f.readlines()
-        for line in lines:
-            line = line.strip().lower()  # 轉換為小寫
-            if line.startswith('/^'):
-                continue  # 略過此行
-            elif line.startswith('||0.0.0.0'):
-                line = line[9:]  # 去除"||0.0.0.0"開頭的文字
-                line = line.split('^')[0]  # 去除^以後的文字
-                blacklist.append(line)
-            elif line.startswith('||'):
-                line = line[2:]  # 去除||開頭的文字
-                line = line.split('^')[0]  # 去除^以後的文字
-                if '.' not in line:
-                    line = '*.' + line
-                blacklist.append(line)
-            elif line.startswith('0.0.0.0 '):
-                line = line[8:]  # 去除"0.0.0.0 "開頭的文字
-                blacklist.append(line)
-            elif line.startswith('/'):
-                blacklist.append(line)
-            elif line.startswith('@@||'):
-                line = line[4:]
-                line = line.split('^')[0]  # 去除^以後的文字
-                whitelist.append(line)
-            else:
-                continue  # 忽略該行文字
+
+    for line in lines:
+        line = line.strip().lower()  # 轉換為小寫
+        if line.startswith('/^'):
+            continue
+
+        if line.startswith('||0.0.0.0'):
+            line = line[9:]  # 去除"||0.0.0.0"開頭的文字
+            line = line.split('^')[0]  # 去除^以後的文字
+        elif line.startswith('0.0.0.0 '):
+            line = line[8:]  # 去除"0.0.0.0 "開頭的文字
+        elif line.startswith('||'):
+            line = line[2:]  # 去除||開頭的文字
+            line = line.split('^')[0]  # 去除^以後的文字
+            if '.' not in line:
+                line = '*.' + line
+
+        if line.startswith('/') or "*" in line:
+            blacklist.append(line)
+        else:
+            continue
     return
 
 is_running = False
 
 def update_blacklist():
-    global blacklist, whitelist
+    global blacklist
     global is_running
     if is_running:
         logger.info("Updating blacklist!")
@@ -647,32 +672,51 @@ def update_part_blacklist_comment(msg):
 # 黑名單判斷
 # ===============================================
 
-def check_blacklisted_site(user_text):
-    global blacklist, whitelist
+def check_blacklisted_site(domain_name):
 
-    if user_text in whitelist:
-        logger.info(f"{user_text}在白名單內")
-        return False
+    White_db = "網站白名單"
+    White_collections = Query_API.Read_DBs(White_db)
+
+    for collection in White_collections:
+        document = collection.find_one({"網址": domain_name})
+        if document:
+            logger.info(f"{domain_name}在DB白名單內")
+            return False
+
+    global blacklist
 
     for line in blacklist:
         line = line.strip().lower()  # 去除開頭或結尾的空白和轉成小寫
         if line.startswith("/") and line.endswith("/"):
             regex = re.compile(line[1:-1])
-            if regex.search(user_text):
+            if regex.search(domain_name):
+                logger.info(f"{domain_name}在黑名單內1")
                 return True
         elif "*" in line:
             regex = line.replace("*", ".+")
-            if re.fullmatch(regex, user_text):
+            if re.fullmatch(regex, domain_name):
                 # 特別有*號規則直接可以寫入Adguard規則
                 with open(Tools.NEW_SCAM_WEBSITE_FOR_ADG, "a", encoding="utf-8", newline='') as f:
-                    f.write(f"||{user_text}^\n")
+                    f.write(f"||{domain_name}^\n")
+                logger.info(f"{domain_name}在黑名單內2")
                 return True
-        elif user_text == line:
+        elif domain_name == line:
+            logger.info(f"{domain_name}在黑名單內3")
             return True
-        elif user_text.endswith(line) and line in Tools.SPECIAL_SUBWEBSITE:
+        elif domain_name.endswith(line) and line in Tools.SPECIAL_SUBWEBSITE:
             # 特別子網域規則直接可以寫入Adguard規則
             with open(Tools.NEW_SCAM_WEBSITE_FOR_ADG, "a", encoding="utf-8", newline='') as f:
-                f.write(f"||{user_text}^\n")
+                f.write(f"||{domain_name}^\n")
+            logger.info(f"{domain_name}在黑名單內4")
+            return True
+
+    Black_db = "網站黑名單"
+    Black_collections = Query_API.Read_DBs(Black_db)
+
+    for collection in Black_collections:
+        document = collection.find_one({"網址": domain_name})
+        if document:
+            logger.info(f"{domain_name}在DB黑名單內")
             return True
     return False
 
