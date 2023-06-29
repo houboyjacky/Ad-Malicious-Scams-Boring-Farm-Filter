@@ -49,21 +49,23 @@ def download_write_file(url, file_path):
     return file_path
 
 def check_download_file(url):
+    NEW = True
+    OLD = False
     #logger.info(f"url = [{url}]")
     # 使用 url 的最後一部分作為檔名
-    Local_file_path = os.path.join("filter", url.split("/")[-1])
-    #logger.info(f"Local_file_path = [{Local_file_path}]")
     Local_file_name = url.split("/")[-1]
     #logger.info(f"Local_file_name = [{Local_file_name}]")
+    Local_file_path = f"filter/{Local_file_name}"
+    #logger.info(f"Local_file_path = [{Local_file_path}]")
 
     # 如果檔案不存在，則直接下載
     if not os.path.exists(Local_file_path):
         if download_write_file(url, Local_file_path):
             logger.info(f"{Local_file_name} is new download")
-            return Local_file_path
+            return Local_file_path, NEW
         else:
             logger.info(f"{Local_file_name} is fail to new download")
-            return None
+            return None, OLD
 
     Local_file_hash = Tools.calculate_hash(Local_file_path)
     #logger.info(f"Local_file_hash = [{Local_file_hash}]")
@@ -76,26 +78,26 @@ def check_download_file(url):
         if Local_file_name == remote_file_name:
             if Local_file_hash == remote_file_hash:
                 #logger.info(f"{remote_file_name} is same")
-                return None
+                return Local_file_path, OLD
             if download_write_file(url, Local_file_path):
                 logger.info(f"{Local_file_name} is download")
             #即便下載失敗也得讀取本地資料
-            return Local_file_path
+            return Local_file_path, NEW
 
     # 不在清單內的直接處理hash
     content = download_file(url)
     if not content:
         logger.info(f"{Local_file_name} is fail to download")
         #即便下載失敗也得讀取本地資料
-        return Local_file_path
+        return Local_file_path, NEW
 
     remote_file_hash = hashlib.md5(content).hexdigest()
 
     if remote_file_hash != Local_file_hash:
         Tools.write_file_U8(Local_file_path, content)
         #logger.info(f"{Local_file_name} is download")
-        return Local_file_path
-    return None
+        return Local_file_path, NEW
+    return Local_file_path, OLD
 
 def read_rule(filename):
     whitelist = []
@@ -158,19 +160,20 @@ def update_list_to_db(filename, List, db_name):
         collection.insert_many(documents_to_insert)
     return
 
-def update_list_from_file(filename, blacklist):
+def update_list_from_file(filename, blacklist, IsNew):
     tmp_whitelist = None
     tmp_blacklist = None
     tmp_speciallist = None
-    logger.info(f"Loading {filename} !")
+    #logger.info(f"Loading {filename} !")
     tmp_blacklist, tmp_whitelist, tmp_speciallist = read_rule(filename)
-    if tmp_blacklist:
+    if tmp_blacklist and IsNew:
         update_list_to_db(filename, tmp_blacklist,"網站黑名單")
-    if tmp_whitelist:
+    if tmp_whitelist and IsNew:
         update_list_to_db(filename, tmp_whitelist,"網站白名單")
     if tmp_speciallist:
         blacklist += tmp_speciallist
-    logger.info(f"Update {filename} finish!")
+    if IsNew:
+        logger.info(f"Update {filename} finish!")
 
 is_running = False
 
@@ -188,16 +191,12 @@ def update_blacklist():
 
     urls = Tools.read_file_U8(Tools.SCAM_WEBSITE_LIST)
 
-    filenames = []
-
     for url in urls:
-        if filename := check_download_file(url):
-            filenames.append(filename)
-    filenames.append(Tools.NEW_SCAM_WEBSITE_FOR_ADG)
+        filename, IsNew = check_download_file(url)
+        if filename:
+            update_list_from_file(filename, blacklist, IsNew)
 
-    if filenames:
-        for filename in filenames:
-            update_list_from_file(filename, blacklist)
+    update_list_from_file(Tools.NEW_SCAM_WEBSITE_FOR_ADG, blacklist, IsNew)
 
     blacklist = sorted(list(set(blacklist)))
     logger.info("Update blacklist finish!")
