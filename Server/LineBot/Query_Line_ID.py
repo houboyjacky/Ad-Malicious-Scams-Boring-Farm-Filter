@@ -51,8 +51,7 @@ def LINE_ID_Download_From_165():
                     return
                 logger.info("Download Line ID Finish")
                 lineid_list = response.text.splitlines()
-                with open(Local_file_path, "w", encoding="utf-8") as f:
-                    f.write('\n'.join(lineid_list))
+                Tools.write_file_U8(Local_file_path, '\n'.join(lineid_list))
                 IsFind = True
                 break
             else:

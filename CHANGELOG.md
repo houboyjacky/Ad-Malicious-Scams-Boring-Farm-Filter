@@ -1,5 +1,8 @@
 # 歷史更新 History Update
 
+* 20230630 Update
+  * 調整 架構
+
 * 20230629 Update
   * 調整 架構
   * 調整 虛擬貨幣改為db操作

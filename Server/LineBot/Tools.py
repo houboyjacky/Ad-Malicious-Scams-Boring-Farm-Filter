@@ -258,6 +258,21 @@ def write_empty_file(file_path):
     open(file_path, 'w').close()
     return
 
+def append_file_U8(file_path, data):
+    with open(file_path, "a", encoding="utf-8", newline='') as f:
+        f.write(data)
+    return
+
+def write_file_U8(file_path, data):
+    with open(file_path, "w", encoding="utf-8", newline='') as f:
+        f.write(data)
+    return
+
+def read_file_U8(file_path):
+    with open(file_path, "r", encoding="utf-8", newline='') as f:
+        lines = f.read().splitlines()
+    return lines
+
 def Clear_List_Checker(filename: str, blacklists) -> None:
     modify = False
     for blacklist in blacklists:

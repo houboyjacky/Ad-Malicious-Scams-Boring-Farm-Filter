@@ -43,14 +43,12 @@ def Logger_Transfer(pre_close = True):
     file_handler.close()
 
     # 讀取LineBot.log內容，寫入當日的log檔案
-    with open(Tools.LOGFILE, 'r') as f:
-        log_lines = f.readlines()
+    log_lines = Tools.read_file_U8(Tools.LOGFILE)
 
     current_date_str = None
     current_log_file = None
 
     for line in log_lines:
-        line = line.strip()
         # 判斷開頭是否為「年-月-日」
         date_match = re.match(r'^(\d{4})-(\d{2})-(\d{2})', line)
         if date_match or not current_log_file:
@@ -60,11 +58,9 @@ def Logger_Transfer(pre_close = True):
             current_log_file = f"{basename}_{current_date_str}.log"
 
         if os.path.exists(current_log_file):
-            with open(current_log_file, 'a', encoding='utf-8', newline='') as f:
-                f.write(f"{line}\n")
+            Tools.append_file_U8(current_log_file, f"{line}\n")
         else:
-            with open(current_log_file, 'w', encoding='utf-8', newline='') as f:
-                f.write(f"{line}\n")
+            Tools.write_file_U8(current_log_file, f"{line}\n")
 
     # 移除LineBot.log
     open(Tools.LOGFILE, 'w').close()

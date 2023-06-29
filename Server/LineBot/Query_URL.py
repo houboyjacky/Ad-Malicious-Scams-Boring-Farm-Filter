@@ -439,8 +439,7 @@ def update_web_leaderboard(input_url):
 def get_web_leaderboard():
 
     # 讀取 Web_leaderboard.txt
-    with open(Tools.WEB_LEADERBOARD_FILE, 'r') as file:
-        lines = file.readlines()
+    lines = Tools.read_file_U8(Tools.WEB_LEADERBOARD_FILE)
 
     # 計算每個網址的查詢次數
     url_counts = defaultdict(int)
@@ -497,16 +496,11 @@ def download_file(url):
         return None
     return response.content
 
-def write_to_file(content, file_path):
-    with open(file_path, "wb") as f:
-        f.write(content)
-    return
-
 def download_write_file(url, file_path):
     content = download_file(url)
     if not content:
         return None
-    write_to_file(content, file_path)
+    Tools.write_file_U8(file_path, content)
     return file_path
 
 def check_download_file(url):
@@ -552,8 +546,8 @@ def check_download_file(url):
 
     remote_file_hash = hashlib.md5(content).hexdigest()
 
-    if(remote_file_hash != Local_file_hash):
-        write_to_file(content, Local_file_path)
+    if remote_file_hash != Local_file_hash:
+        Tools.write_file_U8(Local_file_path, content)
         #logger.info(f"{Local_file_name} is download")
     return Local_file_path
 
@@ -590,8 +584,9 @@ def check_download_file(url):
 
 def read_rule(filename):
     global blacklist
-    with open(filename, "r", encoding="utf-8") as f:
+    blacklist = []
         lines = f.readlines()
+    lines = Tools.read_file_U8(filename)
 
     for line in lines:
         line = line.strip().lower()  # 轉換為小寫
@@ -628,8 +623,7 @@ def update_blacklist():
 
     Tools.hashes_download()
 
-    with open(Tools.SCAM_WEBSITE_LIST, "r") as f:
-        urls = f.read().splitlines()
+    urls = Tools.read_file_U8(Tools.SCAM_WEBSITE_LIST)
 
     filenames = []
 
@@ -655,8 +649,7 @@ def update_part_blacklist_rule(domain_name):
     # 組合成新的規則
     new_rule = f"||{domain_name}^\n"
     # 將Adguard規則寫入檔案
-    with open(Tools.NEW_SCAM_WEBSITE_FOR_ADG, "a", encoding="utf-8", newline='') as f:
-        f.write(new_rule)
+    Tools.append_file_U8(Tools.NEW_SCAM_WEBSITE_FOR_ADG, new_rule)
     return
 
 def update_part_blacklist_comment(msg):
@@ -664,8 +657,7 @@ def update_part_blacklist_comment(msg):
     # 組合成新的規則
     new_rule = f"! {msg}\n"
     # 將Adguard規則寫入檔案
-    with open(Tools.NEW_SCAM_WEBSITE_FOR_ADG, "a", encoding="utf-8", newline='') as f:
-        f.write(new_rule)
+    Tools.append_file_U8(Tools.NEW_SCAM_WEBSITE_FOR_ADG, new_rule)
     return
 
 # ===============================================
@@ -696,8 +688,8 @@ def check_blacklisted_site(domain_name):
             regex = line.replace("*", ".+")
             if re.fullmatch(regex, domain_name):
                 # 特別有*號規則直接可以寫入Adguard規則
-                with open(Tools.NEW_SCAM_WEBSITE_FOR_ADG, "a", encoding="utf-8", newline='') as f:
-                    f.write(f"||{domain_name}^\n")
+                rule = f"||{domain_name}^\n"
+                Tools.write_file_U8(Tools.NEW_SCAM_WEBSITE_FOR_ADG, rule)
                 logger.info(f"{domain_name}在黑名單內2")
                 return True
         elif domain_name == line:
@@ -705,8 +697,8 @@ def check_blacklisted_site(domain_name):
             return True
         elif domain_name.endswith(line) and line in Tools.SPECIAL_SUBWEBSITE:
             # 特別子網域規則直接可以寫入Adguard規則
-            with open(Tools.NEW_SCAM_WEBSITE_FOR_ADG, "a", encoding="utf-8", newline='') as f:
-                f.write(f"||{domain_name}^\n")
+            rule = f"||{domain_name}^\n"
+            Tools.write_file_U8(Tools.NEW_SCAM_WEBSITE_FOR_ADG, rule)
             logger.info(f"{domain_name}在黑名單內4")
             return True
 

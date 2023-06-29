@@ -23,6 +23,7 @@ THE SOFTWARE.
 import os
 import requests
 from Logger import logger
+import Tools
 
 CF_IPS_URL_IPV4 = "https://www.cloudflare.com/ips-v4"
 CF_IPS_URL_IPV6 = "https://www.cloudflare.com/ips-v6"
@@ -32,8 +33,7 @@ def get_cf_ips():
     if not os.path.exists(CF_IPS_LOCAL):
         download_cf_ips()
 
-    with open(CF_IPS_LOCAL, "r") as f:
-        cf_ips = f.read().splitlines()
+    cf_ips = Tools.read_file_U8(CF_IPS_LOCAL)
 
     return cf_ips
 
@@ -41,21 +41,17 @@ def download_cf_ips():
     response = requests.get(CF_IPS_URL_IPV4)
     if response.status_code == 200:
         cf_ips = response.text.strip()
-        with open(CF_IPS_LOCAL, "w") as f:
-            f.write(cf_ips)
+        Tools.write_file_U8(CF_IPS_LOCAL, cf_ips)
         logger.info('Download Cloudflare_ipv4 Finish')
     else:
         raise Exception("Unable to download Cloudflare IPv4s.")
 
-    with open(CF_IPS_LOCAL, "a") as f:
-        f.write("\n")
+    Tools.append_file_U8(CF_IPS_LOCAL, "\n")
 
     response = requests.get(CF_IPS_URL_IPV6)
     if response.status_code == 200:
         cf_ips = response.text.strip()
-        with open(CF_IPS_LOCAL, "a") as f:
-            f.write(cf_ips)
-
+        Tools.append_file_U8(CF_IPS_LOCAL, cf_ips)
         logger.info('Download Cloudflare_ipv6 Finish')
     else:
         raise Exception("Unable to download Cloudflare IPv6s.")
