@@ -5,6 +5,7 @@
   * 調整 虛擬貨幣改為db操作
   * 調整 LINE ID改為db操作
   * 調整 Mail改為db操作
+  * 調整 Whois改為db操作
 
 * 20230628 Update
   * 調整 小紅書參數

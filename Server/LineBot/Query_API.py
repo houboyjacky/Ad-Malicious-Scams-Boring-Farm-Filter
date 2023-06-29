@@ -87,6 +87,21 @@ def Write_Document(collection, analyze, tagname, DB_Name):
 
     return rmessage
 
+def Update_Document(collection, struct, tagname):
+    if struct:
+        if Search_Same_Document(collection,tagname, struct[tagname]):
+            logger.info("分析完成，找到相同資料更新")
+            filter = {tagname:struct[tagname]}
+            update = {"$set":struct}
+            MongoDB.Update_db(collection, filter, update)
+        else:
+            logger.info("分析完成，寫入結果")
+            MongoDB.Insert_db(collection,struct)
+    else:
+        logger.info("無法分析")
+
+    return
+
 def Get_DB_len(DB_Name, Collection_Name):
     collection = Read_DB(DB_Name, Collection_Name)
     document_count = collection.count_documents({})
