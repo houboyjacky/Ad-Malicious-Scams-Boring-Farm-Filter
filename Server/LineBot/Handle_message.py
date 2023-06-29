@@ -152,145 +152,211 @@ def message_reply(event, text):
 # 管理員操作
 def handle_message_text_admin_sub(orgin_text):
     lower_text = orgin_text.lower()
-    if re.match(Tools.KEYWORD_VIRTUAL_MONEY[1], orgin_text):
-        # 加入 虛擬貨幣
-        rmessage = Virtual_Money_write_file(orgin_text)
-    elif re.match(Tools.KEYWORD_VIRTUAL_MONEY[2], orgin_text):
-        # 刪除 虛擬貨幣
-        rmessage = Virtual_Money_delete_document(orgin_text)
-    elif match := re.search(Tools.KEYWORD_LINE[0], lower_text):
-        # 加入 LINE ID
-        lineid = match.group(1)
-        rmessage = LineID_write_file(lineid)
-    elif match := re.search(Tools.KEYWORD_LINE[8], lower_text):
-        # 刪除 LINE ID
-        lineid = match.group(1)
-        rmessage = LineID_delete_document(lineid)
-    elif re.search(Tools.KEYWORD_LINE[2], lower_text):
-        # 加入 LINE 網址
-        rmessage = lineinvite_write_file(orgin_text)
-    elif re.search(Tools.KEYWORD_LINE[7], lower_text):
-        # 刪除 LINE 網址
-        rmessage = lineinvite_delete_document(orgin_text)
-    elif match := re.search(Tools.KEYWORD_IG[2], lower_text):
-        # 加入 IG 網址
-        rmessage = IG_write_file(orgin_text)
-    elif match := re.search(Tools.KEYWORD_IG[4], orgin_text):
-        # 加入 IG ID
-        ig_account = match.group(1).lower()
-        logger.info(f"ig_account = {ig_account}")
-        url = f"https://www.instagram.com/{ig_account}/"
-        logger.info(f"url = {url}")
-        rmessage = IG_write_file(url)
-    elif match := re.search(Tools.KEYWORD_IG[5], lower_text):
-        # 刪除 IG 網址
-        rmessage = IG_delete_document(orgin_text)
-    elif match := re.search(Tools.KEYWORD_IG[6], orgin_text):
-        # 刪除 IG ID
-        ig_account = match.group(1).lower()
-        logger.info(f"ig_account = {ig_account}")
-        url = f"https://www.instagram.com/{ig_account}/"
-        logger.info(f"url = {url}")
-        rmessage = IG_delete_document(url)
-    elif match := re.search(Tools.KEYWORD_FB[3], lower_text):
-        # 加入 FB
-        rmessage = FB_write_file(orgin_text)
-    elif match := re.search(Tools.KEYWORD_FB[5], lower_text):
-        # 刪除 FB
-        rmessage = FB_delete_document(orgin_text)
-    elif match := re.search(Tools.KEYWORD_TELEGRAM[1], orgin_text):
-        # 加入 Telegram ID
-        telegram_id = match.group(1)
-        url = f"https://t.me/{telegram_id}"
-        rmessage = Telegram_write_file(url)
-    elif match := re.search(Tools.KEYWORD_TELEGRAM[3], orgin_text):
-        # 加入 Telegram 網址
-        rmessage = Telegram_write_file(orgin_text)
-    elif match := re.search(Tools.KEYWORD_TELEGRAM[4], orgin_text):
-        # 刪除 Telegram ID
-        telegram_id = match.group(1)
-        url = f"https://t.me/{telegram_id}"
-        rmessage = Telegram_delete_document(url)
-    elif match := re.search(Tools.KEYWORD_TELEGRAM[5], orgin_text):
-        # 刪除 Telegram 網址
-        rmessage = Telegram_delete_document(orgin_text)
-    elif match := re.search(Tools.KEYWORD_TWITTER[1], lower_text):
-        # 加入Twitter ID
-        twitter_id = match.group(1)
-        url = f"https://twitter.com/{twitter_id}"
-        rmessage = Twitter_write_file(url)
-    elif re.search(Tools.KEYWORD_TWITTER[3], lower_text):
-        # 加入Twitter 網址
-        rmessage = Twitter_write_file(orgin_text)
-    elif match := re.search(Tools.KEYWORD_TWITTER[4], lower_text):
-        # 刪除Twitter ID
-        twitter_id = match.group(1)
-        url = f"https://twitter.com/{twitter_id}"
-        rmessage = Twitter_delete_document(url)
-    elif re.search(Tools.KEYWORD_TWITTER[5], lower_text):
-        # 刪除Twitter 網址
-        rmessage = Twitter_delete_document(orgin_text)
-    elif match := re.match(Tools.KEYWORD_MAIL[1], lower_text):
-        # 加入 Mail
-        rmessage = Mail_write_file(lower_text)
-    elif match := re.match(Tools.KEYWORD_MAIL[2], lower_text):
-        # 刪除 Mail
-        rmessage = Mail_delete_document(lower_text)
-    elif re.search(Tools.KEYWORD_WHATSAPP[1], orgin_text) or re.search(Tools.KEYWORD_WHATSAPP[3], orgin_text):
-        # 加入WhatsApp
-        rmessage = WhatsApp_write_file(orgin_text)
-    elif re.search(Tools.KEYWORD_WHATSAPP[4], orgin_text) or re.search(Tools.KEYWORD_WHATSAPP[5], orgin_text):
-        # 刪除WhatsApp
-        rmessage = WhatsApp_delete_document(orgin_text)
-    elif match := re.search(Tools.KEYWORD_TIKTOK[1], orgin_text):
-        # 加入Tiktok
-        rmessage = Tiktok_write_file(orgin_text)
-    elif match := re.search(Tools.KEYWORD_TIKTOK[2], orgin_text):
-        # 刪除Tiktok
-        rmessage = Tiktok_delete_document(orgin_text)
-    elif match := re.search(Tools.KEYWORD_SMALLREDBOOK[1], orgin_text):
-        # 加入小紅書
-        rmessage = SmallRedBook_write_file(orgin_text)
-    elif match := re.search(Tools.KEYWORD_SMALLREDBOOK[2], orgin_text):
-        # 刪除小紅書
-        rmessage = SmallRedBook_delete_document(orgin_text)
-    elif match := re.search(Tools.KEYWORD_URL[0], lower_text):
-        # 直接使用IP連線
-        if ipmatch := re.search(Tools.KEYWORD_URL[3], lower_text):
-            domain_name = ipmatch.group(1)
-        else: # 網址
-            # 取得網址
-            url = match.group(1)
 
-            if '.' not in url:
-                rmessage = f"所輸入的文字\n「 {domain_name} 」\n無法構成網址\n請重新輸入"
-                return rmessage
+    IsContinue = True
+    while(IsContinue):
+        IsContinue = False
 
-            # 使用 tldextract 取得網域
-            subdomain, domain, suffix = Tools.domain_analysis(url)
+        # 虛擬貨幣
+        if re.match(Tools.KEYWORD_VIRTUAL_MONEY[1], orgin_text):
+            # 加入 虛擬貨幣
+            rmessage = Virtual_Money_write_file(orgin_text)
+            break
+        elif re.match(Tools.KEYWORD_VIRTUAL_MONEY[2], orgin_text):
+            # 刪除 虛擬貨幣
+            rmessage = Virtual_Money_delete_document(orgin_text)
+            break
 
-            domain_name = f"{domain}.{suffix}"
-            if domain_name in Tools.ALLOW_DOMAIN_LIST:
-                rmessage = f"網址封鎖有誤，不允許{domain_name}"
-                return rmessage
+        # LINE ID
+        if match := re.search(Tools.KEYWORD_LINE[0], lower_text):
+            # 加入 LINE ID
+            lineid = match.group(1)
+            rmessage = LineID_write_file(lineid)
+            break
+        elif match := re.search(Tools.KEYWORD_LINE[8], lower_text):
+            # 刪除 LINE ID
+            lineid = match.group(1)
+            rmessage = LineID_delete_document(lineid)
+            break
 
-            if domain_name in Tools.SPECIAL_SUBWEBSITE:
-                domain_name = f"{subdomain}.{domain}.{suffix}"
+        # LINE 網址
+        if re.search(Tools.KEYWORD_LINE[2], lower_text):
+            # 加入 LINE 網址
+            rmessage = lineinvite_write_file(orgin_text)
+            break
+        elif re.search(Tools.KEYWORD_LINE[7], lower_text):
+            # 刪除 LINE 網址
+            rmessage = lineinvite_delete_document(orgin_text)
+            break
 
-        if check_blacklisted_site(domain_name):
-            rmessage = f"網址黑名單已存在網址\n「 {domain_name} 」"
+        # Instagram 網址
+        if match := re.search(Tools.KEYWORD_IG[2], lower_text):
+            # 加入 IG 網址
+            rmessage = IG_write_file(orgin_text)
+            break
+        elif match := re.search(Tools.KEYWORD_IG[5], lower_text):
+            # 刪除 IG 網址
+            rmessage = IG_delete_document(orgin_text)
+            break
+
+        # Instagram ID
+        if match := re.search(Tools.KEYWORD_IG[4], orgin_text):
+            # 加入 IG ID
+            ig_account = match.group(1).lower()
+            logger.info(f"ig_account = {ig_account}")
+            url = f"https://www.instagram.com/{ig_account}/"
+            logger.info(f"url = {url}")
+            rmessage = IG_write_file(url)
+            break
+        elif match := re.search(Tools.KEYWORD_IG[6], orgin_text):
+            # 刪除 IG ID
+            ig_account = match.group(1).lower()
+            logger.info(f"ig_account = {ig_account}")
+            url = f"https://www.instagram.com/{ig_account}/"
+            logger.info(f"url = {url}")
+            rmessage = IG_delete_document(url)
+            break
+
+        # Facebook
+        if match := re.search(Tools.KEYWORD_FB[3], lower_text):
+            # 加入 FB
+            rmessage = FB_write_file(orgin_text)
+            break
+        elif match := re.search(Tools.KEYWORD_FB[5], lower_text):
+            # 刪除 FB
+            rmessage = FB_delete_document(orgin_text)
+            break
+
+        # Telegram ID
+        if match := re.search(Tools.KEYWORD_TELEGRAM[1], orgin_text):
+            # 加入 Telegram ID
+            telegram_id = match.group(1)
+            url = f"https://t.me/{telegram_id}"
+            rmessage = Telegram_write_file(url)
+            break
+        elif match := re.search(Tools.KEYWORD_TELEGRAM[4], orgin_text):
+            # 刪除 Telegram ID
+            telegram_id = match.group(1)
+            url = f"https://t.me/{telegram_id}"
+            rmessage = Telegram_delete_document(url)
+            break
+
+        # Telegram 網址
+        if match := re.search(Tools.KEYWORD_TELEGRAM[3], orgin_text):
+            # 加入 Telegram 網址
+            rmessage = Telegram_write_file(orgin_text)
+            break
+        elif match := re.search(Tools.KEYWORD_TELEGRAM[5], orgin_text):
+            # 刪除 Telegram 網址
+            rmessage = Telegram_delete_document(orgin_text)
+            break
+
+        # Twitter ID
+        if match := re.search(Tools.KEYWORD_TWITTER[1], lower_text):
+            # 加入Twitter ID
+            twitter_id = match.group(1)
+            url = f"https://twitter.com/{twitter_id}"
+            rmessage = Twitter_write_file(url)
+            break
+        elif match := re.search(Tools.KEYWORD_TWITTER[4], lower_text):
+            # 刪除Twitter ID
+            twitter_id = match.group(1)
+            url = f"https://twitter.com/{twitter_id}"
+            rmessage = Twitter_delete_document(url)
+            break
+
+        # Twitter 網址
+        if re.search(Tools.KEYWORD_TWITTER[3], lower_text):
+            # 加入Twitter 網址
+            rmessage = Twitter_write_file(orgin_text)
+            break
+        elif re.search(Tools.KEYWORD_TWITTER[5], lower_text):
+            # 刪除Twitter 網址
+            rmessage = Twitter_delete_document(orgin_text)
+            break
+
+        # Mail
+        if match := re.match(Tools.KEYWORD_MAIL[1], lower_text):
+            # 加入 Mail
+            rmessage = Mail_write_file(lower_text)
+            break
+        elif match := re.match(Tools.KEYWORD_MAIL[2], lower_text):
+            # 刪除 Mail
+            rmessage = Mail_delete_document(lower_text)
+            break
+
+        # WhatsApp
+        if re.search(Tools.KEYWORD_WHATSAPP[1], orgin_text) or re.search(Tools.KEYWORD_WHATSAPP[3], orgin_text):
+            # 加入WhatsApp
+            rmessage = WhatsApp_write_file(orgin_text)
+            break
+        elif re.search(Tools.KEYWORD_WHATSAPP[4], orgin_text) or re.search(Tools.KEYWORD_WHATSAPP[5], orgin_text):
+            # 刪除WhatsApp
+            rmessage = WhatsApp_delete_document(orgin_text)
+            break
+
+        # Tiktok
+        if match := re.search(Tools.KEYWORD_TIKTOK[1], orgin_text):
+            # 加入Tiktok
+            rmessage = Tiktok_write_file(orgin_text)
+            break
+        elif match := re.search(Tools.KEYWORD_TIKTOK[2], orgin_text):
+            # 刪除Tiktok
+            rmessage = Tiktok_delete_document(orgin_text)
+            break
+
+        # 小紅書
+        if match := re.search(Tools.KEYWORD_SMALLREDBOOK[1], orgin_text):
+            # 加入小紅書
+            rmessage = SmallRedBook_write_file(orgin_text)
+            break
+        elif match := re.search(Tools.KEYWORD_SMALLREDBOOK[2], orgin_text):
+            # 刪除小紅書
+            rmessage = SmallRedBook_delete_document(orgin_text)
+            break
+
+        # 網址
+        if match := re.search(Tools.KEYWORD_URL[0], lower_text):
+            # 直接使用IP連線
+            if ipmatch := re.search(Tools.KEYWORD_URL[3], lower_text):
+                domain_name = ipmatch.group(1)
+            else: # 網址
+                # 取得網址
+                url = match.group(1)
+
+                if '.' not in url:
+                    rmessage = f"所輸入的文字\n「 {domain_name} 」\n無法構成網址\n請重新輸入"
+                    return rmessage
+
+                # 使用 tldextract 取得網域
+                subdomain, domain, suffix = Tools.domain_analysis(url)
+
+                domain_name = f"{domain}.{suffix}"
+                if domain_name in Tools.ALLOW_DOMAIN_LIST:
+                    rmessage = f"網址封鎖有誤，不允許{domain_name}"
+                    return rmessage
+
+                if domain_name in Tools.SPECIAL_SUBWEBSITE:
+                    domain_name = f"{subdomain}.{domain}.{suffix}"
+
+            if check_blacklisted_site(domain_name):
+                rmessage = f"網址黑名單已存在網址\n「 {domain_name} 」"
+            else:
+                update_part_blacklist_rule(domain_name)
+                rmessage = f"網址黑名單成功加入網址\n「 {domain_name} 」"
+            break
+        elif match := re.search(Tools.KEYWORD_URL[1], orgin_text):
+            # 取得文字
+            text = match.group(1)
+            update_part_blacklist_comment(text)
+            rmessage = f"網址黑名單成功加入註解「 {text} 」"
+            break
+
+        if orgin_text.startswith("加入") or orgin_text.startswith("刪除"):
+            rmessage = f"管理員指令參數有誤，請重新確認"
         else:
-            update_part_blacklist_rule(domain_name)
-            rmessage = f"網址黑名單成功加入網址\n「 {domain_name} 」"
-    elif match := re.search(Tools.KEYWORD_URL[1], orgin_text):
-        # 取得文字
-        text = match.group(1)
-        update_part_blacklist_comment(text)
-        rmessage = f"網址黑名單成功加入註解「 {text} 」"
-    elif orgin_text.startswith("加入") or orgin_text.startswith("刪除"):
-        rmessage = f"管理員指令參數有誤，請重新確認"
-    else:
-        rmessage = None
+            rmessage = None
+        break
 
     return rmessage
 
