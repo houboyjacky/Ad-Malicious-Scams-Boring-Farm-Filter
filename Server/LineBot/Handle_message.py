@@ -45,7 +45,7 @@ from Query_Tiktok import Tiktok_write_file, Tiktok_read_file, push_random_Tiktok
 from Query_Twitter import Twitter_read_file, Twitter_write_file, get_Twitter_list_len, get_random_Twitter_blacklist, push_random_Twitter_blacklist, Twitter_delete_document
 from Query_URL import user_query_website, check_blacklisted_site, get_web_leaderboard, update_part_blacklist_rule, user_query_shorturl, get_external_links, update_part_blacklist_comment, user_query_shorturl_normal
 from Query_Whatsapp import WhatsApp_write_file, WhatsApp_delete_document, WhatsApp_read_file
-from Query_VirtualMoney import Virtual_Money_read_file, Virtual_Money_write_file
+from Query_VirtualMoney import Virtual_Money_read_file, Virtual_Money_write_file, Virtual_Money_delete_document
 
 image_analysis = False
 forward_inquiry = False
@@ -153,7 +153,11 @@ def message_reply(event, text):
 def handle_message_text_admin_sub(orgin_text):
     lower_text = orgin_text.lower()
     if re.match(Tools.KEYWORD_VIRTUAL_MONEY[1], orgin_text):
+        # 加入 虛擬貨幣
         rmessage = Virtual_Money_write_file(orgin_text)
+    elif re.match(Tools.KEYWORD_VIRTUAL_MONEY[2], orgin_text):
+        # 刪除 虛擬貨幣
+        rmessage = Virtual_Money_delete_document(orgin_text)
     elif match := re.search(Tools.KEYWORD_LINE[0], lower_text):
         # 加入 LINE ID
         lineid = match.group(1)

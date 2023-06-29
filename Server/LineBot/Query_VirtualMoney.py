@@ -20,56 +20,41 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 '''
 
-from datetime import datetime
+from datetime import date
 from Logger import logger
 from typing import Optional
-import pytz
-import Tools
+import Query_API
 
-Virtual_Money_list = Tools.read_json_file(Tools.VIRTUAL_MONEY_BLACKLIST)
+Name = "虛擬貨幣"
 
 def analyze_Virtual_Money_url(user_text:str) -> Optional[dict]:
 
     logger.info(f"user_text: {user_text}")
     user_text = user_text.replace("加入","")
     parts = user_text.split(":")
-    if len(parts) >= 3:
+
+    if len(parts) == 2:
         currency = parts[0]
         logger.info(f"currency: {currency}")
         address = parts[1]
         logger.info(f"address: {address}")
-        source = parts[2]
-        logger.info(f"source: {source}")
     else:
         return None
 
-    current_time = datetime.now()
-    # 設定東八區的時區
-    timezone = pytz.timezone('Asia/Taipei')
+    source = "report"
 
-    # 將當下時間轉換為東八區的時間
-    current_time_eight = current_time.astimezone(timezone)
+    datetime = date.today().strftime("%Y-%m-%d")
 
-    # 將東八區時間轉換為字串
-    timenow = current_time_eight.strftime('%Y-%m-%d %H:%M:%S')
-
-    struct = {"貨幣":currency, "地址": address, "來源": source, "時間": timenow}
+    struct = {"貨幣":currency, "地址": address, "來源": source, "加入日期": datetime}
 
     return struct
 
-def Search_Same_Virtual_Money(input):
-    global Virtual_Money_list
-    # 查找是否有重複的識別碼和地址
-    for r in Virtual_Money_list:
-        if input['地址'] and r['地址'] == input['地址']:
-            return True
-    return False
-
 def Virtual_Money_write_file(user_text:str):
-    global Virtual_Money_list
+    global Name
     rmessage = ""
+    collection = Query_API.Read_DB(Name,Name)
     if analyze := analyze_Virtual_Money_url(user_text):
-        if Search_Same_Virtual_Money(analyze):
+        if Query_API.Search_Same_Document(collection, "地址", analyze['地址']):
             logger.info("分析完成，找到相同資料")
             if analyze['地址']:
                 rmessage = f"虛擬貨幣黑名單找到相同地址\n幣別：{analyze['貨幣']}\n地址：「{analyze['地址'] }」"
@@ -78,8 +63,7 @@ def Virtual_Money_write_file(user_text:str):
                 rmessage = f"虛擬貨幣黑名單加入失敗，資料為空"
         else:
             logger.info("分析完成，寫入結果")
-            Virtual_Money_list.append(analyze)
-            Tools.write_json_file(Tools.VIRTUAL_MONEY_BLACKLIST, Virtual_Money_list)
+            Query_API.Write_Document(collection, analyze,"地址", Name)
             rmessage = f"虛擬貨幣黑名單成功加入地址\n幣別：{analyze['貨幣']}\n地址：「{analyze['地址'] }」"
     else:
         logger.info("輸入資料有誤")
@@ -88,12 +72,39 @@ def Virtual_Money_write_file(user_text:str):
     return rmessage
 
 def Virtual_Money_read_file(user_text:str):
-    global Virtual_Money_list
+    global Name
     rmessage = ""
-    address = user_text.replace("貨幣","")
-    for r in Virtual_Money_list:
-        if r['地址'] == address:
-            rmessage = f"虛擬貨幣地址為\n幣別：{r['貨幣']}\n地址：「{r['地址'] }」"
-            return rmessage, True
-    rmessage = f"「{address}」"
-    return rmessage , False
+    collection = Query_API.Read_DB(Name,Name)
+    address = {"地址":user_text.replace("貨幣","")}
+    rmessage = f"{Name}地址\n「 {address['地址']} 」"
+    if address:
+        if document := Query_API.Search_Same_Document(collection,"地址", address['地址']):
+            rmessage = f"{Name}地址為\n幣別：{document['貨幣']}\n地址：「{document['地址'] }」"
+            logger.info("分析完成，找到相同資料")
+            status = 1
+        else:
+            logger.info("分析完成，找不到相同資料")
+            status = 0
+    else:
+        logger.info(f"{Name}黑名單查詢失敗")
+        status = -1
+
+    return rmessage, status
+
+def Virtual_Money_delete_document(user_text:str):
+    global Name
+    rmessage = ""
+    collection = Query_API.Read_DB(Name,Name)
+    address = {"地址":user_text.replace("刪除貨幣","")}
+    rmessage = f"{Name}地址\n「 {address} 」"
+    if address:
+        if document := Query_API.Search_Same_Document(collection,"地址", address['地址']):
+            rmessage = f"{Name}地址為\n幣別：{document['貨幣']}\n地址：「{document['地址'] }」\n已刪除"
+            Query_API.Delete_document(collection,address,"地址",Name)
+            logger.info("分析完成，找到相同資料")
+        else:
+            logger.info("分析完成，找不到相同資料")
+    else:
+        logger.info(f"{Name}黑名單查詢失敗")
+
+    return rmessage
