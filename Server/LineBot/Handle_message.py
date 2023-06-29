@@ -512,6 +512,10 @@ def handle_message_text_sub(user_id, orgin_text):
     lower_text = orgin_text.lower()
 
     # 無關網址判斷
+    if lower_text.startswith("貨幣http"):
+        rmessage = f"！！輸入錯誤！！\n\n「貨幣」後面是加入虛擬貨幣地址\n你輸入http開頭是網址\n直接貼上即可查詢"
+        return rmessage
+
     if re.match(Tools.KEYWORD_VIRTUAL_MONEY[0], orgin_text):
         msg, status = Virtual_Money_read_file(orgin_text)
         if status:
