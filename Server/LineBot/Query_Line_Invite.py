@@ -24,7 +24,7 @@ from bs4 import BeautifulSoup
 from datetime import date
 from Logger import logger
 from Query_Line_ID import LineID_write_file, LineID_read_file
-from Query_URL import resolve_redirects
+from Query_URL_Short import Resolve_Redirects
 from typing import Optional
 import Query_API
 import re
@@ -65,7 +65,7 @@ def analyze_line_invite_url(user_text:str) -> Optional[dict]:
         redirected_url1 = soup.find('a')['href']
         logger.info(f"Redirected_url 1 = {redirected_url1}")
 
-        redirected_url = resolve_redirects(redirected_url1)
+        redirected_url = Resolve_Redirects(redirected_url1)
         logger.info(f"Redirected_url 2 = {redirected_url}")
         if not redirected_url.startswith("https://line.me"):
             logger.info("該官方帳號已無效")
@@ -74,7 +74,7 @@ def analyze_line_invite_url(user_text:str) -> Optional[dict]:
         match = re.match(Tools.KEYWORD_LINE[3], redirected_url)
     else:
         if lower_text.startswith("https://lin.ee") or lower_text.startswith("https://page.line.me"):
-            orgin_text = resolve_redirects(orgin_text)
+            orgin_text = Resolve_Redirects(orgin_text)
         match = re.match(Tools.KEYWORD_LINE[3], orgin_text)
         if not match:
             logger.error('line.me邀請網址解析失敗')

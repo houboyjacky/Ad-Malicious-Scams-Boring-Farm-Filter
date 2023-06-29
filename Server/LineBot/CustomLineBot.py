@@ -20,6 +20,19 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 '''
 
+# pip3 install schedule tldextract flask line-bot-sdk python-whois beautifulsoup4 pytesseract pycountry python-dateutil geocoder geocoder[geonames] ip2geotools
+# sudo apt install tesseract-ocr tesseract-ocr-eng tesseract-ocr-chi-tra tesseract-ocr-chi-tra-vert tesseract-ocr-chi-sim tesseract-ocr-chi-sim-vert
+from flask import Flask, Response, request, abort, send_file, send_from_directory
+from Handle_message import handle_message_file, handle_message_image, handle_message_text
+from ip2geotools.databases.noncommercial import DbIpCity
+from linebot import WebhookHandler
+from linebot.exceptions import InvalidSignatureError
+from linebot.models import MessageEvent
+from Logger import logger, Logger_Transfer
+from Query_Line_ID import LINE_ID_Download_From_165
+from Security_Check import get_cf_ips, download_cf_ips
+from SignConfig import SignMobileconfig
+from Update_BlackList import update_blacklist
 import ipaddress
 import os
 import schedule
@@ -28,19 +41,6 @@ import sys
 import threading
 import time
 import Tools
-# pip3 install schedule tldextract flask line-bot-sdk python-whois beautifulsoup4 pytesseract pycountry python-dateutil geocoder geocoder[geonames] ip2geotools
-# sudo apt install tesseract-ocr tesseract-ocr-eng tesseract-ocr-chi-tra tesseract-ocr-chi-tra-vert tesseract-ocr-chi-sim tesseract-ocr-chi-sim-vert
-from flask import Flask, Response, request, abort, send_file, send_from_directory
-from Handle_message import handle_message_file, handle_message_image, handle_message_text
-from linebot import WebhookHandler
-from linebot.exceptions import InvalidSignatureError
-from linebot.models import MessageEvent
-from Logger import logger, Logger_Transfer
-from Query_Line_ID import LINE_ID_Download_From_165
-from Query_URL import update_blacklist
-from Security_Check import get_cf_ips, download_cf_ips
-from SignConfig import SignMobileconfig
-from ip2geotools.databases.noncommercial import DbIpCity
 
 def WhereAreYou(IP):
     res = DbIpCity.get(IP, api_key="free")
