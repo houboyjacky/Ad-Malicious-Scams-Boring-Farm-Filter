@@ -45,7 +45,7 @@ def download_write_file(url, file_path):
     content = download_file(url)
     if not content:
         return None
-    Tools.write_file_U8(file_path, content)
+    Tools.write_file_bin(file_path, content)
     return file_path
 
 def check_download_file(url):

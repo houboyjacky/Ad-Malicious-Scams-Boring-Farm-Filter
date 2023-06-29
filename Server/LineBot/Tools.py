@@ -273,6 +273,11 @@ def read_file_U8(file_path):
         lines = f.read().splitlines()
     return lines
 
+def write_file_bin(file_path, content):
+    with open(file_path, "wb") as f:
+        f.write(content)
+    return
+
 def Clear_List_Checker(filename: str, blacklists) -> None:
     modify = False
     for blacklist in blacklists:
