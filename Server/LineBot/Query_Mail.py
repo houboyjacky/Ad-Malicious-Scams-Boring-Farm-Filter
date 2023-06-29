@@ -25,6 +25,8 @@ from Logger import logger
 from typing import Optional
 import Query_API
 
+Name = "Mail"
+
 def analyze_Mail_url(user_text:str) -> Optional[dict]:
 
     user_text = user_text.replace("加入","")
@@ -44,7 +46,7 @@ def Mail_write_file(user_text:str):
     global Name
     collection = Query_API.Read_DB(Name,Name)
     analyze = analyze_Mail_url(user_text)
-    rmessage = Query_API.Write_Document(collection, analyze, Name)
+    rmessage = Query_API.Write_Document(collection, analyze,"帳號", Name)
     return rmessage
 
 def Mail_read_file(user_text:str):
@@ -58,5 +60,5 @@ def Mail_delete_document(user_text:str):
     global Name
     collection = Query_API.Read_DB(Name,Name)
     analyze = analyze_Mail_url(user_text)
-    rmessage = Query_API.Delete_document(collection,analyze,Name)
+    rmessage = Query_API.Delete_document(collection,analyze,"帳號",Name)
     return rmessage
