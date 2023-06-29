@@ -116,41 +116,31 @@ def Get_DB_len(DB_Name, Collection_Name):
     document_count = collection.count_documents({})
     return document_count
 
+# ===============================================
 # 檢舉
+# ===============================================
 
 def get_random_blacklist(Record_players, DB_Name, Collection_Name, UserID) -> str:
-
     collection = Read_DB(DB_Name, Collection_Name)
-    found = False
+
     count = 0
+    site = ""
 
     document_count = collection.count_documents({})
-
-    while count < 100:  # 最多找 100 次，避免無限迴圈
+    while count < 100:
         random_index = random.randint(0, document_count - 1)
-        try:
-            random_document = collection.aggregate([
-                {"$sample": {"size": 1}},
-                {"$skip": random_index}
-            ]).next()
-        except StopIteration:
+        random_document = collection.find().limit(1).skip(random_index).next()
+        if not random_document.get('檢查者') and random_document.get('失效', 0) < 50:
+            site = random_document['來源']
+            filter = {'帳號': random_document['帳號']}
+            update = {"$set": {'檢查者': UserID}}
+            MongoDB.Update_db(collection, filter, update)
+            Player = {'檢查者': UserID}
+            Record_players.append(Player)
             break
 
-        if random_document['檢查者'] == "" and random_document['失效'] < 50:
-            found = True
-            break
         count += 1
 
-    if found:
-        filter = {'帳號':random_document['帳號']}
-        update = {"$set": {'檢查者': UserID}}
-        MongoDB.Update_db(collection, filter, update)
-
-    Player = {'檢查者':UserID}
-
-    Record_players.append(Player)
-
-    site = random_document['原始網址']
     return site
 
 def push_random_blacklist(Record_players, DB_Name, Collection_Name, UserID, success, disappear):
