@@ -28,7 +28,7 @@ def write_user_point(user_id, addpoint):
     global Name
     collection = Query_API.Read_DB(Name, Name)
     struct = {"帳號":user_id,"分數":addpoint}
-    Query_API.Update_Document(collection, struct)
+    Query_API.Update_Document(collection, struct, "帳號")
     return
 
 def read_user_point(user_id) -> int:

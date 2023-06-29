@@ -60,8 +60,8 @@ def get_netizen_file(user_id:str):
 
     query = {
         "$and": [
-            {"完成": 0},
-            {"失效": 0}
+            {"完成": 0,
+            "失效": 0}
         ]
     }
     if result := collection.find_one(query):
