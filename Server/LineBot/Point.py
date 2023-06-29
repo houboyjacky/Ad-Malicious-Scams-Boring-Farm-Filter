@@ -20,39 +20,35 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 '''
 
-import Tools
+import Query_API
 
-# global 變數，用來儲存點數列表
-Point_List = {}
+Name = "UserPoint"
 
 def write_user_point(user_id, addpoint):
-    global Point_List
-    if user_id not in Point_List:
-        Point_List[user_id] = addpoint
-    else:
-        Point_List[user_id] += addpoint
-    Tools.write_count_file(Tools.USER_POINT, Point_List)
+    global Name
+    collection = Query_API.Read_DB(Name, Name)
+    struct = {"帳號":user_id,"分數":addpoint}
+    Query_API.Update_Document(collection, struct)
+    return
 
 def read_user_point(user_id) -> int:
-    global Point_List
-    if user_id in Point_List:
-        return Point_List[user_id]
+    global Name
+    collection = Query_API.Read_DB(Name, Name)
+    Document = Query_API.Search_Same_Document(collection, "帳號", user_id)
+    if Document:
+        return Document['分數']
     else:
         return 0
 
 def get_user_rank(user_id):
-    global Point_List
-    if user_id not in Point_List:
-        Point_List[user_id] = 0
-
-    # 計算使用者點數的排名
+    global Name
+    collection = Query_API.Read_DB(Name, Name)
+    result = collection.find({}, {"_id": 0, "帳號": 1, "分數": 1}).sort("分數", -1)
     rank = 1
-    for uid, pt in Point_List.items():
-        if uid != user_id and pt > Point_List[user_id]:
-            rank += 1
+    for document in result:
+        if document["帳號"] == user_id:
+            break
+        rank += 1
 
     # 回傳排名
     return rank
-
-# 在程式一開始呼叫讀取檔案函式，將檔案內容存入 Point_List
-Tools.load_count_file(Tools.USER_POINT, Point_List)

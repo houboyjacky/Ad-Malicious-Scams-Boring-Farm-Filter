@@ -6,6 +6,7 @@
   * 調整 網址查詢部分改為db操作
   * 調整 LINE ID改為db操作
   * 調整 Mail改為db操作
+  * 調整 UserPoint改為db操作
   * 調整 Whois改為db操作
 
 * 20230628 Update
