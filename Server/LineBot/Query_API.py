@@ -34,29 +34,34 @@ def Read_DB(DB_Name, Collection_Name):
     collection = MongoDB.Load_db(DB_Name,Collection_Name)
     return collection
 
-def Delete_document(collection, analyze, tagname, DB_Name):
+def Delete_document(collection, struct, tagname):
+    filer = {tagname:struct[tagname]}
+    MongoDB.Delete_db(collection, filer)
+    return
+
+def Delete_document_Account(collection, struct, DB_Name):
+    tagname = '帳號'
     rmessage = ""
-    if analyze:
-        if Search_Same_Document(collection, tagname, analyze[tagname]):
+    if struct:
+        if Search_Same_Document(collection, tagname, struct[tagname]):
             logger.info("分析完成，找到相同資料")
-            filer = {tagname:analyze[tagname]}
-            MongoDB.Delete_db(collection, filer)
-            rmessage = f"{DB_Name}黑名單成功刪除{tagname}\n「 {analyze[tagname] }」"
+            Delete_document(collection, struct, tagname)
+            rmessage = f"{DB_Name}黑名單成功刪除{tagname}\n「 {struct[tagname] }」"
         else:
             logger.info("分析完成，找不到資料")
-            rmessage = f"{DB_Name}黑名單找不到{tagname}\n「 {analyze[tagname]} 」"
+            rmessage = f"{DB_Name}黑名單找不到{tagname}\n「 {struct[tagname]} 」"
     else:
         logger.info("無法分析網址")
         rmessage = f"{DB_Name}黑名單刪除失敗，無法分析網址"
 
     return rmessage
 
-def Read_Document(collection, analyze, DB_Name):
+def Read_Document_Account(collection, struct, DB_Name):
     status = 0
     rmessage = ""
-    if analyze:
-        rmessage = f"{DB_Name}帳號\n「 {analyze['帳號'] } 」"
-        if Search_Same_Document(collection,"帳號", analyze['帳號']):
+    if struct:
+        rmessage = f"{DB_Name}帳號\n「 {struct['帳號'] } 」"
+        if Search_Same_Document(collection,"帳號", struct['帳號']):
             logger.info("分析完成，找到相同資料")
             status = 1
         else:
@@ -68,19 +73,24 @@ def Read_Document(collection, analyze, DB_Name):
 
     return rmessage, status
 
-def Write_Document(collection, analyze, tagname, DB_Name):
-    if analyze:
-        if Search_Same_Document(collection,tagname, analyze[tagname]):
+def Write_Document(collection,struct):
+    MongoDB.Insert_db(collection,struct)
+    return
+
+def Write_Document_Account(collection, struct, DB_Name):
+    tagname = "帳號"
+    if struct:
+        if Search_Same_Document(collection,tagname, struct[tagname]):
             logger.info("分析完成，找到相同資料")
-            if analyze[tagname]:
-                rmessage = f"{DB_Name}黑名單找到相同{tagname}\n「 {analyze[tagname] }」"
+            if struct[tagname]:
+                rmessage = f"{DB_Name}黑名單找到相同{tagname}\n「 {struct[tagname] }」"
             else:
                 logger.info("資料有誤")
                 rmessage = f"{DB_Name}黑名單加入失敗，資料為空"
         else:
             logger.info("分析完成，寫入結果")
-            MongoDB.Insert_db(collection,analyze)
-            rmessage = f"{DB_Name}黑名單成功加入{tagname}\n「 {analyze[tagname]} 」"
+            Write_Document(collection,struct)
+            rmessage = f"{DB_Name}黑名單成功加入{tagname}\n「 {struct[tagname]} 」"
     else:
         logger.info("無法分析網址")
         rmessage = f"{DB_Name}黑名單加入失敗，無法分析網址"
@@ -88,18 +98,14 @@ def Write_Document(collection, analyze, tagname, DB_Name):
     return rmessage
 
 def Update_Document(collection, struct, tagname):
-    if struct:
-        if Search_Same_Document(collection,tagname, struct[tagname]):
-            logger.info("分析完成，找到相同資料更新")
-            filter = {tagname:struct[tagname]}
-            update = {"$set":struct}
-            MongoDB.Update_db(collection, filter, update)
-        else:
-            logger.info("分析完成，寫入結果")
-            MongoDB.Insert_db(collection,struct)
+    filter = {tagname:struct[tagname]}
+    update = {"$set":struct}
+    result = MongoDB.Update_db(collection, filter, update)
+    if result.matched_count == 0:
+        logger.info("找不到相同資料，進行插入")
+        Write_Document(collection,struct)
     else:
-        logger.info("無法分析")
-
+        logger.info("找到相同資料，已更新")
     return
 
 def Get_DB_len(DB_Name, Collection_Name):

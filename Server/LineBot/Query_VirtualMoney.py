@@ -63,7 +63,7 @@ def Virtual_Money_write_file(user_text:str):
                 rmessage = f"虛擬貨幣黑名單加入失敗，資料為空"
         else:
             logger.info("分析完成，寫入結果")
-            Query_API.Write_Document(collection, analyze,"地址", Name)
+            Query_API.Write_Document(collection, analyze)
             rmessage = f"虛擬貨幣黑名單成功加入地址\n幣別：{analyze['貨幣']}\n地址：「{analyze['地址'] }」"
     else:
         logger.info("輸入資料有誤")
@@ -100,7 +100,7 @@ def Virtual_Money_delete_document(user_text:str):
     if address:
         if document := Query_API.Search_Same_Document(collection,"地址", address['地址']):
             rmessage = f"{Name}地址為\n幣別：{document['貨幣']}\n地址：「{document['地址'] }」\n已刪除"
-            Query_API.Delete_document(collection,address,"地址",Name)
+            Query_API.Delete_document(collection,address,"地址")
             logger.info("分析完成，找到相同資料")
         else:
             logger.info("分析完成，找不到相同資料")

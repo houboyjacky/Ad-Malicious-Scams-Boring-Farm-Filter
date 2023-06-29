@@ -58,21 +58,21 @@ def IG_write_file(user_text:str):
     global Name
     collection = Query_API.Read_DB(Name,Name)
     analyze = analyze_IG_url(user_text)
-    rmessage = Query_API.Write_Document(collection, analyze,"帳號", Name)
+    rmessage = Query_API.Write_Document_Account(collection,analyze,Name)
     return rmessage
 
 def IG_read_file(user_text:str):
     global Name
     collection = Query_API.Read_DB(Name,Name)
     analyze = analyze_IG_url(user_text)
-    rmessage, status = Query_API.Read_Document(collection,analyze,Name)
+    rmessage, status = Query_API.Read_Document_Account(collection,analyze,Name)
     return rmessage, status
 
 def IG_delete_document(user_text:str):
     global Name
     collection = Query_API.Read_DB(Name,Name)
     analyze = analyze_IG_url(user_text)
-    rmessage = Query_API.Delete_document(collection,analyze,"帳號",Name)
+    rmessage = Query_API.Delete_document_Account(collection,analyze,Name)
     return rmessage
 
 Record_players = []
