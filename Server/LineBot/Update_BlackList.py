@@ -140,9 +140,11 @@ def update_list_to_db(filename, List, db_name):
     documents_to_insert = []
     if filename == Tools.NEW_SCAM_WEBSITE_FOR_ADG:
         Name = "report"
+        collection = Query_API.Read_DB(db_name,Name)
+        collection.delete_many({})
     else:
         Name = os.path.basename(filename)
-    collection = Query_API.Read_DB(db_name,Name)
+        collection = Query_API.Read_DB(db_name,Name)
     for tmp in List:
         document = collection.find_one({"網址": tmp})
         if document:
