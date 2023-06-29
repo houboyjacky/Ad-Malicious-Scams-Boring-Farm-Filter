@@ -20,111 +20,77 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 '''
 
-from datetime import datetime
+from datetime import date
+from Logger import logger
 from Point import write_user_point
-import pytz
-import re
-import Tools
+import Query_API
 
-line_domains = ["lin.ee", "line.me", "lineblog.me", "linecorp.com", "line-scdn.net", "line.naver.jp", "line.biz"]
 
-facebook_domains = ["facebook.com", "facebookcorewwwi.onion", "facebookwatch.com", "facebookbrand.com", "fb.me", "m.me", "fb.watch", "fb.com", "messenger.com", "oculus.com"]
-
-twitter_domains = ["twitter.com", "t.co", "twimg.com", "twittercommunity.com", "periscope.tv", "fabric.io", "gnip.com"]
-
-instagram_domains =["instagram.com", "instagram-brand.com", "ig.me", "instagr.am"]
-
-netizens = Tools.read_json_file(Tools.NETIZEN)
-
-def is_check_url(url, domains: list) -> bool:
-    for domain in domains:
-        pattern = r"(^|\W)" + re.escape(domain) + r"($|\W)"
-        if re.search(pattern, url):
-            return True
-    return False
+Name = "詐騙回報"
 
 def write_new_netizen_file(user_id:str, user_name:str, user_text:str, isSystem:bool) -> bool:
     global netizens
-    if not netizens:
-        number = 1
-    else:
-        number = 0
-        for netizen in netizens:
-            number +=1
-            if user_text == netizen['內容']:
-                return True
-        number +=1
+    global Name
 
-    category = ""
+    collection = Query_API.Read_DB(Name,Name)
+    total_documents = collection.count_documents({})
+    number = total_documents + 1
 
-    if is_check_url(user_text, line_domains):
-        category = "LINE"
-    elif is_check_url(user_text, facebook_domains):
-        category = "Facebook"
-    elif is_check_url(user_text, twitter_domains):
-        category = "Twitter"
-    elif is_check_url(user_text, instagram_domains):
-        category = "Instagram"
-    else:
-        category = "Other"
-
-    # 取得當下時間
-    current_time = datetime.now()
-
-    # 設定東八區的時區
-    timezone = pytz.timezone('Asia/Taipei')
-
-    # 將當下時間轉換為東八區的時間
-    current_time_eight = current_time.astimezone(timezone)
-
-    # 將東八區時間轉換為字串
-    timenow = current_time_eight.strftime('%Y-%m-%d %H:%M:%S')
+    datetime = date.today().strftime("%Y-%m-%d")
 
     struct =  { "序號": number,
-                "時間": timenow,
-                "類別": category,
+                "時間": datetime,
                 "提交者": user_name,
                 "提交者ID": user_id,
                 "內容": user_text,
                 "完成": 0,
                 "失效": 0,
                 "檢查者": "",
-                "已報案":0,
                 "系統轉送": isSystem
             }
 
-    # 新增結果
-    netizens.append(struct)
-
-    Tools.write_json_file(Tools.NETIZEN, netizens)
-
+    Query_API.Write_Document(collection, struct)
     write_user_point(user_id, 1)
-
     return False
 
 def get_netizen_file(user_id:str):
-    global netizens
-    for netizen in netizens:
-        if netizen["完成"] == 0 and netizen["失效"] == 0 and netizen["已報案"] == 0:
-            netizen['檢查者'] = user_id
-            Tools.write_json_file(Tools.NETIZEN, netizens)
-            return f"{str(netizen['序號'])}/{str(len(netizens))}", netizen["內容"], netizen["系統轉送"]
+    global Name
+    collection = Query_API.Read_DB(Name,Name)
+    total_documents = collection.count_documents({})
+
+    query = {
+        "$and": [
+            {"完成": 0},
+            {"失效": 0}
+        ]
+    }
+    if result := collection.find_one(query):
+        logger.info(f"result={result}")
+        SN = f"{str(result['序號'])}/{str(total_documents)}"
+        result['檢查者'] = user_id
+        Query_API.Update_Document(collection,result,"序號")
+        return SN, result["內容"], result["系統轉送"]
+
     return "", "", ""
 
 def push_netizen_file(UserID, success, disappear):
-    global netizens
+    global Name
     found = False
-    for netizen in netizens:
-        if netizen['檢查者'] == UserID:
-            netizen['檢查者'] = ""
-            if success:
-                netizen['完成'] = 1
-                write_user_point(UserID, 2)
-            if disappear:
-                netizen['失效'] = 1
-                write_user_point(UserID, 2)
-            found = True
-            break
-    if found:
-        Tools.write_json_file(Tools.NETIZEN, netizens)
+    collection = Query_API.Read_DB(Name,Name)
+    Document = Query_API.Search_Same_Document(collection, "檢查者", UserID)
+
+    if not Document:
+        return found
+
+    found = True
+    Document['檢查者'] = ""
+    if success:
+        Document['完成'] = 1
+        write_user_point(UserID, 2)
+    if disappear:
+        Document['失效'] = 1
+        write_user_point(UserID, 2)
+
+    Query_API.Update_Document(collection,Document,"序號")
+
     return found

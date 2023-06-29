@@ -22,7 +22,6 @@ THE SOFTWARE.
 
 import random
 import MongoDB
-from Point import write_user_point
 from Logger import logger
 
 def Search_Same_Document(collection, tagname, value):
@@ -164,7 +163,7 @@ def push_random_blacklist(Record_players, DB_Name, Collection_Name, UserID, succ
             break
 
     if not found:
-        logger.info("資料庫選擇有誤或該使用者不存在資料庫中")
+        #logger.info("資料庫選擇有誤或該使用者不存在資料庫中")
         return found
 
     found = False
