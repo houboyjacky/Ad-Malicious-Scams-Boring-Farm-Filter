@@ -122,8 +122,9 @@ def read_rule(filename):
         elif line.startswith('||'):
             line = line[2:]  # 去除||開頭的文字
             line = line.split('^')[0]  # 去除^以後的文字
-            if '.' not in line:
+            if all(symbol not in line for symbol in ['.', '*', '-', ' ']):
                 line = '*.' + line
+                #logger.info(f"line = {line}")
         elif line.startswith('@@||'):
             line = line[4:]
             line = line.split('^')[0]  # 去除^以後的文字
@@ -140,7 +141,7 @@ def read_rule(filename):
 def update_list_to_db(filename, List, db_name):
     datetime = date.today().strftime("%Y-%m-%d")
     documents_to_insert = []
-    if filename == Tools.NEW_SCAM_WEBSITE_FOR_ADG:
+    if filename == Tools.TMP_BLACKLIST:
         Name = "report"
         collection = Query_API.Read_DB(db_name,Name)
         collection.delete_many({})
@@ -196,7 +197,7 @@ def update_blacklist():
         if filename:
             update_list_from_file(filename, blacklist, IsNew)
 
-    update_list_from_file(Tools.NEW_SCAM_WEBSITE_FOR_ADG, blacklist, IsNew)
+    update_list_from_file(Tools.TMP_BLACKLIST, blacklist, IsNew)
 
     blacklist = sorted(list(set(blacklist)))
     logger.info("Update blacklist finish!")
@@ -205,7 +206,7 @@ def update_blacklist():
 
 def update_document_to_db(filename, domain_name, db_name):
     datetime = date.today().strftime("%Y-%m-%d")
-    if filename == Tools.NEW_SCAM_WEBSITE_FOR_ADG:
+    if filename == Tools.TMP_BLACKLIST:
         Name = "report"
     else:
         Name = os.path.basename(filename)
@@ -223,11 +224,11 @@ def update_document_to_db(filename, domain_name, db_name):
 
 def update_part_blacklist_rule(domain_name):
     #寫入DB
-    update_document_to_db(Tools.NEW_SCAM_WEBSITE_FOR_ADG, domain_name, "網站黑名單")
+    update_document_to_db(Tools.TMP_BLACKLIST, domain_name, "網站黑名單")
     # 組合成新的規則
     new_rule = f"||{domain_name}^\n"
     # 將Adguard規則寫入檔案
-    Tools.append_file_U8(Tools.NEW_SCAM_WEBSITE_FOR_ADG, new_rule)
+    Tools.append_file_U8(Tools.TMP_BLACKLIST, new_rule)
     return
 
 def update_part_blacklist_comment(msg):
@@ -235,5 +236,5 @@ def update_part_blacklist_comment(msg):
     # 組合成新的規則
     new_rule = f"! {msg}\n"
     # 將Adguard規則寫入檔案
-    Tools.append_file_U8(Tools.NEW_SCAM_WEBSITE_FOR_ADG, new_rule)
+    Tools.append_file_U8(Tools.TMP_BLACKLIST, new_rule)
     return
