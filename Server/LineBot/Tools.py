@@ -125,7 +125,7 @@ def reloadSetting():
     SHORT_URL_LIST = setting['SHORT_URL_LIST']
     SPECIAL_SUBWEBSITE = setting['SPECIAL_SUBWEBSITE']
     TARGET_DIR = setting['CONFIG_SIGN']
-    TMP_BLACKLIST = setting['BLACKLISTFORADG']
+    TMP_BLACKLIST = setting['TMP_BLACKLIST']
     WEB_LEADERBOARD_FILE = setting['WEB_LEADERBOARD_FILE']
 
     return

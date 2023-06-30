@@ -50,7 +50,7 @@ def analyze_WhatsApp_url(user_text:str) -> Optional[dict]:
 
     datetime = date.today().strftime("%Y-%m-%d")
 
-    struct =  {"帳號": Username, "來源": user_text, "回報次數": 0, "失效": 0, "檢查者": "", "加入日期": datetime }
+    struct =  {"帳號": Username, "來源": user_text, "加入日期": datetime }
 
     return struct
 

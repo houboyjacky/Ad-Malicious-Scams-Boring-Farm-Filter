@@ -27,8 +27,8 @@ from ip2geotools.databases.noncommercial import DbIpCity
 from Logger import logger
 from PrintText import suffix_for_call
 from Security_Check import get_cf_ips
-from urllib.parse import urlparse, urljoin
 from Update_BlackList import update_part_blacklist_rule, update_part_blacklist_comment, blacklist
+from urllib.parse import urlparse, urljoin
 import ipaddress
 import Query_API
 import re

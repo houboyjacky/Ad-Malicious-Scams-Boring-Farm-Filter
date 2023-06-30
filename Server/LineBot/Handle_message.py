@@ -696,7 +696,6 @@ def handle_message_text_sub(user_id, orgin_text):
             prefix_msg = f"{prefix_msg}「 {orgin_text} 」\n"
         else:
             prefix_msg = f"分析出"
-
         # 若查詢失敗就繼續go到最後，直接查網址
         if status == -1:
             prefix_msg = ""
