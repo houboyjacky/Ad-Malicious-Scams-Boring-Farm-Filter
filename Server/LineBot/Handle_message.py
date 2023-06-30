@@ -451,6 +451,14 @@ def handle_message_text_front(user_text) -> str:
         rmessage = "「TG」後面直接輸入ID就好，不需要空白"
         return rmessage
 
+    if user_text.startswith("貨幣 p"):
+        rmessage = "「貨幣」後面直接輸入地址就好，不需要空白"
+        return rmessage
+
+    if user_text.lower().startswith("貨幣http"):
+        rmessage = f"！！輸入錯誤！！\n\n你輸入http開頭是網址\n直接貼上即可查詢"
+        return rmessage
+
     return None
 
 def handle_message_text_game(user_id, user_text) -> str:
@@ -512,10 +520,6 @@ def handle_message_text_sub(user_id, orgin_text):
     lower_text = orgin_text.lower()
 
     # 無關網址判斷
-    if lower_text.startswith("貨幣http"):
-        rmessage = f"！！輸入錯誤！！\n\n「貨幣」後面是加入虛擬貨幣地址\n你輸入http開頭是網址\n直接貼上即可查詢"
-        return rmessage
-
     if re.match(Tools.KEYWORD_VIRTUAL_MONEY[0], orgin_text):
         msg, status = Virtual_Money_read_file(orgin_text)
         if status:
