@@ -425,7 +425,7 @@ def handle_message_text_admin(user_id, orgin_text):
 
 def handle_message_text_front(user_text) -> str:
     if len(user_text) > 1000:
-        if user_text.startwith("http"):
+        if user_text.startswith("http"):
             subdomain, domain, suffix = Tools.domain_analysis(user_text)
             rmessage = f"謝謝你提供的情報\n但網址過長，請直接輸入\n「 http://{domain}.{suffix} 」\n就好"
         else:
