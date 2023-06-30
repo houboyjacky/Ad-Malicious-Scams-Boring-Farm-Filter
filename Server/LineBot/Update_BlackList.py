@@ -94,7 +94,7 @@ def check_download_file(url):
     remote_file_hash = hashlib.md5(content).hexdigest()
 
     if remote_file_hash != Local_file_hash:
-        Tools.write_file_U8(Local_file_path, content)
+        Tools.write_file_bin(Local_file_path, content)
         #logger.info(f"{Local_file_name} is download")
         return Local_file_path, NEW
     return Local_file_path, OLD
