@@ -329,7 +329,7 @@ def check_blacklisted_site(domain_name):
         line = line.strip().lower()  # 去除開頭或結尾的空白和轉成小寫
         if line.startswith("/") and line.endswith("/"):
             regex = re.compile(line[1:-1])
-            if regex.search(regex,domain_name):
+            if regex.search(domain_name):
                 logger.info(f"{domain_name}在黑名單內1")
                 return True
         elif "*" in line:
