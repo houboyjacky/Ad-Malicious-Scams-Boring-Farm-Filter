@@ -217,8 +217,6 @@ def user_query_shorturl_normal(user_text):
 
     if subdomain:
         domain_name = f"{subdomain}.{domain}.{suffix}"
-    elif not domain and suffix == "gov.tw":
-        domain_name = suffix
     else:
         domain_name = f"{domain}.{suffix}"
     logger.info(f"domain_name = {domain_name}")
@@ -299,10 +297,7 @@ def user_query_shorturl(user_text):
         #解析網址
         subdomain, domain, suffix = Tools.domain_analysis(url)
 
-        if not domain and suffix == "gov.tw":
-            rmessage, result, keep_go_status = user_query_shorturl_normal(url)
-            return rmessage, result, keep_go_status
-        elif subdomain:
+        if subdomain:
             domain_name = f"{subdomain}.{domain}.{suffix}"
         else:
             domain_name = f"{domain}.{suffix}"

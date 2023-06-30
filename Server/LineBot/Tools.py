@@ -224,6 +224,9 @@ def domain_analysis(url):
     subdomain = extracted.subdomain.lower()
     domain = extracted.domain.lower()
     suffix = extracted.suffix.lower()
+    if not subdomain and not domain and suffix :
+        domain = suffix.split(".")[-2]
+        suffix = suffix.split(".")[-1]
     return subdomain, domain, suffix
 
 remote_hash_dict = {}

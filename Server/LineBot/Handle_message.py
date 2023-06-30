@@ -958,8 +958,7 @@ def handle_message_text_sub(user_id, orgin_text):
                 msg = f"{msg}＝＝＝＝＝＝＝＝＝＝＝＝\n"
                 rmessage = f"{rmessage}{msg}"
         return rmessage
-
-    return
+    return None
 
 def handle_message_text(event):
     # 取得發訊者的 ID
