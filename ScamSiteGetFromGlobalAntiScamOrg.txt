@@ -1676,7 +1676,6 @@
 ||annmrx.com^
 ||annrc.com^
 ||anobit24.com^
-||anodaa8np-^
 ||anodaa8np-aninstanticon.com^
 ||anodaaa.com^
 ||ansatradex.com^
@@ -2132,7 +2131,7 @@
 ||asiatrader.com.tw^
 ||asiatrader.com^
 ||asiawj.net^
-||asibacom^
+||asiba.com^
 ||asibaline.com^
 ||asibaweb.com^
 ||asibawebs.com^
@@ -2845,7 +2844,7 @@
 ||bee1314.com^
 ||beecoinx.com^
 ||beecubetrades.com^
-||beeexcom^
+||beeex.com^
 ||beeexweb.com^
 ||beefx.com^
 ||beefy-finance.tech^
@@ -4200,11 +4199,11 @@
 ||bitmars.pro^
 ||bitmarspro.com^
 ||bitmart-trust.com^
+||bitmart.com^
 ||bitmart.shop^
 ||bitmartch.com^
 ||bitmartch.net^
 ||bitmartcn.net^
-||bitmartcom^
 ||bitmartinfo.online^
 ||bitmartob.com^
 ||bitmartph.site^
@@ -5151,7 +5150,7 @@
 ||boneglobal.cc^
 ||boniry.cloud^
 ||boniry.club^
-||bonirycom^
+||boniry.com^
 ||boniryweb.com^
 ||bontopex.com^
 ||bonwway.com^
@@ -5246,13 +5245,13 @@
 ||brk.ninja^
 ||brk.quest^
 ||brk.skin^
+||brk.xyz^
 ||brkapp.com^
 ||brkmart.xyz^
 ||brkpro.com^
 ||brkshop.com^
 ||brktw.com^
 ||brkweb.xyz^
-||brkxyz^
 ||bro4trade.com^
 ||broad-fin.com^
 ||broadex.uk^
@@ -5288,7 +5287,6 @@
 ||bsdsyey.com^
 ||bsfxexp.com^
 ||bsia68.com^
-||bsjmlmn^
 ||bsn19.com^
 ||bsn56.com^
 ||bsn56zu9ps2-timeofice.com^
@@ -5973,7 +5971,7 @@
 ||capitalgainvestment.com^
 ||capitalgiantfx.com^
 ||capitalgls.com^
-||capitalgroupcom^
+||capitalgroup.com^
 ||capitalgrouplines.com^
 ||capitalgrouptrading.com^
 ||capitalgroupweb.com^
@@ -7681,9 +7679,9 @@
 ||coinsmart-coin.com^
 ||coinsmart-loge.com^
 ||coinsmart.app^
+||coinsmart.com^
 ||coinsmart.live^
 ||coinsmartcfx.com^
-||coinsmartcom^
 ||coinsmartep.com^
 ||coinsmartex.com^
 ||coinsmartgs.com^
@@ -15176,7 +15174,7 @@
 ||hcex.xyz^
 ||hcextd.com^
 ||hclv.com.cn^
-||hcoincom^
+||hcoin.com^
 ||hcoinline.com^
 ||hcoinweb.com^
 ||hcon.uk^
@@ -19366,7 +19364,6 @@
 ||mmbizurl.cn^
 ||mmbizurl.dn^
 ||mmbizurl.en^
-||mmbizurl^
 ||mmcoin8.com^
 ||mmexccfx.com^
 ||mmmmdm.com^
