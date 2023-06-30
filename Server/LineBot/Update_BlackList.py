@@ -142,16 +142,14 @@ def update_list_to_db(filename, List, db_name):
     datetime = date.today().strftime("%Y-%m-%d")
     documents_to_insert = []
     if filename == Tools.TMP_BLACKLIST:
-        Name = "report"
-        collection = Query_API.Read_DB(db_name,Name)
-        collection.delete_many({})
+        Name = "Report"
     else:
         Name = os.path.basename(filename)
-        collection = Query_API.Read_DB(db_name,Name)
+
+    Query_API.Drop_Collection(db_name,Name)
+    collection = Query_API.Read_DB(db_name,Name)
+
     for tmp in List:
-        document = collection.find_one({"網址": tmp})
-        if document:
-            continue
         document = {    "網址": tmp,
                         "來源": Name,
                         "時間": datetime
