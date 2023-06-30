@@ -328,7 +328,7 @@ def check_blacklisted_site(domain_name):
             if re.fullmatch(regex, domain_name):
                 # 特別有*號規則直接可以寫入Adguard規則
                 rule = f"||{domain_name}^\n"
-                Tools.write_file_U8(Tools.NEW_SCAM_WEBSITE_FOR_ADG, rule)
+                Tools.write_file_U8(Tools.TMP_BLACKLIST, rule)
                 logger.info(f"{domain_name}在黑名單內2")
                 return True
         elif domain_name == line:
@@ -337,7 +337,7 @@ def check_blacklisted_site(domain_name):
         elif domain_name.endswith(line) and line in Tools.SPECIAL_SUBWEBSITE:
             # 特別子網域規則直接可以寫入Adguard規則
             rule = f"||{domain_name}^\n"
-            Tools.write_file_U8(Tools.NEW_SCAM_WEBSITE_FOR_ADG, rule)
+            Tools.write_file_U8(Tools.TMP_BLACKLIST, rule)
             logger.info(f"{domain_name}在黑名單內4")
             return True
 

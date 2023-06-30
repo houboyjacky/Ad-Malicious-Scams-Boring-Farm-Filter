@@ -37,7 +37,7 @@ import Tools
 # 目前不支援 "lurl.cc" "risu.io"
 # 未知 "picsee.io" "lihi.io"
 
-HTTP_HEADERS_LIST = Tools.read_json_file(Tools.HTTP_HEADERS)
+HTTP_HEADERS_LIST = Tools.read_json_to_list(Tools.HTTP_HEADERS)
 
 def resolve_redirects_wenkio(url):
     try:

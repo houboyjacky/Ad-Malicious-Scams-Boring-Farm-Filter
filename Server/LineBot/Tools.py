@@ -21,8 +21,8 @@ THE SOFTWARE.
 '''
 
 from datetime import datetime
-import hashlib
 from filelock import FileLock
+import hashlib
 import json
 import os
 import pycountry
@@ -43,10 +43,8 @@ BLACKUSERID = setting['BLACKUSERID']                            # BLACKUSERID =>
 CERT = setting['CERT']                                          # CERT => Lets Encrypt Certificate Path File
 CHANNEL_ACCESS_TOKEN = setting['CHANNEL_ACCESS_TOKEN']          # CHANNEL_ACCESS_TOKEN => Linebot Token
 CHANNEL_SECRET = setting['CHANNEL_SECRET']                      # CHANNEL_SECRET => Linebot Token
-FB_BLACKLIST = setting['FB_BLACKLIST']                          # FB_BLACKLIST => Blacklist for Facebook
 HASH_FILE = setting['HASH_FILE']                                # HASH_FILE => HASH INF IN FILE
 HTTP_HEADERS = setting['HTTP_HEADERS']                          # HTTP_HEADERS => Http Headers
-IG_BLACKLIST = setting['IG_BLACKLIST']                          # IG_BLACKLIST => Blacklist for IG
 KEYWORD_FB = setting['KEYWORD_FB']                              # KEYWORD_FB => Keyword for FB
 KEYWORD_IG = setting['KEYWORD_IG']                              # KEYWORD_IG => Keyword for IG
 KEYWORD_LINE = setting['KEYWORD_LINE']                          # KEYWORD_LINE => Keyword for LINE
@@ -58,14 +56,12 @@ KEYWORD_TWITTER = setting['KEYWORD_TWITTER']                    # KEYWORD_TWITTE
 KEYWORD_URL = setting['KEYWORD_URL']                            # KEYWORD_URL => Keyword for url
 KEYWORD_VIRTUAL_MONEY = setting['KEYWORD_VIRTUAL_MONEY']        # KEYWORD_VIRTUAL_MONEY => Keyword for virtual money
 KEYWORD_WHATSAPP = setting['KEYWORD_WHATSAPP']                  # KEYWORD_WHATSAPP => Keyword for WhatsApp
-LINE_INVITE = setting['LINE_INVITE']                            # LINE_INVITE => Black Line invite site
-LINEID_LOCAL = setting['LINEID_LOCAL']                          # LINEID_LOCAL => Line ID from Local
 LINEID_WEB = setting['LINEID_WEB']                              # LINEID_WEB => Line ID from Web
 LOGFILE = setting['LOGFILE']                                    # LOGFILE => Log File Path
-MAIL_BLACKLIST = setting['MAIL_BLACKLIST']                      # MAIL_BLACKLIST => Mail Black List
 MOBILECONFIGDIR = setting['CONFIG_ORIGIN']                      # Modify mobileconfig
-NETIZEN = setting['NETIZEN']                                    # NETIZEN => Netizen Report
-NEW_SCAM_WEBSITE_FOR_ADG = setting['BLACKLISTFORADG']           # BLACKLISTFORADG => Blacklist for Adguard Home Download
+MONGODB_PWD = setting['MONGODB_PWD']                            # MONGODB_PWD => MONGODB Password
+MONGODB_URL = setting['MONGODB_URL']                            # MONGODB_URL => MONGODB Url
+MONGODB_USER = setting['MONGODB_USER']                          # MONGODB_USER => MONGODB User Name
 NOTICE_BOARD = setting['NOTICE_BOARD']                          # NOTICE_BOARD => NOTICE BOARD
 NOTICE_BOARD_LIST = setting['NOTICE_BOARD_LIST']                # NOTICE_BOARD_LIST => NOTICE BOARD LIST
 PEM_DIR = setting['PEM_DIR']                                    # PEM_DIR => Lets Encrypt Certificate Path
@@ -74,30 +70,20 @@ SCAM_WEBSITE_LIST = setting['SCAM_WEBSITE_LIST']                # SCAM_WEBSITE_L
 SHORT_URL_LIST = setting['SHORT_URL_LIST']                      # SHORT_URL_LIST => Short url list
 SPECIAL_SUBWEBSITE = setting['SPECIAL_SUBWEBSITE']              # SPECIAL_SUBWEBSITE => Special Subwebsite need to block sub website
 TARGET_DIR = setting['CONFIG_SIGN']                             # New Signed mobileconfig
-TELEGRAM_LOCAL = setting['TELEGRAM_LOCAL']                      # TELEGRAM_LOCAL => Blacklist for Blacklist
-TIKTOK_BLACKLIST = setting['TIKTOK_BLACKLIST']                  # TIKTOK_BLACKLIST => Blacklist for Tiktok
-TWITTER_BLACKLIST = setting['TWITTER_BLACKLIST']                # TWITTER_BLACKLIST => Blacklist for Twitter
-USER_POINT = setting['USER_POINT']                              # USER_POINT => User Point Record
-VIRTUAL_MONEY_BLACKLIST = setting['VIRTUAL_MONEY_BLACKLIST']    # VIRTUAL_MONEY_BLACKLIST => Blacklist for
+TMP_BLACKLIST = setting['TMP_BLACKLIST']                        # TMP_BLACKLIST => Blacklist for Adguard Home Download
 WEB_LEADERBOARD_FILE = setting['WEB_LEADERBOARD_FILE']          # WEB_LEADERBOARD_FILE => Query Website times leaderboard from file
-WHATSAPP_BLACKLIST = setting['WHATSAPP_BLACKLIST']              # WHATSAPP_BLACKLIST => Blacklist for WhatsApp
-WHOIS_QUERY_LIST = setting['WHOIS_QUERY_LIST']                  # WHOIS_QUERY_LIST => Save whois data
-MONGODB_USER = setting['MONGODB_USER']                          # MONGODB_USER => MONGODB User Name
-MONGODB_PWD = setting['MONGODB_PWD']                            # MONGODB_PWD => MONGODB Password
-MONGODB_URL = setting['MONGODB_URL']                            # MONGODB_URL => MONGODB Url
 
 def reloadSetting():
     global ADMINS, BACKUPDIR, BLACKUSERID, CERT, CHANNEL_ACCESS_TOKEN
-    global CHANNEL_SECRET, FB_BLACKLIST, HASH_FILE, IG_BLACKLIST, KEYWORD_FB
-    global KEYWORD_IG, KEYWORD_LINE, KEYWORD_TELEGRAM, KEYWORD_URL, LINEID_LOCAL
-    global LINEID_WEB, LINE_INVITE, LOGFILE, MOBILECONFIGDIR, NETIZEN
-    global NEW_SCAM_WEBSITE_FOR_ADG, NOTICE_BOARD, NOTICE_BOARD_LIST, PEM_DIR, PRIVKEY
-    global SCAM_WEBSITE_LIST, SHORT_URL_LIST, SPECIAL_SUBWEBSITE, TARGET_DIR, TELEGRAM_LOCAL
-    global USER_POINT, WEB_LEADERBOARD_FILE, WHOIS_QUERY_LIST, ALLOW_DOMAIN_LIST
-    global TWITTER_BLACKLIST, KEYWORD_TWITTER, KEYWORD_MAIL, MAIL_BLACKLIST, KEYWORD_WHATSAPP
-    global WHATSAPP_BLACKLIST, KEYWORD_TIKTOK, TIKTOK_BLACKLIST
-    global KEYWORD_SMALLREDBOOK, VIRTUAL_MONEY_BLACKLIST, KEYWORD_VIRTUAL_MONEY
-    global HTTP_HEADERS, MONGODB_USER, MONGODB_PWD, MONGODB_URL
+    global CHANNEL_SECRET, HASH_FILE, KEYWORD_FB, KEYWORD_TIKTOK
+    global KEYWORD_IG, KEYWORD_LINE, KEYWORD_TELEGRAM, KEYWORD_URL
+    global LINEID_WEB, LOGFILE, MOBILECONFIGDIR, HTTP_HEADERS
+    global TMP_BLACKLIST, NOTICE_BOARD, NOTICE_BOARD_LIST, PEM_DIR, PRIVKEY
+    global SCAM_WEBSITE_LIST, SHORT_URL_LIST, SPECIAL_SUBWEBSITE, TARGET_DIR
+    global WEB_LEADERBOARD_FILE, ALLOW_DOMAIN_LIST
+    global KEYWORD_TWITTER, KEYWORD_MAIL, KEYWORD_WHATSAPP
+    global KEYWORD_SMALLREDBOOK, KEYWORD_VIRTUAL_MONEY
+    global MONGODB_USER, MONGODB_PWD, MONGODB_URL
     global setting
 
     setting = ''
@@ -112,10 +98,8 @@ def reloadSetting():
     CERT = setting['CERT']
     CHANNEL_ACCESS_TOKEN = setting['CHANNEL_ACCESS_TOKEN']
     CHANNEL_SECRET = setting['CHANNEL_SECRET']
-    FB_BLACKLIST = setting['FB_BLACKLIST']
     HASH_FILE = setting['HASH_FILE']
     HTTP_HEADERS = setting['HTTP_HEADERS']
-    IG_BLACKLIST = setting['IG_BLACKLIST']
     KEYWORD_FB = setting['KEYWORD_FB']
     KEYWORD_IG = setting['KEYWORD_IG']
     KEYWORD_LINE = setting['KEYWORD_LINE']
@@ -127,14 +111,12 @@ def reloadSetting():
     KEYWORD_URL = setting['KEYWORD_URL']
     KEYWORD_VIRTUAL_MONEY = setting['KEYWORD_VIRTUAL_MONEY']
     KEYWORD_WHATSAPP = setting['KEYWORD_WHATSAPP']
-    LINE_INVITE = setting['LINE_INVITE']
-    LINEID_LOCAL = setting['LINEID_LOCAL']
     LINEID_WEB = setting['LINEID_WEB']
     LOGFILE = setting['LOGFILE']
-    MAIL_BLACKLIST = setting['MAIL_BLACKLIST']
     MOBILECONFIGDIR = setting['CONFIG_ORIGIN']
-    NETIZEN = setting['NETIZEN']
-    NEW_SCAM_WEBSITE_FOR_ADG = setting['BLACKLISTFORADG']
+    MONGODB_PWD = setting['MONGODB_PWD']
+    MONGODB_URL = setting['MONGODB_URL']
+    MONGODB_USER = setting['MONGODB_USER']
     NOTICE_BOARD = setting['NOTICE_BOARD']
     NOTICE_BOARD_LIST = setting['NOTICE_BOARD_LIST']
     PEM_DIR = setting['PEM_DIR']
@@ -143,17 +125,8 @@ def reloadSetting():
     SHORT_URL_LIST = setting['SHORT_URL_LIST']
     SPECIAL_SUBWEBSITE = setting['SPECIAL_SUBWEBSITE']
     TARGET_DIR = setting['CONFIG_SIGN']
-    TELEGRAM_LOCAL = setting['TELEGRAM_LOCAL']
-    TIKTOK_BLACKLIST = setting['TIKTOK_BLACKLIST']
-    TWITTER_BLACKLIST = setting['TWITTER_BLACKLIST']
-    USER_POINT = setting['USER_POINT']
-    VIRTUAL_MONEY_BLACKLIST = setting['VIRTUAL_MONEY_BLACKLIST']
+    TMP_BLACKLIST = setting['BLACKLISTFORADG']
     WEB_LEADERBOARD_FILE = setting['WEB_LEADERBOARD_FILE']
-    WHATSAPP_BLACKLIST = setting['WHATSAPP_BLACKLIST']
-    WHOIS_QUERY_LIST = setting['WHOIS_QUERY_LIST']
-    MONGODB_USER = setting['MONGODB_USER']
-    MONGODB_PWD = setting['MONGODB_PWD']
-    MONGODB_URL = setting['MONGODB_URL']
 
     return
 
@@ -173,23 +146,12 @@ def datetime_to_string(dt):
 def string_to_datetime(string):
     return datetime.strptime(string, "%Y%m%d%H%M%S")
 
-def read_json_file(filename: str) -> list:
+def read_json_to_list(filename: str) -> list:
     try:
         with open(filename, "r", encoding="utf-8") as file:
             return json.load(file)
     except (FileNotFoundError, json.JSONDecodeError):
         return []
-
-def write_json_file(filename: str, data: list) -> None:
-    # 創建一個檔案鎖定對象
-    lock_file = FileLock(f"{filename}.lock")
-
-    # 使用 with 陳述式自動管理檔案鎖定
-    with lock_file:
-        # 打開檔案並寫入數據
-        with open(filename, "w", encoding="utf-8") as file:
-            json.dump(data, file, ensure_ascii=False, indent=2)
-    return
 
 def format_elapsed_time(seconds):
     m, s = divmod(seconds, 60)
@@ -201,35 +163,12 @@ def format_elapsed_time(seconds):
     else:
         return f"{s:.2f}秒"
 
-def find_url(text):
-    url_pattern = re.compile(r"http[s]?://\S+")
-    match = url_pattern.search(text)
-    if match:
-        return match.group()
-    else:
-        return None
-
 def translate_country(country_code):
     try:
         country = pycountry.countries.lookup(country_code)
         return country.name
     except LookupError:
         return "Unknown"
-
-def load_count_file(filename:str, List:list):
-    if os.path.exists(filename):
-        with open(filename, "r") as f:
-            lines = f.readlines()
-            for line in lines:
-                uid, point = line.strip().split(":")
-                List[uid] = int(point)
-
-def write_count_file(filename:str, List:list):
-    lock_file = FileLock(f"{filename}.lock")
-    with lock_file:
-        with open(filename, "w") as f:
-            for uid, point in List.items():
-                f.write(f"{uid}:{point}\n")
 
 def read_file_to_list(file_path):
     # 讀取檔案並將內容轉換為清單
@@ -276,16 +215,6 @@ def read_file_U8(file_path):
 def write_file_bin(file_path, content):
     with open(file_path, "wb") as f:
         f.write(content)
-    return
-
-def Clear_List_Checker(filename: str, blacklists) -> None:
-    modify = False
-    for blacklist in blacklists:
-        if blacklist["檢查者"]:
-            blacklist["檢查者"] = ""
-            modify = True
-    if modify:
-        write_json_file(filename, blacklists)
     return
 
 def domain_analysis(url):
