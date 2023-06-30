@@ -393,17 +393,15 @@ def user_query_website_by_IP(IP):
 def user_query_website_by_DNS(domain_name, result_list, lock):
 
     Is_Skip = False
-    for skip in Tools.WHOIS_SKIP:
-        if skip == domain_name:
-            Is_Skip = True
-            break
+    if domain_name in Tools.WHOIS_SKIP:
+        Is_Skip = True
 
     whois_domain = ""
     whois_creation_date = ""
     whois_country = ""
     whois_query_error = False
 
-    if Is_Skip:
+    if not Is_Skip:
         WHOIS_DB_name = "WHOIS"
         collection = Query_API.Read_DB(WHOIS_DB_name,WHOIS_DB_name)
         if Document:= Query_API.Search_Same_Document(collection, "whois_domain", domain_name):
