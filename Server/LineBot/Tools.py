@@ -72,6 +72,7 @@ SPECIAL_SUBWEBSITE = setting['SPECIAL_SUBWEBSITE']              # SPECIAL_SUBWEB
 TARGET_DIR = setting['CONFIG_SIGN']                             # New Signed mobileconfig
 TMP_BLACKLIST = setting['TMP_BLACKLIST']                        # TMP_BLACKLIST => Blacklist for Adguard Home Download
 WEB_LEADERBOARD_FILE = setting['WEB_LEADERBOARD_FILE']          # WEB_LEADERBOARD_FILE => Query Website times leaderboard from file
+WHOIS_SKIP = setting['WHOIS_SKIP']                              # WHOIS_SKIP => Skip Query Whois
 
 def reloadSetting():
     global ADMINS, BACKUPDIR, BLACKUSERID, CERT, CHANNEL_ACCESS_TOKEN
@@ -80,7 +81,7 @@ def reloadSetting():
     global LINEID_WEB, LOGFILE, MOBILECONFIGDIR, HTTP_HEADERS
     global TMP_BLACKLIST, NOTICE_BOARD, NOTICE_BOARD_LIST, PEM_DIR, PRIVKEY
     global SCAM_WEBSITE_LIST, SHORT_URL_LIST, SPECIAL_SUBWEBSITE, TARGET_DIR
-    global WEB_LEADERBOARD_FILE, ALLOW_DOMAIN_LIST
+    global WEB_LEADERBOARD_FILE, ALLOW_DOMAIN_LIST, WHOIS_SKIP
     global KEYWORD_TWITTER, KEYWORD_MAIL, KEYWORD_WHATSAPP
     global KEYWORD_SMALLREDBOOK, KEYWORD_VIRTUAL_MONEY
     global MONGODB_USER, MONGODB_PWD, MONGODB_URL
@@ -127,6 +128,7 @@ def reloadSetting():
     TARGET_DIR = setting['CONFIG_SIGN']
     TMP_BLACKLIST = setting['TMP_BLACKLIST']
     WEB_LEADERBOARD_FILE = setting['WEB_LEADERBOARD_FILE']
+    WHOIS_SKIP = setting['WHOIS_SKIP']
 
     return
 

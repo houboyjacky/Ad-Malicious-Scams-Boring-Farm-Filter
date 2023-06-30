@@ -392,75 +392,81 @@ def user_query_website_by_IP(IP):
 
 def user_query_website_by_DNS(domain_name, result_list, lock):
 
-    WHOIS_DB_name = "WHOIS"
-    collection = Query_API.Read_DB(WHOIS_DB_name,WHOIS_DB_name)
+    Is_Skip = False
+    for skip in Tools.WHOIS_SKIP:
+        if skip == domain_name:
+            Is_Skip = True
+            break
 
     whois_domain = ""
     whois_creation_date = ""
     whois_country = ""
     whois_query_error = False
 
-    if Document:= Query_API.Search_Same_Document(collection, "whois_domain", domain_name):
-        saved_date = datetime.strptime(Document['加入日期'], '%Y%m%d')
-        current_date = datetime.now()
-        time_diff = current_date - saved_date
-        if time_diff.days >= 30:
-            Document = None
-        elif not Document['whois_creation_date']:
-            Document = None
-        else:
-            whois_domain = Document['whois_domain']
-            whois_creation_date = Document['whois_creation_date']
-            whois_country = Document['whois_country']
-
-    if not Document:
-        # 從 WHOIS 服務器獲取 WHOIS 信息
-        try:
-            w = whois.query(domain_name)
-            if w:
-                logger.info(w.__dict__)
-                # 儲存查詢結果到全域列表
-                whois_domain = w.name
-                if not w.creation_date:
-                    whois_creation_date = None
-                elif isinstance(w.creation_date, list):
-                    parsed_dates = [date_obj for date_obj in w.creation_date]
-                    whois_creation_date = Tools.datetime_to_string(min(parsed_dates))
-                else:
-                    whois_creation_date = Tools.datetime_to_string(w.creation_date)
-
-                whois_country = w.registrant_country
-                whois_list = {
-                    'whois_domain': domain_name,
-                    'whois_creation_date': whois_creation_date,
-                    'whois_country':whois_country,
-                    '加入日期': datetime.now().strftime('%Y%m%d')
-                }
-                Query_API.Update_Document(collection, whois_list, 'whois_domain')
-        except Exception as e: # 判斷原因 whois.parser.PywhoisError: No match for "FXACAP.COM"
-            whois_query_error = True
-            logger.error(f"An error occurred: {e}")
-            error_message = str(e)
-
-            if "No match" in error_message:
-                # 沒有這個網址
-                pass
-            elif creation_date_match := re.search(r"Creation Date: (\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z)", error_message):
-                creation_date = creation_date_match.group(1)
-                whois_creation_date = re.sub(r"[^\d]", "", creation_date)
-                whois_domain = domain_name
-                whois_country = ""
-                whois_list = {
-                    'whois_domain': domain_name,
-                    'whois_creation_date': whois_creation_date,
-                    'whois_country':whois_country,
-                    '加入日期': datetime.now().strftime('%Y%m%d')
-                }
-                Query_API.Update_Document(collection, whois_list, 'whois_domain')
-                whois_query_error = False
-                logger.info("Get from Whois Exception")
+    if Is_Skip:
+        WHOIS_DB_name = "WHOIS"
+        collection = Query_API.Read_DB(WHOIS_DB_name,WHOIS_DB_name)
+        if Document:= Query_API.Search_Same_Document(collection, "whois_domain", domain_name):
+            saved_date = datetime.strptime(Document['加入日期'], '%Y%m%d')
+            current_date = datetime.now()
+            time_diff = current_date - saved_date
+            if time_diff.days >= 30:
+                Document = None
+            elif not Document['whois_creation_date']:
+                Document = None
             else:
-                logger.info("Cannot get from Whois Exception")
+                whois_domain = Document['whois_domain']
+                whois_creation_date = Document['whois_creation_date']
+                whois_country = Document['whois_country']
+
+        if not Document:
+            # 從 WHOIS 服務器獲取 WHOIS 信息
+            try:
+                w = whois.query(domain_name)
+                if w:
+                    logger.info(w.__dict__)
+                    # 儲存查詢結果到全域列表
+                    whois_domain = w.name
+                    if not w.creation_date:
+                        whois_creation_date = None
+                    elif isinstance(w.creation_date, list):
+                        parsed_dates = [date_obj for date_obj in w.creation_date]
+                        whois_creation_date = Tools.datetime_to_string(min(parsed_dates))
+                    else:
+                        whois_creation_date = Tools.datetime_to_string(w.creation_date)
+
+                    whois_country = w.registrant_country
+                    whois_list = {
+                        'whois_domain': domain_name,
+                        'whois_creation_date': whois_creation_date,
+                        'whois_country':whois_country,
+                        '加入日期': datetime.now().strftime('%Y%m%d')
+                    }
+                    Query_API.Update_Document(collection, whois_list, 'whois_domain')
+            except Exception as e: # 判斷原因 whois.parser.PywhoisError: No match for "FXACAP.COM"
+                whois_query_error = True
+                logger.error(f"An error occurred: {e}")
+                error_message = str(e)
+
+                if "No match" in error_message:
+                    # 沒有這個網址
+                    pass
+                elif creation_date_match := re.search(r"Creation Date: (\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z)", error_message):
+                    creation_date = creation_date_match.group(1)
+                    whois_creation_date = re.sub(r"[^\d]", "", creation_date)
+                    whois_domain = domain_name
+                    whois_country = ""
+                    whois_list = {
+                        'whois_domain': domain_name,
+                        'whois_creation_date': whois_creation_date,
+                        'whois_country':whois_country,
+                        '加入日期': datetime.now().strftime('%Y%m%d')
+                    }
+                    Query_API.Update_Document(collection, whois_list, 'whois_domain')
+                    whois_query_error = False
+                    logger.info("Get from Whois Exception")
+                else:
+                    logger.info("Cannot get from Whois Exception")
 
     with lock:
         result_list.append(("whois_query_error",whois_query_error))
