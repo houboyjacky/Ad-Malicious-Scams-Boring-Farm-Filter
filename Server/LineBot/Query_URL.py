@@ -314,13 +314,22 @@ def check_blacklisted_site(domain_name):
             logger.info(f"{domain_name}在DB白名單內")
             return False
 
+    Black_db = "網站黑名單"
+    Black_collections = Query_API.Read_DBs(Black_db)
+
+    for collection in Black_collections:
+        document = collection.find_one({"網址": domain_name})
+        if document:
+            logger.info(f"{domain_name}在DB黑名單內")
+            return True
+
     global blacklist
 
     for line in blacklist:
         line = line.strip().lower()  # 去除開頭或結尾的空白和轉成小寫
         if line.startswith("/") and line.endswith("/"):
             regex = re.compile(line[1:-1])
-            if regex.search(domain_name):
+            if regex.search(regex,domain_name):
                 logger.info(f"{domain_name}在黑名單內1")
                 return True
         elif "*" in line:
@@ -341,14 +350,6 @@ def check_blacklisted_site(domain_name):
             logger.info(f"{domain_name}在黑名單內4")
             return True
 
-    Black_db = "網站黑名單"
-    Black_collections = Query_API.Read_DBs(Black_db)
-
-    for collection in Black_collections:
-        document = collection.find_one({"網址": domain_name})
-        if document:
-            logger.info(f"{domain_name}在DB黑名單內")
-            return True
     return False
 
 # ===============================================
