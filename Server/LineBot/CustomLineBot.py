@@ -95,8 +95,8 @@ def allowed_file(filename):
 
 @app.route('/<filename>')
 def download(filename):
-    if filename == os.path.basename(Tools.NEW_SCAM_WEBSITE_FOR_ADG):
-        return Response(open(Tools.NEW_SCAM_WEBSITE_FOR_ADG, "rb"), mimetype="text/plain")
+    if filename == os.path.basename(Tools.TMP_BLACKLIST):
+        return Response(open(Tools.TMP_BLACKLIST, "rb"), mimetype="text/plain")
 
     if allowed_file(filename):
         # 若檔案存在，則進行下載
@@ -169,6 +169,14 @@ def signal_handler(sig, frame):
     Logger_Transfer()
     sys.exit(0)
 
+def background_tasks():
+    logger.info(f"background_tasks Start")
+    SignMobileconfig()
+    LINE_ID_Download_From_165()
+    download_cf_ips()
+    update_blacklist()
+    logger.info(f"background_tasks Finish")
+
 if __name__ == "__main__":
 
     # 建立 stop_event
@@ -177,22 +185,21 @@ if __name__ == "__main__":
     signal.signal(signal.SIGINT, signal_handler)
     signal.signal(signal.SIGTERM, signal_handler)
 
-    SignMobileconfig()
-    LINE_ID_Download_From_165()
-    download_cf_ips()
-    update_blacklist()
-
     # 建立 thread
+    tasks_thread = threading.Thread(target=background_tasks)
     update_thread = threading.Thread(target=Update_url_schedule, args=(stop_event,))
     logger_thread = threading.Thread(target=Logger_schedule, args=(stop_event,))
 
     # 啟動 thread
+    tasks_thread.start()
     update_thread.start()
     logger_thread.start()
 
     # 開啟 LINE 聊天機器人的 Webhook 伺服器
+    logger.info(f"Line Bot is ready")
     app.run(host='0.0.0.0', port=8443, ssl_context=(Tools.CERT, Tools.PRIVKEY), threaded=True)
 
     # 等待 thread 結束
+    tasks_thread.join()
     update_thread.join()
     logger_thread.join()
