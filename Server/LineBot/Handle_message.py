@@ -230,13 +230,13 @@ def handle_message_text_admin_sub(orgin_text):
             break
 
         # Telegram ID
-        if match := re.search(Tools.KEYWORD_TELEGRAM[1], orgin_text):
+        if match := re.search(Tools.KEYWORD_TELEGRAM_ID[1], orgin_text):
             # 加入 Telegram ID
             telegram_id = match.group(1)
             url = f"https://t.me/{telegram_id}"
             rmessage = Telegram_Write_Document(url)
             break
-        elif match := re.search(Tools.KEYWORD_TELEGRAM[4], orgin_text):
+        elif match := re.search(Tools.KEYWORD_TELEGRAM_ID[2], orgin_text):
             # 刪除 Telegram ID
             telegram_id = match.group(1)
             url = f"https://t.me/{telegram_id}"
@@ -244,11 +244,11 @@ def handle_message_text_admin_sub(orgin_text):
             break
 
         # Telegram 網址
-        if match := re.search(Tools.KEYWORD_TELEGRAM[3], orgin_text):
+        if match := re.search(Tools.KEYWORD_TELEGRAM_URL[1], orgin_text):
             # 加入 Telegram 網址
             rmessage = Telegram_Write_Document(orgin_text)
             break
-        elif match := re.search(Tools.KEYWORD_TELEGRAM[5], orgin_text):
+        elif match := re.search(Tools.KEYWORD_TELEGRAM_URL[2], orgin_text):
             # 刪除 Telegram 網址
             rmessage = Telegram_Delete_Document(orgin_text)
             break
@@ -587,7 +587,7 @@ def handle_message_text_sub(user_id, orgin_text):
         return rmessage
 
     # 查詢Telegram ID
-    if match := re.search(Tools.KEYWORD_TELEGRAM[0], orgin_text):
+    if match := re.search(Tools.KEYWORD_TELEGRAM_ID[0], orgin_text):
         telegram_id = match.group(1)
         url = f"https://t.me/{telegram_id}"
         message, status = Telegram_Read_Document(url)
@@ -794,7 +794,7 @@ def handle_message_text_sub(user_id, orgin_text):
         return rmessage
 
     # 查詢Telegram網址
-    if match := re.search(Tools.KEYWORD_TELEGRAM[2], lower_text):
+    if match := re.search(Tools.KEYWORD_TELEGRAM_URL[0], lower_text):
         telegram_id = match.group(1)
         message, status = Telegram_Read_Document(orgin_text)
         if status == -1:
