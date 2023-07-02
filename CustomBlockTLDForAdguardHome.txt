@@ -245,6 +245,7 @@
 ||frubit.*^
 ||goldstar.*^
 ||gstha.*^
+||imtoken*.*^
 ||inverbid.*^
 ||jimmyconnie.*^
 ||lehinsecurities.*

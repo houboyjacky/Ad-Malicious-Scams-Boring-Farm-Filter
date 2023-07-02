@@ -331,6 +331,8 @@ def check_blacklisted_site(domain_name):
             regex = re.compile(line[1:-1])
             if regex.search(domain_name):
                 logger.info(f"{domain_name}在黑名單內1")
+                rule = f"||{domain_name}^\n"
+                Tools.write_file_U8(Tools.TMP_BLACKLIST, rule)
                 return True
         elif "*" in line:
             regex = line.replace("*", ".+")
