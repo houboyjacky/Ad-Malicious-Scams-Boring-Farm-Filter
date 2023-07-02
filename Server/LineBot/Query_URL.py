@@ -202,6 +202,8 @@ def get_external_links(url):
                 external_links.add(href)
             elif f"{domain}.{suffix}" == "t.me":
                 external_links.add(href)
+            elif f"{domain}.{suffix}" in Tools.SHORT_URL_LIST:
+                external_links.add(href)
             elif subdomain:
                 external_links.add(f"{subdomain}.{domain}.{suffix}")
             else:
