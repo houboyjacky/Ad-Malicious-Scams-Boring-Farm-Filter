@@ -73,7 +73,7 @@ def analyze_line_invite_url(user_text:str) -> Optional[dict]:
 
         match = re.match(Tools.KEYWORD_LINE[3], redirected_url)
     else:
-        if lower_text.startswith("https://lin.ee") or lower_text.startswith("https://page.line.me"):
+        if lower_text.startswith("https://lin.ee") or lower_text.startswith("https://page.line.me") or lower_text.startswith("https://line.naver.jp"):
             orgin_text = Resolve_Redirects(orgin_text)
         match = re.match(Tools.KEYWORD_LINE[3], orgin_text)
         if not match:
