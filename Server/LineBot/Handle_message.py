@@ -581,6 +581,10 @@ def handle_message_text_sub(user_id, orgin_text):
                         f"\n"
                         f"{suffix_for_call}")
         return rmessage
+    elif match := re.search(Tools.KEYWORD_LINE[9], orgin_text):
+        input = match.group(1)
+        rmessage = f"你所輸入的「{input}」不能查詢\n需要LINE ID才能查詢唷～"
+        return rmessage
 
     # 查詢Telegram ID
     if match := re.search(Tools.KEYWORD_TELEGRAM[0], orgin_text):
