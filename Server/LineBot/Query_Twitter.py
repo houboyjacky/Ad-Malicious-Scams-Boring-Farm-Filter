@@ -40,9 +40,9 @@ def analyze_Twitter_url(user_text:str) -> Optional[dict]:
     user_text = user_text.replace("刪除","")
     logger.info(f"user_text: {user_text}")
 
-    if match := re.match(Tools.KEYWORD_TWITTER[0], user_text):
+    if match := re.match(Tools.KEYWORD_TWITTER_ID[0], user_text):
         Username = match.group(1)
-    elif match := re.search(Tools.KEYWORD_TWITTER[2], user_text):
+    elif match := re.search(Tools.KEYWORD_TWITTER_URL[2], user_text):
         Username = match.group(1)
     else:
         return None

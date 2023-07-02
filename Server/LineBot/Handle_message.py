@@ -254,13 +254,13 @@ def handle_message_text_admin_sub(orgin_text):
             break
 
         # Twitter ID
-        if match := re.search(Tools.KEYWORD_TWITTER[1], lower_text):
+        if match := re.search(Tools.KEYWORD_TWITTER_ID[1], lower_text):
             # 加入Twitter ID
             twitter_id = match.group(1)
             url = f"https://twitter.com/{twitter_id}"
             rmessage = Twitter_Write_Document(url)
             break
-        elif match := re.search(Tools.KEYWORD_TWITTER[4], lower_text):
+        elif match := re.search(Tools.KEYWORD_TWITTER_ID[2], lower_text):
             # 刪除Twitter ID
             twitter_id = match.group(1)
             url = f"https://twitter.com/{twitter_id}"
@@ -268,11 +268,11 @@ def handle_message_text_admin_sub(orgin_text):
             break
 
         # Twitter 網址
-        if re.search(Tools.KEYWORD_TWITTER[3], lower_text):
+        if re.search(Tools.KEYWORD_TWITTER_URL[0], lower_text):
             # 加入Twitter 網址
             rmessage = Twitter_Write_Document(orgin_text)
             break
-        elif re.search(Tools.KEYWORD_TWITTER[5], lower_text):
+        elif re.search(Tools.KEYWORD_TWITTER_URL[1], lower_text):
             # 刪除Twitter 網址
             rmessage = Twitter_Delete_Document(orgin_text)
             break
@@ -615,7 +615,7 @@ def handle_message_text_sub(user_id, orgin_text):
         return rmessage
 
     # 查詢Twitter ID
-    if match := re.search(Tools.KEYWORD_TWITTER[0], orgin_text):
+    if match := re.search(Tools.KEYWORD_TWITTER_ID[0], orgin_text):
         twitter_id = match.group(1)
         message, status = Twitter_Read_Document(orgin_text)
         if status == -1:
@@ -821,7 +821,7 @@ def handle_message_text_sub(user_id, orgin_text):
         return rmessage
 
     # 查詢Twitter網址
-    if re.match(Tools.KEYWORD_TWITTER[2], lower_text):
+    if re.match(Tools.KEYWORD_TWITTER_URL[2], lower_text):
         message, status = Twitter_Read_Document(orgin_text)
         if prefix_msg:
             prefix_msg = f"{prefix_msg}「 {orgin_text} 」\n"
