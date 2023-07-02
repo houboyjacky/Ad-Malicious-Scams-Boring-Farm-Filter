@@ -50,7 +50,7 @@ def analyze_line_invite_url(user_text:str) -> Optional[dict]:
 
     datetime = date.today().strftime("%Y-%m-%d")
 
-    if match := re.search(Tools.KEYWORD_LINE[5], orgin_text):
+    if match := re.search(Tools.KEYWORD_LINE_INVITE[4], orgin_text):
         invite_code = match.group(1)
         struct =  {"類別": "Voom", "帳號": invite_code, "來源": orgin_text, "回報次數": 0, "失效": 0, "檢查者": "", "加入日期": datetime }
         logger.info(struct)
@@ -76,7 +76,7 @@ def analyze_line_invite_url(user_text:str) -> Optional[dict]:
         else:
             redirected_url = orgin_text
 
-        match = re.match(Tools.KEYWORD_LINE[3], redirected_url)
+        match = re.match(Tools.KEYWORD_LINE_INVITE[5], redirected_url)
         if not match:
             logger.error('line.me邀請網址解析失敗')
             return None

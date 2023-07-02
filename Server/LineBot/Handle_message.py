@@ -170,23 +170,23 @@ def handle_message_text_admin_sub(orgin_text):
             break
 
         # LINE ID
-        if match := re.search(Tools.KEYWORD_LINE[0], lower_text):
+        if match := re.search(Tools.KEYWORD_LINE_ID[0], lower_text):
             # 加入 LINE ID
             lineid = match.group(1)
             rmessage = LineID_write_file(lineid)
             break
-        elif match := re.search(Tools.KEYWORD_LINE[8], lower_text):
+        elif match := re.search(Tools.KEYWORD_LINE_ID[1], lower_text):
             # 刪除 LINE ID
             lineid = match.group(1)
             rmessage = LineID_delete_document(lineid)
             break
 
         # LINE 網址
-        if re.search(Tools.KEYWORD_LINE[2], lower_text):
+        if re.search(Tools.KEYWORD_LINE_INVITE[0], lower_text):
             # 加入 LINE 網址
             rmessage = lineinvite_write_file(orgin_text)
             break
-        elif re.search(Tools.KEYWORD_LINE[7], lower_text):
+        elif re.search(Tools.KEYWORD_LINE_INVITE[1], lower_text):
             # 刪除 LINE 網址
             rmessage = lineinvite_delete_document(orgin_text)
             break
@@ -537,7 +537,7 @@ def handle_message_text_sub(user_id, orgin_text):
         return rmessage
 
     # 查詢Line ID
-    if match := re.search(Tools.KEYWORD_LINE[1], lower_text):
+    if match := re.search(Tools.KEYWORD_LINE_ID[2], lower_text):
         lineid = match.group(1)
 
         if "+" in lineid:
@@ -581,7 +581,7 @@ def handle_message_text_sub(user_id, orgin_text):
                         f"\n"
                         f"{suffix_for_call}")
         return rmessage
-    elif match := re.search(Tools.KEYWORD_LINE[9], orgin_text):
+    elif match := re.search(Tools.KEYWORD_LINE_ID[3], orgin_text):
         input = match.group(1)
         rmessage = f"你所輸入的「{input}」不能查詢\n需要LINE ID才能查詢唷～"
         return rmessage
@@ -664,7 +664,7 @@ def handle_message_text_sub(user_id, orgin_text):
         return rmessage
 
     # 查詢line邀請網址
-    if match := re.search(Tools.KEYWORD_LINE[6], orgin_text):
+    if match := re.search(Tools.KEYWORD_LINE_INVITE[2], orgin_text):
         orgin_text = match.group(1)
         lower_text = orgin_text.lower()
         logger.info(f"社群轉貼")
@@ -693,7 +693,7 @@ def handle_message_text_sub(user_id, orgin_text):
         return prefix_msg
 
     # 查詢line邀請網址
-    if re.match(Tools.KEYWORD_LINE[4], lower_text):
+    if re.match(Tools.KEYWORD_LINE_INVITE[3], lower_text):
         message, status = lineinvite_read_file(orgin_text)
 
         if prefix_msg:
