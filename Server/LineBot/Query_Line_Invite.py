@@ -55,27 +55,28 @@ def analyze_line_invite_url(user_text:str) -> Optional[dict]:
         struct =  {"類別": "Voom", "帳號": invite_code, "來源": orgin_text, "回報次數": 0, "失效": 0, "檢查者": "", "加入日期": datetime }
         logger.info(struct)
         return struct
-    elif lower_text.startswith("https://liff.line.me"):
-        response = requests.get(orgin_text)
-        if response.status_code != 200:
-            logger.error("liff.line.me邀請網址解析失敗")
-            return None
+    else:
+        if lower_text.startswith("https://liff.line.me"):
+            response = requests.get(orgin_text)
+            if response.status_code != 200:
+                logger.error("liff.line.me邀請網址解析失敗")
+                return None
 
-        soup = BeautifulSoup(response.content, 'html.parser')
-        redirected_url1 = soup.find('a')['href']
-        logger.info(f"Redirected_url 1 = {redirected_url1}")
+            soup = BeautifulSoup(response.content, 'html.parser')
+            redirected_url1 = soup.find('a')['href']
+            logger.info(f"Redirected_url 1 = {redirected_url1}")
 
-        redirected_url = Resolve_Redirects(redirected_url1)
-        logger.info(f"Redirected_url 2 = {redirected_url}")
-        if not redirected_url.startswith("https://line.me"):
-            logger.info("該官方帳號已無效")
-            return None
+            redirected_url = Resolve_Redirects(redirected_url1)
+            logger.info(f"Redirected_url 2 = {redirected_url}")
+            if not redirected_url.startswith("https://line.me"):
+                logger.info("該官方帳號已無效")
+                return None
+        elif lower_text.startswith("https://lin.ee") or lower_text.startswith("https://page.line.me") or lower_text.startswith("https://line.naver.jp"):
+            redirected_url = Resolve_Redirects(orgin_text)
+        else:
+            redirected_url = orgin_text
 
         match = re.match(Tools.KEYWORD_LINE[3], redirected_url)
-    else:
-        if lower_text.startswith("https://lin.ee") or lower_text.startswith("https://page.line.me") or lower_text.startswith("https://line.naver.jp"):
-            orgin_text = Resolve_Redirects(orgin_text)
-        match = re.match(Tools.KEYWORD_LINE[3], orgin_text)
         if not match:
             logger.error('line.me邀請網址解析失敗')
             return None
