@@ -23,7 +23,7 @@ THE SOFTWARE.
 from bs4 import BeautifulSoup
 from datetime import date
 from Logger import logger
-from Query_Line_ID import LineID_write_file, LineID_read_file
+from Query_Line_ID import LineID_Write_Document, LineID_Read_Document
 from Query_URL_Short import Resolve_Redirects
 from typing import Optional
 import Query_API
@@ -104,16 +104,16 @@ def analyze_line_invite_url(user_text:str) -> Optional[dict]:
 
     return struct
 
-def lineinvite_write_file(user_text:str):
+def lineinvite_Write_Document(user_text:str):
     global DB_Name, C_Name
     collection = Query_API.Read_DB(DB_Name,C_Name)
     analyze = analyze_line_invite_url(user_text)
     rmessage = ""
     if analyze:
         if "@" in analyze["帳號"]:
-            LineID_write_file(analyze["帳號"].replace("~",""))
+            LineID_Write_Document(analyze["帳號"].replace("~",""))
         elif "~" in analyze["帳號"]:
-            LineID_write_file(analyze["帳號"])
+            LineID_Write_Document(analyze["帳號"])
 
         if Query_API.Search_Same_Document(collection,"帳號", analyze['帳號']):
             logger.info("分析完成，找到相同資料")
@@ -128,7 +128,7 @@ def lineinvite_write_file(user_text:str):
 
     return rmessage
 
-def lineinvite_read_file(user_text:str):
+def lineinvite_Read_Document(user_text:str):
     global DB_Name, C_Name
     status = 0
     collection = Query_API.Read_DB(DB_Name,C_Name)
@@ -140,7 +140,7 @@ def lineinvite_read_file(user_text:str):
             logger.info("分析完成，找到相同資料")
             status = 1
         else :
-            msg, status = LineID_read_file(analyze["帳號"])
+            msg, status = LineID_Read_Document(analyze["帳號"])
             if status == 0:
                 logger.info("分析完成，找不到相同資料")
             else:
@@ -150,7 +150,7 @@ def lineinvite_read_file(user_text:str):
         status = -1
     return rmessage, status
 
-def lineinvite_delete_document(user_text:str):
+def lineinvite_Delete_Document(user_text:str):
     global DB_Name, C_Name
     collection = Query_API.Read_DB(DB_Name,C_Name)
     analyze = analyze_line_invite_url(user_text)
@@ -159,7 +159,7 @@ def lineinvite_delete_document(user_text:str):
         if Query_API.Search_Same_Document(collection,"帳號", analyze['帳號']):
             Query_API.Delete_document(collection,analyze,"帳號")
             rmessage = f"LINE邀請網址黑名單成功刪除帳號\n「 {analyze['帳號'] }」"
-        elif LineID_read_file(analyze["帳號"]):
+        elif LineID_Read_Document(analyze["帳號"]):
             rmessage = f"LINE邀請網址黑名單成功刪除帳號\n「 {analyze['帳號'] }」"
         else:
             logger.info("分析完成，找不到相同資料")

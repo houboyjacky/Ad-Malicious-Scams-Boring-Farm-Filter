@@ -52,21 +52,21 @@ def analyze_Telegram_url(user_text:str) -> Optional[dict]:
 
     return struct
 
-def Telegram_write_file(user_text:str):
+def Telegram_Write_Document(user_text:str):
     global Name
     collection = Query_API.Read_DB(Name,Name)
     analyze = analyze_Telegram_url(user_text)
     rmessage = Query_API.Write_Document_Account(collection, analyze, Name)
     return rmessage
 
-def Telegram_read_file(user_text:str):
+def Telegram_Read_Document(user_text:str):
     global Name
     collection = Query_API.Read_DB(Name,Name)
     analyze = analyze_Telegram_url(user_text)
     rmessage, status = Query_API.Read_Document_Account(collection,analyze,Name)
     return rmessage, status
 
-def Telegram_delete_document(user_text:str):
+def Telegram_Delete_Document(user_text:str):
     global Name
     collection = Query_API.Read_DB(Name,Name)
     analyze = analyze_Telegram_url(user_text)

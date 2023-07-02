@@ -28,19 +28,19 @@ from Logger import logger
 from PIL import Image
 from Point import read_user_point, get_user_rank
 from PrintText import user_guide, check_user_need_news, reload_user_record, reload_notice_board, return_notice_text, suffix_for_call
-from Query_Facebook import FB_read_file, FB_write_file, get_fb_list_len, get_random_fb_blacklist, push_random_fb_blacklist, FB_delete_document
-from Query_Instagram import IG_read_file, IG_write_file, get_ig_list_len, get_random_ig_blacklist, push_random_ig_blacklist, IG_delete_document
-from Query_Line_ID import LineID_read_file, LineID_write_file, LineID_delete_document
-from Query_Line_Invite import lineinvite_write_file, lineinvite_read_file, get_line_invites_list_len, get_random_line_invite_blacklist, push_random_line_invite_blacklist, lineinvite_delete_document
-from Query_Mail import Mail_write_file, Mail_read_file, Mail_delete_document
-from Query_SmallRedBook import get_SmallRedBook_list_len, SmallRedBook_write_file, SmallRedBook_read_file, get_random_SmallRedBook_blacklist, push_random_SmallRedBook_blacklist, SmallRedBook_delete_document
-from Query_Telegram import Telegram_read_file, Telegram_write_file, Telegram_delete_document
-from Query_Tiktok import Tiktok_write_file, Tiktok_read_file, push_random_Tiktok_blacklist, get_random_Tiktok_blacklist, get_Tiktok_list_len, Tiktok_delete_document
-from Query_Twitter import Twitter_read_file, Twitter_write_file, get_Twitter_list_len, get_random_Twitter_blacklist, push_random_Twitter_blacklist, Twitter_delete_document
+from Query_Facebook import FB_Read_Document, FB_Write_Document, get_fb_list_len, get_random_fb_blacklist, push_random_fb_blacklist, FB_Delete_Document
+from Query_Instagram import IG_Read_Document, IG_Write_Document, get_ig_list_len, get_random_ig_blacklist, push_random_ig_blacklist, IG_Delete_Document
+from Query_Line_ID import LineID_Read_Document, LineID_Write_Document, LineID_Delete_Document
+from Query_Line_Invite import lineinvite_Write_Document, lineinvite_Read_Document, get_line_invites_list_len, get_random_line_invite_blacklist, push_random_line_invite_blacklist, lineinvite_Delete_Document
+from Query_Mail import Mail_Write_Document, Mail_Read_Document, Mail_Delete_Document
+from Query_SmallRedBook import get_SmallRedBook_list_len, SmallRedBook_Write_Document, SmallRedBook_Read_Document, get_random_SmallRedBook_blacklist, push_random_SmallRedBook_blacklist, SmallRedBook_Delete_Document
+from Query_Telegram import Telegram_Read_Document, Telegram_Write_Document, Telegram_Delete_Document
+from Query_Tiktok import Tiktok_Write_Document, Tiktok_Read_Document, push_random_Tiktok_blacklist, get_random_Tiktok_blacklist, get_Tiktok_list_len, Tiktok_Delete_Document
+from Query_Twitter import Twitter_Read_Document, Twitter_Write_Document, get_Twitter_list_len, get_random_Twitter_blacklist, push_random_Twitter_blacklist, Twitter_Delete_Document
 from Query_URL import user_query_website, check_blacklisted_site, get_web_leaderboard, get_external_links
 from Query_URL_Short import user_query_shorturl, user_query_shorturl_normal
-from Query_VirtualMoney import Virtual_Money_read_file, Virtual_Money_write_file, Virtual_Money_delete_document
-from Query_Whatsapp import WhatsApp_write_file, WhatsApp_delete_document, WhatsApp_read_file
+from Query_VirtualMoney import Virtual_Money_Read_Document, Virtual_Money_Write_Document, Virtual_Money_Delete_Document
+from Query_WhatsApp import WhatsApp_Write_Document, WhatsApp_Delete_Document, WhatsApp_Read_Document
 from Update_BlackList import update_part_blacklist_rule, update_part_blacklist_comment
 import os
 import pytesseract
@@ -162,43 +162,43 @@ def handle_message_text_admin_sub(orgin_text):
         # 虛擬貨幣
         if re.match(Tools.KEYWORD_VIRTUAL_MONEY[1], orgin_text):
             # 加入 虛擬貨幣
-            rmessage = Virtual_Money_write_file(orgin_text)
+            rmessage = Virtual_Money_Write_Document(orgin_text)
             break
         elif re.match(Tools.KEYWORD_VIRTUAL_MONEY[2], orgin_text):
             # 刪除 虛擬貨幣
-            rmessage = Virtual_Money_delete_document(orgin_text)
+            rmessage = Virtual_Money_Delete_Document(orgin_text)
             break
 
         # LINE ID
         if match := re.search(Tools.KEYWORD_LINE_ID[0], lower_text):
             # 加入 LINE ID
             lineid = match.group(1)
-            rmessage = LineID_write_file(lineid)
+            rmessage = LineID_Write_Document(lineid)
             break
         elif match := re.search(Tools.KEYWORD_LINE_ID[1], lower_text):
             # 刪除 LINE ID
             lineid = match.group(1)
-            rmessage = LineID_delete_document(lineid)
+            rmessage = LineID_Delete_Document(lineid)
             break
 
         # LINE 網址
         if re.search(Tools.KEYWORD_LINE_INVITE[0], lower_text):
             # 加入 LINE 網址
-            rmessage = lineinvite_write_file(orgin_text)
+            rmessage = lineinvite_Write_Document(orgin_text)
             break
         elif re.search(Tools.KEYWORD_LINE_INVITE[1], lower_text):
             # 刪除 LINE 網址
-            rmessage = lineinvite_delete_document(orgin_text)
+            rmessage = lineinvite_Delete_Document(orgin_text)
             break
 
         # Instagram 網址
         if match := re.search(Tools.KEYWORD_IG[2], lower_text):
             # 加入 IG 網址
-            rmessage = IG_write_file(orgin_text)
+            rmessage = IG_Write_Document(orgin_text)
             break
         elif match := re.search(Tools.KEYWORD_IG[5], lower_text):
             # 刪除 IG 網址
-            rmessage = IG_delete_document(orgin_text)
+            rmessage = IG_Delete_Document(orgin_text)
             break
 
         # Instagram ID
@@ -208,7 +208,7 @@ def handle_message_text_admin_sub(orgin_text):
             logger.info(f"ig_account = {ig_account}")
             url = f"https://www.instagram.com/{ig_account}/"
             logger.info(f"url = {url}")
-            rmessage = IG_write_file(url)
+            rmessage = IG_Write_Document(url)
             break
         elif match := re.search(Tools.KEYWORD_IG[6], orgin_text):
             # 刪除 IG ID
@@ -216,17 +216,17 @@ def handle_message_text_admin_sub(orgin_text):
             logger.info(f"ig_account = {ig_account}")
             url = f"https://www.instagram.com/{ig_account}/"
             logger.info(f"url = {url}")
-            rmessage = IG_delete_document(url)
+            rmessage = IG_Delete_Document(url)
             break
 
         # Facebook
         if match := re.search(Tools.KEYWORD_FB[3], lower_text):
             # 加入 FB
-            rmessage = FB_write_file(orgin_text)
+            rmessage = FB_Write_Document(orgin_text)
             break
         elif match := re.search(Tools.KEYWORD_FB[5], lower_text):
             # 刪除 FB
-            rmessage = FB_delete_document(orgin_text)
+            rmessage = FB_Delete_Document(orgin_text)
             break
 
         # Telegram ID
@@ -234,23 +234,23 @@ def handle_message_text_admin_sub(orgin_text):
             # 加入 Telegram ID
             telegram_id = match.group(1)
             url = f"https://t.me/{telegram_id}"
-            rmessage = Telegram_write_file(url)
+            rmessage = Telegram_Write_Document(url)
             break
         elif match := re.search(Tools.KEYWORD_TELEGRAM[4], orgin_text):
             # 刪除 Telegram ID
             telegram_id = match.group(1)
             url = f"https://t.me/{telegram_id}"
-            rmessage = Telegram_delete_document(url)
+            rmessage = Telegram_Delete_Document(url)
             break
 
         # Telegram 網址
         if match := re.search(Tools.KEYWORD_TELEGRAM[3], orgin_text):
             # 加入 Telegram 網址
-            rmessage = Telegram_write_file(orgin_text)
+            rmessage = Telegram_Write_Document(orgin_text)
             break
         elif match := re.search(Tools.KEYWORD_TELEGRAM[5], orgin_text):
             # 刪除 Telegram 網址
-            rmessage = Telegram_delete_document(orgin_text)
+            rmessage = Telegram_Delete_Document(orgin_text)
             break
 
         # Twitter ID
@@ -258,63 +258,63 @@ def handle_message_text_admin_sub(orgin_text):
             # 加入Twitter ID
             twitter_id = match.group(1)
             url = f"https://twitter.com/{twitter_id}"
-            rmessage = Twitter_write_file(url)
+            rmessage = Twitter_Write_Document(url)
             break
         elif match := re.search(Tools.KEYWORD_TWITTER[4], lower_text):
             # 刪除Twitter ID
             twitter_id = match.group(1)
             url = f"https://twitter.com/{twitter_id}"
-            rmessage = Twitter_delete_document(url)
+            rmessage = Twitter_Delete_Document(url)
             break
 
         # Twitter 網址
         if re.search(Tools.KEYWORD_TWITTER[3], lower_text):
             # 加入Twitter 網址
-            rmessage = Twitter_write_file(orgin_text)
+            rmessage = Twitter_Write_Document(orgin_text)
             break
         elif re.search(Tools.KEYWORD_TWITTER[5], lower_text):
             # 刪除Twitter 網址
-            rmessage = Twitter_delete_document(orgin_text)
+            rmessage = Twitter_Delete_Document(orgin_text)
             break
 
         # Mail
         if match := re.match(Tools.KEYWORD_MAIL[1], lower_text):
             # 加入 Mail
-            rmessage = Mail_write_file(lower_text)
+            rmessage = Mail_Write_Document(lower_text)
             break
         elif match := re.match(Tools.KEYWORD_MAIL[2], lower_text):
             # 刪除 Mail
-            rmessage = Mail_delete_document(lower_text)
+            rmessage = Mail_Delete_Document(lower_text)
             break
 
         # WhatsApp
         if re.search(Tools.KEYWORD_WHATSAPP[1], orgin_text) or re.search(Tools.KEYWORD_WHATSAPP[3], orgin_text):
             # 加入WhatsApp
-            rmessage = WhatsApp_write_file(orgin_text)
+            rmessage = WhatsApp_Write_Document(orgin_text)
             break
         elif re.search(Tools.KEYWORD_WHATSAPP[4], orgin_text) or re.search(Tools.KEYWORD_WHATSAPP[5], orgin_text):
             # 刪除WhatsApp
-            rmessage = WhatsApp_delete_document(orgin_text)
+            rmessage = WhatsApp_Delete_Document(orgin_text)
             break
 
         # Tiktok
         if match := re.search(Tools.KEYWORD_TIKTOK[1], orgin_text):
             # 加入Tiktok
-            rmessage = Tiktok_write_file(orgin_text)
+            rmessage = Tiktok_Write_Document(orgin_text)
             break
         elif match := re.search(Tools.KEYWORD_TIKTOK[2], orgin_text):
             # 刪除Tiktok
-            rmessage = Tiktok_delete_document(orgin_text)
+            rmessage = Tiktok_Delete_Document(orgin_text)
             break
 
         # 小紅書
         if match := re.search(Tools.KEYWORD_SMALLREDBOOK[1], orgin_text):
             # 加入小紅書
-            rmessage = SmallRedBook_write_file(orgin_text)
+            rmessage = SmallRedBook_Write_Document(orgin_text)
             break
         elif match := re.search(Tools.KEYWORD_SMALLREDBOOK[2], orgin_text):
             # 刪除小紅書
-            rmessage = SmallRedBook_delete_document(orgin_text)
+            rmessage = SmallRedBook_Delete_Document(orgin_text)
             break
 
         # 網址
@@ -521,7 +521,7 @@ def handle_message_text_sub(user_id, orgin_text):
 
     # 無關網址判斷
     if re.match(Tools.KEYWORD_VIRTUAL_MONEY[0], orgin_text):
-        msg, status = Virtual_Money_read_file(orgin_text)
+        msg, status = Virtual_Money_Read_Document(orgin_text)
         if status:
             rmessage = (f"所輸入的{msg}\n\n"
                         f"「是」已知詐騙/可疑的虛擬貨幣地址\n"
@@ -558,7 +558,7 @@ def handle_message_text_sub(user_id, orgin_text):
                         f"請重新輸入\n"
                         )
 
-        message, status = LineID_read_file(lineid)
+        message, status = LineID_Read_Document(lineid)
         if status == -1:
             rmessage = (f"所輸入的「 {lineid} 」\n"
                         f"有誤、網址失效或不支援\n"
@@ -590,7 +590,7 @@ def handle_message_text_sub(user_id, orgin_text):
     if match := re.search(Tools.KEYWORD_TELEGRAM[0], orgin_text):
         telegram_id = match.group(1)
         url = f"https://t.me/{telegram_id}"
-        message, status = Telegram_read_file(url)
+        message, status = Telegram_Read_Document(url)
         if status == -1:
             rmessage = (f"所輸入的「 {telegram_id} 」\n"
                         f"有誤、網址失效或不支援\n"
@@ -617,7 +617,7 @@ def handle_message_text_sub(user_id, orgin_text):
     # 查詢Twitter ID
     if match := re.search(Tools.KEYWORD_TWITTER[0], orgin_text):
         twitter_id = match.group(1)
-        message, status = Twitter_read_file(orgin_text)
+        message, status = Twitter_Read_Document(orgin_text)
         if status == -1:
             rmessage = (f"所輸入的「 {twitter_id} 」\n"
                         f"網址有誤、網址失效或不支援\n"
@@ -644,7 +644,7 @@ def handle_message_text_sub(user_id, orgin_text):
 
     # 查詢 Email
     if re.match(Tools.KEYWORD_MAIL[0], lower_text):
-        message, status = Mail_read_file(orgin_text)
+        message, status = Mail_Read_Document(orgin_text)
         if status == -1:
             rmessage = (f"所輸入的「 {lower_text} 」\n"
                         f"有誤、失效或不支援\n"
@@ -694,7 +694,7 @@ def handle_message_text_sub(user_id, orgin_text):
 
     # 查詢line邀請網址
     if re.match(Tools.KEYWORD_LINE_INVITE[3], lower_text):
-        message, status = lineinvite_read_file(orgin_text)
+        message, status = lineinvite_Read_Document(orgin_text)
 
         if prefix_msg:
             prefix_msg = f"{prefix_msg}「 {orgin_text} 」\n"
@@ -726,7 +726,7 @@ def handle_message_text_sub(user_id, orgin_text):
 
     # 判斷FB帳戶網址
     if re.match(Tools.KEYWORD_FB[2], lower_text):
-        message, status = FB_read_file(orgin_text)
+        message, status = FB_Read_Document(orgin_text)
 
         if prefix_msg:
             prefix_msg = f"{prefix_msg}「 {orgin_text} 」\n"
@@ -763,7 +763,7 @@ def handle_message_text_sub(user_id, orgin_text):
 
     # 判斷IG帳戶、貼文或影片網址
     if re.match(Tools.KEYWORD_IG[3], lower_text):
-        message, status = IG_read_file(orgin_text)
+        message, status = IG_Read_Document(orgin_text)
         if prefix_msg:
             prefix_msg = f"{prefix_msg}「 {orgin_text} 」\n"
         else:
@@ -796,7 +796,7 @@ def handle_message_text_sub(user_id, orgin_text):
     # 查詢Telegram網址
     if match := re.search(Tools.KEYWORD_TELEGRAM[2], lower_text):
         telegram_id = match.group(1)
-        message, status = Telegram_read_file(orgin_text)
+        message, status = Telegram_Read_Document(orgin_text)
         if status == -1:
             rmessage = (f"所輸入的「 {telegram_id} 」\n"
                         f"有誤、網址失效或不支援\n"
@@ -822,7 +822,7 @@ def handle_message_text_sub(user_id, orgin_text):
 
     # 查詢Twitter網址
     if re.match(Tools.KEYWORD_TWITTER[2], lower_text):
-        message, status = Twitter_read_file(orgin_text)
+        message, status = Twitter_Read_Document(orgin_text)
         if prefix_msg:
             prefix_msg = f"{prefix_msg}「 {orgin_text} 」\n"
         else:
@@ -854,7 +854,7 @@ def handle_message_text_sub(user_id, orgin_text):
 
     # 查詢Whatsapp網址
     if re.search(Tools.KEYWORD_WHATSAPP[0], lower_text) or re.match(Tools.KEYWORD_WHATSAPP[2], lower_text):
-        message, status = WhatsApp_read_file(orgin_text)
+        message, status = WhatsApp_Read_Document(orgin_text)
         if prefix_msg:
             prefix_msg = f"{prefix_msg}「 {orgin_text} 」\n"
         else:
@@ -885,7 +885,7 @@ def handle_message_text_sub(user_id, orgin_text):
 
     # 查詢Tiktok網址
     if re.match(Tools.KEYWORD_TIKTOK[0], lower_text):
-        message, status = Tiktok_read_file(orgin_text)
+        message, status = Tiktok_Read_Document(orgin_text)
         if prefix_msg:
             prefix_msg = f"{prefix_msg}「 {orgin_text} 」\n"
         else:
@@ -916,7 +916,7 @@ def handle_message_text_sub(user_id, orgin_text):
 
     # 查詢小紅書網址
     if re.match(Tools.KEYWORD_SMALLREDBOOK[0], lower_text):
-        message, status = SmallRedBook_read_file(orgin_text)
+        message, status = SmallRedBook_Read_Document(orgin_text)
         if prefix_msg:
             prefix_msg = f"{prefix_msg}「 {orgin_text} 」\n"
         else:

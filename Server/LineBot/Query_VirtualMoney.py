@@ -49,7 +49,7 @@ def analyze_Virtual_Money_url(user_text:str) -> Optional[dict]:
 
     return struct
 
-def Virtual_Money_write_file(user_text:str):
+def Virtual_Money_Write_Document(user_text:str):
     global Name
     rmessage = ""
     collection = Query_API.Read_DB(Name,Name)
@@ -71,7 +71,7 @@ def Virtual_Money_write_file(user_text:str):
 
     return rmessage
 
-def Virtual_Money_read_file(user_text:str):
+def Virtual_Money_Read_Document(user_text:str):
     global Name
     rmessage = ""
     collection = Query_API.Read_DB(Name,Name)
@@ -91,7 +91,7 @@ def Virtual_Money_read_file(user_text:str):
 
     return rmessage, status
 
-def Virtual_Money_delete_document(user_text:str):
+def Virtual_Money_Delete_Document(user_text:str):
     global Name
     rmessage = ""
     collection = Query_API.Read_DB(Name,Name)
