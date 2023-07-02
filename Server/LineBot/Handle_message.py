@@ -788,6 +788,7 @@ def handle_message_text_sub(user_id, orgin_text):
                         f"1. 能帶你一起賺錢\n"
                         f"2. 炫富式貼文\n"
                         f"3. IG廣告，但追蹤太少\n"
+                        f"4. 色誘付費進群組\n"
                         f"有極大的機率是有問題的\n"
                         f"\n"
                         f"{suffix_for_call}")
