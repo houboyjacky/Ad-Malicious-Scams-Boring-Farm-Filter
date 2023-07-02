@@ -38,10 +38,10 @@ def analyze_IG_url(user_text:str) -> Optional[dict]:
 
     logger.info(f"user_text: {user_text}")
 
-    if match := re.match(Tools.KEYWORD_IG[0], user_text):
+    if match := re.match(Tools.KEYWORD_IG_URL[0], user_text):
         Username = ""
         Code = match.group(1)
-    elif match := re.search(Tools.KEYWORD_IG[1], user_text):
+    elif match := re.search(Tools.KEYWORD_IG_URL[1], user_text):
         Username, Code = match.groups()
     else:
         return None
