@@ -446,6 +446,11 @@ def user_query_website_by_DNS(domain_name, result_list, lock):
                         '加入日期': datetime.now().strftime('%Y%m%d')
                     }
                     Query_API.Update_Document(collection, whois_list, 'whois_domain')
+
+                    index_name = collection.name
+                    index_info = collection.index_information()
+                    if not index_name in index_info:
+                        collection.create_index('whois_domain')
             except Exception as e: # 判斷原因 whois.parser.PywhoisError: No match for "FXACAP.COM"
                 whois_query_error = True
                 logger.error(f"An error occurred: {e}")

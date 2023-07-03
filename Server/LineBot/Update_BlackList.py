@@ -157,6 +157,15 @@ def update_list_to_db(filename, List, db_name):
         documents_to_insert.append(document)
     if documents_to_insert:
         collection.insert_many(documents_to_insert)
+
+    # 建立或重建索引
+    index_name = collection.name
+    index_info = collection.index_information()
+    if index_name in index_info:
+        collection.drop_index(index_name)
+    else:
+        collection.create_index('網址')
+
     return
 
 def update_list_from_file(filename, blacklist, IsNew):
