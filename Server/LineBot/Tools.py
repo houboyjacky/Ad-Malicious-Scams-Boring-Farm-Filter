@@ -24,9 +24,7 @@ from datetime import datetime
 from filelock import FileLock
 import hashlib
 import json
-import os
 import pycountry
-import re
 import requests
 import tldextract
 
@@ -46,7 +44,8 @@ CHANNEL_SECRET = setting['CHANNEL_SECRET']                      # CHANNEL_SECRET
 HASH_FILE = setting['HASH_FILE']                                # HASH_FILE => HASH INF IN FILE
 HTTP_HEADERS = setting['HTTP_HEADERS']                          # HTTP_HEADERS => Http Headers
 KEYWORD_FB = setting['KEYWORD_FB']                              # KEYWORD_FB => Keyword for FB
-KEYWORD_IG = setting['KEYWORD_IG']                              # KEYWORD_IG => Keyword for IG
+KEYWORD_IG_ID = setting['KEYWORD_IG_ID']                        # KEYWORD_IG_ID => Keyword for IG ID
+KEYWORD_IG_URL = setting['KEYWORD_IG_URL']                      # KEYWORD_IG_URL => Keyword for IG URL
 KEYWORD_LINE_ID = setting['KEYWORD_LINE_ID']                    # KEYWORD_LINE_ID => Keyword for LINE ID
 KEYWORD_LINE_INVITE = setting['KEYWORD_LINE_INVITE']            # KEYWORD_LINE_INVITE => Keyword for LINE invite url
 KEYWORD_MAIL = setting['KEYWORD_MAIL']                          # KEYWORD_MAIL => Keyword for MAIL
@@ -80,11 +79,11 @@ WHOIS_SKIP = setting['WHOIS_SKIP']                              # WHOIS_SKIP => 
 def reloadSetting():
     global ADMINS, BACKUPDIR, BLACKUSERID, CERT, CHANNEL_ACCESS_TOKEN
     global CHANNEL_SECRET, HASH_FILE, KEYWORD_FB, KEYWORD_TIKTOK
-    global KEYWORD_IG, KEYWORD_LINE_ID, KEYWORD_TELEGRAM_ID, KEYWORD_URL
+    global KEYWORD_IG_ID, KEYWORD_LINE_ID, KEYWORD_TELEGRAM_ID, KEYWORD_URL
     global LINEID_WEB, LOGFILE, MOBILECONFIGDIR, HTTP_HEADERS
     global TMP_BLACKLIST, NOTICE_BOARD, NOTICE_BOARD_LIST, PEM_DIR, PRIVKEY
     global SCAM_WEBSITE_LIST, SHORT_URL_LIST, SPECIAL_SUBWEBSITE, TARGET_DIR
-    global WEB_LEADERBOARD_FILE, ALLOW_DOMAIN_LIST, WHOIS_SKIP
+    global WEB_LEADERBOARD_FILE, ALLOW_DOMAIN_LIST, WHOIS_SKIP, KEYWORD_IG_URL
     global KEYWORD_TWITTER_ID, KEYWORD_MAIL, KEYWORD_WHATSAPP, KEYWORD_TELEGRAM_URL
     global KEYWORD_SMALLREDBOOK, KEYWORD_VIRTUAL_MONEY, KEYWORD_TWITTER_URL
     global MONGODB_USER, MONGODB_PWD, MONGODB_URL, KEYWORD_LINE_INVITE
@@ -105,7 +104,8 @@ def reloadSetting():
     HASH_FILE = setting['HASH_FILE']
     HTTP_HEADERS = setting['HTTP_HEADERS']
     KEYWORD_FB = setting['KEYWORD_FB']
-    KEYWORD_IG = setting['KEYWORD_IG']
+    KEYWORD_IG_ID = setting['KEYWORD_IG_ID']
+    KEYWORD_IG_URL = setting['KEYWORD_IG_URL']
     KEYWORD_LINE_ID = setting['KEYWORD_LINE_ID']
     KEYWORD_LINE_INVITE = setting['KEYWORD_LINE_INVITE']
     KEYWORD_MAIL = setting['KEYWORD_MAIL']
