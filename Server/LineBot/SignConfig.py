@@ -27,29 +27,33 @@ import Tools
 from Logger import logger
 
 def SignMobileconfig():
+    TARGET_DIR = f"{Tools.CONFIG_FOLDER}/config_sign"
+    BACKUP_DIR = f"{Tools.CONFIG_FOLDER}/config_backup"
+    MOBILECONFIG_DIR = f"{Tools.CONFIG_FOLDER}/config_origin"
+
     if not os.path.isdir(Tools.PEM_DIR):
         logger.info(f'The {Tools.PEM_DIR} is NOT exist in your system.')
         return False
 
-    if os.path.isdir(Tools.BACKUPDIR):
-        shutil.rmtree(Tools.BACKUPDIR)
+    if os.path.isdir(BACKUP_DIR):
+        shutil.rmtree(BACKUP_DIR)
 
-    shutil.move(Tools.TARGET_DIR, Tools.BACKUPDIR)
-    os.makedirs(Tools.TARGET_DIR)
+    shutil.move(TARGET_DIR, BACKUP_DIR)
+    os.makedirs(TARGET_DIR)
 
-    if not os.path.isdir(Tools.MOBILECONFIGDIR):
-        logger.info(f'The {Tools.MOBILECONFIGDIR} is NOT exist in your system.')
+    if not os.path.isdir(MOBILECONFIG_DIR):
+        logger.info(f'The {MOBILECONFIG_DIR} is NOT exist in your system.')
         return False
 
-    subprocess.run(['openssl', 'ec', '-in', f'{Tools.PEM_DIR}/privkey.pem', '-out', f'{Tools.TARGET_DIR}/Self_Key.key'], check=True)
+    subprocess.run(['openssl', 'ec', '-in', f'{Tools.PEM_DIR}/privkey.pem', '-out', f'{TARGET_DIR}/Self_Key.key'], check=True)
 
-    filelist = os.listdir(Tools.MOBILECONFIGDIR)
+    filelist = os.listdir(MOBILECONFIG_DIR)
     for filename in filelist:
         extension = filename.split('.')[-1]
         if extension == 'mobileconfig':
             #logger.info(f'Sign {filename} Start')
-            subprocess.run(['openssl', 'smime', '-sign', '-in', f'{Tools.MOBILECONFIGDIR}/{filename}', '-out', f'{Tools.TARGET_DIR}/{filename}', '-signer', f'{Tools.PEM_DIR}/fullchain.pem', '-inkey', f'{Tools.TARGET_DIR}/Self_Key.key', '-certfile', f'{Tools.PEM_DIR}/chain.pem', '-outform', 'der', '-nodetach'], check=True)
-            #logger.info(f'Sign {Tools.TARGET_DIR}/{filename} Finish')
+            subprocess.run(['openssl', 'smime', '-sign', '-in', f'{MOBILECONFIG_DIR}/{filename}', '-out', f'{TARGET_DIR}/{filename}', '-signer', f'{Tools.PEM_DIR}/fullchain.pem', '-inkey', f'{TARGET_DIR}/Self_Key.key', '-certfile', f'{Tools.PEM_DIR}/chain.pem', '-outform', 'der', '-nodetach'], check=True)
+            #logger.info(f'Sign {TARGET_DIR}/{filename} Finish')
 
     logger.info("SignMobileconfig Finish")
     return True

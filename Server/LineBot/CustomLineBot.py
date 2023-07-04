@@ -85,38 +85,31 @@ def robots():
     logger.info('Downloaded robots.txt')
     return send_file('robots.txt', mimetype='text/plain')
 
-# 設定允許下載的檔案類型
-ALLOWED_EXTENSIONS = {'mobileconfig'}
-
-def allowed_file(filename):
-    # 檢查檔案類型是否合法
-    return '.' in filename and \
-           filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
-
 @app.route('/<filename>')
 def download(filename):
-    if filename == os.path.basename(Tools.TMP_BLACKLIST):
+    # 取得使用者的真實 IP 位址
+    user_ip = request.headers.get('CF-Connecting-IP')
+    msg = WhereAreYou(user_ip)
+    # 印出使用者的 IP 位址與所下載的檔案
+    logger.info(f"{msg} and Downloaded file: {filename}")
+
+    _, extension = os.path.splitext(filename)
+    path = ""
+    if extension == ".mobileconfig":
+        path = f"{Tools.CONFIG_FOLDER}/config_sign"
+    elif extension == ".jpg":
+        path = f"{Tools.CONFIG_FOLDER}"
+    elif filename == os.path.basename(Tools.TMP_BLACKLIST):
         return Response(open(Tools.TMP_BLACKLIST, "rb"), mimetype="text/plain")
-
-    if allowed_file(filename):
-        # 若檔案存在，則進行下載
-        if os.path.exists(os.path.join(Tools.TARGET_DIR, filename)):
-            # 取得使用者的真實 IP 位址
-            user_ip = request.headers.get('CF-Connecting-IP')
-
-            msg = WhereAreYou(user_ip)
-
-            # 印出使用者的 IP 位址與所下載的檔案
-            logger.info(f"{msg} and Downloaded file: {filename}")
-
-            return send_from_directory(Tools.TARGET_DIR, filename, as_attachment=True)
-        # 若檔案不存在，則回傳 404 錯誤
-        else:
-            logger.info("Allowed file but not found")
-            abort(404)
-    # 若檔案類型不合法，則回傳 404 錯誤
     else:
-        logger.info("Not allowed file")
+        abort(404)
+
+    # 若檔案存在，則進行下載
+    if os.path.exists(os.path.join(path, filename)):
+        return send_from_directory(path, filename, as_attachment=True)
+    # 若檔案不存在，則回傳 404 錯誤
+    else:
+        logger.info("Allowed file but not found")
         abort(404)
 
 # 當 LINE 聊天機器人接收到「訊息事件」時，進行回應

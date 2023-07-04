@@ -36,11 +36,11 @@ with open('setting.json', 'r') as f:
 # 讀取設定檔
 ADMINS = setting['ADMIN']                                       # ADMIN => Linebot Admin
 ALLOW_DOMAIN_LIST = setting['ALLOW_DOMAIN_LIST']                # ALLOW_DOMAIN_LIST => Allow Domain can't add blacklist
-BACKUPDIR = setting['CONFIG_BACKUP']                            # Backup Signed mobileconfig
 BLACKUSERID = setting['BLACKUSERID']                            # BLACKUSERID => BLACK USER
 CERT = setting['CERT']                                          # CERT => Lets Encrypt Certificate Path File
 CHANNEL_ACCESS_TOKEN = setting['CHANNEL_ACCESS_TOKEN']          # CHANNEL_ACCESS_TOKEN => Linebot Token
 CHANNEL_SECRET = setting['CHANNEL_SECRET']                      # CHANNEL_SECRET => Linebot Token
+CONFIG_FOLDER = setting['CONFIG_FOLDER']                        # CONFIG_FOLDER => Config Folder
 HASH_FILE = setting['HASH_FILE']                                # HASH_FILE => HASH INF IN FILE
 HTTP_HEADERS = setting['HTTP_HEADERS']                          # HTTP_HEADERS => Http Headers
 KEYWORD_FB = setting['KEYWORD_FB']                              # KEYWORD_FB => Keyword for FB
@@ -60,7 +60,6 @@ KEYWORD_VIRTUAL_MONEY = setting['KEYWORD_VIRTUAL_MONEY']        # KEYWORD_VIRTUA
 KEYWORD_WHATSAPP = setting['KEYWORD_WHATSAPP']                  # KEYWORD_WHATSAPP => Keyword for WhatsApp
 LINEID_WEB = setting['LINEID_WEB']                              # LINEID_WEB => Line ID from Web
 LOGFILE = setting['LOGFILE']                                    # LOGFILE => Log File Path
-MOBILECONFIGDIR = setting['CONFIG_ORIGIN']                      # Modify mobileconfig
 MONGODB_PWD = setting['MONGODB_PWD']                            # MONGODB_PWD => MONGODB Password
 MONGODB_URL = setting['MONGODB_URL']                            # MONGODB_URL => MONGODB Url
 MONGODB_USER = setting['MONGODB_USER']                          # MONGODB_USER => MONGODB User Name
@@ -71,7 +70,6 @@ PRIVKEY = setting['PRIVKEY']                                    # PRIVKEY => Let
 SCAM_WEBSITE_LIST = setting['SCAM_WEBSITE_LIST']                # SCAM_WEBSITE_LIST => SCAM WEBSITE LIST
 SHORT_URL_LIST = setting['SHORT_URL_LIST']                      # SHORT_URL_LIST => Short url list
 SPECIAL_SUBWEBSITE = setting['SPECIAL_SUBWEBSITE']              # SPECIAL_SUBWEBSITE => Special Subwebsite need to block sub website
-TARGET_DIR = setting['CONFIG_SIGN']                             # New Signed mobileconfig
 TMP_BLACKLIST = setting['TMP_BLACKLIST']                        # TMP_BLACKLIST => Blacklist for Adguard Home Download
 WEB_LEADERBOARD_FILE = setting['WEB_LEADERBOARD_FILE']          # WEB_LEADERBOARD_FILE => Query Website times leaderboard from file
 WHOIS_SKIP = setting['WHOIS_SKIP']                              # WHOIS_SKIP => Skip Query Whois
@@ -80,9 +78,9 @@ def reloadSetting():
     global ADMINS, BACKUPDIR, BLACKUSERID, CERT, CHANNEL_ACCESS_TOKEN
     global CHANNEL_SECRET, HASH_FILE, KEYWORD_FB, KEYWORD_TIKTOK
     global KEYWORD_IG_ID, KEYWORD_LINE_ID, KEYWORD_TELEGRAM_ID, KEYWORD_URL
-    global LINEID_WEB, LOGFILE, MOBILECONFIGDIR, HTTP_HEADERS
+    global LINEID_WEB, LOGFILE, HTTP_HEADERS, CONFIG_FOLDER
     global TMP_BLACKLIST, NOTICE_BOARD, NOTICE_BOARD_LIST, PEM_DIR, PRIVKEY
-    global SCAM_WEBSITE_LIST, SHORT_URL_LIST, SPECIAL_SUBWEBSITE, TARGET_DIR
+    global SCAM_WEBSITE_LIST, SHORT_URL_LIST, SPECIAL_SUBWEBSITE
     global WEB_LEADERBOARD_FILE, ALLOW_DOMAIN_LIST, WHOIS_SKIP, KEYWORD_IG_URL
     global KEYWORD_TWITTER_ID, KEYWORD_MAIL, KEYWORD_WHATSAPP, KEYWORD_TELEGRAM_URL
     global KEYWORD_SMALLREDBOOK, KEYWORD_VIRTUAL_MONEY, KEYWORD_TWITTER_URL
@@ -96,11 +94,11 @@ def reloadSetting():
     #重讀設定檔
     ADMINS = setting['ADMIN']
     ALLOW_DOMAIN_LIST = setting['ALLOW_DOMAIN_LIST']
-    BACKUPDIR = setting['CONFIG_BACKUP']
     BLACKUSERID = setting['BLACKUSERID']
     CERT = setting['CERT']
     CHANNEL_ACCESS_TOKEN = setting['CHANNEL_ACCESS_TOKEN']
     CHANNEL_SECRET = setting['CHANNEL_SECRET']
+    CONFIG_FOLDER = setting['CONFIG_FOLDER']
     HASH_FILE = setting['HASH_FILE']
     HTTP_HEADERS = setting['HTTP_HEADERS']
     KEYWORD_FB = setting['KEYWORD_FB']
@@ -120,7 +118,6 @@ def reloadSetting():
     KEYWORD_WHATSAPP = setting['KEYWORD_WHATSAPP']
     LINEID_WEB = setting['LINEID_WEB']
     LOGFILE = setting['LOGFILE']
-    MOBILECONFIGDIR = setting['CONFIG_ORIGIN']
     MONGODB_PWD = setting['MONGODB_PWD']
     MONGODB_URL = setting['MONGODB_URL']
     MONGODB_USER = setting['MONGODB_USER']
@@ -131,7 +128,6 @@ def reloadSetting():
     SCAM_WEBSITE_LIST = setting['SCAM_WEBSITE_LIST']
     SHORT_URL_LIST = setting['SHORT_URL_LIST']
     SPECIAL_SUBWEBSITE = setting['SPECIAL_SUBWEBSITE']
-    TARGET_DIR = setting['CONFIG_SIGN']
     TMP_BLACKLIST = setting['TMP_BLACKLIST']
     WEB_LEADERBOARD_FILE = setting['WEB_LEADERBOARD_FILE']
     WHOIS_SKIP = setting['WHOIS_SKIP']
