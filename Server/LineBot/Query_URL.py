@@ -574,6 +574,9 @@ def user_query_website(prefix_msg, user_text):
                         f"目前「尚未」在資料庫中\n"
                         f"敬請小心謹慎\n"
                         f"\n"
+                        f"若確定是詐騙\n請點擊「詐騙回報」\n"
+                        f"「安全評分」輔助判別好壞\n"
+                        f"\n"
                         f"{suffix_for_call}\n"
             )
         return checkresult, rmessage, domain_name
@@ -637,11 +640,10 @@ def user_query_website(prefix_msg, user_text):
                     f"但提醒你！\n"
                     f"1.建立時間是晚於2022/01/01\n"
                     f"2.天數差距越小\n"
-                    f"3.註冊國家非台灣TW\n"
-                    f"4.「網友」介紹投資賺錢\n"
-                    f"符合以上幾點越多\n"
-                    f"詐騙與可疑程度越高\n"
-                    f"符合第4點一定是詐騙\n"
+                    f"3.「網友」介紹投資賺錢\n"
+                    f"都符合條件就是詐騙\n\n"
+                    f"若確定是詐騙\n請點擊「詐騙回報」\n"
+                    f"「安全評分」輔助判別好壞\n"
                     f"\n"
                     f"{suffix_for_call}"
         )
