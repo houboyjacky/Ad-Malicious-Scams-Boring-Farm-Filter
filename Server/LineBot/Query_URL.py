@@ -107,8 +107,8 @@ def get_server_ip(url, result_list, lock):
     logger.info("====================")
 
     country_list = sorted(list(set(country_list)))
-    output.append("＝＝＝＝＝＝＝＝＝＝")
-    msg = f"伺服器可能位置在："
+    #output.append("＝＝＝＝＝＝＝＝＝＝")
+    msg = f"伺服器位置："
     country_count = len(country_list)
     if country_count == 0:
         with lock:
@@ -121,7 +121,7 @@ def get_server_ip(url, result_list, lock):
             if count != country_count:
                 msg += f"、"
         output.append(f"{msg}")
-        output.append("＝＝＝＝＝＝＝＝＝＝")
+        #output.append("＝＝＝＝＝＝＝＝＝＝")
         with lock:
             result_list.append(("IP_info_msg", '\n'.join(output)))
     return
@@ -372,7 +372,7 @@ def user_query_website_by_IP(IP):
     if re.search("taiwan", output, re.IGNORECASE):
         output = f"伺服器位置：台灣"
 
-    if check_blacklisted_site(IP):
+    if IsScam := check_blacklisted_site(IP):
         rmessage = (f"「 {IP} 」\n\n"
                     f"被判定「是」詐騙/可疑網站\n"
                     f"請勿相信此網站\n"
@@ -393,7 +393,7 @@ def user_query_website_by_IP(IP):
                     f"{suffix_for_call}\n"
         )
 
-    return rmessage
+    return IsScam, rmessage
 
 def user_query_website_by_DNS(domain_name, result_list, lock):
 
@@ -504,7 +504,8 @@ def user_query_website(user_text):
     # 直接使用IP連線
     if match := re.search(Tools.KEYWORD_URL[3], user_text):
         ip = match.group(1)
-        return user_query_website_by_IP(ip)
+        _,rmessage = user_query_website_by_IP(ip)
+        return rmessage
 
     #解析網址
     subdomain, domain, suffix = Tools.domain_analysis(user_text)
@@ -574,9 +575,6 @@ def user_query_website(user_text):
                         f"\n"
                         f"{IP_info_msg}"
                         f"\n"
-                        f"網站評分參考：\n"
-                        f"「 https://www.scamadviser.com/zh/check-website/{domain_name} 」\n"
-                        f"\n"
                         f"{suffix_for_call}\n"
             )
         return rmessage
@@ -637,15 +635,13 @@ def user_query_website(user_text):
                     f"{rmessage_country}"
                     f"{rmessage_creation_date}\n"
                     f"{rmessage_diff_days}\n"
-                    f"網站評分參考：\n"
-                    f"「 https://www.scamadviser.com/zh/check-website/{domain_name} 」\n"
                     f"\n"
                     f"雖然目前「尚未」在資料庫中\n"
                     f"但提醒你！\n"
-                    f"1. 建立時間是晚於2022/01/01\n"
-                    f"2. 天數差距越小\n"
-                    f"3. 註冊國家非台灣TW\n"
-                    f"4. 「網友」介紹投資賺錢\n"
+                    f"1.建立時間是晚於2022/01/01\n"
+                    f"2.天數差距越小\n"
+                    f"3.註冊國家非台灣TW\n"
+                    f"4.「網友」介紹投資賺錢\n"
                     f"符合以上幾點越多\n"
                     f"詐騙與可疑程度越高\n"
                     f"符合第4點一定是詐騙\n"
@@ -656,3 +652,162 @@ def user_query_website(user_text):
         )
 
     return rmessage
+
+# 使用者查詢網址
+def user_query_website2(prefix_msg, user_text):
+    start_time = time.time()
+    result_list = []
+
+    IP_info_msg = ""
+    whois_domain = ""
+    whois_creation_date = ""
+    whois_country = ""
+    whois_query_error = False
+    lock = threading.Lock()
+
+    # 直接使用IP連線
+    if match := re.search(Tools.KEYWORD_URL[3], user_text):
+        ip = match.group(1)
+        IsScam, rmessage = user_query_website_by_IP(ip)
+        return IsScam, rmessage, ip
+
+    #解析網址
+    subdomain, domain, suffix = Tools.domain_analysis(user_text)
+    if not domain or not suffix:
+        rmessage = f"{prefix_msg}「 {user_text} 」\n無法構成網址\n請重新輸入"
+        return False, rmessage, ""
+
+    special_tip = ""
+    # 取得網域
+    domain_name = f"{domain}.{suffix}"
+    if domain_name in Tools.SPECIAL_SUBWEBSITE:
+        domain_name = f"{subdomain}.{domain}.{suffix}"
+        special_tip = f"\n為「{domain}.{suffix}」的子網域"
+    logger.info(f"domain_name = {domain_name}")
+
+    # 特殊提示
+    Special_domain = ["linktr.ee","lit.link"]
+    if domain_name in Special_domain:
+        output = user_text
+        if "?" in output :
+            output = output.split('?')[0]
+        rmessage = f"{prefix_msg}「{output}」\n是正常的網站\n但內含連結是可能有詐騙網址\n請輸入那些連結"
+        return False, rmessage, domain_name
+
+    thread1 = threading.Thread(target=get_server_ip, args=(user_text,result_list, lock))
+    thread2 = threading.Thread(target=update_web_leaderboard, args=(user_text,))
+    thread3 = threading.Thread(target=user_query_website_by_DNS, args=(domain_name,result_list, lock))
+    thread4 = threading.Thread(target=thread_check_blacklisted_site, args=(domain_name,result_list, lock))
+    thread1.start()
+    thread2.start()
+    thread3.start()
+    thread4.start()
+    thread1.join()
+    thread2.join()
+    thread3.join()
+    thread4.join()
+
+    results = dict(result_list)
+
+    if IP_info_msg := results['IP_info_msg']:
+        IP_info_msg = f"{IP_info_msg}\n"
+
+    whois_query_error = results['whois_query_error']
+    whois_domain = results['whois_domain']
+    whois_creation_date = results['whois_creation_date']
+    whois_country = results['whois_country']
+    checkresult = results['checkresult']
+
+    end_time = time.time()
+    elapsed_time = end_time - start_time
+    logger.info("查詢耗時：{:.2f}秒".format(elapsed_time))
+
+    if whois_query_error or not whois_domain or not whois_creation_date:
+        if checkresult:
+            rmessage = (f"{prefix_msg}「{domain_name}」{special_tip}\n"
+                        f"{IP_info_msg}\n"
+                        f"「是」詐騙/可疑網站\n\n"
+                        f"請勿相信此網站\n"
+                        f"若認為誤通報，請補充描述\n"
+                        f"\n"
+                        f"{suffix_for_call}"
+            )
+        else:
+            rmessage = (f"{prefix_msg}「{domain_name}」{special_tip}\n"
+                        f"{IP_info_msg}\n"
+                        f"目前「尚未」在資料庫中\n"
+                        f"敬請小心謹慎\n"
+                        f"\n"
+                        f"{suffix_for_call}\n"
+            )
+        return checkresult, rmessage, domain_name
+
+    # 提取創建時間和最後更新時間
+    if isinstance(whois_creation_date, str):
+        creation_date = Tools.string_to_datetime(whois_creation_date)
+
+    today = datetime.today().date()  # 取得當天日期
+    diff_days = (today - creation_date.date()).days  # 相差幾天
+    creation_date_str = creation_date.strftime('%Y-%m-%d')  # 轉換成字串
+
+    logger.info(f"Website : {domain_name}")
+    logger.info(f"Create Date : {creation_date_str}")
+    logger.info(f"Diff Days : {str(diff_days)}")
+
+    # 建立輸出字串
+    rmessage_creation_date = f"建立時間：{creation_date_str}"
+    rmessage_diff_days = f"距今差{str(diff_days)}天"
+
+    # 天數太少自動加入黑名單並直接轉為黑名單
+    if diff_days <= 20 and not checkresult:
+        today_str = today.strftime('%Y-%m-%d')
+        msg = f"{domain_name}距離{today_str}差{str(diff_days)}天"
+        update_part_blacklist_comment(msg)
+        update_part_blacklist_rule(domain_name)
+        checkresult = True
+
+    if whois_country:
+        country_str = Tools.translate_country(whois_country)
+        if country_str == "Unknown" or not country_str:
+            rmessage_country = f"註冊國：{whois_country}\n"
+        else:
+            rmessage_country = f"註冊國：{country_str}\n"
+    else:
+        rmessage_country = ""
+
+    if re.search("taiwan", rmessage_country, re.IGNORECASE):
+        rmessage_country = f"註冊國：台灣\n"
+
+    #判斷網站
+    if checkresult:
+        rmessage = (f"{prefix_msg}「{domain_name}」{special_tip}\n"
+                    f"{rmessage_country}"
+                    f"{rmessage_creation_date}\n"
+                    f"{rmessage_diff_days}\n"
+                    f"{IP_info_msg}\n"
+                    f"「是」詐騙/可疑網站\n\n"
+                    f"請勿相信此網站\n"
+                    f"若認為誤通報，請補充描述\n"
+                    f"\n"
+                    f"{suffix_for_call}"
+        )
+    else:
+        rmessage = (f"{prefix_msg}「{domain_name}」{special_tip}\n"
+                    f"{rmessage_country}"
+                    f"{rmessage_creation_date}\n"
+                    f"{rmessage_diff_days}\n"
+                    f"{IP_info_msg}\n"
+                    f"雖然目前「尚未」在資料庫中\n\n"
+                    f"但提醒你！\n"
+                    f"1.建立時間是晚於2022/01/01\n"
+                    f"2.天數差距越小\n"
+                    f"3.註冊國家非台灣TW\n"
+                    f"4.「網友」介紹投資賺錢\n"
+                    f"符合以上幾點越多\n"
+                    f"詐騙與可疑程度越高\n"
+                    f"符合第4點一定是詐騙\n"
+                    f"\n"
+                    f"{suffix_for_call}"
+        )
+
+    return checkresult, rmessage, domain_name

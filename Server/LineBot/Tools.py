@@ -59,6 +59,7 @@ KEYWORD_URL = setting['KEYWORD_URL']                            # KEYWORD_URL =>
 KEYWORD_VIRTUAL_MONEY = setting['KEYWORD_VIRTUAL_MONEY']        # KEYWORD_VIRTUAL_MONEY => Keyword for virtual money
 KEYWORD_WHATSAPP = setting['KEYWORD_WHATSAPP']                  # KEYWORD_WHATSAPP => Keyword for WhatsApp
 LINEID_WEB = setting['LINEID_WEB']                              # LINEID_WEB => Line ID from Web
+LINEBOT_URL = setting['LINEBOT_URL']                            # LINEBOT_URL => Linebot Url
 LOGFILE = setting['LOGFILE']                                    # LOGFILE => Log File Path
 MONGODB_PWD = setting['MONGODB_PWD']                            # MONGODB_PWD => MONGODB Password
 MONGODB_URL = setting['MONGODB_URL']                            # MONGODB_URL => MONGODB Url
@@ -78,7 +79,7 @@ def reloadSetting():
     global ADMINS, BACKUPDIR, BLACKUSERID, CERT, CHANNEL_ACCESS_TOKEN
     global CHANNEL_SECRET, HASH_FILE, KEYWORD_FB, KEYWORD_TIKTOK
     global KEYWORD_IG_ID, KEYWORD_LINE_ID, KEYWORD_TELEGRAM_ID, KEYWORD_URL
-    global LINEID_WEB, LOGFILE, HTTP_HEADERS, CONFIG_FOLDER
+    global LINEID_WEB, LOGFILE, HTTP_HEADERS, CONFIG_FOLDER, LINEBOT_URL
     global TMP_BLACKLIST, NOTICE_BOARD, NOTICE_BOARD_LIST, PEM_DIR, PRIVKEY
     global SCAM_WEBSITE_LIST, SHORT_URL_LIST, SPECIAL_SUBWEBSITE
     global WEB_LEADERBOARD_FILE, ALLOW_DOMAIN_LIST, WHOIS_SKIP, KEYWORD_IG_URL
@@ -117,6 +118,7 @@ def reloadSetting():
     KEYWORD_VIRTUAL_MONEY = setting['KEYWORD_VIRTUAL_MONEY']
     KEYWORD_WHATSAPP = setting['KEYWORD_WHATSAPP']
     LINEID_WEB = setting['LINEID_WEB']
+    LINEBOT_URL = setting['LINEBOT_URL']
     LOGFILE = setting['LOGFILE']
     MONGODB_PWD = setting['MONGODB_PWD']
     MONGODB_URL = setting['MONGODB_URL']

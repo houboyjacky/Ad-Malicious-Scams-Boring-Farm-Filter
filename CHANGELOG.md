@@ -1,6 +1,7 @@
 # 歷史更新 History Update
 
 * 20230704 Update
+  * 加入 查詢網址使用TemplateSendMessage
   * 修復 遊戲積分未加上
   * 調整 下載API與縮減參數
 
