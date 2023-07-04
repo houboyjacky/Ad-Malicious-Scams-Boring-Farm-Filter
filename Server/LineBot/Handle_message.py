@@ -37,7 +37,7 @@ from Query_SmallRedBook import get_SmallRedBook_list_len, SmallRedBook_Write_Doc
 from Query_Telegram import Telegram_Read_Document, Telegram_Write_Document, Telegram_Delete_Document
 from Query_Tiktok import Tiktok_Write_Document, Tiktok_Read_Document, push_random_Tiktok_blacklist, get_random_Tiktok_blacklist, get_Tiktok_list_len, Tiktok_Delete_Document
 from Query_Twitter import Twitter_Read_Document, Twitter_Write_Document, get_Twitter_list_len, get_random_Twitter_blacklist, push_random_Twitter_blacklist, Twitter_Delete_Document
-from Query_URL import user_query_website, check_blacklisted_site, get_web_leaderboard, get_external_links, user_query_website2
+from Query_URL import user_query_website, check_blacklisted_site, get_web_leaderboard, get_external_links
 from Query_URL_Short import user_query_shorturl, user_query_shorturl_normal
 from Query_VirtualMoney import Virtual_Money_Read_Document, Virtual_Money_Write_Document, Virtual_Money_Delete_Document
 from Query_WhatsApp import WhatsApp_Write_Document, WhatsApp_Delete_Document, WhatsApp_Read_Document
@@ -164,45 +164,51 @@ def message_reply(event, text):
 
 def message_reply_ScamURL(user_id, IsScam, QueryInf, Domain, orgin_text):
 
-    text = QueryInf
-
+    actions = []
     if IsScam:
-        actions = [
-            MessageTemplateAction(
-                label = '詐騙回報',
-                text = f"詐騙回報\n{orgin_text}"
-            ),
-            URITemplateAction(
-                label='安全評分',
-                uri=f"https://www.scamadviser.com/zh/check-website/{Domain}"
+        actions.append( MessageTemplateAction(
+                            label = '詐騙幫忙',
+                            text =  f"詐騙幫忙"
+                        )
+        )
+        if Domain:
+            actions.append( URITemplateAction(
+                                label='安全評分',
+                                uri=f"https://www.scamadviser.com/zh/check-website/{Domain}"
+                            )
             )
-        ]
+        else:
+            actions.append( MessageTemplateAction(
+                                label='使用指南',
+                                text=f"使用指南"
+                            )
+            )
     else:
         if Tools.IsAdmin(user_id):
-            actions = [
-                MessageTemplateAction(
-                    label = '管理員加入',
-                    text = f"加入https://{Domain}"
-                ),
-                URITemplateAction(
-                    label='分析網站',
-                    uri=f"分析{orgin_text}"
-                )
-            ]
+            actions.append( MessageTemplateAction(
+                                label = '管理員加入',
+                                text =  f"加入https://{Domain}"
+                            )
+            )
+            actions.append( MessageTemplateAction(
+                                label = '分析網站',
+                                text =  f"分析{orgin_text}"
+                            )
+            )
         else:
-            actions = [
-                MessageTemplateAction(
-                    label = '詐騙回報',
-                    text = f"詐騙回報https://{Domain}"
-                ),
-                URITemplateAction(
-                    label='安全評分',
-                    uri=f"https://www.scamadviser.com/zh/check-website/{Domain}"
-                )
-            ]
+            actions.append( MessageTemplateAction(
+                                label = '詐騙回報',
+                                text =  f"詐騙回報https://{Domain}"
+                            )
+            )
+            actions.append( URITemplateAction(
+                                label='安全評分',
+                                uri=f"https://www.scamadviser.com/zh/check-website/{Domain}"
+                            )
+            )
 
     confirm_template = ConfirmTemplate(
-        text=text,
+        text=QueryInf,
         actions=actions
     )
 
@@ -1011,32 +1017,16 @@ def handle_message_text_sub(user_id, orgin_text):
 
     # 如果用戶輸入的網址沒有以 http 或 https 開頭，則不回應訊息
     if re.match(Tools.KEYWORD_URL[2], lower_text):
-        if Tools.IsOwner(user_id):
-            if not prefix_msg:
-                prefix_msg = "所輸入的"
-            IsScam, Text, domain_name = user_query_website2(prefix_msg,orgin_text)
-            Length = len(Text)
-            logger.info(f"Text Length = {str(Length)}")
-            if Length > 240:
-                return Text
-            else:
-                template_message = message_reply_ScamURL(user_id, IsScam, Text, domain_name, orgin_text)
-                return template_message
+        if not prefix_msg:
+            prefix_msg = "所輸入的"
+        IsScam, Text, domain_name = user_query_website(prefix_msg,orgin_text)
+        Length = len(Text)
+        logger.info(f"Text Length = {str(Length)}")
+        if Length > 240:
+            return Text
         else:
-            rmessage = user_query_website(orgin_text)
-            if prefix_msg:
-                rmessage = f"{prefix_msg}{rmessage}"
-            else:
-                rmessage = f"所輸入的{rmessage}"
-
-            if Tools.IsAdmin(user_id):
-                if links := get_external_links(orgin_text):
-                    msg = '\n\n＝＝＝＝＝＝＝＝＝＝＝＝\n網站背後資訊(管理員only)\n'
-                    for link in links:
-                        msg = f"{msg}「 {link} 」\n"
-                    msg = f"{msg}＝＝＝＝＝＝＝＝＝＝＝＝\n"
-                    rmessage = f"{rmessage}{msg}"
-            return rmessage
+            template_message = message_reply_ScamURL(user_id, IsScam, Text, domain_name, orgin_text)
+            return template_message
     return None
 
 def handle_message_text(event):
