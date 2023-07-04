@@ -1,5 +1,8 @@
 # 歷史更新 History Update
 
+* 20230704 Update
+  * 修復 遊戲積分未加上
+
 * 20230703 Update
   * 調整 建立網址與WHOIS索引
   * 調整 參數

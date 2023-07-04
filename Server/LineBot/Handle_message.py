@@ -26,7 +26,7 @@ from linebot import LineBotApi
 from linebot.models import TextSendMessage
 from Logger import logger
 from PIL import Image
-from Point import read_user_point, get_user_rank
+from Point import read_user_point, get_user_rank, write_user_point
 from PrintText import user_guide, check_user_need_news, reload_user_record, reload_notice_board, return_notice_text, suffix_for_call
 from Query_Facebook import FB_Read_Document, FB_Write_Document, get_fb_list_len, get_random_fb_blacklist, push_random_fb_blacklist, FB_Delete_Document
 from Query_Instagram import IG_Read_Document, IG_Write_Document, get_ig_list_len, get_random_ig_blacklist, push_random_ig_blacklist, IG_Delete_Document
@@ -483,8 +483,10 @@ def handle_message_text_game(user_id, user_text) -> str:
         found = push_random_blacklist(user_id, True, False)
         found2 = push_netizen_file(user_id, True, False)
         if found and not found2:
+            write_user_point(user_id, 1)
             rmessage = f"感謝你的回報\n輸入「遊戲」\n進行下一波行動\n輸入「積分」\n可以查詢你的積分排名"
         elif not found and found2:
+            write_user_point(user_id, 1)
             rmessage = f"感謝你的回報\n輸入「檢閱」\n進行下一波行動\n輸入「積分」\n可以查詢你的積分排名"
         elif found and found2:
             rmessage = f"感謝你的回報\n輸入「遊戲/檢閱」\n進行下一波行動\n輸入「積分」\n可以查詢你的積分排名"
