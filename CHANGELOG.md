@@ -2,6 +2,7 @@
 
 * 20230705 Update
   * 加入 遊戲與檢閱使用TemplateSendMessage
+  * 調整 名片網站清單
 
 * 20230704 Update
   * 加入 查詢網址使用TemplateSendMessage

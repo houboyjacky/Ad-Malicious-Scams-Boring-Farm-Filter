@@ -522,7 +522,7 @@ def user_query_website(prefix_msg, user_text):
     logger.info(f"domain_name = {domain_name}")
 
     # 特殊提示
-    Special_domain = ["linktr.ee","lit.link"]
+    Special_domain = ["linktr.ee","lit.link","linkby.tw"]
     if domain_name in Special_domain:
         output = user_text
         if "?" in output :
