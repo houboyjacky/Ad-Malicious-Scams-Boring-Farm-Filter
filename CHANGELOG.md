@@ -1,5 +1,8 @@
 # 歷史更新 History Update
 
+* 20230705 Update
+  * 加入 遊戲與檢閱使用TemplateSendMessage
+
 * 20230704 Update
   * 加入 查詢網址使用TemplateSendMessage
   * 修復 遊戲積分未加上

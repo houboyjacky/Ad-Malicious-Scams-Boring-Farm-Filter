@@ -94,11 +94,15 @@ def download(filename):
     logger.info(f"{msg} and Downloaded file: {filename}")
 
     _, extension = os.path.splitext(filename)
+    #logger.info(f"extension = {extension}")
+
     path = ""
     if extension == ".mobileconfig":
         path = f"{Tools.CONFIG_FOLDER}/config_sign"
+        #logger.info(f"path = {path}")
     elif extension == ".jpg":
         path = f"{Tools.CONFIG_FOLDER}"
+        #logger.info(f"path = {path}")
     elif filename == os.path.basename(Tools.TMP_BLACKLIST):
         return Response(open(Tools.TMP_BLACKLIST, "rb"), mimetype="text/plain")
     else:

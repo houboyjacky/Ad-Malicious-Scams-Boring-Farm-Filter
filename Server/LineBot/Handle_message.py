@@ -125,10 +125,20 @@ def push_random_blacklist(UserID, success, disappear):
 
 # 回應訊息的函式
 def message_reply_basic(event, text):
-    if check_user_need_news(event.source.user_id):
-        text = f"{text}\n\n{return_notice_text()}"
+    if isinstance(text, str):
+        if check_user_need_news(event.source.user_id):
+            text = f"{text}\n\n{return_notice_text()}"
 
-    message = TextSendMessage(text=text)
+        message = TextSendMessage(text=text)
+        logger.info(f"reply TextSendMessage")
+
+    elif isinstance(text, TemplateSendMessage):
+        message = text
+        logger.info(f"reply TemplateSendMessage")
+    else:
+        logger.info(f"reply Error")
+        return
+
     line_bot_api.reply_message(event.reply_token, message)
     display_name = line_bot_api.get_profile(event.source.user_id).display_name
     logger.info(f"reply to {display_name}")
@@ -214,6 +224,72 @@ def message_reply_ScamURL(user_id, IsScam, QueryInf, Domain, orgin_text):
 
     template_message = TemplateSendMessage(
         alt_text='網址查詢',
+        template=confirm_template
+    )
+    return template_message
+
+def message_reply_Game_Start(site):
+
+    thumbnail_image_url = ""
+    title = "檢舉遊戲"
+    actions = []
+
+    logger.info(f"site = {site}")
+
+    actions.append( URITemplateAction(
+                        label='詐騙連結',
+                        uri=f'{site}'
+                    )
+    )
+    actions.append( MessageTemplateAction(
+                        label = '完成',
+                        text =  f"完成"
+                    )
+    )
+    actions.append( MessageTemplateAction(
+                        label = '失效',
+                        text =  f"失效"
+                    )
+    )
+
+    text = f"點開「詐騙連結」後進行檢舉\n\n若「完成」點「完成」\n若「失效」點「失效」\n官方賴->貼文->右上角有檢舉"
+
+    buttons_template = ButtonsTemplate(
+        title=title,
+        text=text,
+        actions=actions
+    )
+
+    template_message = TemplateSendMessage(
+        alt_text=title,
+        template=buttons_template
+    )
+    return template_message
+
+def message_reply_Game_End():
+
+    actions = []
+
+    actions.append( MessageTemplateAction(
+                        label = '遊戲',
+                        text =  f"遊戲"
+                    )
+    )
+    actions.append( MessageTemplateAction(
+                        label='積分',
+                        text=f"積分"
+                    )
+    )
+
+    Text = "感謝你的回報\n輸入「遊戲」\n進行下一波行動\n輸入「積分」\n可以查詢你的積分排名"
+
+    confirm_template = ConfirmTemplate(
+        text=Text,
+        actions=actions
+    )
+
+    template_message = TemplateSendMessage(
+        alt_text='檢舉遊戲',
         template=confirm_template
     )
     return template_message
@@ -543,7 +619,7 @@ def handle_message_text_game(user_id, user_text) -> str:
         if not site:
             rmessage = f"目前暫停檢舉遊戲喔~"
         else:
-            rmessage = f"請開始你的檢舉遊戲\n下列網址是詐騙帳號\n點開後找到檢舉進行檢舉\n\n{site}\n\n若「完成」請回報「完成」\n若「失效」請回傳「失效」"
+            rmessage = message_reply_Game_Start(site)
         return rmessage
 
     if user_text == "完成":
@@ -551,7 +627,7 @@ def handle_message_text_game(user_id, user_text) -> str:
         found2 = push_netizen_file(user_id, True, False)
         if found and not found2:
             write_user_point(user_id, 1)
-            rmessage = f"感謝你的回報\n輸入「遊戲」\n進行下一波行動\n輸入「積分」\n可以查詢你的積分排名"
+            rmessage = message_reply_Game_End()
         elif not found and found2:
             write_user_point(user_id, 1)
             rmessage = f"感謝你的回報\n輸入「檢閱」\n進行下一波行動\n輸入「積分」\n可以查詢你的積分排名"
@@ -565,8 +641,10 @@ def handle_message_text_game(user_id, user_text) -> str:
         found = push_random_blacklist(user_id, False, True)
         found2 = push_netizen_file(user_id, False, True)
         if found and not found2:
-            rmessage = f"感謝你的回報\n輸入「遊戲」\n進行下一波行動\n輸入「積分」\n可以查詢你的積分排名"
+            write_user_point(user_id, 1)
+            rmessage = message_reply_Game_End()
         elif not found and found2:
+            write_user_point(user_id, 1)
             rmessage = f"感謝你的回報\n輸入「檢閱」\n進行下一波行動\n輸入「積分」\n可以查詢你的積分排名"
         elif found and found2:
             rmessage = f"感謝你的回報\n輸入「遊戲/檢閱」\n進行下一波行動\n輸入「積分」\n可以查詢你的積分排名"
