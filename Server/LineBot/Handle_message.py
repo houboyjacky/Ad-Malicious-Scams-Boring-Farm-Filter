@@ -39,6 +39,7 @@ from Query_URL import user_query_website, check_blacklisted_site, get_web_leader
 from Query_URL_Short import user_query_shorturl, user_query_shorturl_normal
 from Query_VirtualMoney import Virtual_Money_Read_Document, Virtual_Money_Write_Document, Virtual_Money_Delete_Document
 from Query_WhatsApp import WhatsApp_Write_Document, WhatsApp_Delete_Document, WhatsApp_Read_Document
+from Query_Wechat import Wechat_Write_Document, Wechat_Delete_Document, Wechat_Read_Document
 from Update_BlackList import update_part_blacklist_rule, update_part_blacklist_comment
 import Handle_LineBot
 import os
@@ -210,6 +211,14 @@ def handle_message_text_admin_sub(orgin_text):
             telegram_id = match.group(1)
             url = f"https://t.me/{telegram_id}"
             rmessage = Telegram_Delete_Document(url)
+            break
+
+        # Wechat
+        if match := re.search(Tools.KEYWORD_WECHAT[1], orgin_text):
+            rmessage = Wechat_Write_Document(orgin_text)
+            break
+        elif match := re.search(Tools.KEYWORD_WECHAT[2], orgin_text):
+            rmessage = Wechat_Delete_Document(orgin_text)
             break
 
         # Telegram 網址
@@ -542,7 +551,11 @@ def handle_message_text_sub(user_id, orgin_text):
         rmessage = Handle_LineBot.message_reply_Query(status, "Twitter ID", twitter_id)
         return rmessage
 
-    # 查詢 Email
+    # 查詢Wechat
+    if re.search(Tools.KEYWORD_WECHAT[0], orgin_text):
+        wechat, status = Wechat_Read_Document(orgin_text)
+        rmessage = Handle_LineBot.message_reply_Query(status, "Wechat", wechat)
+        return rmessage
     if re.match(Tools.KEYWORD_MAIL[0], lower_text):
         message, status = Mail_Read_Document(orgin_text)
         rmessage = Handle_LineBot.message_reply_Query(status, "E-mail", lower_text)

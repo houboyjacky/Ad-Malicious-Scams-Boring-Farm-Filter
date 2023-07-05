@@ -1,6 +1,7 @@
 # 歷史更新 History Update
 
 * 20230705 Update
+  * 加入 微信黑名單
   * 加入 遊戲與檢閱使用TemplateSendMessage
   * 調整 用詞
   * 調整 名片網站清單
