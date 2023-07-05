@@ -206,6 +206,11 @@ def message_reply_Query(user_id, IsScam, Type_Name, code , orgin_text):
                         f"「是」已知詐騙的{Type_Name}\n\n"
                         f"請勿相信此{Type_Name}\n"
                         f"感恩")
+        elif Type_Name == "虛擬貨幣地址":
+            text = (    f"{code}\n\n"
+                        f"「是」已知詐騙的{Type_Name}\n\n"
+                        f"請勿相信此{Type_Name}\n"
+                        f"感恩")
         else:
             text = (    f"所輸入的「{code}」\n\n"
                         f"「是」已知詐騙的{Type_Name}\n\n"
@@ -233,6 +238,15 @@ def message_reply_Query(user_id, IsScam, Type_Name, code , orgin_text):
     else:
         if Type_Name == "LINE邀請網址" or Type_Name == "FB" or Type_Name == "IG":
             text = (    f"{Type_Name}分析出的代碼的「{code}」\n\n"
+                        f"「不存在」{Type_Name}黑名單內\n\n"
+                        f"並不代表「沒問題」\n\n"
+                        f"{suffix}"
+                        f"若確定是詐騙\n"
+                        f"請點選「詐騙回報」\n"
+                        f"並附上截圖與說明\n"
+                        f"感恩")
+        elif Type_Name == "虛擬貨幣地址":
+            text = (    f"{code}\n\n"
                         f"「不存在」{Type_Name}黑名單內\n\n"
                         f"並不代表「沒問題」\n\n"
                         f"{suffix}"

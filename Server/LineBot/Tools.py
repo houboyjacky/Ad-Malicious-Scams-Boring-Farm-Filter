@@ -40,6 +40,7 @@ BLACKUSERID = setting['BLACKUSERID']                            # BLACKUSERID =>
 CERT = setting['CERT']                                          # CERT => Lets Encrypt Certificate Path File
 CHANNEL_ACCESS_TOKEN = setting['CHANNEL_ACCESS_TOKEN']          # CHANNEL_ACCESS_TOKEN => Linebot Token
 CHANNEL_SECRET = setting['CHANNEL_SECRET']                      # CHANNEL_SECRET => Linebot Token
+CHAINSIGHT_KEY = setting['CHAINSIGHT_KEY']                      # CHAINSIGHT_KEY => Chainsight KEY
 CONFIG_FOLDER = setting['CONFIG_FOLDER']                        # CONFIG_FOLDER => Config Folder
 HASH_FILE = setting['HASH_FILE']                                # HASH_FILE => HASH INF IN FILE
 HTTP_HEADERS = setting['HTTP_HEADERS']                          # HTTP_HEADERS => Http Headers
@@ -58,6 +59,7 @@ KEYWORD_TWITTER_URL = setting['KEYWORD_TWITTER_URL']            # KEYWORD_TWITTE
 KEYWORD_URL = setting['KEYWORD_URL']                            # KEYWORD_URL => Keyword for url
 KEYWORD_VIRTUAL_MONEY = setting['KEYWORD_VIRTUAL_MONEY']        # KEYWORD_VIRTUAL_MONEY => Keyword for virtual money
 KEYWORD_WHATSAPP = setting['KEYWORD_WHATSAPP']                  # KEYWORD_WHATSAPP => Keyword for WhatsApp
+KEYWORD_WECHAT = setting['KEYWORD_WECHAT']                      # KEYWORD_WECHAT => Keyword for Wechat
 LINEID_WEB = setting['LINEID_WEB']                              # LINEID_WEB => Line ID from Web
 LINEBOT_URL = setting['LINEBOT_URL']                            # LINEBOT_URL => Linebot Url
 LOGFILE = setting['LOGFILE']                                    # LOGFILE => Log File Path
@@ -76,12 +78,12 @@ WEB_LEADERBOARD_FILE = setting['WEB_LEADERBOARD_FILE']          # WEB_LEADERBOAR
 WHOIS_SKIP = setting['WHOIS_SKIP']                              # WHOIS_SKIP => Skip Query Whois
 
 def reloadSetting():
-    global ADMINS, BACKUPDIR, BLACKUSERID, CERT, CHANNEL_ACCESS_TOKEN
-    global CHANNEL_SECRET, HASH_FILE, KEYWORD_FB, KEYWORD_TIKTOK
+    global ADMINS, BLACKUSERID, CERT, CHANNEL_ACCESS_TOKEN
+    global CHANNEL_SECRET, HASH_FILE, KEYWORD_FB, KEYWORD_TIKTOK, KEYWORD_WECHAT
     global KEYWORD_IG_ID, KEYWORD_LINE_ID, KEYWORD_TELEGRAM_ID, KEYWORD_URL
     global LINEID_WEB, LOGFILE, HTTP_HEADERS, CONFIG_FOLDER, LINEBOT_URL
     global TMP_BLACKLIST, NOTICE_BOARD, NOTICE_BOARD_LIST, PEM_DIR, PRIVKEY
-    global SCAM_WEBSITE_LIST, SHORT_URL_LIST, SPECIAL_SUBWEBSITE
+    global SCAM_WEBSITE_LIST, SHORT_URL_LIST, SPECIAL_SUBWEBSITE, CHAINSIGHT_KEY
     global WEB_LEADERBOARD_FILE, ALLOW_DOMAIN_LIST, WHOIS_SKIP, KEYWORD_IG_URL
     global KEYWORD_TWITTER_ID, KEYWORD_MAIL, KEYWORD_WHATSAPP, KEYWORD_TELEGRAM_URL
     global KEYWORD_SMALLREDBOOK, KEYWORD_VIRTUAL_MONEY, KEYWORD_TWITTER_URL
@@ -99,6 +101,7 @@ def reloadSetting():
     CERT = setting['CERT']
     CHANNEL_ACCESS_TOKEN = setting['CHANNEL_ACCESS_TOKEN']
     CHANNEL_SECRET = setting['CHANNEL_SECRET']
+    CHAINSIGHT_KEY = setting['CHAINSIGHT_KEY']
     CONFIG_FOLDER = setting['CONFIG_FOLDER']
     HASH_FILE = setting['HASH_FILE']
     HTTP_HEADERS = setting['HTTP_HEADERS']
@@ -117,6 +120,7 @@ def reloadSetting():
     KEYWORD_URL = setting['KEYWORD_URL']
     KEYWORD_VIRTUAL_MONEY = setting['KEYWORD_VIRTUAL_MONEY']
     KEYWORD_WHATSAPP = setting['KEYWORD_WHATSAPP']
+    KEYWORD_WECHAT = setting['KEYWORD_WECHAT']
     LINEID_WEB = setting['LINEID_WEB']
     LINEBOT_URL = setting['LINEBOT_URL']
     LOGFILE = setting['LOGFILE']

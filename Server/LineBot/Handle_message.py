@@ -501,6 +501,8 @@ def handle_message_text_sub(user_id, orgin_text):
     lower_text = orgin_text.lower()
 
     # 無關網址判斷
+
+    # 查詢虛擬貨幣
     if re.match(Tools.KEYWORD_VIRTUAL_MONEY[0], orgin_text):
         msg, status = Virtual_Money_Read_Document(orgin_text)
         rmessage = Handle_LineBot.message_reply_Query(user_id, status, "虛擬貨幣地址", msg, orgin_text)

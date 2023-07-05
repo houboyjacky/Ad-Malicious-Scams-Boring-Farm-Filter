@@ -21,11 +21,44 @@ THE SOFTWARE.
 '''
 
 from datetime import date
+import json
 from Logger import logger
 from typing import Optional
 import Query_API
+import requests
+import Tools
 
 Name = "虛擬貨幣"
+
+def checkFromChainsight(address):
+    url = f"https://api.chainsight.com/api/check?keyword={address}"
+    headers = {
+        "accept": "*/*",
+        "X-API-KEY": Tools.CHAINSIGHT_KEY
+    }
+
+    response = requests.get(url, headers=headers)
+    parsed_data = json.loads(response.text)
+
+    currency_data = {}
+
+    for item in parsed_data['data']:
+        chain_name = item['chain']['name']
+        credit = item['antiFraud']['credit']
+        currency_data[chain_name] = credit
+
+    max_credit = max(currency_data.values())
+
+    if max_credit <= 2:
+        level = "低"
+    elif max_credit <= 3:
+        level = "中"
+    else:
+        level = "高"
+
+    result = f"ChainSight危險等級：{level}"
+    return result
+
 
 def analyze_Virtual_Money_url(user_text:str) -> Optional[dict]:
 
@@ -76,7 +109,7 @@ def Virtual_Money_Read_Document(user_text:str):
     rmessage = ""
     collection = Query_API.Read_DB(Name,Name)
     address = {"地址":user_text.replace("貨幣","")}
-    rmessage = f"{Name}地址\n「 {address['地址']} 」"
+
     if address:
         if document := Query_API.Search_Same_Document(collection,"地址", address['地址']):
             rmessage = f"{Name}地址為\n幣別：{document['貨幣']}\n地址：「{document['地址'] }」"
@@ -88,6 +121,10 @@ def Virtual_Money_Read_Document(user_text:str):
     else:
         logger.info(f"{Name}黑名單查詢失敗")
         status = -1
+
+    if not rmessage:
+        check_msg = checkFromChainsight(address['地址'])
+        rmessage = f"{Name}地址\n「 {address['地址']} 」\n{check_msg}"
 
     return rmessage, status
 

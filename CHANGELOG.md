@@ -1,6 +1,7 @@
 # 歷史更新 History Update
 
 * 20230705 Update
+  * 加入 虛擬貨幣查閱chainsight危險等級
   * 加入 微信黑名單
   * 加入 遊戲與檢閱使用TemplateSendMessage
   * 更新 165反詐騙諮詢專線-詐騙LINE ID(~112/7/5)
@@ -13,6 +14,7 @@
   * 調整 缺漏的API
   * 調整 參數
   * 調整 移除多餘判斷
+  * 調整 虛擬貨幣顯示
   * 調整 管理員與擁有者UI
   * 調整 獨立LINE Bot處理
 
