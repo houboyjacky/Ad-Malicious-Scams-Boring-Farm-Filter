@@ -3,6 +3,7 @@
 * 20230705 Update
   * 加入 微信黑名單
   * 加入 遊戲與檢閱使用TemplateSendMessage
+  * 移除 無用參數檔
   * 調整 用詞
   * 調整 名片網站清單
   * 調整 回應使用者改用TemplateSendMessage
