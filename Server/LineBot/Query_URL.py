@@ -572,7 +572,7 @@ def user_query_website(prefix_msg, user_text):
         if checkresult:
             rmessage = (f"{prefix_msg}「{domain_name}」{special_tip}\n"
                         f"{IP_info_msg}\n"
-                        f"「是」詐騙/可疑網站\n\n"
+                        f"「是」詐騙網站\n\n"
                         f"請勿相信此網站\n"
                         f"若認為誤通報，請補充描述\n"
                         f"\n"
@@ -635,7 +635,7 @@ def user_query_website(prefix_msg, user_text):
                     f"{rmessage_creation_date}\n"
                     f"{rmessage_diff_days}\n"
                     f"{IP_info_msg}\n"
-                    f"「是」詐騙/可疑網站\n\n"
+                    f"「是」詐騙網站\n\n"
                     f"請勿相信此網站\n"
                     f"若認為誤通報，請補充描述\n"
                     f"\n"
