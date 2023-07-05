@@ -522,13 +522,15 @@ def handle_message_text_sub(user_id, orgin_text):
                             f"其他國家請加上國碼\n"
                             f"例如香港+85261234567\n"
                             )
+                return rmessage
         elif " " in lineid:
             rmessage = (f"所輸入的「 {lineid} 」\n"
                         f"包含不正確的空白符號\n"
                         f"請重新輸入\n"
                         )
+            return rmessage
 
-        message, status = LineID_Read_Document(lineid)
+        _, status = LineID_Read_Document(lineid)
         rmessage = Handle_LineBot.message_reply_Query(status, "LINE ID", lineid)
         return rmessage
     elif match := re.search(Tools.KEYWORD_LINE_ID[3], orgin_text):
@@ -537,17 +539,14 @@ def handle_message_text_sub(user_id, orgin_text):
         return rmessage
 
     # 查詢Telegram ID
-    if match := re.search(Tools.KEYWORD_TELEGRAM_ID[0], orgin_text):
-        telegram_id = match.group(1)
-        url = f"https://t.me/{telegram_id}"
-        message, status = Telegram_Read_Document(url)
+    if re.search(Tools.KEYWORD_TELEGRAM_ID[0], orgin_text):
+        telegram_id, status = Telegram_Read_Document(orgin_text)
         rmessage = Handle_LineBot.message_reply_Query(status, "Telegram ID", telegram_id)
         return rmessage
 
     # 查詢Twitter ID
-    if match := re.search(Tools.KEYWORD_TWITTER_ID[0], orgin_text):
-        twitter_id = match.group(1)
-        message, status = Twitter_Read_Document(orgin_text)
+    if re.search(Tools.KEYWORD_TWITTER_ID[0], orgin_text):
+        twitter_id, status = Twitter_Read_Document(orgin_text)
         rmessage = Handle_LineBot.message_reply_Query(status, "Twitter ID", twitter_id)
         return rmessage
 
@@ -556,9 +555,11 @@ def handle_message_text_sub(user_id, orgin_text):
         wechat, status = Wechat_Read_Document(orgin_text)
         rmessage = Handle_LineBot.message_reply_Query(status, "Wechat", wechat)
         return rmessage
+
+    # 查詢Email
     if re.match(Tools.KEYWORD_MAIL[0], lower_text):
-        message, status = Mail_Read_Document(orgin_text)
-        rmessage = Handle_LineBot.message_reply_Query(status, "E-mail", lower_text)
+        mail, status = Mail_Read_Document(orgin_text)
+        rmessage = Handle_LineBot.message_reply_Query(status, "E-mail", mail)
         return rmessage
 
     # 查詢line邀請網址
@@ -592,18 +593,18 @@ def handle_message_text_sub(user_id, orgin_text):
 
     # 查詢line邀請網址
     if re.match(Tools.KEYWORD_LINE_INVITE[3], lower_text):
-        message, status = lineinvite_Read_Document(orgin_text)
+        invite_code, status = lineinvite_Read_Document(orgin_text)
 
         if status == -1: # 若查詢失敗就繼續go到最後，直接查網址
             prefix_msg = ""
             pass
         else:
-            rmessage = Handle_LineBot.message_reply_Query(status, "LINE邀請網址", message)
+            rmessage = Handle_LineBot.message_reply_Query(status, "LINE邀請網址", invite_code)
         return rmessage
 
     # 判斷FB帳戶網址
     if re.match(Tools.KEYWORD_FB[2], lower_text):
-        message, status = FB_Read_Document(orgin_text)
+        account, status = FB_Read_Document(orgin_text)
 
         if prefix_msg:
             prefix_msg = f"{prefix_msg}「 {orgin_text} 」\n"
@@ -618,12 +619,12 @@ def handle_message_text_sub(user_id, orgin_text):
                         f"才能夠判別\n"
                         f"感恩")
         else:
-            rmessage = Handle_LineBot.message_reply_Query(status, "FB", message)
+            rmessage = Handle_LineBot.message_reply_Query(status, "FB", account)
         return rmessage
 
     # 判斷IG帳戶、貼文或影片網址
     if re.match(Tools.KEYWORD_IG_URL[3], lower_text):
-        message, status = IG_Read_Document(orgin_text)
+        account, status = IG_Read_Document(orgin_text)
         if prefix_msg:
             prefix_msg = f"{prefix_msg}「 {orgin_text} 」\n"
         else:
@@ -634,13 +635,12 @@ def handle_message_text_sub(user_id, orgin_text):
                         f"IG網址有誤、網址失效或不支援\n"
                         f"感恩")
         else:
-            rmessage = Handle_LineBot.message_reply_Query(status, "IG", message)
+            rmessage = Handle_LineBot.message_reply_Query(status, "IG", account)
         return rmessage
 
     # 查詢Telegram網址
-    if match := re.search(Tools.KEYWORD_TELEGRAM_URL[0], lower_text):
-        telegram_id = match.group(1)
-        message, status = Telegram_Read_Document(orgin_text)
+    if re.search(Tools.KEYWORD_TELEGRAM_URL[0], lower_text):
+        telegram_id, status = Telegram_Read_Document(orgin_text)
         if status == -1:
             rmessage = (f"所輸入的「 {telegram_id} 」\n"
                         f"有誤、網址失效或不支援\n"
@@ -651,7 +651,7 @@ def handle_message_text_sub(user_id, orgin_text):
 
     # 查詢Twitter網址
     if re.match(Tools.KEYWORD_TWITTER_URL[2], lower_text):
-        message, status = Twitter_Read_Document(orgin_text)
+        twitter_id, status = Twitter_Read_Document(orgin_text)
         if prefix_msg:
             prefix_msg = f"{prefix_msg}「 {orgin_text} 」\n"
         else:
@@ -662,12 +662,12 @@ def handle_message_text_sub(user_id, orgin_text):
                         f"Twitter網址有誤、網址失效或不支援\n"
                         f"感恩")
         else:
-            rmessage = Handle_LineBot.message_reply_Query(status, "Twitter", message)
+            rmessage = Handle_LineBot.message_reply_Query(status, "Twitter", twitter_id)
         return rmessage
 
     # 查詢Whatsapp網址
     if re.search(Tools.KEYWORD_WHATSAPP[0], lower_text) or re.match(Tools.KEYWORD_WHATSAPP[2], lower_text):
-        message, status = WhatsApp_Read_Document(orgin_text)
+        whatsapp_id, status = WhatsApp_Read_Document(orgin_text)
         if prefix_msg:
             prefix_msg = f"{prefix_msg}「 {orgin_text} 」\n"
         else:
@@ -678,12 +678,12 @@ def handle_message_text_sub(user_id, orgin_text):
                         f"WhatsApp網址有誤、網址失效或不支援\n"
                         f"感恩")
         else:
-            rmessage = Handle_LineBot.message_reply_Query(status, "WhatsApp", message)
+            rmessage = Handle_LineBot.message_reply_Query(status, "WhatsApp", whatsapp_id)
         return rmessage
 
     # 查詢Tiktok網址
     if re.match(Tools.KEYWORD_TIKTOK[0], lower_text):
-        message, status = Tiktok_Read_Document(orgin_text)
+        account, status = Tiktok_Read_Document(orgin_text)
         if prefix_msg:
             prefix_msg = f"{prefix_msg}「 {orgin_text} 」\n"
         else:
@@ -694,12 +694,12 @@ def handle_message_text_sub(user_id, orgin_text):
                         f"Tiktok網址有誤、網址失效或不支援\n"
                         f"感恩")
         else:
-            rmessage = Handle_LineBot.message_reply_Query(status, "Tiktok", message)
+            rmessage = Handle_LineBot.message_reply_Query(status, "Tiktok", account)
         return rmessage
 
     # 查詢小紅書網址
     if re.match(Tools.KEYWORD_SMALLREDBOOK[0], lower_text):
-        message, status = SmallRedBook_Read_Document(orgin_text)
+        account, status = SmallRedBook_Read_Document(orgin_text)
         if prefix_msg:
             prefix_msg = f"{prefix_msg}「 {orgin_text} 」\n"
         else:
@@ -710,7 +710,7 @@ def handle_message_text_sub(user_id, orgin_text):
                         f"小紅書網址有誤、網址失效或不支援\n"
                         f"感恩")
         else:
-            rmessage = Handle_LineBot.message_reply_Query(status, "小紅書", message)
+            rmessage = Handle_LineBot.message_reply_Query(status, "小紅書", account)
         return rmessage
 
     # 如果用戶輸入的網址沒有以 http 或 https 開頭，則不回應訊息

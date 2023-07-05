@@ -8,6 +8,7 @@
   * 調整 回應使用者改用TemplateSendMessage
   * 調整 缺漏的API
   * 調整 參數
+  * 調整 移除多餘判斷
   * 調整 獨立LINE Bot處理
 
 * 20230704 Update
