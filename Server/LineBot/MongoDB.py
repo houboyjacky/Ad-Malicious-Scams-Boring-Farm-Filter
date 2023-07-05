@@ -43,6 +43,12 @@ def Load_dbs(db_name):
     collection_objects = [db[collection_name] for collection_name in db.list_collection_names()]
     return collection_objects
 
+def Drop_db(db_name, collection_name):
+    global db_client
+    db = db_client[db_name]
+    db.drop_collection(collection_name)
+    return
+
 def Query_db(collection, tagname, value):
     document = collection.find_one({tagname:value})
     return document

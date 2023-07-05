@@ -4,6 +4,7 @@
   * 加入 遊戲與檢閱使用TemplateSendMessage
   * 調整 用詞
   * 調整 名片網站清單
+  * 調整 缺漏的API
   * 調整 參數
   * 調整 獨立LINE Bot處理
 

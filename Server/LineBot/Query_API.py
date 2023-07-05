@@ -37,6 +37,10 @@ def Read_DBs(DB_Name):
     collections = MongoDB.Load_dbs(DB_Name)
     return collections
 
+def Drop_Collection(DB_Name, Collection_Name):
+    MongoDB.Drop_db(DB_Name, Collection_Name)
+    return
+
 def Delete_document(collection, struct, tagname):
     filer = {tagname:struct[tagname]}
     MongoDB.Delete_db(collection, filer)
