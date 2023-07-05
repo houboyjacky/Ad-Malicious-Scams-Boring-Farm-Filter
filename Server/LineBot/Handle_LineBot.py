@@ -183,7 +183,7 @@ def message_reply_Game_End(buttom):
 
     return template_message
 
-def message_reply_Query(IsScam, Type_Name, source):
+def message_reply_Query(user_id, IsScam, Type_Name, code , orgin_text):
 
     actions = []
     text = ""
@@ -202,21 +202,28 @@ def message_reply_Query(IsScam, Type_Name, source):
 
     if IsScam:
         if Type_Name == "LINE邀請網址" or Type_Name == "FB" or Type_Name == "IG":
-            text = (    f"分析出的代碼的「{source}」\n\n"
+            text = (    f"{Type_Name}分析出的代碼的「{code}」\n\n"
                         f"「是」已知詐騙的{Type_Name}\n\n"
                         f"請勿相信此{Type_Name}\n"
                         f"感恩")
         else:
-            text = (    f"所輸入的「{source}」\n\n"
+            text = (    f"所輸入的「{code}」\n\n"
                         f"「是」已知詐騙的{Type_Name}\n\n"
                         f"請勿相信此{Type_Name}\n"
                         f"感恩")
 
-        actions.append( MessageTemplateAction(
-                            label = '受害人點這',
-                            text =  f"詐騙幫忙"
-                        )
-        )
+        if Tools.IsOwner(user_id) and Type_Name != "虛擬貨幣地址":
+            actions.append( MessageTemplateAction(
+                                label = '管理員刪除',
+                                text =  f"刪除{orgin_text}"
+                            )
+            )
+        else:
+            actions.append( MessageTemplateAction(
+                                label = '受害人點這',
+                                text =  f"詐騙幫忙"
+                            )
+            )
 
         actions.append( MessageTemplateAction(
                             label='使用指南',
@@ -225,7 +232,7 @@ def message_reply_Query(IsScam, Type_Name, source):
         )
     else:
         if Type_Name == "LINE邀請網址" or Type_Name == "FB" or Type_Name == "IG":
-            text = (    f"分析出的代碼的「{source}」\n\n"
+            text = (    f"{Type_Name}分析出的代碼的「{code}」\n\n"
                         f"「不存在」{Type_Name}黑名單內\n\n"
                         f"並不代表「沒問題」\n\n"
                         f"{suffix}"
@@ -234,7 +241,7 @@ def message_reply_Query(IsScam, Type_Name, source):
                         f"並附上截圖與說明\n"
                         f"感恩")
         else:
-            text = (    f"所輸入的「{source}」\n\n"
+            text = (    f"所輸入的「{code}」\n\n"
                         f"「不存在」{Type_Name}黑名單內\n\n"
                         f"並不代表「沒問題」\n\n"
                         f"{suffix}"
@@ -243,16 +250,39 @@ def message_reply_Query(IsScam, Type_Name, source):
                         f"並附上截圖與說明\n"
                         f"感恩")
 
-        actions.append( MessageTemplateAction(
-                            label = '詐騙回報',
-                            text =  f"詐騙回報{source}"
-                        )
-        )
-        actions.append( MessageTemplateAction(
-                            label='使用指南',
-                            text=f"使用指南"
-                        )
-        )
+        if Tools.IsOwner(user_id) and Type_Name != "虛擬貨幣地址":
+            actions.append( MessageTemplateAction(
+                                label = '管理員加入',
+                                text =  f"加入{orgin_text}"
+                            )
+            )
+            actions.append( MessageTemplateAction(
+                                label='管理員刪除',
+                                text=f"刪除{orgin_text}"
+                            )
+            )
+        elif Tools.IsAdmin(user_id) and Type_Name != "虛擬貨幣地址":
+            actions.append( MessageTemplateAction(
+                                label = '管理員加入',
+                                text =  f"加入{orgin_text}"
+                            )
+            )
+            actions.append( MessageTemplateAction(
+                                label='使用指南',
+                                text=f"使用指南"
+                            )
+            )
+        else:
+            actions.append( MessageTemplateAction(
+                                label = '詐騙回報',
+                                text =  f"詐騙回報{code}"
+                            )
+            )
+            actions.append( MessageTemplateAction(
+                                label='使用指南',
+                                text=f"使用指南"
+                            )
+            )
 
     confirm_template = ConfirmTemplate(
         text=text,
