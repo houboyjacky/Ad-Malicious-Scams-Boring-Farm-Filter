@@ -398,8 +398,9 @@ def user_query_website_by_IP(IP):
 def user_query_website_by_DNS(domain_name, result_list, lock):
 
     Is_Skip = False
-    if domain_name in Tools.WHOIS_SKIP:
-        Is_Skip = True
+    for skip in Tools.WHOIS_SKIP:
+        if skip in domain_name:
+            Is_Skip = True
 
     whois_domain = ""
     whois_creation_date = ""

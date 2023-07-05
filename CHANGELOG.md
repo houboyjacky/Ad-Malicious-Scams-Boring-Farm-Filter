@@ -1,5 +1,8 @@
 # 歷史更新 History Update
 
+* 20230706 Update
+  * 修復 Whois未能略過部分網域
+
 * 20230705 Update
   * 加入 虛擬貨幣查閱chainsight危險等級
   * 加入 微信黑名單
