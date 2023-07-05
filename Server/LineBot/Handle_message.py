@@ -22,8 +22,6 @@ THE SOFTWARE.
 
 from GetFromNetizen import push_netizen_file, write_new_netizen_file, get_netizen_file
 from io import BytesIO
-from linebot import LineBotApi
-from linebot.models import TextSendMessage, TemplateSendMessage, ButtonsTemplate, PostbackTemplateAction, MessageTemplateAction, URITemplateAction, ConfirmTemplate
 from Logger import logger
 from PIL import Image
 from Point import read_user_point, get_user_rank, write_user_point
@@ -42,16 +40,13 @@ from Query_URL_Short import user_query_shorturl, user_query_shorturl_normal
 from Query_VirtualMoney import Virtual_Money_Read_Document, Virtual_Money_Write_Document, Virtual_Money_Delete_Document
 from Query_WhatsApp import WhatsApp_Write_Document, WhatsApp_Delete_Document, WhatsApp_Read_Document
 from Update_BlackList import update_part_blacklist_rule, update_part_blacklist_comment
+import Handle_LineBot
 import os
 import pytesseract
 import random
 import re
 import time
 import Tools
-
-image_analysis = False
-forward_inquiry = False
-line_bot_api = LineBotApi(Tools.CHANNEL_ACCESS_TOKEN)
 
 FB_list_len = 0
 IG_list_len = 0
@@ -122,178 +117,9 @@ def push_random_blacklist(UserID, success, disappear):
     if result := push_random_SmallRedBook_blacklist(UserID, success, disappear):
         return result
     return result
-
-# 回應訊息的函式
-def message_reply_basic(event, text):
-    if isinstance(text, str):
-        if check_user_need_news(event.source.user_id):
-            text = f"{text}\n\n{return_notice_text()}"
-
-        message = TextSendMessage(text=text)
-        logger.info(f"reply TextSendMessage")
-
-    elif isinstance(text, TemplateSendMessage):
-        message = text
-        logger.info(f"reply TemplateSendMessage")
-    else:
-        logger.info(f"reply Error")
-        return
-
-    line_bot_api.reply_message(event.reply_token, message)
-    display_name = line_bot_api.get_profile(event.source.user_id).display_name
-    logger.info(f"reply to {display_name}")
-    return
-
-# 回應訊息的函式
-def message_reply(event, text):
-    global forward_inquiry
-
-    if isinstance(text, str):
-        if check_user_need_news(event.source.user_id):
-            text = f"{text}\n\n{return_notice_text()}"
-
-        if not Tools.IsAdmin(event.source.user_id) and forward_inquiry:
-            user_name = line_bot_api.get_profile(event.source.user_id).display_name
-            write_new_netizen_file(event.source.user_id,
-                                user_name, event.message.text, True)
-
-        message = TextSendMessage(text=text)
-        logger.info(f"reply TextSendMessage")
-
-    elif isinstance(text, TemplateSendMessage):
-        message = text
-        logger.info(f"reply TemplateSendMessage")
-    else:
-        logger.info(f"reply Error")
-        return
-
-    line_bot_api.reply_message(event.reply_token, message)
-    display_name = line_bot_api.get_profile(event.source.user_id).display_name
-    logger.info(f"reply to {display_name}")
-    return
-
-def message_reply_ScamURL(user_id, IsScam, QueryInf, Domain, orgin_text):
-
-    actions = []
-    if IsScam:
-        actions.append( MessageTemplateAction(
-                            label = '詐騙幫忙',
-                            text =  f"詐騙幫忙"
-                        )
-        )
-        if Domain:
-            actions.append( URITemplateAction(
-                                label='安全評分',
-                                uri=f"https://www.scamadviser.com/zh/check-website/{Domain}"
-                            )
-            )
-        else:
-            actions.append( MessageTemplateAction(
-                                label='使用指南',
-                                text=f"使用指南"
-                            )
-            )
-    else:
-        if Tools.IsAdmin(user_id):
-            actions.append( MessageTemplateAction(
-                                label = '管理員加入',
-                                text =  f"加入https://{Domain}"
-                            )
-            )
-            actions.append( MessageTemplateAction(
-                                label = '分析網站',
-                                text =  f"分析{orgin_text}"
-                            )
-            )
-        else:
-            actions.append( MessageTemplateAction(
-                                label = '詐騙回報',
-                                text =  f"詐騙回報https://{Domain}"
-                            )
-            )
-            actions.append( URITemplateAction(
-                                label='安全評分',
-                                uri=f"https://www.scamadviser.com/zh/check-website/{Domain}"
-                            )
-            )
-
-    confirm_template = ConfirmTemplate(
-        text=QueryInf,
-        actions=actions
-    )
-
-    template_message = TemplateSendMessage(
-        alt_text='網址查詢',
-        template=confirm_template
-    )
-    return template_message
-
-def message_reply_Game_Start(site):
-
-    thumbnail_image_url = ""
-    title = "檢舉遊戲"
-    actions = []
-
-    logger.info(f"site = {site}")
-
-    actions.append( URITemplateAction(
-                        label='詐騙連結',
-                        uri=f'{site}'
-                    )
-    )
-    actions.append( MessageTemplateAction(
-                        label = '完成',
-                        text =  f"完成"
-                    )
-    )
-    actions.append( MessageTemplateAction(
-                        label = '失效',
-                        text =  f"失效"
-                    )
-    )
-
-    text = f"點開「詐騙連結」後進行檢舉\n\n若「完成」點「完成」\n若「失效」點「失效」\n官方賴->貼文->右上角有檢舉"
-
-    buttons_template = ButtonsTemplate(
-        title=title,
-        text=text,
-        actions=actions
-    )
-
-    template_message = TemplateSendMessage(
-        alt_text=title,
-        template=buttons_template
-    )
-    return template_message
-
-def message_reply_Game_End():
-
-    actions = []
-
-    actions.append( MessageTemplateAction(
-                        label = '遊戲',
-                        text =  f"遊戲"
-                    )
-    )
-    actions.append( MessageTemplateAction(
-                        label='積分',
-                        text=f"積分"
-                    )
-    )
-
-    Text = "感謝你的回報\n輸入「遊戲」\n進行下一波行動\n輸入「積分」\n可以查詢你的積分排名"
-
-    confirm_template = ConfirmTemplate(
-        text=Text,
-        actions=actions
-    )
-
-    template_message = TemplateSendMessage(
-        alt_text='檢舉遊戲',
-        template=confirm_template
-    )
-    return template_message
-
+#============
+# 訊息管理
+#============
 # 管理員操作
 def handle_message_text_admin_sub(orgin_text):
     lower_text = orgin_text.lower()
@@ -506,7 +332,6 @@ def handle_message_text_admin_sub(orgin_text):
     return rmessage
 
 def handle_message_text_admin(user_id, orgin_text):
-    global image_analysis, forward_inquiry
     rmessage = ''
 
     if orgin_text == "重讀":
@@ -525,16 +350,16 @@ def handle_message_text_admin(user_id, orgin_text):
             else:
                 rmessage = f"{pos}\n使用者詐騙回報內容：\n\n{content}\n\n參閱與處置後\n請輸入「完成」或「失效」"
     elif orgin_text == "關閉辨識":
-        image_analysis = False
+        Tools.image_analysis = False
         rmessage = f"已關閉辨識"
     elif orgin_text == "開啟辨識":
-        image_analysis = True
+        Tools.image_analysis = True
         rmessage = f"已開啟辨識"
     elif orgin_text == "開啟轉送":
-        forward_inquiry = True
+        Tools.forward_inquiry = True
         rmessage = f"已開啟辨識"
     elif orgin_text == "關閉轉送":
-        forward_inquiry = False
+        Tools.forward_inquiry = False
         rmessage = f"已關閉轉送"
     elif orgin_text.startswith("縮網址http"):
         orgin_text = orgin_text.replace("縮網址","")
@@ -565,7 +390,7 @@ def handle_message_text_admin(user_id, orgin_text):
         rmessage = handle_message_text_admin_sub(orgin_text)
 
     return rmessage
-
+# 前置與防呆
 def handle_message_text_front(user_text) -> str:
     if len(user_text) > 1000:
         if user_text.startswith("http"):
@@ -603,13 +428,13 @@ def handle_message_text_front(user_text) -> str:
         return rmessage
 
     return None
-
+# 遊戲功能
 def handle_message_text_game(user_id, user_text) -> str:
     if user_text.startswith("詐騙回報"):
         if user_text == "詐騙回報":
             rmessage = f"請在關鍵字「詐騙回報」後\n加入疑似詐騙的網站、ID等資訊\n並隨後附上截圖，感恩"
         else:
-            user_name = line_bot_api.get_profile(user_id).display_name
+            user_name = Handle_LineBot.linebot_getRealName(user_id)
             write_new_netizen_file(user_id, user_name, user_text, False)
             rmessage = f"請附上截圖證明\n\n謝謝你提供的情報\n輸入「積分」\n可以查詢你的積分排名"
         return rmessage
@@ -619,7 +444,7 @@ def handle_message_text_game(user_id, user_text) -> str:
         if not site:
             rmessage = f"目前暫停檢舉遊戲喔~"
         else:
-            rmessage = message_reply_Game_Start(site)
+            rmessage = Handle_LineBot.message_reply_Game_Start(site)
         return rmessage
 
     if user_text == "完成":
@@ -627,12 +452,12 @@ def handle_message_text_game(user_id, user_text) -> str:
         found2 = push_netizen_file(user_id, True, False)
         if found and not found2:
             write_user_point(user_id, 1)
-            rmessage = message_reply_Game_End()
+            rmessage = Handle_LineBot.message_reply_Game_End("遊戲")
         elif not found and found2:
             write_user_point(user_id, 1)
-            rmessage = f"感謝你的回報\n輸入「檢閱」\n進行下一波行動\n輸入「積分」\n可以查詢你的積分排名"
+            rmessage = Handle_LineBot.message_reply_Game_End("檢閱")
         elif found and found2:
-            rmessage = f"感謝你的回報\n輸入「遊戲/檢閱」\n進行下一波行動\n輸入「積分」\n可以查詢你的積分排名"
+            rmessage = Handle_LineBot.message_reply_Game_End("遊戲/檢閱")
         else:
             rmessage = f"資料庫找不到你的相關資訊"
         return rmessage
@@ -642,12 +467,12 @@ def handle_message_text_game(user_id, user_text) -> str:
         found2 = push_netizen_file(user_id, False, True)
         if found and not found2:
             write_user_point(user_id, 1)
-            rmessage = message_reply_Game_End()
+            rmessage = Handle_LineBot.message_reply_Game_End("遊戲")
         elif not found and found2:
             write_user_point(user_id, 1)
-            rmessage = f"感謝你的回報\n輸入「檢閱」\n進行下一波行動\n輸入「積分」\n可以查詢你的積分排名"
+            rmessage = Handle_LineBot.message_reply_Game_End("檢閱")
         elif found and found2:
-            rmessage = f"感謝你的回報\n輸入「遊戲/檢閱」\n進行下一波行動\n輸入「積分」\n可以查詢你的積分排名"
+            rmessage = Handle_LineBot.message_reply_Game_End("遊戲/檢閱")
         else:
             rmessage = f"資料庫找不到你的相關資訊"
         return rmessage
@@ -1103,14 +928,14 @@ def handle_message_text_sub(user_id, orgin_text):
         if Length > 240:
             return Text
         else:
-            template_message = message_reply_ScamURL(user_id, IsScam, Text, domain_name, orgin_text)
+            template_message = Handle_LineBot.message_reply_QueryURL(user_id, IsScam, Text, domain_name, orgin_text)
             return template_message
     return None
 
 def handle_message_text(event):
     # 取得發訊者的 ID
     user_id = event.source.user_id
-    display_name = line_bot_api.get_profile(user_id).display_name
+    display_name = Handle_LineBot.linebot_getRealName(user_id)
     logger.info(f'UserID = {event.source.user_id}')
     logger.info(f'{display_name} => {event.message.text}')
 
@@ -1119,28 +944,30 @@ def handle_message_text(event):
 
     # 長度控管、備用指南、電話、網站排行榜
     if rmessage := handle_message_text_front(orgin_text):
-        message_reply_basic(event, rmessage)
+        Handle_LineBot.message_reply(event, rmessage)
         return
 
     # 遊戲模式
     if rmessage := handle_message_text_game(user_id, orgin_text):
-        message_reply_basic(event, rmessage)
+        Handle_LineBot.message_reply(event, rmessage)
         return
 
     # 管理員操作
     if Tools.IsAdmin(user_id):
         if rmessage := handle_message_text_admin(user_id, orgin_text):
-            message_reply_basic(event, rmessage)
+            Handle_LineBot.message_reply(event, rmessage)
             if orgin_text == "重讀":
                 reload_user_record()
             return
 
     # 一般操作
     if rmessage := handle_message_text_sub(user_id, orgin_text):
-        message_reply(event, rmessage)
+        Handle_LineBot.message_reply(event, rmessage)
 
     return
-
+#============
+# 圖片管理
+#============
 def handle_message_image(event):
     # 取得發訊者的 ID
     logger.info(f'UserID = {event.source.user_id}')
@@ -1152,7 +979,7 @@ def handle_message_image(event):
     website_list = []
 
     # 取得照片
-    message_content = line_bot_api.get_message_content(event.message.id)
+    message_content = Handle_LineBot.linebot_getContent(event.message.id)
     image = Image.open(BytesIO(message_content.content))
 
     # 儲存照片
@@ -1172,7 +999,7 @@ def handle_message_image(event):
     with open(filename, "wb") as f:
         f.write(message_content.content)
 
-    if Tools.IsAdmin(user_id) and image_analysis:
+    if Tools.IsAdmin(user_id) and Tools.image_analysis:
         # 取得開始時間
         start_time = time.time()
         # 辨識文字
@@ -1199,9 +1026,11 @@ def handle_message_image(event):
         elapsed_time_str = Tools.format_elapsed_time(elapsed_time)
 
         rmessage += f"網站：\n{website_msg}\n\n耗時：{elapsed_time_str}\n\n判斷文字：\n{text_msg}"
-        message_reply(event, rmessage)
+        Handle_LineBot.message_reply(event, rmessage)
     return
-
+#============
+# 檔案管理
+#============
 def handle_message_file(event):
 
     # 取得發訊者的 ID
@@ -1211,7 +1040,7 @@ def handle_message_file(event):
     FILE_DIR = ""
 
     # 取得檔案內容
-    message_content = line_bot_api.get_message_content(event.message.id)
+    message_content = Handle_LineBot.linebot_getContent(event.message.id)
 
     # 判斷檔案類型
     file_type = event.message.type
@@ -1244,5 +1073,5 @@ def handle_message_file(event):
             f.write(chunk)
 
     # 回覆使用者已收到檔案
-    message_reply(event, "")
+    Handle_LineBot.message_reply(event, "")
     return

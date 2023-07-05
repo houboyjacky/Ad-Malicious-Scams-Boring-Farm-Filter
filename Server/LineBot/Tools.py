@@ -21,17 +21,17 @@ THE SOFTWARE.
 '''
 
 from datetime import datetime
-from filelock import FileLock
 import hashlib
 import json
 import pycountry
 import requests
 import tldextract
 
-db_client = ""
-
 with open('setting.json', 'r') as f:
     setting = json.load(f)
+
+image_analysis = False
+forward_inquiry = False
 
 # 讀取設定檔
 ADMINS = setting['ADMIN']                                       # ADMIN => Linebot Admin
