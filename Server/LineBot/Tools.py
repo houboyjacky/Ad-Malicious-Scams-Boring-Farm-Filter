@@ -275,7 +275,10 @@ def checkFromChainsight(address):
     currency_data = {}
 
     for item in parsed_data['data']:
-        chain_name = item['chain']['name']
+        if item['type'] == "ACCOUNT":
+            chain_name = item['chain']['name']
+        else:
+            chain_name = item['type']
         credit = item['antiFraud']['credit']
         currency_data[chain_name] = credit
 

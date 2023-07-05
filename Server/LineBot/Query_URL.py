@@ -550,7 +550,7 @@ def user_query_website(prefix_msg, user_text):
     thread2.join()
     thread3.join()
     thread4.join()
-    thread5.start()
+    thread5.join()
 
     results = dict(result_list)
 

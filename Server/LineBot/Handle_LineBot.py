@@ -298,6 +298,8 @@ def message_reply_Query(user_id, IsScam, Type_Name, code , orgin_text):
                             )
             )
 
+    logger.info(f"Text Len = {str(len(text))}")
+
     confirm_template = ConfirmTemplate(
         text=text,
         actions=actions
