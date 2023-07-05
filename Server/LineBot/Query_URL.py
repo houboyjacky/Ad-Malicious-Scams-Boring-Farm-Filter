@@ -489,6 +489,12 @@ def thread_check_blacklisted_site(domain_name, result_list, lock):
         result_list.append(("checkresult", checkresult))
     return
 
+def thread_checkFromChainsight(domain_name, result_list, lock):
+    result = Tools.checkFromChainsight(domain_name)
+    with lock:
+        result_list.append(("ChainSight", result))
+    return
+
 # 使用者查詢網址
 def user_query_website(prefix_msg, user_text):
     start_time = time.time()
@@ -534,14 +540,17 @@ def user_query_website(prefix_msg, user_text):
     thread2 = threading.Thread(target=update_web_leaderboard, args=(user_text,))
     thread3 = threading.Thread(target=user_query_website_by_DNS, args=(domain_name,result_list, lock))
     thread4 = threading.Thread(target=thread_check_blacklisted_site, args=(domain_name,result_list, lock))
+    thread5 = threading.Thread(target=thread_checkFromChainsight, args=(domain_name,result_list, lock))
     thread1.start()
     thread2.start()
     thread3.start()
     thread4.start()
+    thread5.start()
     thread1.join()
     thread2.join()
     thread3.join()
     thread4.join()
+    thread5.start()
 
     results = dict(result_list)
 
@@ -553,6 +562,7 @@ def user_query_website(prefix_msg, user_text):
     whois_creation_date = results['whois_creation_date']
     whois_country = results['whois_country']
     checkresult = results['checkresult']
+    ChainSight_msg = results['ChainSight']
 
     end_time = time.time()
     elapsed_time = end_time - start_time
@@ -570,6 +580,7 @@ def user_query_website(prefix_msg, user_text):
             )
         else:
             rmessage = (f"{prefix_msg}「{domain_name}」{special_tip}\n"
+                        f"{ChainSight_msg}\n"
                         f"{IP_info_msg}\n"
                         f"目前「尚未」在資料庫中\n"
                         f"敬請小心謹慎\n"
@@ -635,6 +646,7 @@ def user_query_website(prefix_msg, user_text):
                     f"{rmessage_country}"
                     f"{rmessage_creation_date}\n"
                     f"{rmessage_diff_days}\n"
+                    f"{ChainSight_msg}\n"
                     f"{IP_info_msg}\n"
                     f"雖然目前「尚未」在資料庫中\n\n"
                     f"但提醒你！\n"

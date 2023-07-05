@@ -4,6 +4,7 @@
   * 加入 虛擬貨幣查閱chainsight危險等級
   * 加入 微信黑名單
   * 加入 遊戲與檢閱使用TemplateSendMessage
+  * 加入 URL也使用查閱chainsight危險等級
   * 更新 165反詐騙諮詢專線-詐騙LINE ID(~112/7/5)
   * 更新 個人不想看與網友匯報廣告或網站
   * 更新 FB網友提供清單

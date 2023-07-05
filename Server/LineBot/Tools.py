@@ -261,3 +261,32 @@ def calculate_hash(file_path):
         content = file.read()
         hash_value = hashlib.md5(content).hexdigest()
         return hash_value
+
+def checkFromChainsight(address):
+    url = f"https://api.chainsight.com/api/check?keyword={address}"
+    headers = {
+        "accept": "*/*",
+        "X-API-KEY": CHAINSIGHT_KEY
+    }
+
+    response = requests.get(url, headers=headers)
+    parsed_data = json.loads(response.text)
+
+    currency_data = {}
+
+    for item in parsed_data['data']:
+        chain_name = item['chain']['name']
+        credit = item['antiFraud']['credit']
+        currency_data[chain_name] = credit
+
+    max_credit = max(currency_data.values())
+
+    if max_credit < 2:
+        level = "低"
+    elif max_credit < 3:
+        level = "中"
+    else:
+        level = "高"
+
+    result = f"ChainSight危險等級：{level}"
+    return result

@@ -289,7 +289,7 @@ def message_reply_Query(user_id, IsScam, Type_Name, code , orgin_text):
         else:
             actions.append( MessageTemplateAction(
                                 label = '詐騙回報',
-                                text =  f"詐騙回報{code}"
+                                text =  f"詐騙回報{orgin_text}"
                             )
             )
             actions.append( MessageTemplateAction(
