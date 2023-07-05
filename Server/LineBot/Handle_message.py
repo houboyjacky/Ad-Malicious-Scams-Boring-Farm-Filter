@@ -494,18 +494,7 @@ def handle_message_text_sub(user_id, orgin_text):
     # 無關網址判斷
     if re.match(Tools.KEYWORD_VIRTUAL_MONEY[0], orgin_text):
         msg, status = Virtual_Money_Read_Document(orgin_text)
-        if status:
-            rmessage = (f"所輸入的{msg}\n\n"
-                        f"「是」已知詐騙/可疑的虛擬貨幣地址\n"
-                        f"請勿匯款到該虛擬貨幣地址\n"
-                        f"感恩")
-        else:
-            rmessage = (f"所輸入的「 {msg} 」\n\n"
-                        f"「不存在」虛擬貨幣地址黑名單內\n"
-                        f"但敬請小心，請勿輕易聽信他人匯款\n"
-                        f"感恩"
-                        f"\n"
-                        f"{suffix_for_call}")
+        rmessage = Handle_LineBot.message_reply_Query(status, "虛擬貨幣地址",msg)
         return rmessage
 
     # 查詢Line ID
@@ -531,27 +520,7 @@ def handle_message_text_sub(user_id, orgin_text):
                         )
 
         message, status = LineID_Read_Document(lineid)
-        if status == -1:
-            rmessage = (f"所輸入的「 {lineid} 」\n"
-                        f"有誤、網址失效或不支援\n"
-                        f"感恩")
-        elif status == 1:
-            rmessage = (f"所輸入的「 {lineid} 」\n"
-                        f"「是」詐騙/可疑LINE ID\n"
-                        f"請勿輕易信任此LINE ID的\n"
-                        f"文字、圖像、語音和連結\n"
-                        f"感恩")
-        else:
-            rmessage = (f"所輸入的「 {lineid} 」\n"
-                        f"目前不在詐騙黑名單中\n"
-                        f"但並不代表沒問題\n"
-                        f"\n"
-                        f"若該LINE ID\n"
-                        f"是「沒見過面」的「網友」\n"
-                        f"又能帶你一起賺錢或兼職\n"
-                        f"１００％就是有問題\n"
-                        f"\n"
-                        f"{suffix_for_call}")
+        rmessage = Handle_LineBot.message_reply_Query(status, "LINE ID", lineid)
         return rmessage
     elif match := re.search(Tools.KEYWORD_LINE_ID[3], orgin_text):
         input = match.group(1)
@@ -563,76 +532,20 @@ def handle_message_text_sub(user_id, orgin_text):
         telegram_id = match.group(1)
         url = f"https://t.me/{telegram_id}"
         message, status = Telegram_Read_Document(url)
-        if status == -1:
-            rmessage = (f"所輸入的「 {telegram_id} 」\n"
-                        f"有誤、網址失效或不支援\n"
-                        f"感恩")
-        elif status == 1:
-            rmessage = (f"所輸入的「{telegram_id}」\n"
-                        f"「是」詐騙/可疑Telegram ID\n"
-                        f"請勿輕易信任此Telegram ID的\n"
-                        f"文字、圖像、語音和連結\n"
-                        f"感恩")
-        else:
-            rmessage = (f"所輸入的「{telegram_id}」\n"
-                        f"目前不在詐騙黑名單中\n"
-                        f"但並不代表沒問題\n"
-                        f"\n"
-                        f"若該Telegram ID\n"
-                        f"是「沒見過面」的「網友」\n"
-                        f"又能帶你一起賺錢或兼職\n"
-                        f"１００％就是有問題\n"
-                        f"\n"
-                        f"{suffix_for_call}")
+        rmessage = Handle_LineBot.message_reply_Query(status, "Telegram ID", telegram_id)
         return rmessage
 
     # 查詢Twitter ID
     if match := re.search(Tools.KEYWORD_TWITTER_ID[0], orgin_text):
         twitter_id = match.group(1)
         message, status = Twitter_Read_Document(orgin_text)
-        if status == -1:
-            rmessage = (f"所輸入的「 {twitter_id} 」\n"
-                        f"網址有誤、網址失效或不支援\n"
-                        f"感恩")
-        elif status == 1:
-            rmessage = (f"所輸入的「 {twitter_id} 」\n\n"
-                        f"「是」已知詐騙/可疑的Twitter ID\n\n"
-                        f"請勿輕易信任此Twitter ID的\n"
-                        f"文字、圖像、語音和連結\n"
-                        f"感恩")
-        else:
-            rmessage = (f"所輸入的「 {twitter_id} 」\n\n"
-                        f"「不是」已知詐騙/可疑的Twitter ID\n"
-                        f"但並不代表沒問題\n"
-                        f"\n"
-                        f"若該Twitter帳號的貼文\n"
-                        f"1. 能帶你一起賺錢\n"
-                        f"2. 炫富式貼文\n"
-                        f"3. Twitter廣告，但追蹤太少\n"
-                        f"有極大的機率是有問題的\n"
-                        f"\n"
-                        f"{suffix_for_call}")
+        rmessage = Handle_LineBot.message_reply_Query(status, "Twitter ID", twitter_id)
         return rmessage
 
     # 查詢 Email
     if re.match(Tools.KEYWORD_MAIL[0], lower_text):
         message, status = Mail_Read_Document(orgin_text)
-        if status == -1:
-            rmessage = (f"所輸入的「 {lower_text} 」\n"
-                        f"有誤、失效或不支援\n"
-                        f"感恩")
-        elif status == 1:
-            rmessage = (f"所輸入的「 {lower_text} 」\n\n"
-                        f"「是」已知詐騙/可疑的E-mail\n\n"
-                        f"請勿輕易信任此E-mail的\n"
-                        f"文字、圖像、語音和連結\n"
-                        f"感恩")
-        else:
-            rmessage = (f"所輸入的「 {lower_text} 」\n\n"
-                        f"「不是」已知詐騙/可疑的E-mail\n"
-                        f"但並不代表沒問題\n"
-                        f"\n"
-                        f"{suffix_for_call}")
+        rmessage = Handle_LineBot.message_reply_Query(status, "E-mail", lower_text)
         return rmessage
 
     # 查詢line邀請網址
@@ -668,33 +581,12 @@ def handle_message_text_sub(user_id, orgin_text):
     if re.match(Tools.KEYWORD_LINE_INVITE[3], lower_text):
         message, status = lineinvite_Read_Document(orgin_text)
 
-        if prefix_msg:
-            prefix_msg = f"{prefix_msg}「 {orgin_text} 」\n"
-        else:
-            prefix_msg = f"分析出"
-        # 若查詢失敗就繼續go到最後，直接查網址
-        if status == -1:
+        if status == -1: # 若查詢失敗就繼續go到最後，直接查網址
             prefix_msg = ""
             pass
-        elif status == 1:
-            rmessage = (f"{prefix_msg}{message}\n\n"
-                        f"「是」已知詐騙/可疑Line邀請網址\n"
-                        f"請勿輕易信任此Line ID的\n"
-                        f"文字、圖像、語音和連結\n"
-                        f"感恩")
-            return rmessage
         else:
-            rmessage = (f"{prefix_msg}{message}\n\n"
-                        f"「不是」已知詐騙邀請網址\n"
-                        f"並不代表沒問題\n"
-                        f"\n"
-                        f"若該LINE邀請人\n"
-                        f"是「沒見過面」的「網友」\n"
-                        f"又介紹能帶你一起賺錢\n"
-                        f"１００％就是有問題\n"
-                        f"\n"
-                        f"{suffix_for_call}")
-            return rmessage
+            rmessage = Handle_LineBot.message_reply_Query(status, "LINE邀請網址", message)
+        return rmessage
 
     # 判斷FB帳戶網址
     if re.match(Tools.KEYWORD_FB[2], lower_text):
@@ -712,25 +604,8 @@ def handle_message_text_sub(user_id, orgin_text):
                         f"人物/粉絲團主頁\n"
                         f"才能夠判別\n"
                         f"感恩")
-        elif status == 1:
-            rmessage = (f"{prefix_msg}{message}\n\n"
-                        f"「是」已知詐騙/可疑的FB\n"
-                        f"請勿輕易信任此FB的\n"
-                        f"文字、圖像、語音和連結\n"
-                        f"感恩")
         else:
-            rmessage = (f"{prefix_msg}{message}\n\n"
-                        f"「不是」已知詐騙/可疑的FB\n"
-                        f"但並不代表沒問題\n"
-                        f"\n"
-                        f"若該FB帳號的貼文\n"
-                        f"1. 兼職打工\n"
-                        f"2. 能帶你一起賺錢\n"
-                        f"3. 炫富式貼文\n"
-                        f"4. FB廣告，但追蹤太少\n"
-                        f"有極大的機率是有問題的\n"
-                        f"\n"
-                        f"{suffix_for_call}")
+            rmessage = Handle_LineBot.message_reply_Query(status, "FB", message)
         return rmessage
 
     # 判斷IG帳戶、貼文或影片網址
@@ -745,25 +620,8 @@ def handle_message_text_sub(user_id, orgin_text):
             rmessage = (f"{prefix_msg}\n"
                         f"IG網址有誤、網址失效或不支援\n"
                         f"感恩")
-        elif status == 1:
-            rmessage = (f"{prefix_msg}{message}\n\n"
-                        f"「是」已知詐騙/可疑的IG\n"
-                        f"請勿輕易信任此IG的\n"
-                        f"文字、圖像、語音和連結\n"
-                        f"感恩")
         else:
-            rmessage = (f"{prefix_msg}{message}\n\n"
-                        f"「不是」已知詐騙/可疑的IG\n"
-                        f"但並不代表沒問題\n"
-                        f"\n"
-                        f"若該IG帳號的貼文\n"
-                        f"1. 能帶你一起賺錢\n"
-                        f"2. 炫富式貼文\n"
-                        f"3. IG廣告，但追蹤太少\n"
-                        f"4. 色誘付費進群組\n"
-                        f"有極大的機率是有問題的\n"
-                        f"\n"
-                        f"{suffix_for_call}")
+            rmessage = Handle_LineBot.message_reply_Query(status, "IG", message)
         return rmessage
 
     # 查詢Telegram網址
@@ -774,23 +632,8 @@ def handle_message_text_sub(user_id, orgin_text):
             rmessage = (f"所輸入的「 {telegram_id} 」\n"
                         f"有誤、網址失效或不支援\n"
                         f"感恩")
-        elif status == 1:
-            rmessage = (f"所輸入的「{telegram_id}」\n"
-                        f"「是」詐騙/可疑Telegram ID\n"
-                        f"請勿輕易信任此Telegram ID的\n"
-                        f"文字、圖像、語音和連結\n"
-                        f"感恩")
         else:
-            rmessage = (f"所輸入的「{telegram_id}」\n"
-                        f"目前不在詐騙黑名單中\n"
-                        f"但並不代表沒問題\n"
-                        f"\n"
-                        f"若該Telegram ID\n"
-                        f"是「沒見過面」的「網友」\n"
-                        f"又能帶你一起賺錢或兼職\n"
-                        f"１００％就是有問題\n"
-                        f"\n"
-                        f"{suffix_for_call}")
+            rmessage = Handle_LineBot.message_reply_Query(status, "Telegram ID", telegram_id)
         return rmessage
 
     # 查詢Twitter網址
@@ -805,24 +648,8 @@ def handle_message_text_sub(user_id, orgin_text):
             rmessage = (f"{prefix_msg}\n"
                         f"Twitter網址有誤、網址失效或不支援\n"
                         f"感恩")
-        elif status == 1:
-            rmessage = (f"{prefix_msg}{message}\n\n"
-                        f"「是」已知詐騙/可疑的Twitter\n\n"
-                        f"請勿輕易信任此Twitter的\n"
-                        f"文字、圖像、語音和連結\n"
-                        f"感恩")
         else:
-            rmessage = (f"{prefix_msg}{message}\n\n"
-                        f"「不是」已知詐騙/可疑的Twitter\n"
-                        f"但並不代表沒問題\n"
-                        f"\n"
-                        f"若該Twitter帳號的貼文\n"
-                        f"1. 能帶你一起賺錢\n"
-                        f"2. 炫富式貼文\n"
-                        f"3. Twitter廣告，但追蹤太少\n"
-                        f"有極大的機率是有問題的\n"
-                        f"\n"
-                        f"{suffix_for_call}")
+            rmessage = Handle_LineBot.message_reply_Query(status, "Twitter", message)
         return rmessage
 
     # 查詢Whatsapp網址
@@ -837,23 +664,8 @@ def handle_message_text_sub(user_id, orgin_text):
             rmessage = (f"{prefix_msg}\n"
                         f"WhatsApp網址有誤、網址失效或不支援\n"
                         f"感恩")
-        elif status == 1:
-            rmessage = (f"{prefix_msg}{message}\n\n"
-                        f"「是」已知詐騙/可疑的WhatsApp\n"
-                        f"請勿輕易信任此WhatsApp的\n"
-                        f"文字、圖像、語音和連結\n"
-                        f"感恩")
         else:
-            rmessage = (f"{prefix_msg}{message}\n\n"
-                        f"「不是」已知詐騙/可疑的WhatsApp\n"
-                        f"但並不代表沒問題\n"
-                        f"\n"
-                        f"若該WhatsApp帳號的影片\n"
-                        f"1. 能帶你一起賺錢\n"
-                        f"2. 炫富式貼文\n"
-                        f"有極大的機率是有問題的\n"
-                        f"\n"
-                        f"{suffix_for_call}")
+            rmessage = Handle_LineBot.message_reply_Query(status, "WhatsApp", message)
         return rmessage
 
     # 查詢Tiktok網址
@@ -868,23 +680,8 @@ def handle_message_text_sub(user_id, orgin_text):
             rmessage = (f"{prefix_msg}\n"
                         f"Tiktok網址有誤、網址失效或不支援\n"
                         f"感恩")
-        elif status == 1:
-            rmessage = (f"{prefix_msg}{message}\n\n"
-                        f"「是」已知詐騙/可疑的Tiktok\n"
-                        f"請勿輕易信任此Tiktok的\n"
-                        f"文字、圖像、語音和連結\n"
-                        f"感恩")
         else:
-            rmessage = (f"{prefix_msg}{message}\n\n"
-                        f"「不是」已知詐騙/可疑的Tiktok\n"
-                        f"但並不代表沒問題\n"
-                        f"\n"
-                        f"若該Tiktok帳號的影片\n"
-                        f"1. 能帶你一起賺錢\n"
-                        f"2. 炫富式貼文\n"
-                        f"有極大的機率是有問題的\n"
-                        f"\n"
-                        f"{suffix_for_call}")
+            rmessage = Handle_LineBot.message_reply_Query(status, "Tiktok", message)
         return rmessage
 
     # 查詢小紅書網址
@@ -899,23 +696,8 @@ def handle_message_text_sub(user_id, orgin_text):
             rmessage = (f"{prefix_msg}\n"
                         f"小紅書網址有誤、網址失效或不支援\n"
                         f"感恩")
-        elif status == 1:
-            rmessage = (f"{prefix_msg}{message}\n\n"
-                        f"「是」已知詐騙/可疑的小紅書\n"
-                        f"請勿輕易信任此小紅書的\n"
-                        f"文字、圖像、語音和連結\n"
-                        f"感恩")
         else:
-            rmessage = (f"{prefix_msg}{message}\n\n"
-                        f"「不是」已知詐騙/可疑的小紅書\n"
-                        f"但並不代表沒問題\n"
-                        f"\n"
-                        f"若該小紅書帳號的影片\n"
-                        f"1. 能帶你一起賺錢\n"
-                        f"2. 炫富式貼文\n"
-                        f"有極大的機率是有問題的\n"
-                        f"\n"
-                        f"{suffix_for_call}")
+            rmessage = Handle_LineBot.message_reply_Query(status, "小紅書", message)
         return rmessage
 
     # 如果用戶輸入的網址沒有以 http 或 https 開頭，則不回應訊息

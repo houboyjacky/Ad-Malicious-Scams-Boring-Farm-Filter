@@ -135,12 +135,12 @@ def lineinvite_Read_Document(user_text:str):
     analyze = analyze_line_invite_url(user_text)
     rmessage = ""
     if analyze:
-        rmessage = f"LINE邀請網址識別碼是\n「 {analyze['帳號'] } 」"
+        rmessage = analyze['帳號']
         if Query_API.Search_Same_Document(collection,"帳號", analyze['帳號']):
             logger.info("分析完成，找到相同資料")
             status = 1
         else :
-            msg, status = LineID_Read_Document(analyze["帳號"])
+            _, status = LineID_Read_Document(analyze["帳號"])
             if status == 0:
                 logger.info("分析完成，找不到相同資料")
             else:

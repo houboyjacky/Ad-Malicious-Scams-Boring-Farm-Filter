@@ -67,7 +67,7 @@ def Read_Document_Account(collection, struct, DB_Name):
     status = 0
     rmessage = ""
     if struct:
-        rmessage = f"{DB_Name}帳號\n「 {struct['帳號'] } 」"
+        rmessage = struct['帳號']
         if Search_Same_Document(collection,"帳號", struct['帳號']):
             logger.info("分析完成，找到相同資料")
             status = 1

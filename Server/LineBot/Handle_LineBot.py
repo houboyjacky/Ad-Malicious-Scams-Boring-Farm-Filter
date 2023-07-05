@@ -182,3 +182,85 @@ def message_reply_Game_End(buttom):
     )
 
     return template_message
+
+def message_reply_Query(IsScam, Type_Name, source):
+
+    actions = []
+    text = ""
+
+    suffix = ""
+    if Type_Name != "虛擬貨幣地址":
+        suffix = (  f"若該{Type_Name}有以下跡象\n"
+                    f"1.「沒見過面」的「網友」\n"
+                    f"2.又能帶你一起賺錢或兼職\n"
+                    f"3.炫富或付費內容群組\n"
+                    f"4. {Type_Name}廣告\n"
+                    f"１００％就是有問題\n\n"
+        )
+    else: # 虛擬貨幣地址
+        suffix = ""
+
+    if IsScam:
+        if Type_Name == "LINE邀請網址" or Type_Name == "FB" or Type_Name == "IG":
+            text = (    f"分析出的代碼的「{source}」\n\n"
+                        f"「是」已知詐騙的{Type_Name}\n\n"
+                        f"請勿相信此{Type_Name}\n"
+                        f"感恩")
+        else:
+            text = (    f"所輸入的「{source}」\n\n"
+                        f"「是」已知詐騙的{Type_Name}\n\n"
+                        f"請勿相信此{Type_Name}\n"
+                        f"感恩")
+
+        actions.append( MessageTemplateAction(
+                            label = '受害人點這',
+                            text =  f"詐騙幫忙"
+                        )
+        )
+
+        actions.append( MessageTemplateAction(
+                            label='使用指南',
+                            text=f"使用指南"
+                        )
+        )
+    else:
+        if Type_Name == "LINE邀請網址" or Type_Name == "FB" or Type_Name == "IG":
+            text = (    f"分析出的代碼的「{source}」\n\n"
+                        f"「不存在」{Type_Name}黑名單內\n\n"
+                        f"並不代表「沒問題」\n\n"
+                        f"{suffix}"
+                        f"若確定是詐騙\n"
+                        f"請點選「詐騙回報」\n"
+                        f"並附上截圖與說明\n"
+                        f"感恩")
+        else:
+            text = (    f"所輸入的「{source}」\n\n"
+                        f"「不存在」{Type_Name}黑名單內\n\n"
+                        f"並不代表「沒問題」\n\n"
+                        f"{suffix}"
+                        f"若確定是詐騙\n"
+                        f"請點選「詐騙回報」\n"
+                        f"並附上截圖與說明\n"
+                        f"感恩")
+
+        actions.append( MessageTemplateAction(
+                            label = '詐騙回報',
+                            text =  f"詐騙回報{source}"
+                        )
+        )
+        actions.append( MessageTemplateAction(
+                            label='使用指南',
+                            text=f"使用指南"
+                        )
+        )
+
+    confirm_template = ConfirmTemplate(
+        text=text,
+        actions=actions
+    )
+
+    template_message = TemplateSendMessage(
+        alt_text=f"快門手{Type_Name}查詢",
+        template=confirm_template
+    )
+    return template_message
