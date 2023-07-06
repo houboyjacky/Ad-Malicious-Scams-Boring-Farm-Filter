@@ -42,7 +42,7 @@ def checkFromChainsight(input):
 
         msg = f"ChainSight危險等級：{result['評分']}"
         logger.info(f"{input}的{msg}")
-        return msg, max_credit
+        return msg, result['評分']
 
     url = f"https://api.chainsight.com/api/check?keyword={input}"
     headers = {
