@@ -60,10 +60,13 @@ def get_netizen_file(user_id:str):
 
     query = {
         "$and": [
-            {"完成": 0,
-            "失效": 0}
+            {   "完成": 0,
+                "失效": 0,
+                '檢查者':""
+            }
         ]
     }
+
     if result := collection.find_one(query):
         logger.info(f"result={result}")
         SN = f"{str(result['序號'])}/{str(total_documents)}"
