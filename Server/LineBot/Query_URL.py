@@ -314,7 +314,7 @@ def check_blacklisted_site(domain_name):
     for collection in White_collections:
         document = collection.find_one({"網址": domain_name})
         if document:
-            logger.info(f"{domain_name}在DB白名單內")
+            logger.info(f"{domain_name}在DB的{collection.name}白名單內")
             return False
 
     Black_db = "網站黑名單"
@@ -323,7 +323,7 @@ def check_blacklisted_site(domain_name):
     for collection in Black_collections:
         document = collection.find_one({"網址": domain_name})
         if document:
-            logger.info(f"{domain_name}在DB黑名單內")
+            logger.info(f"{domain_name}在DB的{collection.name}黑名單內")
             return True
 
     for line in blacklist:
