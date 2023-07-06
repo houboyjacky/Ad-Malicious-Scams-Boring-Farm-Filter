@@ -14,6 +14,7 @@
   * 調整 回報後訊息
   * 調整 備用指南透過檔案讀取
   * 調整 整併chainsight與檢查黑名單API(減少查詢量)
+  * 調整 整點更新資料庫
   * 調整 獨立chainsight與建置資料庫
   * 調整 簡化API
   * 調整 ChainSight Timeout時間
