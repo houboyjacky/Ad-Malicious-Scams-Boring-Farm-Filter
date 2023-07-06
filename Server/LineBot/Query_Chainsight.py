@@ -51,8 +51,10 @@ def checkFromChainsight(input):
         "X-API-KEY": Tools.CHAINSIGHT_KEY
     }
 
+    timeout = 5
+
     try:
-        response = requests.get(url, headers=headers, timeout=10)
+        response = requests.get(url, headers=headers, timeout=timeout)
         response.raise_for_status()  # 確認請求成功
         parsed_data = json.loads(response.text)
 

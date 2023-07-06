@@ -10,7 +10,8 @@
   * 調整 整併chainsight與檢查黑名單API(減少查詢量)
   * 調整 獨立chainsight與建置資料庫
   * 調整 簡化API
-  * 調整 chainsight資料庫內容
+  * 調整 ChainSight Timeout時間
+  * 調整 ChainSight資料庫內容
   * 調整 logger紀錄
 
 * 20230705 Update
