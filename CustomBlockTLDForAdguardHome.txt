@@ -237,6 +237,7 @@
 ||bithumb77.*^
 ||brk.*
 ||cbn-tw.*^
+||coinex*.*^
 ||cos.ap-*.myqcloud.com^
 ||difcinvestment.*^
 ||ellandroadcapital.*^
