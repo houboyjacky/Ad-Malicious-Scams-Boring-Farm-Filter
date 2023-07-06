@@ -204,7 +204,7 @@ def update_blacklist():
         if filename:
             update_list_from_file(filename, blacklist, IsNew)
 
-    update_list_from_file(Tools.TMP_BLACKLIST, blacklist, IsNew)
+    update_list_from_file(Tools.TMP_BLACKLIST, blacklist, True)
 
     blacklist = sorted(list(set(blacklist)))
     logger.info("Update blacklist finish!")
@@ -229,7 +229,7 @@ def update_document_to_db(filename, domain_name, db_name):
     Query_API.Write_Document(collection, document)
     return
 
-def update_part_blacklist_rule(domain_name):
+def update_part_blacklist_rule_to_db(domain_name):
     #寫入DB
     update_document_to_db(Tools.TMP_BLACKLIST, domain_name, "網站黑名單")
     # 組合成新的規則

@@ -28,7 +28,7 @@ from Logger import logger
 from PrintText import suffix_for_call
 from Query_Chainsight import checkFromChainsight
 from Security_Check import get_cf_ips
-from Update_BlackList import update_part_blacklist_rule, update_part_blacklist_comment, blacklist
+from Update_BlackList import update_part_blacklist_rule_to_db, update_part_blacklist_comment, blacklist
 from urllib.parse import urlparse, urljoin
 import ipaddress
 import Query_API
@@ -497,7 +497,7 @@ def thread_checkFromChainsight(domain_name, result_list, lock):
     if max_credit > 2:
         msg = f"ChainSight 等級為{max_credit}"
         update_part_blacklist_comment(msg)
-        update_part_blacklist_rule(domain_name)
+        update_part_blacklist_rule_to_db(domain_name)
     with lock:
         result_list.append(("ChainSight_msg", result))
         result_list.append(("ChainSight", max_credit))
@@ -628,7 +628,7 @@ def user_query_website(prefix_msg, user_text):
         today_str = today.strftime('%Y-%m-%d')
         msg = f"{domain_name}距離{today_str}差{str(diff_days)}天"
         update_part_blacklist_comment(msg)
-        update_part_blacklist_rule(domain_name)
+        update_part_blacklist_rule_to_db(domain_name)
         checkresult = True
 
     if whois_country:

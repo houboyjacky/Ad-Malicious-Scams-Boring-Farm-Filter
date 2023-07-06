@@ -40,7 +40,7 @@ from Query_URL_Short import user_query_shorturl, user_query_shorturl_normal
 from Query_VirtualMoney import Virtual_Money_Read_Document, Virtual_Money_Write_Document, Virtual_Money_Delete_Document
 from Query_WhatsApp import WhatsApp_Write_Document, WhatsApp_Delete_Document, WhatsApp_Read_Document
 from Query_Wechat import Wechat_Write_Document, Wechat_Delete_Document, Wechat_Read_Document
-from Update_BlackList import update_part_blacklist_rule, update_part_blacklist_comment
+from Update_BlackList import update_part_blacklist_rule_to_db, update_part_blacklist_comment
 import Handle_LineBot
 import os
 import pytesseract
@@ -322,7 +322,7 @@ def handle_message_text_admin_sub(orgin_text):
             if check_blacklisted_site(domain_name):
                 rmessage = f"網址黑名單已存在網址\n「 {domain_name} 」"
             else:
-                update_part_blacklist_rule(domain_name)
+                update_part_blacklist_rule_to_db(domain_name)
                 rmessage = f"網址黑名單成功加入網址\n「 {domain_name} 」"
             break
         elif match := re.search(Tools.KEYWORD_URL[1], orgin_text):
