@@ -200,7 +200,7 @@ def message_reply_After_Report(Msg_Choice):
     if Msg_Choice == True:
         Text = f"請在關鍵字「詐騙回報」後\n加入疑似詐騙的網站、ID等資訊\n並隨後附上截圖，感恩"
     else:
-        Text = f"請繼續附上截圖證明\n\n謝謝你提供的情報\n輸入「積分」\n可以查詢你的積分排名"
+        Text = f"請繼續附上截圖證明\n\n謝謝你提供的情報\n點選「積分」\n可以查詢你的積分排名"
 
     confirm_template = ConfirmTemplate(
         text=Text,
