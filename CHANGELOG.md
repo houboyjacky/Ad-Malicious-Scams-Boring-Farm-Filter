@@ -4,6 +4,7 @@
   * 加入 查詢ID防呆
   * 修復 可能不更新本地黑名單的問題
   * 修復 Whois未能略過部分網域
+  * 調整 整併chainsight與檢查黑名單API(減少查詢量)
   * 調整 獨立chainsight與建置資料庫
   * 調整 簡化API
   * 調整 logger紀錄

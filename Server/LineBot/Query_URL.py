@@ -488,19 +488,16 @@ def user_query_website_by_DNS(domain_name, result_list, lock):
 
 def thread_check_blacklisted_site(domain_name, result_list, lock):
     checkresult = check_blacklisted_site(domain_name)
+    result = ""
+    if not checkresult:
+        result,max_credit = checkFromChainsight(domain_name)
+        if max_credit > 2:
+            update_part_blacklist_comment(result)
+            update_part_blacklist_rule_to_db(domain_name)
+            checkresult = True
     with lock:
         result_list.append(("checkresult", checkresult))
-    return
-
-def thread_checkFromChainsight(domain_name, result_list, lock):
-    result,max_credit = checkFromChainsight(domain_name)
-    if max_credit > 2:
-        msg = f"ChainSight 等級為{max_credit}"
-        update_part_blacklist_comment(msg)
-        update_part_blacklist_rule_to_db(domain_name)
-    with lock:
         result_list.append(("ChainSight_msg", result))
-        result_list.append(("ChainSight", max_credit))
     return
 
 # 使用者查詢網址
@@ -548,17 +545,14 @@ def user_query_website(prefix_msg, user_text):
     thread2 = threading.Thread(target=update_web_leaderboard, args=(user_text,))
     thread3 = threading.Thread(target=user_query_website_by_DNS, args=(domain_name,result_list, lock))
     thread4 = threading.Thread(target=thread_check_blacklisted_site, args=(domain_name,result_list, lock))
-    thread5 = threading.Thread(target=thread_checkFromChainsight, args=(domain_name,result_list, lock))
     thread1.start()
     thread2.start()
     thread3.start()
     thread4.start()
-    thread5.start()
     thread1.join()
     thread2.join()
     thread3.join()
     thread4.join()
-    thread5.join()
 
     results = dict(result_list)
 
@@ -573,11 +567,6 @@ def user_query_website(prefix_msg, user_text):
     ChainSight_msg = results['ChainSight_msg']
     if ChainSight_msg := results['ChainSight_msg']:
         ChainSight_msg += "\n"
-    ChainSight = results['ChainSight']
-
-    # ChainSight危險等級超過2
-    if ChainSight > 2:
-        checkresult = True
 
     end_time = time.time()
     elapsed_time = end_time - start_time
