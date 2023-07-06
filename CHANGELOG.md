@@ -1,6 +1,7 @@
 # 歷史更新 History Update
 
 * 20230706 Update
+  * 加入 查詢ID防呆
   * 修復 Whois未能略過部分網域
 
 * 20230705 Update

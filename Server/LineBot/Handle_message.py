@@ -558,6 +558,11 @@ def handle_message_text_sub(user_id, orgin_text):
         rmessage = Handle_LineBot.message_reply_Query(user_id, status, "Wechat", wechat, orgin_text)
         return rmessage
 
+    # 防呆查詢
+    if re.match(r"^@?[a-zA-Z0-9]+$", orgin_text):
+        rmessage = Handle_LineBot.message_reply_Query_ID_Type(lower_text)
+        return rmessage
+
     # 查詢Email
     if re.match(Tools.KEYWORD_MAIL[0], lower_text):
         mail, status = Mail_Read_Document(orgin_text)

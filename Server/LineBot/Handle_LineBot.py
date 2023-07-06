@@ -310,3 +310,46 @@ def message_reply_Query(user_id, IsScam, Type_Name, code , orgin_text):
         template=confirm_template
     )
     return template_message
+
+def message_reply_Query_ID_Type(ID):
+
+    title = "確認ID類別"
+    actions = []
+
+    logger.info(f"site = {ID}")
+
+    actions.append( MessageTemplateAction(
+                        label = '查詢LINE ID？',
+                        text =  f"賴{ID}"
+                    )
+    )
+    actions.append( MessageTemplateAction(
+                        label = '查詢Telegram ID？',
+                        text =  f"TG{ID}"
+                    )
+    )
+    actions.append( MessageTemplateAction(
+                        label = '查詢推特？',
+                        text =  f"推特{ID}"
+                    )
+    )
+    actions.append( MessageTemplateAction(
+                        label = '查詢微信？',
+                        text =  f"微信{ID}"
+                    )
+    )
+
+    text = f"麻煩協助確認「{ID}」是什麼項目"
+
+    buttons_template = ButtonsTemplate(
+        title=title,
+        text=text,
+        actions=actions
+    )
+
+    template_message = TemplateSendMessage(
+        alt_text=title,
+        template=buttons_template
+    )
+
+    return template_message
