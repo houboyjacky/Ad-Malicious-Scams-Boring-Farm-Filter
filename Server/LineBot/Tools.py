@@ -76,9 +76,10 @@ SPECIAL_SUBWEBSITE = setting['SPECIAL_SUBWEBSITE']              # SPECIAL_SUBWEB
 TMP_BLACKLIST = setting['TMP_BLACKLIST']                        # TMP_BLACKLIST => Blacklist for Adguard Home Download
 WEB_LEADERBOARD_FILE = setting['WEB_LEADERBOARD_FILE']          # WEB_LEADERBOARD_FILE => Query Website times leaderboard from file
 WHOIS_SKIP = setting['WHOIS_SKIP']                              # WHOIS_SKIP => Skip Query Whois
+USER_GUIDE = setting['USER_GUIDE']                              # USER_GUIDE => 使用指南
 
 def reloadSetting():
-    global ADMINS, BLACKUSERID, CERT, CHANNEL_ACCESS_TOKEN
+    global ADMINS, BLACKUSERID, CERT, CHANNEL_ACCESS_TOKEN, USER_GUIDE
     global CHANNEL_SECRET, HASH_FILE, KEYWORD_FB, KEYWORD_TIKTOK, KEYWORD_WECHAT
     global KEYWORD_IG_ID, KEYWORD_LINE_ID, KEYWORD_TELEGRAM_ID, KEYWORD_URL
     global LINEID_WEB, LOGFILE, HTTP_HEADERS, CONFIG_FOLDER, LINEBOT_URL
@@ -88,7 +89,7 @@ def reloadSetting():
     global KEYWORD_TWITTER_ID, KEYWORD_MAIL, KEYWORD_WHATSAPP, KEYWORD_TELEGRAM_URL
     global KEYWORD_SMALLREDBOOK, KEYWORD_VIRTUAL_MONEY, KEYWORD_TWITTER_URL
     global MONGODB_USER, MONGODB_PWD, MONGODB_URL, KEYWORD_LINE_INVITE
-    global setting
+    global setting, user_guide
 
     setting = ''
     with open('setting.json', 'r') as f:
@@ -121,8 +122,8 @@ def reloadSetting():
     KEYWORD_VIRTUAL_MONEY = setting['KEYWORD_VIRTUAL_MONEY']
     KEYWORD_WHATSAPP = setting['KEYWORD_WHATSAPP']
     KEYWORD_WECHAT = setting['KEYWORD_WECHAT']
-    LINEID_WEB = setting['LINEID_WEB']
     LINEBOT_URL = setting['LINEBOT_URL']
+    LINEID_WEB = setting['LINEID_WEB']
     LOGFILE = setting['LOGFILE']
     MONGODB_PWD = setting['MONGODB_PWD']
     MONGODB_URL = setting['MONGODB_URL']
@@ -135,8 +136,10 @@ def reloadSetting():
     SHORT_URL_LIST = setting['SHORT_URL_LIST']
     SPECIAL_SUBWEBSITE = setting['SPECIAL_SUBWEBSITE']
     TMP_BLACKLIST = setting['TMP_BLACKLIST']
+    USER_GUIDE = setting['USER_GUIDE']
     WEB_LEADERBOARD_FILE = setting['WEB_LEADERBOARD_FILE']
     WHOIS_SKIP = setting['WHOIS_SKIP']
+    user_guide = read_file(USER_GUIDE)
 
     return
 
@@ -199,7 +202,7 @@ def is_file_len(file_path):
     return len(content)
 
 def read_file(file_path):
-    with open(file_path, 'r') as file:
+    with open(file_path, 'r', encoding="utf-8", newline='') as file:
         lines = file.readlines()
     return ''.join(lines)
 
@@ -262,34 +265,4 @@ def calculate_hash(file_path):
         hash_value = hashlib.md5(content).hexdigest()
         return hash_value
 
-def checkFromChainsight(address):
-    url = f"https://api.chainsight.com/api/check?keyword={address}"
-    headers = {
-        "accept": "*/*",
-        "X-API-KEY": CHAINSIGHT_KEY
-    }
-
-    response = requests.get(url, headers=headers)
-    parsed_data = json.loads(response.text)
-
-    currency_data = {}
-
-    for item in parsed_data['data']:
-        if item['type'] == "ACCOUNT":
-            chain_name = item['chain']['name']
-        else:
-            chain_name = item['type']
-        credit = item['antiFraud']['credit']
-        currency_data[chain_name] = credit
-
-    max_credit = max(currency_data.values())
-
-    if max_credit < 2:
-        level = "低"
-    elif max_credit < 3:
-        level = "中"
-    else:
-        level = "高"
-
-    result = f"ChainSight危險等級：{level}"
-    return result
+user_guide = read_file(USER_GUIDE)

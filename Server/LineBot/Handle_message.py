@@ -25,7 +25,7 @@ from io import BytesIO
 from Logger import logger
 from PIL import Image
 from Point import read_user_point, get_user_rank, write_user_point
-from PrintText import user_guide, check_user_need_news, reload_user_record, reload_notice_board, return_notice_text, suffix_for_call
+from PrintText import reload_user_record, reload_notice_board
 from Query_Facebook import FB_Read_Document, FB_Write_Document, get_fb_list_len, get_random_fb_blacklist, push_random_fb_blacklist, FB_Delete_Document
 from Query_Instagram import IG_Read_Document, IG_Write_Document, get_ig_list_len, get_random_ig_blacklist, push_random_ig_blacklist, IG_Delete_Document
 from Query_Line_ID import LineID_Read_Document, LineID_Write_Document, LineID_Delete_Document
@@ -410,7 +410,7 @@ def handle_message_text_front(user_text) -> str:
         return rmessage
 
     if user_text == "備用指南":
-        return user_guide
+        return Tools.user_guide
 
     if re.match(r"^09\d+", user_text):
         rmessage = f"謝謝你提供的電話號碼\n「{user_text}」\n若要查詢電話\n建議使用Whoscall\n若要查詢是否是詐騙賴\n輸入「賴+電話」\n例如：賴0912345678"

@@ -22,44 +22,6 @@ THE SOFTWARE.
 
 import Tools
 
-user_guide = (  f"目前有6項功能\n"
-                f"1. 查詢網址、IG、FB、LINE、小紅書\n"
-                f"、Twitter、Telegram、Tiktok、WhatsApp：\n"
-                f"直接輸入網址\n"
-                f"\n"
-                f"2. 查詢Line ID或註冊Line電話：\n"
-                f"在ID前面補上「賴」+ID/「賴」+電話就好囉！\n"
-                f"例如：「賴abcde」或官方帳號「賴@abcde」\n"
-                f"例如：「賴0912345678」\n"
-                f"\n"
-                f"3. 查詢Telegram：\n"
-                f"在ID前面補上「TG」+ID就好囉！\n"
-                f"例如：「TG@abcde」\n"
-                f"\n"
-                f"4. 查詢Twitter：\n"
-                f"在ID前面補上「推特」+ID就好囉！\n"
-                f"例如：「推特@abcde」\n"
-                f"\n"
-                f"5. 查詢Email：\n"
-                f"直接貼上email就好囉\n"
-                f"例如：「abc@gmail.com」\n"
-                f"\n"
-                f"6. 查詢虛擬貨幣：\n"
-                f"在虛擬貨幣錢包地址前加上「貨幣」\n"
-                f"例如：「貨幣0xddsfewfjio」\n"
-                f"\n"
-                f"7. 詐騙回報：\n"
-                f"輸入「詐騙回報」加上你想回報的字句，附上截圖和說明\n"
-                f"例如：詐騙回報吳XX的詐騙網站又來了http://abc.top\n"
-                f"例如：詐騙回報LINE ID:avddsd\n"
-                f"以利加入黑名單與後續協助\n"
-                f"\n"
-                f"小編本人獨自一人經營與管理\n"
-                f"回覆慢還請見諒\n"
-                f"讓大家繼續幫助大家\n"
-                f"讓社會越來越好\n"
-            )
-
 suffix_for_call = ( f"讓大家繼續幫助大家\n"
                     f"讓社會越來越好\n"
                     f"感恩")
@@ -93,10 +55,6 @@ def reload_notice_board():
     notice_text = None
     notice_text = Tools.read_file(Tools.NOTICE_BOARD)
     return
-
-def return_notice_text():
-    global notice_text
-    return notice_text
 
 reload_notice_board()
 reload_user_record()

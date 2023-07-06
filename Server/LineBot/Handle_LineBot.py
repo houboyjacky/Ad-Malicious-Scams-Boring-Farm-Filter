@@ -24,7 +24,7 @@ from linebot.models import TextSendMessage, TemplateSendMessage, ButtonsTemplate
 from linebot import LineBotApi
 from Logger import logger
 import Tools
-from PrintText import check_user_need_news, return_notice_text
+from PrintText import check_user_need_news, notice_text
 from GetFromNetizen import write_new_netizen_file
 
 line_bot_api = LineBotApi(Tools.CHANNEL_ACCESS_TOKEN)
@@ -39,7 +39,7 @@ def message_reply(event, text):
     user_name = linebot_getRealName(event.source.user_id)
     if isinstance(text, str):
         if check_user_need_news(event.source.user_id):
-            text = f"{text}\n\n{return_notice_text()}"
+            text = f"{text}\n\n{notice_text}"
 
         # if not Tools.IsAdmin(event.source.user_id) and Tools.forward_inquiry:
         #     write_new_netizen_file(event.source.user_id,
