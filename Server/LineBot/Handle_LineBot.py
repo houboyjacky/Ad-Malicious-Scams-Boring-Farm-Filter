@@ -183,6 +183,37 @@ def message_reply_Game_End(buttom):
 
     return template_message
 
+def message_reply_After_Report(Msg_Choice):
+
+    actions = []
+
+    actions.append( MessageTemplateAction(
+                        label='積分',
+                        text=f"積分"
+                    )
+    )
+    actions.append( MessageTemplateAction(
+                        label = "使用指南",
+                        text = f"使用指南"
+                    )
+    )
+    if Msg_Choice == True:
+        Text = f"請在關鍵字「詐騙回報」後\n加入疑似詐騙的網站、ID等資訊\n並隨後附上截圖，感恩"
+    else:
+        Text = f"請繼續附上截圖證明\n\n謝謝你提供的情報\n輸入「積分」\n可以查詢你的積分排名"
+
+    confirm_template = ConfirmTemplate(
+        text=Text,
+        actions=actions
+    )
+
+    template_message = TemplateSendMessage(
+        alt_text="詐騙回報完成",
+        template=confirm_template
+    )
+
+    return template_message
+
 def message_reply_Query(user_id, IsScam, Type_Name, code , orgin_text):
 
     actions = []

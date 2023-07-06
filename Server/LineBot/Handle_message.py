@@ -441,11 +441,11 @@ def handle_message_text_front(user_text) -> str:
 def handle_message_text_game(user_id, user_text) -> str:
     if user_text.startswith("詐騙回報"):
         if user_text == "詐騙回報":
-            rmessage = f"請在關鍵字「詐騙回報」後\n加入疑似詐騙的網站、ID等資訊\n並隨後附上截圖，感恩"
+            Handle_LineBot.message_reply_After_Report(True)
         else:
             user_name = Handle_LineBot.linebot_getRealName(user_id)
             write_new_netizen_file(user_id, user_name, user_text, False)
-            rmessage = f"請附上截圖證明\n\n謝謝你提供的情報\n輸入「積分」\n可以查詢你的積分排名"
+            Handle_LineBot.message_reply_After_Report(False)
         return rmessage
 
     if user_text == "遊戲":
