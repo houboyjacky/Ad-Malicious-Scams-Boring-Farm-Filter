@@ -26,6 +26,7 @@ from datetime import datetime, timedelta
 from ip2geotools.databases.noncommercial import DbIpCity
 from Logger import logger
 from PrintText import suffix_for_call
+from Query_Chainsight import checkFromChainsight
 from Security_Check import get_cf_ips
 from Update_BlackList import update_part_blacklist_rule, update_part_blacklist_comment, blacklist
 from urllib.parse import urlparse, urljoin
@@ -491,9 +492,14 @@ def thread_check_blacklisted_site(domain_name, result_list, lock):
     return
 
 def thread_checkFromChainsight(domain_name, result_list, lock):
-    result = Tools.checkFromChainsight(domain_name)
+    result,max_credit = checkFromChainsight(domain_name)
+    if max_credit > 2:
+        msg = f"ChainSight 等級為{max_credit}"
+        update_part_blacklist_comment(msg)
+        update_part_blacklist_rule(domain_name)
     with lock:
-        result_list.append(("ChainSight", result))
+        result_list.append(("ChainSight_msg", result))
+        result_list.append(("ChainSight", max_credit))
     return
 
 # 使用者查詢網址
@@ -563,7 +569,14 @@ def user_query_website(prefix_msg, user_text):
     whois_creation_date = results['whois_creation_date']
     whois_country = results['whois_country']
     checkresult = results['checkresult']
-    ChainSight_msg = results['ChainSight']
+    ChainSight_msg = results['ChainSight_msg']
+    if ChainSight_msg:
+        ChainSight_msg = ChainSight_msg + "\n"
+    ChainSight = results['ChainSight']
+
+    # ChainSight危險等級超過2
+    if ChainSight > 2:
+        checkresult = True
 
     end_time = time.time()
     elapsed_time = end_time - start_time
@@ -581,7 +594,7 @@ def user_query_website(prefix_msg, user_text):
             )
         else:
             rmessage = (f"{prefix_msg}「{domain_name}」{special_tip}\n"
-                        f"{ChainSight_msg}\n"
+                        f"{ChainSight_msg}"
                         f"{IP_info_msg}\n"
                         f"目前「尚未」在資料庫中\n"
                         f"敬請小心謹慎\n"
@@ -647,7 +660,7 @@ def user_query_website(prefix_msg, user_text):
                     f"{rmessage_country}"
                     f"{rmessage_creation_date}\n"
                     f"{rmessage_diff_days}\n"
-                    f"{ChainSight_msg}\n"
+                    f"{ChainSight_msg}"
                     f"{IP_info_msg}\n"
                     f"雖然目前「尚未」在資料庫中\n\n"
                     f"但提醒你！\n"

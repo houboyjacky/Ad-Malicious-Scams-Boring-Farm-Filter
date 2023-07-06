@@ -22,9 +22,9 @@ THE SOFTWARE.
 
 from datetime import date
 from Logger import logger
+from Query_Chainsight import checkFromChainsight
 from typing import Optional
 import Query_API
-import Tools
 
 Name = "虛擬貨幣"
 
@@ -91,8 +91,10 @@ def Virtual_Money_Read_Document(user_text:str):
         status = -1
 
     if not rmessage:
-        result = Tools.checkFromChainsight(address['地址'])
-        rmessage = f"{Name}地址\n「 {address['地址']} 」\n{result}"
+        rmessage = f"{Name}地址\n「 {address['地址']} 」"
+        result,_ = checkFromChainsight(address['地址'])
+        if result:
+            rmessage = f"{Name}地址\n「 {address['地址']} 」\n{result}"
 
     return rmessage, status
 
