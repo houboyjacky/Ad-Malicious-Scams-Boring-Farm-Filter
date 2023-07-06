@@ -35,7 +35,7 @@ def checkFromChainsight(input):
     if result:
         if result['評分'] < 2:
             level = "低"
-        elif max_credit < 3:
+        elif result['評分'] < 3:
             level = "中"
         else:
             level = "高"
@@ -69,6 +69,7 @@ def checkFromChainsight(input):
             credit = item['antiFraud']['credit']
             currency_data[chain_name] = credit
 
+        max_credit = -1
         max_credit = max(currency_data.values())
 
         if max_credit < 2:
