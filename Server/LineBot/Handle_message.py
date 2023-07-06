@@ -162,17 +162,17 @@ def handle_message_text_admin_sub(orgin_text):
             break
 
         # Instagram 網址
-        if match := re.search(Tools.KEYWORD_IG_URL[2], lower_text):
+        if match := re.search(Tools.KEYWORD_IG_URL[1], lower_text):
             # 加入 IG 網址
             rmessage = IG_Write_Document(orgin_text)
             break
-        elif match := re.search(Tools.KEYWORD_IG_URL[4], lower_text):
+        elif match := re.search(Tools.KEYWORD_IG_URL[3], lower_text):
             # 刪除 IG 網址
             rmessage = IG_Delete_Document(orgin_text)
             break
 
         # Instagram ID
-        if match := re.search(Tools.KEYWORD_IG_ID[0], orgin_text):
+        if match := re.search(Tools.KEYWORD_IG_ID[1], orgin_text):
             # 加入 IG ID
             ig_account = match.group(1).lower()
             logger.info(f"ig_account = {ig_account}")
@@ -180,7 +180,7 @@ def handle_message_text_admin_sub(orgin_text):
             logger.info(f"url = {url}")
             rmessage = IG_Write_Document(url)
             break
-        elif match := re.search(Tools.KEYWORD_IG_ID[1], orgin_text):
+        elif match := re.search(Tools.KEYWORD_IG_ID[2], orgin_text):
             # 刪除 IG ID
             ig_account = match.group(1).lower()
             logger.info(f"ig_account = {ig_account}")
@@ -558,6 +558,12 @@ def handle_message_text_sub(user_id, orgin_text):
         rmessage = Handle_LineBot.message_reply_Query(user_id, status, "Wechat", wechat, orgin_text)
         return rmessage
 
+    # 查詢Instagram
+    if re.search(Tools.KEYWORD_IG_ID[0], orgin_text):
+        ig, status = IG_Read_Document(orgin_text)
+        rmessage = Handle_LineBot.message_reply_Query(user_id, status, "IG", ig, orgin_text)
+        return rmessage
+
     # 防呆查詢
     if re.match(r"^@?[a-zA-Z0-9]+$", orgin_text):
         rmessage = Handle_LineBot.message_reply_Query_ID_Type(lower_text)
@@ -630,7 +636,7 @@ def handle_message_text_sub(user_id, orgin_text):
         return rmessage
 
     # 判斷IG帳戶、貼文或影片網址
-    if re.match(Tools.KEYWORD_IG_URL[3], lower_text):
+    if re.match(Tools.KEYWORD_IG_URL[2], lower_text):
         account, status = IG_Read_Document(orgin_text)
         if prefix_msg:
             prefix_msg = f"{prefix_msg}「 {orgin_text} 」\n"
