@@ -14,6 +14,7 @@
   * 調整 ChainSight Timeout時間
   * 調整 ChainSight資料庫內容
   * 調整 logger紀錄
+  * 調整 UI文字
 
 * 20230705 Update
   * 加入 虛擬貨幣查閱chainsight危險等級

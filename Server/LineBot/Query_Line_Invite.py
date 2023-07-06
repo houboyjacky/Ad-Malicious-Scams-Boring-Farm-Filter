@@ -117,11 +117,11 @@ def lineinvite_Write_Document(user_text:str):
 
         if Query_API.Search_Same_Document(collection,"帳號", analyze['帳號']):
             logger.info("分析完成，找到相同資料")
-            rmessage = f"LINE邀請網址\n黑名單找到相同邀請碼\n「 {analyze['帳號'] } 」"
+            rmessage = f"LINE邀請網址\n黑名單找到相同邀請碼\n「{analyze['帳號']}」"
         else:
             Query_API.Write_Document(collection,analyze)
             logger.info("分析完成，結果已寫入")
-            rmessage = f"LINE邀請網址\n黑名單成功加入邀請碼\n「 {analyze['帳號'] } 」"
+            rmessage = f"LINE邀請網址\n黑名單成功加入邀請碼\n「{analyze['帳號']}」"
     else:
         logger.info("無法分析網址")
         rmessage = f"LINE邀請網址加入失敗，無法分析網址"
@@ -158,12 +158,12 @@ def lineinvite_Delete_Document(user_text:str):
     if analyze:
         if Query_API.Search_Same_Document(collection,"帳號", analyze['帳號']):
             Query_API.Delete_document(collection,analyze,"帳號")
-            rmessage = f"LINE邀請網址黑名單成功刪除帳號\n「 {analyze['帳號'] }」"
+            rmessage = f"LINE邀請網址黑名單成功刪除帳號\n「{analyze['帳號']}」"
         elif LineID_Read_Document(analyze["帳號"]):
-            rmessage = f"LINE邀請網址黑名單成功刪除帳號\n「 {analyze['帳號'] }」"
+            rmessage = f"LINE邀請網址黑名單成功刪除帳號\n「{analyze['帳號']}」"
         else:
             logger.info("分析完成，找不到相同資料")
-            rmessage = f"LINE邀請網址黑名單找不到帳號\n「 {analyze['帳號']} 」"
+            rmessage = f"LINE邀請網址黑名單找不到帳號\n「{analyze['帳號']}」"
     else:
         logger.info("LINE邀請網址查詢失敗")
         rmessage = f"LINE邀請網址黑名單刪除失敗，無法分析網址"
