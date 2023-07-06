@@ -239,7 +239,6 @@ def update_part_blacklist_rule(domain_name):
     return
 
 def update_part_blacklist_comment(msg):
-    global blacklist
     # 組合成新的規則
     new_rule = f"! {msg}\n"
     # 將Adguard規則寫入檔案

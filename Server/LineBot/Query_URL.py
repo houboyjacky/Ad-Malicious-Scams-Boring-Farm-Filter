@@ -326,33 +326,34 @@ def check_blacklisted_site(domain_name):
             logger.info(f"{domain_name}在DB黑名單內")
             return True
 
-    global blacklist
-
     for line in blacklist:
         line = line.strip().lower()  # 去除開頭或結尾的空白和轉成小寫
         if line.startswith("/") and line.endswith("/"):
             regex = re.compile(line[1:-1])
             if regex.search(domain_name):
                 logger.info(f"{domain_name}在黑名單內1")
-                rule = f"||{domain_name}^\n"
-                Tools.write_file_U8(Tools.TMP_BLACKLIST, rule)
+                msg = f"正規化黑名單封鎖"
+                update_part_blacklist_comment(msg)
+                update_part_blacklist_rule_to_db(domain_name)
                 return True
         elif "*" in line:
             regex = line.replace("*", ".+")
             if re.fullmatch(regex, domain_name):
                 # 特別有*號規則直接可以寫入Adguard規則
-                rule = f"||{domain_name}^\n"
-                Tools.write_file_U8(Tools.TMP_BLACKLIST, rule)
                 logger.info(f"{domain_name}在黑名單內2")
+                msg = f"「*」黑名單封鎖"
+                update_part_blacklist_comment(msg)
+                update_part_blacklist_rule_to_db(domain_name)
                 return True
         elif domain_name == line:
             logger.info(f"{domain_name}在黑名單內3")
             return True
         elif domain_name.endswith(line) and line in Tools.SPECIAL_SUBWEBSITE:
             # 特別子網域規則直接可以寫入Adguard規則
-            rule = f"||{domain_name}^\n"
-            Tools.write_file_U8(Tools.TMP_BLACKLIST, rule)
             logger.info(f"{domain_name}在黑名單內4")
+            msg = f"子網域黑名單"
+            update_part_blacklist_comment(msg)
+            update_part_blacklist_rule_to_db(domain_name)
             return True
 
     return False
@@ -562,7 +563,7 @@ def user_query_website(prefix_msg, user_text):
     results = dict(result_list)
 
     if IP_info_msg := results['IP_info_msg']:
-        IP_info_msg = f"{IP_info_msg}\n"
+        IP_info_msg += "\n"
 
     whois_query_error = results['whois_query_error']
     whois_domain = results['whois_domain']
@@ -570,8 +571,8 @@ def user_query_website(prefix_msg, user_text):
     whois_country = results['whois_country']
     checkresult = results['checkresult']
     ChainSight_msg = results['ChainSight_msg']
-    if ChainSight_msg:
-        ChainSight_msg = ChainSight_msg + "\n"
+    if ChainSight_msg := results['ChainSight_msg']:
+        ChainSight_msg += "\n"
     ChainSight = results['ChainSight']
 
     # ChainSight危險等級超過2

@@ -4,6 +4,7 @@
   * 加入 查詢ID防呆
   * 修復 Whois未能略過部分網域
   * 調整 獨立chainsight與建置資料庫
+  * 調整 簡化API
 
 * 20230705 Update
   * 加入 虛擬貨幣查閱chainsight危險等級
