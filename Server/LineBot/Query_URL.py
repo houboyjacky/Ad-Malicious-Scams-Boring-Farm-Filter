@@ -308,6 +308,7 @@ def get_web_leaderboard():
 
 def check_blacklisted_site(domain_name):
 
+    msg = ""
     White_db = "網站白名單"
     White_collections = Query_API.Read_DBs(White_db)
 
@@ -315,7 +316,7 @@ def check_blacklisted_site(domain_name):
         document = collection.find_one({"網址": domain_name})
         if document:
             logger.info(f"{domain_name}在DB的{collection.name}白名單內")
-            return False
+            return False, msg
 
     Black_db = "網站黑名單"
     Black_collections = Query_API.Read_DBs(Black_db)
@@ -324,7 +325,7 @@ def check_blacklisted_site(domain_name):
         document = collection.find_one({"網址": domain_name})
         if document:
             logger.info(f"{domain_name}在DB的{collection.name}黑名單內")
-            return True
+            return True, msg
 
     for line in blacklist:
         line = line.strip().lower()  # 去除開頭或結尾的空白和轉成小寫
@@ -335,7 +336,7 @@ def check_blacklisted_site(domain_name):
                 msg = f"正規化黑名單封鎖"
                 update_part_blacklist_comment(msg)
                 update_part_blacklist_rule_to_db(domain_name)
-                return True
+                return True, msg
         elif "*" in line:
             regex = line.replace("*", ".+")
             if re.fullmatch(regex, domain_name):
@@ -344,19 +345,25 @@ def check_blacklisted_site(domain_name):
                 msg = f"「*」黑名單封鎖"
                 update_part_blacklist_comment(msg)
                 update_part_blacklist_rule_to_db(domain_name)
-                return True
+                return True, msg
         elif domain_name == line:
             logger.info(f"{domain_name}在黑名單內3")
-            return True
+            return True, msg
         elif domain_name.endswith(line) and line in Tools.SPECIAL_SUBWEBSITE:
             # 特別子網域規則直接可以寫入Adguard規則
             logger.info(f"{domain_name}在黑名單內4")
             msg = f"子網域黑名單"
             update_part_blacklist_comment(msg)
             update_part_blacklist_rule_to_db(domain_name)
-            return True
+            return True, msg
 
-    return False
+    msg,max_credit = checkFromChainsight(domain_name)
+    if max_credit > 2:
+        update_part_blacklist_comment(msg)
+        update_part_blacklist_rule_to_db(domain_name)
+        return True, msg
+
+    return False, msg
 
 # ===============================================
 # 使用者查詢
@@ -487,17 +494,10 @@ def user_query_website_by_DNS(domain_name, result_list, lock):
     return
 
 def thread_check_blacklisted_site(domain_name, result_list, lock):
-    checkresult = check_blacklisted_site(domain_name)
-    result = ""
-    if not checkresult:
-        result,max_credit = checkFromChainsight(domain_name)
-        if max_credit > 2:
-            update_part_blacklist_comment(result)
-            update_part_blacklist_rule_to_db(domain_name)
-            checkresult = True
+    checkresult, msg = check_blacklisted_site(domain_name)
     with lock:
         result_list.append(("checkresult", checkresult))
-        result_list.append(("ChainSight_msg", result))
+        result_list.append(("ChainSight_msg", msg))
     return
 
 # 使用者查詢網址

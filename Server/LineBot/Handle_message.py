@@ -319,7 +319,8 @@ def handle_message_text_admin_sub(orgin_text):
                 if domain_name in Tools.SPECIAL_SUBWEBSITE:
                     domain_name = f"{subdomain}.{domain}.{suffix}"
 
-            if check_blacklisted_site(domain_name):
+            IsScam, _ = check_blacklisted_site(domain_name)
+            if IsScam:
                 rmessage = f"網址黑名單已存在網址\n「 {domain_name} 」"
             else:
                 update_part_blacklist_rule_to_db(domain_name)

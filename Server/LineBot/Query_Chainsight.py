@@ -41,7 +41,7 @@ def checkFromChainsight(input):
         else:
             level = "高"
 
-        msg = f"ChainSight危險等級：{result['評分']}"
+        msg = f"ChainSight危險等級：{level}"
         logger.info(f"{input}的{msg}")
         return msg, result['評分']
 
