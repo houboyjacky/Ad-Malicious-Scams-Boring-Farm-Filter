@@ -404,7 +404,7 @@ def handle_message_text_admin(user_id, orgin_text):
 def handle_message_text_front(user_text) -> str:
     if len(user_text) > 1000:
         if user_text.startswith("http"):
-            subdomain, domain, suffix = Tools.domain_analysis(user_text)
+            _, domain, suffix = Tools.domain_analysis(user_text)
             rmessage = f"謝謝你提供的情報\n但網址過長，請直接輸入\n「 http://{domain}.{suffix} 」\n就好"
         else:
             rmessage = f"謝謝你提供的情報\n請縮短長度或分段傳送"
@@ -421,20 +421,9 @@ def handle_message_text_front(user_text) -> str:
         rmessage = get_web_leaderboard()
         return rmessage
 
-    if user_text.startswith("賴 "):
-        rmessage = "「賴」後面直接輸入ID/電話就好，不需要空白"
-        return rmessage
-
-    if user_text.startswith("TG "):
-        rmessage = "「TG」後面直接輸入ID就好，不需要空白"
-        return rmessage
-
-    if user_text.startswith("貨幣 p"):
-        rmessage = "「貨幣」後面直接輸入地址就好，不需要空白"
-        return rmessage
-
-    if user_text.lower().startswith("貨幣http"):
-        rmessage = f"！！輸入錯誤！！\n\n你輸入http開頭是網址\n直接貼上即可查詢"
+    if match := re.match(r'^(賴|TG|IG|微信|推特)(http.+)', user_text):
+        url = match.group(2)
+        rmessage = f"！！輸入錯誤！！\n直接貼上\n「 {url} 」\n即可查詢"
         return rmessage
 
     return None
@@ -750,6 +739,9 @@ def handle_message_text(event):
 
     # 讀取使用者傳來的文字訊息
     orgin_text = event.message.text.strip()
+
+    if re.match(r'^(賴|TG|IG|微信|推特|貨幣) ', orgin_text):
+        orgin_text = orgin_text.replace(" ", "")
 
     # 長度控管、備用指南、電話、網站排行榜
     if rmessage := handle_message_text_front(orgin_text):
