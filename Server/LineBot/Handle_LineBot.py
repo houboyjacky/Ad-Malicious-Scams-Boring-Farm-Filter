@@ -355,6 +355,11 @@ def message_reply_Query_ID_Type(ID):
                     )
     )
     actions.append( MessageTemplateAction(
+                        label = '查詢IG？',
+                        text =  f"IG{ID}"
+                    )
+    )
+    actions.append( MessageTemplateAction(
                         label = '查詢Telegram ID？',
                         text =  f"TG{ID}"
                     )
@@ -362,11 +367,6 @@ def message_reply_Query_ID_Type(ID):
     actions.append( MessageTemplateAction(
                         label = '查詢推特？',
                         text =  f"推特{ID}"
-                    )
-    )
-    actions.append( MessageTemplateAction(
-                        label = '查詢微信？',
-                        text =  f"微信{ID}"
                     )
     )
 
