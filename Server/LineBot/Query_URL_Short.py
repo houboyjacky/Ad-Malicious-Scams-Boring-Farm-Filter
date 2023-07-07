@@ -34,7 +34,7 @@ import Tools
 # ===============================================
 # 縮網址
 # ===============================================
-# 目前不支援 "lurl.cc" "risu.io"
+# 目前不支援 "lurl.cc" "risu.io" "fito.cc"
 # 未知 "picsee.io" "lihi.io"
 
 HTTP_HEADERS_LIST = Tools.read_json_to_list(Tools.HTTP_HEADERS)
@@ -140,7 +140,7 @@ def resolve_redirects_other(url):
 
 def Resolve_Redirects(url):
 
-    subdomain, domain, suffix = Tools.domain_analysis(url.lower())
+    _, domain, suffix = Tools.domain_analysis(url.lower())
     domain_name = f"{domain}.{suffix}"
 
     if  domain_name == "risu.io" or \
@@ -207,8 +207,12 @@ def Resolve_Redirects(url):
     except requests.exceptions.RequestException as e:
         logger.info("Error occurred:", e)
 
-    return None
+    final_url = resolve_redirects_other(url)
+    if final_url != url:
+        logger.info(f"final_url Last = {final_url}")
+        return final_url
 
+    return None
 
 def user_query_shorturl_normal(user_text):
 
@@ -294,6 +298,11 @@ def user_query_shorturl(user_text):
         if times > 10:
             logger.info(f"縮網址times超過十次")
             break
+
+        # 處理page.line.me
+        if re.search(Tools.KEYWORD_LINE_INVITE[6], url):
+            return rmessage, result, True
+
         #解析網址
         subdomain, domain, suffix = Tools.domain_analysis(url)
 

@@ -53,8 +53,11 @@ def analyze_line_invite_url(user_text:str) -> Optional[dict]:
     if match := re.search(Tools.KEYWORD_LINE_INVITE[4], orgin_text):
         invite_code = match.group(1)
         struct =  {"類別": "Voom", "帳號": invite_code, "來源": orgin_text, "回報次數": 0, "失效": 0, "檢查者": "", "加入日期": datetime }
-        logger.info(struct)
-        return struct
+
+    elif match := re.search(Tools.KEYWORD_LINE_INVITE[6], orgin_text):
+        invite_code = match.group(1)
+        invite_code = "@" + invite_code
+        struct =  {"類別": "官方", "帳號": invite_code, "來源": orgin_text, "回報次數": 0, "失效": 0, "檢查者": "", "加入日期": datetime }
     else:
         if lower_text.startswith("https://liff.line.me"):
             response = requests.get(orgin_text)
@@ -81,27 +84,28 @@ def analyze_line_invite_url(user_text:str) -> Optional[dict]:
             logger.error('line.me邀請網址解析失敗')
             return None
 
-    Type, invite_code = match.groups()
-    if Type:
-        logger.info(f"Type : {Type}")
-    if invite_code:
-        logger.info(f"invite_code : {invite_code}")
+        Type, invite_code = match.groups()
+        if Type:
+            logger.info(f"Type : {Type}")
+        if invite_code:
+            logger.info(f"invite_code : {invite_code}")
 
-    if "@" in invite_code:
-        category = "官方"
-        if "~" in invite_code:
-            invite_code = invite_code.replace("~", "")
-    elif Type == "p" or "~" in invite_code:
-        category = "個人"
-        invite_code = invite_code.replace("~","")
-    elif Type in ["g", "g2"]:
-        category = "群組"
-    else:
-        logger.error('無法解析類別')
-        return None
+        if "@" in invite_code:
+            category = "官方"
+            if "~" in invite_code:
+                invite_code = invite_code.replace("~", "")
+        elif Type == "p" or "~" in invite_code:
+            category = "個人"
+            invite_code = invite_code.replace("~","")
+        elif Type in ["g", "g2"]:
+            category = "群組"
+        else:
+            logger.error('無法解析類別')
+            return None
 
-    struct =  {"類別": category, "帳號": invite_code, "來源": orgin_text, "回報次數": 0, "失效": 0, "檢查者": "", "加入日期": datetime }
+        struct =  {"類別": category, "帳號": invite_code, "來源": orgin_text, "回報次數": 0, "失效": 0, "檢查者": "", "加入日期": datetime }
 
+    logger.info(struct)
     return struct
 
 def lineinvite_Write_Document(user_text:str):
