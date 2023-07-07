@@ -555,7 +555,7 @@ def handle_message_text_sub(user_id, orgin_text):
         return rmessage
 
     # 防呆查詢
-    if re.match(r"^@?[a-zA-Z0-9]+$", orgin_text):
+    if re.match(r"^@?[0-9A-Za-z@._\-+]+$", orgin_text):
         rmessage = Handle_LineBot.message_reply_Query_ID_Type(lower_text)
         return rmessage
 
