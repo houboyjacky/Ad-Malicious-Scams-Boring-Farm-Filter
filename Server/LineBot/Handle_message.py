@@ -843,7 +843,8 @@ def handle_message_image(event):
 def handle_message_file(event):
 
     # 取得發訊者的 ID
-    logger.info('UserID = ' + event.source.user_id)
+    user_id = event.source.user_id
+    logger.info(f'UserID = {user_id}')
 
     # 設定儲存檔案的目錄
     FILE_DIR = ""
@@ -870,10 +871,13 @@ def handle_message_file(event):
     if not os.path.isdir(FILE_DIR):
         os.mkdir(FILE_DIR)
 
+    FILE_DIR = f"{FILE_DIR}/{user_id}"
+    if not os.path.isdir(FILE_DIR):
+        os.mkdir(FILE_DIR)
+
     logger.info('UserType = ' + file_type)
 
     # 儲存檔案
-    user_id = event.source.user_id
     user_files = [f for f in os.listdir(FILE_DIR) if f.startswith(user_id)]
     num_files = len(user_files)
     filename = f"{user_id}_{num_files+1:02}{file_extension}"
@@ -882,5 +886,5 @@ def handle_message_file(event):
             f.write(chunk)
 
     # 回覆使用者已收到檔案
-    Handle_LineBot.message_reply(event, "")
+    #Handle_LineBot.message_reply(event, "")
     return
