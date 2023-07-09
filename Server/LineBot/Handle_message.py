@@ -373,7 +373,7 @@ def handle_message_text_admin(user_id, orgin_text):
         rmessage = f"已關閉轉送"
     elif orgin_text.startswith("縮網址http"):
         orgin_text = orgin_text.replace("縮網址","")
-        rmessage, result, keep_go_status = user_query_shorturl_normal(orgin_text)
+        rmessage, result, _ = user_query_shorturl_normal(orgin_text)
         rmessage = f"{rmessage}「 {result} 」"
     elif orgin_text.startswith("分析http"):
         orgin_text = orgin_text.replace("分析","")
