@@ -728,6 +728,11 @@ def handle_message_text_sub(user_id, orgin_text):
         else:
             template_message = Handle_LineBot.message_reply_QueryURL(user_id, IsScam, Text, domain_name, orgin_text)
             return template_message
+    elif match := re.match(Tools.KEYWORD_URL[4], orgin_text):
+        url = match.group(1)
+        rmessage = f"若是想輸入「 {url} 」\n，請直接輸入即可"
+        return rmessage
+
     return None
 
 def handle_message_text(event):
