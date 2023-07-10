@@ -380,11 +380,11 @@ def user_query_website_by_IP(IP):
 
     if re.search("taiwan", output, re.IGNORECASE):
         output = f"伺服器位置：台灣"
-
-    if IsScam := check_blacklisted_site(IP):
-        rmessage = (f"所輸入的「 {IP} 」\n\n"
-                    f"被判定「是」詐騙/可疑網站\n"
-                    f"請勿相信此網站\n"
+    IsScam,_ = check_blacklisted_site(IP)
+    if IsScam:
+        rmessage = (f"被判定「是」詐騙/可疑網站\n"
+                    f"請勿相信此網站\n\n"
+                    f"所輸入的「 {IP} 」\n\n"
                     f"若認為誤通報，請補充描述\n"
                     f"感恩"
                     f"\n"
@@ -393,10 +393,9 @@ def user_query_website_by_IP(IP):
                     f"{suffix_for_call}"
         )
     else:
-        rmessage = (f"所輸入的「 {IP} 」\n\n"
-                    f"目前「尚未」在資料庫中\n"
-                    f"敬請小心謹慎\n"
-                    f"\n"
+        rmessage = (f"目前「尚未」在黑名單資料庫中\n"
+                    f"敬請小心謹慎\n\n"
+                    f"所輸入的「 {IP} 」\n"
                     f"{output}"
                     f"\n"
                     f"{suffix_for_call}\n"
@@ -516,7 +515,7 @@ def user_query_website(prefix_msg, user_text):
     if match := re.search(Tools.KEYWORD_URL[3], user_text):
         ip = match.group(1)
         IsScam, rmessage = user_query_website_by_IP(ip)
-        return IsScam, rmessage, ""
+        return IsScam, rmessage, ip
 
     #解析網址
     subdomain, domain, suffix = Tools.domain_analysis(user_text)
