@@ -260,6 +260,10 @@ def message_reply_Query(user_id, IsScam, Type_Name, code , orgin_text):
                     f"並附上截圖與說明\n"
                     f"感恩"
         )
+
+        if code.startswith("09"):
+            suffix += f"\n\n若是想查詢電話\n建議使用Whoscall來查詢\n"
+
         if Type_Name == "LINE邀請網址" or Type_Name == "FB" or Type_Name == "IG":
             text = (    f"「不存在」{Type_Name}黑名單內\n\n"
                         f"{Type_Name}分析出的代碼的是「{code}」\n\n"
