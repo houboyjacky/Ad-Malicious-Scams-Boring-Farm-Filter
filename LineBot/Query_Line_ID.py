@@ -67,6 +67,8 @@ def LINE_ID_Download_From_165():
     datetime = date.today().strftime("%Y-%m-%d")
 
     for line in lineid_list:
+        if line.startswith("!"):
+            continue
         document = collection.find_one({"帳號": line})
         if document:
             continue
