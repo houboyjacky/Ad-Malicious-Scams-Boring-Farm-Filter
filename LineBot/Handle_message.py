@@ -429,7 +429,7 @@ def handle_message_text_front(user_text) -> str:
         rmessage = Handle_LineBot.message_reply_ScamAlertSample()
         return rmessage
 
-    if match := re.match(r'^(賴|TG|IG|微信|推特)(http.+)', user_text):
+    if match := re.match(r'^(賴|TG|IG|微信|推特|貨幣)(http.+)', user_text):
         url = match.group(2)
         rmessage = f"！！輸入錯誤！！\n直接貼上\n「 {url} 」\n即可查詢"
         return rmessage
