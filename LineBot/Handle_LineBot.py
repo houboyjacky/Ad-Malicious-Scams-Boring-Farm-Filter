@@ -20,13 +20,12 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 '''
 
-import re
-from linebot.models import TextSendMessage, TemplateSendMessage, ButtonsTemplate, MessageTemplateAction, URITemplateAction, ConfirmTemplate
-from linebot import LineBotApi
-from Logger import logger
-import Tools
-from PrintText import check_user_need_news, notice_text
 from GetFromNetizen import write_new_netizen_file
+from linebot import LineBotApi
+from linebot.models import TextSendMessage, TemplateSendMessage, ButtonsTemplate, MessageTemplateAction, URITemplateAction, ConfirmTemplate
+from Logger import logger
+from PrintText import check_user_need_news, notice_text
+import Tools
 
 line_bot_api = LineBotApi(Tools.CHANNEL_ACCESS_TOKEN)
 

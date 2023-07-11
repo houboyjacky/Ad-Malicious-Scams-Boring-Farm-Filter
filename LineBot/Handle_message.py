@@ -405,7 +405,11 @@ def handle_message_text_front(user_text) -> str:
     if len(user_text) > 1000:
         if user_text.startswith("http"):
             _, domain, suffix = Tools.domain_analysis(user_text)
-            rmessage = f"謝謝你提供的情報\n但網址過長，請直接輸入\n「 http://{domain}.{suffix} 」\n就好"
+            rmessage = (    f"謝謝你提供的情報\n"
+                            f"但網址過長，請直接輸入\n"
+                            f"「 http://{domain}.{suffix} 」\n"
+                            f"就好"
+            )
         else:
             rmessage = f"謝謝你提供的情報\n請縮短長度或分段傳送"
         return rmessage
@@ -414,7 +418,14 @@ def handle_message_text_front(user_text) -> str:
         return Tools.user_guide
 
     if re.match(r"^09\d+", user_text):
-        rmessage = f"謝謝你提供的電話號碼\n「{user_text}」\n若要查詢電話\n建議使用Whoscall\n若要查詢是否是詐騙賴\n輸入「賴+電話」\n例如：賴0912345678"
+        rmessage = (    f"謝謝你提供的電話號碼\n"
+                        f"「{user_text}」\n"
+                        f"若要查詢電話\n"
+                        f"建議使用Whoscall\n"
+                        f"若要查詢是否是詐騙賴\n"
+                        f"輸入「賴+電話」\n"
+                        f"例如：賴0912345678"
+        )
         return rmessage
 
     if user_text == "網站排行榜":
