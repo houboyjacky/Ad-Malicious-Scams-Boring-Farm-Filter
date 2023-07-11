@@ -378,11 +378,13 @@ def handle_message_text_admin(user_id, orgin_text):
     elif orgin_text.startswith("分析http"):
         orgin_text = orgin_text.replace("分析","")
         if links := get_external_links(orgin_text):
-                msg = f'＝＝＝＝＝＝＝＝＝＝＝＝\n網站背後資訊(管理員only)\n'
-                for link in links:
-                    msg = f"{msg}「 {link} 」\n"
-                msg = f"{msg}＝＝＝＝＝＝＝＝＝＝＝＝\n"
-                rmessage = f"{rmessage}{msg}"
+            msg = f'＝＝＝＝＝＝＝＝＝＝＝＝\n網站背後資訊(管理員only)\n'
+            for link in links:
+                msg = f"{msg}「 {link} 」\n"
+            msg = f"{msg}＝＝＝＝＝＝＝＝＝＝＝＝\n"
+            rmessage = f"{rmessage}{msg}"
+        else:
+            rmessage = f"「 {orgin_text} 」分析失敗"
 
     if rmessage:
         return rmessage
