@@ -419,7 +419,7 @@ def handle_message_text_front(user_text) -> str:
     if user_text == "備用指南":
         return Tools.user_guide
 
-    if re.match(r"^09\d+", user_text):
+    if re.match(r"^09[\d\-]+", user_text) or re.match(r"^\+[\d\-]+", user_text):
         rmessage = (    f"謝謝你提供的電話號碼\n"
                         f"「{user_text}」\n"
                         f"若要查詢電話\n"
@@ -524,8 +524,7 @@ def handle_message_text_sub(user_id, orgin_text):
         lineid = match.group(1)
 
         if "+" in lineid:
-            phone = lineid.replace("+", "")
-            phone = phone.replace(" ", "")
+            phone = re.sub(r'[\s+\-]', '', lineid)
             if phone.isdigit():
                 lineid = phone
             else:
