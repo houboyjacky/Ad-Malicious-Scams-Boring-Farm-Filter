@@ -1,6 +1,7 @@
 # 歷史更新 History Update
 
 * 20230711 Update
+  * 調整 縮減判斷縮網址
   * 調整 Code
 
 * 20230710 Update

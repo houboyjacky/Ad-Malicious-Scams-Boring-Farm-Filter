@@ -191,18 +191,9 @@ def Resolve_Redirects(url):
         logger.info(f"Error occurred: {e}")
 
     try:
-        response = requests.get(url, allow_redirects=False)
-        if response.status_code == 301 or response.status_code == 302:
-            final_url = response.headers['Location']
-            logger.info(f"final_url 2 = {final_url}")
-            return final_url
-    except requests.exceptions.RequestException as e:
-        logger.info("Error occurred:", e)
-
-    try:
-        response = requests.head(url, allow_redirects=True)
+        response = requests.get(url, allow_redirects=True)
         final_url = response.url
-        logger.info(f"final_url 3 = {final_url}")
+        logger.info(f"final_url 2 = {final_url}")
         return final_url
     except requests.exceptions.RequestException as e:
         logger.info("Error occurred:", e)
