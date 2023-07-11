@@ -22,8 +22,10 @@ THE SOFTWARE.
 
 from datetime import datetime
 import hashlib
+import idna
 import json
 import pycountry
+import re
 import requests
 import tldextract
 
@@ -234,9 +236,21 @@ def domain_analysis(url):
     if " " in url:
         url = url.replace(" ","")
     extracted = tldextract.extract(url)
-    subdomain = extracted.subdomain.lower()
-    domain = extracted.domain.lower()
-    suffix = extracted.suffix.lower()
+
+    try:
+        subdomain = extracted.subdomain.lower()
+        if has_non_alphanumeric(subdomain):
+            subdomain = idna.encode(subdomain).decode('utf-8')
+
+        domain = extracted.domain.lower()
+        if has_non_alphanumeric(domain):
+            domain = idna.encode(domain).decode('utf-8')
+
+        suffix = extracted.suffix.lower()
+        if has_non_alphanumeric(suffix):
+            suffix = idna.encode(suffix).decode('utf-8')
+    except Exception:
+        return None, None, None
 
     if not subdomain and not domain and suffix:
         split_suffix = suffix.split(".")
@@ -264,5 +278,9 @@ def calculate_hash(file_path):
         content = file.read()
         hash_value = hashlib.md5(content).hexdigest()
         return hash_value
+
+def has_non_alphanumeric(text):
+    pattern = re.compile(r'[^A-Za-z0-9\s\W]')
+    return bool(re.search(pattern, text))
 
 user_guide = read_file(USER_GUIDE)

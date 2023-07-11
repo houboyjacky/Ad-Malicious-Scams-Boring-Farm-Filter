@@ -591,7 +591,7 @@ def handle_message_text_sub(user_id, orgin_text):
         logger.info(f"社群轉貼")
 
     # 防呆機制
-    if not lower_text.startswith("http") and re.match(r'^[a-zA-Z._-]+$', lower_text):
+    if not lower_text.startswith("http") and not Tools.has_non_alphanumeric(lower_text):
         subdomain, domain, suffix = Tools.domain_analysis(orgin_text)
         logger.info(f"{subdomain}, {domain}, {suffix}")
         if subdomain or suffix:
