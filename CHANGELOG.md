@@ -1,6 +1,7 @@
 # 歷史更新 History Update
 
 * 20230711 Update
+  * 更新 FB網友提供清單
   * 調整 縮減判斷縮網址
   * 調整 Code
 
