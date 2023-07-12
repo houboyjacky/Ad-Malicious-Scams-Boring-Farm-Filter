@@ -134,7 +134,7 @@ def get_random_blacklist(Record_players, DB_Name, Collection_Name, UserID) -> st
     while count < 100:
         random_index = random.randint(0, document_count - 1)
         random_document = collection.find().limit(1).skip(random_index).next()
-        if not random_document.get('檢查者') and random_document.get('失效', 0) < 50:
+        if not random_document.get('檢查者') and random_document.get('失效', 0) < 10:
             site = random_document['來源']
             filter = {'帳號': random_document['帳號']}
             update = {"$set": {'檢查者': UserID}}

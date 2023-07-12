@@ -1,6 +1,7 @@
 # 歷史更新 History Update
 
 * 20230712 Update
+  * 調整 失效大於10就不需要當作失效
   * 調整 API名稱
 
 * 20230711 Update
