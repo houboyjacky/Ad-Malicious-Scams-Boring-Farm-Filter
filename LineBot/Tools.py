@@ -34,6 +34,7 @@ with open('setting.json', 'r') as f:
 
 image_analysis = False
 forward_inquiry = False
+image_add = False
 
 # 讀取設定檔
 ADMINS = setting['ADMIN']                                       # ADMIN => Linebot Admin

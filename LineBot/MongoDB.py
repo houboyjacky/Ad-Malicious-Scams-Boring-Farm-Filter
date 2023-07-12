@@ -20,6 +20,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 '''
 
+from gridfs import GridFS
 import pymongo
 import Tools
 
@@ -64,5 +65,11 @@ def Update_db(collection, filter, update):
 def Delete_db(collection, filter):
     update_result = collection.delete_one(filter)
     return update_result
+
+def Load_GridFS_db(db_name):
+    global db_client
+    db = db_client[db_name]
+    fs = GridFS(db)
+    return fs
 
 Login_db()

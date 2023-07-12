@@ -121,6 +121,23 @@ def Get_DB_len(DB_Name, Collection_Name):
     return document_count
 
 # ===============================================
+# GridFS
+# ===============================================
+
+def Load_GridFS(DB_Name):
+    fs = MongoDB.Load_GridFS_db(DB_Name)
+    return fs
+
+def Write_GridFS(fs, data):
+    file_id = fs.put(data)
+    return file_id
+
+def Read_GridFS(fs, file_id):
+    file_obj = fs.get(file_id)
+    file_content = file_obj.read()
+    return file_content
+
+# ===============================================
 # 檢舉
 # ===============================================
 
