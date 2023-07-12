@@ -26,14 +26,18 @@ Name = "UserPoint"
 
 def write_user_point(user_id, addpoint):
     global Name
-    collection = Query_API.Read_DB(Name, Name)
-    struct = {"帳號":user_id,"分數":addpoint}
-    Query_API.Update_Document(collection, struct, "帳號")
+    collection = Query_API.Read_Collection(Name, Name)
+    result = Query_API.Search_Same_Document(collection,"帳號",user_id)
+    if result :
+        result["分數"] += addpoint
+    else:
+        result = { "帳號":user_id,"分數":addpoint }
+    Query_API.Update_Document(collection, result, "帳號")
     return
 
 def read_user_point(user_id) -> int:
     global Name
-    collection = Query_API.Read_DB(Name, Name)
+    collection = Query_API.Read_Collection(Name, Name)
     Document = Query_API.Search_Same_Document(collection, "帳號", user_id)
     if Document:
         return Document['分數']
@@ -42,7 +46,7 @@ def read_user_point(user_id) -> int:
 
 def get_user_rank(user_id):
     global Name
-    collection = Query_API.Read_DB(Name, Name)
+    collection = Query_API.Read_Collection(Name, Name)
     result = collection.find({}, {"_id": 0, "帳號": 1, "分數": 1}).sort("分數", -1)
     rank = 1
     for document in result:

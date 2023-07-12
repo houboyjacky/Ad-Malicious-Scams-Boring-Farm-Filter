@@ -53,7 +53,7 @@ def analyze_Virtual_Money_url(user_text:str) -> Optional[dict]:
 def Virtual_Money_Write_Document(user_text:str):
     global Name
     rmessage = ""
-    collection = Query_API.Read_DB(Name,Name)
+    collection = Query_API.Read_Collection(Name,Name)
     if analyze := analyze_Virtual_Money_url(user_text):
         if Query_API.Search_Same_Document(collection, "地址", analyze['地址']):
             logger.info("分析完成，找到相同資料")
@@ -75,7 +75,7 @@ def Virtual_Money_Write_Document(user_text:str):
 def Virtual_Money_Read_Document(user_text:str):
     global Name
     rmessage = ""
-    collection = Query_API.Read_DB(Name,Name)
+    collection = Query_API.Read_Collection(Name,Name)
     address = {"地址":user_text.replace("貨幣","")}
 
     if address:
@@ -101,7 +101,7 @@ def Virtual_Money_Read_Document(user_text:str):
 def Virtual_Money_Delete_Document(user_text:str):
     global Name
     rmessage = ""
-    collection = Query_API.Read_DB(Name,Name)
+    collection = Query_API.Read_Collection(Name,Name)
     address = {"地址":user_text.replace("刪除貨幣","")}
     rmessage = f"{Name}地址\n「 {address} 」"
     if address:

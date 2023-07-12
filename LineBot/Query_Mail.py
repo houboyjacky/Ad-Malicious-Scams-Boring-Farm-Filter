@@ -44,21 +44,21 @@ def analyze_Mail_url(user_text:str) -> Optional[dict]:
 
 def Mail_Write_Document(user_text:str):
     global Name
-    collection = Query_API.Read_DB(Name,Name)
+    collection = Query_API.Read_Collection(Name,Name)
     analyze = analyze_Mail_url(user_text)
     rmessage = Query_API.Write_Document_Account(collection, analyze, Name)
     return rmessage
 
 def Mail_Read_Document(user_text:str):
     global Name
-    collection = Query_API.Read_DB(Name,Name)
+    collection = Query_API.Read_Collection(Name,Name)
     analyze = analyze_Mail_url(user_text)
     rmessage, status = Query_API.Read_Document_Account(collection,analyze,Name)
     return rmessage, status
 
 def Mail_Delete_Document(user_text:str):
     global Name
-    collection = Query_API.Read_DB(Name,Name)
+    collection = Query_API.Read_Collection(Name,Name)
     analyze = analyze_Mail_url(user_text)
     rmessage = Query_API.Delete_document_Account(collection,analyze,Name)
     return rmessage

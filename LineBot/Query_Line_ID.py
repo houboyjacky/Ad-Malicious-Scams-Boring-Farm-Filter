@@ -61,7 +61,7 @@ def LINE_ID_Download_From_165():
         logger.info("Not find remote_file_name")
         return
 
-    collection = Query_API.Read_DB(DB_Name,C_Name)
+    collection = Query_API.Read_Collection(DB_Name,C_Name)
 
     documents_to_insert = []
     datetime = date.today().strftime("%Y-%m-%d")
@@ -114,21 +114,21 @@ def analyze_LineID(user_text:str) -> Optional[dict]:
 
 def LineID_Write_Document(user_text:str):
     global DB_Name, C_Name
-    collection = Query_API.Read_DB(DB_Name,C_Name)
+    collection = Query_API.Read_Collection(DB_Name,C_Name)
     analyze = analyze_LineID(user_text)
     rmessage = Query_API.Write_Document_Account(collection, analyze, C_Name)
     return rmessage
 
 def LineID_Read_Document(user_text:str):
     global DB_Name, C_Name
-    collection = Query_API.Read_DB(DB_Name,C_Name)
+    collection = Query_API.Read_Collection(DB_Name,C_Name)
     analyze = analyze_LineID(user_text)
     rmessage, status = Query_API.Read_Document_Account(collection,analyze,C_Name)
     return rmessage, status
 
 def LineID_Delete_Document(user_text:str):
     global DB_Name, C_Name
-    collection = Query_API.Read_DB(DB_Name,C_Name)
+    collection = Query_API.Read_Collection(DB_Name,C_Name)
     analyze = analyze_LineID(user_text)
     rmessage = Query_API.Delete_document_Account(collection,analyze,C_Name)
     return rmessage

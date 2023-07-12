@@ -31,7 +31,7 @@ Name = "ChainSight"
 
 def checkFromChainsight(input):
     global Name
-    collection = Query_API.Read_DB(Name,Name)
+    collection = Query_API.Read_Collection(Name,Name)
     result = Query_API.Search_Same_Document(collection,"帳號", input)
     if result:
         if result['評分'] < 2:

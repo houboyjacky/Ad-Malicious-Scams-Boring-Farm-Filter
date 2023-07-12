@@ -29,11 +29,11 @@ def Search_Same_Document(collection, tagname, value):
     result = MongoDB.Query_db(collection, tagname, value)
     return result
 
-def Read_DB(DB_Name, Collection_Name):
+def Read_Collection(DB_Name, Collection_Name):
     collection = MongoDB.Load_db(DB_Name,Collection_Name)
     return collection
 
-def Read_DBs(DB_Name):
+def Read_Collections(DB_Name):
     collections = MongoDB.Load_dbs(DB_Name)
     return collections
 
@@ -116,7 +116,7 @@ def Update_Document(collection, struct, tagname):
     return
 
 def Get_DB_len(DB_Name, Collection_Name):
-    collection = Read_DB(DB_Name, Collection_Name)
+    collection = Read_Collection(DB_Name, Collection_Name)
     document_count = collection.count_documents({})
     return document_count
 
@@ -125,7 +125,7 @@ def Get_DB_len(DB_Name, Collection_Name):
 # ===============================================
 
 def get_random_blacklist(Record_players, DB_Name, Collection_Name, UserID) -> str:
-    collection = Read_DB(DB_Name, Collection_Name)
+    collection = Read_Collection(DB_Name, Collection_Name)
 
     count = 0
     site = ""
@@ -148,7 +148,7 @@ def get_random_blacklist(Record_players, DB_Name, Collection_Name, UserID) -> st
     return site
 
 def push_random_blacklist(Record_players, DB_Name, Collection_Name, UserID, success, disappear):
-    collection = Read_DB(DB_Name, Collection_Name)
+    collection = Read_Collection(DB_Name, Collection_Name)
     found = False
     for record in Record_players:
         if record['檢查者'] == UserID:

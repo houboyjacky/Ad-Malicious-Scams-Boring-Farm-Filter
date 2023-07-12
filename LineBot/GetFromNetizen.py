@@ -32,7 +32,7 @@ def write_new_netizen_file(user_id:str, user_name:str, user_text:str, isSystem:b
     global netizens
     global Name
 
-    collection = Query_API.Read_DB(Name,Name)
+    collection = Query_API.Read_Collection(Name,Name)
     total_documents = collection.count_documents({})
     number = total_documents + 1
 
@@ -55,7 +55,7 @@ def write_new_netizen_file(user_id:str, user_name:str, user_text:str, isSystem:b
 
 def get_netizen_file(user_id:str):
     global Name
-    collection = Query_API.Read_DB(Name,Name)
+    collection = Query_API.Read_Collection(Name,Name)
     total_documents = collection.count_documents({})
 
     query = {
@@ -79,7 +79,7 @@ def get_netizen_file(user_id:str):
 def push_netizen_file(UserID, success, disappear):
     global Name
     found = False
-    collection = Query_API.Read_DB(Name,Name)
+    collection = Query_API.Read_Collection(Name,Name)
     Document = Query_API.Search_Same_Document(collection, "檢查者", UserID)
 
     if not Document:

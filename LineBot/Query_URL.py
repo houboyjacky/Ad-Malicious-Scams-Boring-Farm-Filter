@@ -310,7 +310,7 @@ def check_blacklisted_site(domain_name):
 
     msg = ""
     White_db = "網站白名單"
-    White_collections = Query_API.Read_DBs(White_db)
+    White_collections = Query_API.Read_Collections(White_db)
 
     for collection in White_collections:
         document = collection.find_one({"網址": domain_name})
@@ -319,7 +319,7 @@ def check_blacklisted_site(domain_name):
             return False, msg
 
     Black_db = "網站黑名單"
-    Black_collections = Query_API.Read_DBs(Black_db)
+    Black_collections = Query_API.Read_Collections(Black_db)
 
     for collection in Black_collections:
         document = collection.find_one({"網址": domain_name})
@@ -417,7 +417,7 @@ def user_query_website_by_DNS(domain_name, result_list, lock):
 
     if not Is_Skip:
         WHOIS_DB_name = "WHOIS"
-        collection = Query_API.Read_DB(WHOIS_DB_name,WHOIS_DB_name)
+        collection = Query_API.Read_Collection(WHOIS_DB_name,WHOIS_DB_name)
         if Document:= Query_API.Search_Same_Document(collection, "whois_domain", domain_name):
             saved_date = datetime.strptime(Document['加入日期'], '%Y%m%d')
             current_date = datetime.now()

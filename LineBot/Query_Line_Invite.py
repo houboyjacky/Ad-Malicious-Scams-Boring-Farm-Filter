@@ -110,7 +110,7 @@ def analyze_line_invite_url(user_text:str) -> Optional[dict]:
 
 def lineinvite_Write_Document(user_text:str):
     global DB_Name, C_Name
-    collection = Query_API.Read_DB(DB_Name,C_Name)
+    collection = Query_API.Read_Collection(DB_Name,C_Name)
     analyze = analyze_line_invite_url(user_text)
     rmessage = ""
     if analyze:
@@ -135,7 +135,7 @@ def lineinvite_Write_Document(user_text:str):
 def lineinvite_Read_Document(user_text:str):
     global DB_Name, C_Name
     status = 0
-    collection = Query_API.Read_DB(DB_Name,C_Name)
+    collection = Query_API.Read_Collection(DB_Name,C_Name)
     analyze = analyze_line_invite_url(user_text)
     rmessage = ""
     if analyze:
@@ -156,7 +156,7 @@ def lineinvite_Read_Document(user_text:str):
 
 def lineinvite_Delete_Document(user_text:str):
     global DB_Name, C_Name
-    collection = Query_API.Read_DB(DB_Name,C_Name)
+    collection = Query_API.Read_Collection(DB_Name,C_Name)
     analyze = analyze_line_invite_url(user_text)
     rmessage = ""
     if analyze:
