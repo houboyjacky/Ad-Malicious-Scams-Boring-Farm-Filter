@@ -74,3 +74,6 @@
 @@||etherscan.io^$important
 @@||51miz.com^$important
 @@||twm5g.co^
+@@||bitfinex.com^$important
+@@||pixnet.net^$important
+@@||richart.tw^$important

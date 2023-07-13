@@ -29,6 +29,7 @@
 /aavaepro[0-9]+\.xyz
 /aclar.+\.com/
 /aisme.+\.com/
+/aismex[a-z0-9].com/
 /aitechstock\.(co|tw|vip)/
 /alliancegrowth.+\.[a-z]+/
 /amazon[0-9]+\.mobi/

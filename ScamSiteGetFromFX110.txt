@@ -1,4 +1,4 @@
-! 2023/07/06 Update
+! 2023/07/11 Update
 ! FX110 https://www.fx110.com/
 @@||metamask.io^
 #||wixsite.com^
@@ -38,6 +38,7 @@
 ||24fxoddpro.com^
 ||24fxtradeoptions.com^
 ||24hmarkets.com^
+||24hrstrustfxoption.com^
 ||24liveoption.com^
 ||24news.trade^
 ||24stockoptionstrade.com^
@@ -636,6 +637,7 @@
 ||autolivefxmarket.com^
 ||autominingplatform.com^
 ||autostocktrade.online^
+||autu.finance^
 ||auuforex.com^
 ||auximarket.com^
 ||auxun.cn^
@@ -675,6 +677,7 @@
 ||axfxpv.com^
 ||axi-capitals.com^
 ||axia-phoenix.com^
+||axiancefx.net^
 ||axicapitals.com^
 ||axichina.com^
 ||axiomtrade.club^
@@ -1020,6 +1023,7 @@
 ||braveclimbingfx.com^
 ||breakswealth.com^
 ||breetrade.com^
+||breitlingprime.com^
 ||brgfx.com^
 ||bridgecapitalx.com^
 ||bridgefund.io^
@@ -1163,6 +1167,7 @@
 ||capital.pro^
 ||capital80.com^
 ||capitalaccesstrade.com^
+||capitalassetsmgts.com^
 ||capitalbase.io^
 ||capitalbasefx.com^
 ||capitalbear.com^
@@ -1173,6 +1178,7 @@
 ||capitalcryptotrade.com^
 ||capitalew.com^
 ||capitalex24.com^
+||capitalfinanceinvestmgtlimited.com^
 ||capitalforexplus.com^
 ||capitalfunds.co^
 ||capitalfx.co^
@@ -1564,6 +1570,7 @@
 ||crypto247trade.com^
 ||cryptoassetfortress.com^
 ||cryptobanxatrade.com^
+||cryptoblockfxtrade.com^
 ||cryptobotoption.com^
 ||cryptobotoptions.com^
 ||cryptobroker.ltd^
@@ -2031,6 +2038,7 @@
 ||ellandroadcapital.capital^
 ||ellenttrade.com^
 ||elliottrade.com^
+||elmaxtrade.com^
 ||elmfx99.com^
 ||elonmuskstockfx.com^
 ||eltfx.com^
@@ -2618,6 +2626,7 @@
 ||fps-trade.com^
 ||fqfxmarket.com^
 ||fqmarkets.com^
+||fraar.com^
 ||francecrytotrading.net^
 ||freedom-fin.com^
 ||freedom-finances.com^
@@ -2897,6 +2906,7 @@
 ||fxoct.com^
 ||fxokami.com^
 ||fxonus.com^
+||fxoproxx.com^
 ||fxopulence.com^
 ||fxorbitaltrade.org^
 ||fxot.xyz^
@@ -3025,6 +3035,7 @@
 ||gaeainvestment.com^
 ||gafx36.com^
 ||gaicap.com^
+||gainfulmarkets.com^
 ||gainhub.org^
 ||gainmetafx.com^
 ||gainstock.ltd^
@@ -3349,6 +3360,7 @@
 ||group-500.com^
 ||grovalue.in^
 ||grovefxchina.com^
+||grow-forex.com^
 ||growbrokers.com^
 ||growdeposits.com^
 ||growfundsfx.com^
@@ -3414,6 +3426,7 @@
 ||halifx.cc^
 ||hamilton.club^
 ||han-forex.com^
+||handelex.com^
 ||handswift.com^
 ||handz-fx.com^
 ||hanjuziben.com^
@@ -3509,6 +3522,7 @@
 ||highwinfx.com^
 ||higl-trader.com^
 ||hiifx.com^
+||hiltonmeta.com^
 ||hit-forex.com^
 ||hitstockfx.org^
 ||hivemarkets.io^
@@ -3820,6 +3834,7 @@
 ||inst-global.com^
 ||insta-markets.com^
 ||instacapitalfx.com^
+||instantglobalstrade.com^
 ||instantpremierfx.info^
 ||institutionforex.com^
 ||intechtrading.com^
@@ -4005,6 +4020,7 @@
 ||jetswapvip.com^
 ||jf-fx.com^
 ||jfbbi.com^
+||jfdtrade.net^
 ||jfhk9999.com^
 ||jfhqd.com^
 ||jfprime.com^
@@ -4361,6 +4377,7 @@
 ||lordfx8.com^
 ||lotsfx.com^
 ||lotusinternationalllc.com^
+||louiexs.com^
 ||love-quantlab.com^
 ||lovotrade.com^
 ||loyalefx.com^
@@ -5164,6 +5181,7 @@
 ||paytradepro.net^
 ||pbfx.asia^
 ||pbmedal.com^
+||pc-fx.org^
 ||pcafx.com^
 ||pcapitalforex.com^
 ||pcmfa.trade^
@@ -5207,6 +5225,7 @@
 ||phiforex.com^
 ||philforex.com^
 ||philipkeithholdings-hk.com^
+||phoenixtb.io^
 ||phuei-century.com^
 ||phyfx.com^
 ||pibexa.com^
@@ -5337,6 +5356,7 @@
 ||primotrade.co^
 ||primus-fx.com^
 ||primuscapitalhk.com^
+||primusforex.net^
 ||primy-chain.com^
 ||priority-markets.net^
 ||priority-trading.net^
@@ -5403,6 +5423,7 @@
 ||pros-capitalglobal.com^
 ||prospectfx.com^
 ||prosperity4x.com^
+||protechfx.com^
 ||protocol.vin^
 ||protonbrokers.com^
 ||protoncapitalmarkets.com^
@@ -5507,6 +5528,7 @@
 ||rarlonfx.com^
 ||rasemarkets.com^
 ||ravefxtrades.com^
+||ravexcapital.com^
 ||rawforex.com^
 ||razermarkets.com^
 ||rbcmarkets.com^
@@ -6022,6 +6044,7 @@
 ||sstforex.com^
 ||st-option.com^
 ||st24-online.com^
+||st5s.com^
 ||stakefx.com^
 ||stakefxmining.com^
 ||stallioncapital.net^
@@ -6029,6 +6052,7 @@
 ||stalliontradestation.com^
 ||stamcapitalinvest.ltd^
 ||standardcoinoptions.com^
+||standardcryptostradefx.com^
 ||standardoptionpip.com^
 ||standartmadenler.com.tr^
 ||standex.capital^
@@ -6119,6 +6143,7 @@
 ||sunanc.net^
 ||suncfdtrading.com^
 ||suncsl.com^
+||sundell-fx.com^
 ||sunfance.com^
 ||sunfuture.cc^
 ||sungerfx.com^
@@ -6540,6 +6565,7 @@
 ||traling.com^
 ||tramarkets.com^
 ||tranziinternational.com^
+||traze.com^
 ||trealfx.com^
 ||trendingap.com^
 ||trends-global.com^
@@ -6592,6 +6618,7 @@
 ||trxprotrade.com^
 ||trymarkets.com^
 ||trytrade.com^
+||tsaforex.com^
 ||tskfx.com^
 ||tsl-forex.com^
 ||tslforex.com^
@@ -6946,6 +6973,7 @@
 ||w2forex.com^
 ||w2wcapital.com^
 ||wabluegroup.com^
+||wafrainvestmentfx.com^
 ||wafxus.com^
 ||wai-forex.com^
 ||walkcrypto.com^
