@@ -50,7 +50,7 @@ def Image_Analysis(image):
 
     # 使用ORB算法提取特徵
     orb = cv2.ORB_create(
-        nfeatures = 5000,                   # The maximum number of features to retain.
+        nfeatures = 10000,                   # The maximum number of features to retain.
         scaleFactor = 1.5,                  # Pyramid decimation ratio, greater than 1
         nlevels = 8,                        # The number of pyramid levels.
         #edgeThreshold = 7,                  # This is size of the border where the features are not detected. It should roughly match the patchSize parameter

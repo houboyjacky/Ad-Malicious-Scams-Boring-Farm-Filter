@@ -894,12 +894,10 @@ def handle_message_image(event):
         # 轉換格式
         elapsed_time_str = Tools.format_elapsed_time(elapsed_time)
 
-        if Similarity < 1500:
+        if Similarity < 9000:
             return
-        elif Similarity < 2000:
-            rmessage = f"系統自動辨識：\n該照片與詐騙，相似度存疑，請特別留意\n"
         else:
-            rmessage = f"系統自動辨識：\n該照片與詐騙，相似度程度高，請勿相信\n"
+            rmessage = f"系統自動辨識：\n該照片與詐騙，相似度程度高，請特別留意\n"
 
         rmessage += f"查詢耗時：{elapsed_time_str}"
         Handle_LineBot.message_reply(event, rmessage)
