@@ -34,7 +34,6 @@ with open('setting.json', 'r') as f:
 
 image_analysis = False
 forward_inquiry = False
-image_add = False
 Expired_Days = 60
 
 # 讀取設定檔
@@ -176,9 +175,9 @@ def format_elapsed_time(seconds):
     m, s = divmod(seconds, 60)
     h, m = divmod(m, 60)
     if h > 0:
-        return f"{h}小{m}分{s:.0f}秒"
+        return f"{h:.0f}小{m:.0f}分{s:.0f}秒"
     elif m > 0:
-        return f"{m}分{s:.0f}秒"
+        return f"{m:.0f}分{s:.0f}秒"
     else:
         return f"{s:.2f}秒"
 

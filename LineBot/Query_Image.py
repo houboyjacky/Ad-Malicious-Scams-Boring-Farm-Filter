@@ -70,15 +70,23 @@ def Image_Analysis(image):
 def Add_Image_Sample(image_file):
 
     collection = Query_API.Read_Collection(DB_Name,DB_Name)
+
+    image_name = os.path.basename(image_file)
+
+    if Query_API.Search_Same_Document(collection,"image_name", image_name):
+        return
+
     fs = Query_API.Load_GridFS(DB_Name)
+
     amount, boxes = HaveHuman(image_file)
 
     # 加載圖像
     load_image = cv2.imread(image_file)
     file_ids = []
     if amount:
+        logger.info(f"{image_file} = {amount} boxes")
         for (x, y, w, h) in boxes:
-            logger.info(f"{x},{y},{w},{h}")
+            #logger.info(f"{x},{y},{w},{h}")
             if w*h > 100*100:
                 continue
             cropped_image = load_image[y:y+h, x:x+w]
@@ -106,7 +114,7 @@ def Add_Image_Sample(image_file):
 
     # 建立要插入的文檔
     feature_doc = {
-        'image_id': os.path.basename(image_file),
+        'image_name': os.path.basename(image_file),
         'file_id': file_ids
     }
 
@@ -152,7 +160,6 @@ def Load_Image_Feature():
 def Search_Same_Image(image_file):
     global image_feaure_index, DB_Name
 
-    result, _ = HaveHuman(image_file)
     if not Query_API.Get_DB_len(DB_Name, DB_Name):
         logger.info(f"{DB_Name} is No Data")
         return

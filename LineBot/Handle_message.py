@@ -19,7 +19,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 '''
-
+from concurrent.futures import ThreadPoolExecutor
 from GetFromNetizen import push_netizen_file, write_new_netizen_file, get_netizen_file
 from io import BytesIO
 from Logger import logger
@@ -123,6 +123,9 @@ def push_random_blacklist(UserID, success, disappear):
 # 訊息管理
 #============
 # 管理員操作
+def process_file(file_path):
+    Query_Image.Add_Image_Sample(file_path)
+
 def handle_message_text_admin_sub(orgin_text):
     lower_text = orgin_text.lower()
 
@@ -372,12 +375,28 @@ def handle_message_text_admin(user_id, orgin_text):
     elif orgin_text == "關閉轉送":
         Tools.forward_inquiry = False
         rmessage = f"已關閉轉送"
-    elif orgin_text == "開啟圖片加入":
-        Tools.image_add = True
-        rmessage = f"已開啟圖片加入"
-    elif orgin_text == "關閉圖片加入":
-        Tools.image_add = False
-        rmessage = f"已關閉圖片加入"
+    elif orgin_text == "建立索引":
+        # 取得開始時間
+        start_time = time.time()
+
+        folder_path = 'Image_Sample'
+        file_list = os.listdir(folder_path)
+        with ThreadPoolExecutor(max_workers=4) as executor:
+            for file_name in file_list:
+                file_path = os.path.join(folder_path, file_name)
+                executor.submit(process_file, file_path)
+
+         # 取得結束時間
+        end_time = time.time()
+
+        # 計算耗時
+        elapsed_time = end_time - start_time
+
+        # 轉換格式
+        elapsed_time_str = Tools.format_elapsed_time(elapsed_time)
+
+        rmessage = f"已建立詐騙圖片資料庫\n"
+        rmessage += f"耗時：{elapsed_time_str}"
     elif orgin_text.startswith("縮網址http"):
         orgin_text = orgin_text.replace("縮網址","")
         rmessage, result, _ = user_query_shorturl_normal(orgin_text)
@@ -859,32 +878,6 @@ def handle_message_image(event):
         elapsed_time_str = Tools.format_elapsed_time(elapsed_time)
 
         rmessage += f"網站：\n{website_msg}\n\n耗時：{elapsed_time_str}\n\n判斷文字：\n{text_msg}"
-        Handle_LineBot.message_reply(event, rmessage)
-    elif Tools.IsAdmin(user_id) and Tools.image_add:
-
-        sample_dir = "Image_Sample"
-        if not os.path.isdir(sample_dir):
-            os.mkdir(sample_dir)
-        num_files = len(sample_dir)
-        New_filename = f"{sample_dir}\Scam_{num_files+1:08}.jpg"
-        os.rename(filename, New_filename)
-
-        # 取得開始時間
-        start_time = time.time()
-
-        Query_Image.Add_Image_Sample(New_filename)
-
-        # 取得結束時間
-        end_time = time.time()
-
-        # 計算耗時
-        elapsed_time = end_time - start_time
-
-        # 轉換格式
-        elapsed_time_str = Tools.format_elapsed_time(elapsed_time)
-
-        rmessage += f"加入耗時：{elapsed_time_str}"
-
         Handle_LineBot.message_reply(event, rmessage)
     elif Tools.IsAdmin(user_id):
         # 取得開始時間
