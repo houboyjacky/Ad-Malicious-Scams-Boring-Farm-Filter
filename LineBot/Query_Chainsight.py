@@ -20,7 +20,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 '''
 
-from datetime import date
+from datetime import date, datetime
 from Logger import logger
 import json
 import Query_API
@@ -92,11 +92,11 @@ def checkFromChainsight(input):
         msg = f"ChainSight危險等級：{level}"
         logger.info(f"{input}的{msg}")
 
-        datetime = date.today().strftime("%Y-%m-%d")
+        Today_Date = date.today().strftime("%Y-%m-%d")
 
         struct = {  "帳號": input,
                     "評分": max_credit,
-                    "時間": datetime
+                    "時間": Today_Date
         }
 
         Query_API.Update_Document(collection, struct,"帳號")
