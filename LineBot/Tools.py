@@ -41,9 +41,10 @@ ADMINS = setting['ADMIN']                                       # ADMIN => Lineb
 ALLOW_DOMAIN_LIST = setting['ALLOW_DOMAIN_LIST']                # ALLOW_DOMAIN_LIST => Allow Domain can't add blacklist
 BLACKUSERID = setting['BLACKUSERID']                            # BLACKUSERID => BLACK USER
 CERT = setting['CERT']                                          # CERT => Lets Encrypt Certificate Path File
+CHAINSIGHT_KEY = setting['CHAINSIGHT_KEY']                      # CHAINSIGHT_KEY => Chainsight KEY
+CHAINSIGHT_LIST = setting['CHAINSIGHT_LIST']                    # CHAINSIGHT_LIST => Chainsight Blacklist
 CHANNEL_ACCESS_TOKEN = setting['CHANNEL_ACCESS_TOKEN']          # CHANNEL_ACCESS_TOKEN => Linebot Token
 CHANNEL_SECRET = setting['CHANNEL_SECRET']                      # CHANNEL_SECRET => Linebot Token
-CHAINSIGHT_KEY = setting['CHAINSIGHT_KEY']                      # CHAINSIGHT_KEY => Chainsight KEY
 CONFIG_FOLDER = setting['CONFIG_FOLDER']                        # CONFIG_FOLDER => Config Folder
 HASH_FILE = setting['HASH_FILE']                                # HASH_FILE => HASH INF IN FILE
 HTTP_HEADERS = setting['HTTP_HEADERS']                          # HTTP_HEADERS => Http Headers
@@ -61,10 +62,10 @@ KEYWORD_TWITTER_ID = setting['KEYWORD_TWITTER_ID']              # KEYWORD_TWITTE
 KEYWORD_TWITTER_URL = setting['KEYWORD_TWITTER_URL']            # KEYWORD_TWITTER_URL => KEYWORD for TWITTER URL
 KEYWORD_URL = setting['KEYWORD_URL']                            # KEYWORD_URL => Keyword for url
 KEYWORD_VIRTUAL_MONEY = setting['KEYWORD_VIRTUAL_MONEY']        # KEYWORD_VIRTUAL_MONEY => Keyword for virtual money
-KEYWORD_WHATSAPP = setting['KEYWORD_WHATSAPP']                  # KEYWORD_WHATSAPP => Keyword for WhatsApp
 KEYWORD_WECHAT = setting['KEYWORD_WECHAT']                      # KEYWORD_WECHAT => Keyword for Wechat
-LINEID_WEB = setting['LINEID_WEB']                              # LINEID_WEB => Line ID from Web
+KEYWORD_WHATSAPP = setting['KEYWORD_WHATSAPP']                  # KEYWORD_WHATSAPP => Keyword for WhatsApp
 LINEBOT_URL = setting['LINEBOT_URL']                            # LINEBOT_URL => Linebot Url
+LINEID_WEB = setting['LINEID_WEB']                              # LINEID_WEB => Line ID from Web
 LOGFILE = setting['LOGFILE']                                    # LOGFILE => Log File Path
 MONGODB_PWD = setting['MONGODB_PWD']                            # MONGODB_PWD => MONGODB Password
 MONGODB_URL = setting['MONGODB_URL']                            # MONGODB_URL => MONGODB Url
@@ -77,12 +78,12 @@ SCAM_WEBSITE_LIST = setting['SCAM_WEBSITE_LIST']                # SCAM_WEBSITE_L
 SHORT_URL_LIST = setting['SHORT_URL_LIST']                      # SHORT_URL_LIST => Short url list
 SPECIAL_SUBWEBSITE = setting['SPECIAL_SUBWEBSITE']              # SPECIAL_SUBWEBSITE => Special Subwebsite need to block sub website
 TMP_BLACKLIST = setting['TMP_BLACKLIST']                        # TMP_BLACKLIST => Blacklist for Adguard Home Download
+USER_GUIDE = setting['USER_GUIDE']                              # USER_GUIDE => 使用指南
 WEB_LEADERBOARD_FILE = setting['WEB_LEADERBOARD_FILE']          # WEB_LEADERBOARD_FILE => Query Website times leaderboard from file
 WHOIS_SKIP = setting['WHOIS_SKIP']                              # WHOIS_SKIP => Skip Query Whois
-USER_GUIDE = setting['USER_GUIDE']                              # USER_GUIDE => 使用指南
 
 def reloadSetting():
-    global ADMINS, BLACKUSERID, CERT, CHANNEL_ACCESS_TOKEN, USER_GUIDE
+    global ADMINS, BLACKUSERID, CERT, CHANNEL_ACCESS_TOKEN, USER_GUIDE, CHAINSIGHT_LIST
     global CHANNEL_SECRET, HASH_FILE, KEYWORD_FB, KEYWORD_TIKTOK, KEYWORD_WECHAT
     global KEYWORD_IG_ID, KEYWORD_LINE_ID, KEYWORD_TELEGRAM_ID, KEYWORD_URL
     global LINEID_WEB, LOGFILE, HTTP_HEADERS, CONFIG_FOLDER, LINEBOT_URL
@@ -103,6 +104,7 @@ def reloadSetting():
     ALLOW_DOMAIN_LIST = setting['ALLOW_DOMAIN_LIST']
     BLACKUSERID = setting['BLACKUSERID']
     CERT = setting['CERT']
+    CHAINSIGHT_LIST = setting['CHAINSIGHT_LIST']
     CHANNEL_ACCESS_TOKEN = setting['CHANNEL_ACCESS_TOKEN']
     CHANNEL_SECRET = setting['CHANNEL_SECRET']
     CHAINSIGHT_KEY = setting['CHAINSIGHT_KEY']

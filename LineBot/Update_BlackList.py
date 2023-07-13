@@ -205,6 +205,7 @@ def update_blacklist():
             update_list_from_file(filename, blacklist, IsNew)
 
     update_list_from_file(Tools.TMP_BLACKLIST, blacklist, True)
+    update_list_from_file(Tools.CHAINSIGHT_LIST, blacklist, True)
 
     blacklist = sorted(list(set(blacklist)))
     logger.info("Update blacklist finish!")
@@ -213,7 +214,7 @@ def update_blacklist():
 
 def update_document_to_db(filename, domain_name, db_name):
     datetime = date.today().strftime("%Y-%m-%d")
-    if filename == Tools.TMP_BLACKLIST:
+    if filename == Tools.TMP_BLACKLIST or filename == Tools.CHAINSIGHT_LIST:
         Name = "report"
     else:
         Name = os.path.basename(filename)
@@ -229,18 +230,22 @@ def update_document_to_db(filename, domain_name, db_name):
     Query_API.Write_Document(collection, document)
     return
 
-def update_part_blacklist_rule_to_db(domain_name):
+def update_part_blacklist_rule_to_db(domain_name, filename=None):
+    if not filename:
+        filename = Tools.TMP_BLACKLIST
     #寫入DB
-    update_document_to_db(Tools.TMP_BLACKLIST, domain_name, "網站黑名單")
+    update_document_to_db(filename, domain_name, "網站黑名單")
     # 組合成新的規則
     new_rule = f"||{domain_name}^\n"
     # 將Adguard規則寫入檔案
-    Tools.append_file_U8(Tools.TMP_BLACKLIST, new_rule)
+    Tools.append_file_U8(filename, new_rule)
     return
 
-def update_part_blacklist_comment(msg):
+def update_part_blacklist_comment(msg, filename=None):
+    if not filename:
+        filename = Tools.TMP_BLACKLIST
     # 組合成新的規則
     new_rule = f"! {msg}\n"
     # 將Adguard規則寫入檔案
-    Tools.append_file_U8(Tools.TMP_BLACKLIST, new_rule)
+    Tools.append_file_U8(filename, new_rule)
     return

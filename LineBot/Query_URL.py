@@ -359,8 +359,8 @@ def check_blacklisted_site(domain_name):
 
     msg,max_credit = checkFromChainsight(domain_name)
     if max_credit > 2:
-        update_part_blacklist_comment(msg)
-        update_part_blacklist_rule_to_db(domain_name)
+        update_part_blacklist_comment(msg,Tools.CHAINSIGHT_LIST)
+        update_part_blacklist_rule_to_db(domain_name,Tools.CHAINSIGHT_LIST)
         return True, msg
 
     return False, msg
