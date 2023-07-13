@@ -34,16 +34,23 @@ def checkFromChainsight(input):
     collection = Query_API.Read_Collection(Name,Name)
     result = Query_API.Search_Same_Document(collection,"帳號", input)
     if result:
-        if result['評分'] < 2:
-            level = "低"
-        elif result['評分'] < 3:
-            level = "中"
-        else:
-            level = "高"
+        Record_Date = datetime.strptime(result['時間'], "%Y-%m-%d").date()
+        today = datetime.today().date()  # 取得當天日期
+        diff_days = (today - Record_Date).days  # 相差幾天
 
-        msg = f"ChainSight危險等級：{level}"
-        logger.info(f"{input}的{msg}")
-        return msg, result['評分']
+        if diff_days > Tools.Expired_Days:
+            pass
+        else:
+            if result['評分'] < 2:
+                level = "低"
+            elif result['評分'] < 3:
+                level = "中"
+            else:
+                level = "高"
+
+            msg = f"ChainSight危險等級：{level}"
+            logger.info(f"{input}的{msg}")
+            return msg, result['評分']
 
     url = f"https://api.chainsight.com/api/check?keyword={input}"
     headers = {
@@ -92,7 +99,7 @@ def checkFromChainsight(input):
                     "時間": datetime
         }
 
-        Query_API.Write_Document(collection, struct)
+        Query_API.Update_Document(collection, struct,"帳號")
 
         return msg, max_credit
 
