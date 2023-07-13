@@ -17,6 +17,7 @@
 ||allecotte-cargo.com^
 ||aluzdasestrelas.org^
 ||amazon.net^
+||amazonvetagric.com^
 ||americanexpress-securitty.com^
 ||americanexpress.bid^
 ||anhchuai04.wixsite.com^
@@ -36,6 +37,7 @@
 ||bajeskwartier.com^
 ||bankusanet.com^
 ||bantuhebrewwords.com^
+||baxtravetagric.com^
 ||bdm94kjd.com^
 ||beehiiv.com^
 ||bestshoppingpint.co^
@@ -64,11 +66,13 @@
 ||citybottles.us^
 ||classicwineryshop.com^
 ||cli.co^
+||clothing.store^
 ||cloudlets.zone^
 ||comprehensiveliquor.com^
 ||connaughtindustries.com^
 ||courire.org^
 ||covidtestingscreening.com^
+||customerservice.com^
 ||cutt.ly^
 ||dancokersmemek23.online^
 ||ddlnk.net^
@@ -90,6 +94,7 @@
 ||exusnefte.com^
 ||f0undlth3r3.link^
 ||f0undlth3re.link^
+||fairwaytrustcorporation.com^
 ||finaynnand.tk^
 ||fishingpraslin.com^
 ||fksepgq.in^
@@ -99,6 +104,7 @@
 ||gabaritandoamatematica.com.br^
 ||GetFinancial.com^
 ||globalwhiskyline.com^
+||globalxbusiness.com^
 ||go2affm.com^
 ||godaddysites.com^
 ||greenhousedispensary.store^
@@ -274,6 +280,7 @@
 ||webmunarohh.com^
 ||wertyuiopqas.wixsite.com^
 ||wescononc.com^
+||wettln.com^
 ||whimsical.com^
 ||wxprtxi.com^
 ||xfinitynewterms5.godaddysites.com^
