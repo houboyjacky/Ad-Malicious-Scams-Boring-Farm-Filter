@@ -219,6 +219,9 @@ def message_reply_Query(user_id, IsScam, Type_Name, code , orgin_text):
     actions = []
     text = ""
 
+    if len(orgin_text) > 250:
+        orgin_text = orgin_text[:250]
+
     if IsScam:
         suffix = (  f"「是」已知詐騙的{Type_Name}\n\n"
                     f"請勿相信此{Type_Name}\n"
