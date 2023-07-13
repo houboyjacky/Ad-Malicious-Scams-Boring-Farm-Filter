@@ -33,10 +33,22 @@ Login_string = f"mongodb://{username}:{password}@{url}"
 
 client = pymongo.MongoClient(Login_string)
 
-DBs = ["Facebook","Instagram","Mail","Telegram","Tiktok","Twitter","UserPoint","WHOIS","WhatsApp","小紅書","虛擬貨幣","詐騙回報"]
+DBs = [ "Facebook",
+        "Instagram",
+        "Mail",
+        "Telegram",
+        "Tiktok",
+        "Twitter",
+        "UserPoint",
+        "WHOIS",
+        "WhatsApp",
+        "小紅書",
+        "虛擬貨幣",
+        "詐騙回報"
+]
 
 for db_name in DBs:
-    collection = Query_API.Read_DB(db_name, db_name)
+    collection = Query_API.Read_Collection(db_name, db_name)
     print(f"正在匯出{collection.name}")
     documents = collection.find({}, {'_id': 0})
     output_filename = f'Backup/{db_name}.json'
@@ -47,7 +59,7 @@ for db_name in DBs:
 
 db_name = "LINE"
 
-collections = Query_API.Read_DBs(db_name)
+collections = Query_API.Read_Collections(db_name)
 
 for collection in collections:
     print(f"正在匯出{collection.name}")
