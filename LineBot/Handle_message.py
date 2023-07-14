@@ -646,7 +646,7 @@ def handle_message_text_sub(user_id, orgin_text):
 
         if status == -1: # 若查詢失敗就繼續go到最後，直接查網址
             prefix_msg = ""
-            pass
+            rmessage = "LINE網址查詢失敗\n僅接受帳號主頁的網址\n感恩"
         else:
             rmessage = Handle_LineBot.message_reply_Query(user_id, status, "LINE邀請網址", invite_code, orgin_text)
         return rmessage
