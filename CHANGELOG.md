@@ -1,5 +1,8 @@
 # 歷史更新 History Update
 
+* 20230716 Update
+  * 加入 Whatsapp QR code網址
+
 * 20230714 Update
   * 加入 mobileconfig範例參考
   * 更新 個人不想看與網友回報廣告或網站

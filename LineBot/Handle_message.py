@@ -270,11 +270,11 @@ def handle_message_text_admin_sub(orgin_text):
             break
 
         # WhatsApp
-        if re.search(Tools.KEYWORD_WHATSAPP[1], orgin_text) or re.search(Tools.KEYWORD_WHATSAPP[3], orgin_text):
+        if re.search(Tools.KEYWORD_WHATSAPP[1], orgin_text) or re.search(Tools.KEYWORD_WHATSAPP[3], orgin_text) or re.search(Tools.KEYWORD_WHATSAPP[7], orgin_text):
             # 加入WhatsApp
             rmessage = WhatsApp_Write_Document(orgin_text)
             break
-        elif re.search(Tools.KEYWORD_WHATSAPP[4], orgin_text) or re.search(Tools.KEYWORD_WHATSAPP[5], orgin_text):
+        elif re.search(Tools.KEYWORD_WHATSAPP[4], orgin_text) or re.search(Tools.KEYWORD_WHATSAPP[5], orgin_text) or re.search(Tools.KEYWORD_WHATSAPP[8], orgin_text):
             # 刪除WhatsApp
             rmessage = WhatsApp_Delete_Document(orgin_text)
             break
@@ -715,7 +715,7 @@ def handle_message_text_sub(user_id, orgin_text):
         return rmessage
 
     # 查詢Whatsapp網址
-    if re.search(Tools.KEYWORD_WHATSAPP[0], lower_text) or re.match(Tools.KEYWORD_WHATSAPP[2], lower_text):
+    if re.search(Tools.KEYWORD_WHATSAPP[0], lower_text) or re.match(Tools.KEYWORD_WHATSAPP[2], lower_text) or re.match(Tools.KEYWORD_WHATSAPP[6], lower_text):
         whatsapp_id, status = WhatsApp_Read_Document(orgin_text)
         if prefix_msg:
             prefix_msg = f"{prefix_msg}「 {orgin_text} 」\n"
