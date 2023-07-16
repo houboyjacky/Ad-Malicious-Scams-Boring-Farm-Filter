@@ -2,6 +2,7 @@
 
 * 20230716 Update
   * 加入 Whatsapp QR code網址
+  * 調整 判斷貼圖與位置
 
 * 20230714 Update
   * 加入 mobileconfig範例參考

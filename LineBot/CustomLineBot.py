@@ -33,6 +33,7 @@ from Query_Line_ID import LINE_ID_Download_From_165
 from Security_Check import get_cf_ips, download_cf_ips
 from SignConfig import SignMobileconfig
 from Update_BlackList import update_blacklist
+import Query_Image
 import ipaddress
 import os
 import schedule
@@ -138,7 +139,9 @@ def handle_message(event):
         return
 
     message_type = event.message.type
-    if message_type == 'image':
+    if message_type == 'sticker' or message_type == 'location':
+        pass
+    elif message_type == 'image':
         handle_message_image(event)
     elif message_type == 'text':
         handle_message_text(event)
@@ -172,6 +175,7 @@ def background_tasks():
     LINE_ID_Download_From_165()
     download_cf_ips()
     update_blacklist()
+    Query_Image.Load_Image_Feature()
     logger.info(f"background_tasks Finish")
 
 if __name__ == "__main__":
