@@ -2,9 +2,12 @@
 
 * 20230716 Update
   * 加入 Whatsapp QR code網址
+  * 更新 個人不想看與網友回報廣告或網站
+  * 更新 FB網友提供清單
   * 調整 名片網站資料
   * 調整 判斷貼圖與位置
   * 調整 參數名稱
+  * 調整 排除portaly.cc
 
 * 20230714 Update
   * 加入 mobileconfig範例參考
