@@ -11,6 +11,8 @@
     "CONFIG_SIGN":"FOLDER",
 	"HASH_FILE":"JSON",
     "HTTP_HEADERS":"JSON",
+	"KEYWORD_DCARD_ID":["",""],
+	"KEYWORD_DCARD_URL":["",""],
 	"KEYWORD_FB":["",""],
 	"KEYWORD_IG_ID":["",""],
 	"KEYWORD_IG_URL":["",""],

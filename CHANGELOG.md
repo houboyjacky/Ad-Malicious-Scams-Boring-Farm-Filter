@@ -1,6 +1,7 @@
 # 歷史更新 History Update
 
 * 20230716 Update
+  * 加入 Dcard 黑名單
   * 加入 Whatsapp QR code網址
   * 更新 個人不想看與網友回報廣告或網站
   * 更新 FB網友提供清單

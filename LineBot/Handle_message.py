@@ -40,6 +40,7 @@ from Query_URL_Short import user_query_shorturl, user_query_shorturl_normal
 from Query_VirtualMoney import Virtual_Money_Read_Document, Virtual_Money_Write_Document, Virtual_Money_Delete_Document
 from Query_WhatsApp import WhatsApp_Write_Document, WhatsApp_Delete_Document, WhatsApp_Read_Document
 from Query_Wechat import Wechat_Write_Document, Wechat_Delete_Document, Wechat_Read_Document
+from Query_Dcard import Dcard_Read_Document, Dcard_Write_Document, Dcard_Delete_Document
 from Update_BlackList import update_part_blacklist_rule_to_db, update_part_blacklist_comment
 import Handle_LineBot
 import os
@@ -201,6 +202,26 @@ def handle_message_text_admin_sub(orgin_text):
         elif match := re.search(Tools.KEYWORD_FB[5], lower_text):
             # 刪除 FB
             rmessage = FB_Delete_Document(orgin_text)
+            break
+
+        # Dcard 網址
+        if match := re.search(Tools.KEYWORD_DCARD_URL[1], lower_text):
+            # 加入 Dcard 網址
+            rmessage = Dcard_Write_Document(orgin_text)
+            break
+        elif match := re.search(Tools.KEYWORD_DCARD_URL[2], lower_text):
+            # 刪除 Dcard 網址
+            rmessage = Dcard_Delete_Document(orgin_text)
+            break
+
+        # Dcard ID
+        if match := re.search(Tools.KEYWORD_DCARD_ID[1], lower_text):
+            # 加入 Dcard ID
+            rmessage = Dcard_Write_Document(lower_text)
+            break
+        elif match := re.search(Tools.KEYWORD_DCARD_ID[2], lower_text):
+            # 刪除 Dcard ID
+            rmessage = Dcard_Delete_Document(lower_text)
             break
 
         # Telegram ID
@@ -600,6 +621,12 @@ def handle_message_text_sub(user_id, orgin_text):
         rmessage = Handle_LineBot.message_reply_Query(user_id, status, "IG", ig, orgin_text)
         return rmessage
 
+    # 查詢Dcard
+    if re.search(Tools.KEYWORD_DCARD_ID[0], orgin_text):
+        ig, status = Dcard_Read_Document(orgin_text)
+        rmessage = Handle_LineBot.message_reply_Query(user_id, status, "Dcard", ig, orgin_text)
+        return rmessage
+
     # 防呆查詢
     if re.match(r"^@?[0-9A-Za-z_\-+]+$", orgin_text):
         rmessage = Handle_LineBot.message_reply_Query_ID_Type(lower_text)
@@ -760,6 +787,23 @@ def handle_message_text_sub(user_id, orgin_text):
                         f"感恩")
         else:
             rmessage = Handle_LineBot.message_reply_Query(user_id, status, "小紅書", account, orgin_text)
+        return rmessage
+
+    # 查詢Dcard
+    if re.search(Tools.KEYWORD_DCARD_URL[0], orgin_text):
+        dcard, status = Dcard_Read_Document(orgin_text)
+
+        if prefix_msg:
+            prefix_msg = f"{prefix_msg}「 {orgin_text} 」\n"
+        else:
+            prefix_msg = f"所輸入的"
+
+        if status == -1:
+            rmessage = (f"{prefix_msg}\n"
+                        f"Dcard網址有誤、網址失效或不支援\n"
+                        f"感恩")
+        else:
+            rmessage = Handle_LineBot.message_reply_Query(user_id, status, "Dcard", dcard, orgin_text)
         return rmessage
 
     # 如果用戶輸入的網址沒有以 http 或 https 開頭，則不回應訊息

@@ -53,7 +53,6 @@ def analyze_line_invite_url(user_text:str) -> Optional[dict]:
     if match := re.search(Tools.KEYWORD_LINE_INVITE[4], orgin_text):
         invite_code = match.group(1)
         struct =  {"類別": "Voom", "帳號": invite_code, "來源": orgin_text, "回報次數": 0, "失效": 0, "檢查者": "", "加入日期": datetime }
-
     elif match := re.search(Tools.KEYWORD_LINE_INVITE[6], orgin_text):
         invite_code = match.group(1)
         invite_code = "@" + invite_code
