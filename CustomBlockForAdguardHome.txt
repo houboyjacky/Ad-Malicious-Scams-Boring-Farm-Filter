@@ -7,6 +7,7 @@
 #||fontawesomes.com^
 #||ig.com^
 #||learningpa.cc^
+#||omygod.com.tw^
 #||onelink.me^
 #||pages-wildcard.weebly.com^
 #||phicdn.net^
@@ -1955,7 +1956,6 @@
 ||olgirl.co^
 ||olvjc.com^
 ||omdo.cc^
-||omygod.com.tw^
 ||oncheou.com^
 ||onckma.online^
 ||onead.onevision.com.tw^

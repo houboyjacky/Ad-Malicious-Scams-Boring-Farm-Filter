@@ -7,7 +7,7 @@
   * 調整 名片網站資料
   * 調整 判斷貼圖與位置
   * 調整 參數名稱
-  * 調整 排除portaly.cc
+  * 調整 排除portaly.cc和omygod.com.tw
 
 * 20230714 Update
   * 加入 mobileconfig範例參考
