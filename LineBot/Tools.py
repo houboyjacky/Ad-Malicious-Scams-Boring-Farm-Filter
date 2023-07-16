@@ -40,6 +40,7 @@ Expired_Days = 60
 ADMINS = setting['ADMIN']                                       # ADMIN => Linebot Admin
 ALLOW_DOMAIN_LIST = setting['ALLOW_DOMAIN_LIST']                # ALLOW_DOMAIN_LIST => Allow Domain can't add blacklist
 BLACKUSERID = setting['BLACKUSERID']                            # BLACKUSERID => BLACK USER
+BUSINESS_CARD = setting['BUSINESS_CARD']                        # BUSINESS_CARD => 名片網站
 CERT = setting['CERT']                                          # CERT => Lets Encrypt Certificate Path File
 CHAINSIGHT_KEY = setting['CHAINSIGHT_KEY']                      # CHAINSIGHT_KEY => Chainsight KEY
 CHAINSIGHT_LIST = setting['CHAINSIGHT_LIST']                    # CHAINSIGHT_LIST => Chainsight Blacklist
@@ -86,7 +87,7 @@ def reloadSetting():
     global ADMINS, BLACKUSERID, CERT, CHANNEL_ACCESS_TOKEN, USER_GUIDE, CHAINSIGHT_LIST
     global CHANNEL_SECRET, HASH_FILE, KEYWORD_FB, KEYWORD_TIKTOK, KEYWORD_WECHAT
     global KEYWORD_IG_ID, KEYWORD_LINE_ID, KEYWORD_TELEGRAM_ID, KEYWORD_URL
-    global LINEID_WEB, LOGFILE, HTTP_HEADERS, CONFIG_FOLDER, LINEBOT_URL
+    global LINEID_WEB, LOGFILE, HTTP_HEADERS, CONFIG_FOLDER, LINEBOT_URL, BUSINESS_CARD
     global TMP_BLACKLIST, NOTICE_BOARD, NOTICE_BOARD_LIST, PEM_DIR, PRIVKEY
     global SCAM_WEBSITE_LIST, SHORT_URL_LIST, SUBWEBSITE, CHAINSIGHT_KEY
     global WEB_LEADERBOARD_FILE, ALLOW_DOMAIN_LIST, WHOIS_SKIP, KEYWORD_IG_URL
@@ -103,6 +104,7 @@ def reloadSetting():
     ADMINS = setting['ADMIN']
     ALLOW_DOMAIN_LIST = setting['ALLOW_DOMAIN_LIST']
     BLACKUSERID = setting['BLACKUSERID']
+    BUSINESS_CARD = setting['BUSINESS_CARD']
     CERT = setting['CERT']
     CHAINSIGHT_LIST = setting['CHAINSIGHT_LIST']
     CHANNEL_ACCESS_TOKEN = setting['CHANNEL_ACCESS_TOKEN']
