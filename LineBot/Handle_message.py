@@ -320,7 +320,7 @@ def handle_message_text_admin_sub(orgin_text):
                     rmessage = f"網址封鎖有誤，不允許{domain_name}"
                     return rmessage
 
-                if domain_name in Tools.SPECIAL_SUBWEBSITE:
+                if domain_name in Tools.SUBWEBSITE:
                     domain_name = f"{subdomain}.{domain}.{suffix}"
 
             IsScam, _ = check_blacklisted_site(domain_name)

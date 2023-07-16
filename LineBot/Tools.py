@@ -76,7 +76,7 @@ PEM_DIR = setting['PEM_DIR']                                    # PEM_DIR => Let
 PRIVKEY = setting['PRIVKEY']                                    # PRIVKEY => Lets Encrypt Private Key Path File
 SCAM_WEBSITE_LIST = setting['SCAM_WEBSITE_LIST']                # SCAM_WEBSITE_LIST => SCAM WEBSITE LIST
 SHORT_URL_LIST = setting['SHORT_URL_LIST']                      # SHORT_URL_LIST => Short url list
-SPECIAL_SUBWEBSITE = setting['SPECIAL_SUBWEBSITE']              # SPECIAL_SUBWEBSITE => Special Subwebsite need to block sub website
+SUBWEBSITE = setting['SUBWEBSITE']                              # SUBWEBSITE => Special Subwebsite need to block sub website
 TMP_BLACKLIST = setting['TMP_BLACKLIST']                        # TMP_BLACKLIST => Blacklist for Adguard Home Download
 USER_GUIDE = setting['USER_GUIDE']                              # USER_GUIDE => 使用指南
 WEB_LEADERBOARD_FILE = setting['WEB_LEADERBOARD_FILE']          # WEB_LEADERBOARD_FILE => Query Website times leaderboard from file
@@ -88,7 +88,7 @@ def reloadSetting():
     global KEYWORD_IG_ID, KEYWORD_LINE_ID, KEYWORD_TELEGRAM_ID, KEYWORD_URL
     global LINEID_WEB, LOGFILE, HTTP_HEADERS, CONFIG_FOLDER, LINEBOT_URL
     global TMP_BLACKLIST, NOTICE_BOARD, NOTICE_BOARD_LIST, PEM_DIR, PRIVKEY
-    global SCAM_WEBSITE_LIST, SHORT_URL_LIST, SPECIAL_SUBWEBSITE, CHAINSIGHT_KEY
+    global SCAM_WEBSITE_LIST, SHORT_URL_LIST, SUBWEBSITE, CHAINSIGHT_KEY
     global WEB_LEADERBOARD_FILE, ALLOW_DOMAIN_LIST, WHOIS_SKIP, KEYWORD_IG_URL
     global KEYWORD_TWITTER_ID, KEYWORD_MAIL, KEYWORD_WHATSAPP, KEYWORD_TELEGRAM_URL
     global KEYWORD_SMALLREDBOOK, KEYWORD_VIRTUAL_MONEY, KEYWORD_TWITTER_URL
@@ -139,7 +139,7 @@ def reloadSetting():
     PRIVKEY = setting['PRIVKEY']
     SCAM_WEBSITE_LIST = setting['SCAM_WEBSITE_LIST']
     SHORT_URL_LIST = setting['SHORT_URL_LIST']
-    SPECIAL_SUBWEBSITE = setting['SPECIAL_SUBWEBSITE']
+    SUBWEBSITE = setting['SUBWEBSITE']
     TMP_BLACKLIST = setting['TMP_BLACKLIST']
     USER_GUIDE = setting['USER_GUIDE']
     WEB_LEADERBOARD_FILE = setting['WEB_LEADERBOARD_FILE']

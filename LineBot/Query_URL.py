@@ -349,7 +349,7 @@ def check_blacklisted_site(domain_name):
         elif domain_name == line:
             logger.info(f"{domain_name}在黑名單內3")
             return True, msg
-        elif domain_name.endswith(line) and line in Tools.SPECIAL_SUBWEBSITE:
+        elif domain_name.endswith(line) and line in Tools.SUBWEBSITE:
             # 特別子網域規則直接可以寫入Adguard規則
             logger.info(f"{domain_name}在黑名單內4")
             msg = f"子網域黑名單"
@@ -526,7 +526,7 @@ def user_query_website(prefix_msg, user_text):
     special_tip = ""
     # 取得網域
     domain_name = f"{domain}.{suffix}"
-    if domain_name in Tools.SPECIAL_SUBWEBSITE:
+    if domain_name in Tools.SUBWEBSITE:
         domain_name = f"{subdomain}.{domain}.{suffix}"
         special_tip = f"\n為「{domain}.{suffix}」的子網域"
     logger.info(f"domain_name = {domain_name}")
