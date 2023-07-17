@@ -1,5 +1,8 @@
 # 歷史更新 History Update
 
+* 20230717 Update
+  * 調整 Readme
+
 * 20230716 Update
   * 加入 Dcard 黑名單
   * 加入 Whatsapp QR code網址

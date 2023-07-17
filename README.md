@@ -66,7 +66,7 @@ https://www.scamadviser.com/<br/>
 ### ScamSiteGetFromFX110.txt
 取自FX110網站<br/>
 Taken from the FX110 website.<br/>
-https://www.fx110.com.tw/<br/>
+https://www.fx110.com/<br/>
 
 ### ScamsSiteGetFromFB_TonyNey.txt
 取自FB社團網友<br/>
