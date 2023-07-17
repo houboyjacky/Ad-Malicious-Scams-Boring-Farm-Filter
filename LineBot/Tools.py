@@ -84,11 +84,12 @@ TMP_BLACKLIST = setting['TMP_BLACKLIST']                        # TMP_BLACKLIST 
 USER_GUIDE = setting['USER_GUIDE']                              # USER_GUIDE => 使用指南
 WEB_LEADERBOARD_FILE = setting['WEB_LEADERBOARD_FILE']          # WEB_LEADERBOARD_FILE => Query Website times leaderboard from file
 WHOIS_SKIP = setting['WHOIS_SKIP']                              # WHOIS_SKIP => Skip Query Whois
+S_URL = setting['S_URL']                                        # S_URL => 縮網址網址
 
 def reloadSetting():
     global ADMINS, BLACKUSERID, CERT, CHANNEL_ACCESS_TOKEN, USER_GUIDE, CHAINSIGHT_LIST
     global CHANNEL_SECRET, HASH_FILE, KEYWORD_FB, KEYWORD_TIKTOK, KEYWORD_WECHAT
-    global KEYWORD_IG_ID, KEYWORD_LINE_ID, KEYWORD_TELEGRAM_ID, KEYWORD_URL
+    global KEYWORD_IG_ID, KEYWORD_LINE_ID, KEYWORD_TELEGRAM_ID, KEYWORD_URL, S_URL
     global LINEID_WEB, LOGFILE, HTTP_HEADERS, CONFIG_FOLDER, LINEBOT_URL, BUSINESS_CARD
     global TMP_BLACKLIST, NOTICE_BOARD, NOTICE_BOARD_LIST, PEM_DIR, PRIVKEY, KEYWORD_DCARD_URL
     global SCAM_WEBSITE_LIST, SHORT_URL_LIST, SUBWEBSITE, CHAINSIGHT_KEY, KEYWORD_DCARD_ID
@@ -150,6 +151,7 @@ def reloadSetting():
     USER_GUIDE = setting['USER_GUIDE']
     WEB_LEADERBOARD_FILE = setting['WEB_LEADERBOARD_FILE']
     WHOIS_SKIP = setting['WHOIS_SKIP']
+    S_URL = setting['S_URL']
     user_guide = read_file(USER_GUIDE)
 
     return

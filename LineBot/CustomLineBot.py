@@ -22,7 +22,7 @@ THE SOFTWARE.
 
 # pip3 install schedule tldextract flask line-bot-sdk python-whois beautifulsoup4 pytesseract pycountry python-dateutil geocoder geocoder[geonames] ip2geotools
 # sudo apt install tesseract-ocr tesseract-ocr-eng tesseract-ocr-chi-tra tesseract-ocr-chi-tra-vert tesseract-ocr-chi-sim tesseract-ocr-chi-sim-vert
-from flask import Flask, Response, request, abort, send_file, send_from_directory
+from flask import Flask, Response, request, abort, send_file, send_from_directory, redirect
 from Handle_message import handle_message_file, handle_message_image, handle_message_text
 from ip2geotools.databases.noncommercial import DbIpCity
 from linebot import WebhookHandler
@@ -33,6 +33,7 @@ from Query_Line_ID import LINE_ID_Download_From_165
 from Security_Check import get_cf_ips, download_cf_ips
 from SignConfig import SignMobileconfig
 from Update_BlackList import update_blacklist
+from Security_ShortUrl import RecordShortUrl
 import Query_Image
 import ipaddress
 import os
@@ -115,6 +116,19 @@ def download(filename):
     # 若檔案不存在，則回傳 404 錯誤
     else:
         logger.info("Allowed file but not found")
+        abort(404)
+
+@app.route('/s/<short_url>')
+def redirect_to_original_url(short_url):
+
+    user_ip = request.headers.get('CF-Connecting-IP')
+    msg = WhereAreYou(user_ip)
+
+    logger.info(f"縮網址{short_url}，來自{msg}的{user_ip}")
+
+    if url := RecordShortUrl(short_url, user_ip, msg):
+        return redirect(url)
+    else:
         abort(404)
 
 # 當 LINE 聊天機器人接收到「訊息事件」時，進行回應

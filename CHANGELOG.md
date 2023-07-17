@@ -1,6 +1,7 @@
 # 歷史更新 History Update
 
 * 20230717 Update
+  * 加入 縮網址功能
   * 調整 Readme
 
 * 20230716 Update

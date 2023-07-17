@@ -42,6 +42,7 @@ from Query_WhatsApp import WhatsApp_Write_Document, WhatsApp_Delete_Document, Wh
 from Query_Wechat import Wechat_Write_Document, Wechat_Delete_Document, Wechat_Read_Document
 from Query_Dcard import Dcard_Read_Document, Dcard_Write_Document, Dcard_Delete_Document
 from Update_BlackList import update_part_blacklist_rule_to_db, update_part_blacklist_comment
+from Security_ShortUrl import CreateShortUrl, GetInfShortUrl
 import Handle_LineBot
 import os
 import pytesseract
@@ -550,6 +551,20 @@ def handle_message_text_game(user_id, user_text) -> str:
 
         rmessage = f"你的檢舉積分是{str(point)}分\n排名第{str(rank)}名"
         return rmessage
+
+    if user_text.startswith("縮縮"):
+        url = user_text.replace("縮縮","")
+        if re.match(Tools.KEYWORD_URL[2], url.lower()):
+            s_url = CreateShortUrl(url,user_id)
+            rmessage = f"縮網址成功\n網址為「 {Tools.S_URL}/{s_url} 」\n"
+        else:
+            rmessage = f"輸入網址有誤"
+        return rmessage
+
+    if user_text.startswith("看縮縮"):
+        rmessage = GetInfShortUrl(user_id)
+        return rmessage
+
     return None
 
 def handle_message_text_sub(user_id, orgin_text):

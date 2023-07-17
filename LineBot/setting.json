@@ -45,5 +45,7 @@
 	"WHOIS_SKIP":["",""],
 	"CHAINSIGHT_KEY":"STRING",
 	"USER_GUIDE":"STRING",
-	"BUSINESS_CARD":["",""]
+	"BUSINESS_CARD":["",""],
+	"CHAINSIGHT_LIST":"",
+	"S_URL":""
 }
