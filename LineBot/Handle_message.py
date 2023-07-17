@@ -850,7 +850,7 @@ def handle_message_text(event):
     # 讀取使用者傳來的文字訊息
     orgin_text = event.message.text.strip()
 
-    if re.match(r'^(賴|TG|IG|微信|推特|貨幣) ', orgin_text):
+    if re.match(r'^(賴|TG|IG|微信|推特|貨幣|迪卡|卡稱) ', orgin_text):
         orgin_text = orgin_text.replace(" ", "")
 
     # 長度控管、備用指南、電話、網站排行榜
