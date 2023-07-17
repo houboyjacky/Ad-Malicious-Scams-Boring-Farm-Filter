@@ -84,10 +84,10 @@ def RecordShortUrl(shorturl, IP, Country):
     if not document or not document['登陸網址']:
         return None
 
-    now_datetime = datetime.now().strftime("%Y-%m-%d %H-%M-%S")
+    now_datetime = datetime.now()
 
     record_day = datetime.strptime(document['登陸日期'], "%Y-%m-%d %H-%M-%S")
-    diff_days = (now_datetime - record_day.date()).days
+    diff_days = (now_datetime.date() - record_day.date()).days
     left_days = lifedays - diff_days
     if left_days < 0 :
         struct = {  "縮網址" : document['縮網址'],
