@@ -1,6 +1,7 @@
 # 歷史更新 History Update
 
 * 20230718 Update
+  * 調整 差異天數
   * 調整 Logger整理與收納
 
 * 20230717 Update

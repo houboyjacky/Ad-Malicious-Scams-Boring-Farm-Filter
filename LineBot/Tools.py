@@ -35,6 +35,7 @@ with open('setting.json', 'r') as f:
 image_analysis = False
 forward_inquiry = False
 Expired_Days = 60
+MIN_DIFF_DAYS = 30
 
 # 讀取設定檔
 ADMINS = setting['ADMIN']                                       # ADMIN => Linebot Admin

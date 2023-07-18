@@ -612,7 +612,7 @@ def user_query_website(prefix_msg, user_text):
     rmessage_diff_days = f"距今差{str(diff_days)}天"
 
     # 天數太少自動加入黑名單並直接轉為黑名單
-    if diff_days <= 20 and not checkresult:
+    if diff_days <= Tools.MIN_DIFF_DAYS and not checkresult:
         today_str = today.strftime('%Y-%m-%d')
         msg = f"{domain_name}距離{today_str}差{str(diff_days)}天"
         update_part_blacklist_comment(msg)
