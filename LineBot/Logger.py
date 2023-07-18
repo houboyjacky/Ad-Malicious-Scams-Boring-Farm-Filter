@@ -54,8 +54,11 @@ def Logger_Transfer(pre_close = True):
         if date_match or not current_log_file:
             year, month, day = date_match.groups()
             current_date_str = f"{year}{month}{day}"
-            basename = Tools.LOGFILE.split('.')[0]
-            current_log_file = f"{basename}_{current_date_str}.log"
+            folder_path = f"Log/{year}{month}"
+            current_log_file = f"{folder_path}/LineBot_{current_date_str}.log"
+
+        if not os.path.exists(folder_path):
+            os.makedirs(folder_path)
 
         if os.path.exists(current_log_file):
             Tools.append_file_U8(current_log_file, f"{line}\n")

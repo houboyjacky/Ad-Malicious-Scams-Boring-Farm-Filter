@@ -1,5 +1,8 @@
 # 歷史更新 History Update
 
+* 20230718 Update
+  * 調整 Logger整理與收納
+
 * 20230717 Update
   * 加入 縮網址功能
   * 調整 去除空白關鍵字
