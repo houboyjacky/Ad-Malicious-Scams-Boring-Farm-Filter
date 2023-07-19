@@ -114,6 +114,8 @@ MONGODB_URL = setting['MONGODB_URL']
 MONGODB_USER = setting['MONGODB_USER']
 # NOTICE_BOARD => NOTICE BOARD
 NOTICE_BOARD = setting['NOTICE_BOARD']
+# NEED_HEAD_SHORT_URL_LIST => NEED HEAD SHORT URL LIST
+NEED_HEAD_SHORT_URL_LIST = setting['NEED_HEAD_SHORT_URL_LIST']
 # NOTICE_BOARD_LIST => NOTICE BOARD LIST
 NOTICE_BOARD_LIST = setting['NOTICE_BOARD_LIST']
 # PEM_DIR => Lets Encrypt Certificate Path
@@ -176,6 +178,7 @@ def reloadSetting():
     global MONGODB_PWD
     global MONGODB_URL
     global MONGODB_USER
+    global NEED_HEAD_SHORT_URL_LIST
     global NOTICE_BOARD
     global NOTICE_BOARD_LIST
     global PEM_DIR
@@ -233,6 +236,7 @@ def reloadSetting():
     MONGODB_URL = setting['MONGODB_URL']
     MONGODB_USER = setting['MONGODB_USER']
     NOTICE_BOARD = setting['NOTICE_BOARD']
+    NEED_HEAD_SHORT_URL_LIST = setting['NEED_HEAD_SHORT_URL_LIST']
     NOTICE_BOARD_LIST = setting['NOTICE_BOARD_LIST']
     PEM_DIR = setting['PEM_DIR']
     PRIVKEY = setting['PRIVKEY']

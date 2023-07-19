@@ -144,21 +144,12 @@ def resolve_redirects_other(url):
 
     return None
 
-
-Need_Head_short_url_list = [
-    "risu.io",
-    "lurl.cc",
-    "psee.io",
-    "zecz.ec"
-]
-
-
 def Resolve_Redirects(url):
 
     _, domain, suffix = Tools.domain_analysis(url.lower())
     domain_name = f"{domain}.{suffix}"
 
-    if domain_name in Need_Head_short_url_list:
+    if domain_name in Tools.NEED_HEAD_SHORT_URL_LIST:
         final_url = resolve_redirects_other(url)
         if final_url != url:
             logger.info(f"resolve_redirects_other = {final_url}")
