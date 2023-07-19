@@ -37,6 +37,7 @@
 ||bajeskwartier.com^
 ||bankusanet.com^
 ||bantuhebrewwords.com^
+||barnegies.com^
 ||baxtravetagric.com^
 ||bdm94kjd.com^
 ||beehiiv.com^
@@ -46,6 +47,7 @@
 ||birdsmarket.us^
 ||bitazafji.com^
 ||blendjet.com^
+||bobvila.com^
 ||bolonies.com^
 ||bookintuit.com^
 ||bourbonwhiskeyforsale.shop^
@@ -65,6 +67,7 @@
 ||checkingio.us^
 ||citybottles.us^
 ||classicwineryshop.com^
+||cleanupphone.com^
 ||cli.co^
 ||clothing.store^
 ||cloudlets.zone^
@@ -95,6 +98,7 @@
 ||f0undlth3r3.link^
 ||f0undlth3re.link^
 ||fairwaytrustcorporation.com^
+||finalistline.com^
 ||finaynnand.tk^
 ||fishingpraslin.com^
 ||fksepgq.in^
@@ -102,7 +106,7 @@
 ||fortune-logist.com^
 ||fullychamge.uk^
 ||gabaritandoamatematica.com.br^
-||GetFinancial.com^
+||getfinancial.com^
 ||globalwhiskyline.com^
 ||globalxbusiness.com^
 ||go2affm.com^
@@ -137,6 +141,7 @@
 ||kickstargogo.com^
 ||klclick3.com^
 ||kleenkit.com^
+||knowledgeproposal.store^
 ||knoxvillepiano.com^
 ||kodehexa.net^
 ||langsnotaryplus.com^
@@ -168,6 +173,7 @@
 ||milliondollaridea.store^
 ||minas-cargo.com^
 ||missykrueger.com^
+||mmmmmmmmm2312398m11.z13.web.core.windows.net^
 ||moneyzip.co^
 ||mooo.com^
 ||morocccancandles.com^
@@ -211,10 +217,12 @@
 ||psaxalg.in^
 ||pxlme.me^
 ||qhsvrye.in^
-||Recovery-System.net^
+||recovery-system.net^
+||redeliverys.com^
 ||refforalupop.com^
 ||rephotomail.com^
 ||rusita.uk^
+||sawariyacargopackersmovers.co.in^
 ||scottfoundationinternational.org^
 ||securelinelogisticsllc.com^
 ||selfcare.sbs^
@@ -282,8 +290,10 @@
 ||wescononc.com^
 ||wettln.com^
 ||whimsical.com^
+||wrotectivisitor.jp.net^
 ||wxprtxi.com^
 ||xfinitynewterms5.godaddysites.com^
+||yisjx.buzz^
 ||yoqusts.com^
 ||yosoft.company.site^
 ||yosoftinfo.online^
