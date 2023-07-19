@@ -20,9 +20,12 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 '''
 
-import random
-import MongoDB
+from ip2geotools.databases.noncommercial import DbIpCity
 from Logger import logger
+from translate import Translator
+import MongoDB
+import random
+import Tools
 
 
 def Search_Same_Document(collection, tagname, value):
@@ -208,3 +211,42 @@ def push_random_blacklist(Record_players, DB_Name, Collection_Name, UserID, succ
         logger.info("找不到檢查者")
 
     return found
+
+# ===============================================
+# 查詢
+# ===============================================
+
+def translate_to_chinese(text):
+    DB_name = "translate"
+    collection = Read_Collection(DB_name, DB_name)
+    if Document := Search_Same_Document(collection, "英文", text):
+        return Document["中文"]
+
+    translator = Translator(to_lang='zh')
+
+    translation = translator.translate(text)
+
+    if translation == text or not translation:
+        return text
+
+    struct = {
+        "英文": text,
+        "中文": translation
+    }
+    Write_Document(collection, struct)
+
+    return translation
+
+
+def WhereAreYou(IP):
+    res = DbIpCity.get(IP, api_key="free")
+
+    chinese_city = translate_to_chinese(res.city)
+    chinese_region = translate_to_chinese(res.region)
+
+    # 使用pycountry獲取完整的國家名稱
+    country_name = Tools.country_code(res.country)
+    # 翻譯國家名稱到中文
+    chinese_country = translate_to_chinese(country_name)
+
+    return chinese_city, chinese_region, chinese_country

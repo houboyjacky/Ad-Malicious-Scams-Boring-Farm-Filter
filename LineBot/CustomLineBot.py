@@ -24,19 +24,19 @@ THE SOFTWARE.
 # sudo apt install tesseract-ocr tesseract-ocr-eng tesseract-ocr-chi-tra tesseract-ocr-chi-tra-vert tesseract-ocr-chi-sim tesseract-ocr-chi-sim-vert
 from flask import Flask, Response, request, abort, send_file, send_from_directory, redirect
 from Handle_message import handle_message_file, handle_message_image, handle_message_text
-from ip2geotools.databases.noncommercial import DbIpCity
 from linebot import WebhookHandler
 from linebot.exceptions import InvalidSignatureError
 from linebot.models import MessageEvent
 from Logger import logger, Logger_Transfer
 from Query_Line_ID import LINE_ID_Download_From_165
 from Security_Check import CF_IPS, download_cf_ips
+from Security_ShortUrl import RecordShortUrl, EmptyShortUrlDB
 from SignConfig import SignMobileconfig
 from Update_BlackList import update_blacklist
-from Security_ShortUrl import RecordShortUrl, EmptyShortUrlDB
-import Query_Image
 import ipaddress
 import os
+import Query_API
+import Query_Image
 import schedule
 import signal
 import sys
@@ -44,24 +44,30 @@ import threading
 import time
 import Tools
 
-
-def WhereAreYou(IP):
-    res = DbIpCity.get(IP, api_key="free")
-    return f"User IP : {res.ip_address}, Location: {res.city}, {res.region}, {res.country} "
-
-
 app = Flask(__name__)
 
 handler = WebhookHandler(Tools.CHANNEL_SECRET)
 
-ALLOWED_HOST = ['linebot.jackyhou.idv.tw', 'download.jackyhou.idv.tw']
+
+def make_record(ip):
+    ip = request.remote_addr
+
+    for cf_ip in CF_IPS:
+        if ipaddress.IPv4Address(request.remote_addr) in ipaddress.ip_network(cf_ip):
+            ip = request.headers.get('CF-Connecting-IP')
+            break
+
+    chinese_city, chinese_region, chinese_country = Query_API.WhereAreYou(ip)
+    msg = f"IP:{ip}, Location: {chinese_city}, {chinese_region}, {chinese_country}"
+
+    return msg
 
 
 @app.before_request
 def limit_remote_addr():
     # 控制是否透過網址連入
     hostname = request.host.split(':')[0]
-    if hostname in ALLOWED_HOST:
+    if hostname in Tools.ALLOWED_HOST:
         return None
 
     # 開啟Cloudflare Proxy 保護手段
@@ -69,8 +75,8 @@ def limit_remote_addr():
     #     if ipaddress.ip_address(request.remote_addr) in ipaddress.ip_network(cf_ip):
     #         return None
 
-    msg = WhereAreYou(request.remote_addr)
     # 記錄403錯誤
+    msg = make_record(request.remote_addr)
     log_message = '403 Error: %s %s %s' % (msg, request.method, request.url)
     logger.error(log_message)
     return "Forbidden", 403
@@ -81,14 +87,8 @@ def log_request(response):
     if response.status_code != 404:
         return response
 
-    ip = request.remote_addr
-
-    for cf_ip in CF_IPS:
-        if ipaddress.IPv4Address(request.remote_addr) in ipaddress.ip_network(cf_ip):
-            ip = request.headers.get('CF-Connecting-IP')
-
-    msg = WhereAreYou(ip)
     # 記錄404錯誤
+    msg = make_record(request.remote_addr)
     log_message = '404 Error: %s %s %s' % (msg, request.method, request.url)
     logger.error(log_message)
     return response
@@ -96,22 +96,19 @@ def log_request(response):
 
 @app.route('/config/robots.txt')
 def robots():
-    logger.info('Downloaded robots.txt')
+
+    # 記錄robots下載紀錄
+    msg = make_record(request.remote_addr)
+    logger.info(f'{msg} and Downloaded robots.txt')
     return send_file('robots.txt', mimetype='text/plain')
 
 
 @app.route('/<filename>')
 def download(filename):
 
-    # 取得使用者的真實 IP 位址
-    ip = request.remote_addr
-    for cf_ip in CF_IPS:
-        if ipaddress.ip_address(request.remote_addr) in ipaddress.ip_network(cf_ip):
-            ip = request.headers.get('CF-Connecting-IP')
-
-    msg = WhereAreYou(ip)
     # 印出使用者的 IP 位址與所下載的檔案
-    logger.info(f"{msg} and Downloaded file: {filename}")
+    msg = make_record(request.remote_addr)
+    logger.info(f"{msg} and DL file: {filename}")
 
     _, extension = os.path.splitext(filename)
     # logger.info(f"extension = {extension}")
@@ -140,12 +137,15 @@ def download(filename):
 @app.route('/s/<short_url>')
 def redirect_to_original_url(short_url):
 
-    user_ip = request.headers.get('CF-Connecting-IP')
-    res = DbIpCity.get(user_ip, api_key="free")
+    user_ip = request.remote_addr
+    # 取得使用者的真實 IP 位址
+    msg = make_record(user_ip)
 
-    logger.info(f"縮網址{short_url}，來自 {res.country} 的 {user_ip}")
+    _, _, chinese_country = Query_API.WhereAreYou(user_ip)
 
-    url = RecordShortUrl(short_url, user_ip, res.country)
+    logger.info(f"縮網址{short_url}，{msg}")
+
+    url = RecordShortUrl(short_url, user_ip, chinese_country)
 
     logger.info(f"原始網址：{url}")
 
@@ -154,11 +154,10 @@ def redirect_to_original_url(short_url):
     else:
         abort(404)
 
-# 當 LINE 聊天機器人接收到「訊息事件」時，進行回應
-
 
 @app.route("/callback", methods=['POST'])
 def message_callback():
+    # 當 LINE 聊天機器人接收到「訊息事件」時，進行回應
 
     signature = request.headers['X-Line-Signature']
     body = request.get_data(as_text=True)
@@ -171,11 +170,10 @@ def message_callback():
         logger.error(str(e))
     return 'OK'
 
-# 每當收到 LINE 聊天機器人的訊息時，觸發此函式
-
 
 @handler.add(MessageEvent)
 def handle_message(event):
+    # 每當收到 LINE 聊天機器人的訊息時，觸發此函式
 
     if event.source.user_id in Tools.BLACKUSERID:
         return
