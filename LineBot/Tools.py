@@ -29,25 +29,21 @@ import re
 import requests
 import tldextract
 
-with open('setting.json', 'r') as f:
-    setting = json.load(f)
-
 image_analysis = False
 forward_inquiry = False
 Expired_Days = 60
 MIN_DIFF_DAYS = 30
 
+with open('setting.json', 'r') as f:
+    setting = json.load(f)
+
 # 讀取設定檔
 # ADMIN => Linebot Admin
 ADMINS = setting['ADMIN']
-# ALLOW_DOMAIN_LIST => Allow Domain can't add blacklist
-ALLOW_DOMAIN_LIST = setting['ALLOW_DOMAIN_LIST']
 # ALLOWED_HOST => 限定使用指定網址進入
 ALLOWED_HOST = setting['ALLOWED_HOST']
 # BLACKUSERID => BLACK USER
 BLACKUSERID = setting['BLACKUSERID']
-# BUSINESS_CARD => 名片網站
-BUSINESS_CARD = setting['BUSINESS_CARD']
 # CERT => Lets Encrypt Certificate Path File
 CERT = setting['CERT']
 # CHAINSIGHT_KEY => Chainsight KEY
@@ -64,44 +60,6 @@ CONFIG_FOLDER = setting['CONFIG_FOLDER']
 HASH_FILE = setting['HASH_FILE']
 # HTTP_HEADERS => Http Headers
 HTTP_HEADERS = setting['HTTP_HEADERS']
-# KEYWORD_DCARD => Keyword for Dcard ID
-KEYWORD_DCARD_ID = setting['KEYWORD_DCARD_ID']
-# KEYWORD_DCARD => Keyword for Dcard URL
-KEYWORD_DCARD_URL = setting['KEYWORD_DCARD_URL']
-# KEYWORD_FB => Keyword for FB
-KEYWORD_FB = setting['KEYWORD_FB']
-# KEYWORD_IG_ID => Keyword for IG ID
-KEYWORD_IG_ID = setting['KEYWORD_IG_ID']
-# KEYWORD_IG_URL => Keyword for IG URL
-KEYWORD_IG_URL = setting['KEYWORD_IG_URL']
-# KEYWORD_LINE_ID => Keyword for LINE ID
-KEYWORD_LINE_ID = setting['KEYWORD_LINE_ID']
-# KEYWORD_LINE_INVITE => Keyword for LINE invite url
-KEYWORD_LINE_INVITE = setting['KEYWORD_LINE_INVITE']
-# KEYWORD_MAIL => Keyword for MAIL
-KEYWORD_MAIL = setting['KEYWORD_MAIL']
-# KEYWORD_SMALLREDBOOK => Keyword for SMALL Red Book
-KEYWORD_SMALLREDBOOK = setting['KEYWORD_SMALLREDBOOK']
-# KEYWORD_TELEGRAM_ID => Keyword for TELEGRAM ID
-KEYWORD_TELEGRAM_ID = setting['KEYWORD_TELEGRAM_ID']
-# KEYWORD_TELEGRAM_URL => Keyword for TELEGRAM URL
-KEYWORD_TELEGRAM_URL = setting['KEYWORD_TELEGRAM_URL']
-# KEYWORD_TIKTOK => Keyword for TIKTOK
-KEYWORD_TIKTOK = setting['KEYWORD_TIKTOK']
-# KEYWORD_TWITTER_ID => KEYWORD for TWITTER ID
-KEYWORD_TWITTER_ID = setting['KEYWORD_TWITTER_ID']
-# KEYWORD_TWITTER_URL => KEYWORD for TWITTER URL
-KEYWORD_TWITTER_URL = setting['KEYWORD_TWITTER_URL']
-# KEYWORD_URL => Keyword for url
-KEYWORD_URL = setting['KEYWORD_URL']
-# KEYWORD_VIRTUAL_MONEY => Keyword for virtual money
-KEYWORD_VIRTUAL_MONEY = setting['KEYWORD_VIRTUAL_MONEY']
-# KEYWORD_WECHAT => Keyword for Wechat
-KEYWORD_WECHAT = setting['KEYWORD_WECHAT']
-# KEYWORD_WHATSAPP => Keyword for WhatsApp
-KEYWORD_WHATSAPP = setting['KEYWORD_WHATSAPP']
-# LINEBOT_URL => Linebot Url
-LINEBOT_URL = setting['LINEBOT_URL']
 # LINEID_WEB => Line ID from Web
 LINEID_WEB = setting['LINEID_WEB']
 # LOGFILE => Log File Path
@@ -114,8 +72,6 @@ MONGODB_URL = setting['MONGODB_URL']
 MONGODB_USER = setting['MONGODB_USER']
 # NOTICE_BOARD => NOTICE BOARD
 NOTICE_BOARD = setting['NOTICE_BOARD']
-# NEED_HEAD_SHORT_URL_LIST => NEED HEAD SHORT URL LIST
-NEED_HEAD_SHORT_URL_LIST = setting['NEED_HEAD_SHORT_URL_LIST']
 # NOTICE_BOARD_LIST => NOTICE BOARD LIST
 NOTICE_BOARD_LIST = setting['NOTICE_BOARD_LIST']
 # PEM_DIR => Lets Encrypt Certificate Path
@@ -126,18 +82,68 @@ PRIVKEY = setting['PRIVKEY']
 S_URL = setting['S_URL']
 # SCAM_WEBSITE_LIST => SCAM WEBSITE LIST
 SCAM_WEBSITE_LIST = setting['SCAM_WEBSITE_LIST']
-# SHORT_URL_LIST => Short url list
-SHORT_URL_LIST = setting['SHORT_URL_LIST']
-# SUBWEBSITE => Special Subwebsite need to block sub website
-SUBWEBSITE = setting['SUBWEBSITE']
 # TMP_BLACKLIST => Blacklist for Adguard Home Download
 TMP_BLACKLIST = setting['TMP_BLACKLIST']
-# USER_GUIDE => 使用指南
-USER_GUIDE = setting['USER_GUIDE']
+# USER_GUIDE_FILE => 使用指南
+USER_GUIDE_FILE = setting['USER_GUIDE_FILE']
 # WEB_LEADERBOARD_FILE => Query Website times leaderboard from file
 WEB_LEADERBOARD_FILE = setting['WEB_LEADERBOARD_FILE']
+
+with open('setting_rules.json', 'r') as f:
+    setting_rule = json.load(f)
+
+# KEYWORD_DCARD => Keyword for Dcard ID
+KEYWORD_DCARD_ID = setting_rule['KEYWORD_DCARD_ID']
+# KEYWORD_DCARD => Keyword for Dcard URL
+KEYWORD_DCARD_URL = setting_rule['KEYWORD_DCARD_URL']
+# KEYWORD_FB => Keyword for FB
+KEYWORD_FB = setting_rule['KEYWORD_FB']
+# KEYWORD_IG_ID => Keyword for IG ID
+KEYWORD_IG_ID = setting_rule['KEYWORD_IG_ID']
+# KEYWORD_IG_URL => Keyword for IG URL
+KEYWORD_IG_URL = setting_rule['KEYWORD_IG_URL']
+# KEYWORD_LINE_ID => Keyword for LINE ID
+KEYWORD_LINE_ID = setting_rule['KEYWORD_LINE_ID']
+# KEYWORD_LINE_INVITE => Keyword for LINE invite url
+KEYWORD_LINE_INVITE = setting_rule['KEYWORD_LINE_INVITE']
+# KEYWORD_MAIL => Keyword for MAIL
+KEYWORD_MAIL = setting_rule['KEYWORD_MAIL']
+# KEYWORD_SMALLREDBOOK => Keyword for SMALL Red Book
+KEYWORD_SMALLREDBOOK = setting_rule['KEYWORD_SMALLREDBOOK']
+# KEYWORD_TELEGRAM_ID => Keyword for TELEGRAM ID
+KEYWORD_TELEGRAM_ID = setting_rule['KEYWORD_TELEGRAM_ID']
+# KEYWORD_TELEGRAM_URL => Keyword for TELEGRAM URL
+KEYWORD_TELEGRAM_URL = setting_rule['KEYWORD_TELEGRAM_URL']
+# KEYWORD_TIKTOK => Keyword for TIKTOK
+KEYWORD_TIKTOK = setting_rule['KEYWORD_TIKTOK']
+# KEYWORD_TWITTER_ID => KEYWORD for TWITTER ID
+KEYWORD_TWITTER_ID = setting_rule['KEYWORD_TWITTER_ID']
+# KEYWORD_TWITTER_URL => KEYWORD for TWITTER URL
+KEYWORD_TWITTER_URL = setting_rule['KEYWORD_TWITTER_URL']
+# KEYWORD_URL => Keyword for url
+KEYWORD_URL = setting_rule['KEYWORD_URL']
+# KEYWORD_VIRTUAL_MONEY => Keyword for virtual money
+KEYWORD_VIRTUAL_MONEY = setting_rule['KEYWORD_VIRTUAL_MONEY']
+# KEYWORD_WECHAT => Keyword for Wechat
+KEYWORD_WECHAT = setting_rule['KEYWORD_WECHAT']
+# KEYWORD_WHATSAPP => Keyword for WhatsApp
+KEYWORD_WHATSAPP = setting_rule['KEYWORD_WHATSAPP']
+
+with open('setting_urls.json', 'r') as f:
+    setting_urls = json.load(f)
+
+# ALLOW_DOMAIN_LIST => Allow Domain can't add blacklist
+ALLOW_DOMAIN_LIST = setting_urls['ALLOW_DOMAIN_LIST']
+# BUSINESS_CARD => 名片網站
+BUSINESS_CARD = setting_urls['BUSINESS_CARD']
+# NEED_HEAD_SHORT_URL_LIST => NEED HEAD SHORT URL LIST
+NEED_HEAD_SHORT_URL_LIST = setting_urls['NEED_HEAD_SHORT_URL_LIST']
+# SHORT_URL_LIST => Short url list
+SHORT_URL_LIST = setting_urls['SHORT_URL_LIST']
+# SUBWEBSITE => Special Subwebsite need to block sub website
+SUBWEBSITE = setting_urls['SUBWEBSITE']
 # WHOIS_SKIP => Skip Query Whois
-WHOIS_SKIP = setting['WHOIS_SKIP']
+WHOIS_SKIP = setting_urls['WHOIS_SKIP']
 
 
 def reloadSetting():
@@ -172,7 +178,6 @@ def reloadSetting():
     global KEYWORD_VIRTUAL_MONEY
     global KEYWORD_WECHAT
     global KEYWORD_WHATSAPP
-    global LINEBOT_URL
     global LINEID_WEB
     global LOGFILE
     global MONGODB_PWD
@@ -185,24 +190,21 @@ def reloadSetting():
     global PRIVKEY
     global S_URL
     global SCAM_WEBSITE_LIST
-    global setting
     global SHORT_URL_LIST
     global SUBWEBSITE
     global TMP_BLACKLIST
-    global user_guide
     global USER_GUIDE
+    global USER_GUIDE_FILE
     global WEB_LEADERBOARD_FILE
     global WHOIS_SKIP
 
+    # 讀取設定檔
     with open('setting.json', 'r') as f:
         setting = json.load(f)
 
-    # 重讀設定檔
     ADMINS = setting['ADMIN']
-    ALLOW_DOMAIN_LIST = setting['ALLOW_DOMAIN_LIST']
     ALLOWED_HOST = setting['ALLOWED_HOST']
     BLACKUSERID = setting['BLACKUSERID']
-    BUSINESS_CARD = setting['BUSINESS_CARD']
     CERT = setting['CERT']
     CHAINSIGHT_KEY = setting['CHAINSIGHT_KEY']
     CHAINSIGHT_LIST = setting['CHAINSIGHT_LIST']
@@ -211,45 +213,56 @@ def reloadSetting():
     CONFIG_FOLDER = setting['CONFIG_FOLDER']
     HASH_FILE = setting['HASH_FILE']
     HTTP_HEADERS = setting['HTTP_HEADERS']
-    KEYWORD_DCARD_ID = setting['KEYWORD_DCARD_ID']
-    KEYWORD_DCARD_URL = setting['KEYWORD_DCARD_URL']
-    KEYWORD_FB = setting['KEYWORD_FB']
-    KEYWORD_IG_ID = setting['KEYWORD_IG_ID']
-    KEYWORD_IG_URL = setting['KEYWORD_IG_URL']
-    KEYWORD_LINE_ID = setting['KEYWORD_LINE_ID']
-    KEYWORD_LINE_INVITE = setting['KEYWORD_LINE_INVITE']
-    KEYWORD_MAIL = setting['KEYWORD_MAIL']
-    KEYWORD_SMALLREDBOOK = setting['KEYWORD_SMALLREDBOOK']
-    KEYWORD_TELEGRAM_ID = setting['KEYWORD_TELEGRAM_ID']
-    KEYWORD_TELEGRAM_URL = setting['KEYWORD_TELEGRAM_URL']
-    KEYWORD_TIKTOK = setting['KEYWORD_TIKTOK']
-    KEYWORD_TWITTER_ID = setting['KEYWORD_TWITTER_ID']
-    KEYWORD_TWITTER_URL = setting['KEYWORD_TWITTER_URL']
-    KEYWORD_URL = setting['KEYWORD_URL']
-    KEYWORD_VIRTUAL_MONEY = setting['KEYWORD_VIRTUAL_MONEY']
-    KEYWORD_WECHAT = setting['KEYWORD_WECHAT']
-    KEYWORD_WHATSAPP = setting['KEYWORD_WHATSAPP']
-    LINEBOT_URL = setting['LINEBOT_URL']
     LINEID_WEB = setting['LINEID_WEB']
     LOGFILE = setting['LOGFILE']
     MONGODB_PWD = setting['MONGODB_PWD']
     MONGODB_URL = setting['MONGODB_URL']
     MONGODB_USER = setting['MONGODB_USER']
     NOTICE_BOARD = setting['NOTICE_BOARD']
-    NEED_HEAD_SHORT_URL_LIST = setting['NEED_HEAD_SHORT_URL_LIST']
     NOTICE_BOARD_LIST = setting['NOTICE_BOARD_LIST']
     PEM_DIR = setting['PEM_DIR']
     PRIVKEY = setting['PRIVKEY']
     S_URL = setting['S_URL']
     SCAM_WEBSITE_LIST = setting['SCAM_WEBSITE_LIST']
-    SHORT_URL_LIST = setting['SHORT_URL_LIST']
-    SUBWEBSITE = setting['SUBWEBSITE']
     TMP_BLACKLIST = setting['TMP_BLACKLIST']
-    USER_GUIDE = setting['USER_GUIDE']
+    USER_GUIDE_FILE = setting['USER_GUIDE_FILE']
     WEB_LEADERBOARD_FILE = setting['WEB_LEADERBOARD_FILE']
-    WHOIS_SKIP = setting['WHOIS_SKIP']
 
-    user_guide = read_file(USER_GUIDE)
+    # 讀取規則
+    with open('setting_rules.json', 'r') as f:
+        setting_rule = json.load(f)
+
+    KEYWORD_DCARD_ID = setting_rule['KEYWORD_DCARD_ID']
+    KEYWORD_DCARD_URL = setting_rule['KEYWORD_DCARD_URL']
+    KEYWORD_FB = setting_rule['KEYWORD_FB']
+    KEYWORD_IG_ID = setting_rule['KEYWORD_IG_ID']
+    KEYWORD_IG_URL = setting_rule['KEYWORD_IG_URL']
+    KEYWORD_LINE_ID = setting_rule['KEYWORD_LINE_ID']
+    KEYWORD_LINE_INVITE = setting_rule['KEYWORD_LINE_INVITE']
+    KEYWORD_MAIL = setting_rule['KEYWORD_MAIL']
+    KEYWORD_SMALLREDBOOK = setting_rule['KEYWORD_SMALLREDBOOK']
+    KEYWORD_TELEGRAM_ID = setting_rule['KEYWORD_TELEGRAM_ID']
+    KEYWORD_TELEGRAM_URL = setting_rule['KEYWORD_TELEGRAM_URL']
+    KEYWORD_TIKTOK = setting_rule['KEYWORD_TIKTOK']
+    KEYWORD_TWITTER_ID = setting_rule['KEYWORD_TWITTER_ID']
+    KEYWORD_TWITTER_URL = setting_rule['KEYWORD_TWITTER_URL']
+    KEYWORD_URL = setting_rule['KEYWORD_URL']
+    KEYWORD_VIRTUAL_MONEY = setting_rule['KEYWORD_VIRTUAL_MONEY']
+    KEYWORD_WECHAT = setting_rule['KEYWORD_WECHAT']
+    KEYWORD_WHATSAPP = setting_rule['KEYWORD_WHATSAPP']
+
+    # 讀取網址
+    with open('setting_urls.json', 'r') as f:
+        setting_urls = json.load(f)
+
+    ALLOW_DOMAIN_LIST = setting_urls['ALLOW_DOMAIN_LIST']
+    BUSINESS_CARD = setting_urls['BUSINESS_CARD']
+    NEED_HEAD_SHORT_URL_LIST = setting_urls['NEED_HEAD_SHORT_URL_LIST']
+    SHORT_URL_LIST = setting_urls['SHORT_URL_LIST']
+    SUBWEBSITE = setting_urls['SUBWEBSITE']
+    WHOIS_SKIP = setting_urls['WHOIS_SKIP']
+
+    USER_GUIDE = read_file(USER_GUIDE_FILE)
     return
 
 
@@ -412,4 +425,4 @@ def has_non_alphanumeric(text):
     return bool(re.search(pattern, text))
 
 
-user_guide = read_file(USER_GUIDE)
+USER_GUIDE = read_file(USER_GUIDE_FILE)

@@ -474,7 +474,7 @@ def handle_message_text_front(user_text) -> str:
         return rmessage
 
     if user_text == "備用指南":
-        return Tools.user_guide
+        return Tools.USER_GUIDE
 
     if re.match(r"^09[\d\-]+", user_text) or re.match(r"^\+[\d\-]+", user_text):
         rmessage = (f"謝謝你提供的電話號碼\n"
