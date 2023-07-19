@@ -33,7 +33,7 @@ from Query_Line_ID import LINE_ID_Download_From_165
 from Security_Check import get_cf_ips, download_cf_ips
 from SignConfig import SignMobileconfig
 from Update_BlackList import update_blacklist
-from Security_ShortUrl import RecordShortUrl
+from Security_ShortUrl import RecordShortUrl, EmptyShortUrlDB
 import Query_Image
 import ipaddress
 import os
@@ -122,11 +122,15 @@ def download(filename):
 def redirect_to_original_url(short_url):
 
     user_ip = request.headers.get('CF-Connecting-IP')
-    msg = WhereAreYou(user_ip)
+    res = DbIpCity.get(user_ip, api_key="free")
 
-    logger.info(f"縮網址{short_url}，來自{msg}的{user_ip}")
+    logger.info(f"縮網址{short_url}，來自 {res.country} 的 {user_ip}")
 
-    if url := RecordShortUrl(short_url, user_ip, msg):
+    url = RecordShortUrl(short_url, user_ip, res.country)
+
+    logger.info(f"原始網址：{url}")
+
+    if url:
         return redirect(url)
     else:
         abort(404)
@@ -134,6 +138,7 @@ def redirect_to_original_url(short_url):
 # 當 LINE 聊天機器人接收到「訊息事件」時，進行回應
 @app.route("/callback", methods=['POST'])
 def message_callback():
+
     signature = request.headers['X-Line-Signature']
     body = request.get_data(as_text=True)
     try:
@@ -190,6 +195,7 @@ def background_tasks():
     download_cf_ips()
     update_blacklist()
     Query_Image.Load_Image_Feature()
+    EmptyShortUrlDB()
     logger.info(f"background_tasks Finish")
 
 if __name__ == "__main__":
