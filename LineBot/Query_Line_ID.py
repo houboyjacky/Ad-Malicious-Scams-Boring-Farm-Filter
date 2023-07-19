@@ -31,6 +31,7 @@ import Tools
 DB_Name = "LINE"
 C_Name = "LINE_ID"
 
+
 def LINE_ID_Download_From_165():
     global DB_Name, C_Name
     lineid_list = []
@@ -61,7 +62,7 @@ def LINE_ID_Download_From_165():
         logger.info("Not find remote_file_name")
         return
 
-    collection = Query_API.Read_Collection(DB_Name,C_Name)
+    collection = Query_API.Read_Collection(DB_Name, C_Name)
 
     documents_to_insert = []
     datetime = date.today().strftime("%Y-%m-%d")
@@ -80,10 +81,10 @@ def LINE_ID_Download_From_165():
 
         source = "165反詐騙"
 
-        document = {    "類別": Type,
-                        "帳號": line,
-                        "來源": source,
-                        "加入日期": datetime
+        document = {"類別": Type,
+                    "帳號": line,
+                    "來源": source,
+                    "加入日期": datetime
                     }
         documents_to_insert.append(document)
 
@@ -94,13 +95,14 @@ def LINE_ID_Download_From_165():
 
     return
 
-def analyze_LineID(user_text:str) -> Optional[dict]:
+
+def analyze_LineID(user_text: str) -> Optional[dict]:
 
     # 分析前重新下載
     LINE_ID_Download_From_165()
 
-    user_text = user_text.replace("加入","")
-    user_text = user_text.replace("刪除","")
+    user_text = user_text.replace("加入", "")
+    user_text = user_text.replace("刪除", "")
 
     logger.info(f"user_text: {user_text}")
 
@@ -108,27 +110,32 @@ def analyze_LineID(user_text:str) -> Optional[dict]:
 
     datetime = date.today().strftime("%Y-%m-%d")
 
-    struct =  {"帳號": user_text, "來源": "report", "回報次數": 0, "失效": 0, "檢查者": "", "加入日期": datetime }
+    struct = {"帳號": user_text, "來源": "report",
+              "回報次數": 0, "失效": 0, "檢查者": "", "加入日期": datetime}
 
     return struct
 
-def LineID_Write_Document(user_text:str):
+
+def LineID_Write_Document(user_text: str):
     global DB_Name, C_Name
-    collection = Query_API.Read_Collection(DB_Name,C_Name)
+    collection = Query_API.Read_Collection(DB_Name, C_Name)
     analyze = analyze_LineID(user_text)
     rmessage = Query_API.Write_Document_Account(collection, analyze, C_Name)
     return rmessage
 
-def LineID_Read_Document(user_text:str):
+
+def LineID_Read_Document(user_text: str):
     global DB_Name, C_Name
-    collection = Query_API.Read_Collection(DB_Name,C_Name)
+    collection = Query_API.Read_Collection(DB_Name, C_Name)
     analyze = analyze_LineID(user_text)
-    rmessage, status = Query_API.Read_Document_Account(collection,analyze,C_Name)
+    rmessage, status = Query_API.Read_Document_Account(
+        collection, analyze, C_Name)
     return rmessage, status
 
-def LineID_Delete_Document(user_text:str):
+
+def LineID_Delete_Document(user_text: str):
     global DB_Name, C_Name
-    collection = Query_API.Read_Collection(DB_Name,C_Name)
+    collection = Query_API.Read_Collection(DB_Name, C_Name)
     analyze = analyze_LineID(user_text)
-    rmessage = Query_API.Delete_document_Account(collection,analyze,C_Name)
+    rmessage = Query_API.Delete_document_Account(collection, analyze, C_Name)
     return rmessage

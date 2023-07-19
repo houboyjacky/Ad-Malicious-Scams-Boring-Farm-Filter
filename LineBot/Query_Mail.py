@@ -27,10 +27,11 @@ import Query_API
 
 Name = "Mail"
 
-def analyze_Mail_url(user_text:str) -> Optional[dict]:
 
-    user_text = user_text.replace("加入","")
-    user_text = user_text.replace("刪除","")
+def analyze_Mail_url(user_text: str) -> Optional[dict]:
+
+    user_text = user_text.replace("加入", "")
+    user_text = user_text.replace("刪除", "")
 
     logger.info(f"user_text: {user_text}")
 
@@ -38,27 +39,32 @@ def analyze_Mail_url(user_text:str) -> Optional[dict]:
 
     datetime = date.today().strftime("%Y-%m-%d")
 
-    struct =  {"帳號": user_text, "來源": "report", "回報次數": 0, "失效": 0, "檢查者": "", "加入日期": datetime }
+    struct = {"帳號": user_text, "來源": "report",
+              "回報次數": 0, "失效": 0, "檢查者": "", "加入日期": datetime}
 
     return struct
 
-def Mail_Write_Document(user_text:str):
+
+def Mail_Write_Document(user_text: str):
     global Name
-    collection = Query_API.Read_Collection(Name,Name)
+    collection = Query_API.Read_Collection(Name, Name)
     analyze = analyze_Mail_url(user_text)
     rmessage = Query_API.Write_Document_Account(collection, analyze, Name)
     return rmessage
 
-def Mail_Read_Document(user_text:str):
+
+def Mail_Read_Document(user_text: str):
     global Name
-    collection = Query_API.Read_Collection(Name,Name)
+    collection = Query_API.Read_Collection(Name, Name)
     analyze = analyze_Mail_url(user_text)
-    rmessage, status = Query_API.Read_Document_Account(collection,analyze,Name)
+    rmessage, status = Query_API.Read_Document_Account(
+        collection, analyze, Name)
     return rmessage, status
 
-def Mail_Delete_Document(user_text:str):
+
+def Mail_Delete_Document(user_text: str):
     global Name
-    collection = Query_API.Read_Collection(Name,Name)
+    collection = Query_API.Read_Collection(Name, Name)
     analyze = analyze_Mail_url(user_text)
-    rmessage = Query_API.Delete_document_Account(collection,analyze,Name)
+    rmessage = Query_API.Delete_document_Account(collection, analyze, Name)
     return rmessage

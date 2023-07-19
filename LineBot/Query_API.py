@@ -24,27 +24,33 @@ import random
 import MongoDB
 from Logger import logger
 
+
 def Search_Same_Document(collection, tagname, value):
     # 查找是否有重複的資料
     result = MongoDB.Query_db(collection, tagname, value)
     return result
 
+
 def Read_Collection(DB_Name, Collection_Name):
-    collection = MongoDB.Load_db(DB_Name,Collection_Name)
+    collection = MongoDB.Load_db(DB_Name, Collection_Name)
     return collection
+
 
 def Read_Collections(DB_Name):
     collections = MongoDB.Load_dbs(DB_Name)
     return collections
 
+
 def Drop_Collection(DB_Name, Collection_Name):
     MongoDB.Drop_db(DB_Name, Collection_Name)
     return
 
+
 def Delete_document(collection, struct, tagname):
-    filer = {tagname:struct[tagname]}
+    filer = {tagname: struct[tagname]}
     MongoDB.Delete_db(collection, filer)
     return
+
 
 def Delete_document_Account(collection, struct, DB_Name):
     tagname = '帳號'
@@ -63,12 +69,13 @@ def Delete_document_Account(collection, struct, DB_Name):
 
     return rmessage
 
+
 def Read_Document_Account(collection, struct, DB_Name):
     status = 0
     rmessage = ""
     if struct:
         rmessage = struct['帳號']
-        if Search_Same_Document(collection,"帳號", struct['帳號']):
+        if Search_Same_Document(collection, "帳號", struct['帳號']):
             logger.info("分析完成，找到相同資料")
             status = 1
         else:
@@ -80,14 +87,16 @@ def Read_Document_Account(collection, struct, DB_Name):
 
     return rmessage, status
 
-def Write_Document(collection,struct):
-    MongoDB.Insert_db(collection,struct)
+
+def Write_Document(collection, struct):
+    MongoDB.Insert_db(collection, struct)
     return
+
 
 def Write_Document_Account(collection, struct, DB_Name):
     tagname = "帳號"
     if struct:
-        if Search_Same_Document(collection,tagname, struct[tagname]):
+        if Search_Same_Document(collection, tagname, struct[tagname]):
             logger.info("分析完成，找到相同資料")
             if struct[tagname]:
                 rmessage = f"{DB_Name}黑名單找到相同{tagname}\n「{struct[tagname] }」"
@@ -96,7 +105,7 @@ def Write_Document_Account(collection, struct, DB_Name):
                 rmessage = f"{DB_Name}黑名單加入失敗，資料為空"
         else:
             logger.info("分析完成，寫入結果")
-            Write_Document(collection,struct)
+            Write_Document(collection, struct)
             rmessage = f"{DB_Name}黑名單成功加入{tagname}\n「{struct[tagname]}」"
     else:
         logger.info("無法分析網址")
@@ -104,16 +113,18 @@ def Write_Document_Account(collection, struct, DB_Name):
 
     return rmessage
 
+
 def Update_Document(collection, struct, tagname):
-    filter = {tagname:struct[tagname]}
-    update = {"$set":struct}
+    filter = {tagname: struct[tagname]}
+    update = {"$set": struct}
     result = MongoDB.Update_db(collection, filter, update)
     if result.matched_count == 0:
         logger.info("找不到相同資料，進行插入")
-        Write_Document(collection,struct)
+        Write_Document(collection, struct)
     else:
         logger.info("找到相同資料，已更新")
     return
+
 
 def Get_DB_len(DB_Name, Collection_Name):
     collection = Read_Collection(DB_Name, Collection_Name)
@@ -124,13 +135,16 @@ def Get_DB_len(DB_Name, Collection_Name):
 # GridFS
 # ===============================================
 
+
 def Load_GridFS(DB_Name):
     fs = MongoDB.Load_GridFS_db(DB_Name)
     return fs
 
+
 def Write_GridFS(fs, data):
     file_id = fs.put(data)
     return file_id
+
 
 def Read_GridFS(fs, file_id):
     file_obj = fs.get(file_id)
@@ -140,6 +154,7 @@ def Read_GridFS(fs, file_id):
 # ===============================================
 # 檢舉
 # ===============================================
+
 
 def get_random_blacklist(Record_players, DB_Name, Collection_Name, UserID) -> str:
     collection = Read_Collection(DB_Name, Collection_Name)
@@ -164,6 +179,7 @@ def get_random_blacklist(Record_players, DB_Name, Collection_Name, UserID) -> st
 
     return site
 
+
 def push_random_blacklist(Record_players, DB_Name, Collection_Name, UserID, success, disappear):
     collection = Read_Collection(DB_Name, Collection_Name)
     found = False
@@ -174,12 +190,12 @@ def push_random_blacklist(Record_players, DB_Name, Collection_Name, UserID, succ
             break
 
     if not found:
-        #logger.info("資料庫選擇有誤或該使用者不存在資料庫中")
+        # logger.info("資料庫選擇有誤或該使用者不存在資料庫中")
         return found
 
     found = False
     if result := MongoDB.Query_db(collection, "檢查者", UserID):
-        filter = {'檢查者':UserID}
+        filter = {'檢查者': UserID}
         if success:
             times = result['回報次數'] + 1
             update = {"$set": {'回報次數': times}}

@@ -26,11 +26,13 @@ import Tools
 
 db_client = None
 
+
 def Login_db():
     global db_client
     login_string = f"mongodb://{Tools.MONGODB_USER}:{Tools.MONGODB_PWD}@{Tools.MONGODB_URL}"
     db_client = pymongo.MongoClient(login_string)
     return
+
 
 def Load_db(db_name, collection_name):
     global db_client
@@ -38,11 +40,14 @@ def Load_db(db_name, collection_name):
     collection = db[collection_name]
     return collection
 
+
 def Load_dbs(db_name):
     global db_client
     db = db_client[db_name]
-    collection_objects = [db[collection_name] for collection_name in db.list_collection_names()]
+    collection_objects = [db[collection_name]
+                          for collection_name in db.list_collection_names()]
     return collection_objects
+
 
 def Drop_db(db_name, collection_name):
     global db_client
@@ -50,26 +55,32 @@ def Drop_db(db_name, collection_name):
     db.drop_collection(collection_name)
     return
 
+
 def Query_db(collection, tagname, value):
-    document = collection.find_one({tagname:value})
+    document = collection.find_one({tagname: value})
     return document
+
 
 def Insert_db(collection, struct):
     document = collection.insert_one(struct)
     return document
 
+
 def Update_db(collection, filter, update):
     update_result = collection.update_one(filter, update)
     return update_result
 
+
 def Delete_db(collection, filter):
     update_result = collection.delete_one(filter)
     return update_result
+
 
 def Load_GridFS_db(db_name):
     global db_client
     db = db_client[db_name]
     fs = GridFS(db)
     return fs
+
 
 Login_db()

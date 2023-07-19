@@ -29,10 +29,11 @@ import Tools
 
 Name = "Wechat"
 
-def analyze_Wechat_url(user_text:str) -> Optional[dict]:
 
-    user_text = user_text.replace("加入","")
-    user_text = user_text.replace("刪除","")
+def analyze_Wechat_url(user_text: str) -> Optional[dict]:
+
+    user_text = user_text.replace("加入", "")
+    user_text = user_text.replace("刪除", "")
 
     logger.info(f"user_text: {user_text}")
 
@@ -42,33 +43,37 @@ def analyze_Wechat_url(user_text:str) -> Optional[dict]:
         return None
 
     if "+" in Username:
-        Username = Username.replace("+","")
+        Username = Username.replace("+", "")
 
     logger.info(f"帳號: {Username}")
 
     datetime = date.today().strftime("%Y-%m-%d")
 
-    struct =  {"帳號": Username, "來源": user_text, "加入日期": datetime }
+    struct = {"帳號": Username, "來源": user_text, "加入日期": datetime}
 
     return struct
 
-def Wechat_Write_Document(user_text:str):
+
+def Wechat_Write_Document(user_text: str):
     global Name
-    collection = Query_API.Read_Collection(Name,Name)
+    collection = Query_API.Read_Collection(Name, Name)
     analyze = analyze_Wechat_url(user_text)
-    rmessage = Query_API.Write_Document_Account(collection,analyze,Name)
+    rmessage = Query_API.Write_Document_Account(collection, analyze, Name)
     return rmessage
 
-def Wechat_Read_Document(user_text:str):
+
+def Wechat_Read_Document(user_text: str):
     global Name
-    collection = Query_API.Read_Collection(Name,Name)
+    collection = Query_API.Read_Collection(Name, Name)
     analyze = analyze_Wechat_url(user_text)
-    rmessage, status = Query_API.Read_Document_Account(collection,analyze,Name)
+    rmessage, status = Query_API.Read_Document_Account(
+        collection, analyze, Name)
     return rmessage, status
 
-def Wechat_Delete_Document(user_text:str):
+
+def Wechat_Delete_Document(user_text: str):
     global Name
-    collection = Query_API.Read_Collection(Name,Name)
+    collection = Query_API.Read_Collection(Name, Name)
     analyze = analyze_Wechat_url(user_text)
-    rmessage = Query_API.Delete_document_Account(collection,analyze,Name)
+    rmessage = Query_API.Delete_document_Account(collection, analyze, Name)
     return rmessage

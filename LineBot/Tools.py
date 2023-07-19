@@ -38,82 +38,173 @@ Expired_Days = 60
 MIN_DIFF_DAYS = 30
 
 # 讀取設定檔
-ADMINS = setting['ADMIN']                                       # ADMIN => Linebot Admin
-ALLOW_DOMAIN_LIST = setting['ALLOW_DOMAIN_LIST']                # ALLOW_DOMAIN_LIST => Allow Domain can't add blacklist
-BLACKUSERID = setting['BLACKUSERID']                            # BLACKUSERID => BLACK USER
-BUSINESS_CARD = setting['BUSINESS_CARD']                        # BUSINESS_CARD => 名片網站
-CERT = setting['CERT']                                          # CERT => Lets Encrypt Certificate Path File
-CHAINSIGHT_KEY = setting['CHAINSIGHT_KEY']                      # CHAINSIGHT_KEY => Chainsight KEY
-CHAINSIGHT_LIST = setting['CHAINSIGHT_LIST']                    # CHAINSIGHT_LIST => Chainsight Blacklist
-CHANNEL_ACCESS_TOKEN = setting['CHANNEL_ACCESS_TOKEN']          # CHANNEL_ACCESS_TOKEN => Linebot Token
-CHANNEL_SECRET = setting['CHANNEL_SECRET']                      # CHANNEL_SECRET => Linebot Token
-CONFIG_FOLDER = setting['CONFIG_FOLDER']                        # CONFIG_FOLDER => Config Folder
-HASH_FILE = setting['HASH_FILE']                                # HASH_FILE => HASH INF IN FILE
-HTTP_HEADERS = setting['HTTP_HEADERS']                          # HTTP_HEADERS => Http Headers
-KEYWORD_DCARD_ID = setting['KEYWORD_DCARD_ID']                  # KEYWORD_DCARD => Keyword for Dcard ID
-KEYWORD_DCARD_URL = setting['KEYWORD_DCARD_URL']                # KEYWORD_DCARD => Keyword for Dcard URL
-KEYWORD_FB = setting['KEYWORD_FB']                              # KEYWORD_FB => Keyword for FB
-KEYWORD_IG_ID = setting['KEYWORD_IG_ID']                        # KEYWORD_IG_ID => Keyword for IG ID
-KEYWORD_IG_URL = setting['KEYWORD_IG_URL']                      # KEYWORD_IG_URL => Keyword for IG URL
-KEYWORD_LINE_ID = setting['KEYWORD_LINE_ID']                    # KEYWORD_LINE_ID => Keyword for LINE ID
-KEYWORD_LINE_INVITE = setting['KEYWORD_LINE_INVITE']            # KEYWORD_LINE_INVITE => Keyword for LINE invite url
-KEYWORD_MAIL = setting['KEYWORD_MAIL']                          # KEYWORD_MAIL => Keyword for MAIL
-KEYWORD_SMALLREDBOOK = setting['KEYWORD_SMALLREDBOOK']          # KEYWORD_SMALLREDBOOK => Keyword for SMALL Red Book
-KEYWORD_TELEGRAM_ID = setting['KEYWORD_TELEGRAM_ID']            # KEYWORD_TELEGRAM_ID => Keyword for TELEGRAM ID
-KEYWORD_TELEGRAM_URL = setting['KEYWORD_TELEGRAM_URL']          # KEYWORD_TELEGRAM_URL => Keyword for TELEGRAM URL
-KEYWORD_TIKTOK = setting['KEYWORD_TIKTOK']                      # KEYWORD_TIKTOK => Keyword for TIKTOK
-KEYWORD_TWITTER_ID = setting['KEYWORD_TWITTER_ID']              # KEYWORD_TWITTER_ID => KEYWORD for TWITTER ID
-KEYWORD_TWITTER_URL = setting['KEYWORD_TWITTER_URL']            # KEYWORD_TWITTER_URL => KEYWORD for TWITTER URL
-KEYWORD_URL = setting['KEYWORD_URL']                            # KEYWORD_URL => Keyword for url
-KEYWORD_VIRTUAL_MONEY = setting['KEYWORD_VIRTUAL_MONEY']        # KEYWORD_VIRTUAL_MONEY => Keyword for virtual money
-KEYWORD_WECHAT = setting['KEYWORD_WECHAT']                      # KEYWORD_WECHAT => Keyword for Wechat
-KEYWORD_WHATSAPP = setting['KEYWORD_WHATSAPP']                  # KEYWORD_WHATSAPP => Keyword for WhatsApp
-LINEBOT_URL = setting['LINEBOT_URL']                            # LINEBOT_URL => Linebot Url
-LINEID_WEB = setting['LINEID_WEB']                              # LINEID_WEB => Line ID from Web
-LOGFILE = setting['LOGFILE']                                    # LOGFILE => Log File Path
-MONGODB_PWD = setting['MONGODB_PWD']                            # MONGODB_PWD => MONGODB Password
-MONGODB_URL = setting['MONGODB_URL']                            # MONGODB_URL => MONGODB Url
-MONGODB_USER = setting['MONGODB_USER']                          # MONGODB_USER => MONGODB User Name
-NOTICE_BOARD = setting['NOTICE_BOARD']                          # NOTICE_BOARD => NOTICE BOARD
-NOTICE_BOARD_LIST = setting['NOTICE_BOARD_LIST']                # NOTICE_BOARD_LIST => NOTICE BOARD LIST
-PEM_DIR = setting['PEM_DIR']                                    # PEM_DIR => Lets Encrypt Certificate Path
-PRIVKEY = setting['PRIVKEY']                                    # PRIVKEY => Lets Encrypt Private Key Path File
-SCAM_WEBSITE_LIST = setting['SCAM_WEBSITE_LIST']                # SCAM_WEBSITE_LIST => SCAM WEBSITE LIST
-SHORT_URL_LIST = setting['SHORT_URL_LIST']                      # SHORT_URL_LIST => Short url list
-SUBWEBSITE = setting['SUBWEBSITE']                              # SUBWEBSITE => Special Subwebsite need to block sub website
-TMP_BLACKLIST = setting['TMP_BLACKLIST']                        # TMP_BLACKLIST => Blacklist for Adguard Home Download
-USER_GUIDE = setting['USER_GUIDE']                              # USER_GUIDE => 使用指南
-WEB_LEADERBOARD_FILE = setting['WEB_LEADERBOARD_FILE']          # WEB_LEADERBOARD_FILE => Query Website times leaderboard from file
-WHOIS_SKIP = setting['WHOIS_SKIP']                              # WHOIS_SKIP => Skip Query Whois
-S_URL = setting['S_URL']                                        # S_URL => 縮網址網址
+# ADMIN => Linebot Admin
+ADMINS = setting['ADMIN']
+# ALLOW_DOMAIN_LIST => Allow Domain can't add blacklist
+ALLOW_DOMAIN_LIST = setting['ALLOW_DOMAIN_LIST']
+# ALLOWED_HOST => 限定使用指定網址進入
+ALLOWED_HOST = setting['ALLOWED_HOST']
+# BLACKUSERID => BLACK USER
+BLACKUSERID = setting['BLACKUSERID']
+# BUSINESS_CARD => 名片網站
+BUSINESS_CARD = setting['BUSINESS_CARD']
+# CERT => Lets Encrypt Certificate Path File
+CERT = setting['CERT']
+# CHAINSIGHT_KEY => Chainsight KEY
+CHAINSIGHT_KEY = setting['CHAINSIGHT_KEY']
+# CHAINSIGHT_LIST => Chainsight Blacklist
+CHAINSIGHT_LIST = setting['CHAINSIGHT_LIST']
+# CHANNEL_ACCESS_TOKEN => Linebot Token
+CHANNEL_ACCESS_TOKEN = setting['CHANNEL_ACCESS_TOKEN']
+# CHANNEL_SECRET => Linebot Token
+CHANNEL_SECRET = setting['CHANNEL_SECRET']
+# CONFIG_FOLDER => Config Folder
+CONFIG_FOLDER = setting['CONFIG_FOLDER']
+# HASH_FILE => HASH INF IN FILE
+HASH_FILE = setting['HASH_FILE']
+# HTTP_HEADERS => Http Headers
+HTTP_HEADERS = setting['HTTP_HEADERS']
+# KEYWORD_DCARD => Keyword for Dcard ID
+KEYWORD_DCARD_ID = setting['KEYWORD_DCARD_ID']
+# KEYWORD_DCARD => Keyword for Dcard URL
+KEYWORD_DCARD_URL = setting['KEYWORD_DCARD_URL']
+# KEYWORD_FB => Keyword for FB
+KEYWORD_FB = setting['KEYWORD_FB']
+# KEYWORD_IG_ID => Keyword for IG ID
+KEYWORD_IG_ID = setting['KEYWORD_IG_ID']
+# KEYWORD_IG_URL => Keyword for IG URL
+KEYWORD_IG_URL = setting['KEYWORD_IG_URL']
+# KEYWORD_LINE_ID => Keyword for LINE ID
+KEYWORD_LINE_ID = setting['KEYWORD_LINE_ID']
+# KEYWORD_LINE_INVITE => Keyword for LINE invite url
+KEYWORD_LINE_INVITE = setting['KEYWORD_LINE_INVITE']
+# KEYWORD_MAIL => Keyword for MAIL
+KEYWORD_MAIL = setting['KEYWORD_MAIL']
+# KEYWORD_SMALLREDBOOK => Keyword for SMALL Red Book
+KEYWORD_SMALLREDBOOK = setting['KEYWORD_SMALLREDBOOK']
+# KEYWORD_TELEGRAM_ID => Keyword for TELEGRAM ID
+KEYWORD_TELEGRAM_ID = setting['KEYWORD_TELEGRAM_ID']
+# KEYWORD_TELEGRAM_URL => Keyword for TELEGRAM URL
+KEYWORD_TELEGRAM_URL = setting['KEYWORD_TELEGRAM_URL']
+# KEYWORD_TIKTOK => Keyword for TIKTOK
+KEYWORD_TIKTOK = setting['KEYWORD_TIKTOK']
+# KEYWORD_TWITTER_ID => KEYWORD for TWITTER ID
+KEYWORD_TWITTER_ID = setting['KEYWORD_TWITTER_ID']
+# KEYWORD_TWITTER_URL => KEYWORD for TWITTER URL
+KEYWORD_TWITTER_URL = setting['KEYWORD_TWITTER_URL']
+# KEYWORD_URL => Keyword for url
+KEYWORD_URL = setting['KEYWORD_URL']
+# KEYWORD_VIRTUAL_MONEY => Keyword for virtual money
+KEYWORD_VIRTUAL_MONEY = setting['KEYWORD_VIRTUAL_MONEY']
+# KEYWORD_WECHAT => Keyword for Wechat
+KEYWORD_WECHAT = setting['KEYWORD_WECHAT']
+# KEYWORD_WHATSAPP => Keyword for WhatsApp
+KEYWORD_WHATSAPP = setting['KEYWORD_WHATSAPP']
+# LINEBOT_URL => Linebot Url
+LINEBOT_URL = setting['LINEBOT_URL']
+# LINEID_WEB => Line ID from Web
+LINEID_WEB = setting['LINEID_WEB']
+# LOGFILE => Log File Path
+LOGFILE = setting['LOGFILE']
+# MONGODB_PWD => MONGODB Password
+MONGODB_PWD = setting['MONGODB_PWD']
+# MONGODB_URL => MONGODB Url
+MONGODB_URL = setting['MONGODB_URL']
+# MONGODB_USER => MONGODB User Name
+MONGODB_USER = setting['MONGODB_USER']
+# NOTICE_BOARD => NOTICE BOARD
+NOTICE_BOARD = setting['NOTICE_BOARD']
+# NOTICE_BOARD_LIST => NOTICE BOARD LIST
+NOTICE_BOARD_LIST = setting['NOTICE_BOARD_LIST']
+# PEM_DIR => Lets Encrypt Certificate Path
+PEM_DIR = setting['PEM_DIR']
+# PRIVKEY => Lets Encrypt Private Key Path File
+PRIVKEY = setting['PRIVKEY']
+# S_URL => 縮網址網址
+S_URL = setting['S_URL']
+# SCAM_WEBSITE_LIST => SCAM WEBSITE LIST
+SCAM_WEBSITE_LIST = setting['SCAM_WEBSITE_LIST']
+# SHORT_URL_LIST => Short url list
+SHORT_URL_LIST = setting['SHORT_URL_LIST']
+# SUBWEBSITE => Special Subwebsite need to block sub website
+SUBWEBSITE = setting['SUBWEBSITE']
+# TMP_BLACKLIST => Blacklist for Adguard Home Download
+TMP_BLACKLIST = setting['TMP_BLACKLIST']
+# USER_GUIDE => 使用指南
+USER_GUIDE = setting['USER_GUIDE']
+# WEB_LEADERBOARD_FILE => Query Website times leaderboard from file
+WEB_LEADERBOARD_FILE = setting['WEB_LEADERBOARD_FILE']
+# WHOIS_SKIP => Skip Query Whois
+WHOIS_SKIP = setting['WHOIS_SKIP']
+
 
 def reloadSetting():
-    global ADMINS, BLACKUSERID, CERT, CHANNEL_ACCESS_TOKEN, USER_GUIDE, CHAINSIGHT_LIST
-    global CHANNEL_SECRET, HASH_FILE, KEYWORD_FB, KEYWORD_TIKTOK, KEYWORD_WECHAT
-    global KEYWORD_IG_ID, KEYWORD_LINE_ID, KEYWORD_TELEGRAM_ID, KEYWORD_URL, S_URL
-    global LINEID_WEB, LOGFILE, HTTP_HEADERS, CONFIG_FOLDER, LINEBOT_URL, BUSINESS_CARD
-    global TMP_BLACKLIST, NOTICE_BOARD, NOTICE_BOARD_LIST, PEM_DIR, PRIVKEY, KEYWORD_DCARD_URL
-    global SCAM_WEBSITE_LIST, SHORT_URL_LIST, SUBWEBSITE, CHAINSIGHT_KEY, KEYWORD_DCARD_ID
-    global WEB_LEADERBOARD_FILE, ALLOW_DOMAIN_LIST, WHOIS_SKIP, KEYWORD_IG_URL
-    global KEYWORD_TWITTER_ID, KEYWORD_MAIL, KEYWORD_WHATSAPP, KEYWORD_TELEGRAM_URL
-    global KEYWORD_SMALLREDBOOK, KEYWORD_VIRTUAL_MONEY, KEYWORD_TWITTER_URL
-    global MONGODB_USER, MONGODB_PWD, MONGODB_URL, KEYWORD_LINE_INVITE
-    global setting, user_guide
+    global ADMINS
+    global ALLOW_DOMAIN_LIST
+    global ALLOWED_HOST
+    global BLACKUSERID
+    global BUSINESS_CARD
+    global CERT
+    global CHAINSIGHT_KEY
+    global CHAINSIGHT_LIST
+    global CHANNEL_ACCESS_TOKEN
+    global CHANNEL_SECRET
+    global CONFIG_FOLDER
+    global HASH_FILE
+    global HTTP_HEADERS
+    global KEYWORD_DCARD_ID
+    global KEYWORD_DCARD_URL
+    global KEYWORD_FB
+    global KEYWORD_IG_ID
+    global KEYWORD_IG_URL
+    global KEYWORD_LINE_ID
+    global KEYWORD_LINE_INVITE
+    global KEYWORD_MAIL
+    global KEYWORD_SMALLREDBOOK
+    global KEYWORD_TELEGRAM_ID
+    global KEYWORD_TELEGRAM_URL
+    global KEYWORD_TIKTOK
+    global KEYWORD_TWITTER_ID
+    global KEYWORD_TWITTER_URL
+    global KEYWORD_URL
+    global KEYWORD_VIRTUAL_MONEY
+    global KEYWORD_WECHAT
+    global KEYWORD_WHATSAPP
+    global LINEBOT_URL
+    global LINEID_WEB
+    global LOGFILE
+    global MONGODB_PWD
+    global MONGODB_URL
+    global MONGODB_USER
+    global NOTICE_BOARD
+    global NOTICE_BOARD_LIST
+    global PEM_DIR
+    global PRIVKEY
+    global S_URL
+    global SCAM_WEBSITE_LIST
+    global setting
+    global SHORT_URL_LIST
+    global SUBWEBSITE
+    global TMP_BLACKLIST
+    global user_guide
+    global USER_GUIDE
+    global WEB_LEADERBOARD_FILE
+    global WHOIS_SKIP
 
-    setting = ''
     with open('setting.json', 'r') as f:
         setting = json.load(f)
 
-    #重讀設定檔
+    # 重讀設定檔
     ADMINS = setting['ADMIN']
     ALLOW_DOMAIN_LIST = setting['ALLOW_DOMAIN_LIST']
+    ALLOWED_HOST = setting['ALLOWED_HOST']
     BLACKUSERID = setting['BLACKUSERID']
     BUSINESS_CARD = setting['BUSINESS_CARD']
     CERT = setting['CERT']
+    CHAINSIGHT_KEY = setting['CHAINSIGHT_KEY']
     CHAINSIGHT_LIST = setting['CHAINSIGHT_LIST']
     CHANNEL_ACCESS_TOKEN = setting['CHANNEL_ACCESS_TOKEN']
     CHANNEL_SECRET = setting['CHANNEL_SECRET']
-    CHAINSIGHT_KEY = setting['CHAINSIGHT_KEY']
     CONFIG_FOLDER = setting['CONFIG_FOLDER']
     HASH_FILE = setting['HASH_FILE']
     HTTP_HEADERS = setting['HTTP_HEADERS']
@@ -133,8 +224,8 @@ def reloadSetting():
     KEYWORD_TWITTER_URL = setting['KEYWORD_TWITTER_URL']
     KEYWORD_URL = setting['KEYWORD_URL']
     KEYWORD_VIRTUAL_MONEY = setting['KEYWORD_VIRTUAL_MONEY']
-    KEYWORD_WHATSAPP = setting['KEYWORD_WHATSAPP']
     KEYWORD_WECHAT = setting['KEYWORD_WECHAT']
+    KEYWORD_WHATSAPP = setting['KEYWORD_WHATSAPP']
     LINEBOT_URL = setting['LINEBOT_URL']
     LINEID_WEB = setting['LINEID_WEB']
     LOGFILE = setting['LOGFILE']
@@ -145,6 +236,7 @@ def reloadSetting():
     NOTICE_BOARD_LIST = setting['NOTICE_BOARD_LIST']
     PEM_DIR = setting['PEM_DIR']
     PRIVKEY = setting['PRIVKEY']
+    S_URL = setting['S_URL']
     SCAM_WEBSITE_LIST = setting['SCAM_WEBSITE_LIST']
     SHORT_URL_LIST = setting['SHORT_URL_LIST']
     SUBWEBSITE = setting['SUBWEBSITE']
@@ -152,26 +244,30 @@ def reloadSetting():
     USER_GUIDE = setting['USER_GUIDE']
     WEB_LEADERBOARD_FILE = setting['WEB_LEADERBOARD_FILE']
     WHOIS_SKIP = setting['WHOIS_SKIP']
-    S_URL = setting['S_URL']
-    user_guide = read_file(USER_GUIDE)
 
+    user_guide = read_file(USER_GUIDE)
     return
+
 
 def IsAdmin(ID):
     if ID in ADMINS:
         return True
     return False
 
+
 def IsOwner(ID):
     if ID == ADMINS[0]:
         return True
     return False
 
+
 def datetime_to_string(dt):
     return dt.strftime("%Y%m%d%H%M%S")
 
+
 def string_to_datetime(string):
     return datetime.strptime(string, "%Y%m%d%H%M%S")
+
 
 def read_json_to_list(filename: str) -> list:
     try:
@@ -179,6 +275,7 @@ def read_json_to_list(filename: str) -> list:
             return json.load(file)
     except (FileNotFoundError, json.JSONDecodeError):
         return []
+
 
 def format_elapsed_time(seconds):
     m, s = divmod(seconds, 60)
@@ -190,12 +287,14 @@ def format_elapsed_time(seconds):
     else:
         return f"{s:.2f}秒"
 
+
 def translate_country(country_code):
     try:
         country = pycountry.countries.lookup(country_code)
         return country.name
     except LookupError:
         return "Unknown"
+
 
 def read_file_to_list(file_path):
     # 讀取檔案並將內容轉換為清單
@@ -204,49 +303,58 @@ def read_file_to_list(file_path):
     # 移除每行的換行符號並返回清單
     return [line.strip() for line in lines]
 
+
 def write_list_to_file(file_path, data_list):
     # 將清單中的內容寫入檔案
     with open(file_path, 'w') as file:
         for item in data_list:
             file.write(f"{item}\n")
 
+
 def is_file_len(file_path):
     with open(file_path, 'r') as file:
         content = file.read()
     return len(content)
+
 
 def read_file(file_path):
     with open(file_path, 'r', encoding="utf-8", newline='') as file:
         lines = file.readlines()
     return ''.join(lines)
 
+
 def write_empty_file(file_path):
     open(file_path, 'w').close()
     return
+
 
 def append_file_U8(file_path, data):
     with open(file_path, "a", encoding="utf-8", newline='') as f:
         f.write(data)
     return
 
+
 def write_file_U8(file_path, data):
     with open(file_path, "w", encoding="utf-8", newline='') as f:
         f.write(data)
     return
+
 
 def read_file_U8(file_path):
     with open(file_path, "r", encoding="utf-8", newline='') as f:
         lines = f.read().splitlines()
     return lines
 
+
 def write_file_bin(file_path, content):
     with open(file_path, "wb") as f:
         f.write(content)
     return
 
+
 def domain_analysis(url):
     if " " in url:
-        url = url.replace(" ","")
+        url = url.replace(" ", "")
     extracted = tldextract.extract(url)
 
     try:
@@ -272,7 +380,9 @@ def domain_analysis(url):
 
     return subdomain, domain, suffix
 
+
 remote_hash_dict = {}
+
 
 def hashes_download():
     global remote_hash_dict
@@ -285,14 +395,17 @@ def hashes_download():
     remote_hash_dict = json.loads(response.content)
     return
 
+
 def calculate_hash(file_path):
     with open(file_path, 'rb') as file:
         content = file.read()
         hash_value = hashlib.md5(content).hexdigest()
         return hash_value
 
+
 def has_non_alphanumeric(text):
     pattern = re.compile(r'[^A-Za-z0-9\s\W]')
     return bool(re.search(pattern, text))
+
 
 user_guide = read_file(USER_GUIDE)

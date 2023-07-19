@@ -29,10 +29,11 @@ import Tools
 
 Name = "ChainSight"
 
+
 def checkFromChainsight(input):
     global Name
-    collection = Query_API.Read_Collection(Name,Name)
-    result = Query_API.Search_Same_Document(collection,"帳號", input)
+    collection = Query_API.Read_Collection(Name, Name)
+    result = Query_API.Search_Same_Document(collection, "帳號", input)
     if result:
         Record_Date = datetime.strptime(result['時間'], "%Y-%m-%d").date()
         today = datetime.today().date()  # 取得當天日期
@@ -58,7 +59,7 @@ def checkFromChainsight(input):
         "X-API-KEY": Tools.CHAINSIGHT_KEY
     }
 
-    timeout = 5
+    timeout = 10
 
     try:
         response = requests.get(url, headers=headers, timeout=timeout)
@@ -94,12 +95,12 @@ def checkFromChainsight(input):
 
         Today_Date = date.today().strftime("%Y-%m-%d")
 
-        struct = {  "帳號": input,
-                    "評分": max_credit,
-                    "時間": Today_Date
-        }
+        struct = {"帳號": input,
+                  "評分": max_credit,
+                  "時間": Today_Date
+                  }
 
-        Query_API.Update_Document(collection, struct,"帳號")
+        Query_API.Update_Document(collection, struct, "帳號")
 
         return msg, max_credit
 

@@ -45,6 +45,7 @@ import whois
 # 原始伺服器
 # ===============================================
 
+
 def get_country_by_ip(ip):
     try:
         response = DbIpCity.get(ip, api_key='free')
@@ -53,13 +54,16 @@ def get_country_by_ip(ip):
         print(f"Error occurred while getting country for IP {ip}: {e}")
         return None
 
+
 def get_ips_by_hostname(hostname):
     try:
         ip_list = socket.gethostbyname_ex(hostname)[2]
         return ip_list
     except Exception as e:
-        print(f"Error occurred while getting IP addresses for hostname {hostname}: {e}")
+        print(
+            f"Error occurred while getting IP addresses for hostname {hostname}: {e}")
         return []
+
 
 def get_server_ip(url, result_list, lock):
 
@@ -107,7 +111,7 @@ def get_server_ip(url, result_list, lock):
     logger.info("====================")
 
     country_list = sorted(list(set(country_list)))
-    #output.append("＝＝＝＝＝＝＝＝＝＝")
+    # output.append("＝＝＝＝＝＝＝＝＝＝")
     msg = f"伺服器位置："
     country_count = len(country_list)
     if country_count == 0:
@@ -121,7 +125,7 @@ def get_server_ip(url, result_list, lock):
             if count != country_count:
                 msg += f"、"
         output.append(f"{msg}")
-        #output.append("＝＝＝＝＝＝＝＝＝＝")
+        # output.append("＝＝＝＝＝＝＝＝＝＝")
         with lock:
             result_list.append(("IP_info_msg", '\n'.join(output)))
     return
@@ -129,6 +133,7 @@ def get_server_ip(url, result_list, lock):
 # ===============================================
 # 進一步搜尋
 # ===============================================
+
 
 def get_external_links(url):
 
@@ -152,7 +157,7 @@ def get_external_links(url):
         return set()
 
     try:
-        response = requests.get(url, timeout=(10,30))
+        response = requests.get(url, timeout=(10, 30))
         response.raise_for_status()
     except requests.exceptions.RequestException as e:
         try:
@@ -216,7 +221,10 @@ def get_external_links(url):
 # 排行榜
 # ===============================================
 
-Not_to_Add_site = ["facebook.com", "google.com", "instagram.com", "youtube.com"]
+
+Not_to_Add_site = ["facebook.com", "google.com",
+                   "instagram.com", "youtube.com"]
+
 
 def update_web_leaderboard(input_url):
 
@@ -251,6 +259,7 @@ def update_web_leaderboard(input_url):
         file.truncate()  # 截斷多餘的內容
 
     return
+
 
 def get_web_leaderboard():
 
@@ -289,7 +298,8 @@ def get_web_leaderboard():
                         count = int(parts[2])
                         url_counts[tld] += count
 
-            sorted_urls = sorted(url_counts.items(), key=lambda x: x[1], reverse=True)
+            sorted_urls = sorted(url_counts.items(),
+                                 key=lambda x: x[1], reverse=True)
             start_date -= timedelta(days=1)
 
         top_list = sorted_urls[:30]
@@ -304,6 +314,7 @@ def get_web_leaderboard():
 # ===============================================
 # 黑名單判斷
 # ===============================================
+
 
 def check_blacklisted_site(domain_name):
 
@@ -356,10 +367,10 @@ def check_blacklisted_site(domain_name):
             update_part_blacklist_rule_to_db(domain_name)
             return True, msg
 
-    msg,max_credit = checkFromChainsight(domain_name)
+    msg, max_credit = checkFromChainsight(domain_name)
     if max_credit > 2:
-        update_part_blacklist_comment(msg,Tools.CHAINSIGHT_LIST)
-        update_part_blacklist_rule_to_db(domain_name,Tools.CHAINSIGHT_LIST)
+        update_part_blacklist_comment(msg, Tools.CHAINSIGHT_LIST)
+        update_part_blacklist_rule_to_db(domain_name, Tools.CHAINSIGHT_LIST)
         return True, msg
 
     return False, msg
@@ -367,6 +378,7 @@ def check_blacklisted_site(domain_name):
 # ===============================================
 # 使用者查詢
 # ===============================================
+
 
 def user_query_website_by_IP(IP):
     country = get_country_by_ip(IP)
@@ -379,7 +391,7 @@ def user_query_website_by_IP(IP):
 
     if re.search("taiwan", output, re.IGNORECASE):
         output = f"伺服器位置：台灣"
-    IsScam,_ = check_blacklisted_site(IP)
+    IsScam, _ = check_blacklisted_site(IP)
     if IsScam:
         rmessage = (f"被判定「是」詐騙/可疑網站\n"
                     f"請勿相信此網站\n\n"
@@ -390,7 +402,7 @@ def user_query_website_by_IP(IP):
                     f"{output}"
                     f"\n"
                     f"{suffix_for_call}"
-        )
+                    )
     else:
         rmessage = (f"目前「尚未」在黑名單資料庫中\n"
                     f"敬請小心謹慎\n\n"
@@ -398,9 +410,10 @@ def user_query_website_by_IP(IP):
                     f"{output}"
                     f"\n"
                     f"{suffix_for_call}\n"
-        )
+                    )
 
     return IsScam, rmessage
+
 
 def user_query_website_by_DNS(domain_name, result_list, lock):
 
@@ -416,8 +429,8 @@ def user_query_website_by_DNS(domain_name, result_list, lock):
 
     if not Is_Skip:
         WHOIS_DB_name = "WHOIS"
-        collection = Query_API.Read_Collection(WHOIS_DB_name,WHOIS_DB_name)
-        if Document:= Query_API.Search_Same_Document(collection, "whois_domain", domain_name):
+        collection = Query_API.Read_Collection(WHOIS_DB_name, WHOIS_DB_name)
+        if Document := Query_API.Search_Same_Document(collection, "whois_domain", domain_name):
             saved_date = datetime.strptime(Document['加入日期'], '%Y%m%d')
             current_date = datetime.now()
             time_diff = current_date - saved_date
@@ -441,25 +454,29 @@ def user_query_website_by_DNS(domain_name, result_list, lock):
                     if not w.creation_date:
                         whois_creation_date = None
                     elif isinstance(w.creation_date, list):
-                        parsed_dates = [date_obj for date_obj in w.creation_date]
-                        whois_creation_date = Tools.datetime_to_string(min(parsed_dates))
+                        parsed_dates = [
+                            date_obj for date_obj in w.creation_date]
+                        whois_creation_date = Tools.datetime_to_string(
+                            min(parsed_dates))
                     else:
-                        whois_creation_date = Tools.datetime_to_string(w.creation_date)
+                        whois_creation_date = Tools.datetime_to_string(
+                            w.creation_date)
 
                     whois_country = w.registrant_country
                     whois_list = {
                         'whois_domain': domain_name,
                         'whois_creation_date': whois_creation_date,
-                        'whois_country':whois_country,
+                        'whois_country': whois_country,
                         '加入日期': datetime.now().strftime('%Y%m%d')
                     }
-                    Query_API.Update_Document(collection, whois_list, 'whois_domain')
+                    Query_API.Update_Document(
+                        collection, whois_list, 'whois_domain')
 
                     index_name = collection.name
                     index_info = collection.index_information()
                     if not index_name in index_info:
                         collection.create_index('whois_domain')
-            except Exception as e: # 判斷原因 whois.parser.PywhoisError: No match for "FXACAP.COM"
+            except Exception as e:  # 判斷原因 whois.parser.PywhoisError: No match for "FXACAP.COM"
                 whois_query_error = True
                 logger.error(f"An error occurred: {e}")
                 error_message = str(e)
@@ -475,21 +492,23 @@ def user_query_website_by_DNS(domain_name, result_list, lock):
                     whois_list = {
                         'whois_domain': domain_name,
                         'whois_creation_date': whois_creation_date,
-                        'whois_country':whois_country,
+                        'whois_country': whois_country,
                         '加入日期': datetime.now().strftime('%Y%m%d')
                     }
-                    Query_API.Update_Document(collection, whois_list, 'whois_domain')
+                    Query_API.Update_Document(
+                        collection, whois_list, 'whois_domain')
                     whois_query_error = False
                     logger.info("Get from Whois Exception")
                 else:
                     logger.info("Cannot get from Whois Exception")
 
     with lock:
-        result_list.append(("whois_query_error",whois_query_error))
-        result_list.append(("whois_domain",whois_domain))
-        result_list.append(("whois_creation_date",whois_creation_date))
-        result_list.append(("whois_country",whois_country))
+        result_list.append(("whois_query_error", whois_query_error))
+        result_list.append(("whois_domain", whois_domain))
+        result_list.append(("whois_creation_date", whois_creation_date))
+        result_list.append(("whois_country", whois_country))
     return
+
 
 def thread_check_blacklisted_site(domain_name, result_list, lock):
     checkresult, msg = check_blacklisted_site(domain_name)
@@ -499,6 +518,8 @@ def thread_check_blacklisted_site(domain_name, result_list, lock):
     return
 
 # 使用者查詢網址
+
+
 def user_query_website(prefix_msg, user_text):
     start_time = time.time()
     result_list = []
@@ -516,7 +537,7 @@ def user_query_website(prefix_msg, user_text):
         IsScam, rmessage = user_query_website_by_IP(ip)
         return IsScam, rmessage, ip
 
-    #解析網址
+    # 解析網址
     subdomain, domain, suffix = Tools.domain_analysis(user_text)
     if not domain or not suffix:
         rmessage = f"{prefix_msg}「 {user_text} 」\n無法構成網址\n請重新輸入"
@@ -533,15 +554,19 @@ def user_query_website(prefix_msg, user_text):
     # 特殊提示
     if domain_name in Tools.BUSINESS_CARD:
         output = user_text
-        if "?" in output :
+        if "?" in output:
             output = output.split('?')[0]
         rmessage = f"{prefix_msg}「{output}」\n是正常的網站\n但內含連結是可能有詐騙網址\n請輸入那些連結"
         return False, rmessage, domain_name
 
-    thread1 = threading.Thread(target=get_server_ip, args=(user_text,result_list, lock))
-    thread2 = threading.Thread(target=update_web_leaderboard, args=(user_text,))
-    thread3 = threading.Thread(target=user_query_website_by_DNS, args=(domain_name,result_list, lock))
-    thread4 = threading.Thread(target=thread_check_blacklisted_site, args=(domain_name,result_list, lock))
+    thread1 = threading.Thread(
+        target=get_server_ip, args=(user_text, result_list, lock))
+    thread2 = threading.Thread(
+        target=update_web_leaderboard, args=(user_text,))
+    thread3 = threading.Thread(
+        target=user_query_website_by_DNS, args=(domain_name, result_list, lock))
+    thread4 = threading.Thread(
+        target=thread_check_blacklisted_site, args=(domain_name, result_list, lock))
     thread1.start()
     thread2.start()
     thread3.start()
@@ -578,7 +603,7 @@ def user_query_website(prefix_msg, user_text):
                         f"若認為誤通報，請補充描述\n"
                         f"\n"
                         f"{suffix_for_call}"
-            )
+                        )
         else:
             rmessage = (f"目前「尚未」在資料庫中\n\n"
                         f"{prefix_msg}「{domain_name}」{special_tip}\n"
@@ -591,7 +616,7 @@ def user_query_website(prefix_msg, user_text):
                         f"「安全評分」輔助判別好壞\n"
                         f"\n"
                         f"{suffix_for_call}\n"
-            )
+                        )
         return checkresult, rmessage, domain_name
 
     # 提取創建時間和最後更新時間
@@ -630,7 +655,7 @@ def user_query_website(prefix_msg, user_text):
     if re.search("taiwan", rmessage_country, re.IGNORECASE):
         rmessage_country = f"註冊國：台灣\n"
 
-    #判斷網站
+    # 判斷網站
     if checkresult:
         rmessage = (f"「是」詐騙網站\n\n"
                     f"請勿相信此網站\n\n"
@@ -642,7 +667,7 @@ def user_query_website(prefix_msg, user_text):
                     f"若認為誤通報，請補充描述\n"
                     f"\n"
                     f"{suffix_for_call}"
-        )
+                    )
     else:
         rmessage = (f"目前「尚未」在資料庫中\n\n"
                     f"{prefix_msg}「{domain_name}」{special_tip}\n"
@@ -661,6 +686,6 @@ def user_query_website(prefix_msg, user_text):
                     f"「安全評分」輔助判別好壞\n"
                     f"\n"
                     f"{suffix_for_call}"
-        )
+                    )
 
     return checkresult, rmessage, domain_name

@@ -30,6 +30,7 @@ import Query_API
 DB_Name = "ImageKey"
 image_feaure_index = None
 
+
 def HaveHuman(image_file):
     # 載入 HOG+SVM 預訓練模型
     hog = cv2.HOGDescriptor()
@@ -42,38 +43,42 @@ def HaveHuman(image_file):
 
     return len(boxes), boxes
 
+
 def Image_Analysis(image):
 
     # 創建SURF對象
-    #surf = cv2.SIFT_create()
-    #keypoints, descriptors = surf.detectAndCompute(image, None)
+    # surf = cv2.SIFT_create()
+    # keypoints, descriptors = surf.detectAndCompute(image, None)
 
     # 使用ORB算法提取特徵
     orb = cv2.ORB_create(
-        nfeatures = 10000,                   # The maximum number of features to retain.
-        scaleFactor = 1.5,                  # Pyramid decimation ratio, greater than 1
-        nlevels = 8,                        # The number of pyramid levels.
-        #edgeThreshold = 7,                  # This is size of the border where the features are not detected. It should roughly match the patchSize parameter
-        firstLevel = 0,                     # It should be 0 in the current implementation.
-        #WTA_K = 2,                          # The number of points that produce each element of the oriented BRIEF descriptor.
-        #scoreType = cv2.ORB_HARRIS_SCORE,   # The default HARRIS_SCORE means that Harris algorithm is used to rank features (the score is written to KeyPoint::score and is
-                                            # used to retain best nfeatures features); FAST_SCORE is alternative value of the parameter that produces slightly less stable
-                                            # keypoints, but it is a little faster to compute.
-        #scoreType = cv2.ORB_FAST_SCORE,
-        #patchSize = 7                       # size of the patch used by the oriented BRIEF descriptor. Of course, on smaller pyramid layers the perceived image area covered
-                                            # by a feature will be larger.
+        # The maximum number of features to retain.
+        nfeatures=10000,
+        scaleFactor=1.5,                  # Pyramid decimation ratio, greater than 1
+        nlevels=8,                        # The number of pyramid levels.
+        # edgeThreshold = 7,                  # This is size of the border where the features are not detected. It should roughly match the patchSize parameter
+        # It should be 0 in the current implementation.
+        firstLevel=0,
+        # WTA_K = 2,                          # The number of points that produce each element of the oriented BRIEF descriptor.
+        # scoreType = cv2.ORB_HARRIS_SCORE,   # The default HARRIS_SCORE means that Harris algorithm is used to rank features (the score is written to KeyPoint::score and is
+        # used to retain best nfeatures features); FAST_SCORE is alternative value of the parameter that produces slightly less stable
+        # keypoints, but it is a little faster to compute.
+        # scoreType = cv2.ORB_FAST_SCORE,
+        # patchSize = 7                       # size of the patch used by the oriented BRIEF descriptor. Of course, on smaller pyramid layers the perceived image area covered
+        # by a feature will be larger.
     )
     keypoints, descriptors = orb.detectAndCompute(image, None)
 
     return descriptors
 
+
 def Add_Image_Sample(image_file):
 
-    collection = Query_API.Read_Collection(DB_Name,DB_Name)
+    collection = Query_API.Read_Collection(DB_Name, DB_Name)
 
     image_name = os.path.basename(image_file)
 
-    if Query_API.Search_Same_Document(collection,"image_name", image_name):
+    if Query_API.Search_Same_Document(collection, "image_name", image_name):
         return
 
     fs = Query_API.Load_GridFS(DB_Name)
@@ -86,7 +91,7 @@ def Add_Image_Sample(image_file):
     if amount:
         logger.info(f"{image_file} = {amount} boxes")
         for (x, y, w, h) in boxes:
-            #logger.info(f"{x},{y},{w},{h}")
+            # logger.info(f"{x},{y},{w},{h}")
             if w*h > 100*100:
                 continue
             cropped_image = load_image[y:y+h, x:x+w]
@@ -125,9 +130,10 @@ def Add_Image_Sample(image_file):
 
     return
 
+
 def Load_Image_Feature_Sub(NAME):
 
-    collection = Query_API.Read_Collection(NAME,NAME)
+    collection = Query_API.Read_Collection(NAME, NAME)
     fs = Query_API.Load_GridFS(NAME)
 
     cursor = collection.find({})
@@ -148,6 +154,7 @@ def Load_Image_Feature_Sub(NAME):
 
     return index
 
+
 def Load_Image_Feature():
     global image_feaure_index, DB_Name
     if not Query_API.Get_DB_len(DB_Name, DB_Name):
@@ -156,6 +163,7 @@ def Load_Image_Feature():
         image_feaure_index = Load_Image_Feature_Sub(DB_Name)
 
     return
+
 
 def Search_Same_Image(image_file):
     global image_feaure_index, DB_Name
@@ -170,22 +178,24 @@ def Search_Same_Image(image_file):
 
     # 使用faiss進行相似度搜索
     k = 3  # 搜尋的最近鄰居數量
-    query_descriptors = query_descriptors.astype(np.float32)  # faiss要求輸入為float32類型
+    query_descriptors = query_descriptors.astype(
+        np.float32)  # faiss要求輸入為float32類型
     distances, indices = image_feaure_index.search(query_descriptors, k)
 
     distances_point = 0
     indices_point = 0
     for i in range(len(distances)):
-        #logger.info(f"[{i}] => {distances[i]}, {indices[i]}")
+        # logger.info(f"[{i}] => {distances[i]}, {indices[i]}")
         for j in range(k):
             number = int(distances[i][j])
             if number < 50000:
-                distances_point+=1
+                distances_point += 1
 
             number = int(indices[i][j])
             if number < 100:
-                indices_point+=1
+                indices_point += 1
 
-    logger.info(f"distances : indices = {str(distances_point)} : {str(indices_point)}")
+    logger.info(
+        f"distances : indices = {str(distances_point)} : {str(indices_point)}")
 
     return distances_point

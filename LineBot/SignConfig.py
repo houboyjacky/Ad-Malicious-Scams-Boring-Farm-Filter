@@ -26,6 +26,7 @@ import subprocess
 import Tools
 from Logger import logger
 
+
 def SignMobileconfig():
     TARGET_DIR = f"{Tools.CONFIG_FOLDER}/config_sign"
     BACKUP_DIR = f"{Tools.CONFIG_FOLDER}/config_backup"
@@ -45,15 +46,17 @@ def SignMobileconfig():
         logger.info(f'The {MOBILECONFIG_DIR} is NOT exist in your system.')
         return False
 
-    subprocess.run(['openssl', 'ec', '-in', f'{Tools.PEM_DIR}/privkey.pem', '-out', f'{TARGET_DIR}/Self_Key.key'], check=True)
+    subprocess.run(['openssl', 'ec', '-in',
+                   f'{Tools.PEM_DIR}/privkey.pem', '-out', f'{TARGET_DIR}/Self_Key.key'], check=True)
 
     filelist = os.listdir(MOBILECONFIG_DIR)
     for filename in filelist:
         extension = filename.split('.')[-1]
         if extension == 'mobileconfig':
-            #logger.info(f'Sign {filename} Start')
-            subprocess.run(['openssl', 'smime', '-sign', '-in', f'{MOBILECONFIG_DIR}/{filename}', '-out', f'{TARGET_DIR}/{filename}', '-signer', f'{Tools.PEM_DIR}/fullchain.pem', '-inkey', f'{TARGET_DIR}/Self_Key.key', '-certfile', f'{Tools.PEM_DIR}/chain.pem', '-outform', 'der', '-nodetach'], check=True)
-            #logger.info(f'Sign {TARGET_DIR}/{filename} Finish')
+            # logger.info(f'Sign {filename} Start')
+            subprocess.run(['openssl', 'smime', '-sign', '-in', f'{MOBILECONFIG_DIR}/{filename}', '-out', f'{TARGET_DIR}/{filename}', '-signer',
+                           f'{Tools.PEM_DIR}/fullchain.pem', '-inkey', f'{TARGET_DIR}/Self_Key.key', '-certfile', f'{Tools.PEM_DIR}/chain.pem', '-outform', 'der', '-nodetach'], check=True)
+            # logger.info(f'Sign {TARGET_DIR}/{filename} Finish')
 
     logger.info("SignMobileconfig Finish")
     return True

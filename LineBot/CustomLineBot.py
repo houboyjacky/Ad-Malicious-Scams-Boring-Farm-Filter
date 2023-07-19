@@ -44,9 +44,11 @@ import threading
 import time
 import Tools
 
+
 def WhereAreYou(IP):
     res = DbIpCity.get(IP, api_key="free")
     return f"User IP : {res.ip_address}, Location: {res.city}, {res.region}, {res.country} "
+
 
 app = Flask(__name__)
 
@@ -54,12 +56,13 @@ handler = WebhookHandler(Tools.CHANNEL_SECRET)
 
 ALLOWED_HOST = ['linebot.jackyhou.idv.tw', 'download.jackyhou.idv.tw']
 
+
 @app.before_request
 def limit_remote_addr():
     # 控制是否透過網址連入
     hostname = request.host.split(':')[0]
     if hostname in ALLOWED_HOST:
-       return None
+        return None
 
     # 開啟Cloudflare Proxy 保護手段
     # for cf_ip in CF_IPS:
@@ -71,6 +74,7 @@ def limit_remote_addr():
     log_message = '403 Error: %s %s %s' % (msg, request.method, request.url)
     logger.error(log_message)
     return "Forbidden", 403
+
 
 @app.after_request
 def log_request(response):
@@ -89,10 +93,12 @@ def log_request(response):
     logger.error(log_message)
     return response
 
+
 @app.route('/config/robots.txt')
 def robots():
     logger.info('Downloaded robots.txt')
     return send_file('robots.txt', mimetype='text/plain')
+
 
 @app.route('/<filename>')
 def download(filename):
@@ -108,15 +114,15 @@ def download(filename):
     logger.info(f"{msg} and Downloaded file: {filename}")
 
     _, extension = os.path.splitext(filename)
-    #logger.info(f"extension = {extension}")
+    # logger.info(f"extension = {extension}")
 
     path = ""
     if extension == ".mobileconfig":
         path = f"{Tools.CONFIG_FOLDER}/config_sign"
-        #logger.info(f"path = {path}")
+        # logger.info(f"path = {path}")
     elif extension == ".jpg":
         path = f"{Tools.CONFIG_FOLDER}"
-        #logger.info(f"path = {path}")
+        # logger.info(f"path = {path}")
     elif filename == os.path.basename(Tools.TMP_BLACKLIST):
         return Response(open(Tools.TMP_BLACKLIST, "rb"), mimetype="text/plain")
     else:
@@ -129,6 +135,7 @@ def download(filename):
     else:
         logger.info("Allowed file but not found")
         abort(404)
+
 
 @app.route('/s/<short_url>')
 def redirect_to_original_url(short_url):
@@ -148,6 +155,8 @@ def redirect_to_original_url(short_url):
         abort(404)
 
 # 當 LINE 聊天機器人接收到「訊息事件」時，進行回應
+
+
 @app.route("/callback", methods=['POST'])
 def message_callback():
 
@@ -163,6 +172,8 @@ def message_callback():
     return 'OK'
 
 # 每當收到 LINE 聊天機器人的訊息時，觸發此函式
+
+
 @handler.add(MessageEvent)
 def handle_message(event):
 
@@ -182,11 +193,13 @@ def handle_message(event):
         pass
     return
 
+
 def Update_url_schedule(stop_event):
     schedule.every().hour.at(":00").do(update_blacklist)
     while not stop_event.is_set():
         time.sleep(1)
         schedule.run_pending()
+
 
 def Logger_schedule(stop_event):
     schedule.every().day.at("23:00").do(Logger_Transfer, pre_close=False)
@@ -194,11 +207,13 @@ def Logger_schedule(stop_event):
         time.sleep(1)
         schedule.run_pending()
 
+
 def signal_handler(sig, frame):
     logger.info(f"Received signal : {str(sig)}")
     stop_event.set()
     Logger_Transfer()
     sys.exit(0)
+
 
 def background_tasks():
     logger.info(f"background_tasks Start")
@@ -210,6 +225,7 @@ def background_tasks():
     EmptyShortUrlDB()
     logger.info(f"background_tasks Finish")
 
+
 if __name__ == "__main__":
 
     # 建立 stop_event
@@ -220,8 +236,10 @@ if __name__ == "__main__":
 
     # 建立 thread
     tasks_thread = threading.Thread(target=background_tasks)
-    update_thread = threading.Thread(target=Update_url_schedule, args=(stop_event,))
-    logger_thread = threading.Thread(target=Logger_schedule, args=(stop_event,))
+    update_thread = threading.Thread(
+        target=Update_url_schedule, args=(stop_event,))
+    logger_thread = threading.Thread(
+        target=Logger_schedule, args=(stop_event,))
 
     # 啟動 thread
     tasks_thread.start()
@@ -230,7 +248,8 @@ if __name__ == "__main__":
 
     # 開啟 LINE 聊天機器人的 Webhook 伺服器
     logger.info(f"Line Bot is ready")
-    app.run(host='0.0.0.0', port=8443, ssl_context=(Tools.CERT, Tools.PRIVKEY), threaded=True)
+    app.run(host='0.0.0.0', port=8443, ssl_context=(
+        Tools.CERT, Tools.PRIVKEY), threaded=True)
 
     # 等待 thread 結束
     tasks_thread.join()

@@ -29,15 +29,17 @@ import Tools
 
 Name = "Facebook"
 
+
 def get_fb_list_len():
     global Name
-    document_count = Query_API.Get_DB_len(Name,Name)
+    document_count = Query_API.Get_DB_len(Name, Name)
     return document_count
 
-def analyze_FB_url(user_text:str) -> Optional[dict]:
 
-    user_text = user_text.replace("加入","")
-    user_text = user_text.replace("刪除","")
+def analyze_FB_url(user_text: str) -> Optional[dict]:
+
+    user_text = user_text.replace("加入", "")
+    user_text = user_text.replace("刪除", "")
     logger.info(f"user_text: {user_text}")
 
     if match := re.search(Tools.KEYWORD_FB[0], user_text):
@@ -67,39 +69,48 @@ def analyze_FB_url(user_text:str) -> Optional[dict]:
 
     datetime = date.today().strftime("%Y-%m-%d")
 
-    struct = { "帳號": Username, "來源": user_text, "回報次數": 0, "失效": 0, "檢查者": "", "加入日期": datetime }
+    struct = {"帳號": Username, "來源": user_text,
+              "回報次數": 0, "失效": 0, "檢查者": "", "加入日期": datetime}
 
     return struct
 
-def FB_Write_Document(user_text:str):
+
+def FB_Write_Document(user_text: str):
     global Name
-    collection = Query_API.Read_Collection(Name,Name)
+    collection = Query_API.Read_Collection(Name, Name)
     analyze = analyze_FB_url(user_text)
-    rmessage = Query_API.Write_Document_Account(collection, analyze,Name)
+    rmessage = Query_API.Write_Document_Account(collection, analyze, Name)
     return rmessage
 
-def FB_Read_Document(user_text:str):
+
+def FB_Read_Document(user_text: str):
     global Name
-    collection = Query_API.Read_Collection(Name,Name)
+    collection = Query_API.Read_Collection(Name, Name)
     analyze = analyze_FB_url(user_text)
-    rmessage, status = Query_API.Read_Document_Account(collection,analyze,Name)
+    rmessage, status = Query_API.Read_Document_Account(
+        collection, analyze, Name)
     return rmessage, status
 
-def FB_Delete_Document(user_text:str):
+
+def FB_Delete_Document(user_text: str):
     global Name
-    collection = Query_API.Read_Collection(Name,Name)
+    collection = Query_API.Read_Collection(Name, Name)
     analyze = analyze_FB_url(user_text)
-    rmessage = Query_API.Delete_document_Account(collection,analyze,Name)
+    rmessage = Query_API.Delete_document_Account(collection, analyze, Name)
     return rmessage
 
+
 Record_players = []
+
 
 def get_random_fb_blacklist(UserID) -> str:
     global Name, Record_players
     site = Query_API.get_random_blacklist(Record_players, Name, Name, UserID)
     return site
 
+
 def push_random_fb_blacklist(UserID, success, disappear):
     global Name, Record_players
-    found = Query_API.push_random_blacklist(Record_players, Name, Name, UserID, success, disappear)
+    found = Query_API.push_random_blacklist(
+        Record_players, Name, Name, UserID, success, disappear)
     return found

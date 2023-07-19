@@ -28,42 +28,44 @@ import Query_API
 
 Name = "詐騙回報"
 
-def write_new_netizen_file(user_id:str, user_name:str, user_text:str, isSystem:bool) -> bool:
+
+def write_new_netizen_file(user_id: str, user_name: str, user_text: str, isSystem: bool) -> bool:
     global netizens
     global Name
 
-    collection = Query_API.Read_Collection(Name,Name)
+    collection = Query_API.Read_Collection(Name, Name)
     total_documents = collection.count_documents({})
     number = total_documents + 1
 
     datetime = date.today().strftime("%Y-%m-%d")
 
-    struct =  { "序號": number,
-                "時間": datetime,
-                "提交者": user_name,
-                "提交者ID": user_id,
-                "內容": user_text,
-                "完成": 0,
-                "失效": 0,
-                "檢查者": "",
-                "系統轉送": isSystem
-            }
+    struct = {"序號": number,
+              "時間": datetime,
+              "提交者": user_name,
+              "提交者ID": user_id,
+              "內容": user_text,
+              "完成": 0,
+              "失效": 0,
+              "檢查者": "",
+              "系統轉送": isSystem
+              }
 
     Query_API.Write_Document(collection, struct)
     write_user_point(user_id, 1)
     return False
 
-def get_netizen_file(user_id:str):
+
+def get_netizen_file(user_id: str):
     global Name
-    collection = Query_API.Read_Collection(Name,Name)
+    collection = Query_API.Read_Collection(Name, Name)
     total_documents = collection.count_documents({})
 
     query = {
         "$and": [
-            {   "完成": 0,
+            {"完成": 0,
                 "失效": 0,
-                '檢查者':""
-            }
+                '檢查者': ""
+             }
         ]
     }
 
@@ -71,15 +73,16 @@ def get_netizen_file(user_id:str):
         logger.info(f"result={result}")
         SN = f"{str(result['序號'])}/{str(total_documents)}"
         result['檢查者'] = user_id
-        Query_API.Update_Document(collection,result,"序號")
+        Query_API.Update_Document(collection, result, "序號")
         return SN, result["內容"], result["系統轉送"]
 
     return "", "", ""
 
+
 def push_netizen_file(UserID, success, disappear):
     global Name
     found = False
-    collection = Query_API.Read_Collection(Name,Name)
+    collection = Query_API.Read_Collection(Name, Name)
     Document = Query_API.Search_Same_Document(collection, "檢查者", UserID)
 
     if not Document:
@@ -94,6 +97,6 @@ def push_netizen_file(UserID, success, disappear):
         Document['失效'] = 1
         write_user_point(UserID, 2)
 
-    Query_API.Update_Document(collection,Document,"序號")
+    Query_API.Update_Document(collection, Document, "序號")
 
     return found

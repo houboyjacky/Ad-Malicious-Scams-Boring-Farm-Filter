@@ -29,16 +29,18 @@ from Query_API import Read_Collection, Get_DB_len, Update_Document, Search_Same_
 DB_Name = "ShortUrls"
 lifedays = 30
 
+
 def EmptyShortUrlDB():
     global DB_Name
 
-    if Get_DB_len(DB_Name,DB_Name):
+    if Get_DB_len(DB_Name, DB_Name):
         return
 
     characters = string.ascii_lowercase + string.digits
     length = 4
 
-    combinations = [''.join(combination) for combination in itertools.product(characters, repeat=length)]
+    combinations = [''.join(combination) for combination in itertools.product(
+        characters, repeat=length)]
 
     structs = [{
         "縮網址": combination,
@@ -48,10 +50,11 @@ def EmptyShortUrlDB():
         "點擊者": []
     } for combination in combinations]
 
-    collection = Read_Collection(DB_Name,DB_Name)
+    collection = Read_Collection(DB_Name, DB_Name)
     collection.insert_many(structs)
 
     return
+
 
 def CreateShortUrl(urls, UserID):
     global DB_Name
@@ -67,20 +70,22 @@ def CreateShortUrl(urls, UserID):
         if not random_document.get('登陸者'):
             random_document['登陸網址'] = urls
             random_document['登陸者'] = UserID
-            random_document['登陸日期'] = datetime.now().strftime("%Y-%m-%d %H-%M-%S")
-            Update_Document(collection,random_document, "縮網址")
+            random_document['登陸日期'] = datetime.now().strftime(
+                "%Y-%m-%d %H-%M-%S")
+            Update_Document(collection, random_document, "縮網址")
 
             return random_document['縮網址']
 
         count += 1
     return None
 
+
 def RecordShortUrl(shorturl, IP, Country):
     global DB_Name
 
     collection = Read_Collection(DB_Name, DB_Name)
 
-    document = Search_Same_Document(collection,"縮網址", shorturl)
+    document = Search_Same_Document(collection, "縮網址", shorturl)
     if not document or not document['登陸網址']:
         return None
 
@@ -89,24 +94,25 @@ def RecordShortUrl(shorturl, IP, Country):
     record_day = datetime.strptime(document['登陸日期'], "%Y-%m-%d %H-%M-%S")
     diff_days = (now_datetime.date() - record_day.date()).days
     left_days = lifedays - diff_days
-    if left_days < 0 :
-        struct = {  "縮網址" : document['縮網址'],
-                    "登陸網址" : "",
-                    "登陸者" : "",
-                    "登陸日期" : "",
-                    "點擊者": {}
-        }
+    if left_days < 0:
+        struct = {"縮網址": document['縮網址'],
+                  "登陸網址": "",
+                  "登陸者": "",
+                  "登陸日期": "",
+                  "點擊者": {}
+                  }
         Update_Document(collection, struct, "縮網址")
         return None
 
-    struct = {  "IP" : IP,
-                "國家" : Country,
-                "時間" : now_datetime
-    }
+    struct = {"IP": IP,
+              "國家": Country,
+              "時間": now_datetime
+              }
 
     document['點擊者'].append(struct)
-    Update_Document(collection,document, "縮網址")
+    Update_Document(collection, document, "縮網址")
     return document['登陸網址']
+
 
 def GetInfShortUrl(User_ID):
     global DB_Name
@@ -128,7 +134,7 @@ def GetInfShortUrl(User_ID):
         record_day = datetime.strptime(document['登陸日期'], "%Y-%m-%d %H-%M-%S")
         diff_days = (today - record_day.date()).days
         left_days = lifedays - diff_days
-        if left_days < 0 :
+        if left_days < 0:
             do_clear = True
             Text += f"縮網址已失效，本次查詢後刪除，敬請截圖紀錄\n"
         else:
@@ -140,17 +146,17 @@ def GetInfShortUrl(User_ID):
             sn = 1
             for man in document['點擊者']:
                 Text += f"{sn}.IP[{man['IP']}]\n在{man['時間']}的{man['國家']}國家點擊\n"
-                sn+=1
+                sn += 1
         Text += "\n"
 
         if do_clear:
             do_clear = False
-            struct = {  "縮網址" : document['縮網址'],
-                        "登陸網址" : "",
-                        "登陸者" : "",
-                        "登陸日期" : "",
-                        "點擊者": {}
-            }
+            struct = {"縮網址": document['縮網址'],
+                      "登陸網址": "",
+                      "登陸者": "",
+                      "登陸日期": "",
+                      "點擊者": {}
+                      }
             Update_Document(collection, struct, "縮網址")
 
     Text += f"小提醒：對方可能會透過VPN或跳板躲避，僅供參考"

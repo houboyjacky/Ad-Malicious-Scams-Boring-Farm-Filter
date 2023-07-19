@@ -30,6 +30,7 @@ CF_IPS_URL_IPV6 = "https://www.cloudflare.com/ips-v6"
 CF_IPS_LOCAL = "config/Cloudflare_IPs.txt"
 CF_IPS = None
 
+
 def get_cf_ips():
     if not os.path.exists(CF_IPS_LOCAL):
         download_cf_ips()
@@ -37,6 +38,7 @@ def get_cf_ips():
     cf_ips = Tools.read_file_U8(CF_IPS_LOCAL)
 
     return cf_ips
+
 
 def download_cf_ips():
     response = requests.get(CF_IPS_URL_IPV4)
@@ -58,5 +60,6 @@ def download_cf_ips():
         raise Exception("Unable to download Cloudflare IPv6s.")
 
     return
+
 
 CF_IPS = get_cf_ips()

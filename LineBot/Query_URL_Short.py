@@ -39,6 +39,7 @@ import Tools
 
 HTTP_HEADERS_LIST = Tools.read_json_to_list(Tools.HTTP_HEADERS)
 
+
 def resolve_redirects_wenkio(url):
     try:
         response = requests.get(url)
@@ -47,13 +48,15 @@ def resolve_redirects_wenkio(url):
             end_index = response.text.find('"', start_index)
             if start_index >= 0 and end_index >= 0:
                 parsed_url = response.text[start_index:end_index]
-                decoded_url = html.unescape(parsed_url.encode().decode('unicode_escape'))
+                decoded_url = html.unescape(
+                    parsed_url.encode().decode('unicode_escape'))
                 logger.info(f"final_url_wenkio = {decoded_url}")
                 return decoded_url
     except requests.exceptions.RequestException as e:
         logger.info(f"Error occurred: {e}")
 
     return None
+
 
 def resolve_redirects_recurlcc(url):
     try:
@@ -69,6 +72,7 @@ def resolve_redirects_recurlcc(url):
         logger.info(f"Error occurred: {e}")
 
     return None
+
 
 def resolve_redirects_iiilio(url):
     global HTTP_HEADERS_LIST
@@ -96,6 +100,7 @@ def resolve_redirects_iiilio(url):
 
     return None
 
+
 def resolve_redirects_ruby(url):
     global HTTP_HEADERS_LIST
     headers = {}
@@ -114,6 +119,7 @@ def resolve_redirects_ruby(url):
         logger.info(f"Error occurred: {e}")
 
     return None
+
 
 def resolve_redirects_other(url):
     global HTTP_HEADERS_LIST
@@ -138,6 +144,7 @@ def resolve_redirects_other(url):
 
     return None
 
+
 Need_Head_short_url_list = [
     "risu.io",
     "lurl.cc",
@@ -145,22 +152,23 @@ Need_Head_short_url_list = [
     "zecz.ec"
 ]
 
+
 def Resolve_Redirects(url):
 
     _, domain, suffix = Tools.domain_analysis(url.lower())
     domain_name = f"{domain}.{suffix}"
 
-    if  domain_name in Need_Head_short_url_list:
+    if domain_name in Need_Head_short_url_list:
         final_url = resolve_redirects_other(url)
         if final_url != url:
             logger.info(f"resolve_redirects_other = {final_url}")
             return final_url
 
     if domain_name == "rb.gy":
-       final_url = resolve_redirects_ruby(url)
-       if final_url != url:
-           logger.info(f"resolve_redirects_rugy = {final_url}")
-           return final_url
+        final_url = resolve_redirects_ruby(url)
+        if final_url != url:
+            logger.info(f"resolve_redirects_rugy = {final_url}")
+            return final_url
 
     if domain_name == "iiil.io":
         final_url = resolve_redirects_iiilio(url)
@@ -209,9 +217,10 @@ def Resolve_Redirects(url):
 
     return None
 
+
 def user_query_shorturl_normal(user_text):
 
-    #解析網址
+    # 解析網址
     subdomain, domain, suffix = Tools.domain_analysis(user_text)
 
     if subdomain:
@@ -255,6 +264,7 @@ def user_query_shorturl_normal(user_text):
 
     return rmessage, result, keep_go_status
 
+
 def user_query_shorturl_meta(user_text):
 
     logger.info(f"user_text={user_text}")
@@ -278,17 +288,19 @@ def user_query_shorturl_meta(user_text):
 
     return rmessage, url, keep_go_status
 
+
 def user_query_shorturl(user_text):
 
     rmessage = ""
     msg = ""
     result = ""
     keep_go_status = False
-    meta_redirects_list = ["lm.facebook.com", "l.facebook.com", "l.instagram.com"]
+    meta_redirects_list = ["lm.facebook.com",
+                           "l.facebook.com", "l.instagram.com"]
 
     url = user_text
     times = 0
-    while(url):
+    while (url):
         times += 1
         if times > 10:
             logger.info(f"縮網址times超過十次")
@@ -298,7 +310,7 @@ def user_query_shorturl(user_text):
         if re.search(Tools.KEYWORD_LINE_INVITE[6], url):
             return rmessage, result, True
 
-        #解析網址
+        # 解析網址
         subdomain, domain, suffix = Tools.domain_analysis(url)
 
         if subdomain:
@@ -332,7 +344,7 @@ def user_query_shorturl(user_text):
             rmessage = f"{msg}{rmessage}"
             continue
 
-        if result :
+        if result:
             return rmessage, result, keep_go_status
         else:
             break

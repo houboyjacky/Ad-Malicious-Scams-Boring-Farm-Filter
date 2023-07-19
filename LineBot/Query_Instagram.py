@@ -29,12 +29,14 @@ import Tools
 
 Name = "Instagram"
 
+
 def get_ig_list_len():
     global Name
-    document_count = Query_API.Get_DB_len(Name,Name)
+    document_count = Query_API.Get_DB_len(Name, Name)
     return document_count
 
-def analyze_IG_url(user_text:str) -> Optional[dict]:
+
+def analyze_IG_url(user_text: str) -> Optional[dict]:
 
     logger.info(f"user_text: {user_text}")
     Username = ""
@@ -50,39 +52,48 @@ def analyze_IG_url(user_text:str) -> Optional[dict]:
     logger.info(f"Code: {Code}")
     datetime = date.today().strftime("%Y-%m-%d")
 
-    struct = { "帳號": Username, "來源": user_text, "回報次數": 0, "失效": 0, "檢查者": "", "加入日期": datetime }
+    struct = {"帳號": Username, "來源": user_text,
+              "回報次數": 0, "失效": 0, "檢查者": "", "加入日期": datetime}
 
     return struct
 
-def IG_Write_Document(user_text:str):
+
+def IG_Write_Document(user_text: str):
     global Name
-    collection = Query_API.Read_Collection(Name,Name)
+    collection = Query_API.Read_Collection(Name, Name)
     analyze = analyze_IG_url(user_text)
-    rmessage = Query_API.Write_Document_Account(collection,analyze,Name)
+    rmessage = Query_API.Write_Document_Account(collection, analyze, Name)
     return rmessage
 
-def IG_Read_Document(user_text:str):
+
+def IG_Read_Document(user_text: str):
     global Name
-    collection = Query_API.Read_Collection(Name,Name)
+    collection = Query_API.Read_Collection(Name, Name)
     analyze = analyze_IG_url(user_text)
-    rmessage, status = Query_API.Read_Document_Account(collection,analyze,Name)
+    rmessage, status = Query_API.Read_Document_Account(
+        collection, analyze, Name)
     return rmessage, status
 
-def IG_Delete_Document(user_text:str):
+
+def IG_Delete_Document(user_text: str):
     global Name
-    collection = Query_API.Read_Collection(Name,Name)
+    collection = Query_API.Read_Collection(Name, Name)
     analyze = analyze_IG_url(user_text)
-    rmessage = Query_API.Delete_document_Account(collection,analyze,Name)
+    rmessage = Query_API.Delete_document_Account(collection, analyze, Name)
     return rmessage
 
+
 Record_players = []
+
 
 def get_random_ig_blacklist(UserID) -> str:
     global Name, Record_players
     site = Query_API.get_random_blacklist(Record_players, Name, Name, UserID)
     return site
 
+
 def push_random_ig_blacklist(UserID, success, disappear):
     global Name, Record_players
-    found = Query_API.push_random_blacklist(Record_players, Name, Name, UserID, success, disappear)
+    found = Query_API.push_random_blacklist(
+        Record_players, Name, Name, UserID, success, disappear)
     return found
