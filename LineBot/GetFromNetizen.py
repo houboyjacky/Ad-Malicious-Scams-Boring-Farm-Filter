@@ -30,10 +30,21 @@ Name = "詐騙回報"
 
 
 def write_new_netizen_file(user_id: str, user_name: str, user_text: str, isSystem: bool) -> bool:
-    global netizens
     global Name
 
     collection = Query_API.Read_Collection(Name, Name)
+
+    query = {
+        "$and": [
+            {   "內容" : user_text,
+                "提交者ID" : user_id
+             }
+        ]
+    }
+
+    if collection.find_one(query):
+        return True
+
     total_documents = collection.count_documents({})
     number = total_documents + 1
 

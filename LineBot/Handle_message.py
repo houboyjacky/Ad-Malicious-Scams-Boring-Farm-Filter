@@ -457,10 +457,10 @@ def handle_message_text_admin(user_id, orgin_text):
         rmessage = handle_message_text_admin_sub(orgin_text)
 
     return rmessage
-# 前置與防呆
 
 
 def handle_message_text_front(user_text) -> str:
+    # 前置與防呆
     if len(user_text) > 1000:
         if user_text.startswith("http"):
             _, domain, suffix = Tools.domain_analysis(user_text)
@@ -514,8 +514,10 @@ def handle_message_text_game(user_id, user_text) -> str:
             rmessage = Handle_LineBot.message_reply_After_Report(True)
         else:
             user_name = Handle_LineBot.linebot_getRealName(user_id)
-            write_new_netizen_file(user_id, user_name, user_text, False)
-            rmessage = Handle_LineBot.message_reply_After_Report(False)
+            if result :=write_new_netizen_file(user_id, user_name, user_text, False):
+                rmessage = "重複輸入！請勿重複回報！"
+            else:
+                rmessage = Handle_LineBot.message_reply_After_Report(False)
         return rmessage
 
     if user_text == "遊戲":
