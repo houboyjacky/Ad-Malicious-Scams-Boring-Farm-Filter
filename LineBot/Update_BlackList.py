@@ -221,6 +221,13 @@ def update_blacklist():
     return
 
 
+def update_local_Blacklist():
+    global blacklist
+    update_list_from_file(Tools.TMP_BLACKLIST, blacklist, True)
+    update_list_from_file(Tools.CHAINSIGHT_LIST, blacklist, True)
+    return
+
+
 def update_document_to_db(filename, domain_name, db_name):
     datetime = date.today().strftime("%Y-%m-%d")
     if filename == Tools.TMP_BLACKLIST or filename == Tools.CHAINSIGHT_LIST:

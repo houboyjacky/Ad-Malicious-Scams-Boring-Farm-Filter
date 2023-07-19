@@ -41,7 +41,7 @@ from Query_VirtualMoney import Virtual_Money_Read_Document, Virtual_Money_Write_
 from Query_WhatsApp import WhatsApp_Write_Document, WhatsApp_Delete_Document, WhatsApp_Read_Document
 from Query_Wechat import Wechat_Write_Document, Wechat_Delete_Document, Wechat_Read_Document
 from Query_Dcard import Dcard_Read_Document, Dcard_Write_Document, Dcard_Delete_Document
-from Update_BlackList import update_part_blacklist_rule_to_db, update_part_blacklist_comment
+from Update_BlackList import update_part_blacklist_rule_to_db, update_part_blacklist_comment, update_local_Blacklist
 from Security_ShortUrl import CreateShortUrl, GetInfShortUrl
 import Handle_LineBot
 import os
@@ -379,6 +379,7 @@ def handle_message_text_admin(user_id, orgin_text):
     if orgin_text == "重讀":
         Tools.reloadSetting()
         reload_notice_board()
+        update_local_Blacklist()
         logger.info("Reload setting.json")
         rmessage = f"設定已重新載入"
     elif orgin_text == "檢閱":
