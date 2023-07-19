@@ -27,7 +27,7 @@ from ip2geotools.databases.noncommercial import DbIpCity
 from Logger import logger
 from PrintText import suffix_for_call
 from Query_Chainsight import checkFromChainsight
-from Security_Check import get_cf_ips
+from Security_Check import CF_IPS
 from Update_BlackList import update_part_blacklist_rule_to_db, update_part_blacklist_comment, blacklist
 from urllib.parse import urlparse, urljoin
 import ipaddress
@@ -79,14 +79,13 @@ def get_server_ip(url, result_list, lock):
             result_list.append(("IP_info_msg", ""))
         return
 
-    cf_ips = get_cf_ips()
     logger.info("====================")
 
     is_get_first_country = False
     country_list = []
     for ip in ip_list:
         is_cloudflare = False
-        for cf_ip in cf_ips:
+        for cf_ip in CF_IPS:
             if ipaddress.ip_address(ip) in ipaddress.ip_network(cf_ip):
                 is_cloudflare = True
                 break

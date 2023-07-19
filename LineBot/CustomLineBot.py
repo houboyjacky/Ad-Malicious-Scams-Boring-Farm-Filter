@@ -30,7 +30,7 @@ from linebot.exceptions import InvalidSignatureError
 from linebot.models import MessageEvent
 from Logger import logger, Logger_Transfer
 from Query_Line_ID import LINE_ID_Download_From_165
-from Security_Check import get_cf_ips, download_cf_ips
+from Security_Check import CF_IPS, download_cf_ips
 from SignConfig import SignMobileconfig
 from Update_BlackList import update_blacklist
 from Security_ShortUrl import RecordShortUrl, EmptyShortUrlDB
@@ -52,12 +52,20 @@ app = Flask(__name__)
 
 handler = WebhookHandler(Tools.CHANNEL_SECRET)
 
+ALLOWED_HOST = ['linebot.jackyhou.idv.tw', 'download.jackyhou.idv.tw']
+
 @app.before_request
 def limit_remote_addr():
-    cf_ips = get_cf_ips()
-    for cf_ip in cf_ips:
-        if ipaddress.ip_address(request.remote_addr) in ipaddress.ip_network(cf_ip):
-            return None
+    # 控制是否透過網址連入
+    hostname = request.host.split(':')[0]
+    if hostname in ALLOWED_HOST:
+       return None
+
+    # 開啟Cloudflare Proxy 保護手段
+    # for cf_ip in CF_IPS:
+    #     if ipaddress.ip_address(request.remote_addr) in ipaddress.ip_network(cf_ip):
+    #         return None
+
     msg = WhereAreYou(request.remote_addr)
     # 記錄403錯誤
     log_message = '403 Error: %s %s %s' % (msg, request.method, request.url)
@@ -71,8 +79,7 @@ def log_request(response):
 
     ip = request.remote_addr
 
-    cf_ips = get_cf_ips()
-    for cf_ip in cf_ips:
+    for cf_ip in CF_IPS:
         if ipaddress.IPv4Address(request.remote_addr) in ipaddress.ip_network(cf_ip):
             ip = request.headers.get('CF-Connecting-IP')
 
@@ -89,9 +96,14 @@ def robots():
 
 @app.route('/<filename>')
 def download(filename):
+
     # 取得使用者的真實 IP 位址
-    user_ip = request.headers.get('CF-Connecting-IP')
-    msg = WhereAreYou(user_ip)
+    ip = request.remote_addr
+    for cf_ip in CF_IPS:
+        if ipaddress.ip_address(request.remote_addr) in ipaddress.ip_network(cf_ip):
+            ip = request.headers.get('CF-Connecting-IP')
+
+    msg = WhereAreYou(ip)
     # 印出使用者的 IP 位址與所下載的檔案
     logger.info(f"{msg} and Downloaded file: {filename}")
 

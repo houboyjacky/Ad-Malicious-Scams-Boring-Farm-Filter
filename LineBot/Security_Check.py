@@ -28,6 +28,7 @@ import Tools
 CF_IPS_URL_IPV4 = "https://www.cloudflare.com/ips-v4"
 CF_IPS_URL_IPV6 = "https://www.cloudflare.com/ips-v6"
 CF_IPS_LOCAL = "config/Cloudflare_IPs.txt"
+CF_IPS = None
 
 def get_cf_ips():
     if not os.path.exists(CF_IPS_LOCAL):
@@ -57,3 +58,5 @@ def download_cf_ips():
         raise Exception("Unable to download Cloudflare IPv6s.")
 
     return
+
+CF_IPS = get_cf_ips()
