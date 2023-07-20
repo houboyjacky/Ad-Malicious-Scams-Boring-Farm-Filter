@@ -73,9 +73,9 @@ def message_reply_confirm(button1, button2, text, function_name):
     )
     )
 
-    actions.append(URITemplateAction(
+    actions.append(MessageTemplateAction(
         label=button2,
-        uri=button2
+        text=button2
     )
     )
 
@@ -173,7 +173,11 @@ def message_reply_Game_Start(site):
     )
     )
 
-    text = f"點開「詐騙連結」後進行檢舉\n\n若「完成」點「完成」\n若「失效」點「失效」\n官方賴->貼文->右上角有檢舉"
+    text = (f"📍點開「詐騙連結」進行檢舉\n\n"
+            f"請依照步驟\n"
+            f"✅完成後點「完成」\n"
+            f"❌連結失效點「失效」\n\n"
+            f"📍若是官方賴➡️貼文➡️右上角檢舉")
 
     buttons_template = ButtonsTemplate(
         title=title,
@@ -193,10 +197,10 @@ def message_reply_Game_End(button):
 
     button1 = button
     button2 = "積分"
-    Text = f"感謝你的回報\n輸入「{button}」\n進行下一波行動\n輸入「積分」\n可以查詢你的積分排名"
+    text = f"感謝你的回報\n輸入「{button}」\n進行下一波行動\n輸入「積分」\n可以查詢你的積分排名"
     func_name = button
 
-    return message_reply_confirm(button1, button2, Text, func_name)
+    return message_reply_confirm(button1, button2, text, func_name)
 
 
 def message_reply_After_Report(Msg_Choice):
@@ -205,13 +209,13 @@ def message_reply_After_Report(Msg_Choice):
     button2 = "使用指南"
 
     if Msg_Choice == True:
-        Text = f"請在關鍵字「詐騙回報」後\n加入疑似詐騙的網站、ID等資訊\n並隨後附上截圖，感恩"
+        text = f"請在關鍵字「詐騙回報」後\n加入疑似詐騙的網站、ID等資訊\n並隨後附上截圖，感恩"
     else:
-        Text = f"請繼續附上截圖證明\n\n謝謝你提供的情報\n點選「積分」\n可以查詢你的積分排名"
+        text = f"請繼續附上截圖證明\n\n謝謝你提供的情報\n點選「積分」\n可以查詢你的積分排名"
 
     func_name = "詐騙回報完成"
 
-    return message_reply_confirm(button1, button2, Text, func_name)
+    return message_reply_confirm(button1, button2, text, func_name)
 
 
 def message_reply_Query(user_id, IsScam, Type_Name, code, orgin_text):
@@ -237,7 +241,7 @@ def message_reply_Query(user_id, IsScam, Type_Name, code, orgin_text):
             text = (f"所輸入的「{code}」\n\n"
                     f"{suffix}")
 
-        if Tools.IsOwner(user_id) and Type_Name != "虛擬貨幣地址":
+        if Tools.IsOwner(user_id):
             actions.append(MessageTemplateAction(
                 label='管理員刪除',
                 text=f"刪除{orgin_text}"
@@ -279,7 +283,7 @@ def message_reply_Query(user_id, IsScam, Type_Name, code, orgin_text):
                     f"所輸入的是「{code}」\n\n"
                     f"{suffix}")
 
-        if Tools.IsOwner(user_id) and Type_Name != "虛擬貨幣地址":
+        if Tools.IsOwner(user_id):
             actions.append(MessageTemplateAction(
                 label='管理員加入',
                 text=f"加入{orgin_text}"
@@ -290,7 +294,7 @@ def message_reply_Query(user_id, IsScam, Type_Name, code, orgin_text):
                 text=f"刪除{orgin_text}"
             )
             )
-        elif Tools.IsAdmin(user_id) and Type_Name != "虛擬貨幣地址":
+        elif Tools.IsAdmin(user_id):
             actions.append(MessageTemplateAction(
                 label='管理員加入',
                 text=f"加入{orgin_text}"
