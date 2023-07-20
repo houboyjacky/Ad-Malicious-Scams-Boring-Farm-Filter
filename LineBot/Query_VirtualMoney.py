@@ -25,6 +25,8 @@ from Logger import logger
 from Query_Chainsight import checkFromChainsight
 from typing import Optional
 import Query_API
+import re
+import Tools
 
 Name = "虛擬貨幣"
 
@@ -32,16 +34,25 @@ Name = "虛擬貨幣"
 def analyze_Virtual_Money_url(user_text: str) -> Optional[dict]:
 
     logger.info(f"user_text: {user_text}")
-    user_text = user_text.replace("加入", "")
-    parts = user_text.split(":")
+    match = re.match(Tools.KEYWORD_VIRTUAL_MONEY[3], user_text)
+    address = match.group(1)
 
-    if len(parts) == 2:
-        currency = parts[0]
-        logger.info(f"currency: {currency}")
-        address = parts[1]
-        logger.info(f"address: {address}")
+    if address.startswith("1"):
+        currency = "BTC"
+    elif address.startswith("3"):
+        currency = "BTC"
+    elif address.startswith("bc1"):
+        currency = "BTC"
+    elif address.startswith("T"):
+        currency = "USDT"
+    elif address.startswith("D"):
+        currency = "DOGE"
+    elif re.match(r'0x[0-9a-fA-F]{40}', address):
+        currency = "ETH"
+    elif re.match(r'L[a-km-zA-HJ-NP-Z1-9]{26,33}', address):
+        currency = "LTC"
     else:
-        return None
+        currency = "unknown"
 
     source = "report"
 
@@ -79,10 +90,8 @@ def Virtual_Money_Read_Document(user_text: str):
     global Name
     rmessage = ""
     collection = Query_API.Read_Collection(Name, Name)
-    address = {"地址": user_text.replace("貨幣", "")}
-
-    if address:
-        if document := Query_API.Search_Same_Document(collection, "地址", address['地址']):
+    if analyze := analyze_Virtual_Money_url(user_text):
+        if document := Query_API.Search_Same_Document(collection, "地址", analyze['地址']):
             rmessage = f"{Name}地址為\n幣別：{document['貨幣']}\n地址：「{document['地址'] }」"
             logger.info("分析完成，找到相同資料")
             status = 1
@@ -94,10 +103,10 @@ def Virtual_Money_Read_Document(user_text: str):
         status = -1
 
     if not rmessage:
-        rmessage = f"{Name}地址\n「 {address['地址']} 」"
-        result, _ = checkFromChainsight(address['地址'])
+        rmessage = f"{Name}地址\n「 {analyze['地址']} 」"
+        result, _ = checkFromChainsight(analyze['地址'])
         if result:
-            rmessage = f"{Name}地址\n「 {address['地址']} 」\n{result}"
+            rmessage = f"{Name}地址\n「 {analyze['地址']} 」\n{result}"
 
     return rmessage, status
 
@@ -106,16 +115,17 @@ def Virtual_Money_Delete_Document(user_text: str):
     global Name
     rmessage = ""
     collection = Query_API.Read_Collection(Name, Name)
-    address = {"地址": user_text.replace("刪除貨幣", "")}
-    rmessage = f"{Name}地址\n「 {address} 」"
-    if address:
-        if document := Query_API.Search_Same_Document(collection, "地址", address['地址']):
+    if analyze := analyze_Virtual_Money_url(user_text):
+        rmessage = f"{Name}地址\n「 {analyze['地址']} 」"
+        if document := Query_API.Search_Same_Document(collection, "地址", analyze['地址']):
             rmessage = f"{Name}地址為\n幣別：{document['貨幣']}\n地址：「{document['地址'] }」\n已刪除"
-            Query_API.Delete_document(collection, address, "地址")
+            Query_API.Delete_document(collection, analyze, "地址")
             logger.info("分析完成，找到相同資料")
         else:
+            rmessage = "找不到虛擬貨幣地址"
             logger.info("分析完成，找不到相同資料")
     else:
+        rmessage = "輸入貨幣資料格式錯誤"
         logger.info(f"{Name}黑名單查詢失敗")
 
     return rmessage
