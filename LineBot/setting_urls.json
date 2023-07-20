@@ -3,6 +3,6 @@
 	"BUSINESS_CARD": [],
 	"NEED_HEAD_SHORT_URL_LIST" : [],
 	"SHORT_URL_LIST": [],
-	"SUBWEBSITE": [],
-	"WHOIS_SKIP": []
+	"SKIP_CHECK": [],
+	"SUBWEBSITE": []
 }

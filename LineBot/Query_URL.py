@@ -367,6 +367,10 @@ def check_blacklisted_site(domain_name):
             update_part_blacklist_rule_to_db(domain_name)
             return True, msg
 
+    for SKIP in Tools.SKIP_CHECK:
+        if SKIP in domain_name:
+            return False, msg
+
     msg, max_credit = checkFromChainsight(domain_name)
     if max_credit > 2:
         update_part_blacklist_comment(msg, Tools.CHAINSIGHT_LIST)
@@ -418,7 +422,7 @@ def user_query_website_by_IP(IP):
 def user_query_website_by_DNS(domain_name, result_list, lock):
 
     Is_Skip = False
-    for skip in Tools.WHOIS_SKIP:
+    for skip in Tools.SKIP_CHECK:
         if skip in domain_name:
             Is_Skip = True
 

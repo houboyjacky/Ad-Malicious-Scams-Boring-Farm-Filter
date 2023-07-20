@@ -142,9 +142,8 @@ NEED_HEAD_SHORT_URL_LIST = setting_urls['NEED_HEAD_SHORT_URL_LIST']
 SHORT_URL_LIST = setting_urls['SHORT_URL_LIST']
 # SUBWEBSITE => Special Subwebsite need to block sub website
 SUBWEBSITE = setting_urls['SUBWEBSITE']
-# WHOIS_SKIP => Skip Query Whois
-WHOIS_SKIP = setting_urls['WHOIS_SKIP']
-
+# SKIP_CHECK => Skip Query Whois
+SKIP_CHECK = setting_urls['SKIP_CHECK']
 
 def reloadSetting():
     global ADMINS
@@ -196,7 +195,7 @@ def reloadSetting():
     global USER_GUIDE
     global USER_GUIDE_FILE
     global WEB_LEADERBOARD_FILE
-    global WHOIS_SKIP
+    global SKIP_CHECK
 
     # 讀取設定檔
     with open('setting.json', 'r') as f:
@@ -260,7 +259,7 @@ def reloadSetting():
     NEED_HEAD_SHORT_URL_LIST = setting_urls['NEED_HEAD_SHORT_URL_LIST']
     SHORT_URL_LIST = setting_urls['SHORT_URL_LIST']
     SUBWEBSITE = setting_urls['SUBWEBSITE']
-    WHOIS_SKIP = setting_urls['WHOIS_SKIP']
+    SKIP_CHECK = setting_urls['SKIP_CHECK']
 
     USER_GUIDE = read_file(USER_GUIDE_FILE)
     return
