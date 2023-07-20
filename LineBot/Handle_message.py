@@ -505,7 +505,10 @@ def handle_message_text_front(user_text) -> str:
         return rmessage
 
     return None
+
+# ============
 # 遊戲功能
+# ============
 
 
 def handle_message_text_game(user_id, user_text) -> str:
@@ -515,12 +518,12 @@ def handle_message_text_game(user_id, user_text) -> str:
         else:
             user_name = Handle_LineBot.linebot_getRealName(user_id)
             if write_new_netizen_file(user_id, user_name, user_text, False):
-                username = Handle_LineBot.linebot_getRealName(user_id)
                 button1 = "使用指南"
                 button2 = "詐騙學習"
                 func_name = "重複回報"
-                msg = f"{username}你好\n你的詐騙回報已收到\n請勿重複回報！\n小編一人作業\n請勿造成作業困擾\n還請擔待"
-                rmessage = Handle_LineBot.message_reply_confirm(button1, button2, msg, func_name)
+                msg = f"「{user_name}」你好\n你的詐騙回報已收到\n請勿重複回報！\n小編一人作業\n請勿造成作業困擾\n還請擔待"
+                rmessage = Handle_LineBot.message_reply_confirm(
+                    button1, button2, msg, func_name)
             else:
                 rmessage = Handle_LineBot.message_reply_After_Report(False)
         return rmessage
@@ -528,7 +531,12 @@ def handle_message_text_game(user_id, user_text) -> str:
     if user_text == "遊戲":
         site = Random_get_List(user_id)
         if not site:
-            rmessage = f"目前暫停檢舉遊戲喔~"
+            button1 = "使用指南"
+            button2 = "詐騙學習"
+            func_name = "暫停檢舉"
+            msg = f"「{user_name}」你好\n系統正在維護中，暫停遊戲"
+            rmessage = Handle_LineBot.message_reply_confirm(
+                button1, button2, msg, func_name)
         else:
             rmessage = Handle_LineBot.message_reply_Game_Start(site)
         return rmessage
@@ -545,7 +553,7 @@ def handle_message_text_game(user_id, user_text) -> str:
         elif found and found2:
             rmessage = Handle_LineBot.message_reply_Game_End("遊戲/檢閱")
         else:
-            rmessage = f"資料庫找不到你的相關資訊"
+            rmessage = "已經回報完成作業，請勿重複輸入"
         return rmessage
 
     if user_text == "失效":
@@ -560,7 +568,7 @@ def handle_message_text_game(user_id, user_text) -> str:
         elif found and found2:
             rmessage = Handle_LineBot.message_reply_Game_End("遊戲/檢閱")
         else:
-            rmessage = f"資料庫找不到你的相關資訊"
+            rmessage = "已經回報失效作業，請勿重複輸入"
         return rmessage
 
     if user_text == "積分":
