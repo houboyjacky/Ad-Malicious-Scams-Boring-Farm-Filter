@@ -22,6 +22,7 @@ THE SOFTWARE.
 
 from bs4 import BeautifulSoup
 from Logger import logger
+from selenium import webdriver
 from urllib.error import HTTPError, URLError
 from urllib.parse import urlparse, unquote
 from urllib.request import urlopen
@@ -30,6 +31,34 @@ import re
 import requests
 import ssl
 import Tools
+
+def resolve_redirects_Webdriver(short_url, chromedriver_path='chromedriver', log_path='/home/ubuntu/linebot/Log/chromedriver.log'):
+
+    options = webdriver.ChromeOptions()
+    options.add_argument('--headless')  # 啟用無頭模式
+    options.add_argument('--no-sandbox')
+    options.add_argument('--disable-dev-shm-usage')
+    options.add_argument('--disable-gpu')
+    options.add_argument('--disable-blink-features=AutomationControlled')
+    #options.add_argument('proxy-server=211.75.88.123:80')
+    options.add_argument("window-size=1280,800")
+    options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36")
+
+    #options.binary_location = "/usr/bin/chromedriver"
+
+    service_args = ["--log-path={}".format(log_path)]
+
+    browser = webdriver.Chrome(executable_path=chromedriver_path, options=options, service_args=service_args)
+    #Remove navigator.webdriver Flag using JavaScript
+    browser.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
+
+    browser.get(short_url)
+    #logger.info(f"browser.page_source = \n{browser.page_source}")
+    long_url = browser.current_url
+    browser.quit()
+
+    return long_url
+
 
 # ===============================================
 # 縮網址
@@ -200,6 +229,11 @@ def Resolve_Redirects(url):
         return final_url
     except requests.exceptions.RequestException as e:
         logger.info("Error occurred:", e)
+
+    final_url = resolve_redirects_Webdriver(url)
+    if final_url != url:
+        logger.info(f"final_url 3 = {final_url}")
+        return final_url
 
     final_url = resolve_redirects_other(url)
     if final_url != url:
