@@ -133,7 +133,7 @@ def process_file(file_path):
     Query_Image.Add_Image_Sample(file_path)
 
 
-def handle_message_text_admin_sub(orgin_text):
+def handle_message_text_admin_sub(orgin_text, using_template = False):
     lower_text = orgin_text.lower()
 
     IsContinue = True
@@ -370,6 +370,9 @@ def handle_message_text_admin_sub(orgin_text):
             rmessage = None
         break
 
+    if rmessage and len(rmessage) < 300 and using_template:
+        return Handle_LineBot.message_reply_confirm("完成", "使用指南", rmessage, "管理員操作")
+
     return rmessage
 
 
@@ -454,7 +457,7 @@ def handle_message_text_admin(user_id, orgin_text):
     elif orgin_text.startswith("刪除") and not Tools.IsOwner(user_id):
         pass
     else:  # 一般加入
-        rmessage = handle_message_text_admin_sub(orgin_text)
+        rmessage = handle_message_text_admin_sub(orgin_text, using_template=True)
 
     return rmessage
 
