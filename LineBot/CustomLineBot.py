@@ -218,7 +218,7 @@ def background_tasks():
     SignMobileconfig()
     LINE_ID_Download_From_165()
     download_cf_ips()
-    update_blacklist()
+    update_blacklist(True)
     Query_Image.Load_Image_Feature()
     EmptyShortUrlDB()
     logger.info(f"background_tasks Finish")

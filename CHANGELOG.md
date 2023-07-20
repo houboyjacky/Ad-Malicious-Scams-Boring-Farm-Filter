@@ -1,6 +1,7 @@
 # 歷史更新 History Update
 
 * 20230720 Update
+  * 調整 降低更新local黑名單次數
   * 調整 詐騙回報回覆方式
   * 調整 避免重複詐騙回報
   * 調整 Dcard ID自動查詢

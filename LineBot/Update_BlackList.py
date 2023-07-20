@@ -193,7 +193,7 @@ def update_list_from_file(filename, blacklist, IsNew):
 is_running = False
 
 
-def update_blacklist():
+def update_blacklist(Is_force=False):
     global blacklist
     global is_running
 
@@ -212,8 +212,8 @@ def update_blacklist():
         if filename:
             update_list_from_file(filename, blacklist, IsNew)
 
-    update_list_from_file(Tools.TMP_BLACKLIST, blacklist, True)
-    update_list_from_file(Tools.CHAINSIGHT_LIST, blacklist, True)
+    update_list_from_file(Tools.TMP_BLACKLIST, blacklist, Is_force)
+    update_list_from_file(Tools.CHAINSIGHT_LIST, blacklist, Is_force)
 
     blacklist = sorted(list(set(blacklist)))
     logger.info("Update blacklist finish!")
