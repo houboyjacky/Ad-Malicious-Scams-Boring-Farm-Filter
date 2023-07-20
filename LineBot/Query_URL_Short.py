@@ -32,7 +32,7 @@ import requests
 import ssl
 import Tools
 
-def resolve_redirects_Webdriver(short_url, chromedriver_path='chromedriver', log_path='/home/ubuntu/linebot/Log/chromedriver.log'):
+def resolve_redirects_Webdriver(short_url, chromedriver_path='chromedriver'):
 
     options = webdriver.ChromeOptions()
     options.add_argument('--headless')  # 啟用無頭模式
@@ -40,13 +40,12 @@ def resolve_redirects_Webdriver(short_url, chromedriver_path='chromedriver', log
     options.add_argument('--disable-dev-shm-usage')
     options.add_argument('--disable-gpu')
     options.add_argument('--disable-blink-features=AutomationControlled')
-    #options.add_argument('proxy-server=211.75.88.123:80')
     options.add_argument("window-size=1280,800")
     options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36")
-
+    #options.add_argument('proxy-server=211.75.88.123:80')
     #options.binary_location = "/usr/bin/chromedriver"
 
-    service_args = ["--log-path={}".format(log_path)]
+    service_args = ["--log-path={}".format(Tools.CHROMEDRIVER_LOG)]
 
     browser = webdriver.Chrome(executable_path=chromedriver_path, options=options, service_args=service_args)
     #Remove navigator.webdriver Flag using JavaScript
