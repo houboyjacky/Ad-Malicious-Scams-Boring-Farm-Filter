@@ -1,8 +1,10 @@
 # 歷史更新 History Update
 
 * 20230720 Update
+  * 調整 詐騙回報回覆方式
   * 調整 避免重複詐騙回報
   * 調整 Dcard ID自動查詢
+  * 調整 template confirm統一API
 
 * 20230719 Update
   * 更新 165反詐騙諮詢專線-詐騙LINE ID(~112/7/19)

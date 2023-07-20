@@ -62,8 +62,36 @@ def message_reply(event, text):
     logger.info(f"reply to {user_name}")
     return
 
-# Template
 
+def message_reply_confirm(button1, button2, text, function_name):
+
+    actions = []
+
+    actions.append(MessageTemplateAction(
+        label=button1,
+        text=button1
+    )
+    )
+
+    actions.append(URITemplateAction(
+        label=button2,
+        uri=button2
+    )
+    )
+
+    confirm_template = ConfirmTemplate(
+        text=text,
+        actions=actions
+    )
+
+    template_message = TemplateSendMessage(
+        alt_text=function_name,
+        template=confirm_template
+    )
+    return template_message
+
+
+# Template
 
 def message_reply_QueryURL(user_id, IsScam, QueryInf, Domain, orgin_text):
 
@@ -161,66 +189,29 @@ def message_reply_Game_Start(site):
     return template_message
 
 
-def message_reply_Game_End(buttom):
+def message_reply_Game_End(button):
 
-    actions = []
+    button1 = button
+    button2 = "積分"
+    Text = f"感謝你的回報\n輸入「{button}」\n進行下一波行動\n輸入「積分」\n可以查詢你的積分排名"
+    func_name = button
 
-    actions.append(MessageTemplateAction(
-        label=buttom,
-        text=buttom
-    )
-    )
-    actions.append(MessageTemplateAction(
-        label='積分',
-        text=f"積分"
-    )
-    )
-
-    Text = f"感謝你的回報\n輸入「{buttom}」\n進行下一波行動\n輸入「積分」\n可以查詢你的積分排名"
-
-    confirm_template = ConfirmTemplate(
-        text=Text,
-        actions=actions
-    )
-
-    template_message = TemplateSendMessage(
-        alt_text=buttom,
-        template=confirm_template
-    )
-
-    return template_message
+    return message_reply_confirm(button1, button2, Text, func_name)
 
 
 def message_reply_After_Report(Msg_Choice):
 
-    actions = []
+    button1 = "積分"
+    button2 = "使用指南"
 
-    actions.append(MessageTemplateAction(
-        label='積分',
-        text=f"積分"
-    )
-    )
-    actions.append(MessageTemplateAction(
-        label="使用指南",
-        text=f"使用指南"
-    )
-    )
     if Msg_Choice == True:
         Text = f"請在關鍵字「詐騙回報」後\n加入疑似詐騙的網站、ID等資訊\n並隨後附上截圖，感恩"
     else:
         Text = f"請繼續附上截圖證明\n\n謝謝你提供的情報\n點選「積分」\n可以查詢你的積分排名"
 
-    confirm_template = ConfirmTemplate(
-        text=Text,
-        actions=actions
-    )
+    func_name = "詐騙回報完成"
 
-    template_message = TemplateSendMessage(
-        alt_text="詐騙回報完成",
-        template=confirm_template
-    )
-
-    return template_message
+    return message_reply_confirm(button1, button2, Text, func_name)
 
 
 def message_reply_Query(user_id, IsScam, Type_Name, code, orgin_text):

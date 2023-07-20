@@ -514,8 +514,13 @@ def handle_message_text_game(user_id, user_text) -> str:
             rmessage = Handle_LineBot.message_reply_After_Report(True)
         else:
             user_name = Handle_LineBot.linebot_getRealName(user_id)
-            if result :=write_new_netizen_file(user_id, user_name, user_text, False):
-                rmessage = "重複輸入！請勿重複回報！"
+            if write_new_netizen_file(user_id, user_name, user_text, False):
+                username = Handle_LineBot.linebot_getRealName(user_id)
+                button1 = "使用指南"
+                button2 = "詐騙學習"
+                func_name = "重複回報"
+                msg = f"{username}你好\n你的詐騙回報已收到\n請勿重複回報！\n小編一人作業\n請勿造成作業困擾\n還請擔待"
+                rmessage = Handle_LineBot.message_reply_confirm(button1, button2, msg, func_name)
             else:
                 rmessage = Handle_LineBot.message_reply_After_Report(False)
         return rmessage
