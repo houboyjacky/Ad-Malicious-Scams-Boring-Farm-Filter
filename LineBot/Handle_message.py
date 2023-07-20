@@ -670,10 +670,10 @@ def handle_message_text_sub(user_id, orgin_text):
         return rmessage
 
     # 查詢Dcard
-    if re.search(Tools.KEYWORD_DCARD_ID[0], orgin_text):
-        ig, status = Dcard_Read_Document(orgin_text)
+    if re.search(Tools.KEYWORD_DCARD_ID[0], lower_text):
+        ig, status = Dcard_Read_Document(lower_text)
         rmessage = Handle_LineBot.message_reply_Query(
-            user_id, status, "Dcard", ig, orgin_text)
+            user_id, status, "Dcard", ig, lower_text)
         return rmessage
 
     # 防呆查詢
@@ -848,11 +848,11 @@ def handle_message_text_sub(user_id, orgin_text):
         return rmessage
 
     # 查詢Dcard
-    if re.search(Tools.KEYWORD_DCARD_URL[0], orgin_text):
-        dcard, status = Dcard_Read_Document(orgin_text)
+    if re.search(Tools.KEYWORD_DCARD_URL[0], lower_text):
+        dcard, status = Dcard_Read_Document(lower_text)
 
         if prefix_msg:
-            prefix_msg = f"{prefix_msg}「 {orgin_text} 」\n"
+            prefix_msg = f"{prefix_msg}「 {lower_text} 」\n"
         else:
             prefix_msg = f"所輸入的"
 
@@ -862,7 +862,7 @@ def handle_message_text_sub(user_id, orgin_text):
                         f"感恩")
         else:
             rmessage = Handle_LineBot.message_reply_Query(
-                user_id, status, "Dcard", dcard, orgin_text)
+                user_id, status, "Dcard", dcard, lower_text)
         return rmessage
 
     # 如果用戶輸入的網址沒有以 http 或 https 開頭，則不回應訊息
