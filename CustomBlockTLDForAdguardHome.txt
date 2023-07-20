@@ -128,6 +128,7 @@
 /ioexx?[0-9]{1,2}\.com/
 /isnotdomain[0-9]+\.com/
 /js[0-9]+\.cn/
+/kavala[a-z0-9]{0-2}\.com/
 /kicurency.+\..+/
 /kimomi\.[a-z]+/
 /kpcb[a-z0-9]*\.com/

@@ -1,5 +1,8 @@
 # 歷史更新 History Update
 
+* 20230721 Update
+  * 更新 範圍封鎖
+
 * 20230720 Update
   * 加入 selenium+chromedriver還原網址
   * 更新 165反詐騙公告網址(112/07/11-112/07/17民眾通報假投資(博弈)詐騙網站)
