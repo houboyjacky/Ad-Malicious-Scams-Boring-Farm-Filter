@@ -83,3 +83,6 @@
 @@||vocus.cc^
 @@||wecharming.life^
 @@||www.com.tw^
+@@||ctbc.tw^
+@@||edu.tw^
+@@||hsbc.com.tw^
