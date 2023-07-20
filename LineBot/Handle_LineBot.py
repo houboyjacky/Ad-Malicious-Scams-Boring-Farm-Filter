@@ -354,8 +354,8 @@ def message_reply_Query_ID_Type(ID):
     )
     )
     actions.append(MessageTemplateAction(
-        label='查詢Telegram ID？',
-        text=f"TG{ID}"
+        label='查詢Dcard ID？',
+        text=f"迪卡{ID}"
     )
     )
     actions.append(MessageTemplateAction(
