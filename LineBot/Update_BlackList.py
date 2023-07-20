@@ -146,7 +146,7 @@ def read_rule(filename):
 def update_list_to_db(filename, List, db_name):
     datetime = date.today().strftime("%Y-%m-%d")
     documents_to_insert = []
-    if filename == Tools.TMP_BLACKLIST:
+    if filename == Tools.TMP_BLACKLIST or filename == Tools.CHAINSIGHT_LIST:
         Name = "Report"
     else:
         Name = os.path.basename(filename)
@@ -231,7 +231,7 @@ def update_local_Blacklist():
 def update_document_to_db(filename, domain_name, db_name):
     datetime = date.today().strftime("%Y-%m-%d")
     if filename == Tools.TMP_BLACKLIST or filename == Tools.CHAINSIGHT_LIST:
-        Name = "report"
+        Name = "Report"
     else:
         Name = os.path.basename(filename)
     collection = Query_API.Read_Collection(db_name, Name)
