@@ -104,6 +104,9 @@ def RecordShortUrl(shorturl, IP, Country):
         Update_Document(collection, struct, "縮網址")
         return None
 
+    now_datetime = datetime.now().strftime(
+                "%Y-%m-%d %H-%M-%S")
+
     struct = {"IP": IP,
               "國家": Country,
               "時間": now_datetime
