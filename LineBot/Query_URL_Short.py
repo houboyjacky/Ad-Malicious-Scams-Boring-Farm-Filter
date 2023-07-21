@@ -32,6 +32,7 @@ import requests
 import ssl
 import Tools
 
+
 def resolve_redirects_Webdriver(short_url, chromedriver_path='chromedriver'):
 
     options = webdriver.ChromeOptions()
@@ -41,18 +42,21 @@ def resolve_redirects_Webdriver(short_url, chromedriver_path='chromedriver'):
     options.add_argument('--disable-gpu')
     options.add_argument('--disable-blink-features=AutomationControlled')
     options.add_argument("window-size=1280,800")
-    options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36")
-    #options.add_argument('proxy-server=211.75.88.123:80')
-    #options.binary_location = "/usr/bin/chromedriver"
+    options.add_argument(
+        "user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36")
+    # options.add_argument('proxy-server=211.75.88.123:80')
+    # options.binary_location = "/usr/bin/chromedriver"
 
     service_args = ["--log-path={}".format(Tools.CHROMEDRIVER_LOG)]
 
-    browser = webdriver.Chrome(executable_path=chromedriver_path, options=options, service_args=service_args)
-    #Remove navigator.webdriver Flag using JavaScript
-    browser.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
+    browser = webdriver.Chrome(
+        executable_path=chromedriver_path, options=options, service_args=service_args)
+    # Remove navigator.webdriver Flag using JavaScript
+    browser.execute_script(
+        "Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
 
     browser.get(short_url)
-    #logger.info(f"browser.page_source = \n{browser.page_source}")
+    # logger.info(f"browser.page_source = \n{browser.page_source}")
     long_url = browser.current_url
     browser.quit()
 
@@ -158,19 +162,27 @@ def resolve_redirects_other(url):
             break
 
     try:
+        # First attempt without ignoring SSL verification
         response = requests.get(url, headers=headers, allow_redirects=True)
-        logger.info(f"response = {response.content}")
-        if response.status_code == 301 or response.status_code == 302:
-            final_url = response.headers['Location']
-            logger.info(f"resolve_redirects_other Location = {final_url}")
-        else:
-            final_url = response.url
-            logger.info(f"resolve_redirects_other = {final_url}")
-        return final_url
-    except requests.exceptions.RequestException as e:
-        logger.info(f"Error occurred: {e}")
+    except requests.exceptions.SSLError:
+        # If an SSLError occurs, try again ignoring SSL verification
+        response = requests.get(url, headers=headers,
+                                allow_redirects=True, verify=False)
 
-    return None
+    except requests.exceptions.RequestException as e:
+        logger.info(f"Error occurred other: {e}")
+        return None
+
+    logger.info(f"response = {response.content}")
+    if response.status_code == 301 or response.status_code == 302:
+        final_url = response.headers['Location']
+        logger.info(f"resolve_redirects_other Location = {final_url}")
+    else:
+        final_url = response.url
+        logger.info(f"resolve_redirects_other = {final_url}")
+
+    return final_url
+
 
 def Resolve_Redirects(url):
 
@@ -219,7 +231,7 @@ def Resolve_Redirects(url):
         if final_url != url:
             return final_url
     except (HTTPError, URLError) as e:
-        logger.info(f"Error occurred: {e}")
+        logger.info(f"Error occurred 1 : {e}")
 
     try:
         response = requests.get(url, allow_redirects=True)
@@ -228,7 +240,7 @@ def Resolve_Redirects(url):
         if url != final_url:
             return final_url
     except requests.exceptions.RequestException as e:
-        logger.info("Error occurred:", e)
+        logger.info("Error occurred 2 :", e)
 
     final_url = resolve_redirects_Webdriver(url)
     if final_url != url:
