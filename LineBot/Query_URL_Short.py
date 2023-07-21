@@ -215,8 +215,8 @@ def Resolve_Redirects(url):
     try:
         response = urlopen(url, context=context, timeout=timeout)
         final_url = response.geturl()
+        logger.info(f"final_url1 = {final_url}")
         if final_url != url:
-            logger.info(f"final_url1 = {final_url}")
             return final_url
     except (HTTPError, URLError) as e:
         logger.info(f"Error occurred: {e}")
@@ -225,7 +225,8 @@ def Resolve_Redirects(url):
         response = requests.get(url, allow_redirects=True)
         final_url = response.url
         logger.info(f"final_url 2 = {final_url}")
-        return final_url
+        if url != final_url:
+            return final_url
     except requests.exceptions.RequestException as e:
         logger.info("Error occurred:", e)
 
