@@ -95,6 +95,9 @@ def message_reply_confirm(button1, button2, text, function_name):
 
 def message_reply_QueryURL(user_id, IsScam, QueryInf, Domain, orgin_text):
 
+    if len(orgin_text) > 250:
+        orgin_text = orgin_text[:250]
+
     actions = []
     if IsScam:
         actions.append(MessageTemplateAction(
@@ -316,8 +319,6 @@ def message_reply_Query(user_id, IsScam, Type_Name, code, orgin_text):
                 text=f"詐騙幫忙"
             )
             )
-
-    logger.info(f"Text Len = {str(len(text))}")
 
     confirm_template = ConfirmTemplate(
         text=text,
