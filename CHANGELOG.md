@@ -2,6 +2,7 @@
 
 * 20230721 Update
   * 更新 範圍封鎖
+  * 調整 不應封鎖網址
 
 * 20230720 Update
   * 加入 selenium+chromedriver還原網址
