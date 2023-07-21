@@ -17,6 +17,7 @@
 #||fx110.com.tw^
 #||github.io^
 #||google.com^
+#||is.gd^
 #||lin.ee^
 #||my.id^
 #||mystrikingly.com^
@@ -16545,7 +16546,6 @@
 ||irontoken.net^
 ||irusinvest.ink^
 ||is-ma.co^
-||is.gd^
 ||is520.tw^
 ||iscoinsurance.com^
 ||ise589.co^
