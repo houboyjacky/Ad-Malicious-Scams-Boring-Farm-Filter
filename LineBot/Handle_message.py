@@ -556,7 +556,7 @@ def handle_message_text_game(user_id, user_text) -> str:
         elif found and found2:
             rmessage = Handle_LineBot.message_reply_Game_End("遊戲/檢閱")
         else:
-            rmessage = "已經回報完成作業，請勿重複輸入"
+            rmessage = "已完成回報作業"
         return rmessage
 
     if user_text == "失效":
@@ -571,7 +571,7 @@ def handle_message_text_game(user_id, user_text) -> str:
         elif found and found2:
             rmessage = Handle_LineBot.message_reply_Game_End("遊戲/檢閱")
         else:
-            rmessage = "已經回報失效作業，請勿重複輸入"
+            rmessage = "已完成回報作業"
         return rmessage
 
     if user_text == "積分":
