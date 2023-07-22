@@ -200,7 +200,7 @@ def message_reply_Game_End(button):
 
     button1 = button
     button2 = "積分"
-    text = f"感謝你的回報\n輸入「{button}」\n進行下一波行動\n輸入「積分」\n可以查詢你的積分排名"
+    text = f"✅感謝你的回報\n輸入「{button}」\n進行下一波行動🏃\n📍輸入「積分」\n可以查詢你的積分排名"
     func_name = button
 
     return message_reply_confirm(button1, button2, text, func_name)
@@ -212,9 +212,9 @@ def message_reply_After_Report(Msg_Choice):
     button2 = "使用指南"
 
     if Msg_Choice == True:
-        text = f"請在關鍵字「詐騙回報」後\n加入疑似詐騙的網站、ID等資訊\n並隨後附上截圖，感恩"
+        text = f"📍請在關鍵字「詐騙回報」後\n加入😈疑似詐騙的網站、ID等資訊\n並隨後附上截圖\n\n🙏感恩"
     else:
-        text = f"請繼續附上截圖證明\n\n謝謝你提供的情報\n點選「積分」\n可以查詢你的積分排名"
+        text = f"📍請繼續附上截圖證明\n\n🙏謝謝你提供的情報\n📍點選「積分」\n㊙️可以查詢你的積分排名"
 
     func_name = "詐騙回報完成"
 
@@ -230,9 +230,9 @@ def message_reply_Query(user_id, IsScam, Type_Name, code, orgin_text):
         orgin_text = orgin_text[:250]
 
     if IsScam:
-        suffix = (f"「是」已知詐騙的{Type_Name}\n\n"
-                  f"請勿相信此{Type_Name}\n"
-                  f"感恩"
+        suffix = (f"⚠️「是」已知詐騙的{Type_Name}\n\n"
+                  f"🚫請勿相信此{Type_Name}\n\n"
+                  f"🙏感恩"
                   )
         if Type_Name == "LINE邀請網址" or Type_Name == "FB" or Type_Name == "IG":
             text = (f"{Type_Name}分析出的代碼的「{code}」\n\n"
@@ -263,11 +263,13 @@ def message_reply_Query(user_id, IsScam, Type_Name, code, orgin_text):
         )
         )
     else:
-        suffix = (f"並不代表「沒問題」\n\n"
-                  f"若確定是詐騙\n"
-                  f"請點選「詐騙回報」\n"
-                  f"並附上截圖與說明\n"
-                  f"感恩"
+        suffix = (f"並不代表「沒問題」⚠️\n\n"
+                  f"📍若確定是詐騙😈\n"
+                  f"請點選➡️「詐騙回報」🤝\n"
+                  f"並附上截圖與說明✅\n\n"
+                  f"📍害怕遇到詐騙❓\n"
+                  f"點擊詐騙學習📖\n"
+                  f"確定是否遇到詐騙💢\n"
                   )
 
         if code.startswith("09"):
@@ -319,6 +321,9 @@ def message_reply_Query(user_id, IsScam, Type_Name, code, orgin_text):
                 text=f"詐騙幫忙"
             )
             )
+
+    length = len(text)
+    logger.info(f"len = {length}")
 
     confirm_template = ConfirmTemplate(
         text=text,
@@ -403,7 +408,7 @@ def message_reply_ScamAlert():
     )
     )
 
-    text = f"請選擇以下功能\n來作為事前預防或事後處理"
+    text = f"📍請選擇以下功能\n來作為事前預防📖或事後處理🚔"
 
     buttons_template = ButtonsTemplate(
         title=title,
