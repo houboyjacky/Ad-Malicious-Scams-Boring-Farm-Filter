@@ -88,3 +88,4 @@
 @@||franklin.com.tw^
 @@||chailease.com.tw^
 @@||cht.tw^
+@@||jumpcrypto.com^
