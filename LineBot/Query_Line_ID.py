@@ -62,32 +62,36 @@ def LINE_ID_Download_From_165():
         logger.info("Not find remote_file_name")
         return
 
-    Query_API.Drop_Collection(DB_Name, C_Name)
     collection = Query_API.Read_Collection(DB_Name, C_Name)
 
     documents_to_insert = []
+    datetime = date.today().strftime("%Y-%m-%d")
 
     for line in lineid_list:
         if line.startswith("!"):
             continue
+        document = collection.find_one({"帳號": line})
+        if document:
+            continue
 
         if "@" in line:
-            Type = "官方"
+            Type = "官方LINE"
         else:
-            Type = "私人"
+            Type = "LINE ID"
 
         source = "165反詐騙"
 
         document = {"類別": Type,
                     "帳號": line,
-                    "來源": source
+                    "來源": source,
+                    "加入日期": datetime
                     }
         documents_to_insert.append(document)
 
     if documents_to_insert:
         collection.insert_many(documents_to_insert)
 
-    logger.info("Loaded 165 Line ID to Database")
+    logger.info("Load 165 Line ID to Database")
 
     return
 
