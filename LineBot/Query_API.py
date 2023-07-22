@@ -62,10 +62,10 @@ def Delete_document_Account(collection, struct, DB_Name):
         if Search_Same_Document(collection, tagname, struct[tagname]):
             logger.info("分析完成，找到相同資料")
             Delete_document(collection, struct, tagname)
-            rmessage = f"{DB_Name}黑名單\n✅成功刪除{tagname}\n➡️{struct[tagname]}⬅️"
+            rmessage = f"{DB_Name}黑名單\n✅成功刪除{tagname}\n「 {struct[tagname]} 」"
         else:
             logger.info("分析完成，找不到資料")
-            rmessage = f"{DB_Name}黑名單\n❌找不到{tagname}\n➡️{struct[tagname]}⬅️"
+            rmessage = f"{DB_Name}黑名單\n❌找不到{tagname}\n「 {struct[tagname]} 」"
     else:
         logger.info("無法分析網址")
         rmessage = f"{DB_Name}黑名單\n❌刪除失敗\n無法分析網址"
@@ -102,14 +102,14 @@ def Write_Document_Account(collection, struct, DB_Name):
         if Search_Same_Document(collection, tagname, struct[tagname]):
             logger.info("分析完成，找到相同資料")
             if struct[tagname]:
-                rmessage = f"{DB_Name}黑名單\n找到相同{tagname}❗️❗️❗️\n➡️{struct[tagname]}⬅️"
+                rmessage = f"{DB_Name}黑名單\n找到相同{tagname}❗️❗️❗️\n「 {struct[tagname]} 」"
             else:
                 logger.info("資料有誤")
                 rmessage = f"{DB_Name}黑名單\n❌失敗加入\n資料為空"
         else:
             logger.info("分析完成，寫入結果")
             Write_Document(collection, struct)
-            rmessage = f"{DB_Name}黑名單\n✅成功加入{tagname}\n➡️{struct[tagname]}⬅️"
+            rmessage = f"{DB_Name}黑名單\n✅成功加入{tagname}\n「 {struct[tagname]} 」"
     else:
         logger.info("無法分析網址")
         rmessage = f"{DB_Name}黑名單\n❌失敗加入\n無法分析網址"
