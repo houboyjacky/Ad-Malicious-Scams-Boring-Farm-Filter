@@ -86,3 +86,5 @@
 @@||ctbc.tw^
 @@||hsbc.com.tw^
 @@||franklin.com.tw^
+@@||chailease.com.tw^
+@@||cht.tw^
