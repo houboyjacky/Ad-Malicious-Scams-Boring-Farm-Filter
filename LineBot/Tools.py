@@ -48,8 +48,6 @@ BLACKUSERID = setting['BLACKUSERID']
 CERT = setting['CERT']
 # CHAINSIGHT_KEY => Chainsight KEY
 CHAINSIGHT_KEY = setting['CHAINSIGHT_KEY']
-# CHAINSIGHT_LIST => Chainsight Blacklist
-CHAINSIGHT_LIST = setting['CHAINSIGHT_LIST']
 # CHANNEL_ACCESS_TOKEN => Linebot Token
 CHANNEL_ACCESS_TOKEN = setting['CHANNEL_ACCESS_TOKEN']
 # CHANNEL_SECRET => Linebot Token
@@ -155,7 +153,6 @@ def reloadSetting():
     global BUSINESS_CARD
     global CERT
     global CHAINSIGHT_KEY
-    global CHAINSIGHT_LIST
     global CHANNEL_ACCESS_TOKEN
     global CHANNEL_SECRET
     global CHROMEDRIVER_LOG
@@ -209,7 +206,6 @@ def reloadSetting():
     BLACKUSERID = setting['BLACKUSERID']
     CERT = setting['CERT']
     CHAINSIGHT_KEY = setting['CHAINSIGHT_KEY']
-    CHAINSIGHT_LIST = setting['CHAINSIGHT_LIST']
     CHANNEL_ACCESS_TOKEN = setting['CHANNEL_ACCESS_TOKEN']
     CHANNEL_SECRET = setting['CHANNEL_SECRET']
     CHROMEDRIVER_LOG = setting['CHROMEDRIVER_LOG']

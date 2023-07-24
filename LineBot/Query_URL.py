@@ -318,6 +318,10 @@ def get_web_leaderboard():
 
 def check_blacklisted_site(domain_name):
 
+    for SKIP in Tools.SKIP_CHECK:
+        if SKIP in domain_name:
+            return False, msg
+
     msg = ""
     White_db = "網站白名單"
     White_collections = Query_API.Read_Collections(White_db)
@@ -366,16 +370,6 @@ def check_blacklisted_site(domain_name):
             update_part_blacklist_comment(msg)
             update_part_blacklist_rule_to_db(domain_name)
             return True, msg
-
-    for SKIP in Tools.SKIP_CHECK:
-        if SKIP in domain_name:
-            return False, msg
-
-    msg, max_credit = checkFromChainsight(domain_name)
-    if max_credit > 2:
-        update_part_blacklist_comment(msg, Tools.CHAINSIGHT_LIST)
-        update_part_blacklist_rule_to_db(domain_name, Tools.CHAINSIGHT_LIST)
-        return True, msg
 
     return False, msg
 
@@ -515,11 +509,44 @@ def user_query_website_by_DNS(domain_name, result_list, lock):
 
 
 def thread_check_blacklisted_site(domain_name, result_list, lock):
-    checkresult, msg = check_blacklisted_site(domain_name)
+    checkresult = check_blacklisted_site(domain_name)
     with lock:
         result_list.append(("checkresult", checkresult))
-        result_list.append(("ChainSight_msg", msg))
     return
+
+def check_ChainSight(domain_name, whois_creation_date):
+    checkresult = False
+    msg = ""
+
+    for SKIP in Tools.SKIP_CHECK:
+        if SKIP in domain_name:
+            return checkresult, msg
+
+    msg, max_credit = checkFromChainsight(domain_name)
+    if max_credit > 2:
+        checkresult = True
+
+    if whois_creation_date:
+        if isinstance(whois_creation_date, str):
+            creation_date = Tools.string_to_datetime(whois_creation_date)
+
+        # 定義安全日期
+        safe_date = datetime.datetime(2015, 1, 1)
+        if safe_date > creation_date:
+            checkresult = False
+
+            #特別mark可能誤判
+            c_date = creation_date.strftime("%Y/%m/%d")
+            msg = f"{msg}，但創建於{c_date}，列入觀察"
+            update_part_blacklist_comment(msg)
+            domain_name_mark = f"!||{domain_name}^"
+            update_part_blacklist_comment(domain_name_mark)
+
+    if checkresult == True:
+        update_part_blacklist_comment(msg)
+        update_part_blacklist_rule_to_db(domain_name)
+
+    return checkresult, msg
 
 # 使用者查詢網址
 
@@ -590,9 +617,12 @@ def user_query_website(prefix_msg, user_text):
     whois_creation_date = results['whois_creation_date']
     whois_country = results['whois_country']
     checkresult = results['checkresult']
-    ChainSight_msg = results['ChainSight_msg']
-    if ChainSight_msg := results['ChainSight_msg']:
-        ChainSight_msg += "\n"
+
+    # 避免ChainSight誤判，獨立判斷
+    if checkresult == False:
+        checkresult, ChainSight_msg = check_ChainSight(domain_name, whois_creation_date)
+        if ChainSight_msg:
+            ChainSight_msg += "\n"
 
     end_time = time.time()
     elapsed_time = end_time - start_time
@@ -600,11 +630,11 @@ def user_query_website(prefix_msg, user_text):
 
     if whois_query_error or not whois_domain or not whois_creation_date:
         if checkresult:
-            rmessage = (f"「是」詐騙網站\n\n"
-                        f"請勿相信此網站\n\n"
+            rmessage = (f"⚠️「是」詐騙網站\n\n"
+                        f"🚫請勿相信此網站\n\n"
                         f"{prefix_msg}「{domain_name}」{special_tip}\n"
                         f"{IP_info_msg}\n"
-                        f"若認為誤通報，請補充描述\n"
+                        f"❇️若認為誤通報，請補充描述\n"
                         f"\n"
                         f"{suffix_for_call}"
                         )
@@ -615,9 +645,7 @@ def user_query_website(prefix_msg, user_text):
                         f"{IP_info_msg}\n"
                         f"敬請小心謹慎\n"
                         f"\n"
-                        f"若確定是詐騙\n"
-                        f"請點擊/輸入「詐騙回報」\n"
-                        f"「安全評分」輔助判別好壞\n"
+                        f"⚠️疑似詐騙，請點擊「詐騙回報」\n"
                         f"\n"
                         f"{suffix_for_call}\n"
                         )
@@ -661,14 +689,14 @@ def user_query_website(prefix_msg, user_text):
 
     # 判斷網站
     if checkresult:
-        rmessage = (f"「是」詐騙網站\n\n"
-                    f"請勿相信此網站\n\n"
+        rmessage = (f"⚠️「是」詐騙網站\n\n"
+                    f"🚫請勿相信此網站\n\n"
                     f"{prefix_msg}「{domain_name}」{special_tip}\n"
                     f"{rmessage_country}"
                     f"{rmessage_creation_date}\n"
                     f"{rmessage_diff_days}\n"
                     f"{IP_info_msg}\n"
-                    f"若認為誤通報，請補充描述\n"
+                    f"❇️若認為誤通報，請補充描述\n"
                     f"\n"
                     f"{suffix_for_call}"
                     )
@@ -681,13 +709,11 @@ def user_query_website(prefix_msg, user_text):
                     f"{ChainSight_msg}"
                     f"{IP_info_msg}\n"
                     f"但提醒你！\n"
-                    f"1.建立時間是晚於2022/01/01\n"
-                    f"2.天數差距越小\n"
-                    f"3.「網友」介紹投資賺錢\n"
-                    f"都符合條件就是詐騙\n\n"
-                    f"若確定是詐騙\n"
-                    f"請點擊「詐騙回報」\n"
-                    f"「安全評分」輔助判別好壞\n"
+                    f"1.建立時間晚於2021年📅\n"
+                    f"2.天數差距小⚠️\n"
+                    f"3.「網友」介紹投資賺錢💵\n"
+                    f"都符合條件就是詐騙💢\n\n"
+                    f"⚠️疑似詐騙，請點擊「詐騙回報」\n"
                     f"\n"
                     f"{suffix_for_call}"
                     )

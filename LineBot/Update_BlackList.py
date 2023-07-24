@@ -210,7 +210,6 @@ def update_blacklist(Is_force=False):
             update_list_from_file(filename, blacklist, IsNew)
 
     update_list_from_file(Tools.TMP_BLACKLIST, blacklist, Is_force)
-    update_list_from_file(Tools.CHAINSIGHT_LIST, blacklist, Is_force)
 
     blacklist = sorted(list(set(blacklist)))
     logger.info("Update blacklist finish!")
@@ -221,7 +220,6 @@ def update_blacklist(Is_force=False):
 def update_local_Blacklist():
     global blacklist
     update_list_from_file(Tools.TMP_BLACKLIST, blacklist, True)
-    update_list_from_file(Tools.CHAINSIGHT_LIST, blacklist, True)
     return
 
 
@@ -241,9 +239,7 @@ def update_document_to_db(filename, domain_name, db_name):
     return
 
 
-def update_part_blacklist_rule_to_db(domain_name, filename=None):
-    if not filename:
-        filename = Tools.TMP_BLACKLIST
+def update_part_blacklist_rule_to_db(domain_name, filename=Tools.TMP_BLACKLIST):
     # 寫入DB
     update_document_to_db(filename, domain_name, "網站黑名單")
     # 組合成新的規則
@@ -253,9 +249,7 @@ def update_part_blacklist_rule_to_db(domain_name, filename=None):
     return
 
 
-def update_part_blacklist_comment(msg, filename=None):
-    if not filename:
-        filename = Tools.TMP_BLACKLIST
+def update_part_blacklist_comment(msg, filename=Tools.TMP_BLACKLIST):
     # 組合成新的規則
     new_rule = f"! {msg}\n"
     # 將Adguard規則寫入檔案
