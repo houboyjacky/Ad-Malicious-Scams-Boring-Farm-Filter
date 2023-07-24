@@ -49,7 +49,7 @@ def checkFromChainsight(input):
             else:
                 level = "高"
 
-            msg = f"ChainSight危險等級：{level}"
+            msg = f"ChainSight參考危險等級：{level}"
             logger.info(f"{input}的{msg}")
             return msg, result['評分']
 
@@ -90,7 +90,7 @@ def checkFromChainsight(input):
         else:
             level = "高"
 
-        msg = f"ChainSight危險等級：{level}"
+        msg = f"ChainSight參考危險等級：{level}"
         logger.info(f"{input}的{msg}")
 
         Today_Date = date.today().strftime("%Y-%m-%d")

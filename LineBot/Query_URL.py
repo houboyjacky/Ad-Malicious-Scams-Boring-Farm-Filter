@@ -320,9 +320,8 @@ def check_blacklisted_site(domain_name):
 
     for SKIP in Tools.SKIP_CHECK:
         if SKIP in domain_name:
-            return False, msg
+            return False
 
-    msg = ""
     White_db = "網站白名單"
     White_collections = Query_API.Read_Collections(White_db)
 
@@ -330,7 +329,7 @@ def check_blacklisted_site(domain_name):
         document = collection.find_one({"網址": domain_name})
         if document:
             logger.info(f"{domain_name}在DB的{collection.name}白名單內")
-            return False, msg
+            return False
 
     Black_db = "網站黑名單"
     Black_collections = Query_API.Read_Collections(Black_db)
@@ -339,7 +338,7 @@ def check_blacklisted_site(domain_name):
         document = collection.find_one({"網址": domain_name})
         if document:
             logger.info(f"{domain_name}在DB的{collection.name}黑名單內")
-            return True, msg
+            return True
 
     for line in blacklist:
         line = line.strip().lower()  # 去除開頭或結尾的空白和轉成小寫
@@ -350,7 +349,7 @@ def check_blacklisted_site(domain_name):
                 msg = f"正規化黑名單封鎖"
                 update_part_blacklist_comment(msg)
                 update_part_blacklist_rule_to_db(domain_name)
-                return True, msg
+                return True
         elif "*" in line:
             regex = line.replace("*", ".+")
             if re.fullmatch(regex, domain_name):
@@ -359,19 +358,19 @@ def check_blacklisted_site(domain_name):
                 msg = f"「*」黑名單封鎖"
                 update_part_blacklist_comment(msg)
                 update_part_blacklist_rule_to_db(domain_name)
-                return True, msg
+                return True
         elif domain_name == line:
             logger.info(f"{domain_name}在黑名單內3")
-            return True, msg
+            return True
         elif domain_name.endswith(line) and line in Tools.SUBWEBSITE:
             # 特別子網域規則直接可以寫入Adguard規則
             logger.info(f"{domain_name}在黑名單內4")
             msg = f"子網域黑名單"
             update_part_blacklist_comment(msg)
             update_part_blacklist_rule_to_db(domain_name)
-            return True, msg
+            return True
 
-    return False, msg
+    return False
 
 # ===============================================
 # 使用者查詢
@@ -526,26 +525,27 @@ def check_ChainSight(domain_name, whois_creation_date):
     if max_credit > 2:
         checkresult = True
 
-    if whois_creation_date:
+    if whois_creation_date and checkresult:
         if isinstance(whois_creation_date, str):
             creation_date = Tools.string_to_datetime(whois_creation_date)
 
         # 定義安全日期
-        safe_date = datetime.datetime(2015, 1, 1)
+        safe_date = datetime(2015, 1, 1)
         if safe_date > creation_date:
             checkresult = False
 
             #特別mark可能誤判
             c_date = creation_date.strftime("%Y/%m/%d")
-            msg = f"{msg}，但創建於{c_date}，列入觀察"
-            update_part_blacklist_comment(msg)
-            domain_name_mark = f"!||{domain_name}^"
+            msg_comment = f"{msg}，但創建於{c_date}，列入觀察"
+            update_part_blacklist_comment(msg_comment)
+            domain_name_mark = f"||{domain_name}^"
             update_part_blacklist_comment(domain_name_mark)
 
     if checkresult == True:
         update_part_blacklist_comment(msg)
         update_part_blacklist_rule_to_db(domain_name)
 
+        logger.info(f"msg = {msg}")
     return checkresult, msg
 
 # 使用者查詢網址
