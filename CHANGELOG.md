@@ -1,7 +1,6 @@
 # 歷史更新 History Update
 
 * 20230725 Update
-  * 加入 備份DB機制
   * 修復 判別網址的問題
   * 修復 Instagram加入數值沒有移除關鍵字的指令
   * 調整 備份API與移除檢查者

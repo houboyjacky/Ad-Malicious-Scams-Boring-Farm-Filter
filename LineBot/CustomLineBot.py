@@ -39,7 +39,6 @@ import Query_API
 import Query_Image
 import schedule
 import signal
-import subprocess
 import sys
 import threading
 import time
@@ -67,14 +66,14 @@ def make_record(ip):
 @app.before_request
 def limit_remote_addr():
     # 控制是否透過網址連入
-    hostname = request.host.split(':')[0]
-    if hostname in Tools.ALLOWED_HOST:
-        return None
+    # hostname = request.host.split(':')[0]
+    # if hostname in Tools.ALLOWED_HOST:
+    #     return None
 
     # 開啟Cloudflare Proxy 保護手段
-    # for cf_ip in CF_IPS:
-    #     if ipaddress.ip_address(request.remote_addr) in ipaddress.ip_network(cf_ip):
-    #         return None
+    for cf_ip in CF_IPS:
+        if ipaddress.ip_address(request.remote_addr) in ipaddress.ip_network(cf_ip):
+            return None
 
     # 記錄403錯誤
     msg = make_record(request.remote_addr)
@@ -200,14 +199,8 @@ def Update_url_schedule(stop_event):
         schedule.run_pending()
 
 
-def backup_data():
-    # 執行 Backup.py 中的 backup_data 函式
-    subprocess.run(["python", "Backup.py"])
-
 def Logger_schedule(stop_event):
     schedule.every().day.at("23:00").do(Logger_Transfer, pre_close=False)
-    schedule.every().day.at("23:00").do(backup_data)
-
     while not stop_event.is_set():
         time.sleep(1)
         schedule.run_pending()
