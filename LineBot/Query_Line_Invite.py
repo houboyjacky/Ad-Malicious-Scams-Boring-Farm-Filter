@@ -52,6 +52,9 @@ def analyze_line_invite_url(user_text: str) -> Optional[dict]:
 
     datetime = date.today().strftime("%Y-%m-%d")
 
+    Type = ""
+    invite_code = ""
+
     if match := re.search(Tools.KEYWORD_LINE_INVITE[4], orgin_text):
         invite_code = match.group(1)
         struct = {"類別": "Voom", "帳號": invite_code, "來源": orgin_text,
@@ -74,7 +77,12 @@ def analyze_line_invite_url(user_text: str) -> Optional[dict]:
 
             redirected_url = Resolve_Redirects(redirected_url1)
             logger.info(f"Redirected_url 2 = {redirected_url}")
-            if not redirected_url.startswith("https://line.me"):
+            if not redirected_url:
+                match = re.search(r"\%3D([a-z0-9]+)", redirected_url1)
+                invite_code = match.group(1)
+                invite_code = f"@{invite_code}"
+                logger.info(f"invite_code={invite_code}")
+            elif not redirected_url.startswith("https://line.me"):
                 logger.info("該官方帳號已無效")
                 return None
         elif lower_text.startswith("https://lin.ee") or lower_text.startswith("https://page.line.me") or lower_text.startswith("https://line.naver.jp"):
@@ -82,16 +90,17 @@ def analyze_line_invite_url(user_text: str) -> Optional[dict]:
         else:
             redirected_url = orgin_text
 
-        match = re.match(Tools.KEYWORD_LINE_INVITE[5], redirected_url)
-        if not match:
-            logger.error('line.me邀請網址解析失敗')
-            return None
+        if not invite_code:
+            match = re.match(Tools.KEYWORD_LINE_INVITE[5], redirected_url)
+            if not match:
+                logger.error('line.me邀請網址解析失敗')
+                return None
 
-        Type, invite_code = match.groups()
-        if Type:
-            logger.info(f"Type : {Type}")
-        if invite_code:
-            logger.info(f"invite_code : {invite_code}")
+            Type, invite_code = match.groups()
+            if Type:
+                logger.info(f"Type : {Type}")
+            if invite_code:
+                logger.info(f"invite_code : {invite_code}")
 
         if "@" in invite_code:
             category = "官方"

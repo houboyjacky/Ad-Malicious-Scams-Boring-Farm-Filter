@@ -1,6 +1,7 @@
 # 歷史更新 History Update
 
 * 20230726 Update
+  * 修復 特定line網址解析
   * 調整 selenium升級4.10 API需要調整
 
 * 20230725 Update
