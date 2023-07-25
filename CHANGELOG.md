@@ -2,6 +2,7 @@
 
 * 20230726 Update
   * 修復 特定line網址解析
+  * 修復 錯誤印出應該到logger
   * 調整 selenium升級4.10 API需要調整
 
 * 20230725 Update

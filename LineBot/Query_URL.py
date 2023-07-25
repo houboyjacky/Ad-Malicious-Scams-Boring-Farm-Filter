@@ -51,7 +51,7 @@ def get_country_by_ip(ip):
         response = DbIpCity.get(ip, api_key='free')
         return response.country
     except Exception as e:
-        print(f"Error occurred while getting country for IP {ip}: {e}")
+        logger.error(f"Error occurred while getting country for IP {ip}: {e}")
         return None
 
 
@@ -60,7 +60,7 @@ def get_ips_by_hostname(hostname):
         ip_list = socket.gethostbyname_ex(hostname)[2]
         return ip_list
     except Exception as e:
-        print(
+        logger.error(
             f"Error occurred while getting IP addresses for hostname {hostname}: {e}")
         return []
 
