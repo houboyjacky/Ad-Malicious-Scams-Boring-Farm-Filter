@@ -33,7 +33,7 @@ import ssl
 import Tools
 
 
-def resolve_redirects_Webdriver(short_url, chromedriver_path='chromedriver'):
+def resolve_redirects_Webdriver(short_url):
 
     options = webdriver.ChromeOptions()
     options.add_argument('--headless')  # 啟用無頭模式
@@ -46,19 +46,20 @@ def resolve_redirects_Webdriver(short_url, chromedriver_path='chromedriver'):
         "user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36")
     # options.add_argument('proxy-server=211.75.88.123:80')
     # options.binary_location = "/usr/bin/chromedriver"
+    try:
+        service = webdriver.chrome.service.Service(log_path=Tools.CHROMEDRIVER_LOG)
+        browser = webdriver.Chrome(options=options,service=service)
+        # Remove navigator.webdriver Flag using JavaScript
+        browser.execute_script(
+            "Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
 
-    service_args = ["--log-path={}".format(Tools.CHROMEDRIVER_LOG)]
-
-    browser = webdriver.Chrome(
-        executable_path=chromedriver_path, options=options, service_args=service_args)
-    # Remove navigator.webdriver Flag using JavaScript
-    browser.execute_script(
-        "Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
-
-    browser.get(short_url)
-    # logger.info(f"browser.page_source = \n{browser.page_source}")
-    long_url = browser.current_url
-    browser.quit()
+        browser.get(short_url)
+        # logger.info(f"browser.page_source = \n{browser.page_source}")
+        long_url = browser.current_url
+        browser.quit()
+    except Exception as e:
+        long_url = short_url
+        logger.info(f"resolve_redirects_Webdriver error : {e}")
 
     return long_url
 

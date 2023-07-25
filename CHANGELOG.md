@@ -1,5 +1,8 @@
 # 歷史更新 History Update
 
+* 20230726 Update
+  * 調整 selenium升級4.10 API需要調整
+
 * 20230725 Update
   * 加入 備份DB機制
   * 修復 判別網址的問題
