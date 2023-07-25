@@ -33,39 +33,52 @@ Login_string = f"mongodb://{username}:{password}@{url}"
 
 client = pymongo.MongoClient(Login_string)
 
-DBs = ["Facebook",
-       "Instagram",
-       "Mail",
-       "Telegram",
-       "Tiktok",
-       "Twitter",
-       "UserPoint",
-       "WHOIS",
-       "WhatsApp",
-       "小紅書",
-       "虛擬貨幣",
-       "詐騙回報"
-       ]
+blacklist = [
+    "Facebook",
+    "Instagram",
+    "Tiktok",
+    "小紅書",
+    "Twitter",
+    "LINE"
+]
+
+for db_name in blacklist:
+    if db_name == "LINE":
+        collection = Query_API.Read_Collection(db_name, "LINE_INVITE")
+    else:
+        collection = Query_API.Read_Collection(db_name, db_name)
+    documents = collection.find()
+    for document in documents:
+        if document['檢查者']:
+            print(f"{collection.name}的{document['檢查者']}")
+            document['檢查者'] = ""
+            Query_API.Update_Document(collection, document, "帳號")
+
+
+DBs = [
+    "小紅書",
+    "虛擬貨幣",
+    "詐騙回報",
+    "Facebook",
+    "Instagram",
+    "LINE",
+    "Mail",
+    "Telegram",
+    "Tiktok",
+    "Twitter",
+    "UserPoint",
+    "WhatsApp",
+    "WHOIS"
+]
 
 for db_name in DBs:
-    collection = Query_API.Read_Collection(db_name, db_name)
-    print(f"正在匯出{collection.name}")
-    documents = collection.find({}, {'_id': 0})
-    output_filename = f'Backup/{db_name}.json'
-    with open(output_filename, 'w', encoding="utf-8", newline='') as f:
-        for i, document in enumerate(documents):
-            json.dump(list(documents), f, ensure_ascii=False, indent=4)
-            f.write('\n')
+    collections = Query_API.Read_Collections(db_name)
 
-db_name = "LINE"
-
-collections = Query_API.Read_Collections(db_name)
-
-for collection in collections:
-    print(f"正在匯出{collection.name}")
-    documents = collection.find({}, {'_id': 0})
-    output_filename = f'Backup/{collection.name}.json'
-    with open(output_filename, 'w', encoding="utf-8", newline='') as f:
-        for i, document in enumerate(documents):
-            json.dump(list(documents), f, ensure_ascii=False, indent=4)
-            f.write('\n')
+    for collection in collections:
+        print(f"正在匯出{collection.name}")
+        documents = collection.find({}, {'_id': 0})
+        output_filename = f'Backup/{collection.name}.json'
+        with open(output_filename, 'w', encoding="utf-8", newline='') as f:
+            for i, document in enumerate(documents):
+                json.dump(list(documents), f, ensure_ascii=False, indent=4)
+                f.write('\n')
