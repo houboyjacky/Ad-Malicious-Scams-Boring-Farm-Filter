@@ -1,6 +1,7 @@
 # 歷史更新 History Update
 
 * 20230725 Update
+  * 加入 備份DB機制
   * 修復 Instagram加入數值沒有移除關鍵字的指令
   * 調整 獨立處理t.ly
   * 調整 縮網址http自動加入https
