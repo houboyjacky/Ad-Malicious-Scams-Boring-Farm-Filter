@@ -39,6 +39,10 @@ def get_ig_list_len():
 def analyze_IG_url(user_text: str) -> Optional[dict]:
 
     logger.info(f"user_text: {user_text}")
+
+    user_text = user_text.replace("加入", "")
+    user_text = user_text.replace("刪除", "")
+
     Username = ""
     Code = ""
     if match := re.search(Tools.KEYWORD_IG_ID[0], user_text):
