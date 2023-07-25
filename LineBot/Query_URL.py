@@ -388,7 +388,7 @@ def user_query_website_by_IP(IP):
 
     if re.search("taiwan", output, re.IGNORECASE):
         output = f"伺服器位置：台灣"
-    IsScam, _ = check_blacklisted_site(IP)
+    IsScam = check_blacklisted_site(IP)
     if IsScam:
         rmessage = (f"被判定「是」詐騙/可疑網站\n"
                     f"請勿相信此網站\n\n"

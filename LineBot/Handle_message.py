@@ -350,7 +350,7 @@ def handle_message_text_admin_sub(orgin_text, using_template = False):
                 if domain_name in Tools.SUBWEBSITE:
                     domain_name = f"{subdomain}.{domain}.{suffix}"
 
-            IsScam, _ = check_blacklisted_site(domain_name)
+            IsScam = check_blacklisted_site(domain_name)
             if IsScam:
                 rmessage = f"網址黑名單已存在網址\n「 {domain_name} 」"
             else:
@@ -464,17 +464,6 @@ def handle_message_text_admin(user_id, orgin_text):
 
 def handle_message_text_front(user_text) -> str:
     # 前置與防呆
-    if len(user_text) > 1000:
-        if user_text.startswith("http"):
-            _, domain, suffix = Tools.domain_analysis(user_text)
-            rmessage = (f"謝謝你提供的情報\n"
-                        f"但網址過長，請直接輸入\n"
-                        f"「 http://{domain}.{suffix} 」\n"
-                        f"就好"
-                        )
-        else:
-            rmessage = f"謝謝你提供的情報\n請縮短長度或分段傳送"
-        return rmessage
 
     if user_text == "備用指南":
         return Tools.USER_GUIDE
@@ -902,6 +891,18 @@ def handle_message_text(event):
     if re.match(r'^(賴|TG|IG|微信|推特|貨幣|迪卡|卡稱) ', orgin_text):
         orgin_text = orgin_text.replace(" ", "")
 
+    if not Tools.IsAdmin(user_id) and len(orgin_text) > 1000:
+        if orgin_text.startswith("http"):
+            _, domain, suffix = Tools.domain_analysis(orgin_text)
+            rmessage = (f"謝謝你提供的情報\n"
+                        f"但網址過長，請直接輸入\n"
+                        f"「 http://{domain}.{suffix} 」\n"
+                        f"就好"
+                        )
+        else:
+            rmessage = f"謝謝你提供的情報\n請縮短長度或分段傳送"
+        return rmessage
+
     # 長度控管、備用指南、電話、網站排行榜
     if rmessage := handle_message_text_front(orgin_text):
         Handle_LineBot.message_reply(event, rmessage)
@@ -1004,7 +1005,7 @@ def handle_message_image(event):
         # 轉換格式
         elapsed_time_str = Tools.format_elapsed_time(elapsed_time)
 
-        if Similarity < 9000:
+        if Similarity < 10000:
             return
         else:
             rmessage = f"系統自動辨識：\n該照片與詐騙，相似度程度高，請特別留意\n"
