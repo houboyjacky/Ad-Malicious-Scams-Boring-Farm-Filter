@@ -231,7 +231,7 @@ def message_reply_Query(user_id, IsScam, Type_Name, code, orgin_text):
 
     if IsScam:
         suffix = (f"⚠️「是」已知詐騙的{Type_Name}\n\n"
-                  f"🚫請勿相信此{Type_Name}\n\n"
+                  f"🚫請勿相信此{Type_Name}\n"
                   f"🙏感恩"
                   )
         if Type_Name == "LINE邀請網址" or Type_Name == "FB" or Type_Name == "IG":
@@ -263,7 +263,7 @@ def message_reply_Query(user_id, IsScam, Type_Name, code, orgin_text):
         )
         )
     else:
-        suffix = (f"並不代表「沒問題」⚠️\n\n"
+        suffix = (f"並「不代表」沒問題⚠️\n\n"
                   f"📍若確定是詐騙😈\n"
                   f"請點選➡️「詐騙回報」🤝\n"
                   f"並附上截圖與說明✅\n\n"
