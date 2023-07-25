@@ -1,5 +1,9 @@
 # 歷史更新 History Update
 
+* 20230725 Update
+  * 調整 獨立處理t.ly
+  * 調整 縮網址http自動加入https
+
 * 20230724 Update
   * 更新 封鎖有誤
   * 更新 個人不想看與網友回報廣告或網站

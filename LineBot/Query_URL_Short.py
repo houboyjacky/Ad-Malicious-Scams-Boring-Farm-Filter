@@ -156,38 +156,42 @@ def resolve_redirects_ruby(url):
 def resolve_redirects_other(url):
     global HTTP_HEADERS_LIST
 
-    for data in HTTP_HEADERS_LIST:
-        if data["Name"] == "other":
-            headers = data["Headers"]
-            break
+    headers = next(
+        (data["Headers"] for data in HTTP_HEADERS_LIST if data["Name"] == "other"), None)
 
     try:
-        # First attempt without ignoring SSL verification
         response = requests.get(url, headers=headers, allow_redirects=True)
-    except requests.exceptions.SSLError:
-        # If an SSLError occurs, try again ignoring SSL verification
-        response = requests.get(url, headers=headers,
-                                allow_redirects=True, verify=False)
-
+        # logger.info(f"response = {response.content}")
+        if response.status_code == 301 or response.status_code == 302:
+            final_url = response.headers['Location']
+            logger.info(f"resolve_redirects_other Location = {final_url}")
+        else:
+            final_url = response.url
+            logger.info(f"resolve_redirects_other = {final_url}")
+        return final_url
     except requests.exceptions.RequestException as e:
-        logger.info(f"Error occurred other: {e}")
-        return None
+        logger.info(f"Error occurred: {e}")
 
-    logger.info(f"response = {response.content}")
-    if response.status_code == 301 or response.status_code == 302:
-        final_url = response.headers['Location']
-        logger.info(f"resolve_redirects_other Location = {final_url}")
+    return None
+
+
+def replace_http_with_https(url):
+    # 將輸入字串轉換為小寫，再進行替換
+    lowercase_url = url.lower()
+    index = lowercase_url.find("http://")
+    if index != -1:
+        replaced_url = lowercase_url[:index] + "https://" + url[index+7:]
+        return replaced_url
     else:
-        final_url = response.url
-        logger.info(f"resolve_redirects_other = {final_url}")
-
-    return final_url
+        return url
 
 
 def Resolve_Redirects(url):
 
     _, domain, suffix = Tools.domain_analysis(url.lower())
     domain_name = f"{domain}.{suffix}"
+
+    url = replace_http_with_https(url)
 
     if domain_name in Tools.NEED_HEAD_SHORT_URL_LIST:
         final_url = resolve_redirects_other(url)
@@ -227,24 +231,37 @@ def Resolve_Redirects(url):
     try:
         response = urlopen(url, context=context, timeout=timeout)
         final_url = response.geturl()
-        logger.info(f"final_url1 = {final_url}")
         if final_url != url:
+            logger.info(f"final_url urlopen = {final_url}")
             return final_url
     except (HTTPError, URLError) as e:
-        logger.info(f"Error occurred 1 : {e}")
+        logger.info(f"Error occurred urlopen: {e}")
+
+    try:
+        response = requests.get(url, allow_redirects=False)
+        if response.status_code in (301, 302):
+            final_url = response.headers['Location']
+        else:
+            final_url = response.url
+
+        if final_url != url:
+            logger.info(f"final_url no redirects = {final_url}")
+            return final_url
+    except requests.exceptions.RequestException as e:
+        logger.info(f"Error occurred no redirects : {e}")
 
     try:
         response = requests.get(url, allow_redirects=True)
         final_url = response.url
-        logger.info(f"final_url 2 = {final_url}")
-        if url != final_url:
+        if final_url != url:
+            logger.info(f"final_url using redirects = {final_url}")
             return final_url
     except requests.exceptions.RequestException as e:
-        logger.info("Error occurred 2 :", e)
+        logger.info("Error occurred using redirects:", e)
 
     final_url = resolve_redirects_Webdriver(url)
     if final_url != url:
-        logger.info(f"final_url 3 = {final_url}")
+        logger.info(f"final_url Webdriver = {final_url}")
         return final_url
 
     final_url = resolve_redirects_other(url)
