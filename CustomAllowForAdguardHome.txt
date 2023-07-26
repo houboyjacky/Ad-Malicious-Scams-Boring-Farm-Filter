@@ -89,3 +89,8 @@
 @@||chailease.com.tw^
 @@||cht.tw^
 @@||jumpcrypto.com^
+@@||bitoex.com^
+@@||etmall.com.tw^
+@@||momo.dm^
+@@||talkod.tw^
+@@||ubot.com.tw^
