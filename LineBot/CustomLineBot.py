@@ -195,7 +195,7 @@ def handle_message(event):
 
 def backup_data():
     # 執行 Backup.py 中的 backup_data 函式
-    subprocess.run(["python", "Backup.py"])
+    subprocess.run(["python", "Backup_DB.py"])
 
 
 def signal_handler(sig, frame):
