@@ -8,6 +8,7 @@
   * 調整 用詞
   * 調整 合併schedule thread
   * 調整 因應檔案位置轉移
+  * 調整 移除FB字尾無用字串
   * 調整 移除ig尾部字串
   * 調整 ChainSight縮短查詢時間為5秒
   * 調整 LINE ID改為整點更新一次
