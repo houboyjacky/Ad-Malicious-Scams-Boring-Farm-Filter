@@ -6,6 +6,7 @@
   * 修復 特定line網址解析
   * 修復 錯誤印出應該到logger
   * 調整 用詞
+  * 調整 合併schedule thread
   * 調整 ChainSight縮短查詢時間為5秒
   * 調整 LINE ID改為整點更新一次
   * 調整 selenium升級4.10 API需要調整

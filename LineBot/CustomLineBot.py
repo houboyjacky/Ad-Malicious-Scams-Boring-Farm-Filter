@@ -193,25 +193,9 @@ def handle_message(event):
     return
 
 
-def Update_url_schedule(stop_event):
-    schedule.every().hour.at(":00").do(update_blacklist)
-    schedule.every().hour.at(":00").do(LINE_ID_Download_From_165)
-    while not stop_event.is_set():
-        time.sleep(1)
-        schedule.run_pending()
-
-
 def backup_data():
     # 執行 Backup.py 中的 backup_data 函式
     subprocess.run(["python", "Backup.py"])
-
-def Logger_schedule(stop_event):
-    schedule.every().day.at("23:00").do(Logger_Transfer, pre_close=False)
-    schedule.every().day.at("23:00").do(backup_data)
-
-    while not stop_event.is_set():
-        time.sleep(1)
-        schedule.run_pending()
 
 
 def signal_handler(sig, frame):
@@ -221,15 +205,30 @@ def signal_handler(sig, frame):
     sys.exit(0)
 
 
-def background_tasks():
-    logger.info(f"background_tasks Start")
+def background_schedule(stop_event):
+    # 黑名單更新
+    schedule.every().hour.at(":00").do(update_blacklist)
+    # 165黑名單更新
+    schedule.every().hour.at(":00").do(LINE_ID_Download_From_165)
+    # Log儲存與分類
+    schedule.every().day.at("23:00").do(Logger_Transfer, pre_close=False)
+    # 備份DB資料
+    schedule.every().day.at("23:00").do(backup_data)
+
+    while not stop_event.is_set():
+        time.sleep(1)
+        schedule.run_pending()
+
+
+def Initialization():
+    logger.info(f"Initialization Start")
     SignMobileconfig()
     LINE_ID_Download_From_165()
     download_cf_ips()
     update_blacklist(True)
     Query_Image.Load_Image_Feature()
     EmptyShortUrlDB()
-    logger.info(f"background_tasks Finish")
+    logger.info(f"Initialization Finish")
 
 
 if __name__ == "__main__":
@@ -241,16 +240,13 @@ if __name__ == "__main__":
     signal.signal(signal.SIGTERM, signal_handler)
 
     # 建立 thread
-    tasks_thread = threading.Thread(target=background_tasks)
-    update_thread = threading.Thread(
-        target=Update_url_schedule, args=(stop_event,))
-    logger_thread = threading.Thread(
-        target=Logger_schedule, args=(stop_event,))
+    init_thread = threading.Thread(target=Initialization)
+    schedule_thread = threading.Thread(
+        target=background_schedule, args=(stop_event,))
 
     # 啟動 thread
-    tasks_thread.start()
-    update_thread.start()
-    logger_thread.start()
+    init_thread.start()
+    schedule_thread.start()
 
     # 開啟 LINE 聊天機器人的 Webhook 伺服器
     logger.info(f"Line Bot is ready")
@@ -258,6 +254,5 @@ if __name__ == "__main__":
         Tools.CERT, Tools.PRIVKEY), threaded=True)
 
     # 等待 thread 結束
-    tasks_thread.join()
-    update_thread.join()
-    logger_thread.join()
+    init_thread.join()
+    schedule_thread.join()
