@@ -78,7 +78,10 @@ def analyze_line_invite_url(user_text: str) -> Optional[dict]:
             redirected_url = Resolve_Redirects(redirected_url1)
             logger.info(f"Redirected_url 2 = {redirected_url}")
             if not redirected_url:
-                match = re.search(r"\%3D([a-z0-9]+)", redirected_url1)
+                _, domain, tdl = Tools.domain_analysis(redirected_url1)
+                if f"{domain}.{tdl}" != "line.me":
+                    return None
+                match = re.search(r"accountId\%3D([a-z0-9]+)", redirected_url1)
                 invite_code = match.group(1)
                 invite_code = f"@{invite_code}"
                 logger.info(f"invite_code={invite_code}")
