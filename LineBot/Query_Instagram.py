@@ -53,7 +53,7 @@ def analyze_IG_url(user_text: str) -> Optional[dict]:
         return None
 
     #移除尾部代號
-    user_text = re.sub(r"?igshid.+","", user_text)
+    user_text = re.sub(r"\?igshid.+","", user_text)
 
     logger.info(f"Username: {Username}")
     logger.info(f"Code: {Code}")
