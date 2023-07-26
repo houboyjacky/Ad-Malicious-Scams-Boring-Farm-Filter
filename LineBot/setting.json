@@ -8,6 +8,7 @@
 	"CHANNEL_SECRET": "",
 	"CHROMEDRIVER_LOG":"",
 	"CONFIG_FOLDER": "",
+	"DATA_PATH":"",
 	"HASH_FILE": "",
 	"HTTP_HEADERS": "",
 	"LINEID_WEB": "",

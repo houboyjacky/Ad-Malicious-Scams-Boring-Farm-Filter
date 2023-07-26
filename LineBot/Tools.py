@@ -56,6 +56,8 @@ CHANNEL_SECRET = setting['CHANNEL_SECRET']
 CHROMEDRIVER_LOG = setting['CHROMEDRIVER_LOG']
 # CONFIG_FOLDER => Config Folder
 CONFIG_FOLDER = setting['CONFIG_FOLDER']
+# DATA_PATH => DATA PATH
+DATA_PATH = setting['DATA_PATH']
 # HASH_FILE => HASH INF IN FILE
 HASH_FILE = setting['HASH_FILE']
 # HTTP_HEADERS => Http Headers
@@ -157,6 +159,7 @@ def reloadSetting():
     global CHANNEL_SECRET
     global CHROMEDRIVER_LOG
     global CONFIG_FOLDER
+    global DATA_PATH
     global HASH_FILE
     global HTTP_HEADERS
     global KEYWORD_DCARD_ID
@@ -210,6 +213,7 @@ def reloadSetting():
     CHANNEL_SECRET = setting['CHANNEL_SECRET']
     CHROMEDRIVER_LOG = setting['CHROMEDRIVER_LOG']
     CONFIG_FOLDER = setting['CONFIG_FOLDER']
+    DATA_PATH = setting['DATA_PATH']
     HASH_FILE = setting['HASH_FILE']
     HTTP_HEADERS = setting['HTTP_HEADERS']
     LINEID_WEB = setting['LINEID_WEB']

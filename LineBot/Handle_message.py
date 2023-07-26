@@ -411,7 +411,7 @@ def handle_message_text_admin(user_id, orgin_text):
         # 取得開始時間
         start_time = time.time()
 
-        folder_path = 'Image_Sample'
+        folder_path = f"{Tools.DATA_PATH}/Image_Sample"
         file_list = os.listdir(folder_path)
         with ThreadPoolExecutor(max_workers=4) as executor:
             for file_name in file_list:
@@ -946,7 +946,7 @@ def handle_message_image(event):
     image = Image.open(BytesIO(message_content.content))
 
     # 儲存照片
-    IMAGE = "image"
+    IMAGE = f"{Tools.DATA_PATH}/image"
     IMAGE_DIR = f"{IMAGE}/"
     if not os.path.isdir(IMAGE_DIR):
         os.mkdir(IMAGE_DIR)
@@ -1035,13 +1035,13 @@ def handle_message_file(event):
     file_type = event.message.type
     file_extension = ""
     if file_type == "video":
-        FILE_DIR = "video/"
+        FILE_DIR = f"{Tools.DATA_PATH}/{file_type}/"
         file_extension = ".mp4"
     elif file_type == "audio":
-        FILE_DIR = "audio/"
+        FILE_DIR = f"{Tools.DATA_PATH}/{file_type}/"
         file_extension = ".m4a"
     elif file_type == "file":
-        FILE_DIR = "file/"
+        FILE_DIR = f"{Tools.DATA_PATH}/{file_type}/"
         file_name = event.message.file_name.split(".")[0]
         file_extension = "." + file_name.split(".")[-1]  # 取得最後一個'.'後的副檔名
     else:
