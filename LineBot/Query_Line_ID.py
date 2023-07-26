@@ -98,9 +98,6 @@ def LINE_ID_Download_From_165():
 
 def analyze_LineID(user_text: str) -> Optional[dict]:
 
-    # 分析前重新下載
-    LINE_ID_Download_From_165()
-
     user_text = user_text.replace("加入", "")
     user_text = user_text.replace("刪除", "")
 

@@ -195,6 +195,7 @@ def handle_message(event):
 
 def Update_url_schedule(stop_event):
     schedule.every().hour.at(":00").do(update_blacklist)
+    schedule.every().hour.at(":00").do(LINE_ID_Download_From_165)
     while not stop_event.is_set():
         time.sleep(1)
         schedule.run_pending()
