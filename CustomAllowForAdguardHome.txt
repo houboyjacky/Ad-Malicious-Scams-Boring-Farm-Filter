@@ -94,3 +94,5 @@
 @@||momo.dm^
 @@||talkod.tw^
 @@||ubot.com.tw^
+@@||ctbc.tw^
+@@||cht.tw^

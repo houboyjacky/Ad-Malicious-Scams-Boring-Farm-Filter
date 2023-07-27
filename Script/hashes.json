@@ -2,15 +2,15 @@
     "Content-Farm_Multi-Redirection.txt": "439810257869c52e696d89954656cca0",
     "Content-Farm_Multi-RedirectionForAdguardHome.txt": "2e38b777e492d9a1a931bb673d8584d7",
     "Content-Farm_Multi-RedirectionForUblackList.txt": "b176a8e726f7a422d75afcd458d87f71",
-    "CustomAllowForAdguardHome.txt": "f5175d60700456872895f7cdf5bbabcf",
-    "CustomBlockForAdguardHome.txt": "1fb207ccdee59da499e420bb4bdbe8d9",
-    "CustomBlockTLDForAdguardHome.txt": "71fe897cceb4a14b5f2e35356c995799",
-    "GetFromGovernmentInf_LineID.txt": "fdbe76f9bb391e5ad02719edc7c0a401",
+    "CustomAllowForAdguardHome.txt": "6622baffa654b19ed854b730c9658616",
+    "CustomBlockForAdguardHome.txt": "63b462755a39fe4001d560535188d1ff",
+    "CustomBlockTLDForAdguardHome.txt": "27a1691349ec9744641110f164bf3f7e",
+    "GetFromGovernmentInf_LineID.txt": "4f3e5cd295392494e9eab0404faafd88",
     "ScamSiteForPetScams.txt": "475552e45ace6c8b22a4dd67a0a1556e",
     "ScamSiteGetFromDcard.txt": "6cf71398ca112b99f0f18c7caceb7286",
-    "ScamSiteGetFromFX110.txt": "882db3f238e6bfa453ce6507e641c51d",
+    "ScamSiteGetFromFX110.txt": "234eea2f695af23952ed848794d28bd3",
     "ScamSiteGetFromGlobalAntiScamOrg.txt": "01f00ba1353199176e2092653613c981",
     "ScamSiteGetFromScamAdviserNewsletter.txt": "551b0e4ad3c5230baf18e1646a6e5375",
-    "ScamSiteGetFromTaiwan165.txt": "fe22a9d33f43077cc0e4a7b9156a316f",
-    "ScamsSiteGetFromFB_TonyNey.txt": "432ae062b39b40ccd50dc08c803c3f0a"
+    "ScamSiteGetFromTaiwan165.txt": "a9ad0432b9ebf026af032a47ec491698",
+    "ScamsSiteGetFromFB_TonyNey.txt": "e4ab3ba27a16ff9ebd5735f641222f6b"
 }

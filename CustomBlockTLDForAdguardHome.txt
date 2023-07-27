@@ -46,6 +46,7 @@
 /binarium[a-z]+\.com/
 /bitcores[0-9]+\.com/
 /bithumb[0-9]+\.(com|me|xyz)/
+/bitkonan[a-z0-9]{3}\.com/
 /bitmax[a-z0-9]+\.com/
 /bitmex[a-z0-9]+\.com/
 /bityard.+\.com/
@@ -72,6 +73,7 @@
 /coinbase.+\..+$/
 /coincheck\.[a-z]+/
 /coinrule.*\.*/
+/coinvv[a-z0-9]+\.com/
 /com-id\w+.cloud/
 /costco.+\.com/
 /cwgforexp[a-z0-9]*\.com/
@@ -138,6 +140,8 @@
 /liquiditypool-.+\.com/
 /long[0-9]\.net/
 /metoocofstimrgpaged-[a-z0-9]+\.online/
+/moxc[a-z0-9]{2,3}\.com/
+/mycoin[a-z0-9]+\.net/
 /netflti[a-z]*.com/
 /news-spe\d+\.com/
 /nymex.+tw\.com/
@@ -146,10 +150,12 @@
 /pages-[0-9]+\.pw/
 /pageverification[a-z0-9]+\.co\.vu/
 /peeba[0-9]\.com/
+/peicheng[a-z0-9]+\.com/
 /qeic[a-z0-9]+w\.net/
 /qfii[a-z0-9]*\.com/
 /qh...\.tw/
 /rakuten[0-9]+\.com/
+/rakuten[a-z0-9]{1,2}\.com/
 /reactivate-page-[a-z0-9]+\.click/
 /risheng[0-9]+\.com/
 /ruten.+\.com/
@@ -237,6 +243,7 @@
 ||bellagio.*^
 ||bing-bon.*^
 ||bithumb77.*^
+||bitstamp*.*^
 ||brk.*
 ||cbn-tw.*^
 ||coinex*.*^
@@ -261,5 +268,9 @@
 ||tw-sia.*^
 ||twcaijin.*^
 ||vantwnow.*^
+||walmant.*^
+||walnart.*
 ||yasenfinancial.*^
 ||zhy*.com^
+/ubsex[a-z0-9]{1,2}\.com/
+||vantwnow.*^
