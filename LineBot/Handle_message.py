@@ -20,10 +20,11 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 '''
 from concurrent.futures import ThreadPoolExecutor
-from GetFromNetizen import push_netizen_file, write_new_netizen_file, get_netizen_file
+# Publish Python Package
 from io import BytesIO
 from Logger import logger
 from PIL import Image
+import Query_Netizen as Q_NET
 from Point import read_user_point, get_user_rank, write_user_point
 from PrintText import reload_user_record, reload_notice_board
 from Query_Facebook import FB_Read_Document, FB_Write_Document, get_fb_list_len, get_random_fb_blacklist, push_random_fb_blacklist, FB_Delete_Document
@@ -509,7 +510,7 @@ def handle_message_text_game(user_id, user_text) -> str:
             rmessage = Handle_LineBot.message_reply_After_Report(True)
         else:
             user_name = Handle_LineBot.linebot_getRealName(user_id)
-            if write_new_netizen_file(user_id, user_name, user_text, False):
+            if Q_NET.write_new_netizen_file(user_id, user_name, user_text, False):
                 button1 = "使用指南"
                 button2 = "詐騙學習"
                 func_name = "重複回報"
@@ -535,7 +536,7 @@ def handle_message_text_game(user_id, user_text) -> str:
 
     if user_text == "完成":
         found = push_random_blacklist(user_id, True, False)
-        found2 = push_netizen_file(user_id, True, False)
+        found2 = Q_NET.push_netizen_file(user_id, True, False)
         if found and not found2:
             write_user_point(user_id, 1)
             rmessage = Handle_LineBot.message_reply_Game_End("遊戲")
@@ -550,7 +551,7 @@ def handle_message_text_game(user_id, user_text) -> str:
 
     if user_text == "失效":
         found = push_random_blacklist(user_id, False, True)
-        found2 = push_netizen_file(user_id, False, True)
+        found2 = Q_NET.push_netizen_file(user_id, False, True)
         if found and not found2:
             write_user_point(user_id, 1)
             rmessage = Handle_LineBot.message_reply_Game_End("遊戲")

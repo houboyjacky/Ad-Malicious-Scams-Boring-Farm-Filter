@@ -2,6 +2,7 @@
 
 * 20230727 Update
   * 調整 根據pylint建議修改程式碼
+  * 調整 Query_Netizen名稱
 
 * 20230726 Update
   * 更新 165反詐騙諮詢專線-詐騙LINE ID(~112/7/24)
