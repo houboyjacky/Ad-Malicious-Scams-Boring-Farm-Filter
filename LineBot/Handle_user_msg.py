@@ -83,10 +83,10 @@ def handle_line_id(user_id, text):
     return None
 
 def handle_telegram_id(user_id,text):
-    if re.search(Tools.KEYWORD_TELEGRAM_ID[0], text):
-        telegram_id, status = Q_TG.Telegram_Read_Document(text)
+    if re.search(Tools.KEYWORD_TELEGRAM_ID[0], text.lower()):
+        telegram_id, status = Q_TG.Telegram_Read_Document(text.lower())
         return Handle_LineBot.message_reply_Query(
-            user_id, status, "Telegram ID", telegram_id, text)
+            user_id, status, "Telegram ID", telegram_id, text.lower())
     return None
 
 def handle_twitter_id(user_id,text):
@@ -104,10 +104,10 @@ def handle_wechat_id(user_id,text):
     return None
 
 def handle_ig_id(user_id,text):
-    if re.search(Tools.KEYWORD_IG_ID[0], text):
-        ig, status = Q_IG.IG_Read_Document(text)
+    if re.search(Tools.KEYWORD_IG_ID[0], text.lower()):
+        ig, status = Q_IG.IG_Read_Document(text.lower())
         return Handle_LineBot.message_reply_Query(
-            user_id, status, "IG", ig, text)
+            user_id, status, "IG", ig, text.lower())
     return None
 
 def handle_dcard_id(user_id,text):
@@ -195,14 +195,14 @@ def handle_ig_web(prefix_msg, user_id, text):
 
 def handle_telegram_web(_, user_id, text):
     if re.search(Tools.KEYWORD_TELEGRAM_URL[0], text.lower()):
-        telegram_id, status = Q_TG.Telegram_Read_Document(text)
+        telegram_id, status = Q_TG.Telegram_Read_Document(text.lower())
         if status == -1:
             rmessage = (f"所輸入的「 {telegram_id} 」\n"
                         f"有誤、網址失效或不支援\n"
                         f"感恩")
         else:
             rmessage = Handle_LineBot.message_reply_Query(
-                user_id, status, "Telegram ID", telegram_id, text)
+                user_id, status, "Telegram ID", telegram_id, text.lower())
         return rmessage
     return None
 

@@ -2,6 +2,7 @@
 
 * 20230727 Update
   * 移除 網站排行榜
+  * 調整 支援TG與IG關鍵字大小寫控制
   * 調整 行尾改成LF
   * 調整 根據pylint建議修改程式碼
   * 調整 Handle_message分檔處理

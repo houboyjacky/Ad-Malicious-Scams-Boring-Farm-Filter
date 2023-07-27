@@ -80,7 +80,7 @@ def handle_message_text(event):
     # 讀取使用者傳來的文字訊息
     orgin_text = event.message.text.strip()
 
-    if re.match(r'^(賴|TG|IG|微信|推特|貨幣|迪卡|卡稱) ', orgin_text):
+    if re.match(r'^(賴|TG|tg|IG|ig|微信|推特|貨幣|迪卡|卡稱) ', orgin_text):
         orgin_text = orgin_text.replace(" ", "")
 
     if not Tools.IsAdmin(user_id) and len(orgin_text) > 1000:
