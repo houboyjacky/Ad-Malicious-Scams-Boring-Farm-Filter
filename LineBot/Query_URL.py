@@ -545,7 +545,6 @@ def check_ChainSight(domain_name, whois_creation_date):
         update_part_blacklist_comment(msg)
         update_part_blacklist_rule_to_db(domain_name)
 
-        logger.info(f"msg = {msg}")
     return checkresult, msg
 
 # 使用者查詢網址

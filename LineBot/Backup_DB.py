@@ -21,9 +21,10 @@ THE SOFTWARE.
 '''
 
 import json
-import Tools
 import pymongo
+import Tools
 import Query_API
+from Logger import logger
 
 username = Tools.MONGODB_USER
 password = Tools.MONGODB_PWD
@@ -50,7 +51,7 @@ for db_name in blacklist:
     documents = collection.find()
     for document in documents:
         if document['檢查者']:
-            print(f"{collection.name}的{document['檢查者']}")
+            logger.info("%s的%s", collection.name, document['檢查者'])
             document['檢查者'] = ""
             Query_API.Update_Document(collection, document, "帳號")
 
@@ -75,7 +76,7 @@ for db_name in DBs:
     collections = Query_API.Read_Collections(db_name)
 
     for collection in collections:
-        print(f"正在匯出{collection.name}")
+        logger.info("正在匯出%s", {collection.name})
         documents = collection.find({}, {'_id': 0})
         output_filename = f'Backup/{collection.name}.json'
         with open(output_filename, 'w', encoding="utf-8", newline='') as f:

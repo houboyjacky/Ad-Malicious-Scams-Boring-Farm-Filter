@@ -94,15 +94,15 @@ def Random_get_List(UserID):
     logger.info(f"selected_item = {selected_item}")
     if selected_item == "FB":
         return get_random_fb_blacklist(UserID)
-    elif selected_item == "IG":
+    if selected_item == "IG":
         return get_random_ig_blacklist(UserID)
-    elif selected_item == "LINE":
+    if selected_item == "LINE":
         return get_random_line_invite_blacklist(UserID)
-    elif selected_item == "TWITTER":
+    if selected_item == "TWITTER":
         return get_random_Twitter_blacklist(UserID)
-    elif selected_item == "TIKTOK":
+    if selected_item == "TIKTOK":
         return get_random_Tiktok_blacklist(UserID)
-    elif selected_item == "SMALLREDBOOK":
+    if selected_item == "SMALLREDBOOK":
         return get_random_SmallRedBook_blacklist(UserID)
     else:
         return None, None

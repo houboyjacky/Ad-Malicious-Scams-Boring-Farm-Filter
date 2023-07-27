@@ -26,13 +26,12 @@ from Point import write_user_point
 import Query_API
 
 
-Name = "詐騙回報"
+NAME = "詐騙回報"
 
 
-def write_new_netizen_file(user_id: str, user_name: str, user_text: str, isSystem: bool) -> bool:
-    global Name
+def write_new_netizen_file(user_id: str, user_name: str, user_text: str, is_system: bool) -> bool:
 
-    collection = Query_API.Read_Collection(Name, Name)
+    collection = Query_API.Read_Collection(NAME, NAME)
 
     query = {
         "$and": [
@@ -58,7 +57,7 @@ def write_new_netizen_file(user_id: str, user_name: str, user_text: str, isSyste
               "完成": 0,
               "失效": 0,
               "檢查者": "",
-              "系統轉送": isSystem
+              "系統轉送": is_system
               }
 
     Query_API.Write_Document(collection, struct)
@@ -67,8 +66,8 @@ def write_new_netizen_file(user_id: str, user_name: str, user_text: str, isSyste
 
 
 def get_netizen_file(user_id: str):
-    global Name
-    collection = Query_API.Read_Collection(Name, Name)
+
+    collection = Query_API.Read_Collection(NAME, NAME)
     total_documents = collection.count_documents({})
 
     query = {
@@ -81,8 +80,8 @@ def get_netizen_file(user_id: str):
     }
 
     if result := collection.find_one(query):
-        logger.info(f"result={result}")
-        SN = f"{str(result['序號'])}/{str(total_documents)}"
+        logger.info("result=%s", result)
+        SN = "%d/%d", result['序號'], total_documents
         result['檢查者'] = user_id
         Query_API.Update_Document(collection, result, "序號")
         return SN, result["內容"], result["系統轉送"]
@@ -90,24 +89,24 @@ def get_netizen_file(user_id: str):
     return "", "", ""
 
 
-def push_netizen_file(UserID, success, disappear):
-    global Name
-    found = False
-    collection = Query_API.Read_Collection(Name, Name)
-    Document = Query_API.Search_Same_Document(collection, "檢查者", UserID)
+def push_netizen_file(user_id, success, disappear):
 
-    if not Document:
+    found = False
+    collection = Query_API.Read_Collection(NAME, NAME)
+    document = Query_API.Search_Same_Document(collection, "檢查者", user_id)
+
+    if not document:
         return found
 
     found = True
-    Document['檢查者'] = ""
+    document['檢查者'] = ""
     if success:
-        Document['完成'] = 1
-        write_user_point(UserID, 2)
+        document['完成'] = 1
+        write_user_point(user_id, 2)
     if disappear:
-        Document['失效'] = 1
-        write_user_point(UserID, 2)
+        document['失效'] = 1
+        write_user_point(user_id, 2)
 
-    Query_API.Update_Document(collection, Document, "序號")
+    Query_API.Update_Document(collection, document, "序號")
 
     return found

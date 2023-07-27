@@ -20,46 +20,57 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 '''
 
-# pip3 install schedule tldextract flask line-bot-sdk python-whois beautifulsoup4 pytesseract pycountry python-dateutil geocoder geocoder[geonames] ip2geotools
-# sudo apt install tesseract-ocr tesseract-ocr-eng tesseract-ocr-chi-tra tesseract-ocr-chi-tra-vert tesseract-ocr-chi-sim tesseract-ocr-chi-sim-vert
+# pip3 install schedule tldextract flask line-bot-sdk python-whois beautifulsoup4
+# pip3 install pytesseract pycountry python-dateutil geocoder geocoder[geonames] ip2geotools
+# sudo apt install tesseract-ocr tesseract-ocr-eng tesseract-ocr-chi-tra
+# sudo apt install tesseract-ocr-chi-tra-vert tesseract-ocr-chi-sim tesseract-ocr-chi-sim-vert
+
+# Publish Python Package
+import ipaddress
+import os
+import time
+import sys
+import threading
+import signal
+import subprocess
+import schedule
 from flask import Flask, Response, request, abort, send_file, send_from_directory, redirect
-from Handle_message import handle_message_file, handle_message_image, handle_message_text
-from linebot import WebhookHandler
+from linebot.v3 import WebhookHandler
 from linebot.exceptions import InvalidSignatureError
 from linebot.models import MessageEvent
+
+# My Python Package
+from Handle_message import handle_message_file, handle_message_image, handle_message_text
 from Logger import logger, Logger_Transfer
 from Query_Line_ID import LINE_ID_Download_From_165
 from Security_Check import CF_IPS, download_cf_ips
 from Security_ShortUrl import RecordShortUrl, EmptyShortUrlDB
 from SignConfig import SignMobileconfig
 from Update_BlackList import update_blacklist
-import ipaddress
-import os
 import Query_API
 import Query_Image
-import schedule
-import signal
-import subprocess
-import sys
-import threading
-import time
 import Tools
 
+
 app = Flask(__name__)
+
+# 開啟 Debug 模式
+app.debug = False
 
 handler = WebhookHandler(Tools.CHANNEL_SECRET)
 
 
-def make_record(ip):
-    ip = request.remote_addr
+def make_record(req):
+    ip_address = req.remote_addr
 
     for cf_ip in CF_IPS:
-        if ipaddress.IPv4Address(request.remote_addr) in ipaddress.ip_network(cf_ip):
-            ip = request.headers.get('CF-Connecting-IP')
+        if ipaddress.IPv4Address(req.remote_addr) in ipaddress.ip_network(cf_ip):
+            ip_address = req.headers.get('CF-Connecting-IP')
             break
 
-    chinese_city, chinese_region, chinese_country = Query_API.WhereAreYou(ip)
-    msg = f"IP:{ip}, Location: {chinese_city}, {chinese_region}, {chinese_country}"
+    chinese_city, chinese_region, chinese_country = Query_API.WhereAreYou(
+        ip_address)
+    msg = f"IP:{ip_address}, Location: {chinese_city}, {chinese_region}, {chinese_country}"
 
     return msg
 
@@ -77,7 +88,7 @@ def limit_remote_addr():
     #         return None
 
     # 記錄403錯誤
-    msg = make_record(request.remote_addr)
+    msg = make_record(request)
     log_message = '403 Error: %s %s %s' % (msg, request.method, request.url)
     logger.error(log_message)
     return "Forbidden", 403
@@ -89,7 +100,7 @@ def log_request(response):
         return response
 
     # 記錄404錯誤
-    msg = make_record(request.remote_addr)
+    msg = make_record(request)
     log_message = '404 Error: %s %s %s' % (msg, request.method, request.url)
     logger.error(log_message)
     return response
@@ -99,8 +110,8 @@ def log_request(response):
 def robots():
 
     # 記錄robots下載紀錄
-    msg = make_record(request.remote_addr)
-    logger.info(f'{msg} and Downloaded robots.txt')
+    msg = make_record(request)
+    logger.info('%s and Downloaded robots.txt', msg)
     return send_file('robots.txt', mimetype='text/plain')
 
 
@@ -108,8 +119,8 @@ def robots():
 def download(filename):
 
     # 印出使用者的 IP 位址與所下載的檔案
-    msg = make_record(request.remote_addr)
-    logger.info(f"{msg} and DL file: {filename}")
+    msg = make_record(request)
+    logger.info("%s and DL file: %s", msg, filename)
 
     _, extension = os.path.splitext(filename)
     # logger.info(f"extension = {extension}")
@@ -127,12 +138,10 @@ def download(filename):
         abort(404)
 
     # 若檔案存在，則進行下載
-    if os.path.exists(os.path.join(path, filename)):
-        return send_from_directory(path, filename, as_attachment=True)
-    # 若檔案不存在，則回傳 404 錯誤
-    else:
+    if not os.path.exists(os.path.join(path, filename)):
         logger.info("Allowed file but not found")
         abort(404)
+    return send_from_directory(path, filename, as_attachment=True)
 
 
 @app.route('/s/<short_url>')
@@ -142,23 +151,39 @@ def redirect_to_original_url(short_url):
     # 取得使用者的真實 IP 位址
     msg = make_record(user_ip)
 
-    _, _, chinese_country = Query_API.WhereAreYou(user_ip)
+    logger.info("縮網址%s，%s", short_url, msg)
 
-    logger.info(f"縮網址{short_url}，{msg}")
+    _, _, chinese_country = Query_API.WhereAreYou(user_ip)
 
     url = RecordShortUrl(short_url, user_ip, chinese_country)
 
-    logger.info(f"原始網址：{url}")
+    logger.info("原始網址：%s", url)
 
-    if url:
-        return redirect(url)
-    else:
+    if not url:
         abort(404)
+    return redirect(url)
+
+
+def Record_LINE_IP(req):
+    ip_address = req.remote_addr
+
+    for cf_ip in CF_IPS:
+        if ipaddress.IPv4Address(req.remote_addr) in ipaddress.ip_network(cf_ip):
+            ip_address = req.headers.get('CF-Connecting-IP')
+            break
+
+    filename = f"{Tools.CONFIG_FOLDER}/LINE_IP.log"
+    lines = Tools.read_file_to_list(filename)
+    lines.append(ip_address)
+    lines = sorted(list(set(lines)))
+    Tools.write_list_to_file(filename, lines)
 
 
 @app.route("/callback", methods=['POST'])
 def message_callback():
     # 當 LINE 聊天機器人接收到「訊息事件」時，進行回應
+
+    Record_LINE_IP(request)
 
     signature = request.headers['X-Line-Signature']
     body = request.get_data(as_text=True)
@@ -166,9 +191,9 @@ def message_callback():
         handler.handle(body, signature)
     except InvalidSignatureError:
         abort(400)
-    except Exception as e:
+    except Exception as error:
         # 將錯誤訊息寫入 log
-        logger.error(str(e))
+        logger.error(error)
     return 'OK'
 
 
@@ -180,13 +205,13 @@ def handle_message(event):
         return
 
     message_type = event.message.type
-    if message_type == 'sticker' or message_type == 'location':
+    if message_type in ('sticker', 'location'):
         pass
     elif message_type == 'image':
         handle_message_image(event)
     elif message_type == 'text':
         handle_message_text(event)
-    elif message_type == 'video' or message_type == 'audio' or message_type == 'file':
+    elif message_type == ('video', 'audio', 'file'):
         handle_message_file(event)
     else:
         pass
@@ -195,17 +220,20 @@ def handle_message(event):
 
 def backup_data():
     # 執行 Backup.py 中的 backup_data 函式
-    subprocess.run(["python", "Backup_DB.py"])
+    subprocess.run(["python", "Backup_DB.py"], check=False)
 
 
-def signal_handler(sig, frame):
-    logger.info(f"Received signal : {str(sig)}")
+# 建立 stop_event
+stop_event = threading.Event()
+
+def signal_handler(sig, _):
+    logger.info("Received signal : %s", str(sig))
     stop_event.set()
     Logger_Transfer()
     sys.exit(0)
 
 
-def background_schedule(stop_event):
+def background_schedule():
     # 黑名單更新
     schedule.every().hour.at(":00").do(update_blacklist)
     # 165黑名單更新
@@ -221,20 +249,17 @@ def background_schedule(stop_event):
 
 
 def Initialization():
-    logger.info(f"Initialization Start")
+    logger.info("Initialization Start")
     SignMobileconfig()
     LINE_ID_Download_From_165()
     download_cf_ips()
     update_blacklist(True)
     Query_Image.Load_Image_Feature()
     EmptyShortUrlDB()
-    logger.info(f"Initialization Finish")
+    logger.info("Initialization Finish")
 
 
 if __name__ == "__main__":
-
-    # 建立 stop_event
-    stop_event = threading.Event()
 
     signal.signal(signal.SIGINT, signal_handler)
     signal.signal(signal.SIGTERM, signal_handler)
@@ -249,7 +274,7 @@ if __name__ == "__main__":
     schedule_thread.start()
 
     # 開啟 LINE 聊天機器人的 Webhook 伺服器
-    logger.info(f"Line Bot is ready")
+    logger.info("Line Bot is ready")
     app.run(host='0.0.0.0', port=8443, ssl_context=(
         Tools.CERT, Tools.PRIVKEY), threaded=True)
 
