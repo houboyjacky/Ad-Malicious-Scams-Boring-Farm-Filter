@@ -34,13 +34,25 @@ import threading
 import signal
 import subprocess
 import schedule
-from flask import Flask, Response, request, abort, send_file, send_from_directory, redirect
+from flask import(
+    Flask,
+    Response,
+    request,
+    abort,
+    send_file,
+    send_from_directory,
+    redirect
+)
 from linebot.v3 import WebhookHandler
 from linebot.exceptions import InvalidSignatureError
 from linebot.models import MessageEvent
 
 # My Python Package
-from Handle_message import handle_message_file, handle_message_image, handle_message_text
+from Handle_message import(
+    handle_message_file,
+    handle_message_image,
+    handle_message_text
+)
 from Logger import logger, Logger_Transfer
 from Query_Line_ID import LINE_ID_Download_From_165
 from Security_Check import CF_IPS, download_cf_ips
@@ -222,10 +234,6 @@ def backup_data():
     # 執行 Backup.py 中的 backup_data 函式
     subprocess.run(["python", "Backup_DB.py"], check=False)
 
-
-# 建立 stop_event
-stop_event = threading.Event()
-
 def signal_handler(sig, _):
     logger.info("Received signal : %s", str(sig))
     stop_event.set()
@@ -260,6 +268,9 @@ def Initialization():
 
 
 if __name__ == "__main__":
+
+    # 建立 stop_event
+    stop_event = threading.Event()
 
     signal.signal(signal.SIGINT, signal_handler)
     signal.signal(signal.SIGTERM, signal_handler)
