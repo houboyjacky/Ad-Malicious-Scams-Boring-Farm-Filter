@@ -1,5 +1,6 @@
 ! 民眾通報假投資(博弈)詐騙網站 https://165.npa.gov.tw
 ! 網站連結 https://data.gov.tw/dataset/160055
+! JasonY https://www.dcard.tw/@yen7716888
 @@||bittrex.com^$important
 @@||fpmarkets.com^$important
 @@||pingshangyang.webnode.tw^$important
@@ -160,6 +161,7 @@
 ||8880744.com^
 ||888278.top^
 ||888ama.com^
+||88999118.com^
 ||88au8.com^
 ||88sa36.net^
 ||8bitmex.com^
@@ -285,6 +287,7 @@
 ||afdjz.com^
 ||afkty.xyz^
 ||afrnnc.com^
+||ag8.bio^
 ||aganki.com^
 ||agencegout.com^
 ||aggshopp.com^
@@ -660,6 +663,7 @@
 ||bdbmln.com^
 ||bdgvip.com^
 ||bdhov.xyz^
+||bdoxex.com^
 ||bdugbfh.com^
 ||becs888.com^
 ||beellmonforfx.com^
@@ -1329,6 +1333,7 @@
 ||coinsfux.com^
 ||coinsri.com^
 ||cointfx.com^
+||cointoken.live^
 ||coinunion.exchange^
 ||coinunions.com^
 ||coinuniontw.com^
@@ -1356,6 +1361,7 @@
 ||companyghi.com^
 ||compoundnexus.com^
 ||compoundsavy.com^
+||comregister.^
 ||conwway.com^
 ||corpcapitaltrade.com^
 ||correlate198.xyz^
@@ -1408,6 +1414,7 @@
 ||cryptobulls-ap.net^
 ||cryptocurrencytradebitcored.com^
 ||cryptoisland-btc.life^
+||cryptomaxc.com^
 ||cs-bit.com^
 ||csfinancial.com.tw^
 ||cskkingss.com^
@@ -1464,6 +1471,9 @@
 ||cyn6859.com^
 ||cys88vc.net^
 ||cysj9.net^
+||d3826.com^
+||d3897.com^
+||d5289.com^
 ||daasomes.com^
 ||daasomtm.com^
 ||daasoomes.com^
@@ -1763,6 +1773,7 @@
 ||ebayus.top^
 ||ebcfinanaitw.com^
 ||ebcfinancetw.com^
+||ebill-update.info^
 ||ecacbwcxgvll.com^
 ||ecdihzq.cn^
 ||ecnyac.com^
@@ -1961,6 +1972,7 @@
 ||faggk.xyz^
 ||faizaekeys.com^
 ||faizoeker.com^
+||fameexurd.com^
 ||fanbtctw.com^
 ||fanbtctw.net^
 ||fanbtctw.site^
@@ -2080,6 +2092,7 @@
 ||finmaxin.com^
 ||finteckh.com^
 ||finvizw.com^
+||fireblocksebs.com^
 ||firewallmo.com^
 ||first-coins.com^
 ||firstrande.com^
@@ -2169,6 +2182,7 @@
 ||fth5h5.com^
 ||ftkinvest.com^
 ||ftlmine.org^
+||ftmhi.com^
 ||ftonlins.com^
 ||ftx-exvip.com^
 ||ftxea.net^
@@ -3042,6 +3056,7 @@
 ||iwqewjqwes.com^
 ||ixnah.top^
 ||izsfdss.com^
+||j6r3fc.com^
 ||jamercari.com^
 ||janvanbruggen.com^
 ||japanbondtw.com^
@@ -3422,6 +3437,7 @@
 ||lasajave.com^
 ||lasajvi.com^
 ||lawcaz.top^
+||laydefi.com^
 ||lazada-tw.com^
 ||lazadada.xyz^
 ||lazadasg-twshop.com^
@@ -4471,6 +4487,7 @@
 ||qwmloop.top^
 ||qxanys.com^
 ||qxpfr.top^
+||qxw4w4.com^
 ||qyban.club^
 ||qypuhuvo.cyou^
 ||qyqyqyb.com^
@@ -4488,6 +4505,7 @@
 ||rakutenz.com^
 ||rakutenzz.com^
 ||rallyville-chtw.com^
+||ramjyy.com^
 ||ramonfund.com^
 ||ramoninv.com^
 ||raqqekwl.buzz^
@@ -5208,6 +5226,7 @@
 ||tickmilltwsl.xyz^
 ||tickmilltwy.xyz^
 ||tickmilltwz.xyz^
+||tickmtop.com^
 ||tidex.top^
 ||tidgv.top^
 ||tiger9926.net^
@@ -5552,6 +5571,7 @@
 ||uhjkccv.com^
 ||uijiogyu.com^
 ||uirhhwjrwm.com^
+||uj9dz9.com^
 ||uk2jj.xyz^
 ||ukexqi01.top^
 ||ukexqi02.top^
@@ -5618,6 +5638,7 @@
 ||uyvifdjgh.com^
 ||uzsnf.com^
 ||uztgyd.top^
+||v2-eth.com^
 ||v345.cc^
 ||v4uni-swap.com^
 ||v6shop.vip^
@@ -5654,6 +5675,7 @@
 ||velem-trade.com^
 ||velocityquicv.com^
 ||venicemacao66.com^
+||venvirtx.com^
 ||vernasijewelry.com^
 ||vertexxs.com^
 ||vfjkjsueqjioq.com^
@@ -6116,6 +6138,7 @@
 ||ydhcnxbd.com^
 ||ydsj5555.com^
 ||ydxf13.com^
+||ydxprodefi.xyz^
 ||ydxrunpro.com^
 ||ydyldx.cn^
 ||ydzjjys.com^
@@ -6194,6 +6217,7 @@
 ||ysexcoin.net^
 ||ysexcoin.org^
 ||yshgat.com^
+||yshx-fx.com^
 ||yshxwold.com^
 ||ysmea.top^
 ||ytevd.top^
@@ -6258,6 +6282,7 @@
 ||zdex.store^
 ||zdsyy.com^
 ||ze28s.com^
+||zealmarketfx.com^
 ||zenithasian.com^
 ||zenithfinancial.com.tw^
 ||zeocean-tw.com^
@@ -6306,6 +6331,7 @@
 ||zjaisejqujeeq.com^
 ||zksbqes.com^
 ||zkuok.com^
+||zl6.co^
 ||zlwqbg.com^
 ||znahwbeqhsxiij.com^
 ||znbcsnamwq.com^
