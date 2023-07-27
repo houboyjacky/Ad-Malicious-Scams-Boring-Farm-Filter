@@ -2,9 +2,10 @@
 
 * 20230727 Update
   * 移除 網站排行榜
-  * 調整 根據pylint建議修改程式碼
-  * 調整 Query_Netizen名稱
   * 調整 行尾改成LF
+  * 調整 根據pylint建議修改程式碼
+  * 調整 Handle_message分檔處理
+  * 調整 Query_Netizen名稱
 
 * 20230726 Update
   * 更新 165反詐騙諮詢專線-詐騙LINE ID(~112/7/24)
