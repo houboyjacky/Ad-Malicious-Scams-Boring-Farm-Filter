@@ -195,6 +195,7 @@
 /tw[-]?carousel[a-z0-9]+\.xyz/
 /tw[a-z0-9-]*carousel[a-z0-9-]*\.(com|xyz|tw)/
 /twpldr[a-z]\.com/
+/ubsex[a-z0-9]{1,2}\.com/
 /usdter.?\..*/
 /vip[a-z0-9]+fx\.com/
 /vipmexc[0-9]{3}\.com/
@@ -272,5 +273,3 @@
 ||walnart.*
 ||yasenfinancial.*^
 ||zhy*.com^
-/ubsex[a-z0-9]{1,2}\.com/
-||vantwnow.*^
