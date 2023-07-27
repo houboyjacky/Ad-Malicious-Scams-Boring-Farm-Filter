@@ -218,100 +218,6 @@ def get_external_links(url):
     return external_links
 
 # ===============================================
-# 排行榜
-# ===============================================
-
-
-Not_to_Add_site = ["facebook.com", "google.com",
-                   "instagram.com", "youtube.com"]
-
-
-def update_web_leaderboard(input_url):
-
-    input_url = input_url.lower()
-
-    if input_url in Not_to_Add_site:
-        return
-    if input_url in Tools.SHORT_URL_LIST:
-        return
-
-    # 取得當天的年月日
-    today = datetime.now().strftime("%Y%m%d")
-    # 要寫入的資料
-    data_to_write = f"{today}:{input_url}:1\n"
-    # 檢查是否已經存在相同的當天日期和網址
-    exists = False
-
-    with open(Tools.WEB_LEADERBOARD_FILE, "r+") as file:
-        lines = file.readlines()
-        file.seek(0)  # 回到檔案開頭
-        for line in lines:
-            line_parts = line.strip().split(":")
-            if len(line_parts) == 3 and line_parts[0] == today and line_parts[1] == input_url:
-                # 更新次數
-                line_parts[2] = str(int(line_parts[2]) + 1)
-                line = ":".join(line_parts) + "\n"
-                exists = True
-            file.write(line)
-
-        if not exists:
-            file.write(data_to_write)
-        file.truncate()  # 截斷多餘的內容
-
-    return
-
-
-def get_web_leaderboard():
-
-    # 讀取 Web_leaderboard.txt
-    lines = Tools.read_file_U8(Tools.WEB_LEADERBOARD_FILE)
-
-    # 計算每個網址的查詢次數
-    url_counts = defaultdict(int)
-    for line in lines:
-        parts = line.strip().split(":")
-        if len(parts) == 3:
-            url = parts[1]
-            tld = tldextract.extract(url).suffix
-            count = int(parts[2])
-            url_counts[tld] += count
-
-    # 根據查詢次數由大到小排序
-    sorted_urls = sorted(url_counts.items(), key=lambda x: x[1], reverse=True)
-
-    # 檢查總項目數是否小於等於十個
-    if len(sorted_urls) <= 10:
-        top_list = sorted_urls
-    else:
-        # 超過十個項目，找到最早的日期
-        today = datetime.today().date()
-        start_date = today - timedelta(days=15)
-        while len(sorted_urls) > 10 and start_date >= datetime.today().date() - timedelta(days=30):
-            url_counts = defaultdict(int)
-            for line in lines:
-                parts = line.strip().split(":")
-                if len(parts) == 3:
-                    date = datetime.strptime(parts[0], "%Y%m%d").date()
-                    if date >= start_date:
-                        url = parts[1]
-                        tld = tldextract.extract(url).suffix
-                        count = int(parts[2])
-                        url_counts[tld] += count
-
-            sorted_urls = sorted(url_counts.items(),
-                                 key=lambda x: x[1], reverse=True)
-            start_date -= timedelta(days=1)
-
-        top_list = sorted_urls[:30]
-
-    days = (today - start_date).days
-    # 格式化輸出結果
-    output = f"近期{days}天的TLD網域查詢次數排行榜\n"
-    for i, (url, count) in enumerate(top_list, start=1):
-        output += f"{i:02d}. \t{url}\t\t=>{count}次\n"
-    return output
-
-# ===============================================
 # 黑名單判斷
 # ===============================================
 
@@ -513,6 +419,7 @@ def thread_check_blacklisted_site(domain_name, result_list, lock):
         result_list.append(("checkresult", checkresult))
     return
 
+
 def check_ChainSight(domain_name, whois_creation_date):
     checkresult = False
     msg = ""
@@ -534,7 +441,7 @@ def check_ChainSight(domain_name, whois_creation_date):
         if safe_date > creation_date:
             checkresult = False
 
-            #特別mark可能誤判
+            # 特別mark可能誤判
             c_date = creation_date.strftime("%Y/%m/%d")
             msg_comment = f"{msg}，但創建於{c_date}，列入觀察"
             update_part_blacklist_comment(msg_comment)
@@ -592,19 +499,15 @@ def user_query_website(prefix_msg, user_text):
     thread1 = threading.Thread(
         target=get_server_ip, args=(user_text, result_list, lock))
     thread2 = threading.Thread(
-        target=update_web_leaderboard, args=(user_text,))
-    thread3 = threading.Thread(
         target=user_query_website_by_DNS, args=(domain_name, result_list, lock))
-    thread4 = threading.Thread(
+    thread3 = threading.Thread(
         target=thread_check_blacklisted_site, args=(domain_name, result_list, lock))
     thread1.start()
     thread2.start()
     thread3.start()
-    thread4.start()
     thread1.join()
     thread2.join()
     thread3.join()
-    thread4.join()
 
     results = dict(result_list)
 
@@ -619,7 +522,8 @@ def user_query_website(prefix_msg, user_text):
 
     # 避免ChainSight誤判，獨立判斷
     if checkresult == False:
-        checkresult, ChainSight_msg = check_ChainSight(domain_name, whois_creation_date)
+        checkresult, ChainSight_msg = check_ChainSight(
+            domain_name, whois_creation_date)
         if ChainSight_msg:
             ChainSight_msg += "\n"
 

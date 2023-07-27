@@ -480,10 +480,6 @@ def handle_message_text_front(user_text) -> str:
                     )
         return rmessage
 
-    if user_text == "網站排行榜":
-        rmessage = get_web_leaderboard()
-        return rmessage
-
     if user_text == "詐騙幫忙":
         rmessage = Handle_LineBot.message_reply_ScamAlert()
         return rmessage

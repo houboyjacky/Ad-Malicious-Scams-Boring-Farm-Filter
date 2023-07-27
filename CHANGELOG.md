@@ -1,6 +1,7 @@
 # 歷史更新 History Update
 
 * 20230727 Update
+  * 移除 網站排行榜
   * 調整 根據pylint建議修改程式碼
   * 調整 Query_Netizen名稱
   * 調整 行尾改成LF

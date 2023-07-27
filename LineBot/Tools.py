@@ -88,8 +88,6 @@ SCAM_WEBSITE_LIST = setting['SCAM_WEBSITE_LIST']
 TMP_BLACKLIST = setting['TMP_BLACKLIST']
 # USER_GUIDE_FILE => 使用指南
 USER_GUIDE_FILE = setting['USER_GUIDE_FILE']
-# WEB_LEADERBOARD_FILE => Query Website times leaderboard from file
-WEB_LEADERBOARD_FILE = setting['WEB_LEADERBOARD_FILE']
 
 with open('setting_rules.json', 'r') as f:
     setting_rule = json.load(f)
@@ -197,7 +195,6 @@ def reloadSetting():
     global TMP_BLACKLIST
     global USER_GUIDE
     global USER_GUIDE_FILE
-    global WEB_LEADERBOARD_FILE
     global SKIP_CHECK
 
     # 讀取設定檔
@@ -229,7 +226,6 @@ def reloadSetting():
     SCAM_WEBSITE_LIST = setting['SCAM_WEBSITE_LIST']
     TMP_BLACKLIST = setting['TMP_BLACKLIST']
     USER_GUIDE_FILE = setting['USER_GUIDE_FILE']
-    WEB_LEADERBOARD_FILE = setting['WEB_LEADERBOARD_FILE']
 
     # 讀取規則
     with open('setting_rules.json', 'r') as f:
