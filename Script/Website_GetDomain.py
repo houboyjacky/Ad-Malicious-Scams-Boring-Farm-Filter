@@ -1,5 +1,6 @@
 import tldextract
-import os
+import string
+
 input_file_path = "Website_input.txt"
 output_file_path = "Website_output.txt"
 
@@ -7,6 +8,10 @@ with open(input_file_path, "r", encoding='UTF-8') as input_file, open(output_fil
 	for line in input_file:
 		line = line.strip()
 		if not line:
+			continue
+
+		if not all(char.isalnum() or char.isspace() or char in string.punctuation for char in line):
+        	# 如果包含非英文數字字符，則跳過這一行
 			continue
 		url = line.lower()
 		extracted = tldextract.extract(url)
