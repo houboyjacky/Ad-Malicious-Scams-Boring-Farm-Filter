@@ -241,7 +241,7 @@ def signal_handler(sig, _):
     sys.exit(0)
 
 
-def background_schedule():
+def background_schedule(stop_event):
     # 黑名單更新
     schedule.every().hour.at(":00").do(update_blacklist)
     # 165黑名單更新
