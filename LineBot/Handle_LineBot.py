@@ -22,7 +22,14 @@ THE SOFTWARE.
 
 from Query_Netizen import write_new_netizen_file
 from linebot import LineBotApi
-from linebot.models import TextSendMessage, TemplateSendMessage, ButtonsTemplate, MessageTemplateAction, URITemplateAction, ConfirmTemplate
+from linebot.models import (
+    TextSendMessage,
+    TemplateSendMessage,
+    ButtonsTemplate,
+    MessageTemplateAction,
+    URITemplateAction,
+    ConfirmTemplate
+)
 from Logger import logger
 from PrintText import check_user_need_news, notice_text
 import Tools
@@ -283,6 +290,21 @@ def message_reply_Query(user_id, IsScam, Type_Name, code, orgin_text):
             text = (f"「不存在」{Type_Name}黑名單內\n\n"
                     f"{code}\n\n"
                     f"{suffix}")
+        elif Type_Name == "LINE ID":
+            if "@" in code and len(code) != 9:
+                text = (f"「不存在」{Type_Name}黑名單內\n\n"
+                        f"所輸入的是「{code}」\n\n"
+                        f"如果不是有盾牌的官方賴\n不用加「@」\n\n"
+                        f"{suffix}")
+            elif len(code) == 8 and code.isalnum:
+                text = (f"「不存在」{Type_Name}黑名單內\n\n"
+                        f"所輸入的是「{code}」\n\n"
+                        f"如果是有盾牌的官方賴\n需要加「@」\n\n"
+                        f"{suffix}")
+            else:
+                text = (f"「不存在」{Type_Name}黑名單內\n\n"
+                        f"所輸入的是「{code}」\n\n"
+                        f"{suffix}")
         else:
             text = (f"「不存在」{Type_Name}黑名單內\n\n"
                     f"所輸入的是「{code}」\n\n"
