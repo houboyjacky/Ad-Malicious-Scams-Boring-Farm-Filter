@@ -63,6 +63,7 @@
 ||2156879.site^
 ||22web.org^
 ||2447hthty.com^
+||27.124.22.252^
 ||277sy.com^
 ||2939cc5.com^
 ||2mqpupjy3.store^
@@ -179,6 +180,7 @@
 ||ace777.com^
 ||acefinance.asia^
 ||acemlnc.com^
+||acentcoin.co^
 ||acentcoin.pro^
 ||acenteex.com^
 ||acentmax.com^
@@ -206,6 +208,7 @@
 ||aicrypto.cloud^
 ||aidefx.com^
 ||aidlep.top^
+||aigrid.pro^
 ||aihecong.com^
 ||aishopnow.online^
 ||aiwriter.money^
@@ -239,6 +242,7 @@
 ||amazon24.mobi^
 ||ammg.xyz^
 ||amonqe.com^
+||amonzeon.com^
 ||amp.dev^
 ||amshopp.site^
 ||anaptllion.shop^
@@ -342,6 +346,8 @@
 ||bdd666.vip^
 ||bdfpfb2x.com^
 ||bdnapn.top^
+||beanfunx.com^
+||beanfunz.com^
 ||beats.com.tw^
 ||becnetss.com^
 ||belanjatupperware.com^
@@ -1209,6 +1215,7 @@
 ||fxprkyc.com^
 ||fxpro.com.tw^
 ||fxpro.com^
+||fxprots.tw^
 ||fxtraderacademy.com^
 ||fxuqaf.com^
 ||fyhfrhjqwsd.com^
@@ -1500,6 +1507,7 @@
 ||humanflies.xyz^
 ||huobi.com.bo^
 ||huobi.com.by^
+||huohongyg.com^
 ||huohua.cn^
 ||husevon.com^
 ||huwnll.com^
@@ -1594,6 +1602,7 @@
 ||ipabolc.top^
 ||ipair.org^
 ||ipeenec.com^
+||ipeengb.com^
 ||ipeenlf.com^
 ||ipeenlg.com^
 ||ipeenlj.com^
@@ -1682,6 +1691,7 @@
 ||jobscoiinesz.com^
 ||jobscoiineszs.com^
 ||jobscoioeszs.com^
+||joker123wan.com^
 ||joninfor.online^
 ||jonny.live^
 ||joppshop.online^
@@ -1707,6 +1717,7 @@
 ||jumpjump.vg^
 ||jun587.com^
 ||justbecauseimetyou.com^
+||justdatingapp.com^
 ||justsayhi365.blogspot.com^
 ||justuspc24.com^
 ||jv-photos.com^
@@ -2127,7 +2138,6 @@
 ||nancnter.com^
 ||nasdaq7.com^
 ||nasdaqus.net^
-||nat.gov.tw^
 ||nateraoex.com^
 ||naterax.com^
 ||naturefc.com.hk^
@@ -2390,6 +2400,8 @@
 ||prettywholesale-my.com^
 ||price2trade.cyou^
 ||price2trade.world^
+||pricehotelbillicaisheng.com^
+||pricehotelbillingwan.com^
 ||privatecontent0omxq3.wixsite.com^
 ||prmiae.com^
 ||professionalinternetutilities.com^
@@ -2412,6 +2424,7 @@
 ||q9b2a.top^
 ||q9wur.uk^
 ||qalzxsw.shop^
+||qancmd.xyz^
 ||qc527.top^
 ||qcy.buzz^
 ||qdtech.ai^
@@ -2499,6 +2512,7 @@
 ||reservour.site^
 ||reutersicd.com^
 ||rexc.shop^
+||rg8888.org^
 ||rggo5269.com^
 ||rggo666.com^
 ||rgis-asset-inventory.com^
@@ -2626,6 +2640,7 @@
 ||sh1768.net^
 ||sh1788.net^
 ||shaiuchi.com^
+||shaozijishu.top^
 ||shareme.shop^
 ||sheinfamily.com^
 ||shengruifinancial.com^
@@ -2953,6 +2968,7 @@
 ||todayonce.com^
 ||tokeriev.com^
 ||toluna.com^
+||toobit.top^
 ||tookk.shop^
 ||toopbaby.com^
 ||toosadf.shop^
@@ -3470,6 +3486,7 @@
 ||xedll.com^
 ||xedoex.com^
 ||xedtra.com^
+||xeivozedkmu.top^
 ||xetc33.oss-ap-southeast-1.aliyuncs.com^
 ||xetc66.oss-ap-southeast-1.aliyuncs.com^
 ||xeult.top^
