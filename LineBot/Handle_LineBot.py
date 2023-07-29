@@ -296,7 +296,7 @@ def message_reply_Query(user_id, IsScam, Type_Name, code, orgin_text):
                         f"所輸入的是「{code}」\n\n"
                         f"如果不是有盾牌的官方賴\n不用加「@」\n\n"
                         f"{suffix}")
-            elif len(code) == 8 and code.isalnum:
+            elif len(code) == 8 and code.isalnum and "_" not in code:
                 text = (f"「不存在」{Type_Name}黑名單內\n\n"
                         f"所輸入的是「{code}」\n\n"
                         f"如果是有盾牌的官方賴\n需要加「@」\n\n"
