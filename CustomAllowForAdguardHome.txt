@@ -97,3 +97,7 @@
 @@||ctbc.tw^
 @@||cht.tw^
 @@||tzto.org^
+@@||microcharon.top^$important
+@@||friday.tw^
+@@||ctbc.tw^
+@@||omni.ag^

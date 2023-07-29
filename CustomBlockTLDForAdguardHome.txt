@@ -72,6 +72,7 @@
 /climpup[a-z0-9]*\.com/
 /coinbase.+\..+$/
 /coincheck\.[a-z]+/
+/coindex.*\..*/
 /coinrule.*\.*/
 /coinvv[a-z0-9]+\.com/
 /com-id\w+.cloud/
