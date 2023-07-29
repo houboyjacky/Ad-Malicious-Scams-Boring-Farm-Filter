@@ -52,8 +52,18 @@ def handle_message_text_front(user_text):
                     f"若要查詢是否是詐騙賴\n"
                     f"輸入「賴+電話」\n"
                     f"例如：賴0912345678"
-                    )
+        )
         return rmessage
+
+    if user_text.startswith("https://apps.apple.com/tw/app/"):
+        rmessage = (f"謝謝你提供的網址\n"
+                    f"「{user_text}」\n"
+                    f"是AppStore的軟體\n"
+                    f"目前不提供查詢\n"
+                    f"但可以告知我協助調查\n"
+                    f"請後續提出更多截圖證據\n"
+                    f"小編會盡力調查"
+        )
 
     if user_text == "詐騙幫忙":
         rmessage = Handle_LineBot.message_reply_ScamAlert()
