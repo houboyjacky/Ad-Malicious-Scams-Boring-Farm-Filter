@@ -378,8 +378,8 @@ def handle_user_msg(user_id, orgin_text, must_be_text=False):
         orgin_text = match.group(1)
         logger.info(f"社群轉貼")
 
-    if orgin_text.lower().startswith("http://") or orgin_text.lower().startswith("https://"):
-        rmessage = "網址開頭有誤，"
+    if orgin_text.lower().startswith("http") and not orgin_text.lower().startswith("http://") and not orgin_text.lower().startswith("https://"):
+        return "網址開頭有誤\n請重新輸入正確網址"
 
     prefix_msg = ""
     # 縮網址展開

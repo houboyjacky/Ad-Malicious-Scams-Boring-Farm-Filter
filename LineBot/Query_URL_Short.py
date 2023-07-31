@@ -67,8 +67,6 @@ def resolve_redirects_Webdriver(short_url):
 # ===============================================
 # 縮網址
 # ===============================================
-# 目前不支援 "lurl.cc" "risu.io" "fito.cc"
-# 未知 "picsee.io" "lihi.io"
 
 HTTP_HEADERS_LIST = Tools.read_json_to_list(Tools.HTTP_HEADERS)
 
@@ -192,6 +190,7 @@ def Resolve_Redirects(url):
     _, domain, suffix = Tools.domain_analysis(url.lower())
     domain_name = f"{domain}.{suffix}"
 
+    orgin_url = url
     url = replace_http_with_https(url)
 
     if domain_name in Tools.NEED_HEAD_SHORT_URL_LIST:
@@ -206,11 +205,11 @@ def Resolve_Redirects(url):
             logger.info(f"resolve_redirects_rugy = {final_url}")
             return final_url
 
-    if domain_name == "iiil.io":
-        final_url = resolve_redirects_iiilio(url)
-        if final_url != url:
-            logger.info(f"resolve_redirects_iiilio = {final_url}")
-            return final_url
+    # if domain_name == "iiil.io":
+    #     final_url = resolve_redirects_iiilio(url)
+    #     if final_url != url:
+    #         logger.info(f"resolve_redirects_iiilio = {final_url}")
+    #         return final_url
 
     if domain_name == "wenk.io":
         final_url = resolve_redirects_wenkio(url)
@@ -237,6 +236,8 @@ def Resolve_Redirects(url):
             return final_url
     except (HTTPError, URLError) as e:
         logger.info(f"Error occurred urlopen: {e}")
+        if "DH_KEY_TOO_SMALL" in str(e):
+            url = orgin_url
 
     try:
         response = requests.get(url, allow_redirects=False)
@@ -284,13 +285,27 @@ def user_query_shorturl_normal(user_text):
         domain_name = f"{domain}.{suffix}"
     logger.info(f"domain_name = {domain_name}")
 
+    # 不支援解析
+    if domain_name in ("iiil.io","lurl.cc","risu.io","fito.cc"):
+        keep_go_status = False
+        result = ""
+        rmessage = (f"縮網址「 {domain_name} 」\n"
+                    f"因為有保護機制\n"
+                    f"機器人無法繼續解析\n"
+                    f"請點擊後\n"
+                    f"複製最終網址\n"
+                    f"貼上查詢網址\n"
+                    f"感恩"
+        )
+        return rmessage, result, keep_go_status
+
     keep_go_status = False
     logger.info(f"user_text={user_text}")
     result = Resolve_Redirects(user_text)
     logger.info(f"result={result}")
 
     if not result:
-        rmessage = f"「 {user_text} 」輸入錯誤或網址無效\n"
+        rmessage = f"「 {user_text} 」\n輸入錯誤或網址無效\n"
         result = ""
         keep_go_status = False
         logger.info("縮網址無資料")

@@ -221,6 +221,21 @@ def get_external_links(url):
 # 黑名單判斷
 # ===============================================
 
+def check_white_blacklisted_site(domain_name):
+
+    for SKIP in Tools.SKIP_CHECK:
+        if SKIP in domain_name:
+            return True
+
+    White_db = "網站白名單"
+    White_collections = Query_API.Read_Collections(White_db)
+
+    for collection in White_collections:
+        document = collection.find_one({"網址": domain_name})
+        if document:
+            logger.info(f"{domain_name}在DB的{collection.name}白名單內")
+            return True
+    return False
 
 def check_blacklisted_site(domain_name):
 
@@ -424,9 +439,8 @@ def check_ChainSight(domain_name, whois_creation_date):
     checkresult = False
     msg = ""
 
-    for SKIP in Tools.SKIP_CHECK:
-        if SKIP in domain_name:
-            return checkresult, msg
+    if check_white_blacklisted_site(domain_name):
+        return checkresult, msg
 
     msg, max_credit = checkFromChainsight(domain_name)
     if max_credit > 2:
