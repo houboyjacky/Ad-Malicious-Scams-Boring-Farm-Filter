@@ -26,7 +26,9 @@ THE SOFTWARE.
 # sudo apt install tesseract-ocr-chi-tra-vert tesseract-ocr-chi-sim tesseract-ocr-chi-sim-vert
 
 # Publish Python Package
+from datetime import datetime
 import ipaddress
+import json
 import os
 import time
 import sys
@@ -34,21 +36,22 @@ import threading
 import signal
 import subprocess
 import schedule
-from flask import(
+from flask import (
     Flask,
     Response,
     request,
     abort,
     send_file,
     send_from_directory,
-    redirect
+    redirect,
+    jsonify
 )
 from linebot.v3 import WebhookHandler
 from linebot.exceptions import InvalidSignatureError
 from linebot.models import MessageEvent
 
 # My Python Package
-from Handle_message import(
+from Handle_message import (
     handle_message_file,
     handle_message_image,
     handle_message_text
@@ -59,6 +62,7 @@ from Security_Check import CF_IPS, download_cf_ips
 from Security_ShortUrl import RecordShortUrl, EmptyShortUrlDB
 from SignConfig import SignMobileconfig
 from Update_BlackList import update_blacklist
+from Handle_user_msg import handle_user_msg
 import Query_API
 import Query_Image
 import Tools
@@ -175,6 +179,97 @@ def redirect_to_original_url(short_url):
         abort(404)
     return redirect(url)
 
+@app.route("/query_scam", methods=['POST'])
+def query_scam():
+    logger.info(f"Query from Web")
+
+    try:
+        data = request.json
+
+        # 從接收到的 JSON 中提取所需的資料
+        time = data.get("資料", {}).get("時間", "")
+        content_type = data.get("資料", {}).get("類型", "")
+        content = data.get("資料", {}).get("內容", "")
+        #IP = data.get("資料", {}).get("IP", "")
+        md5 = data.get("MD5", "")
+
+        # 預設值
+        r_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        r_content_type = content_type
+        r_context = ""
+        # TODO: 在這裡處理接收到的資料，根據需求進行相應的處理或查詢
+        # data_json = json.dumps(data["資料"], sort_keys=True).encode()
+        # count_md5 = Tools.calculate_hash(data_json)
+        # if md5 != count_md5:
+        #     r_context = "MD5計算有誤"
+        #     break
+
+        if content_type == "LINE_ID":
+            query_keyword = f"賴{content}"
+        elif content_type == "虛擬貨幣":
+            query_keyword = f"貨幣{content}"
+        elif content_type == "Instagram":
+            query_keyword = f"IG{content}"
+        elif content_type == "網站":
+            query_keyword = content
+        elif content_type == "推特":
+            query_keyword = f"推特{content}"
+        elif content_type == "Dcard":
+            query_keyword = f"迪卡{content}"
+        elif content_type == "Telegram":
+            query_keyword = f"TG{content}"
+        elif content_type == "微信":
+            query_keyword = f"微信{content}"
+        else:
+            r_context = f"類型錯誤"
+
+        # 查詢
+        if not r_context :
+            r_context = f"該{content_type}"
+            r_context += handle_user_msg("NONE", query_keyword, must_be_text = True)
+
+        # 準備回傳的 JSON 資料
+        response_data = {
+            "資料": {
+                "時間": r_time,
+                "類型": r_content_type,
+                "內容": r_context
+            }
+        }
+
+        data_json = json.dumps(response_data['資料'], sort_keys=True).encode()
+        response_data['MD5'] = Tools.calculate_hash(data_json)
+        logger.info(f"response_data = {response_data}")
+
+        # 將回傳的 JSON 資料轉換成字串回傳
+        return jsonify(response_data)
+
+    except Exception as e:
+        r_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        r_context = ""
+        r_content_type = ""
+        r_md5 = ""
+        if not time:
+            r_time = "時間不齊全"
+        if not content_type:
+            r_content_type = "類型不齊全"
+        if not content:
+            r_context = "內容不齊全"
+        if not md5:
+            r_md5 = " MD5不齊全"
+
+        response_data = {
+            "資料": {
+                "時間": r_time,
+                "類型": r_content_type,
+                "內容": r_context
+            },
+            "MD5" : r_md5,
+            "Error": str(e)
+        }
+
+        return jsonify(response_data)
+
 
 def Record_LINE_IP(req):
     ip_address = req.remote_addr
@@ -233,6 +328,7 @@ def handle_message(event):
 def backup_data():
     # 執行 Backup.py 中的 backup_data 函式
     subprocess.run(["python", "Backup_DB.py"], check=False)
+
 
 def signal_handler(sig, _):
     logger.info("Received signal : %s", str(sig))
