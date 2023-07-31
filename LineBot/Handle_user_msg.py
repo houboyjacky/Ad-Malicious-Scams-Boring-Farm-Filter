@@ -185,7 +185,8 @@ def handle_ig_web(prefix_msg, user_id, text):
 
         if status == -1:
             rmessage = (f"{prefix_msg}\n"
-                        f"IG網址有誤、網址失效或不支援\n"
+                        f"請複製該IG主頁網址\n"
+                        f"才能進一步查詢ID\n"
                         f"感恩")
         else:
             rmessage = Handle_LineBot.message_reply_Query(

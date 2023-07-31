@@ -52,6 +52,9 @@ def analyze_IG_url(user_text: str) -> Optional[dict]:
     else:
         return None
 
+    if Username == 'p':
+        return None
+
     #移除尾部代號
     user_text = re.sub(r"\?igshid.+","", user_text)
 
