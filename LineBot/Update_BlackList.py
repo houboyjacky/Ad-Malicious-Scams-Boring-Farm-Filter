@@ -70,7 +70,7 @@ def check_download_file(url):
             logger.info(f"{Local_file_name} is fail to new download")
             return None, OLD
 
-    Local_file_hash = Tools.calculate_hash(Local_file_path)
+    Local_file_hash = Tools.calculate_file_hash(Local_file_path)
     # logger.info(f"Local_file_hash = [{Local_file_hash}]")
 
     # 如果檔案已存在，則比對hash值

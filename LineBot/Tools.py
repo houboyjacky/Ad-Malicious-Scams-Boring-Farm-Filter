@@ -411,11 +411,13 @@ def hashes_download():
     remote_hash_dict = json.loads(response.content)
     return
 
+def calculate_hash(content):
+    return hashlib.md5(content).hexdigest()
 
-def calculate_hash(file_path):
+def calculate_file_hash(file_path):
     with open(file_path, 'rb') as file:
         content = file.read()
-        hash_value = hashlib.md5(content).hexdigest()
+        hash_value = calculate_hash(content)
         return hash_value
 
 

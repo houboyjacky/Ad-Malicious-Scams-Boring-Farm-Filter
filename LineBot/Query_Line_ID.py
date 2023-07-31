@@ -37,7 +37,7 @@ def LINE_ID_Download_From_165():
     lineid_list = []
     Local_file = os.path.basename(Tools.LINEID_WEB)
     Local_file_path = f"config/{Local_file}"
-    Local_file_hash = Tools.calculate_hash(Local_file_path)
+    Local_file_hash = Tools.calculate_file_hash(Local_file_path)
     IsFind = False
 
     if not Tools.remote_hash_dict:
