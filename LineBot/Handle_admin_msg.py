@@ -57,12 +57,13 @@ def process_file(file_path):
 
 def handle_virtual_money(text):
     # 虛擬貨幣
-        if re.match(Tools.KEYWORD_VIRTUAL_MONEY[1], text):
-            # 加入 虛擬貨幣
-            rmessage = Q_VM.Virtual_Money_Write_Document(text)
-        if re.match(Tools.KEYWORD_VIRTUAL_MONEY[2], text):
-            # 刪除 虛擬貨幣
-            rmessage = Q_VM.Virtual_Money_Delete_Document(text)
+    if re.match(Tools.KEYWORD_VIRTUAL_MONEY[1], text):
+        # 加入 虛擬貨幣
+        return Q_VM.Virtual_Money_Write_Document(text)
+    if re.match(Tools.KEYWORD_VIRTUAL_MONEY[2], text):
+        # 刪除 虛擬貨幣
+        return Q_VM.Virtual_Money_Delete_Document(text)
+    return None
 
 def handle_line_id(text):
     match = re.search(Tools.KEYWORD_LINE_ID[0], text.lower())
