@@ -178,6 +178,7 @@
 ||ac1.one^
 ||ac1winner.com^
 ||acadme.co^
+||accept-reservation.com^
 ||accesscs06.com^
 ||ace777.com^
 ||acefinance.asia^
@@ -294,6 +295,7 @@
 ||asia-net.pro^
 ||asia-shopify.com^
 ||asianherald.mystrikingly.com^
+||askme4date.com^
 ||asooqies.top^
 ||asosasia.com^
 ||assistantas.xyz^
@@ -450,6 +452,7 @@
 ||bo-get.com^
 ||boaa.it^
 ||bodyat.com^
+||bogeiquejksa.com^
 ||bokmega.com^
 ||boma101.com^
 ||bombmy.live^
@@ -485,6 +488,7 @@
 ||bryaninfor.online^
 ||bs6888.net^
 ||bsclink.cn^
+||bscscanmex.com^
 ||bsep.online^
 ||bsjchats.win^
 ||bstmadasutd.com^
@@ -719,6 +723,7 @@
 ||comfortableife.com^
 ||commine.^
 ||compgoo.com^
+||compraonline.com.pe^
 ||comtlak.site^
 ||copmusionu.shop^
 ||copyrichacademy.com^
@@ -1096,6 +1101,7 @@
 ||faizoeker.com^
 ||faksmb.top^
 ||fale88.com^
+||fami.life^
 ||familytw.cc^
 ||fanpu.buzz^
 ||fans8.xyz^
@@ -1316,6 +1322,7 @@
 ||gidgsia.top^
 ||giftu.store^
 ||giikin.com^
+||gikion-sale.com^
 ||gioesp.shop^
 ||gipsx.com^
 ||gipsxes.com^
@@ -1332,6 +1339,7 @@
 ||glatfese.com^
 ||global-coin.xyz^
 ||globalm88.top^
+||globaltoshops.com^
 ||globaltrack.cc^
 ||gm5rm.ink^
 ||gmall-tw.buzz^
@@ -1373,6 +1381,7 @@
 ||gouxiong.xyz^
 ||gov-xsd.com^
 ||gowantu.com^
+||goworldstore.com^
 ||gowtpiengw.xyz^
 ||gp888s.com^
 ||gptw.cc^
@@ -1480,6 +1489,7 @@
 ||hilda.buzz^
 ||hingx.live^
 ||hiplablas.com^
+||hippotesco.com^
 ||histarsky.com^
 ||histock1688.com^
 ||histudio.vip^
@@ -1642,6 +1652,7 @@
 ||ip.ophe.im^
 ||ipabolc.top^
 ||ipair.org^
+||ipeeneb.com^
 ||ipeenec.com^
 ||ipeengb.com^
 ||ipeenlf.com^
@@ -1819,6 +1830,7 @@
 ||kg1688.org^
 ||kga34.vip^
 ||kgi-pro.com.tw^
+||kgiequities.com^
 ||kgosf.com^
 ||kianashop.shop^
 ||kilby.buzz^
@@ -1866,6 +1878,7 @@
 ||krakenpros.xyz^
 ||kraprxt.vip^
 ||krtra.com^
+||kryptoriakuc.com^
 ||ksfuyi.shop^
 ||ksstymm.space^
 ||kter.life^
@@ -1966,6 +1979,7 @@
 ||lmaxsltw.com^
 ||lmstaeoues.com^
 ||lmstotys.com^
+||ln.run^
 ||lnnk.in^
 ||loadedwork.xyz^
 ||loan588.cc^
@@ -1988,10 +2002,13 @@
 ||losuh.store^
 ||lotbud.shop^
 ||love2more.com^
+||lovebravelyy.com^
 ||lovedot.us^
+||lovekissyou.com^
 ||lovelikewe.com^
 ||lovescoach.com^
 ||lovestoo.com^
+||lovesweiilie.com^
 ||loveszone.com^
 ||lovetoaccompany.com^
 ||loveuuo.com^
@@ -2171,6 +2188,7 @@
 ||mwbdsb.com^
 ||mwbscjdsb.com^
 ||mx124.cn^
+||mxhbuydf.com^
 ||my-board.org^
 ||my5353.com^
 ||myaid.top^
@@ -2307,6 +2325,7 @@
 ||okgoldvip.org^
 ||oklink.fit^
 ||oksmgj.fun^
+||okvgold.com^
 ||okvp.top^
 ||okwdmx.com^
 ||okxbiz.pro^
@@ -2314,6 +2333,7 @@
 ||okxvds.com^
 ||olayc5i3os.lol^
 ||olgirl.co^
+||olirust.com^
 ||olvjc.com^
 ||omdo.cc^
 ||omia7b.top^
@@ -2466,6 +2486,7 @@
 ||pricehotelbillingwan.com^
 ||privatecontent0omxq3.wixsite.com^
 ||prmiae.com^
+||procesz.cloud^
 ||professionalinternetutilities.com^
 ||promote.weebly.com^
 ||promotinglearning.com^
@@ -2477,10 +2498,12 @@
 ||psuha.shop^
 ||pt-app.oss-us-west-1.aliyuncs.com^
 ||puzzl.site^
+||pvhjdty.com^
 ||pvp3.top^
 ||pxcga.com^
 ||pzstgwed.life^
 ||q0725q5.asia^
+||q48dii0i.asia^
 ||q6ows4hfni.lol^
 ||q8casino.net^
 ||q9b2a.top^
@@ -2992,6 +3015,8 @@
 ||tenhua.life^
 ||terryfu.com^
 ||terslove.com^
+||tesco-s.com^
+||tescoshop.net^
 ||tetc.top^
 ||tew-tag.com^
 ||tew-tag.net^
@@ -3177,6 +3202,7 @@
 ||twcaijin.fan^
 ||twcaijin.online^
 ||twcarousell.top^
+||twcat.top^
 ||twcchtui.com^
 ||twcdq.me^
 ||twciept.co^
@@ -3647,6 +3673,7 @@
 ||yaeclass.com^
 ||yafengmaoyi.com^
 ||yahoocaijing.com^
+||yajecx.com^
 ||yajuvds.com^
 ||yamascasino.com^
 ||yangyyy.shop^
@@ -3666,6 +3693,7 @@
 ||yfnvkr.top^
 ||ygaming.cc^
 ||yggaming.net^
+||yhuisdfhdf.com^
 ||yhznmdd.asia^
 ||yi-hui-go.com^
 ||yichedao.top^
@@ -3733,6 +3761,7 @@
 ||zaloracrosstw.com^
 ||zangeo.top^
 ||zasdasd.club^
+||zbctvc.vip^
 ||zbotu.xyz^
 ||zbzbijs.vip^
 ||zcb.one^
