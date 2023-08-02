@@ -166,7 +166,7 @@ def handle_stupid(_, text, must_be_text):
         subdomain, domain, suffix = Tools.domain_analysis(text)
         #logger.info(f"{subdomain}, {domain}, {suffix}")
         if subdomain or suffix:
-            return f"若輸入的是網址\n在{text}前面\n加上「 http:// 」或「 https:// 」"
+            return f"若輸入的是網址\n\n在 {text} 前面\n\n加上「 http:// 」或「 https:// 」"
     return None
 
 
