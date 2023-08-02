@@ -164,9 +164,9 @@ def handle_mail(user_id, text, must_be_text):
 def handle_stupid(_, text, must_be_text):
     if not text.lower().startswith("http") and not Tools.has_non_alphanumeric(text.lower()):
         subdomain, domain, suffix = Tools.domain_analysis(text)
-        logger.info(f"{subdomain}, {domain}, {suffix}")
+        #logger.info(f"{subdomain}, {domain}, {suffix}")
         if subdomain or suffix:
-            return f"若輸入的是網址，開頭記得加上「 http:// 」或「 https:// 」喔~"
+            return f"若輸入的是網址\n在{text}前面\n加上「 http:// 」或「 https:// 」"
     return None
 
 
