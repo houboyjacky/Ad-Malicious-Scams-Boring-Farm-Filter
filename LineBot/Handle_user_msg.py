@@ -86,6 +86,7 @@ def handle_line_id(user_id, text, must_be_text):
             return rmessage
 
         _, status = Q_LINEID.LineID_Read_Document(lineid)
+        Handle_LineBot.ID_Count("LINE")
         if must_be_text:
             return min_reply_text(status)
         return Handle_LineBot.message_reply_Query(user_id, status, "LINE ID", lineid, text)
@@ -98,6 +99,7 @@ def handle_line_id(user_id, text, must_be_text):
 def handle_telegram_id(user_id, text, must_be_text):
     if re.search(Tools.KEYWORD_TELEGRAM_ID[0], text.lower()):
         telegram_id, status = Q_TG.Telegram_Read_Document(text.lower())
+        Handle_LineBot.ID_Count("TG")
         if must_be_text:
             return min_reply_text(status)
         return Handle_LineBot.message_reply_Query(user_id, status, "Telegram ID", telegram_id, text.lower())
@@ -107,6 +109,7 @@ def handle_telegram_id(user_id, text, must_be_text):
 def handle_twitter_id(user_id, text, must_be_text):
     if re.search(Tools.KEYWORD_TWITTER_ID[0], text):
         twitter_id, status = Q_TR.Twitter_Read_Document(text)
+        Handle_LineBot.ID_Count("推特")
         if must_be_text:
             return min_reply_text(status)
         return Handle_LineBot.message_reply_Query(user_id, status, "Twitter ID", twitter_id, text)
@@ -116,6 +119,7 @@ def handle_twitter_id(user_id, text, must_be_text):
 def handle_wechat_id(user_id, text, must_be_text):
     if re.search(Tools.KEYWORD_WECHAT[0], text):
         wechat, status = Q_WC.Wechat_Read_Document(text)
+        Handle_LineBot.ID_Count("微信")
         if must_be_text:
             return min_reply_text(status)
         return Handle_LineBot.message_reply_Query(user_id, status, "Wechat", wechat, text)
@@ -125,6 +129,7 @@ def handle_wechat_id(user_id, text, must_be_text):
 def handle_ig_id(user_id, text, must_be_text):
     if re.search(Tools.KEYWORD_IG_ID[0], text.lower()):
         ig, status = Q_IG.IG_Read_Document(text.lower())
+        Handle_LineBot.ID_Count("IG")
         if must_be_text:
             return min_reply_text(status)
         return Handle_LineBot.message_reply_Query(user_id, status, "IG", ig, text.lower())
@@ -134,6 +139,7 @@ def handle_ig_id(user_id, text, must_be_text):
 def handle_dcard_id(user_id, text, must_be_text):
     if re.search(Tools.KEYWORD_DCARD_ID[0], text.lower()):
         dcard, status = Q_DC.Dcard_Read_Document(text.lower())
+        Handle_LineBot.ID_Count("DCARD")
         if must_be_text:
             return min_reply_text(status)
         return Handle_LineBot.message_reply_Query(user_id, status, "Dcard", dcard, text.lower())
