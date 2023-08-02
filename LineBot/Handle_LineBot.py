@@ -381,7 +381,7 @@ def ID_Count(Text=""):
     if not ID_POS_LIST:
         ID_POS_LIST = Tools.read_json_file(filename)
 
-    if not Text :
+    if Text :
         for ID in ID_POS_LIST:
             if ID == Text:
                 ID_POS_LIST[ID] +=1
