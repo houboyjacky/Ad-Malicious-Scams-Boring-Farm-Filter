@@ -52,7 +52,7 @@ def analyze_IG_url(user_text: str) -> Optional[dict]:
     else:
         return None
 
-    if Username == 'p':
+    if Username == 'p' or Username == "reel":
         return None
 
     #移除尾部代號
