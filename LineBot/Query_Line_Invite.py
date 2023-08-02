@@ -82,7 +82,7 @@ def analyze_line_invite_url(user_text: str) -> Optional[dict]:
                 if f"{domain}.{tdl}" != "line.me":
                     logger.info("已經指向其他網域")
                     return None
-                match = re.search(r"accountId\%3D([a-z0-9_]+)", redirected_url1)
+                match = re.search(r"accountId\%3D([a-z0-9\_]+)", redirected_url1)
                 invite_code = match.group(1)
                 invite_code = f"@{invite_code}"
                 logger.info(f"invite_code={invite_code}")
@@ -115,6 +115,8 @@ def analyze_line_invite_url(user_text: str) -> Optional[dict]:
             invite_code = invite_code.replace("~", "")
         elif Type in ["g", "g2"]:
             category = "群組"
+            #移除尾部代號
+            user_text = re.sub(r"\?utm_source=.+$","", user_text)
         else:
             logger.error('無法解析類別')
             return None
