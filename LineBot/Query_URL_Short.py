@@ -299,6 +299,12 @@ def user_query_shorturl_normal(user_text):
         )
         return rmessage, result, keep_go_status
 
+    if domain == ("shorturl.at"):
+        if user_text.startswith('https://'):
+            user_text = user_text.replace('https://', 'https://www.', 1)
+        elif user_text.startswith('http://'):
+            user_text = user_text.replace('http://', 'http://www.', 1)
+
     keep_go_status = False
     logger.info(f"user_text={user_text}")
     result = Resolve_Redirects(user_text)
