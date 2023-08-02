@@ -285,12 +285,21 @@ def string_to_datetime(string):
     return datetime.strptime(string, "%Y%m%d%H%M%S")
 
 
-def read_json_to_list(filename: str) -> list:
+def read_json_file(filename):
     try:
-        with open(filename, "r", encoding="utf-8") as file:
-            return json.load(file)
-    except (FileNotFoundError, json.JSONDecodeError):
-        return []
+        with open(filename, 'r') as file:
+            data = json.load(file)
+        return data
+    except FileNotFoundError:
+        print(f"File {filename} not found.")
+        return None
+    except json.JSONDecodeError:
+        print(f"Error decoding JSON from {filename}.")
+        return None
+
+def write_json_file(filename, data):
+    with open(filename, 'w', encoding='utf-8', newline='') as json_file:
+        json.dump(data, json_file, indent=4)
 
 
 def format_elapsed_time(seconds):

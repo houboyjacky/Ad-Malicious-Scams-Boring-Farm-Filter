@@ -68,7 +68,7 @@ def resolve_redirects_Webdriver(short_url):
 # 縮網址
 # ===============================================
 
-HTTP_HEADERS_LIST = Tools.read_json_to_list(Tools.HTTP_HEADERS)
+HTTP_HEADERS_LIST = Tools.read_json_file(Tools.HTTP_HEADERS)
 
 
 def resolve_redirects_wenkio(url):
