@@ -111,19 +111,6 @@ def log_request(response):
     return response
 
 # ================
-# 機器人掃描
-# ================
-
-
-@app.route('/config/robots.txt')
-def robots():
-
-    # 記錄robots下載紀錄
-    msg = make_record(request)
-    logger.info('%s and Downloaded robots.txt', msg)
-    return send_file('robots.txt', mimetype='text/plain')
-
-# ================
 # 下載檔案
 # ================
 
@@ -145,6 +132,8 @@ def download(filename):
     elif extension == ".jpg":
         path = f"{Tools.CONFIG_FOLDER}"
         # logger.info(f"path = {path}")
+    elif filename == "robots.txt" or filename == "ads.txt":
+        path = f"{Tools.CONFIG_FOLDER}"
     elif filename == os.path.basename(Tools.TMP_BLACKLIST):
         return Response(open(Tools.TMP_BLACKLIST, "rb"), mimetype="text/plain")
     else:
