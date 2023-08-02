@@ -118,7 +118,7 @@ def handle_game_msg(user_id, user_text):
                 button1 = "使用指南"
                 button2 = "詐騙學習"
                 func_name = "重複回報"
-                msg = f"「{user_name}」你好\n你的詐騙回報已收到\n請勿重複回報！\n小編一人作業\n請勿造成作業困擾\n還請擔待"
+                msg = f"「{user_name}」你好🤝\n你的詐騙回報已收到💁‍♀️\n🙅‍♂️請勿重複回報！\n小編一人作業\n請勿造成作業困擾🙇\n還請擔待"
                 rmessage = Handle_LineBot.message_reply_confirm(
                     button1, button2, msg, func_name)
             else:

@@ -70,21 +70,35 @@ def message_reply(event, text):
     return
 
 
-def message_reply_confirm(button1, button2, text, function_name):
+def message_reply_confirm(button1, button2, text, function_name, button1_content = "", button2_content = ""):
 
     actions = []
 
-    actions.append(MessageTemplateAction(
-        label=button1,
-        text=button1
-    )
-    )
+    if button1_content:
+        actions.append(MessageTemplateAction(
+            label=button1,
+            text=button1_content
+        )
+        )
+    else:
+        actions.append(MessageTemplateAction(
+            label=button1,
+            text=button1
+        )
+        )
 
-    actions.append(MessageTemplateAction(
-        label=button2,
-        text=button2
-    )
-    )
+    if button2_content:
+        actions.append(MessageTemplateAction(
+            label=button2,
+            text=button2_content
+        )
+        )
+    else:
+        actions.append(MessageTemplateAction(
+            label=button2,
+            text=button2
+        )
+        )
 
     confirm_template = ConfirmTemplate(
         text=text,
@@ -356,6 +370,7 @@ def message_reply_Query(user_id, IsScam, Type_Name, code, orgin_text):
         alt_text=f"快門手{Type_Name}查詢",
         template=confirm_template
     )
+
     return template_message
 
 

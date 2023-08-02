@@ -330,13 +330,23 @@ def handle_admin_msg(user_id, orgin_text):
     elif orgin_text == "檢閱":
         pos, content, isSystem = Q_NET.get_netizen_file(user_id)
         if not content:
-            rmessage = "目前沒有需要檢閱的資料"
+            button1 = "完成"
+            button2 = "管理員筆記"
+            msg = f"已經完成共 {pos} 則詐騙回報💯\n\n目前已檢閱完畢✌️\n\n📸快門手感謝你的付出❤️"
+            title = "檢閱完成"
+            rmessage = Handle_LineBot.message_reply_confirm(button1, button2, msg, title)
         else:
             if isSystem:
                 msg = handle_user_msg("0", content)
                 rmessage = f"{pos}\n系統轉送使用者查詢：\n{content}\n=====\n自動查詢:\n\n{msg}\n\n=====\n參閱與處置後\n請輸入「完成」或「失效」"
             else:
-                rmessage = f"{pos}\n使用者詐騙回報內容：\n\n{content}\n\n參閱與處置後\n請輸入「完成」或「失效」"
+                button1 = "一鍵查詢"
+                query_text = content.replace("詐騙回報","")
+                button2 = "管理員筆記"
+                msg = f"{pos}\n⚠️使用者詐騙回報內容：\n\n{content}\n\n📖一鍵查詢後\n請輸入「完成」或「失效」"
+                title = "檢閱"
+                rmessage = Handle_LineBot.message_reply_confirm(button1, button2, msg, title, button1_content = query_text)
+
     elif orgin_text == "關閉辨識":
         Tools.image_analysis = False
         rmessage = "已關閉辨識"

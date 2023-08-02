@@ -81,12 +81,12 @@ def get_netizen_file(user_id: str):
 
     if result := collection.find_one(query):
         logger.info("result=%s", result)
-        SN = "%d/%d", result['序號'], total_documents
+        SN = f"{result['序號']}/{total_documents}"
         result['檢查者'] = user_id
         Query_API.Update_Document(collection, result, "序號")
         return SN, result["內容"], result["系統轉送"]
 
-    return "", "", ""
+    return {total_documents}, "", ""
 
 
 def push_netizen_file(user_id, success, disappear):
