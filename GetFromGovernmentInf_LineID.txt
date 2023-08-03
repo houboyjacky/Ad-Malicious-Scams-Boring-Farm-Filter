@@ -22,7 +22,7 @@ _yuyu0910
 _zhu.0522
 _zn.153
 -zyx0516
-! 更新時間 2023/08/02
+! 更新時間 2023/08/03
 ! 網址來源 https://165.npa.gov.tw/#/lineid
 ! 網址來源 https://data.gov.tw/dataset/78432
 ._.chen
@@ -241,12 +241,14 @@ _zn.153
 @521xwdlz
 @526kfndc
 @527xyouv
+@533akpbz
 @533nqrtp
 @534omhuo
 @540avoqg
 @542tkzop
 @545jwsmo
 @549evlgq
+@549svxks
 @550gmgxy
 @550hiibz
 @550ncgen
@@ -327,6 +329,7 @@ _zn.153
 @713bexpa
 @713juvhv
 @716duyuh
+@716qgncc
 @720ztoxr
 @722qqpoz
 @723ivwmp
@@ -373,6 +376,7 @@ _zn.153
 @825xtqkf
 @829ceoly
 @834mcjza
+@834ougdt
 @834qofot
 @834tblch
 @838aaozd
@@ -777,6 +781,7 @@ _zn.153
 1013031666
 10186898
 101woaini
+1022695260
 10236003
 10241984520
 1028181635
@@ -888,6 +893,7 @@ _zn.153
 1555999
 155han
 156133
+1562989
 15681588
 158003
 1580wwk
@@ -1673,6 +1679,7 @@ _zn.153
 77.lin
 77063
 770880888
+7715392
 77263
 7739530
 775ty
@@ -1829,7 +1836,6 @@ _zn.153
 86856031
 8686228
 868kmhsf
-868KMHSF
 868wssjb
 868zs
 8695367
@@ -2212,6 +2218,7 @@ _zn.153
 987652270
 987654321roy
 98765432c
+987666888
 9876883
 9876k9876
 987734068
@@ -2361,6 +2368,7 @@ a188788
 a18890
 a19811024055
 a198255
+a1984520
 a1984818
 a1987321
 a198855
@@ -2852,6 +2860,7 @@ ailekesi521
 ailin66
 ailin8806
 ailina899
+ailsa90528
 aimalahuoguo
 aimee951120
 aimeee008
@@ -3389,6 +3398,7 @@ aw909792
 aw949
 awa8y
 awe3325
+awei36900
 awen881129
 awford1122
 awnm98k
@@ -4333,6 +4343,7 @@ chen0801111
 chen081800
 chen088999
 chen0o
+chen10241535
 chen11.11
 chen1108c
 chen11888
@@ -4527,6 +4538,7 @@ cherrry1215
 cherry_7729
 cherry_8563
 cherry20010818
+cherry5683996
 cheuk886
 chf0590
 chh671
@@ -4585,6 +4597,7 @@ chris0044151
 chris0821
 chris31mun
 chris851026
+chris86420
 chrisis0228
 chrisuuuu
 chrnglm8686
@@ -5011,6 +5024,7 @@ cwb5201314
 cwg09606
 cwg328912
 cwh0802
+cwh096786541
 cwj19770708
 cwj5201314
 cwj6943
@@ -5339,6 +5353,7 @@ dd5520aizj
 dd5868
 dd5898
 dd696
+dd77313
 dd802300
 dd850318
 dd8824746
@@ -6296,6 +6311,7 @@ gaohui254963
 gaomy11
 gaopa880815
 gaoxinyal
+gaozhijun1113
 gap19865010
 garen
 gary0226
@@ -7687,6 +7703,7 @@ jiayin0120
 jiaying2018
 jiayou1983.5.20
 jiayou851118
+jiayu12＿
 jie_018
 jie_581688
 jie00907
@@ -7752,6 +7769,7 @@ jingwen6
 jingwen92
 jingya887
 jingyi0627
+jingyi861205
 jingyi95818
 jingyiaini121
 jingyiya1
@@ -8321,6 +8339,7 @@ king-junjie
 king19951314
 king5668
 king77999
+kingchoice3
 kingwjk1988
 kini180
 kinng993
@@ -9290,6 +9309,7 @@ linxuan0101
 linxuan1688
 linxuan263
 linxuan798
+linxuanson663
 linxue1990
 linxxxd
 linyan023
@@ -9313,6 +9333,7 @@ linzw1986
 lipe202088
 liping666222
 liqian5188
+liran8800
 lirong588
 lirui1219
 lisa12233
@@ -9432,6 +9453,7 @@ lizexuan1983
 lizh369
 lizhenyu1988
 lizhi0808
+lizhihuahua
 lizhitao418
 lizi0826
 lizi9524
@@ -9443,6 +9465,7 @@ lj040640
 lj28573
 lj588
 lj888999
+ljc3313
 ljc508
 ljd8868
 ljf19851105
@@ -9452,6 +9475,7 @@ ljh12580
 ljh1978
 ljh19880309
 ljh508
+ljh886
 ljiay8873
 ljj051124
 ljjie520
@@ -12231,6 +12255,7 @@ shann917
 shano125
 shanshan0424
 shanshan857
+shao064
 shaohua12
 shaohua9
 shaokun1314
@@ -12875,6 +12900,7 @@ tanyaoguang1
 tanyaoguang11
 tao1258
 tao502510
+taotao1017
 tat689
 tata996886
 taty9
@@ -13756,6 +13782,7 @@ wang102087
 wang19850325
 wang198606
 wang19920817
+wang19950420
 wang55666
 wang588740
 wang66158
@@ -13807,6 +13834,7 @@ wanlin6688
 wanmei13
 wanrouˍ1224
 wanting199835
+wanw926
 wanwan19626
 wanzi626
 wanzi6260
@@ -13838,6 +13866,7 @@ wc734
 wc7758
 wc787898
 wcc3677
+wcc7878
 wcy16888
 wcz8888
 wd19870503
@@ -14725,6 +14754,7 @@ xh1266
 xh366
 xh5277
 xh645
+xh668866
 xh83754
 xh850521
 xh8664
@@ -15113,6 +15143,7 @@ xuan3658
 xuan5680
 xuan586586
 xuan821009
+xuan85324
 xuan860607
 xuan880909
 xuan881009
@@ -15475,6 +15506,7 @@ yan551314
 yan5522
 yan554411
 yan72900
+yan729000
 yan7915
 yan86363
 yan9207y
@@ -15915,6 +15947,7 @@ yourshadow0
 yourss93
 youyou668810
 youzhi1111
+yoyo_13033
 yoyo123nomo
 yoyo1994111
 yoyo76
@@ -16070,6 +16103,7 @@ yuer6666
 yueyue826
 yuf045
 yufan16888
+yufei85
 yufei999
 yufeng1027
 yuge1027
@@ -16245,7 +16279,6 @@ yxiaoqian888
 yxin0818
 yxl245
 yxm1026
-Yxm1026
 yxoi0528
 yxr19950
 yxw0816
@@ -17043,6 +17076,7 @@ zwoshizuo520
 zwq9527
 zwr168
 zwy2259
+zwy88889
 zwz890115
 zx008009
 zx036842
@@ -17278,6 +17312,7 @@ zzc33446688
 zzc5677
 zzc760924
 zzc95280
+zzcomy
 zzdd567
 zzdin9544
 zzh00822
