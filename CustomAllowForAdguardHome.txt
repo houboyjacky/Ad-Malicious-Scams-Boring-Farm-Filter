@@ -98,4 +98,6 @@
 @@||vocus.cc^
 @@||wecharming.life^
 @@||www.com.tw^
-
+@@||cht.com.tw^
+@@||googleadservices.com^
+@@||forms.gle^
