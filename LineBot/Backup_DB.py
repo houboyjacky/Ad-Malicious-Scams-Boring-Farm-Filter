@@ -48,10 +48,10 @@ for db_name in blacklist:
         collection = Query_API.Read_Collection(db_name, "LINE_INVITE")
     else:
         collection = Query_API.Read_Collection(db_name, db_name)
+    logger.info("正在前置處理%s", collection.name)
     documents = collection.find()
     for document in documents:
         if document['檢查者']:
-            logger.info("%s的%s", collection.name, document['檢查者'])
             document['檢查者'] = ""
             Query_API.Update_Document(collection, document, "帳號")
 
