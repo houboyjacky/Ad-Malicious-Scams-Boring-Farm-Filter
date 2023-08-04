@@ -68,7 +68,7 @@ def analyze_FB_url(user_text: str) -> Optional[dict]:
     logger.info(f"Username = {Username}")
 
     #移除尾部代號
-    user_text = re.sub(r"\?mibextid=.+$","", user_text)
+    user_text = re.sub(r"[\?&]mibextid=.+$","", user_text)
 
     datetime = date.today().strftime("%Y-%m-%d")
 

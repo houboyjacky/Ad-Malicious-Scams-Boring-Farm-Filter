@@ -2,6 +2,7 @@
 
 * 20230804 Update
   * 加入 SocialUrl批次加入處理
+  * 修復 FB網址移除後餟
   * 調整 寫入Json異常中文
 
 * 20230803 Update
