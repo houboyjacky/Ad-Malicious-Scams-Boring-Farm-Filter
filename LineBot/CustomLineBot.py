@@ -20,10 +20,13 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 '''
 
-# pip3 install schedule tldextract flask line-bot-sdk python-whois beautifulsoup4
-# pip3 install pytesseract pycountry python-dateutil geocoder geocoder[geonames] ip2geotools
-# sudo apt install tesseract-ocr tesseract-ocr-eng tesseract-ocr-chi-tra
-# sudo apt install tesseract-ocr-chi-tra-vert tesseract-ocr-chi-sim tesseract-ocr-chi-sim-vert
+# pip3 install schedule tldextract flask line-bot-sdk
+# pip3 install python-whois beautifulsoup4 translate pymongo
+# pip3 install pytesseract pycountry python-dateutil
+# pip3 install geocoder geocoder[geonames] ip2geotools
+# sudo apt install tesseract-ocr tesseract-ocr-eng
+# sudo apt install tesseract-ocr-chi-tra tesseract-ocr-chi-tra-vert
+# sudo apt install tesseract-ocr-chi-sim tesseract-ocr-chi-sim-vert
 
 # Publish Python Package
 import time
