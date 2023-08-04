@@ -287,7 +287,7 @@ def string_to_datetime(string):
 
 def read_json_file(filename):
     try:
-        with open(filename, 'r') as file:
+        with open(filename, 'r', encoding='utf-8', newline='') as file:
             data = json.load(file)
         return data
     except FileNotFoundError:
@@ -299,7 +299,7 @@ def read_json_file(filename):
 
 def write_json_file(filename, data):
     with open(filename, 'w', encoding='utf-8', newline='') as json_file:
-        json.dump(data, json_file, indent=4)
+        json.dump(data, json_file, indent=4, ensure_ascii=False)
 
 
 def format_elapsed_time(seconds):
