@@ -128,6 +128,7 @@
 ||illyimport.com^
 ||imodz.click^
 ||inovatik.com^
+||interia.pl^
 ||intuit.ws^
 ||intuitcpas.com^
 ||invoiceoverdues.com^
@@ -226,6 +227,7 @@
 ||redeliverys.com^
 ||refforalupop.com^
 ||rephotomail.com^
+||rotadoscabelos.com^
 ||rusita.uk^
 ||sawariyacargopackersmovers.co.in^
 ||scottfoundationinternational.org^
@@ -269,6 +271,7 @@
 ||traplightly.com^
 ||traun-logistic.com^
 ||trendytrainer.com^
+||trevo.me^
 ||truthfulsensor.com^
 ||txbgfz.pics^
 ||u3d29qsyj46wfh9whc.com^
@@ -281,6 +284,7 @@
 ||uoedercm.com^
 ||us-knpes.us^
 ||usps-delivery.work^
+||usps-usp.com^
 ||uspsglobaldelivery.com^
 ||uspsontime.com^
 ||uspsstampstorelocal.com^
