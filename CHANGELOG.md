@@ -1,6 +1,7 @@
 # 歷史更新 History Update
 
 * 20230804 Update
+  * 加入 SocialUrl批次加入處理
   * 調整 寫入Json異常中文
 
 * 20230803 Update
