@@ -239,18 +239,9 @@ def check_white_blacklisted_site(domain_name):
 
 def check_blacklisted_site(domain_name):
 
-    for SKIP in Tools.SKIP_CHECK:
-        if SKIP in domain_name:
-            return False
-
-    White_db = "網站白名單"
-    White_collections = Query_API.Read_Collections(White_db)
-
-    for collection in White_collections:
-        document = collection.find_one({"網址": domain_name})
-        if document:
-            logger.info(f"{domain_name}在DB的{collection.name}白名單內")
-            return False
+    # 白名單內當作沒有
+    if check_white_blacklisted_site(domain_name):
+        return False
 
     Black_db = "網站黑名單"
     Black_collections = Query_API.Read_Collections(Black_db)
