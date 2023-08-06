@@ -101,3 +101,5 @@
 @@||cht.com.tw^
 @@||googleadservices.com^
 @@||forms.gle^
+@@||hfm.com^
+@@||trustwallet.com^
