@@ -22,7 +22,7 @@ _yuyu0910
 _zhu.0522
 _zn.153
 -zyx0516
-! 更新時間 2023/08/03
+! 更新時間 2023/08/07
 ! 網址來源 https://165.npa.gov.tw/#/lineid
 ! 網址來源 https://data.gov.tw/dataset/78432
 ._.chen
@@ -294,6 +294,7 @@ _zn.153
 @643empia
 @645gwbnp
 @646hrvra
+@649tbzls
 @650ccxgs
 @655ucdmj
 @660adzgi
@@ -704,6 +705,7 @@ _zn.153
 0966203478
 0966234342
 09665d
+096668kk
 0966789556
 0966883956
 0967100465
@@ -863,6 +865,7 @@ _zn.153
 1278569
 127pp
 1313aws
+131420yt
 1314520
 1314709
 1314hrt
@@ -1139,6 +1142,7 @@ _zn.153
 28119077
 2822833
 2855125
+286977419
 2878173705
 2887878
 2992938288
@@ -1391,6 +1395,7 @@ _zn.153
 54828888
 54848543
 549873222
+5507890
 55168888888
 55177321
 5522663
@@ -1877,6 +1882,7 @@ _zn.153
 886236
 886615268
 88665223
+88676990
 8867990
 8868960
 886dbg
@@ -2481,6 +2487,7 @@ aa042045
 aa088988
 aa0910474710
 aa095678
+aa0973869759
 aa0979568456
 aa0980681156
 aa0980861156
@@ -2903,6 +2910,7 @@ ak47186
 ak47668
 ak6698
 ak778
+ak910223
 aka850207
 akak168168
 akay9
@@ -3554,6 +3562,7 @@ baron1225
 baron19891203
 bashu168
 basia0225
+basiayu1997
 bass_87952
 bat890115
 bate8080
@@ -3700,6 +3709,7 @@ bisheng001
 bit-c001
 bit-c9
 bit2c-ex_vip
+bit361
 bit8188
 bit88999
 bitc168
@@ -3763,6 +3773,7 @@ bn688
 bnci0827
 bnex006
 bnm8886
+bnp889
 bnw58
 bo_0810
 bo_1107
@@ -3908,6 +3919,7 @@ by855
 by88899
 by913
 byby85
+byg8886
 byjk888
 byo520131
 byshop001
@@ -4282,6 +4294,7 @@ cha750110
 chail0507
 chainalysis888
 chaio1215
+chaix_0708
 chan_0924
 chan.66
 chan830829
@@ -4387,6 +4400,7 @@ chen3586
 chen42580
 chen449495
 chen516516888
+chen518fa
 chen520ww
 chen521678
 chen6181
@@ -4462,6 +4476,7 @@ chengong520
 chengshi0821
 chengss123
 chengyin99
+chengzewei0516
 chenhailun886
 chenhao0852
 chenhaoyu89
@@ -4660,6 +4675,7 @@ cj880811
 cj88678
 cjc83
 cjd8388
+cjg1688
 cjg88012
 cjh0424
 cjh3344
@@ -4699,6 +4715,7 @@ cjy9988
 cjyy123456
 cjyyds
 cjz1989
+ck0529188
 ck12309
 ck152058
 ck168188
@@ -5321,6 +5338,7 @@ daynice0110
 daynice0113
 dayyy6
 db_1215
+dbˍ1215
 db237
 db8889
 dbkf05
@@ -5409,6 +5427,7 @@ devilpxs
 devin_0625
 devin8859
 dex6888
+dezhi0318
 df0318
 df12123
 df257898743
@@ -5439,6 +5458,7 @@ dg882
 dg883
 dg885
 dg886
+dg8861
 dg943
 dh017
 dh561
@@ -5852,6 +5872,7 @@ f02879
 f09888
 f098889
 f1285976
+f13551
 f15661
 f15663
 f15668
@@ -7300,6 +7321,7 @@ hym09.
 hyo8922
 hyq1966
 hyr520
+hyr888999
 hysg808
 hyt2255
 hytis0118
@@ -8717,6 +8739,7 @@ l5253520
 l5889
 l66988
 l68009
+l750826
 l8023111
 l8427
 l888888
@@ -9243,6 +9266,7 @@ ling820807
 ling980624
 lingan888
 lingling850619
+lingmenglu
 lingyu09_03
 linhaichen8888
 linhan422
@@ -9733,6 +9757,7 @@ lqn986
 lqq724
 lqq786
 lqq815
+lqr1990
 lqshop888
 lqt123456
 lqw88999
@@ -9972,6 +9997,7 @@ lxz888
 ly010101
 ly16618
 ly19851126
+ly1986714
 ly22233
 ly3237
 ly335
@@ -10253,6 +10279,7 @@ mc368
 mc88899
 mcccg
 mce_505
+mcm1688
 mcq3579
 mcq850820
 mcqua565
@@ -10532,6 +10559,7 @@ mm856k
 mm8745
 mm87k
 mm8856k
+mm888865
 mm95278
 mm95787
 mm975
@@ -10742,6 +10770,7 @@ n.ˍ.fanny
 n1990799
 n41617
 n6y92
+n836268
 n8881258
 na25103
 na32765
@@ -11587,6 +11616,7 @@ qq09123.
 qq100829
 qq1161
 qq11666
+qq1443
 qq1566
 qq1698
 qq18186
@@ -11645,6 +11675,7 @@ qrkkp
 qs0324
 qs74520
 qs8838
+qsd886a
 qsgaqzx
 qsh141242
 qsm1112
@@ -11815,6 +11846,7 @@ rbby666
 rcr2894
 rd68
 rd68778
+rdddfff
 rde63
 real898
 rebbecca
@@ -11877,6 +11909,7 @@ rolandalex2060
 rolex5777
 roman1985
 romarom886
+ron__0316
 rong.810810
 rong829829
 rong841010
@@ -12704,6 +12737,7 @@ sun857
 suna1223
 sunan9891
 sunboy0610
+sundg11
 suni768
 sunjay0110
 sunjm1110
@@ -12733,6 +12767,7 @@ supper1668
 sur76966
 sus1021
 susan2020
+sushiking3
 susiˍ0320
 susu_su00
 suuny5220
@@ -13067,6 +13102,7 @@ tintinyu_1205
 tinyingb
 titppw
 tiyo9966
+tjj0820
 tjjade168
 tk1189030
 tk3743
@@ -13116,6 +13152,7 @@ ton1030930
 tone678
 tone871
 tong_520
+tong0077_
 tong1008.
 tong520223
 tongmo01
@@ -13269,6 +13306,7 @@ tw668822
 tw6878
 tw691124
 tw757
+tw8557
 tw8886666
 tw89730
 twcs886
@@ -13910,6 +13948,7 @@ we88we
 we997
 we99800
 weace520
+wealth214
 wealth521
 wealthg
 wealthy6898
@@ -14021,6 +14060,7 @@ wenwen2512
 wenwen446
 wenwen73521
 wenwen830919
+wenwen851012
 wenwen8809
 wenwen9568
 wenxi000
@@ -14486,6 +14526,7 @@ wwwww688
 wwwy0725
 wwwysdp
 wwy7723
+wwy8820
 wx10520
 wx1890
 wx1930
@@ -14554,6 +14595,7 @@ wyh19850506
 wyq6437
 wyq91521
 wyr056411
+wyr2019
 wys77989
 wyt0330
 wyt09888
@@ -14953,6 +14995,7 @@ xixi95152
 xixi99999999
 xiya568
 xiya5688
+xiya58
 xj123520
 xj25836
 xj416
@@ -15091,6 +15134,7 @@ xt151
 xt5208777
 xt67416145
 xt8w
+xt904800
 xt95528
 xtjh123
 xtm005688
@@ -15617,6 +15661,7 @@ yc6600
 yc6657
 yc88001
 yc985
+ycc-888
 ych720806
 ycj8866
 ycm86825
@@ -16007,6 +16052,7 @@ ysh394
 ysh594200
 ysl0630
 ysl668899
+yslcindy108
 yslty
 yspa915
 yst6980
@@ -16034,6 +16080,7 @@ ytml0521
 ytong1226
 ytp77889
 ytp778899
+yty0724
 yty900521
 ytyt886
 ytz168
@@ -16119,6 +16166,7 @@ yujian168
 yujie128963
 yuju11021028
 yujun01
+yuka6898
 yuki31078001
 yuki6105
 yulan668
@@ -16174,6 +16222,7 @@ yutong700090
 yutt68
 yuu67889
 yuu6869
+yuuuuu_0328
 yuuy_77
 yuwei861113
 yuwen_0117
@@ -16402,6 +16451,7 @@ yym158
 yym7890
 yyn0508
 yyn1991
+yyn2876
 yynn0503
 yyo1115
 yyoo56
@@ -16633,6 +16683,7 @@ zh1888.com
 zh198418
 zh1987.
 zh356
+zh5889
 zh5921
 zh6581
 zh668822
