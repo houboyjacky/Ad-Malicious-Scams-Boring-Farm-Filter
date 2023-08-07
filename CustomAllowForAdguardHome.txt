@@ -103,3 +103,4 @@
 @@||forms.gle^
 @@||hfm.com^
 @@||trustwallet.com^
+@@||newbang.co^

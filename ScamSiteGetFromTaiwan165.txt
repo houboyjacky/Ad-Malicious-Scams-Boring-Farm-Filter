@@ -3,7 +3,6 @@
 ! jasony https://www.dcard.tw/@yen7716888
 @@||bittrex.com^$important
 @@||fpmarkets.com^$important
-@@||pingshangyang.webnode.tw^$important
 #||cdn77.org^
 #||fx110.com^
 #||github.io^

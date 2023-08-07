@@ -1,6 +1,7 @@
 ! 2023/07/11 Update
 ! FX110 https://www.fx110.com/
 @@||metamask.io^
+#||webnode.tw^
 #||wixsite.com^
 ||00fa.com^
 ||0852288.com^
@@ -7102,7 +7103,6 @@
 ||weatagerfx.com^
 ||webflow.io^
 ||webitbvhyf.com^
-||webnode.tw^
 ||webskr.com^
 ||websteroptions.com^
 ||webwmk.com^
