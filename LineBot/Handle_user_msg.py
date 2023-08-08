@@ -84,6 +84,11 @@ def handle_line_id(user_id, text, must_be_text):
                         f"請重新輸入\n"
                         )
             return rmessage
+        elif lineid.startswith("09") and "-" in lineid:
+            phone = re.sub(r'[\s+\-]', '', lineid)
+            if len(phone) == 10:
+                lineid = phone
+                text = re.sub(r'[\s+\-]', '', text)
 
         _, status = Q_LINEID.LineID_Read_Document(lineid)
         Handle_LineBot.ID_Count("LINE")
