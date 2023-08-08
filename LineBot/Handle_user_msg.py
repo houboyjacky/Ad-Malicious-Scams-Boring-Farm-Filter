@@ -339,6 +339,9 @@ def handle_dcard_web(prefix_msg, user_id, text, must_be_text):
 
 
 def handle_web(prefix_msg, user_id, text, must_be_text):
+    if re.match(Tools.KEYWORD_URL[5], text.lower()):
+        logger.info(f"AppStore的App網址")
+        return None
     if re.match(Tools.KEYWORD_URL[2], text.lower()):
         if not prefix_msg:
             prefix_msg = "所輸入的"
