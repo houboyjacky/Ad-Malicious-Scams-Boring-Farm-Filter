@@ -283,13 +283,6 @@ def message_reply_Query(user_id, IsScam, Type_Name, code, orgin_text):
             text=f"使用指南"
         )
         )
-
-        if Type_Name == "IG":
-            actions.append(URITemplateAction(
-                label='確認IG連結',
-                uri=f"https://www.instagram.com/{code}"
-            )
-            )
     else:
         suffix = (f"並「不代表」沒問題⚠️\n\n"
                   f"📍若確定是詐騙😈\n"
@@ -365,10 +358,17 @@ def message_reply_Query(user_id, IsScam, Type_Name, code, orgin_text):
             )
             )
 
+    if Type_Name == "IG":
+        actions.append(URITemplateAction(
+            label='確認IG連結',
+            uri=f"https://www.instagram.com/{code}"
+        )
+        )
+
     length = len(text)
     logger.info(f"len = {length}")
 
-    if len == 2:
+    if len(actions) == 2:
         template = ConfirmTemplate(
             text=text,
             actions=actions
