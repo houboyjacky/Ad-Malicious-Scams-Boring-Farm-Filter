@@ -38,7 +38,7 @@ import Query_Instagram as Q_IG
 import Query_Line_ID as Q_LINEID
 import Query_Line_Invite as Q_LINEWEB
 import Query_Mail as Q_MAIL
-import Query_Netizen as Q_NET
+import Query_Report as Q_RPT
 import Query_SmallRedBook as Q_SRB
 import Query_Telegram as Q_TG
 import Query_Tiktok as Q_TT
@@ -54,6 +54,17 @@ import Update_BlackList as BLACK
 
 def process_file(file_path):
     Query_Image.Add_Image_Sample(file_path)
+
+def handle_Delete_Report(text):
+    # 刪除詐騙回報
+    if text.startswith("刪除詐騙回報"):
+        text = text.replace("刪除","")
+        if Q_RPT.Report_Cancel_Document(text):
+            return "「已找到」相同詐騙回報\n成功刪除"
+        else:
+            return "「找不到」相同詐騙回報\n失敗刪除"
+    return None
+
 
 def handle_virtual_money(text):
     # 虛擬貨幣
@@ -287,6 +298,7 @@ def handle_error(text):
 def handle_admin_msg_sub(orgin_text, using_template = False):
 
     handlers = [
+        handle_Delete_Report,
         handle_virtual_money,
         handle_line_id,
         handle_line_web,
@@ -328,7 +340,7 @@ def handle_admin_msg(user_id, orgin_text):
         logger.info("Reload setting.json")
         rmessage = "設定已重新載入"
     elif orgin_text == "檢閱":
-        pos, content, isSystem = Q_NET.get_netizen_file(user_id)
+        pos, content, isSystem = Q_RPT.Report_Read_Document(user_id)
         if not content:
             button1 = "完成"
             button2 = "管理員筆記"

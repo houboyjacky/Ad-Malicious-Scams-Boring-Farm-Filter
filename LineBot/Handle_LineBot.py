@@ -20,7 +20,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 '''
 
-from Query_Netizen import write_new_netizen_file
+from Query_Report import Report_Write_Document
 from linebot import LineBotApi
 from linebot.models import (
     TextSendMessage,
@@ -52,7 +52,7 @@ def message_reply(event, text):
             text = f"{text}\n\n{notice_text}"
 
         # if not Tools.IsAdmin(event.source.user_id) and Tools.forward_inquiry:
-        #     write_new_netizen_file(event.source.user_id,
+        #     Report_Write_Document(event.source.user_id,
         #                         user_name, event.message.text, True)
 
         message = TextSendMessage(text=text)

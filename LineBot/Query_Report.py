@@ -28,8 +28,29 @@ import Query_API
 
 NAME = "詐騙回報"
 
+def Report_Cancel_Document(user_text):
 
-def write_new_netizen_file(user_id: str, user_name: str, user_text: str, is_system: bool) -> bool:
+    collection = Query_API.Read_Collection(NAME, NAME)
+
+    query = {
+        "$and": [
+            {   "內容" : user_text
+            }
+        ]
+    }
+
+    document = collection.find_one(query)
+    logger.info(f"document = {document}")
+    if not document:
+        return False
+
+    document["失效"] = 1
+
+    Query_API.Update_Document(collection, document, "內容")
+    return True
+
+
+def Report_Write_Document(user_id: str, user_name: str, user_text: str, is_system: bool) -> bool:
 
     collection = Query_API.Read_Collection(NAME, NAME)
 
@@ -65,7 +86,7 @@ def write_new_netizen_file(user_id: str, user_name: str, user_text: str, is_syst
     return False
 
 
-def get_netizen_file(user_id: str):
+def Report_Read_Document(user_id: str):
 
     collection = Query_API.Read_Collection(NAME, NAME)
     total_documents = collection.count_documents({})
@@ -86,10 +107,10 @@ def get_netizen_file(user_id: str):
         Query_API.Update_Document(collection, result, "序號")
         return SN, result["內容"], result["系統轉送"]
 
-    return {total_documents}, "", ""
+    return total_documents, "", ""
 
 
-def push_netizen_file(user_id, success, disappear):
+def Report_Finish_Document(user_id, success, disappear):
 
     found = False
     collection = Query_API.Read_Collection(NAME, NAME)

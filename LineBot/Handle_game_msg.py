@@ -32,7 +32,7 @@ import Handle_LineBot
 import Query_Facebook as Q_FB
 import Query_Instagram as Q_IG
 import Query_Line_Invite as Q_LINEWEB
-import Query_Netizen as Q_NET
+import Query_Report as Q_RPT
 import Query_SmallRedBook as Q_SRB
 import Query_Tiktok as Q_TT
 import Query_Twitter as Q_TR
@@ -114,7 +114,7 @@ def handle_game_msg(user_id, user_text):
             rmessage = Handle_LineBot.message_reply_After_Report(True)
         else:
             user_name = Handle_LineBot.linebot_getRealName(user_id)
-            if Q_NET.write_new_netizen_file(user_id, user_name, user_text, False):
+            if Q_RPT.Report_Write_Document(user_id, user_name, user_text, False):
                 button1 = "使用指南"
                 button2 = "詐騙學習"
                 func_name = "重複回報"
@@ -140,7 +140,7 @@ def handle_game_msg(user_id, user_text):
 
     if user_text == "完成":
         found = push_random_blacklist(user_id, True, False)
-        found2 = Q_NET.push_netizen_file(user_id, True, False)
+        found2 = Q_RPT.Report_Finish_Document(user_id, True, False)
         if found and not found2:
             write_user_point(user_id, 1)
             rmessage = Handle_LineBot.message_reply_Game_End("遊戲")
@@ -155,7 +155,7 @@ def handle_game_msg(user_id, user_text):
 
     if user_text == "失效":
         found = push_random_blacklist(user_id, False, True)
-        found2 = Q_NET.push_netizen_file(user_id, False, True)
+        found2 = Q_RPT.Report_Finish_Document(user_id, False, True)
         if found and not found2:
             write_user_point(user_id, 1)
             rmessage = Handle_LineBot.message_reply_Game_End("遊戲")
