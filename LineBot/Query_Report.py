@@ -101,7 +101,7 @@ def Report_Read_Document(user_id: str):
     }
 
     if result := collection.find_one(query):
-        logger.info("result=%s", result)
+        #logger.info("result=%s", result)
         SN = f"{result['序號']}/{total_documents}"
         result['檢查者'] = user_id
         Query_API.Update_Document(collection, result, "序號")
