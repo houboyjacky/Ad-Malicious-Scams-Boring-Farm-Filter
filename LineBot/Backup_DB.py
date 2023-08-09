@@ -74,12 +74,12 @@ DBs = [
 
 for db_name in DBs:
     collections = Query_API.Read_Collections(db_name)
-
     for collection in collections:
         logger.info("正在匯出%s", {collection.name})
         documents = collection.find({}, {'_id': 0})
         output_filename = f'Backup/{collection.name}.json'
         with open(output_filename, 'w', encoding="utf-8", newline='') as f:
             for i, document in enumerate(documents):
-                json.dump(list(documents), f, ensure_ascii=False, indent=4)
+                json.dump(document, f, ensure_ascii=False, indent=4)
                 f.write('\n')
+
