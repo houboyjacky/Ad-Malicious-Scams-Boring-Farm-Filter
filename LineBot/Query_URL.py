@@ -21,11 +21,9 @@ THE SOFTWARE.
 '''
 
 from bs4 import BeautifulSoup
-from collections import defaultdict
-from datetime import datetime, timedelta
+from datetime import datetime
 from ip2geotools.databases.noncommercial import DbIpCity
 from Logger import logger
-from PrintText import suffix_for_call
 from Query_Chainsight import checkFromChainsight
 from Security_Check import CF_IPS
 from Update_BlackList import update_part_blacklist_rule_to_db, update_part_blacklist_comment, blacklist
@@ -37,9 +35,12 @@ import requests
 import socket
 import threading
 import time
-import tldextract
 import Tools
 import whois
+
+suffix_for_call = (f"讓大家繼續幫助大家\n"
+                   f"讓社會越來越好\n"
+                   f"感恩")
 
 # ===============================================
 # 原始伺服器

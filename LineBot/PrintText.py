@@ -22,10 +22,6 @@ THE SOFTWARE.
 
 import Tools
 
-suffix_for_call = (f"讓大家繼續幫助大家\n"
-                   f"讓社會越來越好\n"
-                   f"感恩")
-
 Notice_Board_List = []
 notice_text = ""
 

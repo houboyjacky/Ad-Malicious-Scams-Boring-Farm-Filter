@@ -30,7 +30,6 @@ from flask import (
     Response,
     request,
     abort,
-    send_file,
     send_from_directory,
     redirect,
     jsonify

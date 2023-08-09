@@ -34,8 +34,8 @@ def Report_Cancel_Document(user_text):
 
     query = {
         "$and": [
-            {   "內容" : user_text
-            }
+            {"內容": user_text
+             }
         ]
     }
 
@@ -56,8 +56,8 @@ def Report_Write_Document(user_id: str, user_name: str, user_text: str, is_syste
 
     query = {
         "$and": [
-            {   "內容" : user_text,
-                "提交者ID" : user_id
+            {"內容": user_text,
+                "提交者ID": user_id
              }
         ]
     }
@@ -94,13 +94,13 @@ def Report_Read_Document(user_id: str):
     query = {
         "$and": [
             {"完成": 0,
-                "失效": 0,
+                "失效": 0
              }
         ]
     }
 
     if result := collection.find_one(query):
-        #logger.info("result=%s", result)
+        # logger.info("result=%s", result)
         SN = f"{result['序號']}/{total_documents}"
         result['檢查者'] = user_id
         Query_API.Update_Document(collection, result, "序號")

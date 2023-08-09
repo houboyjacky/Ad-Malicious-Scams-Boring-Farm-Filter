@@ -66,8 +66,9 @@ def checkFromChainsight(input):
         response.raise_for_status()  # 確認請求成功
         parsed_data = json.loads(response.text)
 
+        # logger.info(f"parsed_data = {parsed_data}")
+
         if 'data' not in parsed_data:
-            logger.info(f"parsed_data = {parsed_data}")
             return "", -1
 
         currency_data = {}

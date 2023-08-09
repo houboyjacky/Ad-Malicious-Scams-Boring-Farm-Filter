@@ -122,10 +122,10 @@ def Update_Document(collection, struct, tagname):
     update = {"$set": struct}
     result = MongoDB.Update_db(collection, filter, update)
     if result.matched_count == 0:
-        # logger.info("找不到相同資料，進行插入")
+        #logger.info("找不到相同資料，進行插入")
         Write_Document(collection, struct)
     else:
-        # logger.info("找到相同資料，已更新")
+        #logger.info("找到相同資料，已更新")
         pass
     return
 

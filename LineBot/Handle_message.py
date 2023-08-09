@@ -52,7 +52,7 @@ def handle_message_text_front(user_text):
                     f"若要查詢是否是詐騙賴\n"
                     f"輸入「賴+電話」\n"
                     f"例如：賴0912345678"
-        )
+                    )
         return rmessage
 
     if user_text.startswith("https://apps.apple.com/tw/app/"):
@@ -63,7 +63,7 @@ def handle_message_text_front(user_text):
                     f"但可以告知我協助調查\n"
                     f"請後續提出更多截圖證據\n"
                     f"小編會盡力調查"
-        )
+                    )
 
     if user_text == "詐騙幫忙":
         rmessage = Handle_LineBot.message_reply_ScamAlert()
@@ -79,6 +79,7 @@ def handle_message_text_front(user_text):
         return rmessage
 
     return None
+
 
 def handle_message_text(event):
     # 取得發訊者的 ID
@@ -130,9 +131,11 @@ def handle_message_text(event):
 
     return
 
+
 def handle_message_image(event):
     # 取得發訊者的 ID
-    logger.info(f'UserID = {event.source.user_id}')
+    user_id = event.source.user_id
+    logger.info(f'UserID = {user_id}')
     logger.info(f'UserMessage = image message')
 
     # 儲存照片的目錄
@@ -150,7 +153,6 @@ def handle_message_image(event):
     if not os.path.isdir(IMAGE_DIR):
         os.mkdir(IMAGE_DIR)
 
-    user_id = event.source.user_id
     user_dir = f"{IMAGE}/{user_id}/"
     if not os.path.isdir(user_dir):
         os.mkdir(user_dir)
@@ -212,6 +214,7 @@ def handle_message_image(event):
         Handle_LineBot.message_reply(event, rmessage)
 
     return
+
 
 def handle_message_file(event):
 

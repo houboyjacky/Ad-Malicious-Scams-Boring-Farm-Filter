@@ -45,6 +45,7 @@ Twitter_list_len = 0
 Tiktok_len = 0
 SmallRedBook_len = 0
 
+
 def Random_get_List(UserID):
     global FB_list_len, IG_list_len, line_invites_list_len, Twitter_list_len, Tiktok_len, SmallRedBook_len
     if not FB_list_len:
@@ -92,6 +93,7 @@ def Random_get_List(UserID):
 
     return None, None
 
+
 def push_random_blacklist(UserID, success, disappear):
     result = False
     if result := Q_FB.push_random_fb_blacklist(UserID, success, disappear):
@@ -107,6 +109,7 @@ def push_random_blacklist(UserID, success, disappear):
     if result := Q_SRB.push_random_SmallRedBook_blacklist(UserID, success, disappear):
         return result
     return result
+
 
 def handle_game_msg(user_id, user_text):
     if user_text.startswith("詐騙回報"):
