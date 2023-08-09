@@ -53,7 +53,7 @@ for db_name in blacklist:
     for document in documents:
         if document['檢查者']:
             document['檢查者'] = ""
-            Query_API.Update_Document(collection, document, "帳號")
+            Query_API.Update_Document(collection, document, "_id")
 
 
 DBs = [

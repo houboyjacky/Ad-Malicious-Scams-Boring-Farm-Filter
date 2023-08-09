@@ -46,7 +46,7 @@ def Report_Cancel_Document(user_text):
 
     document["失效"] = 1
 
-    Query_API.Update_Document(collection, document, "內容")
+    Query_API.Update_Document(collection, document, "_id")
     return True
 
 
@@ -97,12 +97,12 @@ def Report_Read_Document(user_id: str):
              }
         ]
     }
-
-    if result := collection.find_one(query):
+    result = collection.find_one(query)
+    if result:
         # logger.info("result=%s", result)
         SN = f"{result['序號']}/{total_documents}"
         result['檢查者'] = user_id
-        Query_API.Update_Document(collection, result, "序號")
+        Query_API.Update_Document(collection, result, "_id")
         return SN, result["內容"], result["系統轉送"]
 
     return total_documents, "", ""

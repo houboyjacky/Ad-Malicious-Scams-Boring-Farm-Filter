@@ -1,5 +1,8 @@
 # 歷史更新 History Update
 
+* 20230810 Update
+  * 調整 document微調資料，以_id來寫回資料
+
 * 20230809 Update
   * 加入 建立統計資料與移除計算積分
   * 修復 備份DB資料有誤

@@ -72,7 +72,7 @@ def CreateShortUrl(urls, UserID):
             random_document['登陸者'] = UserID
             random_document['登陸日期'] = datetime.now().strftime(
                 "%Y-%m-%d %H-%M-%S")
-            Update_Document(collection, random_document, "縮網址")
+            Update_Document(collection, random_document, "_id")
 
             return random_document['縮網址']
 
@@ -99,7 +99,7 @@ def RecordShortUrl(shorturl, IP, Country):
                   "登陸網址": "",
                   "登陸者": "",
                   "登陸日期": "",
-                  "點擊者": {}
+                  "點擊者": []
                   }
         Update_Document(collection, struct, "縮網址")
         return None
@@ -113,7 +113,7 @@ def RecordShortUrl(shorturl, IP, Country):
               }
 
     document['點擊者'].append(struct)
-    Update_Document(collection, document, "縮網址")
+    Update_Document(collection, document, "_id")
     return document['登陸網址']
 
 
@@ -158,7 +158,7 @@ def GetInfShortUrl(User_ID):
                       "登陸網址": "",
                       "登陸者": "",
                       "登陸日期": "",
-                      "點擊者": {}
+                      "點擊者": []
                       }
             Update_Document(collection, struct, "縮網址")
 
