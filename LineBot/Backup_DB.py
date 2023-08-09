@@ -69,7 +69,8 @@ DBs = [
     "Twitter",
     "UserPoint",
     "WhatsApp",
-    "WHOIS"
+    "WHOIS",
+    "PERSONAL"
 ]
 
 for db_name in DBs:

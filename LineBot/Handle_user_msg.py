@@ -42,6 +42,7 @@ import Query_VirtualMoney as Q_VM
 import Query_Wechat as Q_WC
 import Query_WhatsApp as Q_WA
 import Tools
+from Personal_Rec import Personal_Update_SingleTag_Query, Personal_Update_SingleTag
 
 
 def min_reply_text(status):
@@ -56,6 +57,7 @@ def handle_virtual_money(user_id, text, must_be_text):
     if re.match(Tools.KEYWORD_VIRTUAL_MONEY[0], text):
        # 查詢虛擬貨幣
         msg, status = Q_VM.Virtual_Money_Read_Document(text)
+        Personal_Update_SingleTag_Query(user_id, "虛擬貨幣", status)
         if must_be_text:
             return min_reply_text(status)
         return Handle_LineBot.message_reply_Query(user_id, status, "虛擬貨幣地址", msg, text)
@@ -77,12 +79,14 @@ def handle_line_id(user_id, text, must_be_text):
                             f"其他國家請加上國碼\n"
                             f"例如香港+85261234567\n"
                             )
+                Personal_Update_SingleTag(user_id, "文字")
                 return rmessage
         elif " " in lineid:
             rmessage = (f"所輸入的「 {lineid} 」\n"
                         f"包含不正確的空白符號\n"
                         f"請重新輸入\n"
                         )
+            Personal_Update_SingleTag(user_id, "文字")
             return rmessage
         elif lineid.startswith("09") and "-" in lineid:
             phone = re.sub(r'[\s+\-]', '', lineid)
@@ -91,12 +95,14 @@ def handle_line_id(user_id, text, must_be_text):
                 text = re.sub(r'[\s+\-]', '', text)
 
         _, status = Q_LINEID.LineID_Read_Document(lineid)
+        Personal_Update_SingleTag_Query(user_id, "LINE_ID", status)
         Handle_LineBot.ID_Count("LINE")
         if must_be_text:
             return min_reply_text(status)
         return Handle_LineBot.message_reply_Query(user_id, status, "LINE ID", lineid, text)
     if match := re.search(Tools.KEYWORD_LINE_ID[3], text):
         input = match.group(1)
+        Personal_Update_SingleTag(user_id, "文字")
         return f"你所輸入的「{input}」不能查詢\n需要LINE ID才能查詢唷～"
     return None
 
@@ -104,6 +110,7 @@ def handle_line_id(user_id, text, must_be_text):
 def handle_telegram_id(user_id, text, must_be_text):
     if re.search(Tools.KEYWORD_TELEGRAM_ID[0], text.lower()):
         telegram_id, status = Q_TG.Telegram_Read_Document(text.lower())
+        Personal_Update_SingleTag_Query(user_id, "Telegram", status)
         Handle_LineBot.ID_Count("TG")
         if must_be_text:
             return min_reply_text(status)
@@ -114,6 +121,7 @@ def handle_telegram_id(user_id, text, must_be_text):
 def handle_twitter_id(user_id, text, must_be_text):
     if re.search(Tools.KEYWORD_TWITTER_ID[0], text):
         twitter_id, status = Q_TR.Twitter_Read_Document(text)
+        Personal_Update_SingleTag_Query(user_id, "Twitter", status)
         Handle_LineBot.ID_Count("推特")
         if must_be_text:
             return min_reply_text(status)
@@ -124,6 +132,7 @@ def handle_twitter_id(user_id, text, must_be_text):
 def handle_wechat_id(user_id, text, must_be_text):
     if re.search(Tools.KEYWORD_WECHAT[0], text):
         wechat, status = Q_WC.Wechat_Read_Document(text)
+        Personal_Update_SingleTag_Query(user_id, "Wechat", status)
         Handle_LineBot.ID_Count("微信")
         if must_be_text:
             return min_reply_text(status)
@@ -134,6 +143,7 @@ def handle_wechat_id(user_id, text, must_be_text):
 def handle_ig_id(user_id, text, must_be_text):
     if re.search(Tools.KEYWORD_IG_ID[0], text.lower()):
         ig, status = Q_IG.IG_Read_Document(text.lower())
+        Personal_Update_SingleTag_Query(user_id, "Instagram", status)
         Handle_LineBot.ID_Count("IG")
         if must_be_text:
             return min_reply_text(status)
@@ -144,6 +154,7 @@ def handle_ig_id(user_id, text, must_be_text):
 def handle_dcard_id(user_id, text, must_be_text):
     if re.search(Tools.KEYWORD_DCARD_ID[0], text.lower()):
         dcard, status = Q_DC.Dcard_Read_Document(text.lower())
+        Personal_Update_SingleTag_Query(user_id, "Dcard", status)
         Handle_LineBot.ID_Count("DCARD")
         if must_be_text:
             return min_reply_text(status)
@@ -151,8 +162,9 @@ def handle_dcard_id(user_id, text, must_be_text):
     return None
 
 
-def handle_ask(_, text, must_be_text):
+def handle_ask(user_id, text, _):
     if re.match(r"^@?[0-9A-Za-z_\-+]+$", text):
+        Personal_Update_SingleTag(user_id, "文字")
         return Handle_LineBot.message_reply_Query_ID_Type(text)
     return None
 
@@ -160,17 +172,19 @@ def handle_ask(_, text, must_be_text):
 def handle_mail(user_id, text, must_be_text):
     if re.match(Tools.KEYWORD_MAIL[0], text.lower()):
         mail, status = Q_MAIL.Mail_Read_Document(text)
+        Personal_Update_SingleTag_Query(user_id, "Mail", status)
         if must_be_text:
             return min_reply_text(status)
         return Handle_LineBot.message_reply_Query(user_id, status, "E-mail", mail, text)
     return None
 
 
-def handle_stupid(_, text, must_be_text):
+def handle_stupid(user_id, text, _):
     if not text.lower().startswith("http") and not Tools.has_non_alphanumeric(text.lower()):
         subdomain, domain, suffix = Tools.domain_analysis(text)
         # logger.info(f"{subdomain}, {domain}, {suffix}")
         if subdomain or suffix:
+            Personal_Update_SingleTag(user_id, "文字")
             return f"若輸入的是網址\n\n在 {text} 前面\n\n加上「 http:// 」或「 https:// 」"
     return None
 
@@ -180,9 +194,11 @@ def handle_line_web(_, user_id, text, must_be_text):
         invite_code, status = Q_LINEWEB.lineinvite_Read_Document(text)
 
         if status == -1:  # 若查詢失敗就繼續go到最後，直接查網址
+            Personal_Update_SingleTag(user_id, "文字")
             return "LINE網址查詢失敗\n僅接受帳號主頁的網址\n感恩"
         else:
             if must_be_text:
+                Personal_Update_SingleTag_Query(user_id, "LINE_INVITE", status)
                 return min_reply_text(status)
             return Handle_LineBot.message_reply_Query(user_id, status, "LINE邀請網址", invite_code, text)
     return None
@@ -198,6 +214,7 @@ def handle_fb_web(prefix_msg, user_id, text, must_be_text):
             prefix_msg = f"分析出"
 
         if status == -1:
+            Personal_Update_SingleTag(user_id, "文字")
             return (f"「 {text} 」\n"
                     f"FB網址找不到真實ID\n"
                     f"麻煩找到該貼文的\n"
@@ -205,6 +222,7 @@ def handle_fb_web(prefix_msg, user_id, text, must_be_text):
                     f"才能夠判別\n"
                     f"感恩")
         else:
+            Personal_Update_SingleTag_Query(user_id, "Facebook", status)
             if must_be_text:
                 return min_reply_text(status)
             return Handle_LineBot.message_reply_Query(user_id, status, "FB", account, text)
@@ -220,11 +238,13 @@ def handle_ig_web(prefix_msg, user_id, text, must_be_text):
             prefix_msg = f"所輸入的"
 
         if status == -1:
+            Personal_Update_SingleTag(user_id, "文字")
             return (f"{prefix_msg}\n"
                     f"請複製該IG主頁網址\n"
                     f"才能進一步查詢ID\n"
                     f"感恩")
         else:
+            Personal_Update_SingleTag_Query(user_id, "Instagram", status)
             if must_be_text:
                 return min_reply_text(status)
             return Handle_LineBot.message_reply_Query(user_id, status, "IG", account, text)
@@ -239,6 +259,7 @@ def handle_telegram_web(_, user_id, text, must_be_text):
                     f"有誤、網址失效或不支援\n"
                     f"感恩")
         else:
+            Personal_Update_SingleTag_Query(user_id, "Telegram", status)
             if must_be_text:
                 return min_reply_text(status)
             return Handle_LineBot.message_reply_Query(user_id, status, "Telegram ID", telegram_id, text.lower())
@@ -254,10 +275,12 @@ def handle_twitter_web(prefix_msg, user_id, text, must_be_text):
             prefix_msg = f"所輸入的"
 
         if status == -1:
+            Personal_Update_SingleTag(user_id, "文字")
             return (f"{prefix_msg}\n"
                     f"Twitter網址有誤、網址失效或不支援\n"
                     f"感恩")
         else:
+            Personal_Update_SingleTag_Query(user_id, "Twitter", status)
             if must_be_text:
                 return min_reply_text(status)
             return Handle_LineBot.message_reply_Query(user_id, status, "Twitter", twitter_id, text)
@@ -275,10 +298,12 @@ def handle_whatsapp_web(prefix_msg, user_id, text, must_be_text):
             prefix_msg = f"所輸入的"
 
         if status == -1:
+            Personal_Update_SingleTag(user_id, "文字")
             return (f"{prefix_msg}\n"
                     f"WhatsApp網址有誤、網址失效或不支援\n"
                     f"感恩")
         else:
+            Personal_Update_SingleTag_Query(user_id, "WhatsApp", status)
             if must_be_text:
                 return min_reply_text(status)
             return Handle_LineBot.message_reply_Query(user_id, status, "WhatsApp", whatsapp_id, text)
@@ -294,10 +319,12 @@ def handle_tiktok_web(prefix_msg, user_id, text, must_be_text):
             prefix_msg = f"所輸入的"
 
         if status == -1:
+            Personal_Update_SingleTag(user_id, "文字")
             return (f"{prefix_msg}\n"
                     f"Tiktok網址有誤、網址失效或不支援\n"
                     f"感恩")
         else:
+            Personal_Update_SingleTag_Query(user_id, "WhatsApp", status)
             if must_be_text:
                 return min_reply_text(status)
             return Handle_LineBot.message_reply_Query(user_id, status, "Tiktok", account, text)
@@ -313,10 +340,12 @@ def handle_smallredbook_web(prefix_msg, user_id, text, must_be_text):
             prefix_msg = f"所輸入的"
 
         if status == -1:
+            Personal_Update_SingleTag(user_id, "文字")
             return (f"{prefix_msg}\n"
                     f"小紅書網址有誤、網址失效或不支援\n"
                     f"感恩")
         else:
+            Personal_Update_SingleTag_Query(user_id, "小紅書", status)
             if must_be_text:
                 return min_reply_text(status)
             return Handle_LineBot.message_reply_Query(user_id, status, "小紅書", account, text)
@@ -333,10 +362,12 @@ def handle_dcard_web(prefix_msg, user_id, text, must_be_text):
             prefix_msg = f"所輸入的"
 
         if status == -1:
+            Personal_Update_SingleTag(user_id, "文字")
             return (f"{prefix_msg}\n"
                     f"Dcard網址有誤、網址失效或不支援\n"
                     f"感恩")
         else:
+            Personal_Update_SingleTag_Query(user_id, "Dcard", status)
             if must_be_text:
                 return min_reply_text(status)
             return Handle_LineBot.message_reply_Query(user_id, status, "Dcard", dcard, text.lower())
@@ -345,12 +376,15 @@ def handle_dcard_web(prefix_msg, user_id, text, must_be_text):
 
 def handle_web(prefix_msg, user_id, text, must_be_text):
     if re.match(Tools.KEYWORD_URL[5], text.lower()):
+        Personal_Update_SingleTag(user_id, "文字")
         logger.info(f"AppStore的App網址")
         return None
     if re.match(Tools.KEYWORD_URL[2], text.lower()):
         if not prefix_msg:
             prefix_msg = "所輸入的"
         IsScam, Text, domain_name = Q_URL.user_query_website(prefix_msg, text)
+
+        Personal_Update_SingleTag_Query(user_id, "URL", IsScam)
         Length = len(Text)
         logger.info(f"Text Length = {str(Length)}")
         if Length > 240 or must_be_text:
@@ -363,6 +397,7 @@ def handle_web(prefix_msg, user_id, text, must_be_text):
 def handle_error(prefix_msg, user_id, text, must_be_text):
     if match := re.match(Tools.KEYWORD_URL[4], text):
         url = match.group(1)
+        Personal_Update_SingleTag(user_id, "文字")
         return f"若是想輸入「 {url} 」\n，請直接輸入即可"
     return None
 
@@ -393,6 +428,7 @@ def handle_user_msg(user_id, orgin_text, must_be_text=False):
         logger.info(f"社群轉貼")
 
     if orgin_text.lower().startswith("http") and not orgin_text.lower().startswith("http://") and not orgin_text.lower().startswith("https://"):
+        Personal_Update_SingleTag(user_id, "文字")
         return "網址開頭有誤\n請重新輸入正確網址"
 
     prefix_msg = ""
@@ -407,6 +443,7 @@ def handle_user_msg(user_id, orgin_text, must_be_text=False):
         pass
     # 失效或有誤，回應錯誤
     else:
+        Personal_Update_SingleTag(user_id, "文字")
         return prefix_msg
 
     Web_handlers = [

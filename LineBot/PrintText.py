@@ -21,31 +21,28 @@ THE SOFTWARE.
 '''
 
 import Tools
+from Personal_Rec import Personal_Clear_SingleTag, Personal_Read_Document, Personal_Update_SingleTag
 
-Notice_Board_List = []
 notice_text = ""
 
 
-def reload_user_record():
-    global Notice_Board_List
-    Notice_Board_List = []
-    Notice_Board_List = Tools.read_file_to_list(Tools.NOTICE_BOARD_LIST)
+def clear_user_record():
+    Personal_Clear_SingleTag("佈告欄", False)
     return
 
 
 def check_user_need_news(user_id) -> bool:
-    global Notice_Board_List
 
     # 如果沒有要公佈，不需要檢查後續
     if Tools.is_file_len(Tools.NOTICE_BOARD) == 0:
         return False
 
     # 如果已經發過公布，就會在紀錄上
-    if user_id in Notice_Board_List:
+    if Personal_Read_Document(user_id, "佈告欄"):
         return False
 
-    Notice_Board_List.append(user_id)
-    Tools.write_list_to_file(Tools.NOTICE_BOARD_LIST, Notice_Board_List)
+    Personal_Update_SingleTag(user_id, "佈告欄", Value=True)
+
     return True
 
 
@@ -57,4 +54,3 @@ def reload_notice_board():
 
 
 reload_notice_board()
-reload_user_record()

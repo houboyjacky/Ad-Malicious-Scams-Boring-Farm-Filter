@@ -118,6 +118,7 @@ def Write_Document_Account(collection, struct, DB_Name):
 
 
 def Update_Document(collection, struct, tagname):
+
     filter = {tagname: struct[tagname]}
     update = {"$set": struct}
     result = MongoDB.Update_db(collection, filter, update)

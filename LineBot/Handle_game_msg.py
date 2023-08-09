@@ -26,7 +26,6 @@ import re
 
 # My Python Package
 from Logger import logger
-from Point import read_user_point, get_user_rank, write_user_point
 from Security_ShortUrl import CreateShortUrl, GetInfShortUrl
 import Handle_LineBot
 import Query_Facebook as Q_FB
@@ -37,6 +36,7 @@ import Query_SmallRedBook as Q_SRB
 import Query_Tiktok as Q_TT
 import Query_Twitter as Q_TR
 import Tools
+from Personal_Rec import Personal_Update_SingleTag, Personal_Read_Document, Personal_User_Rank
 
 FB_list_len = 0
 IG_list_len = 0
@@ -115,6 +115,7 @@ def handle_game_msg(user_id, user_text):
     if user_text.startswith("詐騙回報"):
         if user_text == "詐騙回報":
             rmessage = Handle_LineBot.message_reply_After_Report(True)
+            Personal_Update_SingleTag(user_id, "文字")
         else:
             user_name = Handle_LineBot.linebot_getRealName(user_id)
             if Q_RPT.Report_Write_Document(user_id, user_name, user_text, False):
@@ -124,8 +125,10 @@ def handle_game_msg(user_id, user_text):
                 msg = f"「{user_name}」你好🤝\n你的詐騙回報已收到💁‍♀️\n🙅‍♂️請勿重複回報！\n小編一人作業\n請勿造成作業困擾🙇\n還請擔待"
                 rmessage = Handle_LineBot.message_reply_confirm(
                     button1, button2, msg, func_name)
+                Personal_Update_SingleTag(user_id, "文字")
             else:
                 rmessage = Handle_LineBot.message_reply_After_Report(False)
+                Personal_Update_SingleTag(user_id, "詐騙回報")
         return rmessage
 
     if user_text == "遊戲":
@@ -139,19 +142,22 @@ def handle_game_msg(user_id, user_text):
                 button1, button2, msg, func_name)
         else:
             rmessage = Handle_LineBot.message_reply_Game_Start(site)
+        Personal_Update_SingleTag(user_id, "文字")
         return rmessage
 
     if user_text == "完成":
         found = push_random_blacklist(user_id, True, False)
         found2 = Q_RPT.Report_Finish_Document(user_id, True, False)
         if found and not found2:
-            write_user_point(user_id, 1)
             rmessage = Handle_LineBot.message_reply_Game_End("遊戲")
+            Personal_Update_SingleTag(user_id, "遊戲次數")
         elif not found and found2:
-            write_user_point(user_id, 1)
             rmessage = Handle_LineBot.message_reply_Game_End("檢閱")
+            Personal_Update_SingleTag(user_id, "詐騙回報", SUB_TAGNAME="管理次數")
         elif found and found2:
             rmessage = Handle_LineBot.message_reply_Game_End("遊戲/檢閱")
+            Personal_Update_SingleTag(user_id, "遊戲次數")
+            Personal_Update_SingleTag(user_id, "詐騙回報")
         else:
             rmessage = "已完成回報作業"
         return rmessage
@@ -160,22 +166,27 @@ def handle_game_msg(user_id, user_text):
         found = push_random_blacklist(user_id, False, True)
         found2 = Q_RPT.Report_Finish_Document(user_id, False, True)
         if found and not found2:
-            write_user_point(user_id, 1)
             rmessage = Handle_LineBot.message_reply_Game_End("遊戲")
+            Personal_Update_SingleTag(user_id, "遊戲次數")
         elif not found and found2:
-            write_user_point(user_id, 1)
             rmessage = Handle_LineBot.message_reply_Game_End("檢閱")
+            Personal_Update_SingleTag(user_id, "詐騙回報", SUB_TAGNAME="管理次數")
         elif found and found2:
             rmessage = Handle_LineBot.message_reply_Game_End("遊戲/檢閱")
+            Personal_Update_SingleTag(user_id, "遊戲次數")
+            Personal_Update_SingleTag(user_id, "詐騙回報")
         else:
             rmessage = "已完成回報作業"
+            Personal_Update_SingleTag(user_id, "文字")
         return rmessage
 
     if user_text == "積分":
-        point = read_user_point(user_id)
-        rank = get_user_rank(user_id)
+        point = Personal_Read_Document(user_id, "積分")
+        rank = Personal_User_Rank(user_id)
 
         rmessage = f"你的檢舉積分是{str(point)}分\n排名第{str(rank)}名"
+
+        Personal_Update_SingleTag(user_id, "文字")
         return rmessage
 
     if user_text.startswith("縮縮"):
@@ -185,10 +196,14 @@ def handle_game_msg(user_id, user_text):
             rmessage = f"縮網址成功\n網址為「 {Tools.S_URL}/{s_url} 」\n"
         else:
             rmessage = f"輸入網址有誤"
+
+        Personal_Update_SingleTag(user_id, "文字")
         return rmessage
 
     if user_text.startswith("看縮縮"):
         rmessage = GetInfShortUrl(user_id)
+
+        Personal_Update_SingleTag(user_id, "文字")
         return rmessage
 
     return None

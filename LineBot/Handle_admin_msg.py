@@ -29,7 +29,7 @@ from concurrent.futures import ThreadPoolExecutor
 # My Python Package
 from Handle_user_msg import handle_user_msg
 from Logger import logger
-from PrintText import reload_notice_board
+from PrintText import reload_notice_board, clear_user_record
 import Handle_LineBot
 import Query_Dcard as Q_DC
 import Query_Facebook as Q_FB
@@ -50,15 +50,18 @@ import Query_Wechat as Q_WC
 import Query_WhatsApp as Q_WA
 import Tools
 import Update_BlackList as BLACK
+from Personal_Rec import Personal_Update_SingleTag
 
 
 def process_file(file_path):
     Query_Image.Add_Image_Sample(file_path)
 
-def handle_Delete_Report(text):
+
+def handle_Delete_Report(user_id, text):
     # 刪除詐騙回報
     if text.startswith("刪除詐騙回報"):
-        text = text.replace("刪除","")
+        text = text.replace("刪除", "")
+        Personal_Update_SingleTag(user_id, "詐騙回報", SUB_TAGNAME="管理次數")
         if Q_RPT.Report_Cancel_Document(text):
             return "「已找到」相同詐騙回報\n成功刪除"
         else:
@@ -66,54 +69,67 @@ def handle_Delete_Report(text):
     return None
 
 
-def handle_virtual_money(text):
+def handle_virtual_money(user_id, text):
     # 虛擬貨幣
     if re.match(Tools.KEYWORD_VIRTUAL_MONEY[1], text):
         # 加入 虛擬貨幣
+        Personal_Update_SingleTag(user_id, "虛擬貨幣", SUB_TAGNAME="管理次數")
         return Q_VM.Virtual_Money_Write_Document(text)
     if re.match(Tools.KEYWORD_VIRTUAL_MONEY[2], text):
         # 刪除 虛擬貨幣
+        Personal_Update_SingleTag(user_id, "虛擬貨幣", SUB_TAGNAME="管理次數")
         return Q_VM.Virtual_Money_Delete_Document(text)
     return None
 
-def handle_line_id(text):
+
+def handle_line_id(user_id, text):
     match = re.search(Tools.KEYWORD_LINE_ID[0], text.lower())
     if match:
         line_id = match.group(1)
+        Personal_Update_SingleTag(user_id, "LINE_ID", SUB_TAGNAME="管理次數")
         return Q_LINEID.LineID_Write_Document(line_id)
     match = re.search(Tools.KEYWORD_LINE_ID[1], text.lower())
     if match:
         line_id = match.group(1)
+        Personal_Update_SingleTag(user_id, "LINE_ID", SUB_TAGNAME="管理次數")
         return Q_LINEID.LineID_Delete_Document(line_id)
     return None
 
-def handle_line_web(text):
+
+def handle_line_web(user_id, text):
     match = re.search(Tools.KEYWORD_LINE_INVITE[0], text.lower())
     if match:
         line_id = match.group(1)
+        Personal_Update_SingleTag(user_id, "LINE_INVITE", SUB_TAGNAME="管理次數")
         return Q_LINEWEB.lineinvite_Write_Document(text)
     match = re.search(Tools.KEYWORD_LINE_INVITE[1], text.lower())
     if match:
         line_id = match.group(1)
+        Personal_Update_SingleTag(user_id, "LINE_INVITE", SUB_TAGNAME="管理次數")
         return Q_LINEWEB.lineinvite_Write_Document(text)
     return None
 
-def handle_ig_web(text):
+
+def handle_ig_web(user_id, text):
     if re.search(Tools.KEYWORD_IG_URL[1], text.lower()):
         # 加入 IG 網址
+        Personal_Update_SingleTag(user_id, "Instagram", SUB_TAGNAME="管理次數")
         return Q_IG.IG_Write_Document(text)
     if re.search(Tools.KEYWORD_IG_URL[3], text.lower()):
         # 刪除 IG 網址
+        Personal_Update_SingleTag(user_id, "Instagram", SUB_TAGNAME="管理次數")
         return Q_IG.IG_Delete_Document(text)
     return None
 
-def handle_ig_id(text):
+
+def handle_ig_id(user_id, text):
     if match := re.search(Tools.KEYWORD_IG_ID[1], text):
         # 加入 IG ID
         ig_account = match.group(1).lower()
         logger.info(f"ig_account = {ig_account}")
         url = f"https://www.instagram.com/{ig_account}/"
         logger.info(f"url = {url}")
+        Personal_Update_SingleTag(user_id, "Instagram", SUB_TAGNAME="管理次數")
         return Q_IG.IG_Write_Document(url)
     if match := re.search(Tools.KEYWORD_IG_ID[2], text):
         # 刪除 IG ID
@@ -121,139 +137,182 @@ def handle_ig_id(text):
         logger.info(f"ig_account = {ig_account}")
         url = f"https://www.instagram.com/{ig_account}/"
         logger.info(f"url = {url}")
+        Personal_Update_SingleTag(user_id, "Instagram", SUB_TAGNAME="管理次數")
         return Q_IG.IG_Delete_Document(url)
     return None
 
-def handle_fb(text):
+
+def handle_fb(user_id, text):
     if re.search(Tools.KEYWORD_FB[3], text.lower()):
         # 加入 FB
+        Personal_Update_SingleTag(user_id, "Facebook", SUB_TAGNAME="管理次數")
         return Q_FB.FB_Write_Document(text)
     if re.search(Tools.KEYWORD_FB[5], text.lower()):
         # 刪除 FB
+        Personal_Update_SingleTag(user_id, "Facebook", SUB_TAGNAME="管理次數")
         return Q_FB.FB_Delete_Document(text)
     return None
 
-def handle_dcard_web(text):
+
+def handle_dcard_web(user_id, text):
     if re.search(Tools.KEYWORD_DCARD_URL[1], text.lower()):
         # 加入 Dcard 網址
+        Personal_Update_SingleTag(user_id, "Dcard", SUB_TAGNAME="管理次數")
         return Q_DC.Dcard_Write_Document(text)
     if re.search(Tools.KEYWORD_DCARD_URL[2], text.lower()):
         # 刪除 Dcard 網址
+        Personal_Update_SingleTag(user_id, "Dcard", SUB_TAGNAME="管理次數")
         return Q_DC.Dcard_Delete_Document(text)
     return None
 
-def handle_dcard_id(text):
+
+def handle_dcard_id(user_id, text):
     if re.search(Tools.KEYWORD_DCARD_ID[1], text.lower()):
         # 加入 Dcard ID
+        Personal_Update_SingleTag(user_id, "Dcard", SUB_TAGNAME="管理次數")
         return Q_DC.Dcard_Write_Document(text.lower())
     if re.search(Tools.KEYWORD_DCARD_ID[2], text.lower()):
         # 刪除 Dcard ID
+        Personal_Update_SingleTag(user_id, "Dcard", SUB_TAGNAME="管理次數")
         return Q_DC.Dcard_Delete_Document(text.lower())
     return None
 
-def handle_telegram_id(text):
+
+def handle_telegram_id(user_id, text):
     if match := re.search(Tools.KEYWORD_TELEGRAM_ID[1], text):
         # 加入 Telegram ID
         telegram_id = match.group(1)
         url = f"https://t.me/{telegram_id}"
+        Personal_Update_SingleTag(user_id, "Telegram", SUB_TAGNAME="管理次數")
         return Q_TG.Telegram_Write_Document(url)
     if match := re.search(Tools.KEYWORD_TELEGRAM_ID[2], text):
         # 刪除 Telegram ID
         telegram_id = match.group(1)
         url = f"https://t.me/{telegram_id}"
+        Personal_Update_SingleTag(user_id, "Telegram", SUB_TAGNAME="管理次數")
         return Q_TG.Telegram_Delete_Document(url)
     return None
 
-def handle_telegram_web(text):
+
+def handle_telegram_web(user_id, text):
     if re.search(Tools.KEYWORD_TELEGRAM_URL[1], text):
         # 加入 Telegram 網址
+        Personal_Update_SingleTag(user_id, "Telegram", SUB_TAGNAME="管理次數")
         return Q_TG.Telegram_Write_Document(text)
     if re.search(Tools.KEYWORD_TELEGRAM_URL[2], text):
         # 刪除 Telegram 網址
+        Personal_Update_SingleTag(user_id, "Telegram", SUB_TAGNAME="管理次數")
         return Q_TG.Telegram_Delete_Document(text)
     return None
 
-def handle_wechat(text):
+
+def handle_wechat(user_id, text):
     if re.search(Tools.KEYWORD_WECHAT[1], text):
         # 加入 Wechat ID
+        Personal_Update_SingleTag(user_id, "Wechat", SUB_TAGNAME="管理次數")
         return Q_WC.Wechat_Write_Document(text)
     if re.search(Tools.KEYWORD_WECHAT[2], text):
         # 刪除 Wechat ID
+        Personal_Update_SingleTag(user_id, "Wechat", SUB_TAGNAME="管理次數")
         return Q_WC.Wechat_Delete_Document(text)
     return None
 
-def handle_twitter_id(text):
+
+def handle_twitter_id(user_id, text):
     if match := re.search(Tools.KEYWORD_TWITTER_ID[1], text.lower()):
         # 加入Twitter ID
         twitter_id = match.group(1)
         url = f"https://twitter.com/{twitter_id}"
+        Personal_Update_SingleTag(user_id, "Twitter", SUB_TAGNAME="管理次數")
         return Q_TR.Twitter_Write_Document(url)
     if match := re.search(Tools.KEYWORD_TWITTER_ID[2], text.lower()):
         # 刪除Twitter ID
         twitter_id = match.group(1)
         url = f"https://twitter.com/{twitter_id}"
+        Personal_Update_SingleTag(user_id, "Twitter", SUB_TAGNAME="管理次數")
         return Q_TR.Twitter_Delete_Document(url)
     return None
 
-def handle_twitter_web(text):
+
+def handle_twitter_web(user_id, text):
     if re.search(Tools.KEYWORD_TWITTER_URL[0], text.lower()):
         # 加入Twitter 網址
+        Personal_Update_SingleTag(user_id, "Twitter", SUB_TAGNAME="管理次數")
         return Q_TR.Twitter_Write_Document(text)
     if re.search(Tools.KEYWORD_TWITTER_URL[1], text.lower()):
         # 刪除Twitter 網址
+        Personal_Update_SingleTag(user_id, "Twitter", SUB_TAGNAME="管理次數")
         return Q_TR.Twitter_Delete_Document(text)
     return None
 
-def handle_mail(text):
+
+def handle_mail(user_id, text):
     if re.match(Tools.KEYWORD_MAIL[1], text.lower()):
         # 加入 Mail
+        Personal_Update_SingleTag(user_id, "Mail", SUB_TAGNAME="管理次數")
         return Q_MAIL.Mail_Write_Document(text.lower())
     if re.match(Tools.KEYWORD_MAIL[2], text.lower()):
         # 刪除 Mail
+        Personal_Update_SingleTag(user_id, "Mail", SUB_TAGNAME="管理次數")
         return Q_MAIL.Mail_Delete_Document(text.lower())
     return None
 
-def handle_whatsapp(text):
-    if re.search(Tools.KEYWORD_WHATSAPP[1], text) :
+
+def handle_whatsapp(user_id, text):
+    if re.search(Tools.KEYWORD_WHATSAPP[1], text):
         # 加入WhatsApp
+        Personal_Update_SingleTag(user_id, "WhatsApp", SUB_TAGNAME="管理次數")
         return Q_WA.WhatsApp_Write_Document(text)
     if re.search(Tools.KEYWORD_WHATSAPP[3], text):
         # 加入WhatsApp
+        Personal_Update_SingleTag(user_id, "WhatsApp", SUB_TAGNAME="管理次數")
         return Q_WA.WhatsApp_Write_Document(text)
     if re.search(Tools.KEYWORD_WHATSAPP[7], text):
         # 加入WhatsApp
+        Personal_Update_SingleTag(user_id, "WhatsApp", SUB_TAGNAME="管理次數")
         return Q_WA.WhatsApp_Write_Document(text)
     if re.search(Tools.KEYWORD_WHATSAPP[4], text):
         # 刪除WhatsApp
+        Personal_Update_SingleTag(user_id, "WhatsApp", SUB_TAGNAME="管理次數")
         return Q_WA.WhatsApp_Delete_Document(text)
     if re.search(Tools.KEYWORD_WHATSAPP[5], text):
         # 刪除WhatsApp
+        Personal_Update_SingleTag(user_id, "WhatsApp", SUB_TAGNAME="管理次數")
         return Q_WA.WhatsApp_Delete_Document(text)
     if re.search(Tools.KEYWORD_WHATSAPP[8], text):
         # 刪除WhatsApp
+        Personal_Update_SingleTag(user_id, "WhatsApp", SUB_TAGNAME="管理次數")
         return Q_WA.WhatsApp_Delete_Document(text)
     return None
 
-def handle_tiktok(text):
+
+def handle_tiktok(user_id, text):
     if re.search(Tools.KEYWORD_TIKTOK[1], text):
         # 加入Tiktok
+        Personal_Update_SingleTag(user_id, "Tiktok", SUB_TAGNAME="管理次數")
         return Q_TT.Tiktok_Write_Document(text)
     if re.search(Tools.KEYWORD_TIKTOK[2], text):
         # 刪除Tiktok
+        Personal_Update_SingleTag(user_id, "Tiktok", SUB_TAGNAME="管理次數")
         return Q_TT.Tiktok_Delete_Document(text)
     return None
 
-def handle_smallredbook(text):
+
+def handle_smallredbook(user_id, text):
     if re.search(Tools.KEYWORD_SMALLREDBOOK[1], text):
         # 加入小紅書
+        Personal_Update_SingleTag(user_id, "小紅書", SUB_TAGNAME="管理次數")
         return Q_SRB.SmallRedBook_Write_Document(text)
     if re.search(Tools.KEYWORD_SMALLREDBOOK[2], text):
         # 刪除小紅書
+        Personal_Update_SingleTag(user_id, "小紅書", SUB_TAGNAME="管理次數")
         return Q_SRB.SmallRedBook_Delete_Document(text)
     return None
 
-def handle_website(text):
+
+def handle_website(user_id, text):
     if match := re.search(Tools.KEYWORD_URL[0], text.lower()):
+        Personal_Update_SingleTag(user_id, "URL", SUB_TAGNAME="管理次數")
         # 直接使用IP連線
         if ipmatch := re.search(Tools.KEYWORD_URL[3], text.lower()):
             domain_name = ipmatch.group(1)
@@ -284,18 +343,22 @@ def handle_website(text):
             rmessage = f"網址黑名單成功加入網址\n「 {domain_name} 」"
         return rmessage
     if match := re.search(Tools.KEYWORD_URL[1], text):
+        Personal_Update_SingleTag(user_id, "URL", SUB_TAGNAME="管理次數")
         # 取得文字
         get_text = match.group(1)
         BLACK.update_part_blacklist_comment(get_text)
         return f"網址黑名單成功加入註解「 {get_text} 」"
     return None
 
-def handle_error(text):
+
+def handle_error(user_id, text):
     if text.startswith("加入") or text.startswith("刪除"):
+        Personal_Update_SingleTag(user_id, "文字")
         return f"管理員指令參數有誤，請重新確認"
     return None
 
-def handle_admin_msg_sub(orgin_text, using_template = False):
+
+def handle_admin_msg_sub(user_id, orgin_text, using_template=False):
 
     handlers = [
         handle_Delete_Report,
@@ -321,7 +384,7 @@ def handle_admin_msg_sub(orgin_text, using_template = False):
     ]
 
     for handler in handlers:
-        rmessage = handler(orgin_text)
+        rmessage = handler(user_id, orgin_text)
         if rmessage:
             break
 
@@ -330,12 +393,14 @@ def handle_admin_msg_sub(orgin_text, using_template = False):
 
     return rmessage
 
+
 def handle_admin_msg(user_id, orgin_text):
     rmessage = ''
 
     if orgin_text == "重讀":
         Tools.reloadSetting()
         reload_notice_board()
+        clear_user_record()
         BLACK.update_local_Blacklist()
         logger.info("Reload setting.json")
         rmessage = "設定已重新載入"
@@ -346,18 +411,20 @@ def handle_admin_msg(user_id, orgin_text):
             button2 = "管理員筆記"
             msg = f"已經完成共 {pos} 則詐騙回報💯\n\n目前已檢閱完畢✌️\n\n📸快門手感謝你的付出❤️"
             title = "檢閱完成"
-            rmessage = Handle_LineBot.message_reply_confirm(button1, button2, msg, title)
+            rmessage = Handle_LineBot.message_reply_confirm(
+                button1, button2, msg, title)
         else:
             if isSystem:
                 msg = handle_user_msg("0", content)
                 rmessage = f"{pos}\n系統轉送使用者查詢：\n{content}\n=====\n自動查詢:\n\n{msg}\n\n=====\n參閱與處置後\n請輸入「完成」或「失效」"
             else:
                 button1 = "一鍵查詢"
-                query_text = content.replace("詐騙回報","")
+                query_text = content.replace("詐騙回報", "")
                 button2 = "管理員筆記"
                 msg = f"{pos}\n⚠️使用者詐騙回報內容：\n\n{content}\n\n📖一鍵查詢後\n請輸入「完成」或「失效」"
                 title = "檢閱"
-                rmessage = Handle_LineBot.message_reply_confirm(button1, button2, msg, title, button1_content = query_text)
+                rmessage = Handle_LineBot.message_reply_confirm(
+                    button1, button2, msg, title, button1_content=query_text)
 
     elif orgin_text == "關閉辨識":
         Tools.image_analysis = False
@@ -409,6 +476,7 @@ def handle_admin_msg(user_id, orgin_text):
             rmessage = f"「 {orgin_text} 」分析失敗"
 
     if rmessage:
+        Personal_Update_SingleTag(user_id, "Other", SUB_TAGNAME="管理次數")
         return rmessage
 
     # 批次加入
@@ -416,11 +484,13 @@ def handle_admin_msg(user_id, orgin_text):
         lines = orgin_text.split("\n")
         for line in lines:
             url = line.replace("批次", "").strip()
-            msg = handle_admin_msg_sub(url)
+            msg = handle_admin_msg_sub(user_id, url)
             rmessage += f"{msg}\n\n"
     elif orgin_text.startswith("刪除") and not Tools.IsOwner(user_id):
+        Personal_Update_SingleTag(user_id, "文字")
         pass
     else:  # 一般加入
-        rmessage = handle_admin_msg_sub(orgin_text, using_template=True)
+        rmessage = handle_admin_msg_sub(
+            user_id, orgin_text, using_template=True)
 
     return rmessage

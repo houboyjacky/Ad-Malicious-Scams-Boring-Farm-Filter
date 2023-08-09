@@ -33,10 +33,11 @@ from Handle_admin_msg import handle_admin_msg
 from Handle_game_msg import handle_game_msg
 from Handle_user_msg import handle_user_msg
 from Logger import logger
-from PrintText import reload_user_record
 import Handle_LineBot
 import Query_Image
 import Tools
+from Personal_Rec import Personal_Update_SingleTag
+
 
 def handle_message_text_front(user_text):
     # 前置與防呆
@@ -105,11 +106,13 @@ def handle_message_text(event):
         else:
             rmessage = f"謝謝你提供的情報\n請縮短長度或分段傳送"
         Handle_LineBot.message_reply(event, rmessage)
+        Personal_Update_SingleTag(user_id, "文字", 1)
         return
 
     # 長度控管、備用指南、電話、網站排行榜
     if rmessage := handle_message_text_front(orgin_text):
         Handle_LineBot.message_reply(event, rmessage)
+        Personal_Update_SingleTag(user_id, "文字", 1)
         return
 
     # 遊戲模式
@@ -121,13 +124,13 @@ def handle_message_text(event):
     if Tools.IsAdmin(user_id):
         if rmessage := handle_admin_msg(user_id, orgin_text):
             Handle_LineBot.message_reply(event, rmessage)
-            if orgin_text == "重讀":
-                reload_user_record()
             return
 
     # 一般操作
     if rmessage := handle_user_msg(user_id, orgin_text):
         Handle_LineBot.message_reply(event, rmessage)
+    else:
+        Personal_Update_SingleTag(user_id, "文字", 1)
 
     return
 
@@ -137,6 +140,7 @@ def handle_message_image(event):
     user_id = event.source.user_id
     logger.info(f'UserID = {user_id}')
     logger.info(f'UserMessage = image message')
+    Personal_Update_SingleTag(event.source.user_id, "非文字", 1)
 
     # 儲存照片的目錄
     IMAGE_DIR = "image/"
@@ -221,6 +225,7 @@ def handle_message_file(event):
     # 取得發訊者的 ID
     user_id = event.source.user_id
     logger.info(f'UserID = {user_id}')
+    Personal_Update_SingleTag(event.source.user_id, "非文字", 1)
 
     # 設定儲存檔案的目錄
     FILE_DIR = ""

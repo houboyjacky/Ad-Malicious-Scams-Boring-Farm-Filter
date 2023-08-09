@@ -22,11 +22,11 @@ THE SOFTWARE.
 
 from datetime import date
 from Logger import logger
-from Point import write_user_point
 import Query_API
 
 
 NAME = "詐騙回報"
+
 
 def Report_Cancel_Document(user_text):
 
@@ -82,7 +82,6 @@ def Report_Write_Document(user_id: str, user_name: str, user_text: str, is_syste
               }
 
     Query_API.Write_Document(collection, struct)
-    write_user_point(user_id, 1)
     return False
 
 
@@ -119,14 +118,13 @@ def Report_Finish_Document(user_id, success, disappear):
         return found
 
     found = True
-    document['檢查者'] = ""
+
     if success:
         document['完成'] = 1
-        write_user_point(user_id, 2)
     if disappear:
         document['失效'] = 1
-        write_user_point(user_id, 2)
+    document['檢查者'] = ""
 
-    Query_API.Update_Document(collection, document, "序號")
+    Query_API.Update_Document(collection, document, "_id")
 
     return found
