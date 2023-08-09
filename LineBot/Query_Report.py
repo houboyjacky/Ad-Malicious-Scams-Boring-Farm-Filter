@@ -95,7 +95,6 @@ def Report_Read_Document(user_id: str):
         "$and": [
             {"完成": 0,
                 "失效": 0,
-                '檢查者': ""
              }
         ]
     }
