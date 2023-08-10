@@ -307,16 +307,20 @@ def Personal_Data_Query(user_id):
     collection = Query_API.Read_Collection(DB_Name, DB_Name)
     document = Query_API.Search_Same_Document(collection, "UUID", user_id)
 
-    user_name = document["顯示名稱"][-1]
-    if not user_name:
+    if not document["顯示名稱"]:
         user_name = Handle_LineBot.linebot_getRealName(user_id)
+    else:
+        user_name = document["顯示名稱"][-1]
     point = document["積分"]
     report = document["詐騙回報"]
     game = document["遊戲次數"]
     rank = Personal_User_Rank(user_id)
     Sub = document["碰撞次數"]["Total"]
     Total = document["查詢次數"]["Total"]
-    Collision_Rates = round((Sub / Total)*100)
+
+    Collision_Rates = 0
+    if Total > 0:
+        Collision_Rates = round((Sub / Total)*100)
 
     rmessage = f"👋歡迎「{user_name}」來查詢\n\n"
 
@@ -328,7 +332,7 @@ def Personal_Data_Query(user_id):
 
     rmessage += f"📍積分「{point}分」👍\n"
     rmessage += f"📍排名第「{rank}」名🏆\n"
-    rmessage += f"📍詐騙捕捉率「{Collision_Rates}%」🎯\n"
+    rmessage += f"📍查中詐騙率「{Collision_Rates}%」🎯\n"
 
     power = document["管理次數"]["Total"]
     if Tools.IsAdmin(user_id) and power:
