@@ -160,6 +160,7 @@ def handle_game_msg(user_id, user_text):
             Personal_Update_SingleTag(user_id, "詐騙回報")
         else:
             rmessage = "已完成回報作業"
+            Personal_Update_SingleTag(user_id, "文字")
         return rmessage
 
     if user_text == "失效":
