@@ -36,7 +36,7 @@ import Query_SmallRedBook as Q_SRB
 import Query_Tiktok as Q_TT
 import Query_Twitter as Q_TR
 import Tools
-from Personal_Rec import Personal_Update_SingleTag, Personal_Read_Document, Personal_User_Rank
+from Personal_Rec import Personal_Update_SingleTag, Personal_Data_Query
 
 FB_list_len = 0
 IG_list_len = 0
@@ -182,11 +182,7 @@ def handle_game_msg(user_id, user_text):
         return rmessage
 
     if user_text == "積分":
-        point = Personal_Read_Document(user_id, "積分")
-        rank = Personal_User_Rank(user_id)
-
-        rmessage = f"你的檢舉積分是{str(point)}分\n排名第{str(rank)}名"
-
+        rmessage = Personal_Data_Query(user_id)
         Personal_Update_SingleTag(user_id, "文字")
         return rmessage
 
