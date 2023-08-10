@@ -27,15 +27,6 @@ import Handle_LineBot
 
 DB_Name = "PERSONAL"
 
-def read_user_point(user_id):
-    collection = Query_API.Read_Collection("UserPoint", "UserPoint")
-    Document = Query_API.Search_Same_Document(collection, "帳號", user_id)
-    if Document:
-        point = Document['分數']
-        Query_API.Delete_document(collection, Document, "_id")
-        return point
-    else:
-        return 0
 
 def Personal_Create_Document(user_id):
     global DB_Name
@@ -44,7 +35,7 @@ def Personal_Create_Document(user_id):
 
     display_name = Handle_LineBot.linebot_getRealName(user_id)
     DateTime = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    point = read_user_point(user_id)
+    point = 0
     user_data = {
         "UUID": user_id,
         "顯示名稱": [
@@ -119,7 +110,7 @@ def Personal_Create_Document(user_id):
 
 def Personal_Update_Document(user_id, struct):
     global DB_Name
-    #logger.info("Personal_Update_Document")
+    # logger.info("Personal_Update_Document")
     collection = Query_API.Read_Collection(DB_Name, DB_Name)
 
     document = Query_API.Search_Same_Document(collection, "UUID", user_id)
@@ -208,7 +199,7 @@ def Personal_Update_Document(user_id, struct):
     #     }
     #  }
 
-    Query_API.Update_Document(collection, document, "UUID")
+    Query_API.Update_Document(collection, document, "_id")
     return
 
 
@@ -291,6 +282,7 @@ def Personal_User_Rank(user_id):
 
     # 回傳排名
     return rank
+
 
 def Personal_Clear_SingleTag(TAGNAME, Value):
     global DB_Name
