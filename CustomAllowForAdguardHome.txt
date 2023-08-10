@@ -104,3 +104,5 @@
 @@||hfm.com^
 @@||trustwallet.com^
 @@||newbang.co^
+@@||donebydeer.com^
+@@||toyou.tw^

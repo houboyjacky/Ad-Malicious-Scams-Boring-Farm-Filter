@@ -22,7 +22,7 @@ _yuyu0910
 _zhu.0522
 _zn.153
 -zyx0516
-! 更新時間 2023/08/08
+! 更新時間 2023/08/10
 ! 網址來源 https://165.npa.gov.tw/#/lineid
 ! 網址來源 https://data.gov.tw/dataset/78432
 ._.chen
@@ -51,6 +51,7 @@ _zn.153
 @068cdtle
 @070ldgim
 @070limjd
+@073eluqa
 @073givwa
 @074rlzzj
 @075twjkf
@@ -73,6 +74,7 @@ _zn.153
 @106nvsyx
 @108hctkq
 @113aolok
+@1210xuhaiwen
 @121tzmxs
 @123jnyhq
 @124kbpoe
@@ -192,6 +194,7 @@ _zn.153
 @363wrjge
 @366himji
 @367jddfx
+@368ghutx
 @378raski
 @381xuhqa
 @383bqhfx
@@ -495,6 +498,7 @@ _zn.153
 @nzo4496b
 @paul530money
 @potn01
+@potn02
 @ps1688
 @qia5039p
 @qkz9178i
@@ -760,6 +764,7 @@ _zn.153
 0985623918
 0986496030
 0986775817
+0986979166
 0987527458
 0987652270
 0987734068
@@ -1644,6 +1649,7 @@ _zn.153
 713jlczj
 71481466
 71481471
+715298372
 718718h
 7188818
 71jy
@@ -1718,6 +1724,7 @@ _zn.153
 788987
 788cuvlj
 788finance
+788ichi
 78900hua
 7894307
 789521301
@@ -2719,6 +2726,7 @@ abbott0212
 abby_02_14_
 abby_0707
 abby_7321
+abby._.1010
 abby58666130
 abby640725
 abby8008
@@ -2998,6 +3006,7 @@ allan_peace
 allan87
 alle19820402
 alle218
+allen_ai
 allen-80620
 allen1066
 allen19841025
@@ -3178,6 +3187,7 @@ anna450155
 anna5133
 anna850520
 anna867
+anna8707070
 anna871018
 anna8736
 anna92108
@@ -3308,6 +3318,7 @@ as33099
 as35678
 as51099
 as567891
+as619619
 as63325410
 as675280795
 as678679
@@ -3615,6 +3626,7 @@ bbyy6
 bbyy668
 bbzja1314
 bc13689
+bc19980620
 bc536
 bc6599
 bc678
@@ -4142,6 +4154,7 @@ cc.773
 cc.850324
 cc.987987
 cc0021
+cc008866
 cc010303
 cc07_03
 cc101895
@@ -4791,6 +4804,7 @@ cln5690
 clo810106
 cloud0888
 clr860816
+cls19920919
 clt8137
 clx112233
 cly0628
@@ -4806,6 +4820,7 @@ cm550
 cm8521
 cm891010
 cm8976
+cm9668
 cm980318
 cm99999m
 cme90901
@@ -4988,6 +5003,7 @@ css778899
 css825
 css858660
 cssca
+cst098
 csx1686
 csx67890
 csy0616
@@ -5008,6 +5024,7 @@ ct851
 ct9980
 ctac01
 ctie0217
+cting840827
 ctr72
 ctrl886
 ctt5200
@@ -5315,6 +5332,7 @@ daien__
 daijun0715
 daijun8688
 daisy1849
+daisymn
 daka0966
 daka0976
 daka6677
@@ -5716,8 +5734,8 @@ easonlin0307
 east005
 east0066
 east1888
+east83071
 east888000
-eaton
 eaton
 ebay-01
 ebay-168
@@ -6858,6 +6876,7 @@ hcc3071
 hcc88668
 hccr7
 hcd8888
+hch583
 hci751127
 hd132
 hd6618
@@ -6969,6 +6988,7 @@ hhg101010
 hhg525
 hhh336677
 hhh5580
+hhhank1888
 hhhanm
 hhhh88111
 hhj13520
@@ -7729,6 +7749,7 @@ jianghao85
 jiangsheng520
 jiangxin_
 jianianhua171
+jianjian731
 jianrongchang
 jianwen13
 jianxun1021
@@ -7841,6 +7862,7 @@ jj558855
 jj585658
 jj58885
 jj6289
+jj6365
 jj6424
 jj666777i
 jj66980
@@ -7985,6 +8007,7 @@ jufon01
 juice0325
 juliet09588
 julin0813
+jumbo198708072
 jun-90
 jun19870604
 jun19941026
@@ -8269,6 +8292,7 @@ kevin1022860
 kevin1314
 kevin14777
 kevin158158
+kevin19901225
 kevin556678
 kevin6443
 kevin64581
@@ -8347,6 +8371,7 @@ kia56794
 kiai899
 kiate1757
 kiate1868
+kid4invest
 kie751297
 kifgk789
 kii1314
@@ -8532,6 +8557,7 @@ kkm4555
 kkm458
 kkpo0312
 kkpp12341
+kkpy988
 kkrty
 kks2777
 kkss5678
@@ -8988,6 +9014,7 @@ lhm19850510
 lhmy2016
 lhq830908
 lhr9767
+lhs881100
 lhw1985
 lhw8569
 lhw8686
@@ -9269,6 +9296,7 @@ line-20502
 line-leo
 line048
 line0890
+line152823
 lineme_1023
 linen666
 liner22
@@ -9281,7 +9309,6 @@ linfeng510
 ling01839
 ling361884
 ling36368
-ling52011
 ling52011
 ling55307
 ling733
@@ -9298,6 +9325,7 @@ linhaichen8888
 linhan422
 linhaoyun8888
 linhong880220
+linhui66666
 linjc88
 linjesso
 linjiadi5201314
@@ -9566,6 +9594,7 @@ lk199175
 lk220
 lk233455
 lk5544
+lkf19910103
 lkj216uewilliam
 lkk8987
 lkl19790819
@@ -9660,6 +9689,7 @@ longjun001
 longxi99
 longzhan88
 lonne_7676
+look-8
 look3865
 lot06
 lots2425
@@ -9970,6 +10000,7 @@ lww132435
 lww8531love
 lwz917
 lx1977
+lx19880616
 lx19880710
 lx293
 lx302611jzw
@@ -10034,6 +10065,7 @@ ly58668
 ly5868
 ly5918
 ly6855
+ly68668
 ly688688
 ly771204
 ly868689
@@ -10373,6 +10405,7 @@ metatrader005
 metatrader006
 metatrader5
 metatrader8888
+metoobb
 metria296501
 meyling112233
 mf000888
@@ -10599,6 +10632,7 @@ mmjn
 mmleonor
 mmmlll1024
 mmmm857857
+mmmm88888
 mmo0317
 mms2997
 mmss68
@@ -10796,6 +10830,7 @@ mzx1991
 n._.fanny
 n.ˍ.fanny
 n1990799
+n27540
 n41617
 n6y92
 n836268
@@ -11103,6 +11138,7 @@ oulu55
 ouya688
 ouyang374848273738
 ova0119
+over.dose
 over96
 overseas2018
 ovo8577
@@ -12660,6 +12696,7 @@ ss558i
 ss6652
 ss66600
 ss668ss
+ss718211
 ss72909
 ss810815
 ss82914
@@ -12769,6 +12806,7 @@ suna1223
 sunan9891
 sunboy0610
 sundg11
+sung00319
 suni768
 sunjay0110
 sunjm1110
@@ -12941,6 +12979,7 @@ taiyang0918
 taiyin066
 taizi666
 tamara1027
+tameesha1025
 tan_yu_chen
 tan_yu_chen-0816
 tan85412
@@ -13036,6 +13075,7 @@ th930303
 thank688
 thanks0710
 thetop168
+thinker_store
 thinking678
 thisiskellybb
 thisislellybb
@@ -13854,7 +13894,6 @@ wang0206
 wang102087
 wang19850325
 wang198606
-wang198606
 wang19920817
 wang19950420
 wang55666
@@ -13880,6 +13919,7 @@ wanghao0905
 wangjiajun118
 wangjie813
 wangjing54088
+wangjun518
 wangkai19811
 wanglee456
 wangli0726
@@ -13901,6 +13941,7 @@ wangyuanbaobao
 wangyuyan708
 wangzhijie0508
 wanhao66
+wanhyiei
 wanin1212
 wanjunyi8
 wanjunyi9
@@ -13999,6 +14040,7 @@ wei0213
 wei0246
 wei10100513
 wei19820511
+wei198693
 wei199514
 wei25011
 wei3365
@@ -14020,6 +14062,7 @@ weijie5188
 weil0958932711
 weilun
 wein123
+weisen_9
 weishang0211
 weiwei1986710
 weiwei840113
@@ -14376,6 +14419,7 @@ wsa852
 wsc0719
 wsh1979
 wsh26890
+wshj520
 wshuhui520
 wsj88128
 wsl018
@@ -14394,6 +14438,7 @@ wsy368668
 wsy808
 wszhr
 wszpf.33
+wt0211
 wt1678
 wt1687
 wt1759
@@ -15494,6 +15539,7 @@ y53100
 y55155
 y58563i
 y588988
+y5995
 y63322
 y64678
 y6526
@@ -15888,6 +15934,7 @@ ying_0909
 ying_200088
 ying_7776
 ying_9900
+ying_o724
 ying080608
 ying10180
 ying19950908
@@ -16006,6 +16053,7 @@ yo0920ci
 yo8885yo
 yoga.-.1919
 yokai0707
+yong564866
 yong650925
 yongjianlin
 yonglifuwu
@@ -16296,6 +16344,7 @@ yuyu8897
 yuyuchen5520
 yuyuyu4050
 yuzhe0518
+yuzhen1127_
 yuzhen555
 yuzhu99
 yv5280
@@ -16365,7 +16414,6 @@ yxgj1818
 yxiaoqian888
 yxin0818
 yxl245
-yxm1026
 yxm1026
 yxoi0528
 yxr19950
@@ -16531,6 +16579,7 @@ yz8270
 yz918
 yzc1223
 yzh168168
+yzh62566
 yzhj521
 yzk828
 yzk888999
@@ -16708,6 +16757,7 @@ zf9899
 zfb8888
 zfl1003
 zfx001
+zfzb6688
 zg111222
 zg19810617
 zg520xg
@@ -16874,7 +16924,6 @@ zhongyu0827
 zhou0206
 zhou08300
 zhou19821029
-zhou19821029
 zhou669
 zhou7336
 zhou7431
@@ -16918,6 +16967,7 @@ zichenglaile
 zichi0919
 zigenks006543
 ziguang6688
+zihan0429
 zihang
 zihao135920
 zihaoyy
@@ -16951,6 +17001,7 @@ zizicoco8828
 zj05166
 zj08099
 zj10210
+zj112211430
 zj1268
 zj550
 zj660
@@ -17286,7 +17337,6 @@ zxy998
 zxzx_0108
 zxzx_0108_
 zxzx00088
-zxzx00088
 zxzx08577
 zxzx19910628
 zxzx5757
@@ -17341,6 +17391,7 @@ zyr23456
 zys777
 zyt003
 zyt0615
+zyt1231
 zyt78925
 zyt925
 zyt9854
