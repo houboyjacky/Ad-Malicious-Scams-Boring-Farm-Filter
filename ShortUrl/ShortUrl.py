@@ -95,7 +95,7 @@ def RecordShortUrl(shorturl, IP, Country):
     record_day = datetime.strptime(document['登陸日期'], "%Y-%m-%d %H-%M-%S")
     diff_days = (now_datetime.date() - record_day.date()).days
     left_days = lifedays - diff_days
-    if not Tools.Admin(document["登陸者"]) and left_days < 0:
+    if not Tools.IsOwner(document["登陸者"]) and left_days < 0:
         struct = {"縮網址": document['縮網址'],
                   "登陸網址": "",
                   "登陸者": "",
