@@ -79,6 +79,11 @@ def handle_message_text_front(user_text):
         rmessage = f"！！輸入錯誤！！\n直接貼上\n「 {url} 」\n即可查詢"
         return rmessage
 
+    if match := re.match(r'^賴line(.+)', user_text, re.IGNORECASE):
+        code = match.group(1)
+        rmessage = f"！！輸入錯誤！！\n直接貼上\n「 賴{code} 」\n即可查詢"
+        return rmessage
+
     return None
 
 
