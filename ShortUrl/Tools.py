@@ -33,6 +33,8 @@ with open('setting.json', 'r') as f:
     setting = json.load(f)
 
 # 讀取設定檔
+# ADMIN => ADMIN
+ADMIN = setting['ADMIN']
 # LOGFILE => Log File Path
 LOGFILE = setting['LOGFILE']
 # MONGODB_PWD => MONGODB Password
@@ -44,6 +46,10 @@ MONGODB_USER = setting['MONGODB_USER']
 # S_URL => 縮網址網址
 S_URL = setting['S_URL']
 
+def IsOwner(ID):
+    if ID == ADMIN:
+        return True
+    return False
 
 def read_json_file(filename):
     try:

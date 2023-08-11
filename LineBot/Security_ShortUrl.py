@@ -25,6 +25,7 @@ import itertools
 import random
 import string
 from Query_API import Read_Collection, Get_DB_len, Update_Document, Search_Same_Document, Delete_document
+import Tools
 
 DB_Name = "ShortUrls"
 lifedays = 30
@@ -94,7 +95,7 @@ def RecordShortUrl(shorturl, IP, Country):
     record_day = datetime.strptime(document['登陸日期'], "%Y-%m-%d %H-%M-%S")
     diff_days = (now_datetime.date() - record_day.date()).days
     left_days = lifedays - diff_days
-    if left_days < 0:
+    if not Tools.IsOwner(document["登陸者"]) and left_days < 0:
         struct = {"縮網址": document['縮網址'],
                   "登陸網址": "",
                   "登陸者": "",
@@ -138,8 +139,11 @@ def GetInfShortUrl(User_ID):
         diff_days = (today - record_day.date()).days
         left_days = lifedays - diff_days
         if left_days < 0:
-            do_clear = True
-            Text += f"縮網址已失效，本次查詢後刪除，敬請截圖紀錄\n"
+            if Tools.IsOwner(User_ID):
+                Text += f"縮網址仍可使用\n"
+            else:
+                do_clear = True
+                Text += f"縮網址已失效，本次查詢後刪除，敬請截圖紀錄\n"
         else:
             Text += f"縮網址還有{left_days}天可以使用\n"
 
