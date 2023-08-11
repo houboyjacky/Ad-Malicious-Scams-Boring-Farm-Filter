@@ -111,13 +111,13 @@ def handle_message_text(event):
         else:
             rmessage = f"謝謝你提供的情報\n請縮短長度或分段傳送"
         Handle_LineBot.message_reply(event, rmessage)
-        Personal_Update_SingleTag(user_id, "文字", 1)
+        Personal_Update_SingleTag(user_id, "文字")
         return
 
     # 長度控管、備用指南、電話、網站排行榜
     if rmessage := handle_message_text_front(orgin_text):
         Handle_LineBot.message_reply(event, rmessage)
-        Personal_Update_SingleTag(user_id, "文字", 1)
+        Personal_Update_SingleTag(user_id, "文字")
         return
 
     # 遊戲模式
@@ -135,7 +135,7 @@ def handle_message_text(event):
     if rmessage := handle_user_msg(user_id, orgin_text):
         Handle_LineBot.message_reply(event, rmessage)
     else:
-        Personal_Update_SingleTag(user_id, "文字", 1)
+        Personal_Update_SingleTag(user_id, "文字")
 
     return
 
