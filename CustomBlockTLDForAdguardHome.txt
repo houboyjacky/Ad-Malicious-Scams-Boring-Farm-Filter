@@ -13,6 +13,7 @@
 /[a-z0-9]+gov.(tw|xyz|me|tv|store|shop|com)/
 /[a-z0-9]+hotshop\.com/
 /[a-z0-9]+xakcqzj\.cn/
+/11st[a-z0-9]{1,2}\.com/
 /1396[a-z]\.com/
 /17-?play[0-9]+\.com/
 /17[-]?play[a-z0-9]*\.com/
@@ -141,6 +142,7 @@
 /liquiditypool-.+\.com/
 /long[0-9]\.net/
 /metoocofstimrgpaged-[a-z0-9]+\.online/
+/money\d{4}\.com/
 /moxc[a-z0-9]{2,3}\.com/
 /mycoin[a-z0-9]+\.net/
 /netflti[a-z]*.com/
@@ -247,6 +249,7 @@
 ||bithumb77.*^
 ||bitstamp*.*^
 ||brk.*
+||btoplus.*^
 ||cbn-tw.*^
 ||coinex*.*^
 ||cos.ap-*.myqcloud.com^

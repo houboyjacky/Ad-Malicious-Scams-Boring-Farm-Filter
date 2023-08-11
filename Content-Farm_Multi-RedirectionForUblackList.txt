@@ -1,6 +1,3 @@
-# Description :  Filter for general content farms and Multi Redirection
-# Licence: MIT License
-# Title : Content Farm and Multi-Redirection
 *://*.043verzekeren.nl/*
 *://*.366service.com/*
 *://*.3x3elitesardinia.it/*
@@ -72,6 +69,7 @@
 *://*.balance4you.ch/*
 *://*.bangqu.com/*
 *://*.bastaujana.cz/*
+*://*.batiatlantique44.fr/*
 *://*.bbarill.me/*
 *://*.became.sbs/*
 *://*.bestmoto64.ru/*
@@ -117,6 +115,7 @@
 *://*.celebritygolfclub.de/*
 *://*.centurionbusiness.it/*
 *://*.chance.wiki/*
+*://*.chartagranada.es/*
 *://*.chb-creations.fr/*
 *://*.chefuing.co/*
 *://*.chiaraceschini.it/*
@@ -143,6 +142,7 @@
 *://*.coiffeur-luthern.ch/*
 *://*.commanderr.online/*
 *://*.comms.si/*
+*://*.congresogeriatria2022.es/*
 *://*.congresomedicosjubilados-sevilla2022.es/*
 *://*.countrybank.com/*
 *://*.countryproblemlots.de/*
@@ -197,6 +197,7 @@
 *://*.easylist.to/*
 *://*.ecfs2017.ch/*
 *://*.echoppedescurrys.fr/*
+*://*.ecomouvurban.fr/*
 *://*.eduacademy.pl/*
 *://*.edurusotels.com/*
 *://*.ee-showtec.de/*
@@ -240,6 +241,7 @@
 *://*.freak-show.fr/*
 *://*.freejobalerts24.com/*
 *://*.freeoffice.com/*
+*://*.frioelectri.es/*
 *://*.friseur-in-hagen.de/*
 *://*.fubaca.de/*
 *://*.fuehrenplus.de/*
@@ -297,6 +299,7 @@
 *://*.inhp.info/*
 *://*.insat.ru/*
 *://*.insid.fr/*
+*://*.institutobrasildigital.org.br/*
 *://*.interempresas.net/*
 *://*.iqschool.ru/*
 *://*.ireviewtw.com/*
@@ -338,6 +341,7 @@
 *://*.keizai.biz/*
 *://*.kingofman.online/*
 *://*.kirche-halsdorf.de/*
+*://*.kissjav.li/*
 *://*.kknews.cc/*
 *://*.km-bueroservice.de/*
 *://*.knihkupectvi-praha.cz/*
@@ -382,6 +386,7 @@
 *://*.lokuk.online/*
 *://*.loo-familia.ru/*
 *://*.looselimited.space/*
+*://*.loreedesboissemblancay.fr/*
 *://*.loremflickr.com/*
 *://*.losbrno.cz/*
 *://*.louvalen.fr/*
@@ -469,6 +474,7 @@
 *://*.paddelstun.de/*
 *://*.pamiecislawka.pl/*
 *://*.pandaearth.online/*
+*://*.panfamiliar.es/*
 *://*.parnassen.se/*
 *://*.pcgameslab.net/*
 *://*.peekme.cc/*
@@ -626,6 +632,7 @@
 *://*.taxifahrten-rostock.de/*
 *://*.teamservice-assistenza.it/*
 *://*.teepr.com/*
+*://*.template.city/*
 *://*.terkuk.online/*
 *://*.testberichte.de/*
 *://*.tetedail.fr/*
@@ -640,6 +647,7 @@
 *://*.thxshop.online/*
 *://*.tierheilpraxis-tuendern.de/*
 *://*.tiktokfinder.shop/*
+*://*.timefitnessvlg.ru/*
 *://*.tocadosysombreros.com/*
 *://*.todohealth.com/*
 *://*.topawardhere.life/*
@@ -724,3 +732,6 @@
 *://wanqingzx.com/*
 *://ziboduomu.com/*
 /d-[a-z0-9]+\.cfd/
+# Description :  Filter for general content farms and Multi Redirection
+# Licence: MIT License
+# Title : Content Farm and Multi-Redirection
