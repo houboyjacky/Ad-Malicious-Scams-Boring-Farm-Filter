@@ -138,6 +138,9 @@ def lineinvite_Write_Document(user_text: str):
             LineID_Write_Document(analyze["帳號"].replace("~", ""))
         elif "~" in analyze["帳號"]:
             LineID_Write_Document(analyze["帳號"])
+            logger.info("分析完成，找到相同資料")
+            rmessage = f"LINE ID\n黑名單找到相同帳號\n「{analyze['帳號']}」"
+            return rmessage
 
         if Query_API.Search_Same_Document(collection, "帳號", analyze['帳號']):
             logger.info("分析完成，找到相同資料")

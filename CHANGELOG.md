@@ -1,5 +1,8 @@
 # 歷史更新 History Update
 
+* 20230813 Update
+  * 調整 特定輸入LINE ID網址，不納入邀請網址資料庫
+
 * 20230812 Update
   * 調整 擁有者網址不過期
 
