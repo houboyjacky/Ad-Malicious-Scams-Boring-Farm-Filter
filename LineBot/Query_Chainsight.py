@@ -39,7 +39,7 @@ def checkFromChainsight(input):
         today = datetime.today().date()  # 取得當天日期
         diff_days = (today - Record_Date).days  # 相差幾天
 
-        if diff_days > Tools.Expired_Days:
+        if diff_days > Tools.EXPIRED_DAYS:
             pass
         else:
             if result['評分'] < 2:

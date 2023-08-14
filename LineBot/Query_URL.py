@@ -344,7 +344,7 @@ def user_query_website_by_DNS(domain_name, result_list, lock):
             saved_date = datetime.strptime(Document['加入日期'], '%Y%m%d')
             current_date = datetime.now()
             time_diff = current_date - saved_date
-            if time_diff.days >= Tools.Expired_Days:
+            if time_diff.days >= Tools.EXPIRED_DAYS:
                 Document = None
             elif not Document['whois_creation_date']:
                 Document = None
