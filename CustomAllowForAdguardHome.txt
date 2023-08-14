@@ -106,3 +106,9 @@
 @@||newbang.co^
 @@||donebydeer.com^
 @@||toyou.tw^
+@@||twasus.site^$important
+@@||weex.com^
+@@||buyee.jp^
+@@||ecpay.com.tw^
+@@||dzmanga.com^
+@@||wink.sg^

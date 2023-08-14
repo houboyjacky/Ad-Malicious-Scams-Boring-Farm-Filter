@@ -22,7 +22,7 @@ _yuyu0910
 _zhu.0522
 _zn.153
 -zyx0516
-! 更新時間 2023/08/10
+! 更新時間 2023/08/14
 ! 網址來源 https://165.npa.gov.tw/#/lineid
 ! 網址來源 https://data.gov.tw/dataset/78432
 ._.chen
@@ -119,6 +119,7 @@ _zn.153
 @192kpqvq
 @194zpagu
 @195xeiim
+@196frrtf
 @198ispha
 @198rzmgd
 @201hcfva
@@ -161,6 +162,7 @@ _zn.153
 @298znxoi
 @299oaoni
 @302rnyxx
+@304hormx
 @307smewv
 @307ugcep
 @315atdsj
@@ -232,6 +234,7 @@ _zn.153
 @482cyiwe
 @484ahtdn
 @484ptekv
+@485zfoxk
 @486fqeys
 @488kbbeg
 @493seuzn
@@ -250,7 +253,9 @@ _zn.153
 @534omhuo
 @540avoqg
 @542tkzop
+@544ydmni
 @545jwsmo
+@548zpmfn
 @549evlgq
 @549svxks
 @550gmgxy
@@ -354,6 +359,7 @@ _zn.153
 @753tbqhj
 @757vpelt
 @761lpdba
+@769czghl
 @770mahbq
 @776pxrtk
 @776pxtrk
@@ -441,6 +447,7 @@ _zn.153
 @982rowdi
 @984edfqu
 @984jdhru
+@989qkryd
 @991mwxfh
 @996plaxf
 @999pchtc
@@ -532,7 +539,6 @@ _zn.153
 @yip3025t
 @zdj1898e
 @zgs7951r
-#name?
 ˍyuyu1119ˍ
 +hhan.0203
 0001kefu
@@ -631,6 +637,7 @@ _zn.153
 09166aby
 0917445060
 0919301936
+0921177333
 0921207627
 0921237528
 0921283186
@@ -865,6 +872,7 @@ _zn.153
 12457ss
 1254863
 12548763
+12556431
 1257677
 126qiao
 126uuuuu
@@ -1059,6 +1067,7 @@ _zn.153
 200512cc
 2005499
 200600w
+20071720
 20080925
 20087127
 2017_0111
@@ -1202,6 +1211,7 @@ _zn.153
 35ttf
 361388
 365986289
+3665527
 3679823
 3681288
 368276
@@ -1442,6 +1452,7 @@ _zn.153
 5667855
 5668869
 56724563
+56788990
 567np
 5680234
 56889002
@@ -1794,6 +1805,7 @@ _zn.153
 8268958
 8277239
 82895959
+831106
 8316121
 83169
 833258
@@ -2647,6 +2659,7 @@ aaat7
 aaat88
 aaaty8
 aababyy
+aabb000222
 aabb8
 aabb8698
 aabbww1122
@@ -2838,6 +2851,7 @@ afff_119
 afg5208868
 ag26728
 ag753951
+ag88888808
 agakefu66
 agatha
 agatha.1
@@ -3415,6 +3429,7 @@ avatline
 avengers1128
 avll0306
 avo77._.
+avril55689
 avuu889366
 aw006
 aw586
@@ -3712,6 +3727,7 @@ bhb8584
 bhbhke
 bibi_0977
 bibi.820
+bibi158
 bibi4009
 bibi7580
 bibox888
@@ -3863,6 +3879,7 @@ bruce.sue
 bruce880701
 bruce8810
 bruce8912
+bryan1985423
 bs8688
 bsex22
 bsex23
@@ -4054,6 +4071,7 @@ cai1122
 cai1199
 cai1231314520
 cai131488
+cai3658
 cai5522001
 cai6886
 cai857
@@ -4233,6 +4251,7 @@ ccff1986
 ccheng235
 cchh0816
 ccii0818
+cck3155
 cck919
 ccky0809
 cclaire0531
@@ -4568,6 +4587,7 @@ chenyinglu0629
 chenyonghao52
 chenyu767520
 chenyu840910
+chenyu9527
 chenyue666
 chenyuqin520
 chenyuxuan888
@@ -4613,6 +4633,8 @@ chio256
 chjh224466
 chjy8
 chl1880924
+chl1998803
+chling0318
 chlk101311hsu
 chloe_1019
 chloe_162
@@ -4796,6 +4818,8 @@ clairewin
 clark0014
 clearsky-vip3
 clf0986
+clh990
+click_0626
 cll123789
 cll2122
 cll525
@@ -5069,6 +5093,7 @@ cw833
 cw89758
 cwa0620
 cwa856
+cwb1314520
 cwb5201314
 cwg09606
 cwg328912
@@ -5183,6 +5208,7 @@ cy2580369
 cy52088
 cy5632986
 cy688
+cy7374
 cy760322
 cy809096
 cy831125
@@ -5195,6 +5221,7 @@ cyazh
 cyb1206
 cyc0308
 cyc04150
+cyc221
 cyc258258
 cycy6
 cyd0168
@@ -5823,6 +5850,7 @@ engineer
 engyy9
 enne6
 ensogoline
+enua79
 enyu_0517
 eo68517
 eoo14874
@@ -5916,6 +5944,7 @@ f1569
 f158168
 f1585689
 f16889
+f18665
 f18861
 f20233
 f24578
@@ -6232,6 +6261,7 @@ free_989
 freecoinskc
 friend860427
 frode-
+fs15483
 fs2017109
 fs22558800
 fsd338
@@ -6406,6 +6436,7 @@ gemini018
 gemini5288
 genchen12
 gene917
+general626
 geoff0818
 georgeevans
 georgeevans001
@@ -6428,6 +6459,7 @@ gfzh
 gg16716
 gg168188
 gg2292
+gg3469
 gg3739
 gg520abc
 gg6565
@@ -6633,6 +6665,7 @@ guo989
 guodong314
 guoguo1106
 guolo600
+guous123
 guoxuan1021
 gup5675
 gup5699
@@ -6808,6 +6841,7 @@ hao618618
 hao6818
 hao744103
 hao788
+hao810704
 hao815138
 hao840507
 hao87729
@@ -7110,6 +7144,7 @@ hongyiyu818
 honorchange
 hoo3314
 hoo3915
+hood.1217
 hook66
 hoot2020
 hope223344
@@ -7319,6 +7354,7 @@ hxx899
 hxy0525
 hxy1990823
 hxy3668
+hxy559300
 hxy588
 hxy7483
 hxy7699
@@ -7336,6 +7372,7 @@ hy19850808
 hy19860622
 hy2858
 hy2868
+hy28688
 hy28858
 hy288688
 hy3308
@@ -7372,6 +7409,7 @@ hyy258
 hyy6330
 hyy6699
 hyy810616
+hz00482
 hz01029
 hz1003
 hz66666
@@ -7577,6 +7615,7 @@ jackboy0206
 jackchen06
 jackchen517
 jackchen718
+jackchen725041
 jacksen1985
 jackson761221
 jackson88688
@@ -7592,6 +7631,7 @@ jam1031130
 james09290
 james820117
 jamesth640
+jamie.s
 jamin19870707
 jan941215
 jane0502
@@ -7617,6 +7657,7 @@ jasongood79
 jasonlin999888
 javionzz
 jax_1987
+jay_520
 jay.6666.
 jay10.
 jay19880624
@@ -7667,6 +7708,7 @@ jeff88589
 jeff9900731
 jen310709
 jen3300
+jenifferch26985
 jenn3300
 jennielili1991
 jenny_1009
@@ -7821,6 +7863,7 @@ jing168899
 jing18349
 jing19821014
 jing1993520
+jing19941205
 jing3150
 jing42200
 jing65789
@@ -8098,6 +8141,7 @@ k1978450
 k221941
 k232
 k3k33
+k4420
 k5576294
 k55767
 k5y98
@@ -8155,6 +8199,7 @@ kail1986qin
 kail3588
 kaison
 kaison925
+kaitlyngr455584
 kaiwen0507
 kaixin667
 kaixuanm
@@ -8292,6 +8337,7 @@ kevin1022860
 kevin1314
 kevin14777
 kevin158158
+kevin181801
 kevin19901225
 kevin556678
 kevin6443
@@ -8779,6 +8825,7 @@ l19880820
 l20022534
 l20222
 l2351
+l3.14159
 l330048
 l3576
 l421lb
@@ -8871,6 +8918,7 @@ lbw8989
 lby2580369
 lc0308
 lc6688715
+lcc0111103
 lcd6688
 lce12
 lcf147
@@ -9003,6 +9051,7 @@ lh66888
 lh800318
 lh86666
 lhb0311
+lhc1458
 lhc523
 lhc899
 lhdada123
@@ -9216,6 +9265,7 @@ lin19910724
 lin19911020
 lin1991520
 lin19920825
+lin19930818
 lin20030731
 lin20184
 lin220330
@@ -9228,6 +9278,7 @@ lin354
 lin3759
 lin38654
 lin448448
+lin478
 lin51008
 lin534
 lin5521
@@ -9336,6 +9387,7 @@ linjianghua0504
 linjiekun_camar
 linjing113
 linjm1109
+linjun7603
 linkai66
 linken75
 linkpay18
@@ -9465,6 +9517,7 @@ liu9877
 liuamy085
 liubo999
 liuchihling0228
+liucm0113
 liudashu1985
 liufangbaishi
 liuguanlin17
@@ -9791,6 +9844,7 @@ lp885
 lp9668
 lp969
 lpj0211
+lpl184790
 lpl198532
 lpl666
 lpr98899
@@ -10373,6 +10427,7 @@ mei_030
 mei01310
 mei07118
 mei151
+mei511221
 mei82424
 mei9029
 meihui5386
@@ -11085,6 +11140,7 @@ olik9999
 omm647
 one741
 one888998
+one911aa
 oneday321
 onion1188
 online00886
@@ -11392,6 +11448,7 @@ pq5202
 pqk168
 pr3chrr
 prada123412
+president66
 pretty0612
 prii889
 pro88888a
@@ -11824,6 +11881,7 @@ qwe7951
 qwe831520
 qwe9602
 qwe9688
+qwe99870012
 qwedsa840120
 qwegg_9521
 qweisd0813
@@ -11950,6 +12008,7 @@ ringa0922
 rj616888
 rj666666
 rk168899
+rkty175
 rl168999
 rlzy888
 rm6688
@@ -12031,6 +12090,7 @@ rs6200
 rs64783
 rs98052
 rsrx888
+rsss100
 rt1266
 rt1884
 rt9011
@@ -12173,6 +12233,7 @@ sa569360
 sa681021
 saal199673
 sad131
+safe06289
 safe322
 sagaming
 sagapo920
@@ -12311,6 +12372,7 @@ sfang22
 sff521
 sffs3355
 sfgj888
+sfh528528
 sfung22
 sfvip588
 sfym8
@@ -12411,6 +12473,7 @@ shishan12
 shishi9798
 shitou28371
 shiuan_84123
+shixuanx
 shiyi0311
 shiyu0096
 shiyuan9011
@@ -12723,6 +12786,7 @@ sssjwjwjw888
 ssss147258
 sssyy7
 ssting96
+ssv587
 ssy688
 ssysq1990
 ssyy8
@@ -12762,6 +12826,7 @@ su19890702
 su23323
 su352
 su5788
+su88998
 su988088
 su99811
 sua366
@@ -12805,6 +12870,7 @@ sun857
 suna1223
 sunan9891
 sunboy0610
+sunday-0804
 sundg11
 sung00319
 suni768
@@ -12975,6 +13041,7 @@ taibei7777
 taihua668
 tainan128
 taiwan00886
+taiweiliqwe
 taiyang0918
 taiyin066
 taizi666
@@ -13069,6 +13136,7 @@ tg7767
 tgh098536
 tgt668
 tgv47000
+th198008
 th3020821
 th866
 th930303
@@ -13353,6 +13421,7 @@ tv5217
 tv7888
 tvz995
 tw_001
+tw-008
 tw008866
 tw01789
 tw0818
@@ -14176,6 +14245,7 @@ wf928
 wfm635
 wfs398
 wfw28699
+wfx1010
 wg0303
 wg238
 wg6192
@@ -14276,6 +14346,7 @@ wk17883
 wk1896
 wk19834567
 wk1988i
+wk245222
 wk2893
 wk33443
 wk338
@@ -14381,6 +14452,7 @@ wpper
 wpq0312
 wps82993
 wpx0831
+wpx90
 wq0701
 wq335
 wq6265
@@ -14593,6 +14665,7 @@ www2688
 www2989
 www357665
 www55190
+www73948
 www7600
 www8536
 www85830
@@ -14672,6 +14745,7 @@ wyf0508
 wyf722
 wyf8899
 wyf98079
+wyg257
 wyh19850506
 wyq6437
 wyq91521
@@ -14803,6 +14877,7 @@ xbos123
 xbox8382
 xbs8888
 xby8803
+xc12398
 xc123xc123
 xc198
 xc2568
@@ -14927,6 +15002,7 @@ xiao81517
 xiao830919
 xiao909090
 xiao960
+xiaoa9696
 xiaoaii1013
 xiaoan0218
 xiaoao0330
@@ -15212,6 +15288,7 @@ xt0708
 xt108
 xt122823
 xt151
+xt19830
 xt5208777
 xt67416145
 xt8w
@@ -15337,6 +15414,7 @@ xx030908
 xx0313
 xx11118
 xx11898
+xx12398
 xx1243
 xx1388
 xx1413
@@ -15577,6 +15655,7 @@ y9810
 y9838
 y99y66
 y9a7
+ya_0111_
 ya-see
 ya.0812
 ya04050
@@ -15805,6 +15884,7 @@ yf1992219
 yf3131
 yf66688888
 yf7805
+yf78058
 yf7858
 yf930730
 yfan0705
@@ -16043,6 +16123,7 @@ ymx8888
 ymy52516
 ymy62516
 ymzxam1991
+yn3711
 yn88288
 yn9282
 yn9311
@@ -16190,6 +16271,7 @@ yu273344
 yu3147666
 yu3yu8
 yu585866
+yu670
 yu686860
 yu743121
 yu750727
@@ -16547,6 +16629,7 @@ yys851
 yysd776
 yyt123789
 yyt147258
+yyt35
 yyt5581
 yyun0727
 yyun912
@@ -16671,6 +16754,7 @@ zaini3344
 zak9941
 zak9969
 zalz33
+zalzal8989
 zao9761
 zaq518518
 zas99155
@@ -16805,6 +16889,7 @@ zhang4214
 zhang5828
 zhang7788999
 zhang797
+zhang85w
 zhang8702
 zhang881023
 zhang900805
@@ -16884,6 +16969,7 @@ zhenhao0728
 zhenyu85
 zhenz0921
 zhewei628
+zhewei750628
 zhexin1986-0709
 zheyang316
 zhh1203
@@ -16998,6 +17084,7 @@ ziyu1101
 zizhe7
 zizi_11_18
 zizicoco8828
+zj05090
 zj05166
 zj08099
 zj10210
@@ -17211,6 +17298,7 @@ zwb666777
 zwc5520
 zwd9527
 zwf16888
+zwj168168
 zwj888888
 zwl168
 zwl618
@@ -17381,6 +17469,7 @@ zyj0001
 zyj0099
 zyj0504
 zyj1066
+zyj8212
 zyk99999
 zym336
 zym5588
