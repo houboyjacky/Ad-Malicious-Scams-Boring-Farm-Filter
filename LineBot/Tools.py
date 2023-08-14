@@ -31,8 +31,6 @@ import tldextract
 
 image_analysis = False
 forward_inquiry = False
-Expired_Days = 60
-MIN_DIFF_DAYS = 30
 
 with open('setting.json', 'r') as f:
     setting = json.load(f)
@@ -58,6 +56,8 @@ CHROMEDRIVER_LOG = setting['CHROMEDRIVER_LOG']
 CONFIG_FOLDER = setting['CONFIG_FOLDER']
 # DATA_PATH => DATA PATH
 DATA_PATH = setting['DATA_PATH']
+# EXPIRED_DAYS => EXPIRED DAYS
+EXPIRED_DAYS = setting['EXPIRED_DAYS']
 # HASH_FILE => HASH INF IN FILE
 HASH_FILE = setting['HASH_FILE']
 # HTTP_HEADERS => Http Headers
@@ -66,6 +66,8 @@ HTTP_HEADERS = setting['HTTP_HEADERS']
 LINEID_WEB = setting['LINEID_WEB']
 # LOGFILE => Log File Path
 LOGFILE = setting['LOGFILE']
+# MIN_DIFF_DAYS => Minimum days
+MIN_DIFF_DAYS = setting['MIN_DIFF_DAYS']
 # MONGODB_PWD => MONGODB Password
 MONGODB_PWD = setting['MONGODB_PWD']
 # MONGODB_URL => MONGODB Url
@@ -143,6 +145,7 @@ SUBWEBSITE = setting_urls['SUBWEBSITE']
 # SKIP_CHECK => Skip Query Whois
 SKIP_CHECK = setting_urls['SKIP_CHECK']
 
+
 def reloadSetting():
     global ADMINS
     global ALLOW_DOMAIN_LIST
@@ -156,6 +159,7 @@ def reloadSetting():
     global CHROMEDRIVER_LOG
     global CONFIG_FOLDER
     global DATA_PATH
+    global EXPIRED_DAYS
     global HASH_FILE
     global HTTP_HEADERS
     global KEYWORD_DCARD_ID
@@ -178,6 +182,7 @@ def reloadSetting():
     global KEYWORD_WHATSAPP
     global LINEID_WEB
     global LOGFILE
+    global MIN_DIFF_DAYS
     global MONGODB_PWD
     global MONGODB_URL
     global MONGODB_USER
@@ -208,10 +213,12 @@ def reloadSetting():
     CHROMEDRIVER_LOG = setting['CHROMEDRIVER_LOG']
     CONFIG_FOLDER = setting['CONFIG_FOLDER']
     DATA_PATH = setting['DATA_PATH']
+    EXPIRED_DAYS = setting['EXPIRED_DAYS']
     HASH_FILE = setting['HASH_FILE']
     HTTP_HEADERS = setting['HTTP_HEADERS']
     LINEID_WEB = setting['LINEID_WEB']
     LOGFILE = setting['LOGFILE']
+    MIN_DIFF_DAYS = setting['MIN_DIFF_DAYS']
     MONGODB_PWD = setting['MONGODB_PWD']
     MONGODB_URL = setting['MONGODB_URL']
     MONGODB_USER = setting['MONGODB_USER']
@@ -292,6 +299,7 @@ def read_json_file(filename):
     except json.JSONDecodeError:
         print(f"Error decoding JSON from {filename}.")
         return None
+
 
 def write_json_file(filename, data):
     with open(filename, 'w', encoding='utf-8', newline='') as json_file:
@@ -416,8 +424,10 @@ def hashes_download():
     remote_hash_dict = json.loads(response.content)
     return
 
+
 def calculate_hash(content):
     return hashlib.md5(content).hexdigest()
+
 
 def calculate_file_hash(file_path):
     with open(file_path, 'rb') as file:
