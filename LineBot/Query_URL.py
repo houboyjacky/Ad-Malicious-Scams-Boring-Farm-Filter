@@ -222,6 +222,7 @@ def get_external_links(url):
 # 黑名單判斷
 # ===============================================
 
+
 def check_white_blacklisted_site(domain_name):
 
     for SKIP in Tools.SKIP_CHECK:
@@ -237,6 +238,7 @@ def check_white_blacklisted_site(domain_name):
             logger.info(f"{domain_name}在DB的{collection.name}白名單內")
             return True
     return False
+
 
 def check_blacklisted_site(domain_name):
 
@@ -492,6 +494,10 @@ def user_query_website(prefix_msg, user_text):
     if domain_name in Tools.SUBWEBSITE:
         domain_name = f"{subdomain}.{domain}.{suffix}"
         special_tip = f"\n為「{domain}.{suffix}」的子網域"
+
+    if domain_name.startswith("."):
+        domain_name = domain_name[1:]
+
     logger.info(f"domain_name = {domain_name}")
 
     # 特殊提示

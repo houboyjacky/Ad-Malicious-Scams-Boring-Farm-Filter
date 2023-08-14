@@ -81,6 +81,9 @@ def checkFromChainsight(input):
             credit = item['antiFraud']['credit']
             currency_data[chain_name] = credit
 
+        if not currency_data.values():
+            return "", -1
+
         max_credit = -1
         max_credit = max(currency_data.values())
 
