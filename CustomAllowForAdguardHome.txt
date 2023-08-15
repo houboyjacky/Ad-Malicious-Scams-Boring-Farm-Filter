@@ -112,3 +112,5 @@
 @@||ecpay.com.tw^
 @@||dzmanga.com^
 @@||wink.sg^
+@@||fbs.com.tw^
+@@||8891.com.tw^

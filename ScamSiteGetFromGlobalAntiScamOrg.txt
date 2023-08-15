@@ -22,6 +22,7 @@
 #||mystrikingly.com^
 #||page.link^
 #||payware.com.tw^
+#||pionex.com^
 #||pixnet.net^
 #||potatomedia.co^
 #||reurl.cc^
@@ -21152,7 +21153,6 @@
 ||pintail.com^
 ||pioneerfx.co^
 ||pioneerfx365.com^
-||pionex.com^
 ||pionexxcoin.com^
 ||pionmarkets.com^
 ||pionprime.com^
