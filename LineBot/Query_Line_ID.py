@@ -40,8 +40,7 @@ def LINE_ID_Download_From_165():
     Local_file_hash = Tools.calculate_file_hash(Local_file_path)
     IsFind = False
 
-    if not Tools.remote_hash_dict:
-        Tools.hashes_download()
+    Tools.hashes_download()
 
     for remote_file_name, remote_file_hash in Tools.remote_hash_dict.items():
         if remote_file_name == Local_file:

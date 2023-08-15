@@ -64,11 +64,11 @@ def background_schedule(stop_event):
     # 黑名單更新
     schedule.every().hour.at(":00").do(update_blacklist)
     # 165黑名單更新
-    schedule.every().hour.at(":00").do(LINE_ID_Download_From_165)
+    schedule.every().hour.at(":01").do(LINE_ID_Download_From_165)
     # Log儲存與分類
     schedule.every().day.at("23:00").do(Logger_Transfer, pre_close=False)
     # 備份DB資料
-    schedule.every().day.at("23:00").do(backup_data)
+    schedule.every().day.at("23:01").do(backup_data)
 
     while not stop_event.is_set():
         time.sleep(1)

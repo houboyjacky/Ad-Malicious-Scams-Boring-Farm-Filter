@@ -243,7 +243,7 @@ def Personal_Update_SingleTag_Query(user_id, TAGNAME, status, Value=1):
 
 def Personal_Read_Document(user_id, TAGNAME, SUB_TAGNAME=None):
     global DB_Name
-    logger.info("Personal_Read_Document")
+    #logger.info("Personal_Read_Document")
     collection = Query_API.Read_Collection(DB_Name, DB_Name)
 
     document = Query_API.Search_Same_Document(collection, "UUID", user_id)
@@ -264,7 +264,7 @@ def Personal_Read_Document(user_id, TAGNAME, SUB_TAGNAME=None):
 
 def Personal_Delete_Document(user_id):
     global DB_Name
-    logger.info("Personal_Delete_Document")
+    #logger.info("Personal_Delete_Document")
     collection = Query_API.Read_Collection(DB_Name, DB_Name)
 
     if document := Query_API.Search_Same_Document(collection, "UUID", user_id):
