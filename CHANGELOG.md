@@ -2,7 +2,10 @@
 
 * 20230816 Update
   * 加入 縮網址proxy機制
+  * 更新 個人不想看與網友回報廣告或網站
+  * 更新 Jasony名單
   * 調整 chromedriver參數設置
+  * 調整 Dcard黑名單
 
 * 20230815 Update
   * 更新 165反詐騙諮詢專線-詐騙LINE ID(~112/08/15)
