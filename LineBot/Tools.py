@@ -132,6 +132,8 @@ KEYWORD_VIRTUAL_MONEY = setting_rule['KEYWORD_VIRTUAL_MONEY']
 KEYWORD_WECHAT = setting_rule['KEYWORD_WECHAT']
 # KEYWORD_WHATSAPP => Keyword for WhatsApp
 KEYWORD_WHATSAPP = setting_rule['KEYWORD_WHATSAPP']
+# KEYWORD_YOUTUBE => Keyword for Youtube
+KEYWORD_YOUTUBE = setting_rule['KEYWORD_YOUTUBE']
 
 with open('setting_urls.json', 'r') as f:
     setting_urls = json.load(f)
@@ -185,6 +187,7 @@ def reloadSetting():
     global KEYWORD_VIRTUAL_MONEY
     global KEYWORD_WECHAT
     global KEYWORD_WHATSAPP
+    global KEYWORD_YOUTUBE
     global LINEID_WEB
     global LOGFILE
     global MIN_DIFF_DAYS
@@ -260,6 +263,7 @@ def reloadSetting():
     KEYWORD_VIRTUAL_MONEY = setting_rule['KEYWORD_VIRTUAL_MONEY']
     KEYWORD_WECHAT = setting_rule['KEYWORD_WECHAT']
     KEYWORD_WHATSAPP = setting_rule['KEYWORD_WHATSAPP']
+    KEYWORD_YOUTUBE = setting_rule['KEYWORD_YOUTUBE']
 
     # 讀取網址
     with open('setting_urls.json', 'r') as f:

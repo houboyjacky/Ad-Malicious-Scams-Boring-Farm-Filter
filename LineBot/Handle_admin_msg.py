@@ -48,6 +48,7 @@ import Query_URL_Short as Q_URL_S
 import Query_VirtualMoney as Q_VM
 import Query_Wechat as Q_WC
 import Query_WhatsApp as Q_WA
+import Query_Youtube as Q_YT
 import Tools
 import Update_BlackList as BLACK
 from Personal_Rec import Personal_Update_SingleTag
@@ -310,6 +311,17 @@ def handle_smallredbook(user_id, text):
     return None
 
 
+def handle_youtube(user_id, text):
+    if re.search(Tools.KEYWORD_YOUTUBE[1], text):
+        # 加入YouTube
+        Personal_Update_SingleTag(user_id, "YouTube", SUB_TAGNAME="管理次數")
+        return Q_YT.YT_Write_Document(text)
+    if re.search(Tools.KEYWORD_YOUTUBE[2], text):
+        # 刪除YouTube
+        Personal_Update_SingleTag(user_id, "YouTube", SUB_TAGNAME="管理次數")
+        return Q_YT.YT_Delete_Document(text)
+    return None
+
 def handle_website(user_id, text):
     if match := re.search(Tools.KEYWORD_URL[0], text.lower()):
         Personal_Update_SingleTag(user_id, "URL", SUB_TAGNAME="管理次數")
@@ -379,6 +391,7 @@ def handle_admin_msg_sub(user_id, orgin_text, using_template=False):
         handle_whatsapp,
         handle_tiktok,
         handle_smallredbook,
+        handle_youtube,
         handle_website,
         handle_error
     ]

@@ -35,6 +35,7 @@ import Query_Report as Q_RPT
 import Query_SmallRedBook as Q_SRB
 import Query_Tiktok as Q_TT
 import Query_Twitter as Q_TR
+import Query_Youtube as Q_YT
 import Tools
 from Personal_Rec import Personal_Update_SingleTag, Personal_Data_Query
 
@@ -44,6 +45,7 @@ line_invites_list_len = 0
 Twitter_list_len = 0
 Tiktok_len = 0
 SmallRedBook_len = 0
+YouTube_len = 0
 
 
 def Random_get_List(UserID):
@@ -66,8 +68,11 @@ def Random_get_List(UserID):
     if not SmallRedBook_len:
         SmallRedBook_len = Q_SRB.get_SmallRedBook_list_len()
         logger.info(f"SmallRedBook_len = {SmallRedBook_len}")
+    if not YouTube_len:
+        YouTube_len = Q_YT.get_yt_list_len()
+        logger.info(f"YouTube_len = {YouTube_len}")
 
-    items = ["FB", "IG", "LINE", "TWITTER", "TIKTOK", "SMALLREDBOOK"]
+    items = ["FB", "IG", "LINE", "TWITTER", "TIKTOK", "SMALLREDBOOK", "YOUTUBE"]
     weights = []
     weights.append(FB_list_len)
     weights.append(IG_list_len)
@@ -75,6 +80,7 @@ def Random_get_List(UserID):
     weights.append(Twitter_list_len)
     weights.append(Tiktok_len)
     weights.append(SmallRedBook_len)
+    weights.append(YouTube_len)
 
     selected_item = random.choices(items, weights=weights)[0]
     logger.info(f"selected_item = {selected_item}")
@@ -90,6 +96,8 @@ def Random_get_List(UserID):
         return Q_TT.get_random_Tiktok_blacklist(UserID)
     if selected_item == "SMALLREDBOOK":
         return Q_SRB.get_random_SmallRedBook_blacklist(UserID)
+    if selected_item == "YOUTUBE":
+        return Q_YT.get_random_yt_blacklist(UserID)
 
     return None, None
 
@@ -107,6 +115,8 @@ def push_random_blacklist(UserID, success, disappear):
     if result := Q_TT.push_random_Tiktok_blacklist(UserID, success, disappear):
         return result
     if result := Q_SRB.push_random_SmallRedBook_blacklist(UserID, success, disappear):
+        return result
+    if result := Q_YT.push_random_yt_blacklist(UserID, success, disappear):
         return result
     return result
 

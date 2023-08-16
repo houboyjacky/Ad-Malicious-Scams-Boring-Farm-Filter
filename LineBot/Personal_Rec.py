@@ -162,7 +162,8 @@ def Personal_Update_Document(user_id, struct):
     #         "URL":0,
     #         "虛擬貨幣": 0,
     #         "Wechat":0,
-    #         "WhatsApp":0
+    #         "WhatsApp":0,
+    #         "YouTube":0
     #     },
     #     "碰撞次數": {
     #         "Total": 0,
@@ -179,7 +180,8 @@ def Personal_Update_Document(user_id, struct):
     #         "URL":0,
     #         "虛擬貨幣": 0,
     #         "Wechat":0,
-    #         "WhatsApp":0
+    #         "WhatsApp":0,
+    #         "YouTube":0
     #     },
     #     "管理次數": {
     #         "Total": 0,
@@ -198,6 +200,7 @@ def Personal_Update_Document(user_id, struct):
     #         "虛擬貨幣": 0,
     #         "Wechat":0,
     #         "WhatsApp":0,
+    #         "YouTube":0,
     #         "Other":0
     #     }
     #  }

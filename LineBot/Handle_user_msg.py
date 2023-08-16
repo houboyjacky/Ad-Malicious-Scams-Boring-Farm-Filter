@@ -41,6 +41,7 @@ import Query_URL_Short as Q_URL_S
 import Query_VirtualMoney as Q_VM
 import Query_Wechat as Q_WC
 import Query_WhatsApp as Q_WA
+import Query_Youtube as Q_YT
 import Tools
 from Personal_Rec import Personal_Update_SingleTag_Query, Personal_Update_SingleTag
 
@@ -373,6 +374,27 @@ def handle_dcard_web(prefix_msg, user_id, text, must_be_text):
             return Handle_LineBot.message_reply_Query(user_id, status, "Dcard", dcard, text.lower())
     return None
 
+def handle_youtube_web(prefix_msg, user_id, text, must_be_text):
+    if re.search(Tools.KEYWORD_YOUTUBE[0], text.lower()):
+        youtube, status = Q_YT.YT_Read_Document(text.lower())
+
+        if prefix_msg:
+            prefix_msg = f"{prefix_msg}「 {text.lower()} 」\n"
+        else:
+            prefix_msg = f"所輸入的"
+
+        if status == -1:
+            Personal_Update_SingleTag(user_id, "文字")
+            return (f"{prefix_msg}\n"
+                    f"請重新貼上該YouTube的帳號主頁網址\n"
+                    f"感恩")
+        else:
+            Personal_Update_SingleTag_Query(user_id, "Youtube", status)
+            if must_be_text:
+                return min_reply_text(status)
+            return Handle_LineBot.message_reply_Query(user_id, status, "Youtube", youtube, text)
+    return None
+
 
 def handle_web(prefix_msg, user_id, text, must_be_text):
     if re.match(Tools.KEYWORD_URL[5], text.lower()):
@@ -456,6 +478,7 @@ def handle_user_msg(user_id, orgin_text, must_be_text=False):
         handle_tiktok_web,
         handle_smallredbook_web,
         handle_dcard_web,
+        handle_youtube_web,
         handle_web,
         handle_error
     ]

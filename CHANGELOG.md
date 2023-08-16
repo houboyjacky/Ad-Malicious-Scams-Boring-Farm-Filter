@@ -2,6 +2,7 @@
 
 * 20230816 Update
   * 加入 縮網址proxy機制
+  * 加入 Youtube黑名單
   * 更新 個人不想看與網友回報廣告或網站
   * 更新 Jasony名單
   * 調整 chromedriver參數設置
