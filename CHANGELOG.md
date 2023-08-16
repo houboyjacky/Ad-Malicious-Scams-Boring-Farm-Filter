@@ -2,6 +2,7 @@
 
 * 20230816 Update
   * 加入 縮網址proxy機制
+  * 調整 chromedriver參數設置
 
 * 20230815 Update
   * 更新 165反詐騙諮詢專線-詐騙LINE ID(~112/08/15)

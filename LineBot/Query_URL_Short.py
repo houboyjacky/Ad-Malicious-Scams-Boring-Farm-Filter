@@ -32,6 +32,7 @@ import requests
 import ssl
 import Tools
 
+#chromedriver : https://github.com/electron/electron/releases
 
 def resolve_redirects_Webdriver(short_url):
 
@@ -45,14 +46,22 @@ def resolve_redirects_Webdriver(short_url):
     options.add_argument(
         "user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36")
     options.add_argument(f'proxy-server={Tools.PROXY_SERVER}')
-    options.binary_location = "/usr/bin/chromedriver"
+    options.add_argument('blink-settings=imagesEnabled=false')
+    options.add_argument("--disable-javascript")
+
+    prefs = {
+        'profile.default_content_setting_values' :  {
+            'notifications' : 2
+        }
+    }
+    options.add_experimental_option('prefs',prefs)
+    options.binary_location = Tools.CHROMEDRIVER_PATH
+
     try:
         service = webdriver.chrome.service.Service(log_path=Tools.CHROMEDRIVER_LOG)
         browser = webdriver.Chrome(options=options,service=service)
         # Remove navigator.webdriver Flag using JavaScript
-        browser.execute_script(
-            "Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
-
+        browser.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
         browser.get(short_url)
         # logger.info(f"browser.page_source = \n{browser.page_source}")
         long_url = browser.current_url
