@@ -80,6 +80,8 @@ NOTICE_BOARD = setting['NOTICE_BOARD']
 PEM_DIR = setting['PEM_DIR']
 # PRIVKEY => Lets Encrypt Private Key Path File
 PRIVKEY = setting['PRIVKEY']
+# PROXY_SERVER => PROXY_SERVER
+PROXY_SERVER = setting['PROXY_SERVER']
 # S_URL => 縮網址網址
 S_URL = setting['S_URL']
 # SCAM_WEBSITE_LIST => SCAM WEBSITE LIST
@@ -190,6 +192,7 @@ def reloadSetting():
     global NOTICE_BOARD
     global PEM_DIR
     global PRIVKEY
+    global PROXY_SERVER
     global S_URL
     global SCAM_WEBSITE_LIST
     global SHORT_URL_LIST
@@ -225,6 +228,7 @@ def reloadSetting():
     NOTICE_BOARD = setting['NOTICE_BOARD']
     PEM_DIR = setting['PEM_DIR']
     PRIVKEY = setting['PRIVKEY']
+    PROXY_SERVER = setting['PROXY_SERVER']
     S_URL = setting['S_URL']
     SCAM_WEBSITE_LIST = setting['SCAM_WEBSITE_LIST']
     TMP_BLACKLIST = setting['TMP_BLACKLIST']

@@ -44,8 +44,8 @@ def resolve_redirects_Webdriver(short_url):
     options.add_argument("window-size=1280,800")
     options.add_argument(
         "user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36")
-    # options.add_argument('proxy-server=211.75.88.123:80')
-    # options.binary_location = "/usr/bin/chromedriver"
+    options.add_argument(f'proxy-server={Tools.PROXY_SERVER}')
+    options.binary_location = "/usr/bin/chromedriver"
     try:
         service = webdriver.chrome.service.Service(log_path=Tools.CHROMEDRIVER_LOG)
         browser = webdriver.Chrome(options=options,service=service)
