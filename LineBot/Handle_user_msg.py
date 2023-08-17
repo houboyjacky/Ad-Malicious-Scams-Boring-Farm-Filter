@@ -343,7 +343,7 @@ def handle_smallredbook_web(prefix_msg, user_id, text, must_be_text):
         if status == -1:
             Personal_Update_SingleTag(user_id, "文字")
             return (f"{prefix_msg}\n"
-                    f"小紅書網址有誤、網址失效或不支援\n"
+                    f"請重新貼上該小紅書的帳號主頁網址\n"
                     f"感恩")
         else:
             Personal_Update_SingleTag_Query(user_id, "小紅書", status)
@@ -375,11 +375,11 @@ def handle_dcard_web(prefix_msg, user_id, text, must_be_text):
     return None
 
 def handle_youtube_web(prefix_msg, user_id, text, must_be_text):
-    if re.search(Tools.KEYWORD_YOUTUBE[0], text.lower()):
-        youtube, status = Q_YT.YT_Read_Document(text.lower())
+    if re.search(Tools.KEYWORD_YOUTUBE[0], text):
+        youtube, status = Q_YT.YT_Read_Document(text)
 
         if prefix_msg:
-            prefix_msg = f"{prefix_msg}「 {text.lower()} 」\n"
+            prefix_msg = f"{prefix_msg}「 {text} 」\n"
         else:
             prefix_msg = f"所輸入的"
 
