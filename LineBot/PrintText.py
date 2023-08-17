@@ -27,7 +27,7 @@ notice_text = ""
 
 
 def clear_user_record():
-    Personal_Clear_SingleTag("佈告欄", False)
+    Personal_Clear_SingleTag("佈告欄", 0)
     return
 
 
@@ -41,7 +41,7 @@ def check_user_need_news(user_id) -> bool:
     if Personal_Read_Document(user_id, "佈告欄"):
         return False
 
-    Personal_Update_SingleTag(user_id, "佈告欄", Value=True)
+    Personal_Update_SingleTag(user_id, "佈告欄")
 
     return True
 
