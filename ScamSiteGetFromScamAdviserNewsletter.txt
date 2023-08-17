@@ -3,6 +3,7 @@
 #||amazonaws.com^
 #||rb.gy^
 #||windows.net^
+||135.148.27.211^
 ||15.204.30.184^
 ||45.88.169.3^
 ||5onsup.online^
@@ -12,6 +13,7 @@
 ||acedeliveryexpress.com^
 ||adaptivelearninglabs.com^
 ||afsgltd.com^
+||aiprojectinc.com^
 ||akashgowdaracing.com^
 ||alevsesli.net^
 ||alkaliserelettermantellone.com^
@@ -81,6 +83,7 @@
 ||covidtestingscreening.com^
 ||customerservice.com^
 ||cutt.ly^
+||dancaster.tech^
 ||dancokersmemek23.online^
 ||ddlnk.net^
 ||dfghghfgghjghighj.synology-ds.de^
@@ -88,6 +91,7 @@
 ||did.li^
 ||digitaloceanspaces.com^
 ||dominke.site^
+||dreclaude.com^
 ||dsixsfe.beauty^
 ||dubaitailoring.com^
 ||dweb.link^
@@ -186,6 +190,7 @@
 ||mppqosi.live^
 ||mudbreak.com^
 ||munarohh.com^
+||mydreamvoice.com^
 ||mywhiskeyshop.com^
 ||myworkspace00e0c.myclickfunnels.com^
 ||naytdinlevertiti.com^
@@ -213,6 +218,7 @@
 ||patternlikeannaunasserted.com^
 ||pemsv30.net^
 ||personalpeaceretreats.com^
+||pfizer-globalsupplies.com^
 ||pfizergroup.be^
 ||pfizersgroup.com^
 ||phatdigits.com^
@@ -270,6 +276,7 @@
 ||testes-glasses.com^
 ||tightyghoul.com^
 ||torezar-logistic.com^
+||translate.goog^
 ||traplightly.com^
 ||traun-logistic.com^
 ||trendytrainer.com^
@@ -308,6 +315,7 @@
 ||xfinitynewterms5.godaddysites.com^
 ||yisjx.buzz^
 ||yoqusts.com^
+||yorkshirecapitalbnk.com^
 ||yosoft.company.site^
 ||yosoftinfo.online^
 ||yougetgreen.com^
