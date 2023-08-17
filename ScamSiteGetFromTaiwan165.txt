@@ -388,6 +388,7 @@
 ||alowing.xyz^
 ||alpha-finace.com^
 ||alphapremiumfx.com^
+||alphaprideinvestment.com^
 ||altive.net^
 ||altobbc.com^
 ||alyforex.co^
@@ -543,6 +544,7 @@
 ||artfunfa88.com^
 ||artxx9.com^
 ||asawcdaa.xyz^
+||ascendex.top^
 ||ascendexdecred.com^
 ||asdfgbcn.com^
 ||asfggbb.top^
@@ -907,6 +909,7 @@
 ||bitrich555.top^
 ||bitrue.finance^
 ||bitrue.vip^
+||bitruecrypto.com^
 ||bitsetc.net^
 ||bitsguss.com^
 ||bitsheng.top^
@@ -1427,6 +1430,8 @@
 ||coinitems.com^
 ||coinivs.com^
 ||coinivst.com^
+||coinjarq.com^
+||coinjarr.com^
 ||coinlistusdtzc.com^
 ||coinlistusdtzd.com^
 ||coinmamausda.com^
@@ -1546,12 +1551,14 @@
 ||crossglobalshop.top^
 ||crossglobalshop.vip^
 ||crypto356.cc^
+||cryptoassests.com^
 ||cryptobch.xyz^
 ||cryptobtx.com^
 ||cryptobtx.net^
 ||cryptobulls-ap.com^
 ||cryptobulls-ap.net^
 ||cryptocurrencytradebitcored.com^
+||cryptodefi-web3.com^
 ||cryptoisland-btc.life^
 ||cryptomaxc.com^
 ||cs-bit.com^
@@ -1810,6 +1817,7 @@
 ||dldownload4.com^
 ||dlodq.com^
 ||dmallshopping.com^
+||dmcc-ethrco.com^
 ||dmmbitcoin.co^
 ||dmmbitcoin.io^
 ||dmv4tracing.com^
@@ -2608,6 +2616,7 @@
 ||gggbbbn.com^
 ||ggohexp.com^
 ||ghhebay.com^
+||ghpxy.com^
 ||gia091.com^
 ||gia1788.com^
 ||gia36.com^
@@ -2936,9 +2945,11 @@
 ||hkbtcjyw.com^
 ||hkcae.org^
 ||hkcp75.cc^
+||hkcwlot.com^
 ||hkd1668-t.xyz^
 ||hkhrcf.com^
 ||hki13.com^
+||hklottoin.com^
 ||hklusdt.com^
 ||hkmssmsab.com^
 ||hkredcross.top^
@@ -3461,6 +3472,7 @@
 ||jsc168.net^
 ||jscoin8.com^
 ||jsdranbing.com^
+||jsforex21.com^
 ||jsforex73.com^
 ||jsforex89.com^
 ||jsgj6788.com^
@@ -3788,6 +3800,7 @@
 ||leo777vertexxs.com^
 ||leoicns.com^
 ||leshangchao878.top^
+||leta-shop.com^
 ||letan168.com^
 ||letany88.com^
 ||letiandk.xyz^
@@ -3810,6 +3823,7 @@
 ||liacexs.com^
 ||lianbang0.xyz^
 ||lianfa168.net^
+||lianfgold.com^
 ||lianhuida.com^
 ||lianzi.me^
 ||librge.com^
@@ -3930,6 +3944,7 @@
 ||m84.icu^
 ||m89.net^
 ||ma897.top^
+||macao9017.com^
 ||macrostock.tw^
 ||macubyues.com^
 ||madonlinemart.com^
@@ -3976,6 +3991,7 @@
 ||maxnfttw.com^
 ||maxwayco.com^
 ||maxwinote.com^
+||mazonshopm.com^
 ||mazonshops.com^
 ||mbekgac.xyz^
 ||mbgoo.com^
@@ -4025,6 +4041,7 @@
 ||memhds.com^
 ||mengkeyu.com^
 ||merbcu.com^
+||mercadobltcoinlas.com^
 ||mercadolibre-mallshop.com^
 ||mercadolibref10.com^
 ||mercadolibref8.com^
@@ -5854,6 +5871,7 @@
 ||trongry.com^
 ||tronim.com^
 ||tronjreg.com^
+||tronminingfarm.com^
 ||tronnesz.com^
 ||tronrenu.com^
 ||tronsav.com^
