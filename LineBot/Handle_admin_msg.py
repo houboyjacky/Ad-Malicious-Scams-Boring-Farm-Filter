@@ -98,16 +98,12 @@ def handle_line_id(user_id, text):
 
 
 def handle_line_web(user_id, text):
-    match = re.search(Tools.KEYWORD_LINE_INVITE[0], text.lower())
-    if match:
-        line_id = match.group(1)
+    if re.search(Tools.KEYWORD_LINE_INVITE[0], text.lower()):
         Personal_Update_SingleTag(user_id, "LINE_INVITE", SUB_TAGNAME="管理次數")
         return Q_LINEWEB.lineinvite_Write_Document(text)
-    match = re.search(Tools.KEYWORD_LINE_INVITE[1], text.lower())
-    if match:
-        line_id = match.group(1)
+    if re.search(Tools.KEYWORD_LINE_INVITE[1], text.lower()):
         Personal_Update_SingleTag(user_id, "LINE_INVITE", SUB_TAGNAME="管理次數")
-        return Q_LINEWEB.lineinvite_Write_Document(text)
+        return Q_LINEWEB.lineinvite_Delete_Document(text)
     return None
 
 
@@ -321,6 +317,7 @@ def handle_youtube(user_id, text):
         Personal_Update_SingleTag(user_id, "YouTube", SUB_TAGNAME="管理次數")
         return Q_YT.YT_Delete_Document(text)
     return None
+
 
 def handle_website(user_id, text):
     if match := re.search(Tools.KEYWORD_URL[0], text.lower()):

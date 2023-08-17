@@ -1,6 +1,7 @@
 # 歷史更新 History Update
 
 * 20230817 Update
+  * 修復 刪除LINE邀請網址指令無效
   * 調整 判斷LINE網址的原始數據可能有誤
 
 * 20230816 Update
