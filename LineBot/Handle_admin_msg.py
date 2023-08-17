@@ -410,7 +410,6 @@ def handle_admin_msg(user_id, orgin_text):
     if orgin_text == "重讀":
         Tools.reloadSetting()
         reload_notice_board()
-        clear_user_record()
         BLACK.update_local_Blacklist()
         logger.info("Reload setting.json")
         rmessage = "設定已重新載入"

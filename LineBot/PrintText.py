@@ -35,6 +35,7 @@ def check_user_need_news(user_id) -> bool:
 
     # 如果沒有要公佈，不需要檢查後續
     if Tools.is_file_len(Tools.NOTICE_BOARD) == 0:
+        clear_user_record()
         return False
 
     # 如果已經發過公布，就會在紀錄上
