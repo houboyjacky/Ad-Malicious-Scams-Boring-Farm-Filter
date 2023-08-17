@@ -121,6 +121,9 @@ def analyze_line_invite_url(user_text: str) -> Optional[dict]:
             logger.error('無法解析類別')
             return None
 
+        if "\n" in orgin_text:
+            orgin_text = orgin_text.split('\n')[0]
+
         struct = {"類別": category, "帳號": invite_code, "來源": orgin_text,
                   "回報次數": 0, "失效": 0, "檢查者": "", "加入日期": datetime}
 
