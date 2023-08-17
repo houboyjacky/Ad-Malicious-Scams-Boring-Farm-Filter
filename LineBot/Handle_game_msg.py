@@ -39,38 +39,25 @@ import Query_Youtube as Q_YT
 import Tools
 from Personal_Rec import Personal_Update_SingleTag, Personal_Data_Query
 
-FB_list_len = 0
-IG_list_len = 0
-line_invites_list_len = 0
-Twitter_list_len = 0
-Tiktok_len = 0
-SmallRedBook_len = 0
-YouTube_len = 0
 
+Random_items = []
+Random_weights = []
 
-def Random_get_List(UserID):
-    global FB_list_len, IG_list_len, line_invites_list_len, Twitter_list_len, Tiktok_len, SmallRedBook_len
-    if not FB_list_len:
-        FB_list_len = Q_FB.get_fb_list_len()
-        logger.info(f"FB_list_len = {FB_list_len}")
-    if not IG_list_len:
-        IG_list_len = Q_IG.get_ig_list_len()
-        logger.info(f"IG_list_len = {IG_list_len}")
-    if not line_invites_list_len:
-        line_invites_list_len = Q_LINEWEB.get_line_invites_list_len()
-        logger.info(f"line_invites_list_len = {line_invites_list_len}")
-    if not Twitter_list_len:
-        Twitter_list_len = Q_TR.get_Twitter_list_len()
-        logger.info(f"Twitter_list_len = {Twitter_list_len}")
-    if not Tiktok_len:
-        Tiktok_len = Q_TT.get_Tiktok_list_len()
-        logger.info(f"Tiktok_len = {Tiktok_len}")
-    if not SmallRedBook_len:
-        SmallRedBook_len = Q_SRB.get_SmallRedBook_list_len()
-        logger.info(f"SmallRedBook_len = {SmallRedBook_len}")
-    if not YouTube_len:
-        YouTube_len = Q_YT.get_yt_list_len()
-        logger.info(f"YouTube_len = {YouTube_len}")
+def Random_Weight():
+    FB_list_len = Q_FB.get_fb_list_len()
+    logger.info(f"FB_list_len = {FB_list_len}")
+    IG_list_len = Q_IG.get_ig_list_len()
+    logger.info(f"IG_list_len = {IG_list_len}")
+    line_invites_list_len = Q_LINEWEB.get_line_invites_list_len()
+    logger.info(f"line_invites_list_len = {line_invites_list_len}")
+    Twitter_list_len = Q_TR.get_Twitter_list_len()
+    logger.info(f"Twitter_list_len = {Twitter_list_len}")
+    Tiktok_len = Q_TT.get_Tiktok_list_len()
+    logger.info(f"Tiktok_len = {Tiktok_len}")
+    SmallRedBook_len = Q_SRB.get_SmallRedBook_list_len()
+    logger.info(f"SmallRedBook_len = {SmallRedBook_len}")
+    YouTube_len = Q_YT.get_yt_list_len()
+    logger.info(f"YouTube_len = {YouTube_len}")
 
     items = ["FB", "IG", "LINE", "TWITTER", "TIKTOK", "SMALLREDBOOK", "YOUTUBE"]
     weights = []
@@ -82,7 +69,14 @@ def Random_get_List(UserID):
     weights.append(SmallRedBook_len)
     weights.append(YouTube_len)
 
-    selected_item = random.choices(items, weights=weights)[0]
+    return items, weights
+
+def Random_get_List(UserID):
+    global Random_items, Random_weights
+    if not Random_items or not Random_weights:
+        Random_items, Random_weights = Random_Weight()
+
+    selected_item = random.choices(Random_items, weights=Random_weights)[0]
     logger.info(f"selected_item = {selected_item}")
     if selected_item == "FB":
         return Q_FB.get_random_fb_blacklist(UserID)
