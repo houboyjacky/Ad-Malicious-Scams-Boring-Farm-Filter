@@ -64,13 +64,18 @@ handler = WebhookHandler(Tools.CHANNEL_SECRET)
 # Request 設定
 # ================
 
-def make_record(req):
+def get_remoteip(req):
     ip_address = req.remote_addr
 
     for cf_ip in CF_IPS:
         if ipaddress.IPv4Address(req.remote_addr) in ipaddress.ip_network(cf_ip):
             ip_address = req.headers.get('CF-Connecting-IP')
             break
+    return ip_address
+
+
+def make_record(req):
+    ip_address = get_remoteip(req)
 
     chinese_city, chinese_region, chinese_country = Query_API.WhereAreYou(
         ip_address)
