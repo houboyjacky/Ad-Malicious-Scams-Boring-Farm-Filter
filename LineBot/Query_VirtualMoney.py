@@ -34,8 +34,12 @@ Name = "虛擬貨幣"
 def analyze_Virtual_Money_url(user_text: str) -> Optional[dict]:
 
     logger.info(f"user_text: {user_text}")
+
     match = re.match(Tools.KEYWORD_VIRTUAL_MONEY[3], user_text)
     address = match.group(1)
+
+    if "." in address:
+        return None
 
     if address.startswith("1"):
         currency = "BTC"
@@ -103,10 +107,13 @@ def Virtual_Money_Read_Document(user_text: str):
         status = -1
 
     if not rmessage:
-        rmessage = f"{Name}地址\n「 {analyze['地址']} 」"
-        result, _ = checkFromChainsight(analyze['地址'])
-        if result:
-            rmessage = f"{Name}地址\n「 {analyze['地址']} 」\n{result}"
+        if status >= 0 :
+            rmessage = f"{Name}地址\n「 {analyze['地址']} 」"
+            result, _ = checkFromChainsight(analyze['地址'])
+            if result:
+                rmessage = f"{Name}地址\n「 {analyze['地址']} 」\n{result}"
+        else :
+            rmessage = f"你所輸入的「 {user_text} 」"
 
     return rmessage, status
 

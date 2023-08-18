@@ -56,9 +56,13 @@ def min_reply_text(status):
 
 def handle_virtual_money(user_id, text, must_be_text):
     if re.match(Tools.KEYWORD_VIRTUAL_MONEY[0], text):
-       # 查詢虛擬貨幣
+        # 查詢虛擬貨幣
         msg, status = Q_VM.Virtual_Money_Read_Document(text)
         Personal_Update_SingleTag_Query(user_id, "虛擬貨幣", status)
+
+        if status == -1:
+            return f"{msg}有誤\n請勿輸入網址\n確認是否為虛擬貨幣地址\n感恩"
+
         if must_be_text:
             return min_reply_text(status)
         return Handle_LineBot.message_reply_Query(user_id, status, "虛擬貨幣地址", msg, text)
