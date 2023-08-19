@@ -115,3 +115,6 @@
 @@||fbs.com.tw^
 @@||8891.com.tw^
 @@||imoney.com.tw^
+@@||pionex.com^
+@@||chb.com.tw^
+@@||shop.com^
