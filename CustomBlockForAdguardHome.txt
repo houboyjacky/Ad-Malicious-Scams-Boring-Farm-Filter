@@ -2437,7 +2437,6 @@
 ||metaliveapp.com^
 ||metalss539.com^
 ||metaquote.site^
-||metasleuth.io^
 ||metaspacefarmer.com^
 ||metaspacegarden.com^
 ||mether.vip^
