@@ -11,6 +11,7 @@
 #||aliyuncs.com^
 #||apple.com^
 #||bitfinex.com^
+#||bznk.com^
 #||cloudfront.net^
 #||digitalocean.com^
 #||easy.co^
@@ -5796,7 +5797,6 @@
 ||bzex.me^
 ||bzex.pro^
 ||bzexpro.com^
-||bznk.com^
 ||bzoneg.vip^
 ||bzzmt.com^
 ||c-expertersaccess.com^
