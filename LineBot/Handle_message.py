@@ -200,27 +200,27 @@ def handle_message_image(event):
 
         rmessage += f"網站：\n{website_msg}\n\n耗時：{elapsed_time_str}\n\n判斷文字：\n{text_msg}"
         Handle_LineBot.message_reply(event, rmessage)
-    elif Tools.IsAdmin(user_id):
-        # 取得開始時間
-        start_time = time.time()
+    # elif Tools.IsAdmin(user_id):
+    #     # 取得開始時間
+    #     start_time = time.time()
 
-        Similarity = Query_Image.Search_Same_Image(filename)
+    #     Similarity = Query_Image.Search_Same_Image(filename)
 
-        # 取得結束時間
-        end_time = time.time()
+    #     # 取得結束時間
+    #     end_time = time.time()
 
-        # 計算耗時
-        elapsed_time = end_time - start_time
+    #     # 計算耗時
+    #     elapsed_time = end_time - start_time
 
-        # 轉換格式
-        elapsed_time_str = Tools.format_elapsed_time(elapsed_time)
+    #     # 轉換格式
+    #     elapsed_time_str = Tools.format_elapsed_time(elapsed_time)
 
-        if Similarity < 10000:
-            return
+    #     if Similarity < 10000:
+    #         return
 
-        rmessage = f"系統自動辨識：\n該照片與詐騙，相似度程度高，請特別留意\n"
-        rmessage += f"查詢耗時：{elapsed_time_str}"
-        Handle_LineBot.message_reply(event, rmessage)
+    #     rmessage = f"系統自動辨識：\n該照片與詐騙，相似度程度高，請特別留意\n"
+    #     rmessage += f"查詢耗時：{elapsed_time_str}"
+    #     Handle_LineBot.message_reply(event, rmessage)
 
     return
 
