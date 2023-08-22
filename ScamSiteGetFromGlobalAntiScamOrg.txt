@@ -34,6 +34,7 @@
 #||tmall.hk^
 #||tradingview.com^
 #||twca.com.tw^
+#||url.cn^
 #||webnode.tw^
 #||weebly.com^
 #||wixsite.com^
@@ -25743,7 +25744,6 @@
 ||urbandotshipping.us^
 ||urbangrowthinvestment.com^
 ||ureg.app^
-||url.cn^
 ||url17.com^
 ||ursowrong.com^
 ||us-dt.com^
