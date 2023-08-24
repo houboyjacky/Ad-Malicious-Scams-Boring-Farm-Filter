@@ -171,8 +171,7 @@
 /shopping-[a-z]+\.com/
 /shoppingmall[0-9]*\.xyz/
 /shopvip-?[a-z]{0-2}\.[a-z]+/
-/sichcapital[a-z0-9]+.com/
-/sichcapital[a-z0-9]+x\.com/
+/sichcapital[a-z0-9]+\.com/
 /snx.+\.com/
 /so[0-9]+\.com/
 /sotck[a-z]+\.com/
