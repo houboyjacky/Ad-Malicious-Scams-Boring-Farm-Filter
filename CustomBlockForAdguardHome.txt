@@ -35,9 +35,12 @@
 ||11silo.com^
 ||11st.co.kr^
 ||11stm.com^
+||11stm.shop^
+||11stw.asia^
 ||11stw.com^
 ||11stw.shop^
 ||11stwn.com^
+||11stwn.shop^
 ||1234fm.com^
 ||123mediax.com^
 ||127hy34.top^
@@ -233,6 +236,7 @@
 ||agfafaffaue.com^
 ||aggef.shop^
 ||agotoshop.com^
+||agwyshop.online^
 ||ahc.ink^
 ||aholicment.top^
 ||ai-internationale.com^
@@ -473,6 +477,7 @@
 ||bitcore.vg^
 ||bitedax.com^
 ||bitekrc.com^
+||bitermt.com^
 ||biteuse.com^
 ||bitewdv.com^
 ||bitewtx.com^
@@ -718,6 +723,7 @@
 ||cchcg.com^
 ||ccmmamh.com^
 ||ccmnn746.com^
+||ccsscostcoz.com^
 ||ccwin13.com^
 ||cdbdyl.cn^
 ||cdcamge.com^
@@ -833,6 +839,7 @@
 ||coinatcanna.com^
 ||coinatpool.com^
 ||coinbasewallet.news^
+||coindexchange.cc^
 ||coineea.com^
 ||coinettc.com^
 ||coineuj.com^
@@ -855,6 +862,7 @@
 ||coinupusa.com^
 ||coinvwa.com^
 ||coinweb.icu^
+||coinyct.vip^
 ||coiretuia.com^
 ||coise.shop^
 ||coiwehes.com^
@@ -920,6 +928,7 @@
 ||cuanthebcr.com^
 ||cuiaethebcr.com^
 ||cultivaterenet.top^
+||cultivatewebsite.top^
 ||cumenod.com^
 ||currencyinfo.net^
 ||curtailcredible.cn^
@@ -1023,6 +1032,7 @@
 ||dexiangaa.top^
 ||deztw.com^
 ||dfex.cc^
+||dfhgfhg.com^
 ||dfi-moneyac.com^
 ||dfi-moneyah.com^
 ||dfi-moneybk.com^
@@ -1345,6 +1355,7 @@
 ||feike.shop^
 ||feinvestmen.com^
 ||fenggai.top^
+||fenus.xyz^
 ||fenzxct.cn^
 ||ferc-neitw.online^
 ||ferrososymetales.com^
@@ -1414,6 +1425,7 @@
 ||flassets.com.tw^
 ||flc1x.top^
 ||flirt.com^
+||flkliu.top^
 ||floramo.club^
 ||flowlikeagorilla.com^
 ||flyhighway.xyz^
@@ -1445,6 +1457,7 @@
 ||ftmhi.com^
 ||ftvip01.com^
 ||ftvnews.com.tw^
+||ftxtask.com^
 ||fu99.net^
 ||fubona-verify.top^
 ||fucgov.tv^
@@ -1974,6 +1987,7 @@
 ||jakifloraldesign-tw.com^
 ||jamercari.com^
 ||jauty.shop^
+||jbbfin.com^
 ||jbhaae.com^
 ||jbpin.com^
 ||jbuhcu.top^
@@ -2051,6 +2065,8 @@
 ||joy.link^
 ||jp-postghc.com^
 ||jplove-shop.com^
+||jpmgine.pw^
+||jpmgvc.top^
 ||jpustdpay.online^
 ||jqhwebhsq.com^
 ||jrndo12.vip^
@@ -2115,6 +2131,7 @@
 ||kavatsimax.com^
 ||kavatsipro.com^
 ||kbb.tw^
+||kcmeth.com^
 ||kcoinhome.com^
 ||kcraeres.com^
 ||kcreso.com^
@@ -2290,6 +2307,7 @@
 ||likesyou.org^
 ||limcunrs.shop^
 ||limingdadi.website^
+||lin-service.life^
 ||lindayang725.com^
 ||line.lat^
 ||linedtry.com^
@@ -2419,6 +2437,7 @@
 ||marketdatasystems.com^
 ||maroc1001nuits.com^
 ||marvininfor.online^
+||mastercardvip.com^
 ||mastercardvip.tw^
 ||mastermysan.com^
 ||mateloveri.com^
@@ -2703,6 +2722,7 @@
 ||nswau.link^
 ||nutribio-expert.fr^
 ||nuvaclass.com^
+||nvbhdfs.com^
 ||nvjdnbak.com^
 ||nwfkgw.top^
 ||nwths.shop^
@@ -3018,6 +3038,7 @@
 ||qvixgb.top^
 ||qvlwnk.shop^
 ||qwer21.oss-ap-southeast-1.aliyuncs.com^
+||qws1.fun^
 ||qxiaoyu.site^
 ||qxmaqs.bond^
 ||qyhost168.com^
@@ -3054,6 +3075,7 @@
 ||re-captha-version-3-21.top^
 ||realgame.ink^
 ||rebuildemporium.online^
+||receive-finish.cloud^
 ||recoveryclasp.cn^
 ||red-mall.shop^
 ||reefbifd.com^
@@ -3284,6 +3306,7 @@
 ||shoppkurn.shop^
 ||shoppme.xyz^
 ||shopppkaojggdfg.store^
+||shopprtgd.shop^
 ||shoppthe.shop^
 ||shoppust.shop^
 ||shoppvjs.shop^
@@ -3371,6 +3394,7 @@
 ||spotirfy-help-b49b36.ingress-bonde.ewp.live^
 ||spreadexfx.com^
 ||sproutysocial.com^
+||spsunteccity.com^
 ||spvivocity.com^
 ||square.site^
 ||srebc-ex.com^
@@ -3387,6 +3411,7 @@
 ||staicd.com^
 ||staioiled.com^
 ||staioils.com^
+||stand11.com^
 ||starcitizen.pub^
 ||starexchangef.com^
 ||starexchangeg.com^
@@ -3432,6 +3457,7 @@
 ||stugov.tv^
 ||subadhra.live^
 ||suckhoegold.store^
+||sueoi.com^
 ||sugarpar.com^
 ||sugarpro.online^
 ||sugomeet.com^
@@ -3458,6 +3484,7 @@
 ||surgetrader.com^
 ||susanacarpintero.com^
 ||suucceessfultrruust.shop^
+||suyepshop.com^
 ||suyueservice.com^
 ||svipgx.com^
 ||svisn.tw^
@@ -3624,6 +3651,7 @@
 ||tkmallbuy.xyz^
 ||tldfyuid.com^
 ||tlmyk.com^
+||tloa0827fvlapnsr.pro^
 ||tlpoy.top^
 ||tmallbuy.xyz^
 ||tmallsh.com^
@@ -3684,6 +3712,7 @@
 ||trendgsd.com^
 ||trendjio.com^
 ||trendowa.com^
+||trendpro.club^
 ||trendrgy.com^
 ||trendvew.com^
 ||treuie.com^
@@ -3755,6 +3784,7 @@
 ||tw-heimao.top^
 ||tw-mercadolibre-obe.com^
 ||tw-mvdis.xyz^
+||tw-mvdls.icu^
 ||tw-news.shop^
 ||tw-njhi.top^
 ||tw-njhi.xyz^
@@ -3922,6 +3952,7 @@
 ||uepluoareos.com^
 ||uepluooss.com^
 ||uepluss.com^
+||uevuseoes.com^
 ||uevuseors.com^
 ||uevuseoryes.com^
 ||uevuser.com^
@@ -3974,6 +4005,7 @@
 ||uspsposost.com^
 ||ussaisosad.shop^
 ||uswcxose.vip^
+||utgggo.online^
 ||utube.tw^
 ||utubedha.vip^
 ||utubehb.vip^
@@ -4064,6 +4096,7 @@
 ||vousah.shop^
 ||vowepcd.club^
 ||vpower12.com^
+||vpqkuf.top^
 ||vpwaa.top^
 ||vqdfh.online^
 ||vrhqeijahxa.com^
@@ -4172,8 +4205,10 @@
 ||wiocdsd.world^
 ||wishmalls.net^
 ||wix.com^
+||wjaosfjkg.com^
 ||wjewym38189.com^
 ||wjgvb.com^
+||wkeratc.top^
 ||wkpszs.shop^
 ||wlkfg.com^
 ||wlrsoiq.com^
