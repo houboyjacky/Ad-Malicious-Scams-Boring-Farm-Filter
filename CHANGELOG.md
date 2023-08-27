@@ -1,5 +1,7 @@
 # 歷史更新 History Update
 
+* 20230828 Update
+  * 加入 Google APP網址判斷
 * 20230825 Update
   * 更新 165反詐騙諮詢專線-詐騙LINE ID(~112/08/25)
   * 更新 個人不想看與網友回報廣告或網站

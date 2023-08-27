@@ -405,6 +405,10 @@ def handle_web(prefix_msg, user_id, text, must_be_text):
         Personal_Update_SingleTag(user_id, "文字")
         logger.info(f"AppStore的App網址")
         return None
+    if re.match(Tools.KEYWORD_URL[6], text.lower()):
+        Personal_Update_SingleTag(user_id, "文字")
+        logger.info(f"Google Play的App網址")
+        return None
     if re.match(Tools.KEYWORD_URL[2], text.lower()):
         if not prefix_msg:
             prefix_msg = "所輸入的"
