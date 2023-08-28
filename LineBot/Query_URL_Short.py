@@ -55,7 +55,7 @@ def resolve_redirects_Webdriver(short_url):
         }
     }
     options.add_experimental_option('prefs',prefs)
-    options.binary_location = Tools.CHROMEDRIVER_PATH
+    #options.binary_location = Tools.CHROMEDRIVER_PATH
 
     try:
         service = webdriver.chrome.service.Service(log_path=Tools.CHROMEDRIVER_LOG)
