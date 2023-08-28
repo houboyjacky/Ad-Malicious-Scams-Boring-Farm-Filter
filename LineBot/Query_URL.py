@@ -393,10 +393,12 @@ def user_query_website_by_DNS(domain_name, result_list, lock):
                 logger.error(f"An error occurred: {e}")
                 error_message = str(e)
 
+                pattern = re.compile(r"Creation Date: (\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z)", re.IGNORECASE)
+
                 if "No match" in error_message:
                     # 沒有這個網址
                     pass
-                elif creation_date_match := re.search(r"Creation Date: (\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z)", error_message):
+                elif creation_date_match := pattern.search(error_message):
                     creation_date = creation_date_match.group(1)
                     whois_creation_date = re.sub(r"[^\d]", "", creation_date)
                     whois_domain = domain_name
