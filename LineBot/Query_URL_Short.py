@@ -240,7 +240,8 @@ def Resolve_Redirects(url):
     try:
         response = urlopen(url, context=context, timeout=timeout)
         final_url = response.geturl()
-        if final_url != url:
+        _, domain2, suffix2 = Tools.domain_analysis(final_url)
+        if final_url != url and domain2 != domain and suffix2 != suffix:
             logger.info(f"final_url urlopen = {final_url}")
             return final_url
     except (HTTPError, URLError) as e:
@@ -254,8 +255,8 @@ def Resolve_Redirects(url):
             final_url = response.headers['Location']
         else:
             final_url = response.url
-
-        if final_url != url:
+        _, domain2, suffix2 = Tools.domain_analysis(final_url)
+        if final_url != url and domain2 != domain and suffix2 != suffix:
             logger.info(f"final_url no redirects = {final_url}")
             return final_url
     except requests.exceptions.RequestException as e:
@@ -264,7 +265,8 @@ def Resolve_Redirects(url):
     try:
         response = requests.get(url, allow_redirects=True)
         final_url = response.url
-        if final_url != url:
+        _, domain2, suffix2 = Tools.domain_analysis(final_url)
+        if final_url != url and domain2 != domain and suffix2 != suffix:
             logger.info(f"final_url using redirects = {final_url}")
             return final_url
     except requests.exceptions.RequestException as e:
