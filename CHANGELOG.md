@@ -1,5 +1,8 @@
 # 歷史更新 History Update
 
+* 20230829 Update
+  * 調整 網羅詐騙網址
+
 * 20230828 Update
   * 加入 Google APP網址判斷
   * 更新 個人不想看與網友回報廣告或網站

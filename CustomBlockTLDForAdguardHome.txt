@@ -186,6 +186,7 @@
 /taiwanstartr.+\.com/
 /tanaka[a-z]+\.com/
 /tesseract[0-9]{3}\.top/
+/tgr[0-9]+\.com/
 /thinkmark.+\.com/
 /tickmilltw.*\.xyz/
 /tk[0-9]\.shop/
