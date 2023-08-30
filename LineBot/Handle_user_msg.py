@@ -383,6 +383,7 @@ def handle_dcard_web(prefix_msg, user_id, text, must_be_text):
             return Handle_LineBot.message_reply_Query(user_id, status, "Dcard", dcard, text.lower())
     return None
 
+
 def handle_youtube_web(prefix_msg, user_id, text, must_be_text):
     if re.search(Tools.KEYWORD_YOUTUBE[0], text):
         youtube, status = Q_YT.YT_Read_Document(text)
@@ -409,11 +410,17 @@ def handle_web(prefix_msg, user_id, text, must_be_text):
     if re.match(Tools.KEYWORD_URL[5], text.lower()):
         Personal_Update_SingleTag(user_id, "文字")
         logger.info(f"AppStore的App網址")
-        return None
+        return (f"所輸入的是\n"
+                f"AppStore的App網址\n"
+                f"目前不支援查詢\n"
+                f"感恩")
     if re.match(Tools.KEYWORD_URL[6], text.lower()):
         Personal_Update_SingleTag(user_id, "文字")
         logger.info(f"Google Play的App網址")
-        return None
+        return (f"所輸入的是\n"
+                f"Google Play的App網址\n"
+                f"目前不支援查詢\n"
+                f"感恩")
     if re.match(Tools.KEYWORD_URL[2], text.lower()):
         if not prefix_msg:
             prefix_msg = "所輸入的"
