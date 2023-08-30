@@ -257,6 +257,11 @@ def handle_ig_web(prefix_msg, user_id, text, must_be_text):
 
 
 def handle_telegram_web(_, user_id, text, must_be_text):
+    if re.search(Tools.KEYWORD_TELEGRAM_URL[3], text.lower()):
+        return (f"所輸入的\n「 {text} 」\n"
+                f"是 Telegram 群組\n"
+                f"目前不支援查詢\n"
+                f"感恩")
     if re.search(Tools.KEYWORD_TELEGRAM_URL[0], text.lower()):
         telegram_id, status = Q_TG.Telegram_Read_Document(text.lower())
         if status == -1:

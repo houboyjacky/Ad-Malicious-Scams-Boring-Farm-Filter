@@ -1,5 +1,8 @@
 # 歷史更新 History Update
 
+* 20230830 Update
+  * 調整 Telegram網址判別
+
 * 20230829 Update
   * 調整 網羅詐騙網址
 
