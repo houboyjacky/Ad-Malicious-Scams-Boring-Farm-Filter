@@ -101,6 +101,7 @@
 ||encorevet.us^
 ||energybills-grantscheme.com^
 ||engineercoin.xyz^
+||exnmobil.com^
 ||extbancabrtyun.net^
 ||exusnefte.com^
 ||f0undlth3r3.link^
@@ -132,6 +133,7 @@
 ||ilenoyo.com^
 ||illyimport.com^
 ||imodz.click^
+||infura-ipfs.io^
 ||inovatik.com^
 ||interia.pl^
 ||intuit.ws^
@@ -222,6 +224,7 @@
 ||pfizergroup.be^
 ||pfizersgroup.com^
 ||phatdigits.com^
+||pos-zip.top^
 ||posstamp.com^
 ||pouheds.shop^
 ||premiuminsuranceassets.com^
@@ -235,6 +238,8 @@
 ||redeliverys.com^
 ||refforalupop.com^
 ||rephotomail.com^
+||research-opinions.com^
+||research-polls.com^
 ||rotadoscabelos.com^
 ||rusita.uk^
 ||sawariyacargopackersmovers.co.in^
@@ -303,6 +308,7 @@
 ||venmo-report6.support^
 ||viewschedule-ups.com^
 ||vipgadget.shop^
+||vipgadget.store^
 ||vortex-cargo.com^
 ||walesgerbils.com^
 ||webmunarohh.com^
@@ -319,6 +325,7 @@
 ||yosoft.company.site^
 ||yosoftinfo.online^
 ||yougetgreen.com^
+||zanuzwikuq.cfd^
 ||zenkit.com^
 ||zincatetumpil.com^
 ||zstvoip.com^
