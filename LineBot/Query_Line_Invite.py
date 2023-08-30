@@ -47,6 +47,9 @@ def analyze_line_invite_url(user_text: str) -> Optional[dict]:
     user_text = user_text.replace("%40", "@")
     user_text = user_text.replace("刪除", "")
 
+    if "\n" in user_text:
+        user_text = user_text.split('\n')[0]
+
     orgin_text = user_text
     lower_text = user_text.lower()
 
@@ -120,9 +123,6 @@ def analyze_line_invite_url(user_text: str) -> Optional[dict]:
         else:
             logger.error('無法解析類別')
             return None
-
-        if "\n" in orgin_text:
-            orgin_text = orgin_text.split('\n')[0]
 
         struct = {"類別": category, "帳號": invite_code, "來源": orgin_text,
                   "回報次數": 0, "失效": 0, "檢查者": "", "加入日期": datetime}
