@@ -39,6 +39,8 @@ def analyze_Telegram_url(user_text: str) -> Optional[dict]:
 
     if match := re.search(Tools.KEYWORD_TELEGRAM_URL[0], user_text):
         Username = match.group(1)
+    elif match := re.search(Tools.KEYWORD_TELEGRAM_ID[0], user_text):
+        Username = match.group(1)
     else:
         return None
 
