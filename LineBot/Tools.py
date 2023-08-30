@@ -291,6 +291,9 @@ def IsOwner(ID):
         return True
     return False
 
+def is_iso8601_format(s):
+    iso8601_pattern = re.compile(r'^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z$')
+    return bool(iso8601_pattern.match(s))
 
 def datetime_to_string(dt):
     return dt.strftime("%Y%m%d%H%M%S")

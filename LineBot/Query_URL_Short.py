@@ -25,7 +25,7 @@ from Logger import logger
 from selenium import webdriver
 from urllib.error import HTTPError, URLError
 from urllib.parse import urlparse, unquote
-from urllib.request import urlopen
+from urllib.request import urlopen, Request
 import html
 import re
 import requests
@@ -199,8 +199,9 @@ def Resolve_Redirects(url):
     _, domain, suffix = Tools.domain_analysis(url.lower())
     domain_name = f"{domain}.{suffix}"
 
-    orgin_url = url
-    url = replace_http_with_https(url)
+    if domain_name not in ("wingcast.co.kr"):
+        orgin_url = url
+        url = replace_http_with_https(url)
 
     if domain_name in Tools.NEED_HEAD_SHORT_URL_LIST:
         final_url = resolve_redirects_other(url)
@@ -232,22 +233,25 @@ def Resolve_Redirects(url):
             logger.info(f"resolve_redirects_recurlcc = {final_url}")
             return final_url
 
-    # 創建忽略 SSL 驗證錯誤的上下文
-    context = ssl.create_default_context()
-    context.check_hostname = False
-    context.verify_mode = ssl.CERT_NONE
-    timeout = 10
-    try:
-        response = urlopen(url, context=context, timeout=timeout)
-        final_url = response.geturl()
-        _, domain2, suffix2 = Tools.domain_analysis(final_url)
-        if final_url != url and domain2 != domain and suffix2 != suffix:
-            logger.info(f"final_url urlopen = {final_url}")
-            return final_url
-    except (HTTPError, URLError) as e:
-        logger.info(f"Error occurred urlopen: {e}")
-        if "DH_KEY_TOO_SMALL" in str(e):
-            url = orgin_url
+    if not domain_name.startswith("lihi"):
+        # 創建忽略 SSL 驗證錯誤的上下文
+        context = ssl.create_default_context()
+        context.check_hostname = False
+        context.verify_mode = ssl.CERT_NONE
+        timeout = 10
+        request = Request(url)
+        request.set_proxy(Tools.PROXY_SERVER, "http")  # 設置使用 http proxy
+        try:
+            response = urlopen(request, context=context, timeout=timeout)
+            final_url = response.geturl()
+            _, domain2, suffix2 = Tools.domain_analysis(final_url)
+            if final_url != url and domain2 != domain and suffix2 != suffix:
+                logger.info(f"final_url urlopen = {final_url}")
+                return final_url
+        except (HTTPError, URLError) as e:
+            logger.info(f"Error occurred urlopen: {e}")
+            if "DH_KEY_TOO_SMALL" in str(e):
+                url = orgin_url
 
     try:
         response = requests.get(url, allow_redirects=False)
