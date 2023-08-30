@@ -1,6 +1,7 @@
 # 歷史更新 History Update
 
 * 20230830 Update
+  * 更新 個人不想看與網友回報廣告或網站
   * 調整 APP查詢網址提示
   * 調整 Telegram網址判別
 

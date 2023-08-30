@@ -125,3 +125,5 @@
 @@||gov.taipei^
 @@||sbstck.com^
 @@||hct.com.tw^
+@@||justdatingapp.com^
+@@||omi.sg^
