@@ -29,6 +29,7 @@
 /aava-[a-z]+\.[a-z]/
 /aavaepro[0-9]+\.xyz
 /aclar.+\.com/
+/ai-international[a-z0-9]\.com/
 /aisme.+\.com/
 /aismex[a-z0-9].com/
 /aitechstock\.(co|tw|vip)/
