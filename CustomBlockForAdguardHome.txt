@@ -2,7 +2,6 @@
 ! 過度引用 widgetdata.tradingview.com
 ! 過度引用 www.tradingview-widget.com
 ! 疑似詐騙或不良的網站
-!||wix.com^
 #||bitoex.com^
 #||buffettonlineschool.com.tw^
 #||cht.com.tw^
@@ -10,6 +9,7 @@
 #||fontawesomes.com^
 #||ig.com^
 #||learningpa.cc^
+#||maac.io^
 #||omygod.com.tw^
 #||onelink.me^
 #||pages-wildcard.weebly.com^
@@ -17,6 +17,7 @@
 #||portaly.cc^
 #||safepal.com^
 #||shopline.tw^
+#||wix.com^
 #||wshifen.com^
 ||00000255123135324.ml^
 ||0099ee.xyz^
@@ -2560,7 +2561,6 @@
 ||m2j1.ukwwx.com^
 ||m8xyo05.top^
 ||m9ko1.com^
-||maac.io^
 ||maajiek.top^
 ||maajiek03.top^
 ||macaexe.com^
