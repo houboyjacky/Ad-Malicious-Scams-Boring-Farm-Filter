@@ -44,6 +44,7 @@
 /b9b[a-z0-9]+\.cc/
 /bagmiomio[0-9]*\.com/
 /bay-e\.(net|shop|xyz)/
+/bck[a-z0-9]vip\.com/
 /bellagio\.(casa|fun|today|work)/
 /binarium[a-z]+\.com/
 /bitcores[0-9]+\.com/
@@ -72,6 +73,7 @@
 /chung[-]?hwa[-]?.*\..*/
 /clear-skys\.[a-z]+/
 /climpup[a-z0-9]*\.com/
+/cmegrou[a-z0-9]+\.com/
 /coinbase.+\..+$/
 /coincheck\.[a-z]+/
 /coindex.*\..*/
@@ -85,6 +87,7 @@
 /defiflexpool-vip-[a-z0-9]*\.com/
 /defiflexpool.*\.com$/
 /desk\w{2,}\.com/
+/dfi-money[a-z0-9]+\.com/
 /diamond[a-z0-9]*\.com/
 /ditok[0-9]*\.com/
 /dongsen[a-z0-9]*\.com/
@@ -123,6 +126,7 @@
 /gexcoin\.(co|io|me)/
 /global-exp[a-z0-9]+rade\.com/
 /goldmansachs[0-9]*\.[a-z]+/
+/gyym[0-9]+\.com/
 /hssui[0-9]+\.wixsite\.com/
 /ibitmin.+\..+/
 /idfpower[a-z0-9]*\.com/
@@ -146,6 +150,7 @@
 /money\d{4}\.com/
 /moxc[a-z0-9]{2,3}\.com/
 /mycoin[a-z0-9]+\.net/
+/mycoinps[0-9]+\.(com|net)/
 /netflti[a-z]*.com/
 /news-spe\d+\.com/
 /nymex.+tw\.com/
