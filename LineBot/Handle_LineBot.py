@@ -360,9 +360,16 @@ def message_reply_Query(user_id, IsScam, Type_Name, code, orgin_text):
 
     if Type_Name == "IG":
         actions.append(URITemplateAction(
-            label='確認IG連結',
-            uri=f"https://www.instagram.com/{code}"
+                label='確認輸入的IG',
+                uri=f"https://www.instagram.com/{code}"
+            )
         )
+
+    if Type_Name == "LINE ID":
+        actions.append(URITemplateAction(
+                label='確認輸入的LINE ID',
+                uri=f"https://line.me/ti/p/~{code}"
+            )
         )
 
     length = len(text)
