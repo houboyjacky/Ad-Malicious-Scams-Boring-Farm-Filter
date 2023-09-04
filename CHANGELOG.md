@@ -1,5 +1,8 @@
 # 歷史更新 History Update
 
+* 20230904 Update
+  * 調整 提示查詢電話
+
 * 20230902 Update
   * 加入 確認IG與LINE ID輸入正確的選項
   * 更新 165反詐騙諮詢專線-詐騙LINE ID(~112/09/02)
