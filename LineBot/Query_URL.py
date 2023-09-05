@@ -507,8 +507,8 @@ def user_query_website(prefix_msg, user_text):
         output = user_text
         if "?" in output:
             output = output.split('?')[0]
-        rmessage = f"{prefix_msg}「{output}」\n是正常的網站\n但內含連結是可能有詐騙網址\n請輸入那些連結"
-        return False, rmessage, domain_name
+        rmessage = f"{prefix_msg}\n「 {output} 」\n是正常的網站\n但內含連結是可能有詐騙網址\n請輸入那些連結"
+        return False, rmessage, ""
 
     thread1 = threading.Thread(
         target=get_server_ip, args=(user_text, result_list, lock))

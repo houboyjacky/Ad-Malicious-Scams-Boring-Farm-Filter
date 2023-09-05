@@ -117,6 +117,7 @@ def handle_telegram_id(user_id, text, must_be_text):
         telegram_id, status = Q_TG.Telegram_Read_Document(text.lower())
         Personal_Update_SingleTag_Query(user_id, "Telegram", status)
         Handle_LineBot.ID_Count("TG")
+        logger.info(f"{telegram_id}->{status}")
         if must_be_text:
             return min_reply_text(status)
         return Handle_LineBot.message_reply_Query(user_id, status, "Telegram ID", telegram_id, text.lower())
@@ -277,7 +278,7 @@ def handle_telegram_web(_, user_id, text, must_be_text):
 
 
 def handle_twitter_web(prefix_msg, user_id, text, must_be_text):
-    if re.match(Tools.KEYWORD_TWITTER_URL[2], text.lower()):
+    if re.match(Tools.KEYWORD_TWITTER_URL[2], text.lower()) or re.search(Tools.KEYWORD_TWITTER_URL[5], text.lower()) :
         twitter_id, status = Q_TR.Twitter_Read_Document(text)
         if prefix_msg:
             prefix_msg = f"{prefix_msg}「 {text} 」\n"
@@ -429,7 +430,8 @@ def handle_web(prefix_msg, user_id, text, must_be_text):
         Personal_Update_SingleTag_Query(user_id, "URL", IsScam)
         Length = len(Text)
         logger.info(f"Text Length = {str(Length)}")
-        if Length > 240 or must_be_text:
+        # not domain_name 是為了「解析網址有錯」與「名片網站」
+        if Length > 240 or must_be_text or not domain_name:
             return Text
 
         return Handle_LineBot.message_reply_QueryURL(user_id, IsScam, Text, domain_name, text)
