@@ -41,6 +41,9 @@ def replace_http_with_https(url):
     if domain_name in Tools.DONT_CHANGE_HTTP:
         return url
 
+    if domain_name not in Tools.SHORT_URL_LIST:
+        return url
+
     # 將輸入字串轉換為小寫，再進行替換
     lowercase_url = url.lower()
     index = lowercase_url.find("http://")
