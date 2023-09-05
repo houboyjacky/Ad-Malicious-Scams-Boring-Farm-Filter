@@ -1490,7 +1490,6 @@
 ||fetctop.top^
 ||fetctw.cyou^
 ||fetcw.xyz^
-||fetrbt.net^
 ||fey.io^
 ||feyku.com^
 ||ffffgame.com^
