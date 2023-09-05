@@ -23,6 +23,7 @@ THE SOFTWARE.
 from bs4 import BeautifulSoup
 from Logger import logger
 from selenium import webdriver
+from urllib.parse import urlparse, unquote
 from urllib3.exceptions import MaxRetryError, LocationValueError
 import html
 import re
