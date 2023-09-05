@@ -255,9 +255,13 @@ def message_reply_Query(user_id, IsScam, Type_Name, code, orgin_text):
                   f"🚫請勿相信此{Type_Name}\n"
                   f"🙏感恩"
                   )
-        if Type_Name in ("LINE邀請網址","FB","IG"):
+        if Type_Name in ("LINE邀請網址","FB"):
             text = (f"{Type_Name}分析出的代碼的「{code}」\n\n"
                     f"{suffix}")
+        elif Type_Name  == "IG":
+            text = (f"{Type_Name}分析出的代碼的「{code}」\n\n"
+                    f"{suffix}\n\n"
+                    f"另外請勿輕易相信\n「投資」、「賭博」、「分析」")
         elif Type_Name == "虛擬貨幣地址":
             text = (f"{code}\n\n"
                     f"{suffix}")
@@ -296,10 +300,15 @@ def message_reply_Query(user_id, IsScam, Type_Name, code, orgin_text):
         if code.startswith("09"):
             suffix += f"\n\n若是想查詢電話\n建議使用Whoscall來查詢\n"
 
-        if Type_Name in ("LINE邀請網址","FB","IG"):
+        if Type_Name in ("LINE邀請網址","FB"):
             text = (f"「不存在」{Type_Name}黑名單內\n\n"
                     f"{Type_Name}分析出的代碼的是「{code}」\n\n"
                     f"{suffix}")
+        elif Type_Name  == "IG":
+            text = (f"「不存在」{Type_Name}黑名單內\n\n"
+                    f"{Type_Name}分析出的代碼的是「{code}」\n\n"
+                    f"{suffix}\n\n"
+                    f"另外請勿輕易相信\n「投資」、「賭博」、「分析」")
         elif Type_Name == "虛擬貨幣地址":
             text = (f"「不存在」{Type_Name}黑名單內\n\n"
                     f"{code}\n\n"
