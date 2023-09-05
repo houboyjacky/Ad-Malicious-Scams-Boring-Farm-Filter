@@ -132,3 +132,4 @@
 @@||twmrbt.com^
 @@||fetrbt.net^
 @@||lihi3.cc^$important
+@@||cst.fyi^$important
