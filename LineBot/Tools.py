@@ -142,8 +142,12 @@ with open('setting_urls.json', 'r') as f:
 ALLOW_DOMAIN_LIST = setting_urls['ALLOW_DOMAIN_LIST']
 # BUSINESS_CARD => 名片網站
 BUSINESS_CARD = setting_urls['BUSINESS_CARD']
+# DONT_CHANGE_HTTP => 不修改http成https
+DONT_CHANGE_HTTP = setting_urls['DONT_CHANGE_HTTP']
 # NEED_HEAD_SHORT_URL_LIST => NEED HEAD SHORT URL LIST
 NEED_HEAD_SHORT_URL_LIST = setting_urls['NEED_HEAD_SHORT_URL_LIST']
+# NOT_SUPPORT_SHORT_URL => NOT SUPPORT SHORT URL
+NOT_SUPPORT_SHORT_URL = setting_urls['NOT_SUPPORT_SHORT_URL']
 # SHORT_URL_LIST => Short url list
 SHORT_URL_LIST = setting_urls['SHORT_URL_LIST']
 # SUBWEBSITE => Special Subwebsite need to block sub website
@@ -166,6 +170,7 @@ def reloadSetting():
     global CHROMEDRIVER_PATH
     global CONFIG_FOLDER
     global DATA_PATH
+    global DONT_CHANGE_HTTP
     global EXPIRED_DAYS
     global HASH_FILE
     global HTTP_HEADERS
@@ -195,6 +200,7 @@ def reloadSetting():
     global MONGODB_URL
     global MONGODB_USER
     global NEED_HEAD_SHORT_URL_LIST
+    global NOT_SUPPORT_SHORT_URL
     global NOTICE_BOARD
     global PEM_DIR
     global PRIVKEY
@@ -202,11 +208,11 @@ def reloadSetting():
     global S_URL
     global SCAM_WEBSITE_LIST
     global SHORT_URL_LIST
+    global SKIP_CHECK
     global SUBWEBSITE
     global TMP_BLACKLIST
     global USER_GUIDE
     global USER_GUIDE_FILE
-    global SKIP_CHECK
 
     # 讀取設定檔
     with open('setting.json', 'r') as f:
@@ -271,7 +277,9 @@ def reloadSetting():
 
     ALLOW_DOMAIN_LIST = setting_urls['ALLOW_DOMAIN_LIST']
     BUSINESS_CARD = setting_urls['BUSINESS_CARD']
+    DONT_CHANGE_HTTP = setting_urls['DONT_CHANGE_HTTP']
     NEED_HEAD_SHORT_URL_LIST = setting_urls['NEED_HEAD_SHORT_URL_LIST']
+    NOT_SUPPORT_SHORT_URL = setting_urls['NOT_SUPPORT_SHORT_URL']
     SHORT_URL_LIST = setting_urls['SHORT_URL_LIST']
     SUBWEBSITE = setting_urls['SUBWEBSITE']
     SKIP_CHECK = setting_urls['SKIP_CHECK']
