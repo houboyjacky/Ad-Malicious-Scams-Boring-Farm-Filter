@@ -46,6 +46,8 @@ def analyze_Twitter_url(user_text: str) -> Optional[dict]:
         Username = match.group(1)
     elif match := re.search(Tools.KEYWORD_TWITTER_URL[2], user_text):
         Username = match.group(1)
+    elif match := re.search(Tools.KEYWORD_TWITTER_URL[5], user_text):
+        Username = match.group(1)
     else:
         return None
 

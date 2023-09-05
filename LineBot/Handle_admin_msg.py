@@ -232,11 +232,11 @@ def handle_twitter_id(user_id, text):
 
 
 def handle_twitter_web(user_id, text):
-    if re.search(Tools.KEYWORD_TWITTER_URL[0], text.lower()):
+    if re.search(Tools.KEYWORD_TWITTER_URL[0], text.lower()) or re.search(Tools.KEYWORD_TWITTER_URL[3], text.lower()) :
         # 加入Twitter 網址
         Personal_Update_SingleTag(user_id, "Twitter", SUB_TAGNAME="管理次數")
         return Q_TR.Twitter_Write_Document(text)
-    if re.search(Tools.KEYWORD_TWITTER_URL[1], text.lower()):
+    if re.search(Tools.KEYWORD_TWITTER_URL[1], text.lower()) or re.search(Tools.KEYWORD_TWITTER_URL[4], text.lower()) :
         # 刪除Twitter 網址
         Personal_Update_SingleTag(user_id, "Twitter", SUB_TAGNAME="管理次數")
         return Q_TR.Twitter_Delete_Document(text)
