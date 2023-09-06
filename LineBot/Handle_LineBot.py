@@ -261,7 +261,7 @@ def message_reply_Query(user_id, IsScam, Type_Name, code, orgin_text):
         elif Type_Name  == "IG":
             text = (f"{Type_Name}分析出的代碼的「{code}」\n\n"
                     f"{suffix}\n\n"
-                    f"另外請勿輕易相信\n「投資」、「賭博」、「分析」")
+                    f"另外請勿輕易相信\n「投資」、「賭博」、「分析」\n「線上敲單輕鬆賺」")
         elif Type_Name == "虛擬貨幣地址":
             text = (f"{code}\n\n"
                     f"{suffix}")
@@ -308,7 +308,7 @@ def message_reply_Query(user_id, IsScam, Type_Name, code, orgin_text):
             text = (f"「不存在」{Type_Name}黑名單內\n\n"
                     f"{Type_Name}分析出的代碼的是「{code}」\n\n"
                     f"{suffix}\n\n"
-                    f"另外請勿輕易相信\n「投資」、「賭博」、「分析」")
+                    f"另外請勿輕易相信\n「投資」、「賭博」、「分析」\n「線上敲單輕鬆賺」")
         elif Type_Name == "虛擬貨幣地址":
             text = (f"「不存在」{Type_Name}黑名單內\n\n"
                     f"{code}\n\n"
