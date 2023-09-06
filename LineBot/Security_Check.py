@@ -61,5 +61,19 @@ def download_cf_ips():
 
     return
 
+# ================
+# 黑名單IP設定
+# ================
 
+BLOCK_IPS_LOCAL = "config/Block_IPs.txt"
+
+def load_block_ip_list():
+    ip_list = set()
+    with open(BLOCK_IPS_LOCAL, 'r') as file:
+        for line in file:
+            ip_list.add(line.strip())
+    logger.info("Loaded Block_IPs.txt")
+    return ip_list
+
+block_ip_list = load_block_ip_list()
 CF_IPS = get_cf_ips()

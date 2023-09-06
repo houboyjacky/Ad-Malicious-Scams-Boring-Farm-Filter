@@ -45,7 +45,7 @@ from Handle_message import (
     handle_message_text
 )
 from Logger import logger
-from Security_Check import CF_IPS
+from Security_Check import CF_IPS, block_ip_list
 from Security_ShortUrl import RecordShortUrl
 from Handle_user_msg import handle_user_msg
 import Query_API
@@ -58,7 +58,6 @@ app = Flask(__name__)
 app.debug = False
 
 handler = WebhookHandler(Tools.CHANNEL_SECRET)
-
 
 # ================
 # Request 設定
@@ -86,6 +85,12 @@ def make_record(req):
 
 @app.before_request
 def limit_remote_addr():
+
+    ip_address = get_remoteip(request)
+    if ip_address in block_ip_list:
+        logger.error(f"Blocked IP : {ip_address}")
+        return "Forbidden", 403
+
     # 控制是否透過網址連入
     hostname = request.host.split(':')[0]
     if hostname in Tools.ALLOWED_HOST:

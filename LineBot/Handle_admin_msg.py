@@ -51,6 +51,7 @@ import Query_WhatsApp as Q_WA
 import Query_Youtube as Q_YT
 import Tools
 import Update_BlackList as BLACK
+from Security_Check import load_block_ip_list
 from Personal_Rec import Personal_Update_SingleTag
 
 
@@ -410,6 +411,7 @@ def handle_admin_msg(user_id, orgin_text):
     if orgin_text == "重讀":
         Tools.reloadSetting()
         reload_notice_board()
+        load_block_ip_list()
         BLACK.update_local_Blacklist()
         logger.info("Reload setting.json")
         rmessage = "設定已重新載入"
