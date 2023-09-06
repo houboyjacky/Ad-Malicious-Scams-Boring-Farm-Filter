@@ -135,3 +135,5 @@
 @@||cst.fyi^$important
 @@||esunsec.com.tw^$important
 @@||linkin.bio^$important
+@@||udn.com^
+@@||deepfakedetection.app^
