@@ -137,3 +137,4 @@
 @@||linkin.bio^$important
 @@||udn.com^
 @@||deepfakedetection.app^
+@@||py.pl^$important
