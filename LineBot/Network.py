@@ -88,7 +88,9 @@ def limit_remote_addr():
 
     ip_address = get_remoteip(request)
     if ip_address in block_ip_list:
-        logger.error(f"Blocked IP : {ip_address}")
+        msg = make_record(request)
+        log_message = 'Blocked %s %s %s' % (msg, request.method, request.url)
+        logger.info(f"Blocked {msg}")
         return "Forbidden", 403
 
     # 控制是否透過網址連入
