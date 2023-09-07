@@ -42,6 +42,8 @@ ADMINS = setting['ADMIN']
 ALLOWED_HOST = setting['ALLOWED_HOST']
 # BLACKUSERID => BLACK USER
 BLACKUSERID = setting['BLACKUSERID']
+# BLOCK_IPS_FILE => Block IPs File
+BLOCK_IPS_FILE = setting['BLOCK_IPS_FILE']
 # CERT => Lets Encrypt Certificate Path File
 CERT = setting['CERT']
 # CHAINSIGHT_KEY => Chainsight KEY
@@ -161,6 +163,7 @@ def reloadSetting():
     global ALLOW_DOMAIN_LIST
     global ALLOWED_HOST
     global BLACKUSERID
+    global BLOCK_IPS_FILE
     global BUSINESS_CARD
     global CERT
     global CHAINSIGHT_KEY
@@ -221,6 +224,7 @@ def reloadSetting():
     ADMINS = setting['ADMIN']
     ALLOWED_HOST = setting['ALLOWED_HOST']
     BLACKUSERID = setting['BLACKUSERID']
+    BLOCK_IPS_FILE = setting['BLOCK_IPS_FILE']
     CERT = setting['CERT']
     CHAINSIGHT_KEY = setting['CHAINSIGHT_KEY']
     CHANNEL_ACCESS_TOKEN = setting['CHANNEL_ACCESS_TOKEN']

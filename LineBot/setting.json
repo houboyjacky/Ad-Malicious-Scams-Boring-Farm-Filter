@@ -2,6 +2,7 @@
 	"ADMIN": [],
 	"ALLOWED_HOST": [],
 	"BLACKUSERID": [],
+	"BLOCK_IPS_FILE":"",
 	"CERT": "",
 	"CHAINSIGHT_KEY": "",
 	"CHANNEL_ACCESS_TOKEN": "",

@@ -22,6 +22,7 @@ THE SOFTWARE.
 
 import os
 import requests
+import hashlib
 from Logger import logger
 import Tools
 
@@ -65,15 +66,28 @@ def download_cf_ips():
 # 黑名單IP設定
 # ================
 
-BLOCK_IPS_LOCAL = "config/Block_IPs.txt"
+block_ip_list = set()
 
 def load_block_ip_list():
-    ip_list = set()
-    with open(BLOCK_IPS_LOCAL, 'r') as file:
-        for line in file:
-            ip_list.add(line.strip())
-    logger.info("Loaded Block_IPs.txt")
-    return ip_list
+    global block_ip_list
+    Block_IPs = "config/Block_IPs.txt"
+    block_ip_list = set()
 
-block_ip_list = load_block_ip_list()
+    response = requests.get(Tools.BLOCK_IPS_FILE)
+    if response.status_code == 200:
+        download = response.content
+        remote_file_hash = hashlib.md5(download).hexdigest()
+        local_file_hash = Tools.calculate_file_hash(Block_IPs)
+
+        if remote_file_hash != local_file_hash:
+            Tools.write_file_bin(Block_IPs, download)
+            logger.info("Save Block_IPs.txt")
+
+    with open(Block_IPs, 'r') as file:
+        for line in file:
+            block_ip_list.add(line.strip())
+
+    logger.info("Loaded Block_IPs.txt")
+    return
+
 CF_IPS = get_cf_ips()

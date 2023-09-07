@@ -43,6 +43,7 @@ from Security_Check import download_cf_ips
 from Security_ShortUrl import EmptyShortUrlDB
 from SignConfig import SignMobileconfig
 from Update_BlackList import update_blacklist
+from Security_Check import load_block_ip_list
 import Query_Image
 import Tools
 import Network
@@ -65,6 +66,8 @@ def background_schedule(stop_event):
     schedule.every().hour.at(":00").do(update_blacklist)
     # 165黑名單更新
     schedule.every().hour.at(":00").do(LINE_ID_Download_From_165)
+    # IP黑名單更新
+    schedule.every().hour.at(":00").do(load_block_ip_list)
     # Log儲存與分類
     schedule.every().day.at("23:00").do(Logger_Transfer, pre_close=False)
     # 備份DB資料
@@ -83,6 +86,7 @@ def Initialization():
     update_blacklist(True)
     Query_Image.Load_Image_Feature()
     EmptyShortUrlDB()
+    load_block_ip_list()
     logger.info("Initialization Finish")
 
 
