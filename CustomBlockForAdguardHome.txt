@@ -1007,6 +1007,7 @@
 ||crypto-terming.com^
 ||cryptoguru.money^
 ||cryptohill.org^
+||cryptomzp.com^
 ||cs.money^
 ||cs1qa.top^
 ||cscccostcooss.com^
@@ -1744,6 +1745,7 @@
 ||gjkfd3284.com^
 ||gjmasj1958.com^
 ||gjnplj.shop^
+||gjsmei115.com^
 ||gki25.com^
 ||gki52.com^
 ||gkkvip.cc^
@@ -1799,6 +1801,7 @@
 ||goldrcd.com^
 ||goldvtyx.com^
 ||goldvwn.com^
+||golico.top^
 ||gomaktse-hg.com^
 ||gomarketing.com.tw^
 ||gomarklink.com^
@@ -1841,6 +1844,7 @@
 ||gruponetzco.com^
 ||gs1658.com^
 ||gs5598.com^
+||gsshoptime.com^
 ||gstha.homes^
 ||gstha.xyz^
 ||gszj8.com^
@@ -2169,6 +2173,7 @@
 ||ipeenlg.com^
 ||ipeenlj.com^
 ||ipfs.io^
+||ipokmatih.in^
 ||ipost-post-gov-tw.com^
 ||ir799.cn^
 ||ironfanmarketing.com^
@@ -4354,6 +4359,7 @@
 ||uncleblockglobal.com^
 ||uncleforex.pro^
 ||unege.top^
+||unisnowfx.com^
 ||uniswap.org^
 ||uniswapjk.icu^
 ||uniswaplp.icu^
@@ -4815,6 +4821,7 @@
 ||youlove2chat.com^
 ||younit6.com^
 ||youqu198.me^
+||your-assistant.live^
 ||yp298.vip^
 ||yqbz2.xyz^
 ||yqsfss.shop^
