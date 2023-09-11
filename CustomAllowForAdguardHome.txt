@@ -138,3 +138,7 @@
 @@||udn.com^
 @@||deepfakedetection.app^
 @@||py.pl^$important
+@@||wu-fer.com^
+@@||deebugshop.com^
+@@||alyp.in^
+@@||surveycake.biz^$important
