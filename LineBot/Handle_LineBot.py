@@ -119,6 +119,12 @@ def message_reply_QueryURL(user_id, IsScam, QueryInf, Domain, orgin_text):
     if len(orgin_text) > 250:
         orgin_text = orgin_text[:250]
 
+    subdomain, domain, suffix = Tools.domain_analysis(orgin_text)
+    if subdomain :
+        full_Domain = f"{subdomain}.{domain}.{suffix}"
+    else:
+        full_Domain = Domain
+
     actions = []
     if IsScam:
         actions.append(MessageTemplateAction(
@@ -129,7 +135,7 @@ def message_reply_QueryURL(user_id, IsScam, QueryInf, Domain, orgin_text):
         if Domain:
             actions.append(URITemplateAction(
                 label='安全評分',
-                uri=f"https://www.scamadviser.com/zh/check-website/{Domain}"
+                uri=f"https://www.scamadviser.com/zh/check-website/{full_Domain}"
             )
             )
         else:
@@ -158,7 +164,7 @@ def message_reply_QueryURL(user_id, IsScam, QueryInf, Domain, orgin_text):
             )
             actions.append(URITemplateAction(
                 label='安全評分',
-                uri=f"https://www.scamadviser.com/zh/check-website/{Domain}"
+                uri=f"https://www.scamadviser.com/zh/check-website/{full_Domain}"
             )
             )
 
