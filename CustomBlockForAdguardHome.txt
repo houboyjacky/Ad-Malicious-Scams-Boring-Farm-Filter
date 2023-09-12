@@ -10,6 +10,7 @@
 #||ig.com^
 #||learningpa.cc^
 #||maac.io^
+#||mbobi.com^
 #||omygod.com.tw^
 #||onelink.me^
 #||pages-wildcard.weebly.com^
@@ -2760,7 +2761,6 @@
 ||mazonshopx.com^
 ||mbjxl.top^
 ||mbl-systemapp.com^
-||mbobi.com^
 ||mbqzw.top^
 ||mccdn.me^
 ||mchsg.com^
