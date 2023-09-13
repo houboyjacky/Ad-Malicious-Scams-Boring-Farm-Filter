@@ -87,6 +87,7 @@
 /defiflexpool-vip-[a-z0-9]*\.com/
 /defiflexpool.*\.com$/
 /desk\w{2,}\.com/
+/dex-[a-z]{2}\.com/
 /dfi-money[a-z0-9]+\.com/
 /diamond[a-z0-9]*\.com/
 /ditok[0-9]*\.com/

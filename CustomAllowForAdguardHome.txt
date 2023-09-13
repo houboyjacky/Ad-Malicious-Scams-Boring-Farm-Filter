@@ -68,6 +68,13 @@
 @@||wikifx.com^$important
 ! 工作資訊分享
 @@||goodjob.life^$important
+! 常用排除
+@@||messaging-router.useinsider.com^$important
+@@||safely-web.com^$important
+@@||shopline.tw^$important
+@@||ts.line-apps.com^$important
+@@||lihi3.cc^$important
+@@||onelink.me^$important
 ! 其他排除
 @@||51miz.com^$important
 @@||bitfinex.com^$important
