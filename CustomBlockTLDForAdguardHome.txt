@@ -130,6 +130,7 @@
 /gyym[0-9]+\.com/
 /hssui[0-9]+\.wixsite\.com/
 /ibitmin.+\..+/
+/id\d+\.(date|com)/
 /idfpower[a-z0-9]*\.com/
 /idgcapital[a-z0-9]*\.com/
 /igmark[a-z0-9]*\.com/
