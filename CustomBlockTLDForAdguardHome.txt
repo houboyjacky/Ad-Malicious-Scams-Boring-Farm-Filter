@@ -201,6 +201,7 @@
 /track-tw[0-9]+\.com/
 /trade[0-9]+\.xyz/
 /tron[a-z]{3,4}\.com/
+/tw-shopify[a-z0-9]+\.com/
 /tw[-]?carousel[a-z0-9]+\.com/
 /tw[-]?carousel[a-z0-9]+\.tw/
 /tw[-]?carousel[a-z0-9]+\.xyz/
