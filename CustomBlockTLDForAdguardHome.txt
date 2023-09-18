@@ -34,6 +34,7 @@
 /aismex[a-z0-9].com/
 /aitechstock\.(co|tw|vip)/
 /alliancegrowth.+\.[a-z]+/
+/alphafinace[a-z0-9]+\.com/
 /amazon[0-9]+\.mobi/
 /antsforex[a-z0-9]*\.com/
 /app[0-9]+\.xyz/
@@ -68,6 +69,7 @@
 /carousel[a-z0-9]+[-]?tw\.xyz/
 /carousell-tw[a-z0-9]+\.xyz/
 /carousell[0-9][0-9]kf\.tw/
+/carousell[a-z][0-9]+\.com/
 /casave[0-9]+00\.com/
 /charterprime[a-z0-9]*\.com/
 /chung[-]?hwa[-]?.*\..*/
@@ -130,6 +132,7 @@
 /gyym[0-9]+\.com/
 /hssui[0-9]+\.wixsite\.com/
 /ibitmin.+\..+/
+/ic-program[a-z]+\.com/
 /id\d+\.(date|com)/
 /idfpower[a-z0-9]*\.com/
 /idgcapital[a-z0-9]*\.com/
@@ -279,6 +282,7 @@
 ||plubitit.*^
 ||sc.*.cn^
 ||sfexpress-help.*^
+||traweb3.*^
 ||tw-sia.*^
 ||twcaijin.*^
 ||vantwnow.*^
