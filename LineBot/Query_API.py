@@ -20,6 +20,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 '''
 
+import re
 from ip2geotools.databases.noncommercial import DbIpCity
 from Logger import logger
 from translate import Translator
@@ -218,8 +219,25 @@ def push_random_blacklist(Record_players, DB_Name, Collection_Name, UserID, succ
 # 查詢
 # ===============================================
 
+def remove_non_english(text):
+    # 使用正則表達式尋找第一個非英文字符的位置
+    match = re.search(r'[\W]', text)
+
+    if match:
+        # 如果找到非英文字符，則刪除它及其後面的所有字符
+        non_english_index = match.start()
+        result = text[:non_english_index]
+    else:
+        # 如果沒有找到非英文字符，則返回原始文本
+        result = text
+
+    return result
+
 def translate_to_chinese(text):
     DB_name = "translate"
+
+    text = remove_non_english(text)
+
     collection = Read_Collection(DB_name, DB_name)
     if Document := Search_Same_Document(collection, "英文", text):
         return Document["中文"]
