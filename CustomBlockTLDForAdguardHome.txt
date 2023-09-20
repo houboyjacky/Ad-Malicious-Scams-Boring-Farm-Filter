@@ -83,6 +83,7 @@
 /coinvv[a-z0-9]+\.com/
 /com-id\w+.cloud/
 /costco.+\.com/
+/crossglobal(mall|shop)\.\w+/
 /cwgforexp[a-z0-9]*\.com/
 /dbag[a-z]{3}\.com/
 /dbgmarke[a-z0-9]*\.com/
