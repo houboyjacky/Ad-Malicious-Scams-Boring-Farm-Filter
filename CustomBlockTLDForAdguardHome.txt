@@ -54,6 +54,7 @@
 /bitmax[a-z0-9]+\.com/
 /bitmex[a-z0-9]+\.com/
 /bityard.+\.com/
+/bizata[a-z]{3}\.com/
 /bjwex[0-9]+\.com/
 /blueberrypro\..+/
 /booking-\w+\.cloud/
