@@ -150,3 +150,7 @@
 @@||surveycake.biz^$important
 @@||pkcard.com.tw^
 @@||toluna.com^
+@@||wikibit.com^
+@@||forms.gle^
+@@||fetc.net.tw^
+@@||bean.fun^$important

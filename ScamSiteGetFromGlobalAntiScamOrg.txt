@@ -19,6 +19,7 @@
 #||github.io^
 #||google.com^
 #||lin.ee^
+#||mitrade.com^
 #||my.id^
 #||mystrikingly.com^
 #||page.link^
@@ -19337,7 +19338,6 @@
 ||mitotal.com^
 ||mitr9.com^
 ||mitraasc.com^
-||mitrade.com^
 ||mitrade.world^
 ||mitradecc.com^
 ||mitradeccc.com^
