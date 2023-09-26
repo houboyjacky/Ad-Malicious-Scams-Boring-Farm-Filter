@@ -23,7 +23,7 @@ _yuyu0910
 _zhu.0522
 _zn.153
 -zyx0516
-! 更新時間 2023/09/22
+! 更新時間 2023/09/26
 ! 網址來源 https://165.npa.gov.tw/#/lineid
 ! 網址來源 https://data.gov.tw/dataset/78432
 ._.chen
@@ -311,6 +311,7 @@ _zn.153
 @595eccyk
 @595qwbmg
 @595xuggj
+@598sdeoj
 @598zdjus
 @599ywlap
 @601izpfj
@@ -1151,6 +1152,7 @@ _zn.153
 1990lqq
 199110206
 1991428jie
+1991vina
 19920425
 19920725lj
 19921199
@@ -1258,6 +1260,7 @@ _zn.153
 2411637473
 246437546
 246481
+2465900795
 24677437
 2468102580
 24sad
@@ -1400,6 +1403,7 @@ _zn.153
 40776688
 40812523
 41686
+420.11111
 4210718122
 425280
 425377777
@@ -1745,6 +1749,7 @@ _zn.153
 66833699
 668566
 66862686
+66868102
 668800g
 66882389
 6688hj
@@ -1767,6 +1772,7 @@ _zn.153
 66t66
 66u6
 66zz6
+67003411
 6724901
 6743873
 67453252
@@ -3568,6 +3574,7 @@ arexr99
 arexwin99
 aria
 ariel00130
+arlene0328
 arnold
 arong77
 art_82
@@ -3650,6 +3657,7 @@ asw556
 asxzcvq
 aszx58588
 at1008600
+at3608
 at558
 at6086
 at79922
@@ -3748,6 +3756,7 @@ ayu8203
 ayuyuro
 ayy0716
 ayz7373
+az0001234
 az6660
 az8535
 az8880
@@ -5311,6 +5320,7 @@ cq526
 cq90622
 cqeg888
 cqfc888
+cqfc8899
 cqh668
 cql1859
 cql558
@@ -5514,6 +5524,7 @@ cxl0219smail
 cxl0929
 cxl1958374
 cxl881
+cxl920520
 cxlsyzz7712
 cxm886
 cxm96
@@ -5950,6 +5961,7 @@ dj861
 dj992
 djdj909
 djh666
+djtk6688
 dk24680
 dk34444
 dk4458
@@ -6028,6 +6040,7 @@ dream6881
 dream80ˍ0214
 dreamer-520
 dreamer998
+dreamerx88
 droordd
 ds00608
 ds017
@@ -7110,6 +7123,7 @@ guo0922
 guo19850808
 guo4490
 guo8344
+guo920626
 guo9808
 guo989
 guodong314
@@ -7227,6 +7241,7 @@ h8831
 h8888893
 h900726
 h909
+h930613
 h932163
 h981602
 h98828
@@ -8648,6 +8663,7 @@ jx19851106
 jx51888
 jx5201314
 jx77325
+jx86320
 jx9820
 jxbt88
 jxin152
@@ -8695,6 +8711,7 @@ k144775
 k16388
 k17387
 k173928
+k1788099
 k1978450
 k221941
 k232
@@ -9425,6 +9442,7 @@ l555666888
 l5889
 l66988
 l68009
+l68766
 l750826
 l8023111
 l8427
@@ -9741,6 +9759,7 @@ li9639
 li9678
 li980616
 li9855
+liaaa_0708
 liaaa222555
 liacex09
 liang121288
@@ -10401,6 +10420,7 @@ longzhan88
 lonne_7676
 look-8
 look3865
+lorarui1129
 lot06
 lots2425
 louis.0617
@@ -10902,6 +10922,7 @@ lyz0221
 lyz19881213
 lyz5566
 lz0615
+lz08_58
 lz0953
 lz135229
 lz1668899
@@ -11036,6 +11057,7 @@ mandy672
 mandy778899
 mangguoo
 mani7005
+manni0105
 manqing1234
 manti_han
 mao111888
@@ -11868,6 +11890,7 @@ oas5821
 ocean-lh
 ocean066
 ocean777vision
+ocean886
 of6888
 oga0976
 ohmygod666888
@@ -12053,6 +12076,7 @@ peicheng88
 peichi850805
 peidan7967
 peier0611
+peihan0106
 peilin112
 peipei_0602
 peipig4o6
@@ -12673,6 +12697,7 @@ qwe7951
 qwe831520
 qwe9602
 qwe9688
+qwe9804
 qwe99870012
 qwedsa840120
 qwegg_9521
@@ -13788,6 +13813,7 @@ sw9288
 swa168
 swang432
 swe398
+sweet.819
 sweet369_
 sweetburden520
 sweetburden520_
@@ -14043,6 +14069,7 @@ tians8888
 tiantian64576
 tianyu1118
 tianyu3700
+tier567
 tiger13326
 tigerjack1q
 tik00863
@@ -14109,6 +14136,7 @@ ting9ting
 tinger0612
 tingju089
 tingsisiyo
+tingting18888
 tingyu88046
 tintinyu_1205
 tinyingb
@@ -14557,6 +14585,7 @@ vcoin88
 vcvc880
 vcx589
 vdewn
+ve89668
 veng778899
 ventt8
 vera11027
@@ -14769,6 +14798,7 @@ w266a
 w288688
 w3209
 w34228
+w34605
 w35268
 w3550
 w3565
@@ -15380,6 +15410,7 @@ woain101tw
 wodeid147147
 woni1314
 woo2011
+woos1766
 wow_0707
 wow-1217
 wow3158
@@ -15507,6 +15538,7 @@ wu9987738
 wubin0103
 wuchenglobg
 wudan111333
+wudi666888
 wuf1983
 wuferrari7221
 wugaozhenghui
@@ -17414,6 +17446,7 @@ yuka6898
 yuki31078001
 yuki6105
 yulan668
+yulia0214_
 yuliang0815
 yum6kefu
 yume.

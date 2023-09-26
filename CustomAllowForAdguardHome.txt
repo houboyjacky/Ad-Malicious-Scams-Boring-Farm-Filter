@@ -142,6 +142,7 @@
 @@||esunsec.com.tw^$important
 @@||linkin.bio^$important
 @@||udn.com^
+@@||mitrade.com^
 @@||deepfakedetection.app^
 @@||py.pl^$important
 @@||wu-fer.com^

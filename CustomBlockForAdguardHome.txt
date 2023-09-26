@@ -2,6 +2,7 @@
 ! 過度引用 widgetdata.tradingview.com
 ! 過度引用 www.tradingview-widget.com
 ! 疑似詐騙或不良的網站
+#||altoops.com^
 #||bitoex.com^
 #||buffettonlineschool.com.tw^
 #||cht.com.tw^
@@ -263,6 +264,7 @@
 ||acentcoin.pro^
 ||acenteex.com^
 ||acentmax.com^
+||acentpro.cc^
 ||acestopsfx.com^
 ||aclarrvnies.com^
 ||acpcointwd.info^
@@ -289,6 +291,7 @@
 ||aholicment.top^
 ||ai-internationald.com^
 ||ai-internationale.com^
+||ai-internationalf.com^
 ||ai-internationalx.com^
 ||aialgotrader.online^
 ||aibiaogu.com^
@@ -335,7 +338,6 @@
 ||alphaloan.co^
 ||alphaluxse.com^
 ||alphapal.co^
-||altoops.com^
 ||alvinb.club^
 ||always.baby^
 ||alyaccs.com^
@@ -511,6 +513,7 @@
 ||bdfpfb2x.com^
 ||bdnapn.top^
 ||bealsky.com^
+||beancaciared.com^
 ||beanfunx.com^
 ||beanfunz.com^
 ||bearfuli.co^
@@ -597,6 +600,7 @@
 ||bitml.vip^
 ||bitnrv.com^
 ||bitoproex.vip^
+||bitoproglobal.com^
 ||bitpievt.com^
 ||bitrich111.top^
 ||bitrich222.top^
@@ -751,6 +755,8 @@
 ||bushplysky.live^
 ||business-coaching-tw.com^
 ||businessmode1.com^
+||bussiness-suite.com^
+||bussiness-suite.live^
 ||butomongs.com^
 ||buxasia.live^
 ||buxasia.xyz^
@@ -984,6 +990,7 @@
 ||cnlsa.co^
 ||cnlsa.social^
 ||cnt-tw.top^
+||cnxvmfg.com^
 ||co2e6bnr.^
 ||cobsnsa.vip^
 ||coco64.site^
@@ -1030,6 +1037,7 @@
 ||coinsdbank.top^
 ||coinsri.com^
 ||coinuniswap.online^
+||coinup.com^
 ||coinupusa.com^
 ||coinvwa.com^
 ||coinweb.icu^
@@ -1170,6 +1178,7 @@
 ||danarx.com^
 ||danarxos.com^
 ||danaxras.com^
+||danaxraus.com^
 ||dangchong.world^
 ||dangousfl.buzz^
 ||dapp-ai.shop^
@@ -1199,6 +1208,7 @@
 ||dcsaxx.vip^
 ||dd-btxpromax.org^
 ||ddexnaeo.com^
+||ddffreebay.com^
 ||ddsawd.shop^
 ||deadlinefunnel.com^
 ||dearestonline.xyz^
@@ -1711,6 +1721,7 @@
 ||fk677.com^
 ||flassets.com.tw^
 ||flc1x.top^
+||flipster.pro^
 ||flirt.com^
 ||floramo.club^
 ||flowlikeagorilla.com^
@@ -1742,6 +1753,7 @@
 ||friedmancall.space^
 ||fscpz.com^
 ||fsngov.com^
+||fssmtd.top^
 ||fsszyfz.top^
 ||fsxex-otc.com^
 ||ftdxi.xyz^
@@ -2051,6 +2063,7 @@
 ||hai-gou.top^
 ||haigouvip.top^
 ||haiwai-legou.vip^
+||haiwaipc.xyz^
 ||haiwaiquanqiugou.tw^
 ||haldiramcontact.com^
 ||hana_xb.com^
@@ -2137,6 +2150,7 @@
 ||hjfgjfgh.com^
 ||hjpgvw.shop^
 ||hjxgov.com^
+||hkccv.com^
 ||hkcwlot.com^
 ||hketoii.top^
 ||hkgoldd.club^
@@ -2166,6 +2180,7 @@
 ||hoohp.online^
 ||hope178.com^
 ||hotaiber.top^
+||hotaiberb.top^
 ||hotaimobar.cc^
 ||hotaimobar.top^
 ||hotaipo1nt.cc^
@@ -2699,6 +2714,7 @@
 ||kvt68.net^
 ||kwaigoog.com^
 ||kwaihop.com^
+||kwailiv.com^
 ||kwaimpv.com^
 ||kwaip2p.com^
 ||kwaipit.com^
@@ -2717,6 +2733,7 @@
 ||kzdsn.com^
 ||l-pa.cc^
 ||l4wk1k.cyou^
+||l7e8.top^
 ||ladiestofuck.com^
 ||laixianzheng.top^
 ||laiyue9.com^
@@ -3220,6 +3237,7 @@
 ||nexuajat.com^
 ||nexuares.com^
 ||nexusxs.com^
+||nez3.top^
 ||nf8.co^
 ||nftchroma.com^
 ||nftewr.com^
@@ -3255,6 +3273,7 @@
 ||nnsbaw.world^
 ||nntoto.com^
 ||noahpb.club^
+||nocks-ex.cc^
 ||nocks.cc^
 ||nocksex.com^
 ||nockspro.com^
@@ -4345,6 +4364,7 @@
 ||tikishop.me^
 ||tikoaes.com^
 ||tikosoay.com^
+||tiktok-shop.club^
 ||tiktokclick.cc^
 ||tiktokmshop.com^
 ||tiktokshopjp.com^
@@ -4432,6 +4452,7 @@
 ||traweb3.com^
 ||traweb3.io^
 ||traweb3.website^
+||treasuremax.xyz^
 ||treebre.com^
 ||trendcsx.com^
 ||trendgcv.com^
@@ -4744,6 +4765,7 @@
 ||uniwapbho.icu^
 ||unixtk.com^
 ||unsysx.com^
+||uobkayhianz.com^
 ||up2023.net^
 ||uparay.com^
 ||upbounes.com^
@@ -5133,6 +5155,7 @@
 ||xn--711-bs0fh75bgmuixpf5pf95a.lol^
 ||xn--711-bs0fp0h6z3cmccpy0ag5r.lol^
 ||xn--711-bs0fp0h6z3cmccpy0ag5r.pics^
+||xn--711-bs0fp0h6z3cmccpy0ag5r.shop^
 ||xn--711-bs0fp0h6z3cmccpy0ag5r.tokyo^
 ||xn--711-bs0fp0h6z3cmccpy0ag5r.xyz^
 ||xn--711-ng0f271c.online^
@@ -5142,6 +5165,7 @@
 ||xn--711-x28dt99sm6pvfb.online^
 ||xn--eleven-gl7kk86e.co^
 ||xn--eleven-nq4jv02dzzap19e.co^
+||xn--fhq2c892c34dsnl2sxhpluss.me^
 ||xn--fhq2ct7ji7o2c490af9ndo8b.me^
 ||xn--fhqw5fizd3tj0lav98n.club^
 ||xn--ghq10gmvi961at1b479e.com^
@@ -5177,6 +5201,7 @@
 ||xvlpazn.cn^
 ||xxcolq.top^
 ||xxhswapi.icu^
+||xxlovechat.com^
 ||xy82168.com^
 ||xy83321.com^
 ||xy93182.com^
