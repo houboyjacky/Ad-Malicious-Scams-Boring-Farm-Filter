@@ -23,7 +23,7 @@ _yuyu0910
 _zhu.0522
 _zn.153
 -zyx0516
-! 更新時間 2023/09/26
+! 更新時間 2023/09/27
 ! 網址來源 https://165.npa.gov.tw/#/lineid
 ! 網址來源 https://data.gov.tw/dataset/78432
 ._.chen
@@ -254,6 +254,7 @@ _zn.153
 @461gshpk
 @461zofcl
 @462hvcgj
+@468tcnec
 @469ahhpt
 @471snvjp
 @474qfpua
@@ -513,6 +514,7 @@ _zn.153
 @celine67
 @ck58569
 @clr7486l
+@coinworld.linsen
 @cryptopro
 @cvc2861w
 @cyw2217a
@@ -783,6 +785,7 @@ _zn.153
 0958666039
 0958703424
 0958862671
+0959555908
 0960157797
 0960776169
 0961504831
@@ -1248,6 +1251,7 @@ _zn.153
 231shvmj
 233152863
 23356988
+23577711
 2358728
 2359410
 236137i
@@ -1376,6 +1380,7 @@ _zn.153
 3886223
 3890088
 38910417
+3892479
 38928
 3894078
 3896788
@@ -1609,6 +1614,7 @@ _zn.153
 569399516
 5698953
 56k78
+56xx56
 57035
 5708090
 571181555
@@ -1881,6 +1887,7 @@ _zn.153
 776sevuf
 77785550
 7778681
+778107
 77880101
 778801010
 77881024520
@@ -2105,6 +2112,7 @@ _zn.153
 88760102
 887625
 88768897
+8878990
 8880539
 8881381
 8881819
@@ -2298,6 +2306,7 @@ _zn.153
 950911lyy
 950911yy
 951666
+951688
 952682
 9527103
 953182293
@@ -2883,6 +2892,7 @@ aaakk990
 aaat7
 aaat88
 aaaty8
+aaawww5454
 aababyy
 aabb000222
 aabb8
@@ -3695,6 +3705,7 @@ ava2002777
 ava77587
 avalon221
 avatline
+avbbe
 avengers1128
 avj1616
 avll0306
@@ -4866,6 +4877,7 @@ chenjiahaofafafa
 chenjiale555
 chenjiayi00
 chenjun5236
+chenjunyi0597
 chenkev1010
 chenle9527
 chenlei02
@@ -5097,6 +5109,7 @@ cjx0809
 cjx1212
 cjx13141314
 cjx407
+cjx997
 cjy010203
 cjy0417
 cjy07777
@@ -5526,6 +5539,7 @@ cxl1958374
 cxl881
 cxl920520
 cxlsyzz7712
+cxm1986
 cxm886
 cxm96
 cxms886
@@ -6367,6 +6381,7 @@ f15668
 f1569
 f158168
 f1585689
+f15886
 f16889
 f18665
 f18861
@@ -6916,6 +6931,7 @@ gg2292
 gg3469
 gg3739
 gg520abc
+gg5241
 gg6565
 gg65789
 gg66066068
@@ -7036,6 +7052,7 @@ godsent7
 gogo9122
 gogoro0030
 gold1552
+gold9735
 goldchangetw
 golden-ale
 goldenmarket
@@ -7109,6 +7126,7 @@ guang0516
 guang0802
 gucci8461
 gue557
+gugu167819
 gugu9943
 guhai1688
 guisihai
@@ -7791,6 +7809,7 @@ hui2113
 hui5232
 hui5233
 hui5235
+hui5239
 hui721520
 hui73926
 hui777777
@@ -8596,6 +8615,7 @@ jrs6549
 js00018
 js668668
 js670625
+js89888
 js9292
 jsc93375
 jsf041107
@@ -8921,6 +8941,7 @@ kevin_0817
 kevin_19890602
 kevin_lover_11
 kevin-031
+kevin.king.1998
 kevin0420-
 kevin1022860
 kevin1314
@@ -9892,6 +9913,7 @@ lin115565
 lin11891
 lin12129
 lin123321lin
+lin1316256
 lin1436
 lin145561
 lin1686869
@@ -10344,6 +10366,7 @@ ll66889
 ll73514
 ll78956789
 ll880990
+lldz
 llili_.0219_
 llin58877
 llinda02_06
@@ -10657,6 +10680,7 @@ lucky_vivi
 lucky-518
 lucky002yue
 lucky112030
+lucky12.25
 lucky19800706
 lucky19880
 lucky2689
@@ -12187,6 +12211,7 @@ polkadot013
 polm28785
 poo1081113
 pooh12288
+poop158
 pooq6077
 pop_0929
 pop5367
@@ -13709,6 +13734,7 @@ su99811
 sua366
 suan0922
 suaznne11
+subo1106
 subo520
 sucen168
 sugar.n0803
@@ -13998,6 +14024,7 @@ tedd1992
 temoo168
 ten986
 tengfu168
+tengyi188
 terafxtw886
 terry
 terry_1988
@@ -14341,6 +14368,7 @@ tw01789
 tw055
 tw0818
 tw102892
+tw110.165
 tw131458
 tw168588
 tw1818
@@ -15479,6 +15507,7 @@ wsnm328
 wsoiihenry
 wsq5201314.
 wsr0421
+wss01
 wss788
 wssg159
 wssjb001
@@ -15803,6 +15832,7 @@ wzy578226
 wzy6666
 wzy961
 wzz667788
+wzzz1133
 x03092012
 x032100
 x0834086464
@@ -17223,6 +17253,7 @@ ynny66
 ynny77
 yntq
 yo0920ci
+yo188199
 yo8885yo
 yoga.-.1919
 yokai0707
@@ -17232,6 +17263,7 @@ yonghong88
 yongjianlin
 yonglifuwu
 yongsong26
+yongyuan5188
 yonija1882
 yoo773
 yorkchen69999
@@ -17438,6 +17470,7 @@ yui9502
 yuini889
 yuino99
 yuis1888
+yujiaming0722
 yujian168
 yujie128963
 yuju11021028
@@ -18016,6 +18049,7 @@ zh9624641
 zha698277
 zhakyu2580147
 zham1980
+zhan200
 zhang_jia_hao
 zhang_zheng_han
 zhang..chong
@@ -18224,6 +18258,7 @@ zilin91321
 zilin9132191321
 zilu0925
 zim22800
+zing66
 zining0504
 zip66
 zip977

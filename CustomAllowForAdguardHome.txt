@@ -152,8 +152,11 @@
 @@||pkcard.com.tw^
 @@||toluna.com^
 @@||wikibit.com^
-@@||forms.gle^
 @@||fetc.net.tw^
 @@||bean.fun^$important
 @@||518fb.com^
 @@||dramaq.su^
+@@||asknow.dev^
+@@||gemini.com^
+@@||openai.com^
+@@||sharetvyyds.com^
