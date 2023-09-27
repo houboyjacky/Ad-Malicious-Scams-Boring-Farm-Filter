@@ -1,11 +1,12 @@
 
 ! 取自FB https://www.facebook.com/groups/1141798046611751/user/100001471821039/
-! Update to 2023/09/17 23:59
+! Update to 2023/09/25 23:59
 #||cloudfront.net^
 #||easy.co^
 #||github.io^
 #||t.co^
 #||trustwallet.com^
+#||web.app^
 #||zendesk.com^
 ||0-casinos.org^
 ||0066666.co^
@@ -1038,6 +1039,7 @@
 ||amgjiv.top^
 ||amgmall.com^
 ||amgmall.org^
+||amgmall.top^
 ||amjslive.xyz^
 ||amknl.com^
 ||amlbotcrypto.pro^
@@ -10516,6 +10518,7 @@
 ||ebayzxjz.com^
 ||ebcfinanaitw.com^
 ||ebcfinanatws.com^
+||ebcrvb.com^
 ||ebcvdc.com^
 ||ebg-coin.com^
 ||ebill-update.info^
@@ -13591,6 +13594,7 @@
 ||gloverfx.io^
 ||glpwgj.top^
 ||gm1888.net^
+||gmakets.com^
 ||gmall-tw.buzz^
 ||gmall-tw.site^
 ||gmarket-go.online^
@@ -15891,6 +15895,7 @@
 ||liquisojt.com^
 ||liquity-market.xyz^
 ||liquldaub.com^
+||lirbormarket.com^
 ||lirentw.com^
 ||lirunexfx.com^
 ||lirxyl.top^
@@ -17302,6 +17307,7 @@
 ||nfexebs.com^
 ||nfigkrkwhql.com^
 ||nft-base.cc^
+||nft-polygon.top^
 ||nft-sea.top^
 ||nft-uniswap.net^
 ||nftbid.vip^
@@ -22765,7 +22771,6 @@
 ||web-ane.com^
 ||web-btcc.com^
 ||web-tradeplus.com^
-||web.app^
 ||web3-cointrade.net^
 ||web3-cointrade.org^
 ||web3-cryptohopper.com^
@@ -23450,6 +23455,7 @@
 ||zbhew.vip^
 ||zbit.vip^
 ||zbitcoin.vip^
+||zbncsk.vip^
 ||zbpro888.com^
 ||zbviee.vip^
 ||zbwhc.vip^
