@@ -7,6 +7,7 @@
 #||t.co^
 #||trustwallet.com^
 #||web.app^
+#||xingyun-shop.com^
 #||zendesk.com^
 ||0-casinos.org^
 ||0066666.co^
@@ -23132,7 +23133,6 @@
 ||xingfuexpress.com^
 ||xinggui888.com^
 ||xingunsalkfe.top^
-||xingyun-shop.com^
 ||xinhaoac.com^
 ||xinhaoinf.com^
 ||xinzimei666.top^

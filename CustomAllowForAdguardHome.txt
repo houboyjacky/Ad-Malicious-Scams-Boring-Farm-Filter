@@ -110,6 +110,7 @@
 @@||forms.gle^
 @@||hfm.com^
 @@||trustwallet.com^
+@@||ibongift.com^
 @@||newbang.co^
 @@||donebydeer.com^
 @@||toyou.tw^
@@ -160,3 +161,4 @@
 @@||gemini.com^
 @@||openai.com^
 @@||sharetvyyds.com^
+@@||line.lat^$important
