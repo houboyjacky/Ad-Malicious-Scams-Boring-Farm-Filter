@@ -1,5 +1,8 @@
 # 歷史更新 History Update
 
+* 20230929 Update
+  * 調整 黑名單
+
 * 20230928 Update
   * 調整 黑名單
 
