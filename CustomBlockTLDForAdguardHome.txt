@@ -167,6 +167,7 @@
 /pageverification[a-z0-9]+\.co\.vu/
 /peeba[0-9]\.com/
 /peicheng[a-z0-9]+\.com/
+/psychologis-\w+.com/
 /qeic[a-z0-9]+w\.net/
 /qfii[a-z0-9]*\.com/
 /qh...\.tw/

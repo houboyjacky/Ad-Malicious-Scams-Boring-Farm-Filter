@@ -163,3 +163,6 @@
 @@||sharetvyyds.com^
 @@||line.lat^$important
 @@||dramasq.biz^$important
+@@||capital.com.tw^
+@@||voteforterry.tw^
+@@||weceshi.com^
