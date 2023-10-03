@@ -285,6 +285,7 @@
 *://*.hallucinating.pw/*
 *://*.hamiltonadviesbv.nl/*
 *://*.haoyangpv.net/*
+*://*.hausaerzte-hirschgartende.lol/*
 *://*.hdcinema.uk/*
 *://*.hecht-gottlieben.ch/*
 *://*.heidetoller.de/*
@@ -501,6 +502,7 @@
 *://*.peekme.cc/*
 *://*.peoplecontent.de/*
 *://*.pergift.online/*
+*://*.permabut.fr/*
 *://*.personel.pw/*
 *://*.perspektivwechsel-seeheim.de/*
 *://*.pharmaie-jolivet.fr/*
@@ -578,6 +580,7 @@
 *://*.ruenmai-thaimassage.de/*
 *://*.sa.com/*
 *://*.sa123.cc/*
+*://*.sagrista.es/*
 *://*.saldaturarobot.it/*
 *://*.saludarmonia.cl/*
 *://*.sanal.pw/*
@@ -716,6 +719,7 @@
 *://*.voks.ru/*
 *://*.vom-haus-clanora.de/*
 *://*.voyants.online/*
+*://*.vrisiblaznu.cz/*
 *://*.wakompserwis.pl/*
 *://*.warre-blog.de/*
 *://*.wdba.org.uk/*
