@@ -47,6 +47,12 @@ def linebot_getContent(msg_id):
 
 def message_reply(event, text):
     user_name = linebot_getRealName(event.source.user_id)
+    if isinstance(text, str) and len(text) > 5000:
+        file = f"response_{event.source.user_id[:5]}.txt"
+        filepath = f"sendfile/{file}"
+        Tools.write_file_U8(filepath , text)
+        text = f"https://{Tools.ALLOWED_HOST[1]}:8443/{file}"
+
     if isinstance(text, str):
         if check_user_need_news(event.source.user_id):
             text = f"{text}\n\n{notice_text}"

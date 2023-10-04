@@ -134,21 +134,28 @@ def download(filename):
     logger.info("%s and DL file: %s", msg, filename)
 
     _, extension = os.path.splitext(filename)
-    # logger.info(f"extension = {extension}")
+    #logger.info(f"extension = {extension}")
 
     path = ""
     if extension == ".mobileconfig":
         path = f"{Tools.CONFIG_FOLDER}/config_sign"
-        # logger.info(f"path = {path}")
     elif extension == ".jpg":
         path = f"{Tools.CONFIG_FOLDER}"
-        # logger.info(f"path = {path}")
     elif filename == "robots.txt" or filename == "ads.txt":
         path = f"{Tools.CONFIG_FOLDER}"
     elif filename == os.path.basename(Tools.TMP_BLACKLIST):
         return Response(open(Tools.TMP_BLACKLIST, "rb"), mimetype="text/plain")
+    elif extension == ".txt":
+        path = f"sendfile/{filename}"
+        if not os.path.exists(path):
+            logger.info("Allowed file but not found")
+            abort(404)
+        else:
+            return Response(open(path, "rb"), mimetype="text/plain")
     else:
         abort(404)
+
+    #logger.info(f"path = {path}")
 
     # 若檔案存在，則進行下載
     if not os.path.exists(os.path.join(path, filename)):
