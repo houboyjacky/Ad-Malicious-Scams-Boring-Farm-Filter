@@ -29,7 +29,7 @@
 /aava-[a-z]+\.[a-z]/
 /aavaepro[0-9]+\.xyz
 /aclar.+\.com/
-/ai-international[a-z0-9]\.com/
+/ai-international[a-z0-9]+\.com/
 /aisme.+\.com/
 /aismex[a-z0-9].com/
 /aitechstock\.(co|tw|vip)/
@@ -71,6 +71,7 @@
 /carousell-tw[a-z0-9]+\.xyz/
 /carousell[0-9][0-9]kf\.tw/
 /carousell[a-z][0-9]+\.com/
+/carousellattest[a-z0-9]+\.com/
 /casave[0-9]+00\.com/
 /charterprime[a-z0-9]*\.com/
 /chung[-]?hwa[-]?.*\..*/
@@ -215,6 +216,7 @@
 /twpldr[a-z]\.com/
 /ubsex[a-z0-9]{1,2}\.com/
 /usdter.?\..*/
+/view[0-9]{2,3}\.bid/
 /vip[a-z0-9]+fx\.com/
 /vipmexc[0-9]{3}\.com/
 /vipmining[0-9]{3,4}\.com/
@@ -231,6 +233,7 @@
 /xpj[0-9]{4,5}\.com/
 /xpromarkets\.[a-z]+/
 /xw[a-z0-9]+vv\.xyz/
+/yearn-finance[a-z]\.com/
 /yinhe[a-z0-9]*\.com/
 /ypscsho[a-z0-9]+tw\.com/
 /yulonfo[a-z0-9]*\.com/

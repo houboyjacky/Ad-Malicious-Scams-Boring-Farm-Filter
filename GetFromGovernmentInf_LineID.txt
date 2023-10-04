@@ -23,7 +23,7 @@ _yuyu0910
 _zhu.0522
 _zn.153
 -zyx0516
-! 更新時間 2023/10/03
+! 更新時間 2023/10/04
 ! 網址來源 https://165.npa.gov.tw/#/lineid
 ! 網址來源 https://data.gov.tw/dataset/78432
 ._.chen
@@ -1766,6 +1766,7 @@ _zn.153
 66862686
 66868102
 668800g
+66881225
 66882389
 6688hj
 6688j
@@ -3156,6 +3157,7 @@ aida958
 aiden
 aiden127
 aidixun9999
+aihenjiandan90
 aihua888l
 aii8866
 ail863501
@@ -3845,6 +3847,7 @@ baby424525
 baby52720
 baby6504
 baby6780
+baby6868520
 baby6878
 baby733
 baby7503
@@ -4229,10 +4232,12 @@ bu8833
 bubble._
 bubble909
 bubuan810123
+bufan202323
 bufushaohua
 buganxin7
 buibui0630
 bul0002
+bullish
 burt
 buty99
 bux886
@@ -4970,6 +4975,7 @@ chenyuxuan888
 chenze_11
 chenze0904
 chenzhenyu22
+chenziqi12
 chenzongsheng
 chenzw828
 cherrry1215
@@ -6061,6 +6067,7 @@ donna1717
 doo6970
 doq5104
 dor3011
+dor6778
 dora_158_
 doraˍ0108ˍ
 dora0092
@@ -6746,6 +6753,7 @@ frankbmw888
 frankmeet00
 free_989
 freecoinskc
+freehk0504
 friend860427
 frk13672
 frode-
@@ -7227,6 +7235,7 @@ gz125728
 gz1906
 gz95883
 gzr088
+gzy1116
 h011660
 h019825-
 h031103
@@ -7380,6 +7389,7 @@ hao810704
 hao815138
 hao840507
 hao87729
+hao88970
 hao99998888
 haoai1314
 haoge0810
@@ -7482,6 +7492,7 @@ help588
 hen1225
 heng_0925
 heng220
+henry050623
 henry188588
 henson1986218
 here1230
@@ -7979,6 +7990,7 @@ hysg808
 hyt2255
 hytis0118
 hyuna7717
+hyw268
 hyx0723
 hyx100
 hyx78
@@ -8078,6 +8090,7 @@ imi393
 imim6
 imly74
 imnn1115
+imqway
 imteif888
 imtoken002468
 in_tin
@@ -8253,6 +8266,7 @@ jasonfrog0905
 jasongodunoff888
 jasongood79
 jasonlin999888
+jassk611
 javionzz
 jax_1987
 jay_520
@@ -8308,6 +8322,7 @@ jeff-008
 jeff.0269
 jeff19904531
 jeff6099
+jeff730627
 jeff88589
 jeff9900731
 jefffry
@@ -8413,6 +8428,7 @@ jianxun1021
 jianzhi018
 jiao77
 jiaqi080808
+jiarou_0110
 jiarui830516
 jiawei1978
 jiawei19890829
@@ -9894,6 +9910,7 @@ lijunshun
 lik133
 likai56789
 likaiming888
+likan886
 like840209
 like985714
 likecwz
@@ -10347,6 +10364,7 @@ ljf2268
 ljf889
 ljh12580
 ljh1978
+ljh19841113
 ljh19880309
 ljh508
 ljh886
@@ -10885,6 +10903,7 @@ lxy86789
 lxy9899
 lxy997-
 lxz888
+ly_131458
 ly010101
 ly16618
 ly19851126
@@ -11108,6 +11127,7 @@ maam6899
 mac97812
 mach97
 mad4121
+maevete
 maggie19901015
 maggie2373
 maggie669
@@ -11183,6 +11203,7 @@ max999abc
 maxichen0
 maxkuan1210
 maxpro01
+maxusdt7787
 may-925
 may150511
 mayuko-702
@@ -11645,8 +11666,10 @@ mustbuy0036
 mutually0215
 muu3k
 muxu7739
+muyu810
 muze0713
 muze79
+muzili518
 mv09170
 mv6335
 mv710
@@ -11912,6 +11935,7 @@ nnn668899
 nnnmcq
 nnnn.729
 nnnn9930
+nnnnn.720
 nny1029
 nny97
 no.1top
@@ -12088,6 +12112,7 @@ pa080830
 pa0969
 pa6543
 pa7pa
+pacai0923
 pacey523
 pada0803
 padriag1989
@@ -12602,6 +12627,7 @@ qooomiss
 qooqoopp
 qoouu13
 qoow1401
+qp_0328
 qp_1319
 qp_20
 qp-1319
@@ -13642,6 +13668,7 @@ sog5888
 soklm710
 song07088
 song123456
+song858767
 songs123456
 songwen0809
 songyang988
@@ -14575,6 +14602,7 @@ una9188
 unable
 une186
 unique619
+uniswap-uni
 universe7725
 unknown
 unocoin001
@@ -14723,6 +14751,7 @@ vicky851212
 vics7080
 victoria
 vienct0904
+viia66
 vik658
 viki860320
 villa03581
@@ -14771,6 +14800,7 @@ vipw666
 viv1886
 viv3639
 vivi__0822
+vivi-lucky
 vivi.0820
 vivi.1111
 vivi.712
@@ -15095,6 +15125,7 @@ way_0826
 wayky
 wayme0204
 wayne396
+waz13140912
 waz1618
 wazirrz1
 wb19850203
@@ -15978,6 +16009,7 @@ x95195513
 x95879
 x96366
 x9912
+x9x988
 xa1688
 xa389
 xa88888
@@ -16099,6 +16131,7 @@ xi840927
 xi88997
 xia0916
 xiajie0603
+xian_0425
 xian111666
 xian840322
 xianc0
@@ -17499,6 +17532,7 @@ yu743121
 yu750727
 yu760
 yu851210
+yu85316
 yu870312
 yu88650
 yu88652
@@ -17956,6 +17990,7 @@ z19880608
 z1988888
 z1990520
 z208899
+z24356
 z25677
 z266
 z298

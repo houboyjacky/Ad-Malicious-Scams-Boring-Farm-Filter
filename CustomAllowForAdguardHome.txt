@@ -167,3 +167,7 @@
 @@||voteforterry.tw^
 @@||weceshi.com^
 @@||shope.ee^
+@@||foodomo.com^
+@@||linkbio.co^$important
+@@||iqtestacademy.org^
+@@||crs-event.line.me^$important
