@@ -169,5 +169,7 @@
 @@||shope.ee^
 @@||foodomo.com^
 @@||linkbio.co^$important
-@@||iqtestacademy.org^
 @@||crs-event.line.me^$important
+@@||appbankee.com.tw^
+@@||cmoney.tw^
+@@||taplink.cc^

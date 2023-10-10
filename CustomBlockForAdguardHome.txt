@@ -394,7 +394,6 @@
 ||app-rewards.com^
 ||app719.net^
 ||app725.net^
-||appbankee.com.tw^
 ||appboba.com^
 ||appclouddigital.com^
 ||appcloudgroup.com^
@@ -4443,7 +4442,6 @@
 ||taogg.xyz^
 ||taojinin0523.wixsite.com^
 ||taowang-mart.com^
-||taplink.cc^
 ||tataflirt.com^
 ||tatanko.com^
 ||taw-tag.top^
