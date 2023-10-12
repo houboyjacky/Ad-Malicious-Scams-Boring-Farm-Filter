@@ -2,6 +2,7 @@
 ! Puppy Scams List 2023/04/20 on https://puppyscams.org/
 # ||google.com^
 # ||wixsite.com^ 適用子網域
+#||business.site^
 ||12weeksoldmaltipoopuppies.com^
 ||1goldenretrieverpuppyspot.com^
 ||1rhodesianridgeback.com^
@@ -3440,7 +3441,6 @@
 ||burrsshibainupuppies.com^
 ||bushexoticfamily.com^
 ||bushkingcharles.net^
-||business.site^
 ||busse-pomeranian.com^
 ||butchshepherd.dog^
 ||butterflypomeranianpupps.com^
