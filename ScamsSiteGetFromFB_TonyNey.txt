@@ -11438,6 +11438,7 @@
 ||ethpools365-eth.net^
 ||ethpools365.net^
 ||ethprorun.com^
+||ethq.github.io^
 ||ethrb.top^
 ||ethrefund.xyz^
 ||ethrunplus.com^
@@ -13488,7 +13489,6 @@
 ||gistex.top^
 ||gisuoa.com^
 ||gitexbit.com^
-||github.io^
 ||give-crypto.com^
 ||giverscoinloannetwork.org^
 ||givespacex.com^
