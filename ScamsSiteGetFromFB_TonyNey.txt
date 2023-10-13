@@ -1,6 +1,7 @@
 
 ! 取自FB https://www.facebook.com/groups/1141798046611751/user/100001471821039/
 ! Update to 2023/10/09 23:59
+#||cex.io^
 #||cloudfront.net^
 #||easy.co^
 #||github.io^
@@ -6045,7 +6046,6 @@
 ||cetfx.com^
 ||cetnba20.com^
 ||cex-trade.tech^
-||cex.io^
 ||cexapp.net^
 ||cexchangemarket.com^
 ||cexcoin.cc^

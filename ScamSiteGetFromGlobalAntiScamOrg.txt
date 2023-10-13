@@ -13,6 +13,7 @@
 #||bitfinex.com^
 #||business.site^
 #||bznk.com^
+#||cex.io^
 #||cloudfront.net^
 #||digitalocean.com^
 #||easy.co^
@@ -6259,7 +6260,6 @@
 ||cesnno.net^
 ||cetfx.com^
 ||cex-trade.tech^
-||cex.io^
 ||cexchangemarket.com^
 ||cexcoin.net^
 ||cexcoinpro.com^

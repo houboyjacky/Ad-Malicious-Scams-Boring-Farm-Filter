@@ -23,7 +23,7 @@ _yuyu0910
 _zhu.0522
 _zn.153
 -zyx0516
-! 更新時間 2023/10/11
+! 更新時間 2023/10/13
 ! 網址來源 https://165.npa.gov.tw/#/lineid
 ! 網址來源 https://data.gov.tw/dataset/78432
 ._.chen
@@ -2091,6 +2091,7 @@ _zn.153
 8581688
 858168888
 8583110
+8585998
 8586187
 8586188
 858688
@@ -3067,6 +3068,7 @@ abc9636
 abc9765000
 abcd16888888
 abcd885744
+abcqq14788n
 abcwei888
 abe52572013
 aben-kai
@@ -3681,6 +3683,7 @@ as1856
 as221585
 as246246
 as25843
+as26379
 as2688wq
 as30215
 as33088
@@ -4137,6 +4140,7 @@ bit2c-ex_vip
 bit361
 bit8188
 bit88999
+bita9966
 bitc168
 bitc169
 bitc999
@@ -5430,6 +5434,7 @@ cowbcowd8857
 cp0709
 cp19800814
 cp288
+cp6670
 cpdd1916
 cpr1009521
 cpt0969
@@ -6157,6 +6162,7 @@ dora52055
 doris08200820
 doris66
 dpl9663
+dr2255225
 dr2858
 dr852
 dragons318
@@ -7183,6 +7189,7 @@ go131415
 go952316
 go9588
 god_bless
+godbless0803
 godsent7
 gogo9122
 gogoro0030
@@ -7740,6 +7747,7 @@ hk667799
 hk68188
 hk769
 hk848
+hk888000
 hkbs852
 hkex01
 hkex8888
@@ -8525,6 +8533,7 @@ jiang131400
 jiang19850801
 jiang688688
 jiang821012
+jiang886600
 jiangchen0708
 jianghao85
 jiangsheng520
@@ -9008,6 +9017,7 @@ kayao1118
 kayle1029777444799
 kaylie0809
 kb12315
+kb19879090
 kb2688
 kb5854
 kb889
@@ -9601,6 +9611,7 @@ kyk19900518
 kyle19910128
 kyle5253
 kyle881001
+kyre-233
 kys953
 kytw33
 kyu447023
@@ -9645,6 +9656,7 @@ l68766
 l750826
 l8023111
 l8427
+l887501
 l888759
 l888888
 l911022
@@ -10384,6 +10396,7 @@ liu19890225_
 liu200158
 liu2811
 liu297298
+liu40517
 liu520998
 liu56179681
 liu580911
@@ -10525,6 +10538,7 @@ ljx520250
 ljx52113
 ljx8087
 ljx8800
+ljy_741209
 ljy00123
 ljy0707c
 ljy12344
@@ -11267,6 +11281,7 @@ mac97812
 mach97
 mad4121
 maevete
+maf0324
 maggie19901015
 maggie2373
 maggie669
@@ -11530,6 +11545,7 @@ mingˍ258361
 ming002211
 ming1986
 ming1986.
+ming88888666
 mingjin77920
 mingli1
 minglistar
@@ -12990,6 +13006,7 @@ qwq861214
 qwq8881
 qwsa974
 qwtt6182
+qwu13375
 qww919
 qwy1205
 qx1126
@@ -13924,6 +13941,7 @@ ss930424
 ss988168
 ssbf6688
 ssd9981
+ssdrr77899
 ssffsssgh789
 ssg7783
 ssh102
@@ -13941,6 +13959,7 @@ sss7758521
 sss81921
 sssjwjwjw888
 ssss147258
+ssss5201ssss
 sssyy7
 ssting96
 sstty6
@@ -14149,6 +14168,7 @@ sy66580
 sy697
 sy730607
 sy800001
+sy8168
 sy820720
 sy850612
 sy8797
@@ -15248,6 +15268,7 @@ wang958900
 wang996633
 wangbin905
 wangbo6363
+wangc63
 wangchen129
 wangdongi
 wangf1985
@@ -15297,6 +15318,7 @@ wanting199835
 wanw926
 wanwan19626
 wanx565
+wanyi0528
 wanzi626
 wanzi6260
 wao0611
@@ -15933,6 +15955,7 @@ ww2976
 ww2988
 ww3237
 ww3987
+ww3g
 ww44588
 ww493
 ww50121250
@@ -16127,6 +16150,7 @@ wzl6688
 wzq0286
 wzq1983
 wzs88
+wzw19910720
 wzw20
 wzw669
 wzw7788
@@ -17133,6 +17157,7 @@ yan72900
 yan729000
 yan7915
 yan86363
+yan8897
 yan9207y
 yan958
 yananan001
@@ -17175,6 +17200,7 @@ yangjie
 yangjj328
 yangjun1122
 yangjun55
+yangkeai26
 yanglda1314
 yanglong818
 yanglu1111
@@ -17291,6 +17317,7 @@ ye6ye
 ye8020
 ye8716
 ye9731
+year_6666
 year1111177777
 yechen51688
 yed45582
@@ -18168,6 +18195,7 @@ yz0990
 yz608598
 yz8270
 yz918
+yzc12
 yzc1223
 yzh168168
 yzh62566
@@ -18528,6 +18556,7 @@ zhimiang
 zhiming85
 zhire816
 zhirong1188
+zhiyifang
 zhiyuan06281979
 zhize1314
 zhizhe999
@@ -18886,6 +18915,7 @@ zx2825z
 zx3568
 zx357210
 zx4538
+zx5344
 zx5613
 zx658
 zx6654
