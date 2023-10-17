@@ -73,8 +73,7 @@
 /carousell[0-9][0-9]kf\.tw/
 /carousell[a-z][0-9]+\.com/
 /carousellattest[a-z0-9]+\.com/
-/carrefo[a-z]+\.com/
-/carrefom[a-z]+\.com/
+/carr[eo]fo[a-z]+\.com/
 /casave[0-9]+00\.com/
 /charterprime[a-z0-9]*\.com/
 /chung[-]?hwa[-]?.*\..*/
@@ -142,6 +141,7 @@
 /garda[a-z0-9]+\.com/
 /gbay-?shop.*\..+/
 /gdf999.[a-z]+/
+/gemini[a-z]+\.com/
 /gexcoin\.(co|io|me)/
 /global-exp[a-z0-9]+rade\.com/
 /goldmansachs[0-9]*\.[a-z]+/
@@ -149,6 +149,7 @@
 /harord[a-z]\.com/
 /hivemall[a-z]\.com/
 /hssui[0-9]+\.wixsite\.com/
+/huata[a-z]+\.com/
 /hv-t[a-z]\.cc/
 /ibitmin.+\..+/
 /ic-program[a-z]+\.com/
@@ -266,6 +267,7 @@
 /ziiea[a-z]+\.com/
 #||*.online^$denyallow=pestyle.online
 #||bar^
+#||cos.ap-*.myqcloud.com^
 #||ml^
 #||xyz^
 ||*.at^
@@ -303,7 +305,6 @@
 ||coinex*.*^
 ||coinlead.*^
 ||coinparks.*^
-||cos.ap-*.myqcloud.com^
 ||crossglobal*.*^
 ||difcinvestment.*^
 ||ellandroadcapital.*^
@@ -317,6 +318,7 @@
 ||gmall-tw.*^
 ||gmarket-go.*^
 ||goldstar.*^
+||grovpon.*^
 ||gstha.*^
 ||hispeedtrading0728.*^
 ||imtoken*.*^

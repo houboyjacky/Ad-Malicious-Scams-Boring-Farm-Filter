@@ -1024,7 +1024,7 @@
 ||45dwz.cn^
 ||tuiabcedf.cn^
 ||haoxuexiba.cn^
-||cos.ap-shanghai.myqcloud.com^
+#||cos.ap-shanghai.myqcloud.com^
 ! 詐騙電商 https://www.dcard.tw/f/anti_fraud/p/241611957
 ||temu866.com^
 ! 詐騙虛擬商 https://www.dcard.tw/f/persona_yellowfx/p/241615137
@@ -1034,7 +1034,7 @@
 ||kkabak.com^
 ! 可疑購物網 https://www.dcard.tw/f/talk/p/241616391
 ||jxypshops.com^
-||cos.ap-hongkong.myqcloud.com^
+#||cos.ap-hongkong.myqcloud.com^
 ! 詐騙中華電信 https://www.dcard.tw/f/cycu/p/241620617
 ||wdaq-tw.cn^
 ! 詐騙取貨 https://www.dcard.tw/f/buyonline/p/241618526
