@@ -81,12 +81,12 @@ def background_schedule(stop_event):
 def Initialization():
     logger.info("Initialization Start")
     SignMobileconfig()
-    LINE_ID_Download_From_165()
     download_cf_ips()
     update_blacklist(True)
     Query_Image.Load_Image_Feature()
     EmptyShortUrlDB()
     load_block_ip_list()
+    LINE_ID_Download_From_165()
     logger.info("Initialization Finish")
 
 
