@@ -5,6 +5,7 @@
 #||cloudfront.net^
 #||easy.co^
 #||github.io^
+#||icmarkets.com^
 #||t.co^
 #||trustwallet.com^
 #||web.app^
@@ -14820,7 +14821,6 @@
 ||iclick.club^
 ||icljy.top^
 ||icmarkets-tw.com^
-||icmarkets.com^
 ||icmarkets.news^
 ||icmarkets.top^
 ||icmsfx.com^
