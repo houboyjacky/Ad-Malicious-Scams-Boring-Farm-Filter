@@ -236,7 +236,7 @@ def remove_non_english(text):
 def translate_to_chinese(text):
     DB_name = "translate"
 
-    text = remove_non_english(text)
+    text = remove_non_english(str(text))
 
     collection = Read_Collection(DB_name, DB_name)
     if Document := Search_Same_Document(collection, "英文", text):
@@ -261,7 +261,8 @@ def translate_to_chinese(text):
 def WhereAreYou(IP):
     res = DbIpCity.get(IP, api_key="free")
 
-    chinese_city = translate_to_chinese(res.city)
+    #chinese_city = translate_to_chinese(res.city)
+    chinese_city = res.city
     chinese_region = translate_to_chinese(res.region)
 
     # 使用pycountry獲取完整的國家名稱
