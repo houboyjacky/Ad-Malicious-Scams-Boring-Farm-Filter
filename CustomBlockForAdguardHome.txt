@@ -3,6 +3,7 @@
 ! 過度引用 www.tradingview-widget.com
 ! 疑似詐騙或不良的網站
 #||altoops.com^
+#||bitly.li^
 #||bitoex.com^
 #||buffettonlineschool.com.tw^
 #||cht.com.tw^
@@ -20,6 +21,7 @@
 #||safepal.com^
 #||shopline.tw^
 #||tpglobalwallet.net^
+#||twmrbt.com^
 #||ubpages.com^
 #||wix.com^
 #||wshifen.com^
@@ -506,6 +508,7 @@
 ||augtcd.com^
 ||augtfd.com^
 ||augtps.com^
+||aupakt.buzz^
 ||auqomoh.life^
 ||aura.best^
 ||aurora86.shop^
@@ -659,6 +662,7 @@
 ||bitcore.vg^
 ||bitecrypto-vip.com^
 ||bitedax.com^
+||bitehtea.com^
 ||bitehtex.com^
 ||bitekrc.com^
 ||bitermt.com^
@@ -688,6 +692,7 @@
 ||bitnrv.com^
 ||bitoproex.vip^
 ||bitoproglobal.com^
+||bitos.club^
 ||bitpievt.com^
 ||bitptw.com^
 ||bitrels.com^
@@ -734,6 +739,7 @@
 ||bl678.net^
 ||blendedsearch.com^
 ||blenderelements.com^
+||blishs.com^
 ||blmexf.top^
 ||blmexh.top^
 ||blockayi.com^
@@ -1037,6 +1043,7 @@
 ||cfbhmfi.shop^
 ||cfdrc.net^
 ||cgbsa.shop^
+||cgft8889.com^
 ||cgtatf.com^
 ||cguang374.wixsite.com^
 ||chaebol.cc^
@@ -1113,6 +1120,7 @@
 ||clubcasino666.com^
 ||clurth5kjzcs.com^
 ||cm4x2202ip.lol^
+||cmacbg.xyz^
 ||cmapocz.top^
 ||cme091.com^
 ||cmgone.com^
@@ -1202,8 +1210,10 @@
 ||comtlak.site^
 ||confirmation-18412927.com^
 ||confirme-guest.com^
+||connectivesud.fr^
 ||conrimations-approve.com^
 ||contact-for-case-reply-orj1.web.app^
+||contractog.com^
 ||contractwe.com^
 ||coolbitx989.com^
 ||copmusionu.shop^
@@ -1631,6 +1641,7 @@
 ||ekcuci4.org^
 ||ekhfqxi.top^
 ||ekmsjqka.shop^
+||ekunsb.cc^
 ||elads.kocpc.com.tw^
 ||electw.buzz^
 ||electw.top^
@@ -1877,6 +1888,7 @@
 ||fetrbt.net^
 ||fets-tw.website^
 ||feubwgtosaal.com^
+||fex-all.cc^
 ||fey.io^
 ||feyku.com^
 ||ffffgame.com^
@@ -1889,6 +1901,7 @@
 ||fhfghj.shop^
 ||fhfhsh.fun^
 ||fhlio.com^
+||fhlxa.com^
 ||fhlxc.com^
 ||fhxmv.com^
 ||fhy6hd.top^
@@ -2206,6 +2219,7 @@
 ||gofander.com^
 ||gogo123.com^
 ||goidx.co^
+||goispse.com^
 ||gold-blockchain.cc^
 ||gold-supermall.com^
 ||goldawg.com^
@@ -2219,6 +2233,7 @@
 ||goldim.cc^
 ||goldminvip.com^
 ||goldrcd.com^
+||goldvned.com^
 ||goldvnjf.com^
 ||goldvtyx.com^
 ||goldvwn.com^
@@ -2276,6 +2291,7 @@
 ||grzq.org^
 ||gs1658.com^
 ||gs5598.com^
+||gscbx.com^
 ||gsshoptime.com^
 ||gstha.homes^
 ||gstha.xyz^
@@ -2322,6 +2338,7 @@
 ||gzjuning.com^
 ||gzjysd.com^
 ||h2al.top^
+||ha-ei.cc^
 ||hagjjrtw.com^
 ||hagjtw-tww.com^
 ||hagjtw.com^
@@ -2556,6 +2573,7 @@
 ||hyx050129.com^
 ||hyxkftue.buzz^
 ||hyxu.xyz^
+||hz-fd.cc^
 ||hzgstr.live^
 ||hzsyzdh.com^
 ||hzvip99.com^
@@ -2980,6 +2998,7 @@
 ||kgtds.com^
 ||kgtfx.com^
 ||khenqu.xyz^
+||khong-vui.pages.pro.br^
 ||kianashop.shop^
 ||kilby.buzz^
 ||kindlestone.com^
@@ -3068,6 +3087,7 @@
 ||kvbnhn.xyz^
 ||kvt68.net^
 ||kwai-vip.com^
+||kwaidny.com^
 ||kwaiese.com^
 ||kwaigoog.com^
 ||kwaihop.com^
@@ -3184,6 +3204,7 @@
 ||linemestickershop.weebly.com^
 ||linesme.com^
 ||linetwbn.com^
+||linexlife.top^
 ||linghittw.com^
 ||lingwh.com^
 ||linkcdn.to^
@@ -3695,6 +3716,7 @@
 ||njibke.top^
 ||njxaw.com^
 ||nk472.top^
+||nkbvlt.com^
 ||nkggjtunm.com^
 ||nkyyds.com^
 ||nlpr9do.top^
@@ -3704,6 +3726,7 @@
 ||nmvdcbo.cam^
 ||nn2dlw.top^
 ||nngg.asia^
+||nnidda.top^
 ||nnsbaw.world^
 ||nntoto.com^
 ||noahpb.club^
@@ -3743,9 +3766,11 @@
 ||o8isn.top^
 ||o8oticl.top^
 ||oahdf.live^
+||oaivuhkd.cyou^
 ||oaklawnsoccerclub.org^
 ||oaktoken1995.com^
 ||oast.fun^
+||oaxeb.com^
 ||oaxed.com^
 ||ob5858.com^
 ||obstgruct.shop^
@@ -3928,6 +3953,7 @@
 ||pdpdsum.com^
 ||pdsones.online^
 ||peaceworld0.wixsite.com^
+||peakzone.shop^
 ||pecgw.com^
 ||pederapital.com^
 ||pehcde.com^
@@ -4081,6 +4107,7 @@
 ||psychologis-lily.com^
 ||psychologis-yiyi.com^
 ||pt-app.oss-us-west-1.aliyuncs.com^
+||pttcom.top^
 ||pu77.net^
 ||punl5q5c9a.com^
 ||puzzl.site^
@@ -4588,6 +4615,7 @@
 ||sogoevents.com^
 ||sohighmeet.com^
 ||sojguy.xyz^
+||sokdeur.org^
 ||sokgns1852.com^
 ||sokyeshop.com^
 ||sonikcoin.com^
@@ -4735,10 +4763,12 @@
 ||suucceessfultrruust.shop^
 ||suyepshop.com^
 ||suyueservice.com^
+||svabdb.cn^
 ||svipgx.com^
 ||svipnosw888.cn^
 ||svisn.tw^
 ||sweet-bacon.one^
+||sweetlovel.com^
 ||swissquote.com^
 ||sxonv.com^
 ||sxwl.vip^
@@ -4814,6 +4844,7 @@
 ||taiwanmobilleotww.net^
 ||taiwanmoble.live^
 ||taiwanmoble.me^
+||taiwanmoblie.cc^
 ||taiwannmobile.co.uk^
 ||taiwans.tech^
 ||taiwanxuetang.com^
@@ -4936,6 +4967,7 @@
 ||tickmill.online^
 ||tiigov.tv^
 ||tikeik.com^
+||tikenya.org^
 ||tikishop.me^
 ||tikoaes.com^
 ||tikosoay.com^
@@ -5027,6 +5059,7 @@
 ||tradeepro.space^
 ||tradefmxz.com^
 ||tradefsde.com^
+||tradeifylive.com^
 ||trademaster.top^
 ||tradenation.tw^
 ||traderoadtw.com^
@@ -5084,6 +5117,7 @@
 ||tsfxa.com^
 ||tsi.st^
 ||tsjsjvn.shop^
+||tsnien.com^
 ||tszxjl.top^
 ||tt.vg^
 ||ttads.space^
@@ -5234,6 +5268,7 @@
 ||twmacd.com^
 ||twmalls.com^
 ||twmeetlove.com^
+||twmoblea.com^
 ||twmoie.com^
 ||twmqn.me^
 ||twmyship7-11.icu^
@@ -5494,6 +5529,7 @@
 ||vip4trader.site^
 ||vipane.com^
 ||vipfsx.com^
+||viphtu.com^
 ||vipip01.com^
 ||vipmalldownload.com^
 ||vipsg.shop^
@@ -5730,6 +5766,7 @@
 ||wtkf1.vip^
 ||wtkwsw.com^
 ||wtye.top^
+||wu-mart-shops.com^
 ||wuefb916worjh.pro^
 ||wuhu666.com^
 ||wumartshop.com^
@@ -6022,6 +6059,7 @@
 ||zangeo.top^
 ||zasdasd.club^
 ||zbbvcn.vip^
+||zbgj.top^
 ||zbotu.xyz^
 ||zbzbijs.vip^
 ||zbzbkg.vip^
@@ -6038,6 +6076,7 @@
 ||zerohouse1491.com^
 ||zewjlj.top^
 ||zezsfshop.online^
+||zf188.net^
 ||zgrshop.online^
 ||zgsit.cn^
 ||zhanbu168.com^

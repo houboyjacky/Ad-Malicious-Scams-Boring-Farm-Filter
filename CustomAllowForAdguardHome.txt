@@ -173,3 +173,8 @@
 @@||appbankee.com.tw^
 @@||cmoney.tw^
 @@||taplink.cc^
+@@||fami.life^$important
+@@||amazon.dev^$important
+@@||amazon.com^$important
+@@||amazon-adsystem.com^$important
+@@||okweb.asia^$important
