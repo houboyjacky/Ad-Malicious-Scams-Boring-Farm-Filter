@@ -16,6 +16,7 @@
 #||omygod.com.tw^
 #||onelink.me^
 #||pages-wildcard.weebly.com^
+#||pepperstone.com^
 #||phicdn.net^
 #||portaly.cc^
 #||safepal.com^
@@ -3960,7 +3961,6 @@
 ||pendek.me^
 ||penetration1.com^
 ||pentobarbitalgroup.com^
-||pepperstone.com^
 ||pepperstonedcrm.com^
 ||percy.buzz^
 ||personal-loans-92004.com^
