@@ -80,7 +80,7 @@ def Read_Document_Account(collection, struct, DB_Name):
     if struct:
         rmessage = struct['帳號']
         if Doc := Search_Same_Document(collection, "帳號", struct['帳號']):
-            logger.info(f"分析完成，找到相同資料\n來源=>{Doc['來源']}")
+            logger.info(f"分析完成，找到相同資料，來源=>{Doc['來源']}")
             status = 1
         else:
             logger.info("分析完成，找不到相同資料")
