@@ -261,7 +261,7 @@ def check_blacklisted_site(domain_name):
             regex = re.compile(line[1:-1])
             if regex.search(domain_name):
                 logger.info(f"{domain_name}在黑名單內1")
-                msg = f"正規化黑名單封鎖"
+                msg = f"正規化黑名單封鎖-「{line}」"
                 update_part_blacklist_comment(msg)
                 update_part_blacklist_rule_to_db(domain_name)
                 return True
@@ -270,7 +270,7 @@ def check_blacklisted_site(domain_name):
             if re.fullmatch(regex, domain_name):
                 # 特別有*號規則直接可以寫入Adguard規則
                 logger.info(f"{domain_name}在黑名單內2")
-                msg = f"「*」黑名單封鎖"
+                msg = f"「*」黑名單封鎖-「{line}」"
                 update_part_blacklist_comment(msg)
                 update_part_blacklist_rule_to_db(domain_name)
                 return True
