@@ -180,3 +180,6 @@
 @@||okweb.asia^$important
 ! 縮網址
 @@||parg.co^$important
+@@||eprice.it^
+! 一卡通新縮網址
+@@||i-pass.co^
