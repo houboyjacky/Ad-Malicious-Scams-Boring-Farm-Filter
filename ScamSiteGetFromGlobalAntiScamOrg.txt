@@ -10,6 +10,7 @@
 #||accupass.com^
 #||aliyuncs.com^
 #||apple.com^
+#||bingx.com^
 #||bitfinex.com^
 #||business.site^
 #||bznk.com^
@@ -3326,7 +3327,6 @@
 ||bingiu.com^
 ||bingoinvest88.com^
 ||bingtcwi.com^
-||bingx.com^
 ||bingxcoins.com^
 ||bingxcopytrade.com^
 ||bini.pw^

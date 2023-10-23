@@ -178,3 +178,5 @@
 @@||amazon.com^$important
 @@||amazon-adsystem.com^$important
 @@||okweb.asia^$important
+! 縮網址
+@@||parg.co^$important

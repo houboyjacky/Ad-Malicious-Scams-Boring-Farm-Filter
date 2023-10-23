@@ -276,6 +276,7 @@
 ||*.icu^
 ||*.it^$denyallow=org.it|edu.it|com.it|gov.it|mitm.it
 ||*.lol^
+||*.pages.*.br^
 ||*.pl^$denyallow=org.pl|edu.pl|com.pl|gov.pl
 ||*.vip^
 ||aave-loan.*^
