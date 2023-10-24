@@ -23,7 +23,7 @@ THE SOFTWARE.
 from bs4 import BeautifulSoup
 from datetime import date
 from Logger import logger
-from Query_Line_ID import LineID_Write_Document, LineID_Read_Document
+from Query_Line_ID import LineID_Write_Document, LineID_Read_Document, LineID_Delete_Document
 from Query_URL_Short import Resolve_Redirects
 from typing import Optional
 import Query_API
@@ -124,7 +124,7 @@ def analyze_line_invite_url(user_text: str) -> Optional[dict]:
             logger.error('無法解析類別')
             return None
 
-        if "?fbclid" in user_text:
+        if "fbclid" in user_text:
             user_text = re.sub(r"\?fbclid=.+$","", user_text)
 
         struct = {"類別": category, "帳號": invite_code, "來源": orgin_text,
@@ -193,8 +193,10 @@ def lineinvite_Delete_Document(user_text: str):
     if analyze:
         if Query_API.Search_Same_Document(collection, "帳號", analyze['帳號']):
             Query_API.Delete_document(collection, analyze, "帳號")
+            LineID_Delete_Document(analyze['帳號'])
             rmessage = f"LINE邀請網址黑名單成功刪除帳號\n「{analyze['帳號']}」"
         elif LineID_Read_Document(analyze["帳號"]):
+            LineID_Delete_Document(analyze['帳號'])
             rmessage = f"LINE邀請網址黑名單成功刪除帳號\n「{analyze['帳號']}」"
         else:
             logger.info("分析完成，找不到相同資料")
