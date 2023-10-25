@@ -3,6 +3,7 @@ _abbe.520520
 _abby.nice
 _abby0511
 _amber916
+_hao1017
 _hhan.0203
 _jacksen0809
 _lyx.214
@@ -23,7 +24,7 @@ _yuyu0910
 _zhu.0522
 _zn.153
 -zyx0516
-! 更新時間 2023/10/24
+! 更新時間 2023/10/25
 ! 網址來源 https://165.npa.gov.tw/#/lineid
 ! 網址來源 https://data.gov.tw/dataset/78432
 ._.chen
@@ -34,6 +35,7 @@ _zn.153
 @0021cwyn
 @002lcwvn
 @002wjjmx
+@008nsfqz
 @009gocnk
 @014xvueq
 @017oqlqe
@@ -1457,6 +1459,7 @@ _zn.153
 3886223
 3890088
 38910417
+3891260
 3892479
 38928
 3894078
@@ -2145,6 +2148,7 @@ _zn.153
 85739212
 85778888
 857857aka
+858168
 8581688
 858168888
 8583110
@@ -3627,6 +3631,7 @@ anna_10211997
 anna_19890213
 anna_5668
 anna_5688
+anna10092
 anna19900624
 anna2023666
 anna224488
@@ -3664,6 +3669,7 @@ anny950722
 annzail4
 anqi19850707
 anquan1
+anquan9
 anqwe9461
 anrese
 anselm
@@ -4292,6 +4298,7 @@ bm7913
 bm8080
 bmd_8857
 bmw0985
+bmw102100
 bn01
 bn5656
 bn66966
@@ -5867,6 +5874,7 @@ cyf0626
 cyf123
 cyf520999
 cyf570
+cyf6668
 cyf87213
 cyf9011
 cyf940
@@ -6289,6 +6297,8 @@ doraˍ0108ˍ
 dora0092
 dora0550
 dora52055
+doris
+doris_1010
 doris08200820
 doris66
 dpl9663
@@ -6424,6 +6434,7 @@ dzj667788
 dzw1999888
 e-buy
 e.r.r.o.r_888
+e1235498
 e19900821
 e19970
 e2224
@@ -6529,6 +6540,7 @@ emily00816
 emily623
 emily830427
 emilyy623
+emma
 emma-0522
 emma19900521
 emma19940516
@@ -6666,6 +6678,7 @@ f6638
 f68686688
 f688
 f69191
+f69481
 f731
 f7776604
 f846849
@@ -6865,6 +6878,7 @@ feng9891
 fengzi5588
 fer521
 ferrari_812
+ferrari516888
 ferrari8889
 ff00028
 ff08089
@@ -7799,6 +7813,7 @@ hh0899
 hh0989
 hh10120
 hh10555
+hh1345
 hh155886
 hh16690
 hh1762
@@ -11037,6 +11052,7 @@ lrr521700
 lry1778
 ls1111116
 ls118147
+ls198011
 ls271519
 ls30401
 ls369
@@ -11394,6 +11410,7 @@ lyy334
 lyy5188
 lyy627
 lyy7692
+lyy7888999
 lyy9411
 lyy9988
 lyz0011
@@ -11416,6 +11433,7 @@ lzc147
 lzc568
 lzd031
 lzdkf
+lzf1213
 lzf198707
 lzf861029
 lzg778800
@@ -12418,6 +12436,7 @@ oandavip
 oas5821
 ocean-lh
 ocean066
+ocean1038
 ocean777vision
 ocean886
 of6888
@@ -14019,6 +14038,7 @@ siqi1994613
 sir093
 siry103
 sis5588
+sisai18
 sisi0723
 sisi52013
 sisilove520
@@ -14297,6 +14317,7 @@ stree66
 strive00
 stt19890819
 stummy8
+sty1973
 sty198308
 styh909
 styjz
@@ -14526,6 +14547,7 @@ t7655380
 t77ace
 t77ty
 t781214
+t8099
 t8288
 t86520
 t8665
@@ -15583,6 +15605,7 @@ wang19920817
 wang19950420
 wang55666
 wang588740
+wang62285
 wang66158
 wang668855
 wang66999
@@ -15916,6 +15939,7 @@ whdg2346
 white1225s
 whj0518
 whmsk
+whpw
 whs6686
 whty777
 whxan0103quan
@@ -16819,6 +16843,7 @@ xin02_14
 xin042393
 xin10_22
 xin100603
+xin107875
 xin11.
 xin150626
 xin155
@@ -17411,6 +17436,7 @@ y46461
 y52886
 y53100
 y55155
+y585118
 y58563i
 y588988
 y5995
@@ -18033,6 +18059,7 @@ yq0413
 yq1016
 yq1207
 yq1991718
+yq2345
 yq2899
 yq5553
 yq5688
@@ -18144,6 +18171,7 @@ yu686860
 yu743121
 yu750727
 yu760
+yu8366
 yu851210
 yu85316
 yu870312
@@ -19002,6 +19030,7 @@ zi0710
 zi142
 zi350825668
 zi688
+zic55688
 zicheng1984
 zichenglaile
 zichi0919
@@ -19091,6 +19120,7 @@ zjy19861015
 zjy588
 zjy898989
 zjy9285
+zk122625
 zk14098
 zk19880925
 zk666999
@@ -19555,6 +19585,7 @@ zzc33446688
 zzc5677
 zzc760924
 zzc95280
+zzcom.n
 zzcomy
 zzdd567
 zzdin9544
@@ -19616,3 +19647,4 @@ zzz2778123
 zzz990713173
 zzzhanm
 zzzqwer
+zzzxxcc112233

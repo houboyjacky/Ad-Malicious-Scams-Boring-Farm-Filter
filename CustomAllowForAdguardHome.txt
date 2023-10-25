@@ -183,3 +183,6 @@
 @@||eprice.it^
 ! 一卡通新縮網址
 @@||i-pass.co^
+@@||bingx.com^
+@@||bitturk.com^
+@@||pchome.link^
