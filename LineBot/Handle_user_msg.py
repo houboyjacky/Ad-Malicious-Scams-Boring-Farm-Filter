@@ -178,6 +178,18 @@ def handle_mail(user_id, text, must_be_text):
     if re.match(Tools.KEYWORD_MAIL[0], text.lower()):
         mail, status = Q_MAIL.Mail_Read_Document(text)
         Personal_Update_SingleTag_Query(user_id, "Mail", status)
+
+        # 使用字符串的split方法分割电子邮件地址
+        parts = mail.split("@")
+
+        # 如果不在黑名單，改檢查網域是否有問題
+        if status != 1 and len(parts) == 2:
+            domain = 'http://' + parts[1]
+            IsScam, Text, domain_name = Q_URL.user_query_website("", domain)
+            if IsScam == 1:
+                status = domain
+                Q_MAIL.Mail_Write_Document(mail.lower())
+
         if must_be_text:
             return min_reply_text(status)
         return Handle_LineBot.message_reply_Query(user_id, status, "E-mail", mail, text)
