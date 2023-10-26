@@ -13,6 +13,7 @@
 #||fontawesomes.com^
 #||ig.com^
 #||learningpa.cc^
+#||linkfly.to^
 #||maac.io^
 #||mbobi.com^
 #||omygod.com.tw^
@@ -3350,7 +3351,6 @@
 ||lingwh.com^
 ||linkcdn.to^
 ||linkebin.nl^
-||linkfly.to^
 ||linkme.vn^
 ||linkr.it^
 ||linkt-gov.club^
