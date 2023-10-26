@@ -186,3 +186,5 @@
 @@||bingx.com^
 @@||bitturk.com^
 @@||pchome.link^
+@@||mac89.com^$important
+@@||linkfly.to^$important
