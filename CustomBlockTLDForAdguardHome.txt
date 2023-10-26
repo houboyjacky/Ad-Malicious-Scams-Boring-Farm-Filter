@@ -61,10 +61,12 @@
 /booking-\w+\.cloud/
 /btc[0-9]{4}\.com/
 /btcbox[a-z]{1,3}\.com/
+/bullish[a-z]{1,2}\.com/
 /bycp[a-z0-9]*\.com/
 /caifuyiha[a-z0-9]*\.club/
 /caijing/
 /caixin[0-9]+yule\.com/
+/cali[0-9]{3}\.net/
 /capita[a-z0-9]*\.com/
 /carousel[a-z0-9-]*tw\.(com|xyz)/
 /carousel[a-z0-9]+[-]?tw\.com/
@@ -84,6 +86,7 @@
 /coincheck[a-z]+\.com/
 /coincheck\.[a-z]+/
 /coindex.*\..*/
+/coinmama[a-z]+\.com/
 /coinmamam[a-z]+\.com/
 /coinrule.*\.*/
 /coinvv[a-z0-9]+\.com/
@@ -116,6 +119,7 @@
 /eth-cvc[0-9]*\.com/
 /ethminer-[a-z]+\.com/
 /etimtoken[0-9-]{1,2}\.com/
+/etimtoken[0-9]+\.com/
 /exness[0-9]+\.com/
 /expecta[a-z]+\.com/
 /fasonlacrm\.[a-z]+/
@@ -174,6 +178,7 @@
 /liquiditypool-.+\.com/
 /long[0-9]\.net/
 /metoocofstimrgpaged-[a-z0-9]+\.online/
+/mgs1[0-9]88\.(vip|com)/
 /miracle[a-z]{3,4}\.com/
 /money\d{4}\.com/
 /moxc[a-z0-9]{2,3}\.com/
@@ -188,6 +193,7 @@
 /pages-[0-9]+\.pw/
 /pageverification[a-z0-9]+\.co\.vu/
 /peeba[0-9]\.com/
+/peicheng[a-z]{2,3}\.com/
 /peicheng[a-z0-9]+\.com/
 /podcast[a-z]{2}\.com/
 /psychologis-\w+.com/
@@ -212,9 +218,12 @@
 /snx.+\.com/
 /so[0-9]+\.com/
 /sotck[a-z]+\.com/
+/spark[a-z]{3-5}\.com/
 /stablecoin.+\..+/
+/starexchang[a-z]{2,3}\.com/
 /starha[a-z]+\.com/
 /starhal[a-z]+\.com/
+/stellar[a-z]{3}\.com/
 /stepup[a-z0-9]*\.com/
 /successfull-[a-z0-9]+\.online/
 /supportteam[0-9]+\.asia/
@@ -279,14 +288,17 @@
 ||*.pages.*.br^
 ||*.pl^$denyallow=org.pl|edu.pl|com.pl|gov.pl
 ||*.vip^
+||0xboost.*^
 ||aave-loan.*^
 ||acp-tw.*^
 ||ada-defi.*^
+||ainoce.*^
 ||alfa-crypx.*^
 ||alfabtc.*^
 ||alpemarket.*^
 ||amgmall.*^
 ||amtop.*^
+||amtopcotd.*^
 ||ankex-btc.*^
 ||anybuyshops.*^
 ||apexcoin.*^
@@ -313,6 +325,8 @@
 ||eshop-tw.*^
 ||eurtwoxt.*^
 ||fanbtctw.*^
+||flipster.*^
+||foesrvnet.*^
 ||frubit.*^
 ||fzangon.*^
 ||globalshop-*.com^
@@ -334,6 +348,7 @@
 ||sc.*.cn^
 ||sfexpress-help.*^
 ||traweb3.*^
+||trustcoin-exchange.*^
 ||tw-sia.*^
 ||twcaijin.*^
 ||vantwnow.*^
