@@ -6,6 +6,7 @@
 #||cdn77.org^
 #||fx110.com^
 #||github.io^
+#||i-gamer.net^
 #||mystrikingly.com^
 #||weebly.com^
 ||0066666.co^
@@ -4006,7 +4007,6 @@
 ||hzxxs.top^
 ||hzyouyushenghuo.com^
 ||hzzd9998.com^
-||i-gamer.net^
 ||i9cneuc.com^
 ||iacvtrp.top^
 ||iaglim.com^
