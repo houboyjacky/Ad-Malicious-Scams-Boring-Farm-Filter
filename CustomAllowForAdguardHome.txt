@@ -188,3 +188,4 @@
 @@||pchome.link^
 @@||mac89.com^$important
 @@||linkfly.to^$important
+@@||chainee.io^$important
