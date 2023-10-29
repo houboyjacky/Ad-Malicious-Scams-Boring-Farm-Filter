@@ -109,15 +109,6 @@ def handle_line_id(user_id, text, must_be_text):
         input = match.group(1)
         Personal_Update_SingleTag(user_id, "文字")
         return f"你所輸入的「{input}」不能查詢\n需要LINE ID才能查詢唷～"
-    # 特別LINE APP網址
-    if match := re.search(Tools.KEYWORD_LINE_INVITE[7], text):
-        line_tag = match.group(1)
-        _, status = Q_LINEID.LineID_Read_Document(line_tag)
-        Personal_Update_SingleTag_Query(user_id, "LINE_ID", status)
-        Handle_LineBot.ID_Count("LINE")
-        if must_be_text:
-            return min_reply_text(status)
-        return Handle_LineBot.message_reply_Query(user_id, status, "LINE APP", line_tag, text)
     return None
 
 
@@ -206,7 +197,9 @@ def handle_mail(user_id, text, must_be_text):
 
 
 def handle_stupid(user_id, text, _):
-    if not text.lower().startswith("http") and not Tools.has_non_alphanumeric(text.lower()):
+    if re.search(Tools.KEYWORD_LINE_INVITE[7], text):
+        pass
+    elif not text.lower().startswith("http") and not Tools.has_non_alphanumeric(text.lower()):
         subdomain, domain, suffix = Tools.domain_analysis(text)
         # logger.info(f"{subdomain}, {domain}, {suffix}")
         if subdomain or suffix:
@@ -227,6 +220,18 @@ def handle_line_web(_, user_id, text, must_be_text):
                 Personal_Update_SingleTag_Query(user_id, "LINE_INVITE", status)
                 return min_reply_text(status)
             return Handle_LineBot.message_reply_Query(user_id, status, "LINE邀請網址", invite_code, text)
+    # 特別LINE APP網址
+    if re.search(Tools.KEYWORD_LINE_INVITE[7], text):
+        invite_code, status = Q_LINEWEB.lineinvite_Read_Document(text)
+
+        if status == -1:  # 若查詢失敗就繼續go到最後，直接查網址
+            Personal_Update_SingleTag(user_id, "文字")
+            return "LINE網址查詢失敗\n僅接受帳號主頁的網址\n感恩"
+        else:
+            if must_be_text:
+                Personal_Update_SingleTag_Query(user_id, "LINE_INVITE", status)
+                return min_reply_text(status)
+            return Handle_LineBot.message_reply_Query(user_id, status, "LINE APP", invite_code, text)
     return None
 
 

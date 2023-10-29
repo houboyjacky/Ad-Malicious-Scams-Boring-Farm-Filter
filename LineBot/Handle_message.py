@@ -110,9 +110,14 @@ def handle_message_text(event):
     orgin_text = event.message.text.strip()
 
     # 提取http網址
-    if not orgin_text.startswith("http"):
-        if match := re.search(r'(https?://[\S]+)', orgin_text):
-            orgin_text = match.group(1)
+    if not orgin_text.startswith("加入") and not orgin_text.startswith("刪除"):
+        if not orgin_text.startswith("http"):
+            if match := re.search(r'(https?://[\S]+)', orgin_text):
+                orgin_text = match.group(1)
+
+        if not orgin_text.startswith("line://"):
+            if match := re.search(r'(line://[^\\? ]+)', orgin_text):
+                orgin_text = match.group(1)
 
     if re.match(r'^(賴|TG|tg|IG|ig|微信|推特|貨幣|迪卡|卡稱) ', orgin_text):
         orgin_text = orgin_text.replace(" ", "")

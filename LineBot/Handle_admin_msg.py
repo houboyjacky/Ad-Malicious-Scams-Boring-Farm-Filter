@@ -105,6 +105,12 @@ def handle_line_web(user_id, text):
     if re.search(Tools.KEYWORD_LINE_INVITE[1], text.lower()):
         Personal_Update_SingleTag(user_id, "LINE_INVITE", SUB_TAGNAME="管理次數")
         return Q_LINEWEB.lineinvite_Delete_Document(text)
+    if re.search(Tools.KEYWORD_LINE_INVITE[8], text.lower()):
+        Personal_Update_SingleTag(user_id, "LINE_INVITE", SUB_TAGNAME="管理次數")
+        return Q_LINEWEB.lineinvite_Write_Document(text)
+    if re.search(Tools.KEYWORD_LINE_INVITE[9], text.lower()):
+        Personal_Update_SingleTag(user_id, "LINE_INVITE", SUB_TAGNAME="管理次數")
+        return Q_LINEWEB.lineinvite_Delete_Document(text)
     return None
 
 

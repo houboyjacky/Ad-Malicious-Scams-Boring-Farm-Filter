@@ -43,20 +43,26 @@ def get_line_invites_list_len():
 
 def analyze_line_invite_url(user_text: str) -> Optional[dict]:
 
+    datetime = date.today().strftime("%Y-%m-%d")
+
+    Type = ""
+    invite_code = ""
+
     user_text = user_text.replace("加入", "")
     user_text = user_text.replace("%40", "@")
     user_text = user_text.replace("刪除", "")
+
+    if match := re.search(Tools.KEYWORD_LINE_INVITE[7], user_text):
+        invite_code = match.group(1)
+        struct = {"類別": "APP", "帳號": invite_code, "來源": user_text,
+                  "回報次數": 0, "失效": 0, "檢查者": "", "加入日期": datetime}
+        return struct
 
     if "\n" in user_text:
         user_text = user_text.split('\n')[0]
 
     orgin_text = user_text
     lower_text = user_text.lower()
-
-    datetime = date.today().strftime("%Y-%m-%d")
-
-    Type = ""
-    invite_code = ""
 
     if match := re.search(Tools.KEYWORD_LINE_INVITE[4], orgin_text):
         invite_code = match.group(1)

@@ -324,7 +324,7 @@ def message_reply_Query(user_id, IsScam, Type_Name, code, orgin_text):
             text = (f"「不存在」{Type_Name}黑名單內\n\n"
                     f"{code}\n\n"
                     f"{suffix}")
-        elif Type_Name == "LINE ID":
+        elif Type_Name == "LINE ID" or Type_Name == "LINE APP":
             if "@" in code and len(code) != 9:
                 text = (f"「不存在」{Type_Name}黑名單內\n\n"
                         f"所輸入的是「{code}」\n\n"
