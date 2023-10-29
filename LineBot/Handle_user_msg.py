@@ -109,6 +109,15 @@ def handle_line_id(user_id, text, must_be_text):
         input = match.group(1)
         Personal_Update_SingleTag(user_id, "文字")
         return f"你所輸入的「{input}」不能查詢\n需要LINE ID才能查詢唷～"
+    # 特別LINE APP網址
+    if match := re.search(Tools.KEYWORD_LINE_INVITE[7], text):
+        line_tag = match.group(1)
+        _, status = Q_LINEID.LineID_Read_Document(line_tag)
+        Personal_Update_SingleTag_Query(user_id, "LINE_ID", status)
+        Handle_LineBot.ID_Count("LINE")
+        if must_be_text:
+            return min_reply_text(status)
+        return Handle_LineBot.message_reply_Query(user_id, status, "LINE APP", line_tag, text)
     return None
 
 
@@ -218,17 +227,6 @@ def handle_line_web(_, user_id, text, must_be_text):
                 Personal_Update_SingleTag_Query(user_id, "LINE_INVITE", status)
                 return min_reply_text(status)
             return Handle_LineBot.message_reply_Query(user_id, status, "LINE邀請網址", invite_code, text)
-
-    if match := re.search(Tools.KEYWORD_LINE_INVITE[7], text):
-        line_tag = match.group(1)
-        _, status = Q_LINEID.LineID_Read_Document(line_tag)
-        Personal_Update_SingleTag_Query(user_id, "LINE_ID", status)
-        Handle_LineBot.ID_Count("LINE")
-        if must_be_text:
-            return min_reply_text(status)
-        return Handle_LineBot.message_reply_Query(user_id, status, "LINE APP", line_tag, text)
-
-
     return None
 
 
