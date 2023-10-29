@@ -190,3 +190,4 @@
 @@||linkfly.to^$important
 @@||chainee.io^$important
 @@||pin.it^$important
+@@||gosu.bar^$important
