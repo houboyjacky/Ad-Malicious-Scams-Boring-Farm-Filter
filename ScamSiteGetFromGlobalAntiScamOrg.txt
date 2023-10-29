@@ -12,6 +12,7 @@
 #||apple.com^
 #||bingx.com^
 #||bitfinex.com^
+#||bitmart.com^
 #||business.site^
 #||bznk.com^
 #||cex.io^
@@ -4207,7 +4208,6 @@
 ||bitmars.pro^
 ||bitmarspro.com^
 ||bitmart-trust.com^
-||bitmart.com^
 ||bitmart.shop^
 ||bitmartch.com^
 ||bitmartch.net^

@@ -189,3 +189,4 @@
 @@||mac89.com^$important
 @@||linkfly.to^$important
 @@||chainee.io^$important
+@@||pin.it^$important
