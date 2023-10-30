@@ -455,7 +455,7 @@ def handle_web(prefix_msg, user_id, text, must_be_text):
         Personal_Update_SingleTag_Query(user_id, "URL", IsScam)
         Length = len(Text)
         logger.info(f"Text Length = {str(Length)}")
-        # not domain_name 是為了「解析網址有錯」與「名片網站」
+        # not domain_name 是為了「解析網址有錯」與「正常/名片網站」
         if Length > 240 or must_be_text or not domain_name:
             return Text
 

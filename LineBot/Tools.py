@@ -142,8 +142,8 @@ with open('setting_urls.json', 'r') as f:
 
 # ALLOW_DOMAIN_LIST => Allow Domain can't add blacklist
 ALLOW_DOMAIN_LIST = setting_urls['ALLOW_DOMAIN_LIST']
-# BUSINESS_CARD => 名片網站
-BUSINESS_CARD = setting_urls['BUSINESS_CARD']
+# NORMAL_WEBSITE => 正常/名片網站
+NORMAL_WEBSITE = setting_urls['NORMAL_WEBSITE']
 # DONT_CHANGE_HTTP => 不修改http成https
 DONT_CHANGE_HTTP = setting_urls['DONT_CHANGE_HTTP']
 # NEED_HEAD_SHORT_URL_LIST => NEED HEAD SHORT URL LIST
@@ -164,7 +164,7 @@ def reloadSetting():
     global ALLOWED_HOST
     global BLACKUSERID
     global BLOCK_IPS_FILE
-    global BUSINESS_CARD
+    global NORMAL_WEBSITE
     global CERT
     global CHAINSIGHT_KEY
     global CHANNEL_ACCESS_TOKEN
@@ -280,7 +280,7 @@ def reloadSetting():
         setting_urls = json.load(f)
 
     ALLOW_DOMAIN_LIST = setting_urls['ALLOW_DOMAIN_LIST']
-    BUSINESS_CARD = setting_urls['BUSINESS_CARD']
+    NORMAL_WEBSITE = setting_urls['NORMAL_WEBSITE']
     DONT_CHANGE_HTTP = setting_urls['DONT_CHANGE_HTTP']
     NEED_HEAD_SHORT_URL_LIST = setting_urls['NEED_HEAD_SHORT_URL_LIST']
     NOT_SUPPORT_SHORT_URL = setting_urls['NOT_SUPPORT_SHORT_URL']

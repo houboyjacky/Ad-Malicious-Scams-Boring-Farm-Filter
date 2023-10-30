@@ -503,11 +503,11 @@ def user_query_website(prefix_msg, user_text):
     logger.info(f"domain_name = {domain_name}")
 
     # 特殊提示
-    if domain_name in Tools.BUSINESS_CARD:
+    if domain_name in Tools.NORMAL_WEBSITE:
         output = user_text
         if "?" in output:
             output = output.split('?')[0]
-        rmessage = f"{prefix_msg}\n「 {output} 」\n是正常的網站\n但內含連結是可能有詐騙網址\n請輸入那些連結"
+        rmessage = f"{prefix_msg}\n「 {output} 」\n是正常的網站\n但內含連結是可能有詐騙網址\n請輸入那些連結 or LINE ID or FB連結等"
         return False, rmessage, ""
 
     thread1 = threading.Thread(
