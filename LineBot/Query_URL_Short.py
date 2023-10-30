@@ -287,11 +287,11 @@ def resolve_redirects_urllib3_https(url):
     _, domain, suffix = Tools.domain_analysis(url.lower())
     timeout = 10
 
-    http = urllib3.PoolManager(retries=3)
+    http = urllib3.ProxyManager(Tools.PROXY_SERVER)
 
     try:
         # 第一次正常開啟
-        response = http.request('GET', url, timeout=timeout)
+        response = http.request('GET', url, timeout=timeout, retries=3)
         final_url = response.geturl()
         logger.info(f"final_url https 1 urllib3 = {final_url}")
         _, domain2, suffix2 = Tools.domain_analysis(final_url)

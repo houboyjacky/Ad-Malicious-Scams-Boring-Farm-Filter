@@ -209,12 +209,16 @@ def handle_stupid(user_id, text, _):
 
 
 def handle_line_web(_, user_id, text, must_be_text):
+    if re.search("https://store\.line\.me", text.lower()):
+        return None
     if re.match(Tools.KEYWORD_LINE_INVITE[3], text.lower()):
         invite_code, status = Q_LINEWEB.lineinvite_Read_Document(text)
 
         if status == -1:  # 若查詢失敗就繼續go到最後，直接查網址
             Personal_Update_SingleTag(user_id, "文字")
             return "LINE網址查詢失敗\n僅接受帳號主頁的網址\n感恩"
+        elif status == 2: # 查到非LINE網址，直接進入判斷網址
+            return handle_web(_, user_id, invite_code, must_be_text)
         else:
             if must_be_text:
                 Personal_Update_SingleTag_Query(user_id, "LINE_INVITE", status)
@@ -433,6 +437,7 @@ def handle_youtube_web(prefix_msg, user_id, text, must_be_text):
 
 
 def handle_web(prefix_msg, user_id, text, must_be_text):
+
     if re.match(Tools.KEYWORD_URL[5], text.lower()):
         Personal_Update_SingleTag(user_id, "文字")
         logger.info(f"AppStore的App網址")
@@ -440,6 +445,7 @@ def handle_web(prefix_msg, user_id, text, must_be_text):
                 f"AppStore的App網址\n"
                 f"目前不支援查詢\n"
                 f"感恩")
+
     if re.match(Tools.KEYWORD_URL[6], text.lower()):
         Personal_Update_SingleTag(user_id, "文字")
         logger.info(f"Google Play的App網址")
@@ -447,6 +453,7 @@ def handle_web(prefix_msg, user_id, text, must_be_text):
                 f"Google Play的App網址\n"
                 f"目前不支援查詢\n"
                 f"感恩")
+
     if re.match(Tools.KEYWORD_URL[2], text.lower()):
         if not prefix_msg:
             prefix_msg = "所輸入的"

@@ -89,15 +89,17 @@ def analyze_line_invite_url(user_text: str) -> Optional[dict]:
             if not redirected_url:
                 _, domain, tdl = Tools.domain_analysis(redirected_url1)
                 if f"{domain}.{tdl}" != "line.me":
+                    struct = {"類別": "網站", "帳號": redirected_url1, "來源": "網站回報", "回報次數": 0, "失效": 0, "檢查者": "", "加入日期": datetime}
                     logger.info("已經指向其他網域")
-                    return None
+                    return struct
                 match = re.search(r"accountId\%3D([a-z0-9\_]+)", redirected_url1)
                 invite_code = match.group(1)
                 invite_code = f"@{invite_code}"
                 logger.info(f"invite_code={invite_code}")
             elif not redirected_url.startswith("https://line.me"):
-                logger.info("該官方帳號已無效")
-                return None
+                struct = {"類別": "網站", "帳號": redirected_url, "來源": "網站回報", "回報次數": 0, "失效": 0, "檢查者": "", "加入日期": datetime}
+                logger.info("已經指向其他網域或無效")
+                return struct
         elif lower_text.startswith("https://lin.ee") or lower_text.startswith("https://page.line.me") or lower_text.startswith("https://line.naver.jp"):
             redirected_url = Resolve_Redirects(orgin_text)
         else:
@@ -175,6 +177,10 @@ def lineinvite_Read_Document(user_text: str):
     analyze = analyze_line_invite_url(user_text)
     rmessage = ""
     if analyze:
+        if analyze["類別"] == "網站":
+            # 查到是非LINE網址，直接回報上去
+            status = 2
+            return analyze["帳號"], status
         rmessage = analyze['帳號']
         if Query_API.Search_Same_Document(collection, "帳號", analyze['帳號']):
             logger.info("分析完成，找到相同資料")
@@ -200,16 +206,16 @@ def lineinvite_Delete_Document(user_text: str):
         if Query_API.Search_Same_Document(collection, "帳號", analyze['帳號']):
             Query_API.Delete_document(collection, analyze, "帳號")
             LineID_Delete_Document(analyze['帳號'])
-            rmessage = f"LINE邀請網址黑名單成功刪除帳號\n「{analyze['帳號']}」"
+            rmessage = f"LINE邀請網址/APP黑名單\n成功刪除帳號\n「{analyze['帳號']}」"
         elif LineID_Read_Document(analyze["帳號"]):
             LineID_Delete_Document(analyze['帳號'])
-            rmessage = f"LINE邀請網址黑名單成功刪除帳號\n「{analyze['帳號']}」"
+            rmessage = f"LINE邀請網址/APP黑名單\n成功刪除帳號\n「{analyze['帳號']}」"
         else:
             logger.info("分析完成，找不到相同資料")
-            rmessage = f"LINE邀請網址黑名單找不到帳號\n「{analyze['帳號']}」"
+            rmessage = f"LINE邀請網址/APP黑名單\n找不到帳號\n「{analyze['帳號']}」"
     else:
         logger.info("LINE邀請網址查詢失敗")
-        rmessage = f"LINE邀請網址黑名單刪除失敗，無法分析網址"
+        rmessage = f"LINE邀請網址/APP黑名單\n刪除失敗\n無法分析網址"
 
     return rmessage
 
