@@ -110,7 +110,7 @@ def handle_message_text(event):
     orgin_text = event.message.text.strip()
 
     # 提取http網址
-    if not orgin_text.startswith("加入") and not orgin_text.startswith("刪除"):
+    if not orgin_text.startswith("加入") and not orgin_text.startswith("刪除") and not orgin_text.startswith("詐騙回報"):
         if not orgin_text.startswith("http"):
             if match := re.search(r'(https?://[\S]+)', orgin_text):
                 orgin_text = match.group(1)
