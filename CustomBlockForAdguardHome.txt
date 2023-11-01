@@ -1,4 +1,3 @@
-
 ! 過度引用 s3-symbol-logo.tradingview.com
 ! 過度引用 widgetdata.tradingview.com
 ! 過度引用 www.tradingview-widget.com
@@ -336,6 +335,7 @@
 ||ahc.ink^
 ||aheuigj.com^
 ||aholicment.top^
+||ai-crypto.shop^
 ||ai-internationalae.com^
 ||ai-internationalcd.com^
 ||ai-internationald.com^
@@ -622,6 +622,7 @@
 ||bcoir.top^
 ||bcr1688.com^
 ||bcrfuture.com^
+||bctx.xyz^
 ||bctxcoin.xyz^
 ||bcvgold.com^
 ||bcyidyu.com^
@@ -641,6 +642,7 @@
 ||belanjatupperware.com^
 ||belgamgiaes.com^
 ||bellostock1688.com^
+||bellsmall.shop^
 ||benaughty.com^
 ||bep20defi.com^
 ||bernice.fyi^
@@ -853,6 +855,7 @@
 ||bookishive.com^
 ||booklng-reservatlon-n670511.info^
 ||bookxess.com^
+||bosndy.com^
 ||bossexws.com^
 ||bossxw.com^
 ||botdynofication.fun^
@@ -1128,6 +1131,7 @@
 ||champer8.com^
 ||chancaidaubuoitao.ubpages.com^
 ||changqings.online^
+||changying.xyz^
 ||chanyistock.com^
 ||chaoqianbushu.com^
 ||chaoshang711.com^
@@ -1220,10 +1224,12 @@
 ||coferx.com^
 ||coihern.com^
 ||coin-akl.com^
+||coin-bns.cc^
 ||coin-dc81.site^
 ||coin-hub.pro^
 ||coin-hub.pw^
 ||coin-hub.top^
+||coin-ioe.cc^
 ||coin-mcn.com^
 ||coin360.com^
 ||coin5runpro.com^
@@ -1357,6 +1363,7 @@
 ||cs1qa.top^
 ||csaedes.cc^
 ||csased.cc^
+||csassede.cc^
 ||cscccostcooss.com^
 ||cscoin-tw.com^
 ||cscoinin.com^
@@ -1737,6 +1744,7 @@
 ||eerrr.asia^
 ||eetc-tw.com^
 ||eft-pay-refund.cc^
+||efwefkvd.com^
 ||efxgs.com^
 ||egjha19283.com^
 ||egscenter.top^
@@ -1813,6 +1821,7 @@
 ||eszdoand.jp^
 ||etag-cars.com^
 ||etag-etc.top^
+||etag-fnet.com^
 ||etag.social^
 ||etaga.icu^
 ||etage-tw.top^
@@ -2047,6 +2056,7 @@
 ||fidoptions.com^
 ||fifminshi.com^
 ||finances.tw^
+||financetwjk187.top^
 ||financialive.com^
 ||finbary.online^
 ||find-you.xyz^
@@ -2616,6 +2626,7 @@
 ||histarsky.com^
 ||histock1688.com^
 ||histudio.vip^
+||hitbtcmk.digital^
 ||hivemalls.com^
 ||hiwihelo.com^
 ||hixi.com.tw^
@@ -3449,6 +3460,7 @@
 ||liquiwokd.com^
 ||liseamall.com^
 ||lissshop.com^
+||listguest87-reserve.com^
 ||lit-dit-fund.com^
 ||litditfund.com^
 ||liteoutw.com^
@@ -3670,6 +3682,7 @@
 ||meta-2023.pages.net.br^
 ||meta-academy.biz^
 ||meta-support-settings.com^
+||meta.systemyun.com^
 ||meta688.com^
 ||metabusiness-support-h7015.web.app^
 ||metal52539.com^
@@ -3848,6 +3861,7 @@
 ||mvdiis-gov.top^
 ||mvdis-com.top^
 ||mvdis-gov.vip^
+||mvdis-grsg.top^
 ||mvdis-rsg.top^
 ||mvdis-trhr.top^
 ||mvdiscom.top^
@@ -4142,6 +4156,7 @@
 ||onebeos.com^
 ||oneegrou.net^
 ||onefungame.com^
+||onelee888.com^
 ||onelyueme.com^
 ||onenightfriend.com^
 ||onenightsrsr.wiki^
@@ -4233,6 +4248,7 @@
 ||pat-cat.top^
 ||paxos.vip^
 ||pay-etag.com^
+||pay.meta.systemyun.com^
 ||payeshop.site^
 ||paymentss-confirms.com^
 ||paymium15.buzz^
@@ -4662,6 +4678,7 @@
 ||ruhrqwyehs.com^
 ||ruibcsb.ink^
 ||ruihejade.com^
+||ruixin935da.xyz^
 ||runwinsrs.com^
 ||runwinsters.com^
 ||ruten.world^
@@ -4683,6 +4700,7 @@
 ||sacorder.com^
 ||sacorderiu.com^
 ||sacorders.com^
+||sactorder.com^
 ||sadc12.oss-ap-southeast-1.aliyuncs.com^
 ||saeriue.com^
 ||safecoinal.com^
@@ -5346,6 +5364,7 @@
 ||tiktok-shop.club^
 ||tiktok-shop8.click^
 ||tiktok-shop8.xyz^
+||tiktok-wholesale.com^
 ||tiktokclick.cc^
 ||tiktokclick.one^
 ||tiktokmshop.com^
@@ -5353,6 +5372,7 @@
 ||tiktokysmall.shop^
 ||timngusep.org^
 ||tindeing.com^
+||tinikomhom.com^
 ||tio-gat.cc^
 ||tioelimcee.shop^
 ||titanopr.com^
@@ -5528,6 +5548,7 @@
 ||tw-catpack.life^
 ||tw-catw.life^
 ||tw-catw.top^
+||tw-cbec.com^
 ||tw-chlt.cn^
 ||tw-cnt.top^
 ||tw-cthi.cn^
@@ -5945,6 +5966,7 @@
 ||vipxin94.com^
 ||visiontradex.com^
 ||visitant-reserve.com^
+||vistova-bxcrm.com^
 ||vitabox.com.tw^
 ||vitabox.info^
 ||vitex111.top^
@@ -6117,6 +6139,7 @@
 ||whdcnc.shop^
 ||wheatoncc.com^
 ||whereimetlovewithyou.com^
+||whispy.org^
 ||wholesaler-mail.com^
 ||whooshops.com^
 ||wiberu.shop^
@@ -6165,6 +6188,7 @@
 ||worldcoin35.com^
 ||worldtechnology.top^
 ||worldwildrtx.com^
+||worldze.com^
 ||worthlover.com^
 ||wowdare.xyz^
 ||wq1nj.top^
@@ -6509,14 +6533,17 @@
 ||zbotu.xyz^
 ||zbzbijs.vip^
 ||zbzbkg.vip^
+||zbzbnas.vip^
 ||zcb.one^
 ||zcomshop.net^
 ||zcvsa.world^
 ||zdesm.asia^
 ||zdhwe.asia^
 ||zdknvok2208.com^
+||zdtot.website^
 ||zedfv.shop^
 ||zemanta.com^
+||zenexco.com^
 ||zenexcpro.com^
 ||zenexin.com^
 ||zerohouse1491.com^
@@ -6556,6 +6583,7 @@
 ||zousy.online^
 ||zppqao.fun^
 ||zqbaba1.com^
+||zrtot.live^
 ||zsveejops.com^
 ||zsybt.shop^
 ||ztbzzz.com^
