@@ -416,6 +416,7 @@
 ||amanda-quest.com^
 ||amaz-hl.pro^
 ||amazo-shop.com^
+||amazon-m.cn^
 ||amazon24.mobi^
 ||amazon315.top^
 ||ambrosect.online^
@@ -3556,7 +3557,6 @@
 ||love2more.com^
 ||lovead.club^
 ||lovebelilotis.com^
-||loveboysgirl.com^
 ||lovebravelyy.com^
 ||lovedated.com^
 ||lovedatee.com^
@@ -4020,6 +4020,7 @@
 ||nftewr.com^
 ||nfttoken3584.com^
 ||nftzsd.com^
+||ngntucng.com^
 ||ngstruart.org^
 ||ngtyoj.top^
 ||nhmxwj.com^
@@ -5157,6 +5158,7 @@
 ||sunfowers.com^
 ||suningmart.net^
 ||sunnyphoto.org^
+||sunriseydysj.top^
 ||suoduan669x.top^
 ||sup-shop.top^
 ||super-1.vip^
@@ -6199,6 +6201,7 @@
 ||wiberu.shop^
 ||widgetdata.tradingview.com^
 ||widoh.shop^
+||wifelove.xyz^
 ||wihyi.club^
 ||wikifx.com^
 ||wildernbus1.live^
@@ -6237,6 +6240,7 @@
 ||wokqo.shop^
 ||woofr3e.xyz^
 ||wootlove.com^
+||wootxshop.pw^
 ||wopeeucdhs.shop^
 ||workwiseway.online^
 ||worldcoin35.com^
@@ -6389,6 +6393,7 @@
 ||xn--fhq2ct7ji7o2c490af9ndo8b.me^
 ||xn--fhqw5fizd3tj0lav98n.club^
 ||xn--fhqw5fx5aj5t0ioui6a.lol^
+||xn--fhqw5fx5aj5t0ioui6a.shop^
 ||xn--ghq10gmvi961at1b479e.com^
 ||xn--lhr13hf6b3ww310a13s.art^
 ||xn--lhr13hf6b3ww310a13s.online^
