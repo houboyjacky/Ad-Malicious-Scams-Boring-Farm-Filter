@@ -359,7 +359,7 @@ def resolve_redirects_allow_redirects(url):
             logger.info(f"final_url using redirects = {final_url}")
             return final_url
     except requests.exceptions.RequestException as e:
-        logger.info("Error occurred using redirects:", e)
+        logger.info("Error occurred using redirects: %s", e)
 
     return None
 
