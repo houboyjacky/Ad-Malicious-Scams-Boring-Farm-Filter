@@ -1426,7 +1426,6 @@
 ||cxt-td.cc^
 ||cxzbn.asia^
 ||cy300.co^
-||cyberbiz.io^
 ||cyberrecoverygroup.com^
 ||cye6.com^
 ||cygjhub.xyz^
