@@ -90,6 +90,10 @@ PROXY_SERVER = setting['PROXY_SERVER']
 S_URL = setting['S_URL']
 # SCAM_WEBSITE_LIST => SCAM WEBSITE LIST
 SCAM_WEBSITE_LIST = setting['SCAM_WEBSITE_LIST']
+# SERVICE_PORT => SERVICE PORT
+SERVICE_PORT = setting['SERVICE_PORT']
+# SERVICE_IP => SERVICE IP
+SERVICE_IP = setting['SERVICE_IP']
 # TMP_BLACKLIST => Blacklist for Adguard Home Download
 TMP_BLACKLIST = setting['TMP_BLACKLIST']
 # USER_GUIDE_FILE => 使用指南
@@ -210,6 +214,8 @@ def reloadSetting():
     global PROXY_SERVER
     global S_URL
     global SCAM_WEBSITE_LIST
+    global SERVICE_PORT
+    global SERVICE_IP
     global SHORT_URL_LIST
     global SKIP_CHECK
     global SUBWEBSITE
@@ -248,6 +254,8 @@ def reloadSetting():
     PROXY_SERVER = setting['PROXY_SERVER']
     S_URL = setting['S_URL']
     SCAM_WEBSITE_LIST = setting['SCAM_WEBSITE_LIST']
+    SERVICE_PORT = setting['SERVICE_PORT']
+    SERVICE_IP = setting['SERVICE_IP']
     TMP_BLACKLIST = setting['TMP_BLACKLIST']
     USER_GUIDE_FILE = setting['USER_GUIDE_FILE']
 

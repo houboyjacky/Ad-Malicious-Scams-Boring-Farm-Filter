@@ -17,15 +17,17 @@
 	"LINEID_WEB": "",
 	"LOGFILE": "",
 	"MIN_DIFF_DAYS": 0,
-	"MONGODB_USER": "",
 	"MONGODB_PWD": "",
 	"MONGODB_URL": "",
+	"MONGODB_USER": "",
 	"NOTICE_BOARD": "",
 	"PEM_DIR": "",
 	"PRIVKEY": "",
 	"PROXY_SERVER": "",
 	"S_URL": "",
 	"SCAM_WEBSITE_LIST": "",
+	"SERVICE_IP": "",
+	"SERVICE_PORT": 0,
 	"TMP_BLACKLIST": "",
 	"USER_GUIDE_FILE": ""
 }

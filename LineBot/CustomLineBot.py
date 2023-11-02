@@ -109,7 +109,7 @@ if __name__ == "__main__":
 
     # 開啟 LINE 聊天機器人的 Webhook 伺服器
     logger.info("Line Bot is ready")
-    Network.app.run(host='0.0.0.0', port=8443, ssl_context=(
+    Network.app.run(host=Tools.SERVICE_IP, port=Tools.SERVICE_PORT, ssl_context=(
         Tools.CERT, Tools.PRIVKEY), threaded=True)
 
     # 等待 thread 結束
