@@ -28,6 +28,7 @@ import pycountry
 import re
 import requests
 import tldextract
+import difflib
 
 image_analysis = False
 forward_inquiry = False
@@ -444,6 +445,19 @@ def domain_analysis(url):
 
     return subdomain, domain, suffix
 
+def compare_files(file1, file2):
+
+    with open(file1, 'r', encoding='utf-8') as f1, open(file2, 'r', encoding='utf-8') as f2:
+        file1_lines = [line.strip() for line in f1.readlines()]
+        file2_lines = [line.strip() for line in f2.readlines()]
+
+    differ = difflib.Differ()
+    diff = list(differ.compare(file1_lines, file2_lines))
+
+    added_lines = [line[2:] for line in diff if line.startswith('+ ')]
+    #removed_lines = [line[2:] for line in diff if line.startswith('- ')]
+
+    return added_lines
 
 remote_hash_dict = {}
 

@@ -27,16 +27,17 @@ import os
 import Query_API
 import requests
 import Tools
+import shutil
 
 DB_Name = "LINE"
 C_Name = "LINE_ID"
-
 
 def LINE_ID_Download_From_165():
     global DB_Name, C_Name
     lineid_list = []
     Local_file = os.path.basename(Tools.LINEID_WEB)
     Local_file_path = f"config/{Local_file}"
+    Local_file_path_old = f"config/{Local_file}.old"
     Local_file_hash = Tools.calculate_file_hash(Local_file_path)
     IsFind = False
 
@@ -51,6 +52,10 @@ def LINE_ID_Download_From_165():
                     return
                 logger.info("Download Line ID Finish")
                 lineid_list = response.text.splitlines()
+
+                if os.path.exists(Local_file_path):
+                    shutil.move(Local_file_path , Local_file_path_old)
+
                 Tools.write_file_U8(Local_file_path, '\n'.join(lineid_list))
                 IsFind = True
                 break
@@ -61,12 +66,14 @@ def LINE_ID_Download_From_165():
         logger.info("Not find remote_file_name")
         return
 
+    added_lines = Tools.compare_files(Local_file_path_old, Local_file_path)
+
     collection = Query_API.Read_Collection(DB_Name, C_Name)
 
     documents_to_insert = []
     datetime = date.today().strftime("%Y-%m-%d")
 
-    for line in lineid_list:
+    for line in added_lines:
         if line.startswith("!"):
             continue
         document = collection.find_one({"帳號": line})
