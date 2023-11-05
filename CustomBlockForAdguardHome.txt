@@ -2,6 +2,7 @@
 ! 過度引用 widgetdata.tradingview.com
 ! 過度引用 www.tradingview-widget.com
 ! 疑似詐騙或不良的網站
+#||aka.ms^
 #||altoops.com^
 #||binance.com^
 #||bitly.li^
@@ -368,7 +369,6 @@
 ||aiwriter.money^
 ||ajer.top^
 ||ajsdnjnxv.com^
-||aka.ms^
 ||akakire4837.com^
 ||akb666.net^
 ||alcoae.com^
