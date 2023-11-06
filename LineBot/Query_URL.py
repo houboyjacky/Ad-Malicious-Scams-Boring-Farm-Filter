@@ -28,6 +28,7 @@ from Query_Chainsight import checkFromChainsight
 from Security_Check import CF_IPS
 from Update_BlackList import update_part_blacklist_rule_to_db, update_part_blacklist_comment, blacklist
 from urllib.parse import urlparse, urljoin
+import idna
 import ipaddress
 import Query_API
 import re
@@ -446,6 +447,8 @@ def check_ChainSight(domain_name, whois_creation_date):
     if whois_creation_date and checkresult:
         if isinstance(whois_creation_date, str):
             creation_date = Tools.string_to_datetime(whois_creation_date)
+        else:
+            creation_date = whois_creation_date
 
         # 定義安全日期
         safe_date = datetime(2015, 1, 1)
