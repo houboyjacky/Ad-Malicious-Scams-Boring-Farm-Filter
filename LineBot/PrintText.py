@@ -27,6 +27,7 @@ notice_text = ""
 
 
 def clear_user_record():
+    reload_notice_board()
     Personal_Clear_SingleTag("佈告欄", 0)
     return
 

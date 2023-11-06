@@ -400,6 +400,8 @@ def handle_admin_msg_sub(user_id, orgin_text, using_template=False):
         handle_error
     ]
 
+    rmessage = ""
+
     for handler in handlers:
         rmessage = handler(user_id, orgin_text)
         if rmessage:
@@ -491,6 +493,9 @@ def handle_admin_msg(user_id, orgin_text):
             rmessage = f"{rmessage}{msg}"
         else:
             rmessage = f"「 {orgin_text} 」分析失敗"
+    elif orgin_text == "清除公告" and Tools.IsOwner(user_id):
+        clear_user_record()
+        rmessage = f"清除公告已完成"
 
     if rmessage:
         Personal_Update_SingleTag(user_id, "Other", SUB_TAGNAME="管理次數")
