@@ -66,7 +66,9 @@ def download_cf_ips():
 # 黑名單IP設定
 # ================
 
+
 block_ip_list = set()
+
 
 def load_block_ip_list():
     global block_ip_list
@@ -89,5 +91,6 @@ def load_block_ip_list():
 
     logger.info("Loaded Block_IPs.txt")
     return
+
 
 CF_IPS = get_cf_ips()

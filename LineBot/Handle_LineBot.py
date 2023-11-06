@@ -50,7 +50,7 @@ def message_reply(event, text):
     if isinstance(text, str) and len(text) > 5000:
         file = f"response_{event.source.user_id[:5]}.txt"
         filepath = f"sendfile/{file}"
-        Tools.write_file_U8(filepath , text)
+        Tools.write_file_U8(filepath, text)
         text = f"https://{Tools.ALLOWED_HOST[1]}:8443/{file}"
 
     if isinstance(text, str):
@@ -76,7 +76,7 @@ def message_reply(event, text):
     return
 
 
-def message_reply_confirm(button1, button2, text, function_name, button1_content = "", button2_content = ""):
+def message_reply_confirm(button1, button2, text, function_name, button1_content="", button2_content=""):
 
     actions = []
 
@@ -126,7 +126,7 @@ def message_reply_QueryURL(user_id, IsScam, QueryInf, Domain, orgin_text):
         orgin_text = orgin_text[:250]
 
     subdomain, domain, suffix = Tools.domain_analysis(orgin_text)
-    if subdomain :
+    if subdomain:
         full_Domain = f"{subdomain}.{domain}.{suffix}"
     else:
         full_Domain = Domain
@@ -267,10 +267,10 @@ def message_reply_Query(user_id, IsScam, Type_Name, code, orgin_text):
                   f"🚫請勿相信此{Type_Name}\n"
                   f"🙏感恩"
                   )
-        if Type_Name in ("LINE邀請網址","FB"):
+        if Type_Name in ("LINE邀請網址", "FB"):
             text = (f"{Type_Name}分析出的代碼的「{code}」\n\n"
                     f"{suffix}")
-        elif Type_Name  == "IG":
+        elif Type_Name == "IG":
             text = (f"{Type_Name}分析出的代碼的「{code}」\n\n"
                     f"{suffix}\n\n"
                     f"另外請勿相信\n「投資」、「賭博」、「分析」\n「線上工作」")
@@ -311,11 +311,11 @@ def message_reply_Query(user_id, IsScam, Type_Name, code, orgin_text):
         if code.startswith("09"):
             suffix += f"\n\n若是想查詢電話\n建議使用Whoscall來查詢\n"
 
-        if Type_Name in ("LINE邀請網址","FB"):
+        if Type_Name in ("LINE邀請網址", "FB"):
             text = (f"「不存在」{Type_Name}黑名單內\n\n"
                     f"{Type_Name}分析出的代碼的是「{code}」\n\n"
                     f"{suffix}")
-        elif Type_Name  == "IG":
+        elif Type_Name == "IG":
             text = (f"「不存在」{Type_Name}黑名單內\n\n"
                     f"{Type_Name}分析出的代碼的是「{code}」\n\n"
                     f"{suffix}\n"
@@ -380,16 +380,16 @@ def message_reply_Query(user_id, IsScam, Type_Name, code, orgin_text):
 
     if Type_Name == "IG":
         actions.append(URITemplateAction(
-                label='確認輸入的IG',
-                uri=f"https://www.instagram.com/{code}"
-            )
+            label='確認輸入的IG',
+            uri=f"https://www.instagram.com/{code}"
+        )
         )
 
     if Type_Name == "LINE ID":
         actions.append(URITemplateAction(
-                label='確認輸入的LINE ID',
-                uri=f"https://line.me/ti/p/~{code}"
-            )
+            label='確認輸入的LINE ID',
+            uri=f"https://line.me/ti/p/~{code}"
+        )
         )
 
     length = len(text)
@@ -413,7 +413,9 @@ def message_reply_Query(user_id, IsScam, Type_Name, code, orgin_text):
 
     return template_message
 
+
 ID_POS_LIST = []
+
 
 def ID_Count(Text=""):
     global ID_POS_LIST
@@ -421,13 +423,15 @@ def ID_Count(Text=""):
     if not ID_POS_LIST:
         ID_POS_LIST = Tools.read_json_file(filename)
 
-    if Text :
+    if Text:
         for ID in ID_POS_LIST:
             if ID == Text:
-                ID_POS_LIST[ID] +=1
+                ID_POS_LIST[ID] += 1
         Tools.write_json_file(filename, ID_POS_LIST)
 
+
 ID_Count()
+
 
 def get_top_four(dictionary):
     # 將原始字典按照數值由多到少排序
@@ -450,44 +454,44 @@ def message_reply_Query_ID_Type(ID):
 
     logger.info(f"site = {ID}")
 
-    top_four_dict  = get_top_four(ID_POS_LIST)
+    top_four_dict = get_top_four(ID_POS_LIST)
 
-    for top in top_four_dict :
+    for top in top_four_dict:
         if top == "LINE":
             actions.append(MessageTemplateAction(
-                    label='查詢LINE ID？',
-                    text=f"賴{ID}"
-                )
+                label='查詢LINE ID？',
+                text=f"賴{ID}"
+            )
             )
         elif top == "IG":
             actions.append(MessageTemplateAction(
-                    label='查詢IG？',
-                    text=f"IG{ID}"
-                )
+                label='查詢IG？',
+                text=f"IG{ID}"
+            )
             )
         elif top == "DCARD":
             actions.append(MessageTemplateAction(
-                    label='查詢Dcard ID？',
-                    text=f"迪卡{ID}"
-                )
+                label='查詢Dcard ID？',
+                text=f"迪卡{ID}"
+            )
             )
         elif top == "推特":
             actions.append(MessageTemplateAction(
-                    label='查詢推特？',
-                    text=f"推特{ID}"
-                )
+                label='查詢推特？',
+                text=f"推特{ID}"
+            )
             )
         elif top == "TG":
             actions.append(MessageTemplateAction(
-                    label='查詢Telegram？',
-                    text=f"TG{ID}"
-                )
+                label='查詢Telegram？',
+                text=f"TG{ID}"
+            )
             )
         elif top == "微信":
             actions.append(MessageTemplateAction(
-                    label='查詢微信？',
-                    text=f"微信{ID}"
-                )
+                label='查詢微信？',
+                text=f"微信{ID}"
+            )
             )
 
     text = f"麻煩協助確認「{ID}」是什麼項目"

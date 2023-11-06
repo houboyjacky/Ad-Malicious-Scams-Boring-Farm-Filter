@@ -43,6 +43,7 @@ from Personal_Rec import Personal_Update_SingleTag, Personal_Data_Query
 Random_items = []
 Random_weights = []
 
+
 def Random_Weight():
     FB_list_len = Q_FB.get_fb_list_len()
     logger.info(f"FB_list_len = {FB_list_len}")
@@ -59,7 +60,8 @@ def Random_Weight():
     YouTube_len = Q_YT.get_yt_list_len()
     logger.info(f"YouTube_len = {YouTube_len}")
 
-    items = ["FB", "IG", "LINE", "TWITTER", "TIKTOK", "SMALLREDBOOK", "YOUTUBE"]
+    items = ["FB", "IG", "LINE", "TWITTER",
+             "TIKTOK", "SMALLREDBOOK", "YOUTUBE"]
     weights = []
     weights.append(FB_list_len)
     weights.append(IG_list_len)
@@ -70,6 +72,7 @@ def Random_Weight():
     weights.append(YouTube_len)
 
     return items, weights
+
 
 def Random_get_List(UserID):
     global Random_items, Random_weights

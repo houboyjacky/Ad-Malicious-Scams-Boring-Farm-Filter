@@ -89,15 +89,18 @@ def analyze_line_invite_url(user_text: str) -> Optional[dict]:
             if not redirected_url:
                 _, domain, tdl = Tools.domain_analysis(redirected_url1)
                 if f"{domain}.{tdl}" != "line.me":
-                    struct = {"類別": "網站", "帳號": redirected_url1, "來源": "網站回報", "回報次數": 0, "失效": 0, "檢查者": "", "加入日期": datetime}
+                    struct = {"類別": "網站", "帳號": redirected_url1, "來源": "網站回報",
+                              "回報次數": 0, "失效": 0, "檢查者": "", "加入日期": datetime}
                     logger.info("已經指向其他網域")
                     return struct
-                match = re.search(r"accountId\%3D([a-z0-9\_]+)", redirected_url1)
+                match = re.search(
+                    r"accountId\%3D([a-z0-9\_]+)", redirected_url1)
                 invite_code = match.group(1)
                 invite_code = f"@{invite_code}"
                 logger.info(f"invite_code={invite_code}")
             elif not redirected_url.startswith("https://line.me"):
-                struct = {"類別": "網站", "帳號": redirected_url, "來源": "網站回報", "回報次數": 0, "失效": 0, "檢查者": "", "加入日期": datetime}
+                struct = {"類別": "網站", "帳號": redirected_url, "來源": "網站回報",
+                          "回報次數": 0, "失效": 0, "檢查者": "", "加入日期": datetime}
                 logger.info("已經指向其他網域或無效")
                 return struct
         elif lower_text.startswith("https://lin.ee") or lower_text.startswith("https://page.line.me") or lower_text.startswith("https://line.naver.jp"):
@@ -126,14 +129,14 @@ def analyze_line_invite_url(user_text: str) -> Optional[dict]:
             invite_code = invite_code.replace("~", "")
         elif Type in ["g", "g2"]:
             category = "群組"
-            #移除尾部代號
-            user_text = re.sub(r"\?utm_source=.+$","", user_text)
+            # 移除尾部代號
+            user_text = re.sub(r"\?utm_source=.+$", "", user_text)
         else:
             logger.error('無法解析類別')
             return None
 
         if "fbclid" in user_text:
-            user_text = re.sub(r"\?fbclid=.+$","", user_text)
+            user_text = re.sub(r"\?fbclid=.+$", "", user_text)
 
         struct = {"類別": category, "帳號": invite_code, "來源": orgin_text,
                   "回報次數": 0, "失效": 0, "檢查者": "", "加入日期": datetime}

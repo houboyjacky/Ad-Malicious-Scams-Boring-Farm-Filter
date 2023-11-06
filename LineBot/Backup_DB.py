@@ -83,4 +83,3 @@ for db_name in DBs:
             for i, document in enumerate(documents):
                 json.dump(document, f, ensure_ascii=False, indent=4)
                 f.write('\n')
-

@@ -393,7 +393,8 @@ def user_query_website_by_DNS(domain_name, result_list, lock):
                 logger.error(f"An error occurred: {e}")
                 error_message = str(e)
 
-                pattern = re.compile(r"Creation Date: (\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z)", re.IGNORECASE)
+                pattern = re.compile(
+                    r"Creation Date: (\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z)", re.IGNORECASE)
 
                 if "No match" in error_message:
                     # 沒有這個網址

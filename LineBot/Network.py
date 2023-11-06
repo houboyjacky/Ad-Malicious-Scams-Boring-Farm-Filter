@@ -63,6 +63,7 @@ handler = WebhookHandler(Tools.CHANNEL_SECRET)
 # Request 設定
 # ================
 
+
 def get_remoteip(req):
     ip_address = req.remote_addr
 
@@ -134,7 +135,7 @@ def download(filename):
     logger.info("%s and DL file: %s", msg, filename)
 
     _, extension = os.path.splitext(filename)
-    #logger.info(f"extension = {extension}")
+    # logger.info(f"extension = {extension}")
 
     path = ""
     if extension == ".mobileconfig":
@@ -155,7 +156,7 @@ def download(filename):
     else:
         abort(404)
 
-    #logger.info(f"path = {path}")
+    # logger.info(f"path = {path}")
 
     # 若檔案存在，則進行下載
     if not os.path.exists(os.path.join(path, filename)):

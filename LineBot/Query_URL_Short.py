@@ -282,7 +282,6 @@ def resolve_redirects_urllib3_http(url):
     return None
 
 
-
 def resolve_redirects_urllib3_https(url):
     _, domain, suffix = Tools.domain_analysis(url.lower())
     timeout = 10
@@ -307,7 +306,8 @@ def resolve_redirects_urllib3_https(url):
                 context = ssl.create_default_context()
                 context.check_hostname = False
                 context.verify_mode = ssl.CERT_NONE
-                http = urllib3.PoolManager(cert_reqs=ssl.CERT_NONE, cert_file=None)
+                http = urllib3.PoolManager(
+                    cert_reqs=ssl.CERT_NONE, cert_file=None)
                 response = http.request('GET', url, timeout=timeout)
                 final_url = response.geturl()
                 logger.info(f"final_url https 2 urllib3 = {final_url}")

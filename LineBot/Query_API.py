@@ -124,10 +124,10 @@ def Update_Document(collection, struct, tagname):
     update = {"$set": struct}
     result = MongoDB.Update_db(collection, filter, update)
     if result.matched_count == 0:
-        #logger.info("找不到相同資料，進行插入")
+        # logger.info("找不到相同資料，進行插入")
         Write_Document(collection, struct)
     else:
-        #logger.info("找到相同資料，已更新")
+        # logger.info("找到相同資料，已更新")
         pass
     return
 
@@ -219,6 +219,7 @@ def push_random_blacklist(Record_players, DB_Name, Collection_Name, UserID, succ
 # 查詢
 # ===============================================
 
+
 def remove_non_english(text):
     # 使用正則表達式尋找第一個非英文字符的位置
     match = re.search(r'[\W]', text)
@@ -232,6 +233,7 @@ def remove_non_english(text):
         result = text
 
     return result
+
 
 def translate_to_chinese(text):
     DB_name = "translate"
@@ -261,7 +263,7 @@ def translate_to_chinese(text):
 def WhereAreYou(IP):
     res = DbIpCity.get(IP, api_key="free")
 
-    #chinese_city = translate_to_chinese(res.city)
+    # chinese_city = translate_to_chinese(res.city)
     chinese_city = res.city
     chinese_region = translate_to_chinese(res.region)
 

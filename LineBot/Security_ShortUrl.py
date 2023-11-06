@@ -106,7 +106,7 @@ def RecordShortUrl(shorturl, IP, Country):
         return None
 
     now_datetime = datetime.now().strftime(
-                "%Y-%m-%d %H-%M-%S")
+        "%Y-%m-%d %H-%M-%S")
 
     struct = {"IP": IP,
               "國家": Country,

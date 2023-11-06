@@ -107,12 +107,12 @@ def Virtual_Money_Read_Document(user_text: str):
         status = -1
 
     if not rmessage:
-        if status >= 0 :
+        if status >= 0:
             rmessage = f"{Name}地址\n「 {analyze['地址']} 」"
             result, _ = checkFromChainsight(analyze['地址'])
             if result:
                 rmessage = f"{Name}地址\n「 {analyze['地址']} 」\n{result}"
-        else :
+        else:
             rmessage = f"你所輸入的「 {user_text} 」"
 
     return rmessage, status

@@ -32,6 +32,7 @@ import shutil
 DB_Name = "LINE"
 C_Name = "LINE_ID"
 
+
 def LINE_ID_Download_From_165():
     global DB_Name, C_Name
     lineid_list = []
@@ -54,7 +55,7 @@ def LINE_ID_Download_From_165():
                 lineid_list = response.text.splitlines()
 
                 if os.path.exists(Local_file_path):
-                    shutil.move(Local_file_path , Local_file_path_old)
+                    shutil.move(Local_file_path, Local_file_path_old)
 
                 Tools.write_file_U8(Local_file_path, '\n'.join(lineid_list))
                 IsFind = True
