@@ -119,6 +119,13 @@ def handle_message_text(event):
             if match := re.search(r'(line://[^\\? ]+)', orgin_text):
                 orgin_text = match.group(1)
 
+    # 修正IG開頭大小寫與打錯LINE開頭問題
+    modified_string = orgin_text.capitalize()
+    if modified_string.startswith("Ig"):
+        orgin_text = "IG" + orgin_text[2:]
+    elif modified_string.startswith("Line"):
+        orgin_text = "賴" + orgin_text[4:]
+
     if re.match(r'^(賴|TG|tg|IG|ig|微信|推特|貨幣|迪卡|卡稱) ', orgin_text):
         orgin_text = orgin_text.replace(" ", "")
 
