@@ -1,6 +1,7 @@
 # 歷史更新 History Update
 
 * 20231115 Update
+  * 加入 CSV取得LINE ID資料
   * 更新 165反詐騙諮詢專線-詐騙LINE ID(~112/11/15)
 
 * 20231114 Update
