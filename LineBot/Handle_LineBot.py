@@ -308,8 +308,8 @@ def message_reply_Query(user_id, IsScam, Type_Name, code, orgin_text):
                   f"點擊詐騙學習📖\n"
                   )
 
-        if code.startswith("09"):
-            suffix += f"\n\n若是想查詢電話\n建議使用Whoscall來查詢\n"
+        # if code.startswith("09"):
+        #     suffix += f"\n\n若是想查詢電話\n建議使用Whoscall來查詢\n"
 
         if Type_Name in ("LINE邀請網址", "FB"):
             text = (f"「不存在」{Type_Name}黑名單內\n\n"

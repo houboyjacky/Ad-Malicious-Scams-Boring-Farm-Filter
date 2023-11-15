@@ -40,6 +40,7 @@ import Query_Line_Invite as Q_LINEWEB
 import Query_Mail as Q_MAIL
 import Query_Report as Q_RPT
 import Query_SmallRedBook as Q_SRB
+import Query_Telephone as Q_TP
 import Query_Telegram as Q_TG
 import Query_Tiktok as Q_TT
 import Query_Twitter as Q_TR
@@ -179,6 +180,18 @@ def handle_dcard_id(user_id, text):
         # 刪除 Dcard ID
         Personal_Update_SingleTag(user_id, "Dcard", SUB_TAGNAME="管理次數")
         return Q_DC.Dcard_Delete_Document(text.lower())
+    return None
+
+
+def handle_telephone(user_id, text):
+    if re.search(Tools.KEYWORD_TELEPHONE[1], text):
+        # 加入 電話
+        Personal_Update_SingleTag(user_id, "電話", SUB_TAGNAME="管理次數")
+        return Q_TP.Telephone_Write_Document(text)
+    if re.search(Tools.KEYWORD_TELEPHONE[2], text):
+        # 刪除 電話
+        Personal_Update_SingleTag(user_id, "電話", SUB_TAGNAME="管理次數")
+        return Q_TP.Telephone_Delete_Document(text)
     return None
 
 
@@ -386,6 +399,7 @@ def handle_admin_msg_sub(user_id, orgin_text, using_template=False):
         handle_fb,
         handle_dcard_web,
         handle_dcard_id,
+        handle_telephone,
         handle_telegram_id,
         handle_telegram_web,
         handle_wechat,

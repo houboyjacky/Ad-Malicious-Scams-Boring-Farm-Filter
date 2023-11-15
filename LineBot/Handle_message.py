@@ -45,28 +45,28 @@ def handle_message_text_front(user_text):
     if user_text == "備用指南":
         return Tools.USER_GUIDE
 
-    if match := re.match(r"^電話(.+)", user_text):
-        phone = match.group(1)
-        rmessage = (f"謝謝你提供的電話號碼\n"
-                    f"「{phone}」\n"
-                    f"若要查詢未知電話或簡訊電話\n"
-                    f"建議使用Whoscall\n\n"
-                    f"若要查詢賴電話\n"
-                    f"輸入「賴+電話」\n"
-                    f"例如：賴0912345678"
-                    )
-        return rmessage
+    # if match := re.match(r"^電話(.+)", user_text):
+    #     phone = match.group(1)
+    #     rmessage = (f"謝謝你提供的電話號碼\n"
+    #                 f"「{phone}」\n"
+    #                 f"若要查詢未知電話或簡訊電話\n"
+    #                 f"建議使用Whoscall\n\n"
+    #                 f"若要查詢賴電話\n"
+    #                 f"輸入「賴+電話」\n"
+    #                 f"例如：賴0912345678"
+    #                 )
+    #     return rmessage
 
-    if re.match(r"^09[\d\-]+", user_text) or re.match(r"^\+[\d\-]+", user_text):
-        rmessage = (f"謝謝你提供的電話號碼\n"
-                    f"「{user_text}」\n"
-                    f"若要查詢未知電話或簡訊電話\n"
-                    f"建議使用Whoscall\n\n"
-                    f"若要查詢賴電話\n"
-                    f"輸入「賴+電話」\n"
-                    f"例如：賴0912345678"
-                    )
-        return rmessage
+    # if re.match(r"^09[\d\-]+", user_text) or re.match(r"^\+[\d\-]+", user_text):
+    #     rmessage = (f"謝謝你提供的電話號碼\n"
+    #                 f"「{user_text}」\n"
+    #                 f"若要查詢未知電話或簡訊電話\n"
+    #                 f"建議使用Whoscall\n\n"
+    #                 f"若要查詢賴電話\n"
+    #                 f"輸入「賴+電話」\n"
+    #                 f"例如：賴0912345678"
+    #                 )
+    #     return rmessage
 
     if user_text.startswith("https://apps.apple.com/tw/app/"):
         rmessage = (f"謝謝你提供的網址\n"

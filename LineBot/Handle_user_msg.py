@@ -35,6 +35,7 @@ import Query_Line_Invite as Q_LINEWEB
 import Query_Mail as Q_MAIL
 import Query_SmallRedBook as Q_SRB
 import Query_Telegram as Q_TG
+import Query_Telephone as Q_TP
 import Query_Tiktok as Q_TT
 import Query_Twitter as Q_TR
 import Query_URL as Q_URL
@@ -194,6 +195,17 @@ def handle_mail(user_id, text, must_be_text):
         if must_be_text:
             return min_reply_text(status)
         return Handle_LineBot.message_reply_Query(user_id, status, "E-mail", mail, text)
+    return None
+
+
+def handle_telephone(user_id, text, must_be_text):
+    if match := re.match(Tools.KEYWORD_TELEPHONE[0], text.lower()):
+        phonenumber, status = Q_TP.Telephone_Read_Document(text)
+        Personal_Update_SingleTag_Query(user_id, "電話", status)
+
+        if must_be_text:
+            return min_reply_text(status)
+        return Handle_LineBot.message_reply_Query(user_id, status, "電話", phonenumber, text)
     return None
 
 
@@ -474,8 +486,6 @@ def handle_web(prefix_msg, user_id, text, must_be_text):
         english_parts = re.findall(r'[a-zA-Z0-9-\.]+', text)
         extractor = URLExtract()
         extractor.update_when_older(30)
-
-        logger.info(f"english_parts[0] = {english_parts[0]}")
         if extractor.has_urls(english_parts[0]):
             text = english_parts[0]
             if not prefix_msg:
@@ -515,6 +525,7 @@ def handle_user_msg(user_id, orgin_text, must_be_text=False):
         handle_dcard_id,
         handle_ask,
         handle_mail,
+        handle_telephone,
         handle_stupid
     ]
 
