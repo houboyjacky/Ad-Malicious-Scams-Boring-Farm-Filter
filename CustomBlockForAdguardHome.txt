@@ -16,6 +16,7 @@
 #||cresclab.com^
 #||dimondo.org^
 #||fontawesomes.com^
+#||forms.gle^
 #||ig.com^
 #||learningpa.cc^
 #||linkfly.to^
@@ -2332,8 +2333,6 @@
 ||footrongyi.com^
 ||fopsa.xyz^
 ||forexxxyz.com^
-||forhjism.com^
-||forms.gle^
 ||forthjism.com^
 ||forwin.ink^
 ||fowku.com^

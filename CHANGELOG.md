@@ -1,5 +1,8 @@
 # 歷史更新 History Update
 
+* 20231116 Update
+  * 調整 黑名單
+
 * 20231115 Update
   * 加入 無http網址判斷
   * 加入 電話黑名單判斷
