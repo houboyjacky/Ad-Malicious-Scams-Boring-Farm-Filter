@@ -22,6 +22,7 @@ THE SOFTWARE.
 
 # Publish Python Package
 import re
+from urlextract import URLExtract
 
 # My Python Package
 from Logger import logger
@@ -199,12 +200,12 @@ def handle_mail(user_id, text, must_be_text):
 def handle_stupid(user_id, text, _):
     if re.search(Tools.KEYWORD_LINE_INVITE[7], text):
         pass
-    elif not text.lower().startswith("http") and not Tools.has_non_alphanumeric(text.lower()):
-        subdomain, domain, suffix = Tools.domain_analysis(text)
-        # logger.info(f"{subdomain}, {domain}, {suffix}")
-        if subdomain or suffix:
-            Personal_Update_SingleTag(user_id, "文字")
-            return f"若輸入的是網址\n\n在 {text} 前面\n\n加上「 http:// 」或「 https:// 」"
+    # elif not text.lower().startswith("http") and not Tools.has_non_alphanumeric(text.lower()):
+    #     subdomain, domain, suffix = Tools.domain_analysis(text)
+    #     # logger.info(f"{subdomain}, {domain}, {suffix}")
+    #     if subdomain or suffix:
+    #         Personal_Update_SingleTag(user_id, "文字")
+    #         return f"若輸入的是網址\n\n在 {text} 前面\n\n加上「 http:// 」或「 https:// 」"
     return None
 
 
@@ -467,6 +468,30 @@ def handle_web(prefix_msg, user_id, text, must_be_text):
             return Text
 
         return Handle_LineBot.message_reply_QueryURL(user_id, IsScam, Text, domain_name, text)
+
+    if "." in text:
+        # 開頭不是網址
+        english_parts = re.findall(r'[a-zA-Z0-9-\.]+', text)
+        extractor = URLExtract()
+        extractor.update_when_older(30)
+
+        logger.info(f"english_parts[0] = {english_parts[0]}")
+        if extractor.has_urls(english_parts[0]):
+            text = english_parts[0]
+            if not prefix_msg:
+                prefix_msg = "所輸入的"
+            IsScam, Text, domain_name = Q_URL.user_query_website(
+                prefix_msg, text)
+
+            Personal_Update_SingleTag_Query(user_id, "URL", IsScam)
+            Length = len(Text)
+            logger.info(f"Text Length = {str(Length)}")
+            # not domain_name 是為了「解析網址有錯」與「正常/名片網站」
+            if Length > 240 or must_be_text or not domain_name:
+                return Text
+
+            return Handle_LineBot.message_reply_QueryURL(user_id, IsScam, Text, domain_name, text)
+
     return None
 
 
