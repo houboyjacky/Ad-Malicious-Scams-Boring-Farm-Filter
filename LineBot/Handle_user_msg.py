@@ -199,7 +199,7 @@ def handle_mail(user_id, text, must_be_text):
 
 
 def handle_telephone(user_id, text, must_be_text):
-    if match := re.match(Tools.KEYWORD_TELEPHONE[0], text.lower()):
+    if re.match(Tools.KEYWORD_TELEPHONE[0], text.lower()):
         phonenumber, status = Q_TP.Telephone_Read_Document(text)
         Personal_Update_SingleTag_Query(user_id, "電話", status)
 

@@ -45,39 +45,6 @@ def handle_message_text_front(user_text):
     if user_text == "備用指南":
         return Tools.USER_GUIDE
 
-    # if match := re.match(r"^電話(.+)", user_text):
-    #     phone = match.group(1)
-    #     rmessage = (f"謝謝你提供的電話號碼\n"
-    #                 f"「{phone}」\n"
-    #                 f"若要查詢未知電話或簡訊電話\n"
-    #                 f"建議使用Whoscall\n\n"
-    #                 f"若要查詢賴電話\n"
-    #                 f"輸入「賴+電話」\n"
-    #                 f"例如：賴0912345678"
-    #                 )
-    #     return rmessage
-
-    # if re.match(r"^09[\d\-]+", user_text) or re.match(r"^\+[\d\-]+", user_text):
-    #     rmessage = (f"謝謝你提供的電話號碼\n"
-    #                 f"「{user_text}」\n"
-    #                 f"若要查詢未知電話或簡訊電話\n"
-    #                 f"建議使用Whoscall\n\n"
-    #                 f"若要查詢賴電話\n"
-    #                 f"輸入「賴+電話」\n"
-    #                 f"例如：賴0912345678"
-    #                 )
-    #     return rmessage
-
-    if user_text.startswith("https://apps.apple.com/tw/app/"):
-        rmessage = (f"謝謝你提供的網址\n"
-                    f"「{user_text}」\n"
-                    f"是AppStore的軟體\n"
-                    f"目前不提供查詢\n"
-                    f"但可以告知我協助調查\n"
-                    f"請後續提出更多截圖證據\n"
-                    f"小編會盡力調查"
-                    )
-
     if user_text == "詐騙幫忙":
         rmessage = Handle_LineBot.message_reply_ScamAlert()
         return rmessage
@@ -123,8 +90,6 @@ def handle_message_text(event):
     modified_string = orgin_text.capitalize()
     if modified_string.startswith("Ig"):
         orgin_text = "IG" + orgin_text[2:]
-    elif modified_string.startswith("Line"):
-        orgin_text = "賴" + orgin_text[4:]
 
     if re.match(r'^(賴|TG|tg|IG|ig|微信|推特|貨幣|迪卡|電話)', orgin_text):
         orgin_text = orgin_text.replace(" ", "")
