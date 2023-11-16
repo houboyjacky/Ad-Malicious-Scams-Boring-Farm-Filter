@@ -1,6 +1,7 @@
 # 歷史更新 History Update
 
 * 20231116 Update
+  * 修復 網址不在第一個狀況
   * 調整 黑名單
 
 * 20231115 Update

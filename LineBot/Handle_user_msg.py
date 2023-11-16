@@ -484,23 +484,27 @@ def handle_web(prefix_msg, user_id, text, must_be_text):
     if "." in text:
         # 開頭不是網址
         english_parts = re.findall(r'[a-zA-Z0-9-\.]+', text)
-        extractor = URLExtract()
-        extractor.update_when_older(30)
-        if extractor.has_urls(english_parts[0]):
-            text = english_parts[0]
-            if not prefix_msg:
-                prefix_msg = "所輸入的"
-            IsScam, Text, domain_name = Q_URL.user_query_website(
-                prefix_msg, text)
 
-            Personal_Update_SingleTag_Query(user_id, "URL", IsScam)
-            Length = len(Text)
-            logger.info(f"Text Length = {str(Length)}")
-            # not domain_name 是為了「解析網址有錯」與「正常/名片網站」
-            if Length > 240 or must_be_text or not domain_name:
-                return Text
+        # 若有找出部分
+        if english_parts:
+            extractor = URLExtract()
+            extractor.update_when_older(30)
 
-            return Handle_LineBot.message_reply_QueryURL(user_id, IsScam, Text, domain_name, text)
+            for english_part in english_parts:
+                if extractor.has_urls(english_part):
+                    if not prefix_msg:
+                        prefix_msg = "所輸入的"
+                    IsScam, Text, domain_name = Q_URL.user_query_website(
+                        prefix_msg, english_part)
+
+                    Personal_Update_SingleTag_Query(user_id, "URL", IsScam)
+                    Length = len(Text)
+                    logger.info(f"Text Length = {str(Length)}")
+                    # not domain_name 是為了「解析網址有錯」與「正常/名片網站」
+                    if Length > 240 or must_be_text or not domain_name:
+                        return Text
+
+                    return Handle_LineBot.message_reply_QueryURL(user_id, IsScam, Text, domain_name, english_part)
 
     return None
 
