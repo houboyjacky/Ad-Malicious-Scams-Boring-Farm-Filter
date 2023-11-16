@@ -545,7 +545,7 @@ def handle_user_msg(user_id, orgin_text, must_be_text=False):
 
     if orgin_text.lower().startswith("http") and not orgin_text.lower().startswith("http://") and not orgin_text.lower().startswith("https://"):
         Personal_Update_SingleTag(user_id, "文字")
-        return "網址開頭有誤\n請重新輸入正確網址"
+        return "網址開頭有誤\n請修改成\nhttp:// 或 https://"
 
     prefix_msg = ""
     # 縮網址展開
