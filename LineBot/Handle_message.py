@@ -126,8 +126,20 @@ def handle_message_text(event):
     elif modified_string.startswith("Line"):
         orgin_text = "賴" + orgin_text[4:]
 
-    if re.match(r'^(賴|TG|tg|IG|ig|微信|推特|貨幣|迪卡|卡稱) ', orgin_text):
+    if re.match(r'^(賴|TG|tg|IG|ig|微信|推特|貨幣|迪卡|電話)', orgin_text):
         orgin_text = orgin_text.replace(" ", "")
+
+    if match := re.match(r"^(09[\d\- ]{8})", orgin_text):
+        number = match.group(1)
+        number = number.replace("-", "")
+        number = number.replace(" ", "")
+        orgin_text = f"電話{number}"
+
+    if match := re.match(r"^(\+[\d\- ]+)", orgin_text):
+        number = match.group(1)
+        number = number.replace("-", "")
+        number = number.replace(" ", "")
+        orgin_text = f"電話{number}"
 
     if not Tools.IsAdmin(user_id) and len(orgin_text) > 1000:
         if orgin_text.startswith("http"):
