@@ -31,6 +31,37 @@ import Tools
 Name = "TELEPHONE"
 
 
+def pre_deal_with_phonenumber(orgin_text):
+
+    fix_text = orgin_text.replace("-", "")
+    fix_text = fix_text.replace(" ", "")
+    if match := re.match(Tools.KEYWORD_TELEPHONE[4], fix_text):
+        # 電話查詢 09XX + 電話 => +8869XX + 電話
+        number = match.group(1)
+        orgin_text = f"電話+8869{number}"
+    elif match := re.match(Tools.KEYWORD_TELEPHONE[5], fix_text):
+        # 電話查詢 0 區碼 + 電話
+        number = match.group(1)
+        orgin_text = f"電話+886{number}"
+    elif match := re.match(Tools.KEYWORD_TELEPHONE[6], fix_text):
+        # 電話查詢 +886 + 手機電話
+        number = match.group(1)
+        orgin_text = f"電話+886{number}"
+    elif match := re.match(Tools.KEYWORD_TELEPHONE[7], fix_text):
+        # 電話查詢 其他國家
+        number = match.group(1)
+        logger.info(f"number = {number}")
+        try:
+            phone_number = phonenumbers.parse(number)
+            if not phonenumbers.is_possible_number(phone_number):
+                return f"所輸入{phone_number}\n是國外電話\n可能有誤"
+            orgin_text = f"電話{number}"
+        except phonenumbers.NumberParseException as e:
+            logger.info(f"phonenumbers error = {e}")
+
+    return orgin_text
+
+
 def analyze_Telephone_url(user_text: str) -> Optional[dict]:
 
     user_text = user_text.replace("加入", "")
@@ -42,16 +73,6 @@ def analyze_Telephone_url(user_text: str) -> Optional[dict]:
         number = match.group(1)
     else:
         return None
-
-    if number.startswith("09"):
-        pass
-    else:
-        number = f"+{number}"
-        phone_number = phonenumbers.parse(number)
-        if not phonenumbers.is_possible_number(phone_number):
-            return None
-        elif phonenumbers.is_valid_number(phone_number):
-            return None
 
     logger.info(f"帳號: {number}")
 
