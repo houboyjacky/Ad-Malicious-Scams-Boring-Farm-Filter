@@ -88,6 +88,7 @@
 /coindex.*\..*/
 /coinmama[a-z]+\.com/
 /coinmamam[a-z]+\.com/
+/coinmamama[a-z]+\.com/
 /coinrule.*\.*/
 /coinvv[a-z0-9]+\.com/
 /com-id\w+.cloud/
@@ -313,6 +314,7 @@
 ||brk.*
 ||btoplus.*^
 ||bullish*.com^
+||buyer-work.*^
 ||cbn-tw.*^
 ||coinbasewallet.*^
 ||coinex*.*^
@@ -356,3 +358,11 @@
 ||walnart.*
 ||yasenfinancial.*^
 ||zhy*.com^
+/crmqointechex[a-z]*\.com/
+/fenglong[0-9]+.xyz/
+/fhglobalzh[a-z]+\.com/
+/jrs1[0-9]+\.com/
+/mercadolibre[a-z0-9-]+\.com/
+||obtshop.*^
+/swissborg[a-z]+\.(cc|com)/
+/truefizz[a-z]+\.com/
