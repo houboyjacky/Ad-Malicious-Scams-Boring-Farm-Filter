@@ -98,7 +98,7 @@ def handle_message_text(event):
     # 電話號碼字串預處理
     if re.match(Tools.KEYWORD_TELEPHONE[3], orgin_text):
         orgin_text = pre_deal_with_phonenumber(orgin_text)
-        if not orgin_text.startswith("電話"):
+        if orgin_text.startswith("所輸入"):
             Handle_LineBot.message_reply(event, orgin_text)
             Personal_Update_SingleTag(user_id, "文字")
             return

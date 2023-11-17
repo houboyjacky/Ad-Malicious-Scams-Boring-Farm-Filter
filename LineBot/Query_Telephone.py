@@ -50,7 +50,6 @@ def pre_deal_with_phonenumber(orgin_text):
     elif match := re.match(Tools.KEYWORD_TELEPHONE[7], fix_text):
         # 電話查詢 其他國家
         number = match.group(1)
-        logger.info(f"number = {number}")
         try:
             phone_number = phonenumbers.parse(number)
             if not phonenumbers.is_possible_number(phone_number):
