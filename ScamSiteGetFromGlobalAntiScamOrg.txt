@@ -19,6 +19,7 @@
 #||cloudfront.net^
 #||digitalocean.com^
 #||easy.co^
+#||freebitco.in^
 #||fx110.com.tw^
 #||github.io^
 #||google.com^
@@ -12812,7 +12813,6 @@
 ||free-gamms.site^
 ||free2ex.pro^
 ||freebcex.com^
-||freebitco.in^
 ||freebitco.investments^
 ||freebitcoin.games^
 ||freebitcoinforall.com^

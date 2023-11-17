@@ -200,3 +200,7 @@
 @@||dydx.exchange^
 @@||etxcapital.com^
 @@||pansci.asia^
+@@||shopdisney.asia^
+@@||similarweb.com^$important
+@@||umdc.aliapp.org^$important
+@@||nelo2-col.linecorp.com^$important
