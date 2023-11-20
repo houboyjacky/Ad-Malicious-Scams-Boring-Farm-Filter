@@ -47,11 +47,14 @@ def linebot_getContent(msg_id):
 
 def message_reply(event, text):
     user_name = linebot_getRealName(event.source.user_id)
+
+    # 文字太長 改由檔案輸出
     if isinstance(text, str) and len(text) > 5000:
         file = f"response_{event.source.user_id[:5]}.txt"
         filepath = f"sendfile/{file}"
         Tools.write_file_U8(filepath, text)
-        text = f"https://{Tools.ALLOWED_HOST[1]}:8443/{file}"
+        url = f"https://{Tools.ALLOWED_HOST[0]}:{Tools.SERVICE_PORT}/{file}"
+        text = message_reply_for_shorturls_report(url)
 
     if isinstance(text, str):
         if check_user_need_news(event.source.user_id):
@@ -273,7 +276,7 @@ def message_reply_Query(user_id, IsScam, Type_Name, code, orgin_text):
         elif Type_Name == "IG":
             text = (f"{Type_Name}分析出的代碼的「{code}」\n\n"
                     f"{suffix}\n\n"
-                    f"另外請勿相信\n「投資」、「賭博」、「分析」\n「線上工作」")
+                    f"另外請勿相信\n「投資、賭博、分析\n線上工作、抽獎」")
         elif Type_Name == "虛擬貨幣地址":
             text = (f"{code}\n\n"
                     f"{suffix}")
@@ -571,6 +574,34 @@ def message_reply_Check_ID_Type(TypeTopList, ID):
             )
 
     text = f"麻煩協助確認\n「{ID}」\n是什麼項目？"
+
+    buttons_template = ButtonsTemplate(
+        title=title,
+        text=text,
+        actions=actions
+    )
+
+    template_message = TemplateSendMessage(
+        alt_text=title,
+        template=buttons_template
+    )
+
+    return template_message
+
+
+def message_reply_for_shorturls_report(url):
+
+    title = "看縮縮報告"
+
+    actions = []
+
+    actions.append(URITemplateAction(
+        label='從網頁瀏覽',
+        uri=url
+    )
+    )
+
+    text = f"因為資料龐大，提供網頁連結。"
 
     buttons_template = ButtonsTemplate(
         title=title,
