@@ -452,7 +452,7 @@ def message_reply_Query_ID_Type(ID):
     title = "確認ID類別"
     actions = []
 
-    logger.info(f"site = {ID}")
+    logger.info(f"message_reply_Query_ID_Type = {ID}")
 
     top_four_dict = get_top_four(ID_POS_LIST)
 
@@ -495,6 +495,82 @@ def message_reply_Query_ID_Type(ID):
             )
 
     text = f"麻煩協助確認「{ID}」是什麼項目"
+
+    buttons_template = ButtonsTemplate(
+        title=title,
+        text=text,
+        actions=actions
+    )
+
+    template_message = TemplateSendMessage(
+        alt_text=title,
+        template=buttons_template
+    )
+
+    return template_message
+
+
+def message_reply_Check_ID_Type(TypeTopList, ID):
+
+    title = "檢查ID類別"
+    actions = []
+
+    logger.info(f"message_reply_Check_ID_Type = {ID}")
+
+    if isinstance(TypeTopList, str):
+        TypeTopList = [TypeTopList]
+
+    for TypeTop in TypeTopList:
+        if TypeTop == "LINE":
+            actions.append(MessageTemplateAction(
+                label='查詢LINE ID？',
+                text=f"賴{ID}"
+            )
+            )
+        elif TypeTop == "IG":
+            actions.append(MessageTemplateAction(
+                label='查詢IG？',
+                text=f"IG{ID}"
+            )
+            )
+        elif TypeTop == "DCARD":
+            actions.append(MessageTemplateAction(
+                label='查詢Dcard ID？',
+                text=f"迪卡{ID}"
+            )
+            )
+        elif TypeTop == "推特":
+            actions.append(MessageTemplateAction(
+                label='查詢推特？',
+                text=f"推特{ID}"
+            )
+            )
+        elif TypeTop == "TG":
+            actions.append(MessageTemplateAction(
+                label='查詢Telegram？',
+                text=f"TG{ID}"
+            )
+            )
+        elif TypeTop == "微信":
+            actions.append(MessageTemplateAction(
+                label='查詢微信？',
+                text=f"微信{ID}"
+            )
+            )
+        elif TypeTop == "虛擬貨幣":
+            actions.append(MessageTemplateAction(
+                label='查詢虛擬貨幣？',
+                text=f"貨幣{ID}"
+            )
+            )
+        elif TypeTop == "電話":
+            actions.append(MessageTemplateAction(
+                label='查詢電話？',
+                text=f"電話{ID}"
+            )
+            )
+
+    text = f"麻煩協助確認\n「{ID}」\n是什麼項目？"
 
     buttons_template = ButtonsTemplate(
         title=title,

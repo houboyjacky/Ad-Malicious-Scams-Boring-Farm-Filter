@@ -18,6 +18,7 @@
 #||fontawesomes.com^
 #||forms.gle^
 #||ig.com^
+#||lcnycoinj.com^
 #||learningpa.cc^
 #||linkfly.to^
 #||maac.io^
@@ -3779,7 +3780,6 @@
 ||lc-kd.top^
 ||lc.chat^
 ||lccnet.com.tw^
-||lcnycoinj.com^
 ||lcnycoinn.com^
 ||lcnycoinnd.com^
 ||lcnycoinnn.com^

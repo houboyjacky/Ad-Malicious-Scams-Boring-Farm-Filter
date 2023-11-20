@@ -43,6 +43,18 @@ from Personal_Rec import Personal_Update_SingleTag
 def handle_message_text_front(user_text):
     # 前置與防呆
 
+    if re.match(Tools.KEYWORD_TELEPHONE[4], user_text):
+        # 確認項目
+        Typelist = ["電話", "LINE"]
+        rmessage = Handle_LineBot.message_reply_Check_ID_Type(
+            Typelist, user_text)
+        return rmessage
+
+    if re.match(r"^@?[0-9A-Za-z_\-+]+$", user_text) and len(user_text) > 20:
+        rmessage = Handle_LineBot.message_reply_Check_ID_Type(
+            "虛擬貨幣", user_text)
+        return rmessage
+
     if user_text == "備用指南":
         return Tools.USER_GUIDE
 
@@ -77,8 +89,38 @@ def handle_message_text(event):
     # 讀取使用者傳來的文字訊息
     orgin_text = event.message.text.strip()
 
+    if not Tools.IsAdmin(user_id) and len(orgin_text) > 1000:
+        if orgin_text.startswith("http"):
+            _, domain, suffix = Tools.domain_analysis(orgin_text)
+            rmessage = (f"謝謝你提供的情報\n"
+                        f"但網址過長，請直接輸入\n"
+                        f"「 http://{domain}.{suffix} 」\n"
+                        f"就好"
+                        )
+        else:
+            rmessage = f"謝謝你提供的情報\n請縮短長度或分段傳送"
+        Handle_LineBot.message_reply(event, rmessage)
+        Personal_Update_SingleTag(user_id, "文字")
+        return
+
+    # 預處理
+    if rmessage := handle_message_text_front(orgin_text):
+        Handle_LineBot.message_reply(event, rmessage)
+        Personal_Update_SingleTag(user_id, "文字")
+        return
+
+    # 遊戲模式
+    if rmessage := handle_game_msg(user_id, orgin_text):
+        Handle_LineBot.message_reply(event, rmessage)
+        return
+
+    # 修改字串預處理 Start
+
     # 提取http網址
-    if not orgin_text.startswith("加入") and not orgin_text.startswith("刪除") and not orgin_text.startswith("詐騙回報"):
+    if not orgin_text.startswith("加入") \
+            and not orgin_text.startswith("刪除") \
+            and not orgin_text.startswith("詐騙回報")   \
+            and not orgin_text.startswith("分析"):
         if not orgin_text.startswith("http"):
             if match := re.search(r'(https?://[\S]+)', orgin_text):
                 orgin_text = match.group(1)
@@ -103,30 +145,7 @@ def handle_message_text(event):
             Personal_Update_SingleTag(user_id, "文字")
             return
 
-    if not Tools.IsAdmin(user_id) and len(orgin_text) > 1000:
-        if orgin_text.startswith("http"):
-            _, domain, suffix = Tools.domain_analysis(orgin_text)
-            rmessage = (f"謝謝你提供的情報\n"
-                        f"但網址過長，請直接輸入\n"
-                        f"「 http://{domain}.{suffix} 」\n"
-                        f"就好"
-                        )
-        else:
-            rmessage = f"謝謝你提供的情報\n請縮短長度或分段傳送"
-        Handle_LineBot.message_reply(event, rmessage)
-        Personal_Update_SingleTag(user_id, "文字")
-        return
-
-    # 長度控管、備用指南、電話、網站排行榜
-    if rmessage := handle_message_text_front(orgin_text):
-        Handle_LineBot.message_reply(event, rmessage)
-        Personal_Update_SingleTag(user_id, "文字")
-        return
-
-    # 遊戲模式
-    if rmessage := handle_game_msg(user_id, orgin_text):
-        Handle_LineBot.message_reply(event, rmessage)
-        return
+    # 修改字串預處理 End
 
     # 管理員操作
     if Tools.IsAdmin(user_id):

@@ -35,11 +35,8 @@ def pre_deal_with_phonenumber(orgin_text):
 
     fix_text = orgin_text.replace("-", "")
     fix_text = fix_text.replace(" ", "")
-    if match := re.match(Tools.KEYWORD_TELEPHONE[4], fix_text):
-        # 電話查詢 09XX + 電話 => +8869XX + 電話
-        number = match.group(1)
-        orgin_text = f"電話+8869{number}"
-    elif match := re.match(Tools.KEYWORD_TELEPHONE[5], fix_text):
+    logger.info(f"fix_text = {fix_text}")
+    if match := re.match(Tools.KEYWORD_TELEPHONE[5], fix_text):
         # 電話查詢 0 區碼 + 電話
         number = match.group(1)
         orgin_text = f"電話+886{number}"
