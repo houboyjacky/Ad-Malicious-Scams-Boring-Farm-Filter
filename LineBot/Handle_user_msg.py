@@ -222,7 +222,7 @@ def handle_stupid(user_id, text, _):
 
 
 def handle_line_web(_, user_id, text, must_be_text):
-    if re.search("https://store\.line\.me", text.lower()):
+    if re.search(r"https://store\.line\.me", text.lower()):
         return None
     if re.match(Tools.KEYWORD_LINE_INVITE[3], text.lower()):
         invite_code, status = Q_LINEWEB.lineinvite_Read_Document(text)
