@@ -50,7 +50,7 @@ def pre_deal_with_phonenumber(orgin_text):
         try:
             phone_number = phonenumbers.parse(number)
             if not phonenumbers.is_possible_number(phone_number):
-                return f"所輸入{phone_number}\n是國外電話\n可能有誤"
+                return f"所輸入{number}\n是國外電話\n可能有誤"
             orgin_text = f"電話{number}"
         except phonenumbers.NumberParseException as e:
             logger.info(f"phonenumbers error = {e}")
