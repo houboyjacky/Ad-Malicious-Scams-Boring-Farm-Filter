@@ -120,7 +120,8 @@ def handle_message_text(event):
     if not orgin_text.startswith("加入") \
             and not orgin_text.startswith("刪除") \
             and not orgin_text.startswith("詐騙回報")   \
-            and not orgin_text.startswith("分析"):
+            and not orgin_text.startswith("分析")   \
+            and not orgin_text.startswith("縮網址"):
         if not orgin_text.startswith("http"):
             if match := re.search(r'(https?://[\S]+)', orgin_text):
                 orgin_text = match.group(1)
