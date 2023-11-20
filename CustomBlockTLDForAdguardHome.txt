@@ -25,6 +25,7 @@
 /7-eleven-[a-z]+\.homes/
 /7-eleven\w+\.cc/
 /711-tw[0-9]+.tech/
+/8ct20[0-9]+\.site/
 /8legend\.[a-z]+/
 /aaex\.(asia|club|in|win)/
 /aava-[a-z]+\.[a-z]/
@@ -95,6 +96,7 @@
 /costco.+\.com/
 /cpatex[a-z]+\.com./
 /crex24[a-z]{1,2}\.com/
+/crmqointechex[a-z]*\.com/
 /crossglobal(mall|shop)\.\w+/
 /cwgforexp[a-z0-9]*\.com/
 /dbag[a-z]{3}\.com/
@@ -125,7 +127,9 @@
 /expecta[a-z]+\.com/
 /fasonlacrm\.[a-z]+/
 /fchange[a-z0-9]*\.xyz/
+/fenglong[0-9]+.xyz/
 /ferrari[0-9]*\.net/
+/fhglobalzh[a-z]+\.com/
 /financesnew\.[a-z]+/
 /financia1[a-z0-9]*\.com/
 /fitbelaepro[a-z0-9]*\.com/
@@ -166,6 +170,7 @@
 /ioex[0-9]+\.com/
 /ioexx?[0-9]{1,2}\.com/
 /isnotdomain[0-9]+\.com/
+/jrs1[0-9]+\.com/
 /js[0-9]+\.cn/
 /jumster[a-z]+\.com/
 /kavala[a-z0-9]{0-2}\.com/
@@ -178,6 +183,7 @@
 /linetw\.(beauty|click|homes|lol|one|mom|xyz|pics|skin|hair|shop)/
 /liquiditypool-.+\.com/
 /long[0-9]\.net/
+/mercadolibre[a-z0-9-]+\.com/
 /metoocofstimrgpaged-[a-z0-9]+\.online/
 /mgs1[0-9]88\.(vip|com)/
 /miracle[a-z]{3,4}\.com/
@@ -229,6 +235,7 @@
 /successfull-[a-z0-9]+\.online/
 /supportteam[0-9]+\.asia/
 /svj[\-a-z0-9]\.com/
+/swissborg[a-z]+\.(cc|com)/
 /taiwan-[a-z]+\.(com|tw)/
 /taiwanstartr.+\.com/
 /tanaka[a-z]+\.com/
@@ -243,6 +250,7 @@
 /trade[0-9]+\.xyz/
 /tradenation[a-z]{1,2}\.(tw|com)/
 /tron[a-z]{3,4}\.com/
+/truefizz[a-z]+\.com/
 /tw-shopify[a-z0-9]+\.com/
 /tw[-]?carousel[a-z0-9]+\.com/
 /tw[-]?carousel[a-z0-9]+\.tw/
@@ -345,6 +353,7 @@
 ||lehinsecurities.*
 ||medisou.*^
 ||newtradetw.*^
+||obtshop.*^
 ||ocdfinances.*^
 ||plubitit.*^
 ||sc.*.cn^
@@ -358,11 +367,3 @@
 ||walnart.*
 ||yasenfinancial.*^
 ||zhy*.com^
-/crmqointechex[a-z]*\.com/
-/fenglong[0-9]+.xyz/
-/fhglobalzh[a-z]+\.com/
-/jrs1[0-9]+\.com/
-/mercadolibre[a-z0-9-]+\.com/
-||obtshop.*^
-/swissborg[a-z]+\.(cc|com)/
-/truefizz[a-z]+\.com/

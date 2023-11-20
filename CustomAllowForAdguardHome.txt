@@ -204,3 +204,6 @@
 @@||similarweb.com^$important
 @@||umdc.aliapp.org^$important
 @@||nelo2-col.linecorp.com^$important
+@@||avatrade.com.tw^
+@@||funlikev.com^
+@@||otthree.com^
