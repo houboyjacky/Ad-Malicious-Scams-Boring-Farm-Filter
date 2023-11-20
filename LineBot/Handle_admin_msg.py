@@ -510,6 +510,9 @@ def handle_admin_msg(user_id, orgin_text):
     elif orgin_text == "清除公告" and Tools.IsOwner(user_id):
         clear_user_record()
         rmessage = f"清除公告已完成"
+    elif orgin_text.startswith("賴網址"):
+        orgin_text = orgin_text.replace("賴網址", "")
+        rmessage = f"https://line.me/ti/p/{orgin_text}"
 
     if rmessage:
         Personal_Update_SingleTag(user_id, "Other", SUB_TAGNAME="管理次數")
