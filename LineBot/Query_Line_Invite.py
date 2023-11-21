@@ -20,7 +20,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 '''
 
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup, Tag
 from datetime import date
 from Logger import logger
 from Query_Line_ID import LineID_Write_Document, LineID_Read_Document, LineID_Delete_Document
@@ -81,7 +81,11 @@ def analyze_line_invite_url(user_text: str) -> Optional[dict]:
                 return None
 
             soup = BeautifulSoup(response.content, 'html.parser')
-            redirected_url1 = soup.find('a')['href']
+            a_tag = soup.find('a')
+            if isinstance(a_tag, Tag):
+                redirected_url1 = a_tag.get('href')
+            else:
+                redirected_url1 = ""
             logger.info(f"Redirected_url 1 = {redirected_url1}")
 
             redirected_url = Resolve_Redirects(redirected_url1)
@@ -93,12 +97,13 @@ def analyze_line_invite_url(user_text: str) -> Optional[dict]:
                               "回報次數": 0, "失效": 0, "檢查者": "", "加入日期": datetime}
                     logger.info("已經指向其他網域")
                     return struct
-                match = re.search(
-                    r"accountId\%3D([a-z0-9\_]+)", redirected_url1)
-                invite_code = match.group(1)
-                invite_code = f"@{invite_code}"
-                logger.info(f"invite_code={invite_code}")
-            elif not redirected_url.startswith("https://line.me"):
+
+                if isinstance(redirected_url1, str):
+                    if match := re.search(r"accountId\%3D([a-z0-9\_]+)", redirected_url1):
+                        invite_code = match.group(1)
+                        invite_code = f"@{invite_code}"
+                        logger.info(f"invite_code={invite_code}")
+            elif not str(redirected_url).startswith("https://line.me"):
                 struct = {"類別": "網站", "帳號": redirected_url, "來源": "網站回報",
                           "回報次數": 0, "失效": 0, "檢查者": "", "加入日期": datetime}
                 logger.info("已經指向其他網域或無效")

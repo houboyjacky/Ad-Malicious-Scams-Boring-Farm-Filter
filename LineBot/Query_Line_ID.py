@@ -71,6 +71,10 @@ def LINE_ID_Download_From_165():
 
     collection = Query_API.Read_Collection(DB_Name, C_Name)
 
+    if collection is None:
+        logger.info("LINE_ID_Download_From_165 collection is empty")
+        return
+
     documents_to_insert = []
     datetime = date.today().strftime("%Y-%m-%d")
 

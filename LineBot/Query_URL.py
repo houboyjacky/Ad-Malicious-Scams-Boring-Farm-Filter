@@ -232,6 +232,9 @@ def check_white_blacklisted_site(domain_name):
 
     White_db = "網站白名單"
     White_collections = Query_API.Read_Collections(White_db)
+    if White_collections is None:
+        logger.info("check_white_blacklisted_site collection is empty")
+        return
 
     for collection in White_collections:
         document = collection.find_one({"網址": domain_name})
@@ -249,6 +252,9 @@ def check_blacklisted_site(domain_name):
 
     Black_db = "網站黑名單"
     Black_collections = Query_API.Read_Collections(Black_db)
+    if Black_collections is None:
+        logger.info("check_blacklisted_site collection is empty")
+        return
 
     for collection in Black_collections:
         document = collection.find_one({"網址": domain_name})
@@ -343,6 +349,9 @@ def user_query_website_by_DNS(domain_name, result_list, lock):
     if not Is_Skip:
         WHOIS_DB_name = "WHOIS"
         collection = Query_API.Read_Collection(WHOIS_DB_name, WHOIS_DB_name)
+        if collection is None:
+            logger.info("user_query_website_by_DNS collection is empty")
+            return
         if Document := Query_API.Search_Same_Document(collection, "whois_domain", domain_name):
             saved_date = datetime.strptime(Document['加入日期'], '%Y%m%d')
             current_date = datetime.now()
@@ -539,6 +548,7 @@ def user_query_website(prefix_msg, user_text):
     checkresult = results['checkresult']
 
     # 避免ChainSight誤判，獨立判斷
+    ChainSight_msg = ""
     if checkresult == False:
         checkresult, ChainSight_msg = check_ChainSight(
             domain_name, whois_creation_date)
@@ -575,6 +585,8 @@ def user_query_website(prefix_msg, user_text):
     # 提取創建時間和最後更新時間
     if isinstance(whois_creation_date, str):
         creation_date = Tools.string_to_datetime(whois_creation_date)
+    else:
+        creation_date = whois_creation_date
 
     today = datetime.today().date()  # 取得當天日期
     diff_days = (today - creation_date.date()).days  # 相差幾天

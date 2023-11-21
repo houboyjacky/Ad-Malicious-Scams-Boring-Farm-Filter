@@ -134,8 +134,14 @@ def Update_Document(collection, struct, tagname):
 
 def Get_DB_len(DB_Name, Collection_Name):
     collection = Read_Collection(DB_Name, Collection_Name)
+
+    if collection is None:
+        logger.info(f"Get_DB_len collection is empty")
+        return -1
+
     document_count = collection.count_documents({})
     return document_count
+
 
 # ===============================================
 # GridFS
@@ -164,6 +170,9 @@ def Read_GridFS(fs, file_id):
 
 def get_random_blacklist(Record_players, DB_Name, Collection_Name, UserID) -> str:
     collection = Read_Collection(DB_Name, Collection_Name)
+    if collection is None:
+        logger.info(f"get_random_blacklist collection is empty")
+        return ""
 
     count = 0
     site = ""
@@ -202,13 +211,17 @@ def push_random_blacklist(Record_players, DB_Name, Collection_Name, UserID, succ
     found = False
     if result := MongoDB.Query_db(collection, "檢查者", UserID):
         filter = {'檢查者': UserID}
+        update = {}
         if success:
             times = result['回報次數'] + 1
             update = {"$set": {'回報次數': times}}
         if disappear:
             times = result['失效'] + 1
             update = {"$set": {'失效': times}}
-        MongoDB.Update_db(collection, filter, update)
+        if not update:
+            logger.info("回報有問題")
+        else:
+            MongoDB.Update_db(collection, filter, update)
         found = True
     else:
         logger.info("找不到檢查者")

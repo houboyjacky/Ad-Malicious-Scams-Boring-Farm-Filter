@@ -48,16 +48,21 @@ def Logger_Transfer(pre_close=True):
 
     current_date_str = None
     current_log_file = None
+    last_year = 0
+    last_month = 0
+    last_day = 0
 
     for line in log_lines:
         # 判斷開頭是否為「年-月-日」
-        date_match = re.match(r'^(\d{4})-(\d{2})-(\d{2})', line)
-        if date_match or not current_log_file:
+        if date_match := re.match(r'^(\d{4})-(\d{2})-(\d{2})', line):
             year, month, day = date_match.groups()
-            current_date_str = f"{year}{month}{day}"
-            folder_path = f"Log/{year}{month}"
-            current_log_file = f"{folder_path}/LineBot_{current_date_str}.log"
+            last_year = year
+            last_month = month
+            last_day = day
 
+        current_date_str = f"{last_year}{last_month}{last_day}"
+        folder_path = f"Log/{last_year}{last_month}"
+        current_log_file = f"{folder_path}/LineBot_{current_date_str}.log"
         if not os.path.exists(folder_path):
             os.makedirs(folder_path)
 

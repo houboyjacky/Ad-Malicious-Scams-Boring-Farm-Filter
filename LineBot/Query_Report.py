@@ -31,6 +31,9 @@ NAME = "詐騙回報"
 def Report_Cancel_Document(user_text):
 
     collection = Query_API.Read_Collection(NAME, NAME)
+    if collection is None:
+        logger.info("Report_Cancel_Document collection is empty")
+        return
 
     query = {
         "$and": [
@@ -53,6 +56,9 @@ def Report_Cancel_Document(user_text):
 def Report_Write_Document(user_id: str, user_name: str, user_text: str, is_system: bool) -> bool:
 
     collection = Query_API.Read_Collection(NAME, NAME)
+    if collection is None:
+        logger.info("Report_Write_Document collection is empty")
+        return False
 
     query = {
         "$and": [
@@ -88,6 +94,9 @@ def Report_Write_Document(user_id: str, user_name: str, user_text: str, is_syste
 def Report_Read_Document(user_id: str):
 
     collection = Query_API.Read_Collection(NAME, NAME)
+    if collection is None:
+        logger.info("Report_Read_Document collection is empty")
+        return "", "", ""
     total_documents = collection.count_documents({})
 
     query = {

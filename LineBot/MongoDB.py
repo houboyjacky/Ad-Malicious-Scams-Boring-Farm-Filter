@@ -36,23 +36,28 @@ def Login_db():
 
 def Load_db(db_name, collection_name):
     global db_client
-    db = db_client[db_name]
-    collection = db[collection_name]
-    return collection
+    if db_client:
+        db = db_client[db_name]
+        collection = db[collection_name]
+        return collection
+    return None
 
 
 def Load_dbs(db_name):
     global db_client
-    db = db_client[db_name]
-    collection_objects = [db[collection_name]
-                          for collection_name in db.list_collection_names()]
-    return collection_objects
+    if db_client:
+        db = db_client[db_name]
+        collection_objects = [db[collection_name]
+                              for collection_name in db.list_collection_names()]
+        return collection_objects
+    return None
 
 
 def Drop_db(db_name, collection_name):
     global db_client
-    db = db_client[db_name]
-    db.drop_collection(collection_name)
+    if db_client:
+        db = db_client[db_name]
+        db.drop_collection(collection_name)
     return
 
 
@@ -78,9 +83,11 @@ def Delete_db(collection, filter):
 
 def Load_GridFS_db(db_name):
     global db_client
-    db = db_client[db_name]
-    fs = GridFS(db)
-    return fs
+    if db_client:
+        db = db_client[db_name]
+        fs = GridFS(db)
+        return fs
+    return None
 
 
 Login_db()

@@ -119,13 +119,13 @@ def push_random_blacklist(UserID, success, disappear):
 
 
 def handle_game_msg(user_id, user_text):
+    user_name = Handle_LineBot.linebot_getRealName(user_id)
     if user_text.startswith("詐騙回報"):
         if user_text == "詐騙回報":
             rmessage = Handle_LineBot.message_reply_After_Report(True)
             Personal_Update_SingleTag(user_id, "文字")
         else:
-            user_name = Handle_LineBot.linebot_getRealName(user_id)
-            if Q_RPT.Report_Write_Document(user_id, user_name, user_text, False):
+            if user_name and Q_RPT.Report_Write_Document(user_id, user_name, user_text, False):
                 button1 = "使用指南"
                 button2 = "詐騙學習"
                 func_name = "重複回報"

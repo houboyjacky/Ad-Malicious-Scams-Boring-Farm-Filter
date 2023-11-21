@@ -20,7 +20,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 '''
 
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup, Tag
 from Logger import logger
 from selenium import webdriver
 from urllib.parse import urlparse, unquote
@@ -80,28 +80,32 @@ def resolve_redirects_wenkio(url):
     except requests.exceptions.RequestException as e:
         logger.info(f"Error occurred: {e}")
 
-    return None
+    return ""
 
 
-def resolve_redirects_recurlcc(url):
+def resolve_redirects_recurlcc(url) -> str:
     try:
         response = requests.get(url)
         if response.status_code == 200:
             soup = BeautifulSoup(response.content, 'html.parser')
             target_url_input = soup.find('input', id='url')
-            if target_url_input:
-                target_url = target_url_input['value']
+            if isinstance(target_url_input, Tag):
+                target_url = target_url_input.get('value')
                 logger.info(f"final_url_recurlcc = {target_url}")
-                return target_url
+                return str(target_url)
     except requests.exceptions.RequestException as e:
         logger.info(f"Error occurred: {e}")
 
-    return None
+    return ""
 
 
 def resolve_redirects_iiilio(url):
     global HTTP_HEADERS_LIST
 
+    if HTTP_HEADERS_LIST is None:
+        return ""
+
+    headers = None
     for data in HTTP_HEADERS_LIST:
         if data["Name"] == "iiil.io":
             headers = data["Headers"]
@@ -123,12 +127,16 @@ def resolve_redirects_iiilio(url):
     except requests.exceptions.RequestException as e:
         logger.info(f"Error occurred: {e}")
 
-    return None
+    return ""
 
 
 def resolve_redirects_ruby(url):
     global HTTP_HEADERS_LIST
-    headers = {}
+
+    if HTTP_HEADERS_LIST is None:
+        return ""
+
+    headers = None
     for data in HTTP_HEADERS_LIST:
         if data["Name"] == "ru.by":
             headers = data["Headers"]
@@ -143,10 +151,10 @@ def resolve_redirects_ruby(url):
     except requests.exceptions.RequestException as e:
         logger.info(f"Error occurred: {e}")
 
-    return None
+    return ""
 
 
-def resolve_redirects_special(url):
+def resolve_redirects_special(url) -> str:
 
     _, domain, suffix = Tools.domain_analysis(url.lower())
     domain_name = f"{domain}.{suffix}"
@@ -181,7 +189,7 @@ def resolve_redirects_special(url):
             logger.info(f"resolve_redirects_recurlcc = {final_url}")
             return final_url
 
-    return None
+    return ""
 
 
 # =======================
@@ -190,6 +198,9 @@ def resolve_redirects_special(url):
 
 def resolve_redirects_HeaderFix(url):
     global HTTP_HEADERS_LIST
+
+    if HTTP_HEADERS_LIST is None:
+        return ""
 
     headers = next(
         (data["Headers"] for data in HTTP_HEADERS_LIST if data["Name"] == "other"), None)
@@ -207,7 +218,7 @@ def resolve_redirects_HeaderFix(url):
     except requests.exceptions.RequestException as e:
         logger.info(f"Error occurred HeaderFix : {e}")
 
-    return None
+    return ""
 
 # =======================
 # Chrome
@@ -230,6 +241,7 @@ def resolve_redirects_Webdriver(short_url):
     options.add_argument(f'proxy-server={Tools.PROXY_SERVER}')
     options.add_argument('blink-settings=imagesEnabled=false')
     options.add_argument("--disable-javascript")
+    options.add_argument(f"--log-path={Tools.CHROMEDRIVER_LOG}")
 
     prefs = {
         'profile.default_content_setting_values':  {
@@ -240,9 +252,7 @@ def resolve_redirects_Webdriver(short_url):
     # options.binary_location = Tools.CHROMEDRIVER_PATH
 
     try:
-        service = webdriver.chrome.service.Service(
-            log_path=Tools.CHROMEDRIVER_LOG)
-        browser = webdriver.Chrome(options=options, service=service)
+        browser = webdriver.Chrome(options=options)
         # Remove navigator.webdriver Flag using JavaScript
         browser.execute_script(
             "Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
@@ -279,7 +289,7 @@ def resolve_redirects_urllib3_http(url):
     except LocationValueError as location_error:
         print(f"LocationValueError occurred http: {location_error}")
 
-    return None
+    return ""
 
 
 def resolve_redirects_urllib3_https(url):
@@ -298,9 +308,7 @@ def resolve_redirects_urllib3_https(url):
             return final_url
     except urllib3.exceptions.HTTPError as http_error:
         print(f"HTTPError occurred https: {http_error}")
-    except urllib3.exceptions.URLError as url_error:
-        print(f"URLError occurred https: {url_error}")
-        if "SSL" in str(url_error):
+        if "SSL" in str(http_error):
             try:
                 # 第二次忽略 SSL 憑證錯誤
                 context = ssl.create_default_context()
@@ -316,10 +324,8 @@ def resolve_redirects_urllib3_https(url):
                     return final_url
             except urllib3.exceptions.HTTPError as http_error:
                 print(f"HTTPError occurred https (SSL ignored): {http_error}")
-            except urllib3.exceptions.URLError as url_error:
-                print(f"URLError occurred https (SSL ignored): {url_error}")
 
-    return None
+    return ""
 
 
 # =======================
@@ -342,7 +348,7 @@ def resolve_redirects_30X(url):
     except requests.exceptions.RequestException as e:
         logger.info(f"Error occurred 30X : {e}")
 
-    return None
+    return ""
 
 # =======================
 # requests allow_redirects
@@ -361,14 +367,14 @@ def resolve_redirects_allow_redirects(url):
     except requests.exceptions.RequestException as e:
         logger.info("Error occurred using redirects: %s", e)
 
-    return None
+    return ""
 
 # =======================
 # Resolve_Redirects
 # =======================
 
 
-def Resolve_Redirects(url):
+def Resolve_Redirects(url) -> str:
 
     after_url = replace_http_with_https(url)
     if after_url != url:
@@ -407,7 +413,7 @@ def Resolve_Redirects(url):
         return final_url
     final_url = None
 
-    return None
+    return ""
 
 
 def user_query_shorturl_normal(user_text):

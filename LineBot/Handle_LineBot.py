@@ -417,85 +417,33 @@ def message_reply_Query(user_id, IsScam, Type_Name, code, orgin_text):
     return template_message
 
 
-ID_POS_LIST = []
-
-
-def ID_Count(Text=""):
-    global ID_POS_LIST
-    filename = f"{Tools.CONFIG_FOLDER}/ID_POS_LIST.json"
-    if not ID_POS_LIST:
-        ID_POS_LIST = Tools.read_json_file(filename)
-
-    if Text:
-        for ID in ID_POS_LIST:
-            if ID == Text:
-                ID_POS_LIST[ID] += 1
-        Tools.write_json_file(filename, ID_POS_LIST)
-
-
-ID_Count()
-
-
-def get_top_four(dictionary):
-    # 將原始字典按照數值由多到少排序
-    sorted_items = sorted(dictionary.items(), key=lambda x: x[1], reverse=True)
-
-    # 取得前四個項目
-    top_four = sorted_items[:4]
-
-    # 將前四個項目轉換成新的字典
-    result_dict = {key: value for key, value in top_four}
-
-    return result_dict
-
-
 def message_reply_Query_ID_Type(ID):
-    global ID_POS_LIST
 
     title = "確認ID類別"
     actions = []
 
     logger.info(f"message_reply_Query_ID_Type = {ID}")
 
-    top_four_dict = get_top_four(ID_POS_LIST)
-
-    for top in top_four_dict:
-        if top == "LINE":
-            actions.append(MessageTemplateAction(
-                label='查詢LINE ID？',
-                text=f"賴{ID}"
-            )
-            )
-        elif top == "IG":
-            actions.append(MessageTemplateAction(
-                label='查詢IG？',
-                text=f"IG{ID}"
-            )
-            )
-        elif top == "DCARD":
-            actions.append(MessageTemplateAction(
-                label='查詢Dcard ID？',
-                text=f"迪卡{ID}"
-            )
-            )
-        elif top == "推特":
-            actions.append(MessageTemplateAction(
-                label='查詢推特？',
-                text=f"推特{ID}"
-            )
-            )
-        elif top == "TG":
-            actions.append(MessageTemplateAction(
-                label='查詢Telegram？',
-                text=f"TG{ID}"
-            )
-            )
-        elif top == "微信":
-            actions.append(MessageTemplateAction(
-                label='查詢微信？',
-                text=f"微信{ID}"
-            )
-            )
+    actions.append(MessageTemplateAction(
+        label='查詢LINE ID？',
+        text=f"賴{ID}"
+    )
+    )
+    actions.append(MessageTemplateAction(
+        label='查詢IG？',
+        text=f"IG{ID}"
+    )
+    )
+    actions.append(MessageTemplateAction(
+        label='查詢Telegram？',
+        text=f"TG{ID}"
+    )
+    )
+    actions.append(MessageTemplateAction(
+        label='查詢Dcard ID？',
+        text=f"迪卡{ID}"
+    )
+    )
 
     text = f"麻煩協助確認「{ID}」是什麼項目"
 

@@ -52,6 +52,10 @@ def EmptyShortUrlDB():
     } for combination in combinations]
 
     collection = Read_Collection(DB_Name, DB_Name)
+    if collection is None:
+        print("EmptyShortUrlDB collection is empty")
+        return
+
     collection.insert_many(structs)
 
     return
@@ -61,6 +65,10 @@ def CreateShortUrl(urls, UserID):
     global DB_Name
 
     collection = Read_Collection(DB_Name, DB_Name)
+
+    if collection is None:
+        print("CreateShortUrl collection is empty")
+        return None
 
     count = 0
 
@@ -122,6 +130,10 @@ def GetInfShortUrl(User_ID):
     global DB_Name
 
     collection = Read_Collection(DB_Name, DB_Name)
+
+    if collection is None:
+        print("GetInfShortUrl collection is empty")
+        return
 
     Find_Struct = {"登陸者": User_ID}
 

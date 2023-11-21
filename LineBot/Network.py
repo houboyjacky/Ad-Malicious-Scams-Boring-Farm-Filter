@@ -196,9 +196,30 @@ def redirect_to_original_url(short_url):
 @app.route("/query_scam", methods=['POST'])
 def query_scam():
     logger.info(f"Query from Web")
-
+    time = ""
+    content_type = ""
+    content = ""
+    md5 = ""
+    r_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    r_context = ""
+    r_content_type = ""
+    r_md5 = ""
     try:
         data = request.json
+
+        if not data:
+            r_context = "內容不齊全"
+            response_data = {
+                "資料": {
+                    "時間": r_time,
+                    "類型": r_content_type,
+                    "內容": r_context
+                },
+                "MD5": r_md5,
+                "Error": ""
+            }
+
+            return jsonify(response_data)
 
         # 從接收到的 JSON 中提取所需的資料
         time = data.get("資料", {}).get("時間", "")
@@ -236,12 +257,12 @@ def query_scam():
             query_keyword = f"微信{content}"
         else:
             r_context = f"類型錯誤"
+            query_keyword = ""
 
         # 查詢
         if not r_context:
-            r_context = f"該{content_type}"
-            r_context += handle_user_msg("NONE",
-                                         query_keyword, must_be_text=True)
+            resp = handle_user_msg("NONE", query_keyword, must_be_text=True)
+            r_context = f"該{content_type}{resp}"
 
         # 準備回傳的 JSON 資料
         response_data = {
@@ -249,7 +270,8 @@ def query_scam():
                 "時間": r_time,
                 "類型": r_content_type,
                 "內容": r_context
-            }
+            },
+            "MD5": ""
         }
 
         data_json = json.dumps(response_data['資料'], sort_keys=True).encode()
@@ -260,10 +282,6 @@ def query_scam():
         return jsonify(response_data)
 
     except Exception as e:
-        r_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        r_context = ""
-        r_content_type = ""
-        r_md5 = ""
         if not time:
             r_time = "時間不齊全"
         if not content_type:

@@ -350,7 +350,7 @@ def handle_website(user_id, text):
             url = match.group(1)
 
             if '.' not in url:
-                rmessage = f"所輸入的文字\n「 {domain_name} 」\n無法構成網址\n請重新輸入"
+                rmessage = f"所輸入的文字\n「 {url} 」\n無法構成網址\n請重新輸入"
                 return rmessage
 
             # 使用 tldextract 取得網域

@@ -35,8 +35,11 @@ def analyze_Virtual_Money_url(user_text: str) -> Optional[dict]:
 
     logger.info(f"user_text: {user_text}")
 
-    match = re.match(Tools.KEYWORD_VIRTUAL_MONEY[3], user_text)
-    address = match.group(1)
+    address = ""
+    if match := re.match(Tools.KEYWORD_VIRTUAL_MONEY[3], user_text):
+        address = match.group(1)
+    else:
+        return None
 
     if "." in address:
         return None
@@ -106,7 +109,7 @@ def Virtual_Money_Read_Document(user_text: str):
         logger.info(f"{Name}黑名單查詢失敗")
         status = -1
 
-    if not rmessage:
+    if analyze and not rmessage:
         if status >= 0:
             rmessage = f"{Name}地址\n「 {analyze['地址']} 」"
             result, _ = checkFromChainsight(analyze['地址'])

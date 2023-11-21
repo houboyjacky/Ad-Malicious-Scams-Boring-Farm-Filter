@@ -48,6 +48,10 @@ for db_name in blacklist:
         collection = Query_API.Read_Collection(db_name, "LINE_INVITE")
     else:
         collection = Query_API.Read_Collection(db_name, db_name)
+
+    if collection is None:
+        logger.info("%s讀取失敗", db_name)
+        continue
     logger.info("正在前置處理%s", collection.name)
     documents = collection.find()
     for document in documents:
@@ -75,7 +79,13 @@ DBs = [
 
 for db_name in DBs:
     collections = Query_API.Read_Collections(db_name)
+    if collections is None:
+        logger.info("%s讀取失敗", db_name)
+        continue
     for collection in collections:
+        if collection is None:
+            logger.info("%s讀取失敗", db_name)
+            continue
         logger.info("正在匯出%s", {collection.name})
         documents = collection.find({}, {'_id': 0})
         output_filename = f'Backup/{collection.name}.json'

@@ -271,7 +271,7 @@ def Personal_Delete_Document(user_id):
     collection = Query_API.Read_Collection(DB_Name, DB_Name)
 
     if document := Query_API.Search_Same_Document(collection, "UUID", user_id):
-        Query_API.Delete_document(document)
+        Query_API.Delete_document(collection, document, "UUID")
 
     return
 
@@ -279,6 +279,9 @@ def Personal_Delete_Document(user_id):
 def Personal_User_Rank(user_id):
     global DB_Name
     collection = Query_API.Read_Collection(DB_Name, DB_Name)
+    if collection is None:
+        logger.info(f"Personal_User_Rank collection is empty")
+        return -1
     result = collection.find({}, {"_id": 0, "UUID": 1, "積分": 1}).sort("積分", -1)
     rank = 1
     for document in result:
@@ -293,6 +296,9 @@ def Personal_User_Rank(user_id):
 def Personal_Clear_SingleTag(TAGNAME, Value):
     global DB_Name
     collection = Query_API.Read_Collection(DB_Name, DB_Name)
+    if collection is None:
+        logger.info(f"Personal_Clear_SingleTag collection is empty")
+        return -1
     filter_condition = {}
     update_data = {"$set": {TAGNAME: Value}}
     result = collection.update_many(filter_condition, update_data)

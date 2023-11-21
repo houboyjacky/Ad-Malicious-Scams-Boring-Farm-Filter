@@ -136,6 +136,10 @@ def Load_Image_Feature_Sub(NAME):
     collection = Query_API.Read_Collection(NAME, NAME)
     fs = Query_API.Load_GridFS(NAME)
 
+    if collection is None:
+        logger.info("Load_Image_Feature_Sub collection is empty")
+        return -1
+
     cursor = collection.find({})
 
     features = []

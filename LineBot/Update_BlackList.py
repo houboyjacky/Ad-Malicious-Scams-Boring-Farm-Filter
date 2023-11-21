@@ -150,6 +150,9 @@ def update_list_to_db(filename, List, db_name):
 
     Query_API.Drop_Collection(db_name, Name)
     collection = Query_API.Read_Collection(db_name, Name)
+    if collection is None:
+        logger.info(f"update_list_to_db collection is empty")
+        return
 
     for tmp in List:
         document = {"網址": tmp,
@@ -227,6 +230,9 @@ def update_document_to_db(filename, domain_name, db_name):
     datetime = date.today().strftime("%Y-%m-%d")
     Name = os.path.basename(filename)
     collection = Query_API.Read_Collection(db_name, Name)
+    if collection is None:
+        logger.info(f"update_document_to_db collection is empty")
+        return
 
     document = collection.find_one({"網址": domain_name})
     if document:
