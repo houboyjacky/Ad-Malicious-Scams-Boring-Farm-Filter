@@ -21,6 +21,7 @@ THE SOFTWARE.
 '''
 
 from datetime import datetime
+from urlextract import URLExtract
 import hashlib
 import idna
 import json
@@ -496,6 +497,17 @@ def calculate_file_hash(file_path):
 def has_non_alphanumeric(text):
     pattern = re.compile(r'[^A-Za-z0-9\s\W]')
     return bool(re.search(pattern, text))
+
+
+def extract_first_url(text) -> str:
+    url_extractor = URLExtract()
+
+    urls = list(url_extractor.find_urls(text))
+
+    if urls:
+        return str(urls[0])
+    else:
+        return ""
 
 
 USER_GUIDE = read_file(USER_GUIDE_FILE)

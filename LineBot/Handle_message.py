@@ -25,6 +25,7 @@ import os
 import re
 import time
 from io import BytesIO
+from xml import dom
 import pytesseract
 from PIL import Image
 
@@ -129,6 +130,16 @@ def handle_message_text(event):
         if not orgin_text.startswith("line://"):
             if match := re.search(r'(line://[^\\? ]+)', orgin_text):
                 orgin_text = match.group(1)
+
+    # 縮網址沒有http
+    if "." in orgin_text and not orgin_text.startswith("http"):
+        if website := Tools.extract_first_url(orgin_text):
+            _, domain, suffix = Tools.domain_analysis(website)
+            domain_name = f"{domain}.{suffix}"
+            if domain_name in Tools.DONT_CHANGE_HTTP:
+                orgin_text = f"http://{website}"
+            elif domain_name in Tools.SHORT_URL_LIST:
+                orgin_text = f"https://{website}"
 
     # 修正IG開頭大小寫與打錯LINE開頭問題
     modified_string = orgin_text.capitalize()
