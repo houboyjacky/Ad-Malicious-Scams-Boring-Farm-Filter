@@ -22,7 +22,6 @@ THE SOFTWARE.
 
 # Publish Python Package
 import re
-from urlextract import URLExtract
 
 # My Python Package
 from Logger import logger
@@ -475,30 +474,22 @@ def handle_web(prefix_msg, user_id, text, must_be_text):
 
         return Handle_LineBot.message_reply_QueryURL(user_id, IsScam, Text, domain_name, text)
 
+    # 非Http開頭
     if "." in text:
-        # 開頭不是網址
-        english_parts = re.findall(r'[a-zA-Z0-9-\.]+', text)
+        if website := Tools.extract_first_url(text):
+            if not prefix_msg:
+                prefix_msg = "所輸入的"
+            IsScam, Text, domain_name = Q_URL.user_query_website(
+                prefix_msg, website)
 
-        # 若有找出部分
-        if english_parts:
-            extractor = URLExtract()
-            extractor.update_when_older(30)
+            Personal_Update_SingleTag_Query(user_id, "URL", IsScam)
+            Length = len(Text)
+            logger.info(f"Text Length = {str(Length)}")
+            # not domain_name 是為了「解析網址有錯」與「正常/名片網站」
+            if Length > 240 or must_be_text or not domain_name:
+                return Text
 
-            for english_part in english_parts:
-                if extractor.has_urls(english_part):
-                    if not prefix_msg:
-                        prefix_msg = "所輸入的"
-                    IsScam, Text, domain_name = Q_URL.user_query_website(
-                        prefix_msg, english_part)
-
-                    Personal_Update_SingleTag_Query(user_id, "URL", IsScam)
-                    Length = len(Text)
-                    logger.info(f"Text Length = {str(Length)}")
-                    # not domain_name 是為了「解析網址有錯」與「正常/名片網站」
-                    if Length > 240 or must_be_text or not domain_name:
-                        return Text
-
-                    return Handle_LineBot.message_reply_QueryURL(user_id, IsScam, Text, domain_name, english_part)
+            return Handle_LineBot.message_reply_QueryURL(user_id, IsScam, Text, domain_name, website)
 
     return None
 
@@ -532,12 +523,14 @@ def handle_user_msg(user_id, orgin_text, must_be_text=False):
         if rmessage:
             return rmessage
 
-     # 查詢line邀請網址
+    # 查詢line邀請網址
     if match := re.search(Tools.KEYWORD_LINE_INVITE[2], orgin_text):
         orgin_text = match.group(1)
         logger.info(f"社群轉貼")
 
-    if orgin_text.lower().startswith("http") and not orgin_text.lower().startswith("http://") and not orgin_text.lower().startswith("https://"):
+    if orgin_text.lower().startswith("http") \
+            and not orgin_text.lower().startswith("http://") \
+            and not orgin_text.lower().startswith("https://"):
         Personal_Update_SingleTag(user_id, "文字")
         return "網址開頭有誤\n請修改成\nhttp:// 或 https://"
 
