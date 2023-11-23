@@ -281,6 +281,11 @@ def message_reply_Query(user_id, IsScam, Type_Name, code, orgin_text):
         elif Type_Name == "虛擬貨幣地址":
             text = (f"{code}\n\n"
                     f"{suffix}")
+        elif Type_Name == "電話":
+            addtion_text = Query_Telephone.Get_PhoneNumberInf(code)
+            text = (f"所輸入的「{code}」\n\n"
+                    f"{addtion_text}"
+                    f"{suffix}")
         else:
             text = (f"所輸入的「{code}」\n\n"
                     f"{suffix}")

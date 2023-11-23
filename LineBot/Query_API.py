@@ -235,7 +235,7 @@ def push_random_blacklist(Record_players, DB_Name, Collection_Name, UserID, succ
 
 def remove_non_english(text):
     # 使用正則表達式尋找第一個非英文字符的位置
-    match = re.search(r'[\W]', text)
+    match = re.search(r'[^A-Za-z0-9_ ]', text)
 
     if match:
         # 如果找到非英文字符，則刪除它及其後面的所有字符
@@ -261,7 +261,8 @@ def translate_to_chinese(text):
 
     try:
         translation = translator.translate(text)
-    except Exception:
+    except Exception as e:
+        logger.info(f"error translating is {e}")
         translation = ""
 
     if translation == text or not translation:
