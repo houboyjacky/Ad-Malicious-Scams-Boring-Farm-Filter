@@ -238,7 +238,10 @@ def resolve_redirects_Webdriver(short_url):
     options.add_argument("window-size=1280,800")
     options.add_argument(
         "user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36")
-    options.add_argument(f'proxy-server={Tools.PROXY_SERVER}')
+
+    if Tools.check_port(Tools.PROXY_SERVER):
+        options.add_argument(f'proxy-server={Tools.PROXY_SERVER}')
+
     options.add_argument('blink-settings=imagesEnabled=false')
     options.add_argument("--disable-javascript")
     options.add_argument(f"--log-path={Tools.CHROMEDRIVER_LOG}")
@@ -275,7 +278,11 @@ def resolve_redirects_urllib3_http(url):
     _, domain, suffix = Tools.domain_analysis(url.lower())
 
     timeout = 10
-    http = urllib3.ProxyManager(Tools.PROXY_SERVER)
+    if Tools.check_port(Tools.PROXY_SERVER):
+        http = urllib3.ProxyManager(Tools.PROXY_SERVER)
+        logger.info("Proxy 失效，請注意")
+    else:
+        http = urllib3.PoolManager()
 
     try:
         response = http.request('GET', url, timeout=timeout, retries=3)
@@ -296,7 +303,11 @@ def resolve_redirects_urllib3_https(url):
     _, domain, suffix = Tools.domain_analysis(url.lower())
     timeout = 10
 
-    http = urllib3.ProxyManager(Tools.PROXY_SERVER)
+    if Tools.check_port(Tools.PROXY_SERVER):
+        http = urllib3.ProxyManager(Tools.PROXY_SERVER)
+        logger.info("Proxy 失效，請注意")
+    else:
+        http = urllib3.PoolManager()
 
     try:
         # 第一次正常開啟

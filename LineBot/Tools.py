@@ -30,6 +30,7 @@ import re
 import requests
 import tldextract
 import difflib
+import socket
 
 image_analysis = False
 forward_inquiry = False
@@ -508,6 +509,20 @@ def extract_first_url(text) -> str:
         return str(urls[0])
     else:
         return ""
+
+
+def check_port(url, timeout=3):
+
+    ip = url.split("//")[-1].split(":")[0]
+    port = int(url.split(":")[-1])
+
+    try:
+        with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+            s.settimeout(timeout)
+            s.connect((ip, port))
+            return True
+    except socket.error:
+        return False
 
 
 USER_GUIDE = read_file(USER_GUIDE_FILE)
