@@ -281,8 +281,8 @@ def handle_ig_web(prefix_msg, user_id, text, must_be_text):
         if status == -1:
             Personal_Update_SingleTag(user_id, "文字")
             return (f"{prefix_msg}\n"
-                    f"請複製該IG主頁網址\n"
-                    f"才能進一步查詢ID\n"
+                    f"不支援貼文或reels查詢\n"
+                    f"請複製該IG帳號網址\n"
                     f"感恩")
         else:
             Personal_Update_SingleTag_Query(user_id, "Instagram", status)
