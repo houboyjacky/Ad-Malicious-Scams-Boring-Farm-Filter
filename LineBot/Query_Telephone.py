@@ -24,11 +24,51 @@ from datetime import date
 from Logger import logger
 from typing import Optional
 import phonenumbers
+from phonenumbers import geocoder, carrier
 import Query_API
 import re
 import Tools
 
 Name = "TELEPHONE"
+
+phonenumbers.PhoneMetadata.load_all()
+
+
+def Get_PhoneNumberInf(phonenumber):
+
+    rmessage = ""
+    try:
+        phone_number = phonenumbers.parse(phonenumber, None)
+        if country := geocoder.country_name_for_number(phone_number, "en"):
+            logger.info(f"country = {country}")
+            if country is "Taiwan":
+                country = "台灣"
+            else:
+                tcountry = Query_API.translate_to_chinese(country)
+                if tcountry and tcountry != "Unknown":
+                    country = tcountry
+            rmessage += f"發話國：{country}\n"
+        if carrierName := carrier.name_for_number(phone_number, "en"):
+            logger.info(f"carrierName = {carrierName}")
+            if carrierName == "FarEasTone":
+                carrierName = "遠傳電信"
+            elif carrierName == "Taiwan Mobile":
+                carrierName = "台灣大哥大"
+            elif carrierName == "Chunghwa Telecom":
+                carrierName = "中華電信"
+            elif carrierName == "T Star":
+                carrierName = "台灣之星"
+            elif carrierName == "Asia-Pacific Telecom":
+                carrierName = "亞太電信"
+            rmessage += f"發話電信：{carrierName}\n"
+        if rmessage:
+            rmessage += "\n"
+    except phonenumbers.NumberParseException as e:
+        logger.info(f"phonenumbers 1 error = {e}")
+    except Exception as e:
+        logger.info(f"phonenumbers 2 error = {e}")
+
+    return rmessage
 
 
 def pre_deal_with_phonenumber(orgin_text):

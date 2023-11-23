@@ -21,6 +21,7 @@ THE SOFTWARE.
 '''
 
 from Query_Report import Report_Write_Document
+import Query_Telephone
 from linebot import LineBotApi
 from linebot.models import (
     TextSendMessage,
@@ -342,6 +343,12 @@ def message_reply_Query(user_id, IsScam, Type_Name, code, orgin_text):
                 text = (f"「不存在」{Type_Name}黑名單內\n\n"
                         f"所輸入的是「{code}」\n\n"
                         f"{suffix}")
+        elif Type_Name == "電話":
+            addtion_text = Query_Telephone.Get_PhoneNumberInf(code)
+            text = (f"「不存在」{Type_Name}黑名單內\n\n"
+                    f"{code}\n\n"
+                    f"{addtion_text}"
+                    f"{suffix}")
         else:
             text = (f"「不存在」{Type_Name}黑名單內\n\n"
                     f"所輸入的是「{code}」\n\n"

@@ -259,7 +259,10 @@ def translate_to_chinese(text):
 
     translator = Translator(to_lang='zh-TW')
 
-    translation = translator.translate(text)
+    try:
+        translation = translator.translate(text)
+    except Exception:
+        translation = ""
 
     if translation == text or not translation:
         return text
