@@ -518,9 +518,11 @@ def user_query_shorturl(user_text):
                            "l.instagram.com"]
 
     parsed_url = urlparse(user_text)
-    if not parsed_url.path or parsed_url.path is "/":
-        # 沒有Path就不需要解析
-        return rmessage, result, True
+    if not parsed_url.path \
+            or parsed_url.path is "/":
+        if parsed_url.netloc not in meta_redirects_list:
+            # 沒有Path就不需要解析
+            return rmessage, result, True
 
     url = user_text
     times = 0
