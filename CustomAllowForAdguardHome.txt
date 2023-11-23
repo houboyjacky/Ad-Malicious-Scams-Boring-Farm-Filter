@@ -209,3 +209,5 @@
 @@||otthree.com^
 @@||onefungame.com^
 @@||lccn.io^
+@@||everri.ch^$important
+@@||zingala.com^
