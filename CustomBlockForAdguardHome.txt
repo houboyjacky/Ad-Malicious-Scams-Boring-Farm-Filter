@@ -18,6 +18,7 @@
 #||dimondo.org^
 #||fontawesomes.com^
 #||forms.gle^
+#||gmail.com^
 #||huaweicloudwaf.com^
 #||ig.com^
 #||lcnycoinj.com^
@@ -2700,7 +2701,6 @@
 ||glodvdc.com^
 ||glomacexpressdeliverycompany.com^
 ||gm5rm.ink^
-||gmail.com^
 ||gmall-tw.buzz^
 ||gmall-tw.life^
 ||gmall-tw.one^
