@@ -101,6 +101,8 @@ SERVICE_IP = setting['SERVICE_IP']
 TMP_BLACKLIST = setting['TMP_BLACKLIST']
 # USER_GUIDE_FILE => 使用指南
 USER_GUIDE_FILE = setting['USER_GUIDE_FILE']
+# DDNS_LIST_FILE => DDNS 列表
+DDNS_LIST_FILE = setting['DDNS_LIST_FILE']
 
 with open('setting_rules.json', 'r') as f:
     setting_rule = json.load(f)
@@ -366,6 +368,8 @@ def translate_country(country_code):
         country = pycountry.countries.lookup(country_code)
         return country.name
     except LookupError:
+        return "Unknown"
+    except Exception:
         return "Unknown"
 
 

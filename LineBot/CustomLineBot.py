@@ -87,6 +87,7 @@ def Initialization():
     EmptyShortUrlDB()
     load_block_ip_list()
     LINE_ID_Download_From_165()
+    Network.GetDDNS_List()
     logger.info("Initialization Finish")
 
 

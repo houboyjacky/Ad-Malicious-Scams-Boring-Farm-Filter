@@ -25,6 +25,7 @@ from datetime import datetime
 import ipaddress
 import json
 import os
+import requests
 from flask import (
     Flask,
     Response,
@@ -50,7 +51,7 @@ from Security_ShortUrl import RecordShortUrl
 from Handle_user_msg import handle_user_msg
 import Query_API
 import Tools
-
+import hashlib
 
 app = Flask(__name__)
 
@@ -58,6 +59,44 @@ app = Flask(__name__)
 app.debug = False
 
 handler = WebhookHandler(Tools.CHANNEL_SECRET)
+
+
+def GetDDNS_List():
+
+    download_timeout = 10
+    local_file_path = f"{Tools.CONFIG_FOLDER}/ddns_list.txt"
+    local_file_hash = Tools.calculate_file_hash(local_file_path)
+
+    logger.info("Downloading ddns_list.txt")
+
+    try:
+        response = requests.get(Tools.DDNS_LIST_FILE,
+                                timeout=download_timeout)
+
+        if response.status_code == 200:
+            web_text = response.text
+
+            web_hash = hashlib.md5(web_text.encode()).hexdigest()
+
+            if not local_file_path or web_hash != local_file_hash:
+                with open(local_file_path, 'w', encoding='utf-8') as file:
+                    file.write(web_text)
+                logger.info("Download ddns_list.txt Success")
+    except Exception as e:
+        logger.info(f"Error GetDDNS_List = {e}")
+
+    with open(local_file_path, 'r', encoding='utf-8') as file:
+        local_lines = file.read().split('\n')
+
+    existing_list = Tools.setting_urls['SUBWEBSITE']
+
+    combined_set = set(existing_list + local_lines)
+
+    Tools.SUBWEBSITE = list(combined_set)
+
+    logger.info("Read ddns_list.txt Success")
+
+    return
 
 # ================
 # Request 設定
