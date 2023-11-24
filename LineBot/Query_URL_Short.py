@@ -305,18 +305,21 @@ def resolve_redirects_urllib3_https(url):
 
     if Tools.check_port(Tools.PROXY_SERVER):
         http = urllib3.ProxyManager(Tools.PROXY_SERVER)
-        logger.info("Proxy 失效，請注意")
     else:
         http = urllib3.PoolManager()
+        logger.info("Proxy 失效，請注意")
 
     try:
         # 第一次正常開啟
         response = http.request('GET', url, timeout=timeout, retries=3)
         final_url = response.geturl()
-        logger.info(f"final_url https 1 urllib3 = {final_url}")
-        _, domain2, suffix2 = Tools.domain_analysis(final_url)
-        if final_url != url and domain2 != domain and suffix2 != suffix:
-            return final_url
+        if final_url and final_url.startswith("/"):
+            pass
+        else:
+            logger.info(f"final_url https 1 urllib3 = {final_url}")
+            _, domain2, suffix2 = Tools.domain_analysis(final_url)
+            if final_url != url and domain2 != domain and suffix2 != suffix:
+                return final_url
     except urllib3.exceptions.HTTPError as http_error:
         print(f"HTTPError occurred https: {http_error}")
         if "SSL" in str(http_error):
