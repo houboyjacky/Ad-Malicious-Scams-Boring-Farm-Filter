@@ -9,6 +9,7 @@
 #||i-gamer.net^
 #||mystrikingly.com^
 #||weebly.com^
+#||zapto.org^
 ||0066666.co^
 ||00888.tw^
 ||0088888.co^
@@ -7440,6 +7441,7 @@
 ||smnhus.com^
 ||smrsir.cn^
 ||smtecommece.com^
+||smvip.zapto.org^
 ||snailcc.site^
 ||sndfhuij.com^
 ||snftf.com^
@@ -9533,7 +9535,6 @@
 ||zalora-tw.com^
 ||zalora886.com^
 ||zananxiap.com^
-||zapto.org^
 ||zbaooo8588.com^
 ||zbap.vip^
 ||zbbdy.vip^

@@ -39,6 +39,7 @@
 /alphafinace[a-z0-9]+\.com/
 /amazon[0-9]+\.mobi/
 /antsforex[a-z0-9]*\.com/
+/apid-tw[a-z]+\.cc/
 /app[0-9]+\.xyz/
 /approvedurls[0-9]+.info/
 /ascendex.*\.com/
@@ -150,7 +151,7 @@
 /garda[a-z0-9]+\.com/
 /gbay-?shop.*\..+/
 /gdf999.[a-z]+/
-/gemini[a-z]+\.com/
+/gemini[a-z]{2,3}\.com/
 /gexcoin\.(co|io|me)/
 /global-exp[a-z0-9]+rade\.com/
 /goldmansachs[0-9]*\.[a-z]+/
@@ -184,6 +185,7 @@
 /liquiditypool-.+\.com/
 /long[0-9]\.net/
 /mercadolibre[a-z0-9-]+\.com/
+/meta[a-z0-9-]+\.onrender\.com/
 /metoocofstimrgpaged-[a-z0-9]+\.online/
 /mgs1[0-9]88\.(vip|com)/
 /miracle[a-z]{3,4}\.com/
@@ -207,6 +209,7 @@
 /qeic[a-z0-9]+w\.net/
 /qfii[a-z0-9]*\.com/
 /qh...\.tw/
+/quidax[a-z]{2}\.com/
 /rakuten[0-9]+\.com/
 /rakuten[a-z0-9]{1,2}\.com/
 /reactivate-page-[a-z0-9]+\.click/
@@ -358,6 +361,7 @@
 ||plubitit.*^
 ||sc.*.cn^
 ||sfexpress-help.*^
+||stenbit.*^
 ||traweb3.*^
 ||trustcoin-exchange.*^
 ||tw-sia.*^
