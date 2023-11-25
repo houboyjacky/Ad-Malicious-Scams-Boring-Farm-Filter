@@ -27,6 +27,7 @@
 #||mitrade.com^
 #||my.id^
 #||mystrikingly.com^
+#||okcoin.com^
 #||page.link^
 #||payware.com.tw^
 #||pionex.com^
@@ -20491,7 +20492,6 @@
 ||okbitex.site^
 ||okbits.site^
 ||okbitx.com^
-||okcoin.com^
 ||okcoinmarket.com^
 ||okcoinstore.com^
 ||okcoinus.com^
