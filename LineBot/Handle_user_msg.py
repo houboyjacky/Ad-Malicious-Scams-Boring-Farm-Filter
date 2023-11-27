@@ -335,8 +335,9 @@ def handle_twitter_web(prefix_msg, user_id, text, must_be_text):
 
 def handle_whatsapp_web(prefix_msg, user_id, text, must_be_text):
     if re.match(Tools.KEYWORD_WHATSAPP[0], text.lower()) or \
-            re.match(Tools.KEYWORD_WHATSAPP[2], text.lower()) or \
-            re.match(Tools.KEYWORD_WHATSAPP[6], text.lower()):
+        re.match(Tools.KEYWORD_WHATSAPP[2], text.lower()) or \
+        re.match(Tools.KEYWORD_WHATSAPP[6], text.lower()) or \
+        re.match(Tools.KEYWORD_WHATSAPP[9], text.lower()):
         whatsapp_id, status = Q_WA.WhatsApp_Read_Document(text)
         if prefix_msg:
             prefix_msg = f"{prefix_msg}「 {text} 」\n"

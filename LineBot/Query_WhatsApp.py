@@ -43,6 +43,8 @@ def analyze_WhatsApp_url(user_text: str) -> Optional[dict]:
         Username = match.group(1)
     elif match := re.search(Tools.KEYWORD_WHATSAPP[6], user_text):
         Username = match.group(1)
+    elif match := re.search(Tools.KEYWORD_WHATSAPP[9], user_text):
+        Username = match.group(1)
     else:
         return None
 
