@@ -215,3 +215,5 @@
 @@||pluginn.com.tw^
 @@||clubon.space^
 @@||rewatt.com.tw^
+@@||firstrade.com^
+@@||wert.io^
