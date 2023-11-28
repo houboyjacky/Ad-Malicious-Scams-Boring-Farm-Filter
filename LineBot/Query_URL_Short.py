@@ -288,9 +288,12 @@ def resolve_redirects_urllib3_http(url):
         response = http.request('GET', url, timeout=timeout, retries=3)
         final_url = response.geturl()
         logger.info(f"final_url http urllib3 = {final_url}")
-        _, domain2, suffix2 = Tools.domain_analysis(final_url)
-        if final_url != url and domain2 != domain and suffix2 != suffix:
-            return final_url
+        if final_url and final_url.startswith("/"):
+            pass
+        else:
+            _, domain2, suffix2 = Tools.domain_analysis(final_url)
+            if final_url != url and domain2 != domain and suffix2 != suffix:
+                return final_url
     except MaxRetryError as retry_error:
         print(f"MaxRetryError occurred http: {retry_error}")
     except LocationValueError as location_error:
@@ -313,6 +316,7 @@ def resolve_redirects_urllib3_https(url):
         # 第一次正常開啟
         response = http.request('GET', url, timeout=timeout, retries=3)
         final_url = response.geturl()
+        logger.info(f"final_url https urllib3 = {final_url}")
         if final_url and final_url.startswith("/"):
             pass
         else:
@@ -415,11 +419,11 @@ def Resolve_Redirects(url) -> str:
     if final_url := resolve_redirects_allow_redirects(url):
         return final_url
 
-    final_url = resolve_redirects_Webdriver(url)
-    if final_url != url:
-        logger.info(f"final_url Webdriver = {final_url}")
-        return final_url
-    final_url = None
+    # final_url = resolve_redirects_Webdriver(url)
+    # if final_url != url:
+    #     logger.info(f"final_url Webdriver = {final_url}")
+    #     return final_url
+    # final_url = None
 
     final_url = resolve_redirects_HeaderFix(url)
     if final_url != url:

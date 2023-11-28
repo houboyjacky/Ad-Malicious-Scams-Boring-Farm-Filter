@@ -531,6 +531,7 @@
 ||apid-twff.cc^
 ||apid-twt.cc^
 ||apidttk.cc^
+||apk-link.xyz^
 ||apl-gaming.net^
 ||apmexsc.com^
 ||apollodex.vip^
@@ -656,6 +657,7 @@
 ||avasmartusdt.com^
 ||avastm.com^
 ||avastmes.com^
+||avastomes.com^
 ||avatdbtc.com^
 ||avatdiero.com^
 ||avatoptlink.com^
@@ -779,6 +781,7 @@
 ||bfe7nukgne.lol^
 ||bfoileu.com^
 ||bftw-cat.top^
+||bgcge.cyou^
 ||bgoani.co^
 ||bhbv.asia^
 ||bhilfg.com^
@@ -1020,6 +1023,7 @@
 ||braskioes.com^
 ||braskiopes.com^
 ||brasoars.com^
+||brasotus.com^
 ||brasukes.com^
 ||brasuktres.com^
 ||bravelyinlo.com^
@@ -1413,7 +1417,6 @@
 ||cleanupphone.com^
 ||clearited.shop^
 ||clevelandmusicians.com^
-||clevguard.org^
 ||click-win.club^
 ||click.promote.weebly.com^
 ||clickfunnels.com^
@@ -2235,6 +2238,7 @@
 ||everythingmallo.com^
 ||ewin.godaddysites.com^
 ||ewyqui.asia^
+||exage.top^
 ||examin.shop^
 ||exaschange.com^
 ||excellentsec.com^
@@ -2391,6 +2395,7 @@
 ||fetcn-update.top^
 ||fetcnat-tw.pw^
 ||fetcnet-tw.info^
+||fetcsa.top^
 ||fetcsccorp.top^
 ||fetctop.top^
 ||fetctw.cyou^
@@ -2459,6 +2464,7 @@
 ||fjbnsh.com^
 ||fjxhwk.shop^
 ||fk677.com^
+||fl666.vip^
 ||flamgvip.com^
 ||flash2deal.shop^
 ||flash2deal.site^
@@ -2483,6 +2489,7 @@
 ||flyony.com^
 ||flyswap.vip^
 ||fmallex.cloud^
+||fmfeiu.com^
 ||fmfwed.com^
 ||fmfwgi.com^
 ||fmfwtydk.com^
@@ -3392,6 +3399,7 @@
 ||indexcfd.online^
 ||indiastock.club^
 ||indoloex.com^
+||indtry.top^
 ||industryimdb.com^
 ||ineeshop.com^
 ||inf63game.top^
@@ -3675,6 +3683,7 @@
 ||k3rv.top^
 ||k8e4.top^
 ||ka-con.com^
+||kabinhotel.xyz^
 ||kaibo168.co^
 ||kaidex.top^
 ||kaidexbcd.top^
@@ -3689,6 +3698,7 @@
 ||kaiping.app^
 ||kaiuo.shop^
 ||kakkucb0209.com^
+||kamask.online^
 ||kanda-stock.com^
 ||kandq-life.com^
 ||kandy-wealth.webnode.tw^
@@ -4438,6 +4448,7 @@
 ||mobiletw.net^
 ||modiwgou.top^
 ||moeii.shop^
+||mogov.tw^
 ||mohe188.shop^
 ||mohwgovl.com^
 ||moiiloa.life^
@@ -4615,6 +4626,7 @@
 ||myshopever.com^
 ||mysmartcoinss.com^
 ||mysmartscoins.com^
+||mysmartscoins23.com^
 ||mystock.life^
 ||mystock1688.com^
 ||mystock1688.xyz^
@@ -4781,6 +4793,7 @@
 ||nvt-hg.cc^
 ||nwaldens.com^
 ||nwalodnes.com^
+||nwalodynes.com^
 ||nwfkgw.top^
 ||nwmfeu.top^
 ||nwmfeu.xyz^
@@ -5345,6 +5358,7 @@
 ||qualtrics.com^
 ||quce001.com^
 ||quickfox.com.cn^
+||quidax.xyz^
 ||quidaxir.com^
 ||quidaxiu.com^
 ||quidaxwe.com^
@@ -5454,6 +5468,7 @@
 ||reservationcomplete.com^
 ||reserve-visit.com^
 ||reserve-visiting.com^
+||reserve5418.com^
 ||reserved-operation.info^
 ||reservedata-complate.com^
 ||reserveinfo-complate.com^
@@ -5597,6 +5612,8 @@
 ||samurai-drugstore.jp^
 ||sanc-cl.top^
 ||sands-game.cc^
+||sands-wins.vip^
+||sankshop.com^
 ||sanlinew.com^
 ||sanlinews.shop^
 ||sansanjiuliu.cn^
@@ -5861,6 +5878,7 @@
 ||skuwqo0013.com^
 ||skyinvest01.com^
 ||skylinescc.com.tw^
+||skystockonline.com^
 ||sleepyinvest.com^
 ||slfdkfio.xyz^
 ||slgj-28.com^
@@ -6206,6 +6224,7 @@
 ||taiwanxuetang.com^
 ||taiwebs.com^
 ||taiwfetc.top^
+||taiwmawbile.xyz^
 ||taiyi1988.com^
 ||taiyi588.com^
 ||take-yourprizes.life^
@@ -6488,6 +6507,7 @@
 ||traderoadultimate.com^
 ||tradfiged.com^
 ||trading.live^
+||tradingjunkies.shop^
 ||tranndnn.com^
 ||transaction-secure.info^
 ||transactions-ksrc.ru^
@@ -6661,6 +6681,7 @@
 ||twcchtui.com^
 ||twcdq.me^
 ||twchaaattw.top^
+||twchh.top^
 ||twchjf.cc^
 ||twcht.top^
 ||twchtcomm.com^
@@ -6740,6 +6761,7 @@
 ||twnjkgov.com^
 ||twnn5g.cc^
 ||twootw6.online^
+||twpiina.top^
 ||twpoint.top^
 ||twpowernet.life^
 ||twqlbest.top^
@@ -6907,6 +6929,7 @@
 ||update2.ubpages.com^
 ||upholdcdr.com^
 ||upsddaa.top^
+||uqgkqdaw.com^
 ||uqmgggs.com^
 ||uqypgol.shop^
 ||ur56.com^
@@ -7263,6 +7286,7 @@
 ||whatsapp.com^
 ||whdcnc.shop^
 ||wheatoncc.com^
+||whegaw.shop^
 ||whegaw.top^
 ||whereimetlovewithyou.com^
 ||whiokeul.buzz^
@@ -7322,6 +7346,7 @@
 ||workeasy.tech^
 ||workwiseway.online^
 ||worldcoin35.com^
+||worldibers.com^
 ||worldtechnology.top^
 ||worldwildrtx.com^
 ||worldzaers.com^
@@ -7491,6 +7516,7 @@
 ||xn--eleven-gp7ii24a6y9bxw9b.tokyo^
 ||xn--eleven-gp7ii24a6y9bxw9b.xyz^
 ||xn--eleven-nq4jv02dzzap19e.co^
+||xn--famistore-yb6nf73bi72d867c.beauty^
 ||xn--fhq2c892c34dsnl2sxhpluss.me^
 ||xn--fhq2ct7ji7o2c490af9ndo8b.me^
 ||xn--fhqw5fizd3tj0lav98n.club^
@@ -7566,6 +7592,7 @@
 ||y6585.com^
 ||y7ac.top^
 ||y89652.com^
+||yabang-law.com^
 ||yabang2011.com^
 ||yadrjj.com^
 ||yaeclass.com^
