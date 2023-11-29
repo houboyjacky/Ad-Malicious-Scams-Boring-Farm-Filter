@@ -209,7 +209,7 @@ def Personal_Update_Document(user_id, struct):
     return
 
 
-def Personal_Update_SingleTag(user_id, TAGNAME, Value=1, SUB_TAGNAME=None):
+def Personal_Update_SingleTag(user_id, TAGNAME, Value=1, SUB_TAGNAME=""):
     if SUB_TAGNAME:
         struct = {
             SUB_TAGNAME: {
