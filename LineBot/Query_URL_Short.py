@@ -191,10 +191,10 @@ def resolve_redirects_special(url) -> str:
 
     return ""
 
-
 # =======================
 # Header特別處理
 # =======================
+
 
 def resolve_redirects_HeaderFix(url):
     global HTTP_HEADERS_LIST
@@ -338,7 +338,7 @@ def resolve_redirects_urllib3_https(url):
                 final_url = response.geturl()
                 logger.info(f"final_url https 2 urllib3 = {final_url}")
                 _, domain2, suffix2 = Tools.domain_analysis(final_url)
-                if final_url != url and domain2 != domain and suffix2 != suffix:
+                if final_url != url and (domain2 != domain or suffix2 != suffix):
                     return final_url
             except urllib3.exceptions.HTTPError as http_error:
                 print(f"HTTPError occurred https (SSL ignored): {http_error}")
