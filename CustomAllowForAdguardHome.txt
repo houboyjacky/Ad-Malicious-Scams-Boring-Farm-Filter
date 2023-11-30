@@ -218,3 +218,4 @@
 @@||firstrade.com^
 @@||wert.io^
 @@||clevguard.org^
+@@||yougov.com^
