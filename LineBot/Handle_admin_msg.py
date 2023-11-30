@@ -31,6 +31,7 @@ from Handle_user_msg import handle_user_msg
 from Logger import logger
 from PrintText import reload_notice_board, clear_user_record
 import Handle_LineBot
+import Query_CertifiedList as Q_CL
 import Query_Dcard as Q_DC
 import Query_Facebook as Q_FB
 import Query_Image
@@ -339,6 +340,31 @@ def handle_youtube(user_id, text):
     return None
 
 
+def handle_certifiedlist(user_id, text):
+    if Tools.IsOwner(user_id):
+        if match := re.search(Tools.KEYWORD_CERTIFIEDLIST[1], text):
+            status, reason, domain = match.groups()
+            if status and reason and domain:
+                Personal_Update_SingleTag(user_id, "URL", SUB_TAGNAME="管理次數")
+                return Q_CL.CertifiedList_Write_Document(text)
+        if match := re.search(Tools.KEYWORD_CERTIFIEDLIST[2], text):
+            reason, domain = match.groups()
+            if reason and domain:
+                Personal_Update_SingleTag(user_id, "URL", SUB_TAGNAME="管理次數")
+                return Q_CL.CertifiedList_Delete_Document(text)
+        if match := re.search(Tools.KEYWORD_CERTIFIEDLIST[3], text):
+            status, reason, domain = match.groups()
+            if status and reason and domain:
+                Personal_Update_SingleTag(user_id, "URL", SUB_TAGNAME="管理次數")
+                return Q_CL.CertifiedList_Write_Document(text)
+        if match := re.search(Tools.KEYWORD_CERTIFIEDLIST[4], text):
+            reason, domain = match.groups()
+            if reason and domain:
+                Personal_Update_SingleTag(user_id, "URL", SUB_TAGNAME="管理次數")
+                return Q_CL.CertifiedList_Delete_Document(text)
+    return None
+
+
 def handle_website(user_id, text):
     if match := re.search(Tools.KEYWORD_URL[0], text.lower()):
         Personal_Update_SingleTag(user_id, "URL", SUB_TAGNAME="管理次數")
@@ -410,6 +436,7 @@ def handle_admin_msg_sub(user_id, orgin_text, using_template=False):
         handle_tiktok,
         handle_smallredbook,
         handle_youtube,
+        handle_certifiedlist,
         handle_website,
         handle_error
     ]

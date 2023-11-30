@@ -180,7 +180,7 @@ def download(filename):
     if extension == ".mobileconfig":
         path = f"{Tools.CONFIG_FOLDER}/config_sign"
     elif extension == ".jpg":
-        path = f"{Tools.CONFIG_FOLDER}"
+        path = f"sendfile"
     elif filename == "robots.txt" or filename == "ads.txt":
         path = f"{Tools.CONFIG_FOLDER}"
     elif filename == os.path.basename(Tools.TMP_BLACKLIST):

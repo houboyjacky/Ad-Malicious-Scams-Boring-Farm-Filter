@@ -190,6 +190,52 @@ def message_reply_QueryURL(user_id, IsScam, QueryInf, Domain, orgin_text):
     return template_message
 
 
+def message_reply_CertifiedURL(status, rmessage, orgin_text):
+
+    subdomain, domain, suffix = Tools.domain_analysis(orgin_text)
+    if subdomain:
+        full_Domain = f"{subdomain}.{domain}.{suffix}"
+    else:
+        full_Domain = f"{domain}.{suffix}"
+
+    actions = []
+    actions.append(MessageTemplateAction(
+        label='詐騙學習',
+        text="詐騙幫忙"
+    )
+    )
+    actions.append(URITemplateAction(
+        label='安全評分',
+        uri=f"https://www.scamadviser.com/zh/check-website/{full_Domain}"
+    )
+    )
+
+    if status == "安全":
+        imgurl = f"https://{Tools.ALLOWED_HOST[0]}:{Tools.SERVICE_PORT}/Safe.jpg"
+    elif status == "存疑":
+        imgurl = f"https://{Tools.ALLOWED_HOST[0]}:{Tools.SERVICE_PORT}/Unknown.jpg"
+    else:
+        imgurl = ""
+
+    logger.info(f"len(rmessage) = {len(rmessage)}")
+    if len(rmessage) > 60:
+        imgurl = ""
+
+    template = ButtonsTemplate(
+        thumbnail_image_url=imgurl,
+        text=f"{rmessage}",
+        imageAspectRatio="rectangle",
+        imageSize="contain",
+        actions=actions
+    )
+
+    template_message = TemplateSendMessage(
+        alt_text='快門手認證網址',
+        template=template
+    )
+    return template_message
+
+
 def message_reply_Game_Start(site):
 
     title = "檢舉遊戲"

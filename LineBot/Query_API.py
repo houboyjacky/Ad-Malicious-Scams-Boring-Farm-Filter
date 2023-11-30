@@ -92,6 +92,23 @@ def Read_Document_Account(collection, struct, DB_Name):
     return rmessage, status
 
 
+def Read_Document_Struct(collection, struct, DB_Name):
+    status = 0
+    Doc = {}
+    if struct:
+        if Doc := Search_Same_Document(collection, "帳號", struct['帳號']):
+            # logger.info(f"分析完成，找到相同資料，來源=>{Doc['來源']}")
+            status = 1
+        else:
+            # logger.info("分析完成，找不到相同資料")
+            status = 0
+    else:
+        logger.info(f"{DB_Name}黑名單查詢失敗")
+        status = -1
+
+    return Doc, status
+
+
 def Write_Document(collection, struct):
     MongoDB.Insert_db(collection, struct)
     return
@@ -118,16 +135,37 @@ def Write_Document_Account(collection, struct, DB_Name):
     return rmessage
 
 
+def Write_Document_Struct(collection, struct, DB_Name):
+    tagname = "帳號"
+    if struct:
+        if Search_Same_Document(collection, tagname, struct[tagname]):
+            if struct[tagname]:
+                Update_Document(collection, struct, tagname)
+                rmessage = f"{DB_Name}名單\n找到相同{tagname}❗️❗️❗️\n已更新「 {struct[tagname]} 」"
+            else:
+                # logger.info("資料有誤")
+                rmessage = f"{DB_Name}名單\n❌失敗加入\n資料為空"
+        else:
+            # logger.info("分析完成，寫入結果")
+            Write_Document(collection, struct)
+            rmessage = f"{DB_Name}名單\n✅成功加入{tagname}\n已寫入「 {struct[tagname]} 」"
+    else:
+        # logger.info("無法分析網址")
+        rmessage = f"{DB_Name}名單\n❌失敗加入\n無法分析網址"
+
+    return rmessage
+
+
 def Update_Document(collection, struct, tagname):
 
     filter = {tagname: struct[tagname]}
     update = {"$set": struct}
     result = MongoDB.Update_db(collection, filter, update)
     if result.matched_count == 0:
-        # logger.info("找不到相同資料，進行插入")
+        # logger.info("找不到相同資料更新，進行插入")
         Write_Document(collection, struct)
     else:
-        # logger.info("找到相同資料，已更新")
+        # logger.info("找到相同資料更新")
         pass
     return
 

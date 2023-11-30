@@ -26,6 +26,7 @@ import re
 # My Python Package
 from Logger import logger
 import Handle_LineBot
+import Query_CertifiedList as Q_CL
 import Query_Dcard as Q_DC
 import Query_Facebook as Q_FB
 import Query_Instagram as Q_IG
@@ -335,9 +336,9 @@ def handle_twitter_web(prefix_msg, user_id, text, must_be_text):
 
 def handle_whatsapp_web(prefix_msg, user_id, text, must_be_text):
     if re.match(Tools.KEYWORD_WHATSAPP[0], text.lower()) or \
-        re.match(Tools.KEYWORD_WHATSAPP[2], text.lower()) or \
-        re.match(Tools.KEYWORD_WHATSAPP[6], text.lower()) or \
-        re.match(Tools.KEYWORD_WHATSAPP[9], text.lower()):
+            re.match(Tools.KEYWORD_WHATSAPP[2], text.lower()) or \
+            re.match(Tools.KEYWORD_WHATSAPP[6], text.lower()) or \
+            re.match(Tools.KEYWORD_WHATSAPP[9], text.lower()):
         whatsapp_id, status = Q_WA.WhatsApp_Read_Document(text)
         if prefix_msg:
             prefix_msg = f"{prefix_msg}「 {text} 」\n"
@@ -462,8 +463,14 @@ def handle_web(prefix_msg, user_id, text, must_be_text):
                 f"感恩")
 
     if re.match(Tools.KEYWORD_URL[2], text.lower()):
+
         if not prefix_msg:
             prefix_msg = "所輸入的"
+
+        resp_status, rmessage, status = Q_CL.CertifiedList_Read_Document(text)
+        if rmessage and status == 1:
+            return Handle_LineBot.message_reply_CertifiedURL(resp_status, rmessage, text)
+
         IsScam, Text, domain_name = Q_URL.user_query_website(prefix_msg, text)
 
         Personal_Update_SingleTag_Query(user_id, "URL", IsScam)
@@ -480,6 +487,12 @@ def handle_web(prefix_msg, user_id, text, must_be_text):
         if website := Tools.extract_first_url(text):
             if not prefix_msg:
                 prefix_msg = "所輸入的"
+
+            resp_status, rmessage, status = Q_CL.CertifiedList_Read_Document(
+                text)
+            if rmessage and status == 1:
+                return Handle_LineBot.message_reply_CertifiedURL(resp_status, rmessage, text)
+
             IsScam, Text, domain_name = Q_URL.user_query_website(
                 prefix_msg, website)
 
