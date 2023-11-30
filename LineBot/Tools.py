@@ -153,10 +153,6 @@ KEYWORD_YOUTUBE = setting_rule['KEYWORD_YOUTUBE']
 with open('setting_urls.json', 'r') as f:
     setting_urls = json.load(f)
 
-# ALLOW_DOMAIN_LIST => Allow Domain can't add blacklist
-ALLOW_DOMAIN_LIST = setting_urls['ALLOW_DOMAIN_LIST']
-# NORMAL_WEBSITE => 正常/名片網站
-NORMAL_WEBSITE = setting_urls['NORMAL_WEBSITE']
 # DONT_CHANGE_HTTP => 不修改http成https
 DONT_CHANGE_HTTP = setting_urls['DONT_CHANGE_HTTP']
 # NEED_HEAD_SHORT_URL_LIST => NEED HEAD SHORT URL LIST
@@ -167,17 +163,13 @@ NOT_SUPPORT_SHORT_URL = setting_urls['NOT_SUPPORT_SHORT_URL']
 SHORT_URL_LIST = setting_urls['SHORT_URL_LIST']
 # SUBWEBSITE => Special Subwebsite need to block sub website
 SUBWEBSITE = setting_urls['SUBWEBSITE']
-# SKIP_CHECK => Skip Query Whois
-SKIP_CHECK = setting_urls['SKIP_CHECK']
 
 
 def reloadSetting():
     global ADMINS
-    global ALLOW_DOMAIN_LIST
     global ALLOWED_HOST
     global BLACKUSERID
     global BLOCK_IPS_FILE
-    global NORMAL_WEBSITE
     global CERT
     global CHAINSIGHT_KEY
     global CHANNEL_ACCESS_TOKEN
@@ -228,7 +220,6 @@ def reloadSetting():
     global SERVICE_PORT
     global SERVICE_IP
     global SHORT_URL_LIST
-    global SKIP_CHECK
     global SUBWEBSITE
     global TMP_BLACKLIST
     global USER_GUIDE
@@ -300,14 +291,11 @@ def reloadSetting():
     with open('setting_urls.json', 'r') as f:
         setting_urls = json.load(f)
 
-    ALLOW_DOMAIN_LIST = setting_urls['ALLOW_DOMAIN_LIST']
-    NORMAL_WEBSITE = setting_urls['NORMAL_WEBSITE']
     DONT_CHANGE_HTTP = setting_urls['DONT_CHANGE_HTTP']
     NEED_HEAD_SHORT_URL_LIST = setting_urls['NEED_HEAD_SHORT_URL_LIST']
     NOT_SUPPORT_SHORT_URL = setting_urls['NOT_SUPPORT_SHORT_URL']
     SHORT_URL_LIST = setting_urls['SHORT_URL_LIST']
     SUBWEBSITE = setting_urls['SUBWEBSITE']
-    SKIP_CHECK = setting_urls['SKIP_CHECK']
 
     USER_GUIDE = read_file(USER_GUIDE_FILE)
     return

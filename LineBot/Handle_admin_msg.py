@@ -383,11 +383,7 @@ def handle_website(user_id, text):
             subdomain, domain, suffix = Tools.domain_analysis(url)
 
             domain_name = f"{domain}.{suffix}"
-            if domain_name in Tools.ALLOW_DOMAIN_LIST:
-                rmessage = f"網址封鎖有誤，不允許{domain_name}"
-                return rmessage
-
-            if domain_name in Tools.SUBWEBSITE:
+            if subdomain and domain_name in Tools.SUBWEBSITE:
                 domain_name = f"{subdomain}.{domain}.{suffix}"
 
         IsScam = Q_URL.check_blacklisted_site(domain_name)
