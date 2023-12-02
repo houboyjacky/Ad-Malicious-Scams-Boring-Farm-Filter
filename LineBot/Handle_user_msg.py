@@ -464,12 +464,13 @@ def handle_web(prefix_msg, user_id, text, must_be_text):
 
     if re.match(Tools.KEYWORD_URL[2], text.lower()):
 
+        if not prefix_msg:  # 不處理原始輸入網址就是縮網址
+            resp_status, rmessage, status = Q_CL.CertifiedList_Read_Document(text)
+            if rmessage and status == 1:
+                return Handle_LineBot.message_reply_CertifiedURL(resp_status,rmessage, text)
+
         if not prefix_msg:
             prefix_msg = "所輸入的"
-
-        resp_status, rmessage, status = Q_CL.CertifiedList_Read_Document(text)
-        if rmessage and status == 1:
-            return Handle_LineBot.message_reply_CertifiedURL(resp_status, rmessage, text)
 
         IsScam, Text, domain_name = Q_URL.user_query_website(prefix_msg, text)
 
@@ -485,13 +486,14 @@ def handle_web(prefix_msg, user_id, text, must_be_text):
     # 非Http開頭
     if "." in text:
         if website := Tools.extract_first_url(text):
+
+            if not prefix_msg:  # 不處理原始輸入網址就是縮網址
+                resp_status, rmessage, status = Q_CL.CertifiedList_Read_Document(text)
+                if rmessage and status == 1:
+                    return Handle_LineBot.message_reply_CertifiedURL(resp_status,rmessage, text)
+
             if not prefix_msg:
                 prefix_msg = "所輸入的"
-
-            resp_status, rmessage, status = Q_CL.CertifiedList_Read_Document(
-                text)
-            if rmessage and status == 1:
-                return Handle_LineBot.message_reply_CertifiedURL(resp_status, rmessage, text)
 
             IsScam, Text, domain_name = Q_URL.user_query_website(
                 prefix_msg, website)
