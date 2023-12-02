@@ -348,8 +348,8 @@ def handle_certifiedlist(user_id, text):
                 Personal_Update_SingleTag(user_id, "URL", SUB_TAGNAME="管理次數")
                 return Q_CL.CertifiedList_Write_Document(text)
         if match := re.search(Tools.KEYWORD_CERTIFIEDLIST[2], text):
-            reason, domain = match.groups()
-            if reason and domain:
+            domain = match.groups()
+            if domain:
                 Personal_Update_SingleTag(user_id, "URL", SUB_TAGNAME="管理次數")
                 return Q_CL.CertifiedList_Delete_Document(text)
         if match := re.search(Tools.KEYWORD_CERTIFIEDLIST[3], text):
@@ -358,8 +358,8 @@ def handle_certifiedlist(user_id, text):
                 Personal_Update_SingleTag(user_id, "URL", SUB_TAGNAME="管理次數")
                 return Q_CL.CertifiedList_Write_Document(text)
         if match := re.search(Tools.KEYWORD_CERTIFIEDLIST[4], text):
-            reason, domain = match.groups()
-            if reason and domain:
+            domain = match.groups()
+            if domain:
                 Personal_Update_SingleTag(user_id, "URL", SUB_TAGNAME="管理次數")
                 return Q_CL.CertifiedList_Delete_Document(text)
     return None

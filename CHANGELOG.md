@@ -1,6 +1,7 @@
 # 歷史更新 History Update
 
 * 20231202 Update
+  * 修復 無法指令移除名單
   * 調整 黑名單
 
 * 20231201 Update
