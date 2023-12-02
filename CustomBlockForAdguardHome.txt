@@ -36,6 +36,7 @@
 #||shopline.tw^
 #||tg.pe^
 #||tpglobalwallet.net^
+#||trpcdn.net^
 #||twm5g.co^
 #||twmrbt.com^
 #||ubpages.com^
@@ -6941,7 +6942,6 @@
 ||trj2.xyz^
 ||trkwis.com^
 ||tronmarket.top^
-||trpcdn.net^
 ||trrgov.com^
 ||truefi.io^
 ||truefipef.com^
