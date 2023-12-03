@@ -65,6 +65,9 @@ def analyze_FB_url(user_text: str) -> Optional[dict]:
     else:
         return None
 
+    if len(Username) == 0 :
+        return None
+
     logger.info(f"Username = {Username}")
 
     # 移除尾部代號

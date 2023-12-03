@@ -1,5 +1,8 @@
 # 歷史更新 History Update
 
+* 20231204 Update
+  * 修復 Facebook字串判斷有問題
+
 * 20231203 Update
   * 調整 黑名單
 
