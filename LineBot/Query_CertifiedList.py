@@ -46,12 +46,12 @@ def analyze_CertifiedList_url(user_text: str) -> Optional[dict]:
     elif match := re.search(Tools.KEYWORD_CERTIFIEDLIST[2], user_text):
         website = match.group(1)
         Type = "完整網址"
-        struct = {"類型": Type, "帳號": website,
+        struct = {"類型": Type, "帳號": website, "狀態": "",
                   "回覆訊息": "", "加入日期": datetime, "來源": "Owner"}
     elif match := re.search(Tools.KEYWORD_CERTIFIEDLIST[0], user_text):
         website = match.group(1)
         Type = "完整網址"
-        struct = {"類型": Type, "帳號": website,
+        struct = {"類型": Type, "帳號": website, "狀態": "",
                   "回覆訊息": "", "加入日期": datetime, "來源": "Owner"}
     elif match := re.search(Tools.KEYWORD_CERTIFIEDLIST[3], user_text):
         status, message, website = match.groups()
@@ -61,12 +61,14 @@ def analyze_CertifiedList_url(user_text: str) -> Optional[dict]:
     elif match := re.search(Tools.KEYWORD_CERTIFIEDLIST[4], user_text):
         website = match.group(1)
         Type = "網域"
-        struct = {"類型": Type, "帳號": website,
+        struct = {"類型": Type, "帳號": website, "狀態": "",
                   "回覆訊息": "", "加入日期": datetime, "來源": "Owner"}
     else:
-        return None
+        Type = "完整網址"
+        struct = {"類型": Type, "帳號": user_text, "狀態": "",
+                  "回覆訊息": "", "加入日期": datetime, "來源": "Owner"}
 
-    logger.info(f"struct: {struct}")
+    logger.info(f"struct['帳號']: {struct['帳號']}")
 
     return struct
 
@@ -100,13 +102,15 @@ def CertifiedList_Read_Document(user_text: str):
         return Struct['狀態'], rmessage, status
     elif analyze:  # 確保有資料
         # 檢查網域(含子網域)
+        # logger.info(f"analyze['帳號'] = {analyze['帳號']}")
         subdomain, domain, suffix = Tools.domain_analysis(analyze["帳號"])
+        # logger.info(f"{subdomain}, {domain}, {suffix}")
         if subdomain:
             analyze["帳號"] = f"{subdomain}.{domain}.{suffix}"
             analyze["類型"] = f"網域"
+            # logger.info(f"analyze = {analyze}")
             Struct, status = Query_API.Read_Document_Struct(
                 collection, analyze, Name)
-            # logger.info(f"struct = {Struct}")
             if status == 1:
                 rmessage = (f"「 {Struct['帳號']} 」\n"
                             f"快門手認證是{Struct['狀態']}的\n\n"
@@ -116,10 +120,10 @@ def CertifiedList_Read_Document(user_text: str):
         # 檢查根網域
         analyze["帳號"] = f"{domain}.{suffix}"
         analyze["類型"] = f"網域"
+        # logger.info(f"analyze = {analyze}")
         Struct, status = Query_API.Read_Document_Struct(
             collection, analyze, Name)
 
-        # logger.info(f"struct = {Struct}")
         if status == 1:
             rmessage = (f"「 {Struct['帳號']}  」\n"
                         f"快門手認證是{Struct['狀態']}的\n\n"
@@ -129,11 +133,11 @@ def CertifiedList_Read_Document(user_text: str):
         # 檢查TLD
         analyze["帳號"] = f"{suffix}"
         analyze["類型"] = f"網域"
+        # logger.info(f"analyze = {analyze}")
         Struct, status = Query_API.Read_Document_Struct(
             collection, analyze, Name)
 
         domain_name = f"{domain}.{suffix}"
-        # logger.info(f"struct = {Struct}")
         if status == 1:
             rmessage = (f"「 {domain_name}  」\n"
                         f"快門手認證是{Struct['狀態']}的\n\n"
