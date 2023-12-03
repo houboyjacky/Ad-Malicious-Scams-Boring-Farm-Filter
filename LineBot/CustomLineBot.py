@@ -29,12 +29,11 @@ THE SOFTWARE.
 # sudo apt install tesseract-ocr-chi-sim tesseract-ocr-chi-sim-vert
 
 # Publish Python Package
-import time
 import sys
+from apscheduler.schedulers.background import BackgroundScheduler
 import threading
 import signal
 import subprocess
-import schedule
 
 # My Python Package
 from Logger import logger, Logger_Transfer
@@ -48,35 +47,14 @@ import Query_Image
 import Tools
 import Network
 
-
-def backup_data():
-    # 執行 Backup.py 中的 backup_data 函式
+def run_backup_script():
     subprocess.run(["python", "Backup_DB.py"], check=False)
-
 
 def signal_handler(sig, _):
     logger.info("Received signal : %s", str(sig))
-    stop_event.set()
     Logger_Transfer()
+    scheduler.shutdown()
     sys.exit(0)
-
-
-def background_schedule(stop_event):
-    # 黑名單更新
-    schedule.every().hour.at(":00").do(update_blacklist)
-    # IP黑名單更新
-    schedule.every().hour.at(":01").do(load_block_ip_list)
-    # Log儲存與分類
-    schedule.every().day.at("23:02").do(Logger_Transfer, pre_close=False)
-    # 備份DB資料
-    schedule.every().day.at("23:03").do(backup_data)
-    # 165黑名單更新
-    schedule.every().hour.at(":04").do(LINE_ID_Download_From_165)
-
-    while not stop_event.is_set():
-        time.sleep(1)
-        schedule.run_pending()
-
 
 def Initialization():
     logger.info("Initialization Start")
@@ -93,20 +71,19 @@ def Initialization():
 
 if __name__ == "__main__":
 
-    # 建立 stop_event
-    stop_event = threading.Event()
+    scheduler = BackgroundScheduler()
+    scheduler.add_job(update_blacklist, 'cron', hour='*', minute=0)
+    scheduler.add_job(run_backup_script, 'cron', hour=23, minute=0)
+    scheduler.add_job(Logger_Transfer, 'cron', hour=23, minute=1, kwargs={'pre_close': False})
+    scheduler.add_job(load_block_ip_list, 'cron', hour='*', minute=1)
+    scheduler.add_job(LINE_ID_Download_From_165, 'cron', minute=2)
+    scheduler.start()
 
     signal.signal(signal.SIGINT, signal_handler)
     signal.signal(signal.SIGTERM, signal_handler)
 
-    # 建立 thread
     init_thread = threading.Thread(target=Initialization)
-    schedule_thread = threading.Thread(
-        target=background_schedule, args=(stop_event,))
-
-    # 啟動 thread
     init_thread.start()
-    schedule_thread.start()
 
     # 開啟 LINE 聊天機器人的 Webhook 伺服器
     logger.info("Line Bot is ready")
@@ -115,4 +92,3 @@ if __name__ == "__main__":
 
     # 等待 thread 結束
     init_thread.join()
-    schedule_thread.join()

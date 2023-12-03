@@ -2,6 +2,7 @@
 
 * 20231204 Update
   * 修復 Facebook字串判斷有問題
+  * 調整 改用apscheduler來取代schedule
 
 * 20231203 Update
   * 調整 黑名單
