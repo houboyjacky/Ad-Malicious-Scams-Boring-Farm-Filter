@@ -1,6 +1,7 @@
 # 歷史更新 History Update
 
 * 20231204 Update
+  * 更新 個人不想看與網友回報廣告或網站
   * 修復 Facebook字串判斷有問題
   * 調整 改用apscheduler來取代schedule
   * 調整 認證網站資料
