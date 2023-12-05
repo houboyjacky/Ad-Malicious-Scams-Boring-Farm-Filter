@@ -56,6 +56,10 @@ def handle_message_text_front(user_text):
             "虛擬貨幣", user_text)
         return rmessage
 
+    if user_text == "查詢" or user_text.startswith("查詢"):
+        rmessage = f"這樣沒辦法查詢喔!!!\n輸入「使用指南」\n了解要怎麼使用喔 :D"
+        return rmessage
+
     if user_text == "備用指南":
         return Tools.USER_GUIDE
 
@@ -122,10 +126,13 @@ def handle_message_text(event):
             and not orgin_text.startswith("刪除") \
             and not orgin_text.startswith("詐騙回報")   \
             and not orgin_text.startswith("分析")   \
+            and not orgin_text.startswith("批次")   \
             and not orgin_text.startswith("縮網址"):
         if not orgin_text.startswith("http"):
             if match := re.search(r'(https?://[\S]+)', orgin_text):
                 orgin_text = match.group(1)
+                website = Tools.extract_first_url(orgin_text)
+                logger.info(orgin_text)
 
         if not orgin_text.startswith("line://"):
             if match := re.search(r'(line://[^\\? ]+)', orgin_text):
