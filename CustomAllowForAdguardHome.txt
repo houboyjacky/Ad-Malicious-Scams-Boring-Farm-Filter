@@ -221,3 +221,6 @@
 @@||yougov.com^
 @@||whatsapp.com^
 @@||anzocapital.com^
+@@||eleanorfilm.academy^
+@@||risu.io^
+@@||wumookata.com^
