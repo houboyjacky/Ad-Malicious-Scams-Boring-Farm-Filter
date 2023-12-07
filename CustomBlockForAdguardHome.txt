@@ -17,6 +17,7 @@
 #||cozystyler.com^
 #||cresclab.com^
 #||dimondo.org^
+#||easywebinar.live^
 #||fontawesomes.com^
 #||forms.gle^
 #||gmail.com^
@@ -34,6 +35,7 @@
 #||phicdn.net^
 #||portaly.cc^
 #||safepal.com^
+#||sedu.tw^
 #||shopline.tw^
 #||tg.pe^
 #||tpglobalwallet.net^
@@ -487,6 +489,7 @@
 ||alcoae.com^
 ||alcoaesr.com^
 ||alcoaiesr.com^
+||alconaseou.com^
 ||alconasisr.com^
 ||alcoyatsr.com^
 ||aldomall.com^
@@ -545,6 +548,7 @@
 ||amazon-tw.cn^
 ||amazon24.mobi^
 ||amazon315.top^
+||amazonviews.me^
 ||ambrosect.online^
 ||ameriprisehk.com^
 ||ametboi-tw.cc^
@@ -826,6 +830,7 @@
 ||bdcalc.com^
 ||bdd666.vip^
 ||bdd777.org^
+||bdeoisl.com^
 ||bdfpfb2x.com^
 ||bdnapn.top^
 ||bds8869.com^
@@ -1038,6 +1043,7 @@
 ||bitvip-makt.com^
 ||bitwiner1.com^
 ||bitxoasis.com^
+||bitypro.cc^
 ||biury.space^
 ||bizatabxn.com^
 ||bizatasni.com^
@@ -1058,6 +1064,7 @@
 ||bkst800.com^
 ||bl288.net^
 ||bl678.net^
+||blacktech.me^
 ||blendedsearch.com^
 ||blenderelements.com^
 ||blessrepressive.top^
@@ -1779,6 +1786,7 @@
 ||cpparcel.com^
 ||cqcueq.top^
 ||cqlsfz.top^
+||cqsze.xyz^
 ||craeatpe.com^
 ||crazrieu.xyz^
 ||crazylovetw.com^
@@ -2236,7 +2244,6 @@
 ||easybuytw.weebly.com^
 ||easydatingg.com^
 ||easypro.site^
-||easywebinar.live^
 ||eaupoch.cn^
 ||eazyshop.top^
 ||ebay-commercial.com^
@@ -3300,6 +3307,8 @@
 ||hanchelua-ez.pages.net.br^
 ||handblogistics.live^
 ||haokaid.com^
+||haolytw.com^
+||haoting.info^
 ||haowan.com.tw^
 ||haoyuelove.com^
 ||happinessuni.org^
@@ -3371,6 +3380,7 @@
 ||heronroys.com^
 ||herorexe.com^
 ||hese.shop^
+||hexatrontech.com^
 ||heybacostco.com^
 ||hfdewgov.site^
 ||hfkhfs.shop^
@@ -3623,6 +3633,7 @@
 ||ic-programrd.com^
 ||ic-programus.com^
 ||ic-techelem.com^
+||ic-techelemye.com^
 ||ice-snowmalls.vip^
 ||ice.io^
 ||ichatlink.net^
@@ -4123,6 +4134,7 @@
 ||kelbyone.lt.acemlnb.com^
 ||kelylegroup.com^
 ||kephiris.fr^
+||kepinfd.com^
 ||kerruu.xyz^
 ||kerry2011.com^
 ||keuppid.com^
@@ -4392,6 +4404,7 @@
 ||lesartisansdubio.fr^
 ||letaoen.com^
 ||letiandaitw.xyz^
+||letshowshopping.webnode.tw^
 ||levi.services^
 ||lexgaga.shop^
 ||lexjojo.shop^
@@ -5216,6 +5229,7 @@
 ||nmsdat.top^
 ||nmvdcbo.cam^
 ||nn2dlw.top^
+||nnd90.tw^
 ||nngg.asia^
 ||nnidda.top^
 ||nnsbaw.world^
@@ -5326,6 +5340,7 @@
 ||ofa177.net^
 ||ofa55.net^
 ||ofa777.net^
+||ofa88.net^
 ||ofa91918.online^
 ||ofa99.net^
 ||offer-scbleisure.online^
@@ -5773,6 +5788,7 @@
 ||pubg.fit^
 ||pucvmv.top^
 ||puerstea.top^
+||pulsexe.cyou^
 ||pundibrm.com^
 ||punl5q5c9a.com^
 ||purerawz.co^
@@ -6239,7 +6255,6 @@
 ||security16.com^
 ||securityplatf.com^
 ||sedesa.com.ar^
-||sedu.tw^
 ||seductivevisions.com^
 ||seeds.com.tw^
 ||segroup.net^
@@ -6701,6 +6716,7 @@
 ||suport.ubpages.com^
 ||support-face.pages.med.br^
 ||support-fb-meta.pages.net.br^
+||supr.link^
 ||surdating.com^
 ||surexchange.io^
 ||surgetrader.com^
@@ -7011,6 +7027,7 @@
 ||thomasgis.com^
 ||thorchaing.com^
 ||thorchainj.com^
+||thorchainp.com^
 ||thorchaint.com^
 ||thrupenny.io^
 ||thtwoi.online^
@@ -7409,6 +7426,7 @@
 ||twinrdsyte.com^
 ||twjingrong.online^
 ||twjinron.com^
+||twkissed.com^
 ||twlicai.shop^
 ||twlk8uwqe3.lol^
 ||twlksm.buzz^
@@ -7829,6 +7847,7 @@
 ||vqdfh.online^
 ||vrhqeijahxa.com^
 ||vriteo.top^
+||vsddcu.com^
 ||vsgny.xyz^
 ||vsomye.com^
 ||vstgov.com^
@@ -7928,6 +7947,7 @@
 ||wdtghe.com^
 ||wealth-era.com^
 ||wealthpress98951.lt.acemlnb.com^
+||weartkli.com^
 ||weatera.top^
 ||weatfas.top^
 ||weathl-btc.vip^
@@ -7953,6 +7973,7 @@
 ||weetlove.com^
 ||weex.fun^
 ||weex.fyi^
+||weextg.shop^
 ||weextg.xyz^
 ||weikh.shop^
 ||weily.com.tw^
@@ -8136,6 +8157,7 @@
 ||xcmfsa.vip^
 ||xcnma.vip^
 ||xcomodo.com^
+||xcvbdf.store^
 ||xd5858.com^
 ||xdc-sunteccity.com^
 ||xdcsunteccity.com^
