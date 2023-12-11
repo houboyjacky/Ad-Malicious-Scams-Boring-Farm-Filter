@@ -57,7 +57,7 @@ def handle_message_text_front(user_text):
         return rmessage
 
     if user_text == "查詢" or user_text.startswith("查詢"):
-        rmessage = f"這樣沒辦法查詢喔!!!\n輸入「使用指南」\n了解要怎麼使用喔 :D"
+        rmessage = f"這樣沒辦法查詢喔!!!\n官方賴也沒辦法接受傳送好友\n這是官方賴本身的限制\n除此之外可以輸入「使用指南」\n了解要怎麼使用喔 :D"
         return rmessage
 
     if user_text == "備用指南":

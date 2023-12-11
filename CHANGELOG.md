@@ -1,6 +1,7 @@
 # 歷史更新 History Update
 
 * 20231211 Update
+  * 調整 "查詢"提示字
   * 調整 黑名單
   * 調整 threads導引網址
 
