@@ -533,7 +533,8 @@ def user_query_shorturl(user_text):
     keep_go_status = False
     meta_redirects_list = ["lm.facebook.com",
                            "l.facebook.com",
-                           "l.instagram.com"]
+                           "l.instagram.com",
+                           "l.threads.net"]
 
     parsed_url = urlparse(user_text)
     if not parsed_url.path \
