@@ -3896,7 +3896,6 @@
 ||jackpresident.com.tw^
 ||jackywu.tw^
 ||jajpholdings.lt.acemlnb.com^
-||jakifloraldesign-tw.com^
 ||jamercari.com^
 ||janeeyrego.com^
 ||janima.buzz^
@@ -5637,8 +5636,6 @@
 ||phtw-cat.top^
 ||phv955.net.wnacloud.com^
 ||phv955.net^
-||pics.ee^
-||piee.pw^
 ||pienoxbank.top^
 ||pienoxbina.top^
 ||pienoxbtc.top^

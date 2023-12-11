@@ -301,6 +301,7 @@
 ||*.pl^$denyallow=org.pl|edu.pl|com.pl|gov.pl
 ||*.vip^
 ||0xboost.*^
+||8ct2*.site^
 ||aave-loan.*^
 ||acp-tw.*^
 ||ada-defi.*^
