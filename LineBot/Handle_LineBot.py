@@ -218,12 +218,15 @@ def message_reply_CertifiedURL(status, rmessage, orgin_text):
         imgurl = ""
 
     logger.info(f"len(rmessage) = {len(rmessage)}")
-    if len(rmessage) > 60:
-        imgurl = ""
-
-    template = ButtonsTemplate(
-        thumbnail_image_url=imgurl,
-        text=f"{rmessage}",
+    if len(rmessage) > 60 or not imgurl:
+        template = ButtonsTemplate(
+            text=f"{rmessage}",
+            actions=actions
+        )
+    else:
+        template = ButtonsTemplate(
+            thumbnail_image_url=imgurl,
+            text=f"{rmessage}",
         imageAspectRatio="rectangle",
         imageSize="contain",
         actions=actions
