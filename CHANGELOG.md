@@ -1,5 +1,8 @@
 # 歷史更新 History Update
 
+* 20231214 Update
+  * 移除 LineBot資料夾
+
 * 20231213 Update
   * 修復 圖片位置為空導致錯誤
 
