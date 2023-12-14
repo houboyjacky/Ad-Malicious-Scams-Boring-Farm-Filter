@@ -1,6 +1,8 @@
 # 歷史更新 History Update
 
 * 20231214 Update
+  * 更新 165反詐騙諮詢專線-詐騙LINE ID(~112/12/14)
+  * 更新 FB網友提供清單
   * 移除 LineBot資料夾
 
 * 20231213 Update
