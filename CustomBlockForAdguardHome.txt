@@ -2,6 +2,7 @@
 ! 過度引用 widgetdata.tradingview.com
 ! 過度引用 www.tradingview-widget.com
 ! 疑似詐騙或不良的網站
+
 #||518fb.com^
 #||aka.ms^
 #||beats.com.tw^
@@ -3489,7 +3490,6 @@
 ||handblogistics.live^
 ||haokaid.com^
 ||haolytw.com^
-||haoting.info^
 ||haowan.com.tw^
 ||haoyuelove.com^
 ||happinessuni.org^
