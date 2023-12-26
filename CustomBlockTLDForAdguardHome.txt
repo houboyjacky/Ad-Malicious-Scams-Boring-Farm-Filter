@@ -126,6 +126,7 @@
 /etimtoken[0-9]+\.com/
 /exness[0-9]+\.com/
 /expecta[a-z]+\.com/
+/f.m.store\.xyz/
 /fasonlacrm\.[a-z]+/
 /fchange[a-z0-9]*\.xyz/
 /fenglong[0-9]+.xyz/
