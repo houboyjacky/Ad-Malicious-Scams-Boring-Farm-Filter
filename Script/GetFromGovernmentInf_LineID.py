@@ -21,9 +21,9 @@ df = pd.read_csv(csv_data, encoding='big5')
 # 確保通報日期列是 datetime 格式（考慮到日期格式為 YYYY/MM/DD）
 df['通報日期'] = pd.to_datetime(df['通報日期'], format='%Y/%m/%d')
 
-# 計算今天和前三天的日期
+# 計算今天和前七天的日期
 today = pd.Timestamp(datetime.now().date())
-three_days_ago = today - timedelta(days=2)
+three_days_ago = today - timedelta(days=7)
 
 # 篩選出前三天內的數據
 filtered_df = df[(df['通報日期'] >= three_days_ago) & (df['通報日期'] <= today)]
