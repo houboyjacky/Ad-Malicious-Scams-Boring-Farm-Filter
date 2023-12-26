@@ -235,3 +235,4 @@
 @@||ifchic.com^
 @@||mycard520.com.tw^
 @@||ftvnews.com.tw^
+@@||golden-cup.win^$important
