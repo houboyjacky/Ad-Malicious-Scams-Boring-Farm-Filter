@@ -237,3 +237,5 @@
 @@||ftvnews.com.tw^
 @@||golden-cup.win^$important
 @@||light55551.com.tw^
+@@||hacker.org.tw^
+@@||maicoin.com^
