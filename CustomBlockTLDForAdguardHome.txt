@@ -63,7 +63,6 @@
 /blueberrypro\..+/
 /booking-\w+\.cloud/
 /breakout[a-z]{2}\.com/
-/breakouto[a-z]\.com/
 /btc[0-9]{4}\.com/
 /btcbox[a-z]{1,3}\.com/
 /bullish[a-z]{1,2}\.com/
@@ -388,6 +387,7 @@
 ||sc.*.cn^
 ||sfexpress-help.*^
 ||stenbit.*^
+||tokocrypto-defi.*^
 ||traweb3.*^
 ||treasuremax.*^
 ||treasuremaxs.*^
