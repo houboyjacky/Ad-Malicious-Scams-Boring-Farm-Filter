@@ -239,3 +239,4 @@
 @@||light55551.com.tw^
 @@||hacker.org.tw^
 @@||maicoin.com^
+@@||opentix.life^$important
