@@ -36,6 +36,7 @@
 #||portaly.cc^
 #||safepal.com^
 #||sedu.tw^
+#||shop2000.com.tw^
 #||shopline.tw^
 #||tg.pe^
 #||tpglobalwallet.net^
@@ -7388,7 +7389,6 @@
 ||shop-tianxia.com^
 ||shop.hongkong.puyansh.com^
 ||shop.php.puyansh.com^
-||shop2000.com.tw^
 ||shop2u.co^
 ||shop45323653.m.youzan.com^
 ||shop818.vip^
