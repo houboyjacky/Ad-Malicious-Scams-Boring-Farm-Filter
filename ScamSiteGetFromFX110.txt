@@ -2,6 +2,7 @@
 ! FX110 https://www.fx110.com/
 @@||metamask.io^
 #||ftmo.com^
+#||kraken.com^
 #||webnode.tw^
 #||wixsite.com^
 ||00fa.com^
@@ -4404,7 +4405,6 @@
 ||kpgfx.com^
 ||kraemforex.com^
 ||kraemfx-market.com^
-||kraken.com^
 ||krankenfxtrade.com^
 ||krcnz-uk.com^
 ||krg-fx.com^
