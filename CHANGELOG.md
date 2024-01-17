@@ -1,6 +1,7 @@
 # 歷史更新 History Update
 
 * 20240117 Update
+  * 更新 165反詐騙諮詢專線-詐騙LINE ID(~113/01/17)
   * 調整 黑名單
 
 * 20240116 Update
