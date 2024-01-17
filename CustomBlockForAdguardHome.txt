@@ -2880,7 +2880,6 @@
 ||etcwo.top^
 ||eth-coinbase.com^
 ||eth-coinbass.net^
-||eth.link^
 ||ethan8.com^
 ||ethdefi-mining.com^
 ||ethen.buzz^
