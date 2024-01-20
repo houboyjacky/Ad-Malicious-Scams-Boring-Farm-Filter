@@ -3,6 +3,7 @@
 ! 過度引用 widgetdata.tradingview.com
 ! 過度引用 www.tradingview-widget.com
 ! 疑似詐騙或不良的網站
+#||11st.co.kr^
 #||518fb.com^
 #||aka.ms^
 #||beats.com.tw^
@@ -83,7 +84,6 @@
 ||11467.com^
 ||11ks.xyz^
 ||11silo.com^
-||11st.co.kr^
 ||11sta.shop^
 ||11stc.com^
 ||11stm.com^
@@ -308,6 +308,7 @@
 ||7krfnq.top^
 ||7lcs.top^
 ||7m57.top^
+||7mage.com^
 ||7oiu2.top^
 ||7qq1.top^
 ||7s588.com^
@@ -842,6 +843,7 @@
 ||asosasia.com^
 ||asosea.com^
 ||assistantas.xyz^
+||astarcc.tw^
 ||aster988.com^
 ||asyhhn.top^
 ||at168.info^
@@ -1424,6 +1426,7 @@
 ||brasotus.com^
 ||brasukes.com^
 ||brasuktres.com^
+||brauisuya.com^
 ||bravelyinlo.com^
 ||bravepuma.com^
 ||bravocasino.net^
@@ -2191,6 +2194,7 @@
 ||crownhappier.top^
 ||crrent.top^
 ||crscapital.top^
+||crypacific.vip^
 ||cryptagbt.vip^
 ||cryptagroz.vip^
 ||crypto-ai.shop^
@@ -2421,6 +2425,7 @@
 ||deervlyon.com^
 ||deeznnzb.vip^
 ||deffnft.com^
+||defiapp.world^
 ||defibot.online^
 ||defimetavip6.com^
 ||degetau.com^
@@ -2998,6 +3003,7 @@
 ||excentre.link^
 ||exceptlonaidates.net^
 ||exchangeie.com^
+||exchangestw.com^
 ||exchnge.top^
 ||excitedlove.cc^
 ||excllenltd.com^
@@ -3975,6 +3981,7 @@
 ||harperdevelopments.com^
 ||hashsne.com^
 ||hashsnq.com^
+||hashsnu.com^
 ||hass.win^
 ||hastenvocal.top^
 ||hatc-tc.cc^
@@ -5549,6 +5556,7 @@
 ||mastercardvip.com^
 ||mastercardvip.tw^
 ||mastermysan.com^
+||matchwish.club^
 ||mateloveri.com^
 ||maticaxb.com^
 ||maticaxv.com^
@@ -7250,6 +7258,7 @@
 ||rjngrg.top^
 ||rjnnbaw.vip^
 ||rjok.site^
+||rjvcn.shop^
 ||rki-tw.com^
 ||rkvyzd.top^
 ||rlsioafo.com^
@@ -7389,6 +7398,7 @@
 ||sandswins.cc^
 ||sank.world^
 ||sankshop.com^
+||sankshop.ltd^
 ||sankshop.vip^
 ||sanlinew.com^
 ||sanlinews.shop^
@@ -7715,6 +7725,7 @@
 ||sjajwdc3721.com^
 ||sjawnmgh3232.com^
 ||sjfnvhit.com^
+||sjmhtmls.com^
 ||sjnap.shop^
 ||sjpop1z.com^
 ||sjtz.tw^
@@ -8119,8 +8130,10 @@
 ||taiguxueyuan.com^
 ||taihetz.tw^
 ||taikocrypto.com^
+||taimnt.cc^
 ||taionshop.site^
 ||taipower-tw.life^
+||taireu.cc^
 ||tairzv.cc^
 ||taishinbank-service-support-helponline.codeanyapp.com^
 ||taishinz.com^
@@ -8429,6 +8442,7 @@
 ||tickmill.online^
 ||ticktomill.com^
 ||tidiochat.com^
+||tiffijnsute.com^
 ||tiffinse.com^
 ||tiffinsute.com^
 ||tigwhubw.com^
@@ -9095,6 +9109,7 @@
 ||unbouncepages.com^
 ||uncleblockglobal.com^
 ||uncleforex.pro^
+||undefeated.com.tw^
 ||unege.top^
 ||unielon.com^
 ||unifgsiwe.icu^
@@ -9395,6 +9410,7 @@
 ||vsddcud.com^
 ||vsdfeb.com^
 ||vsdrhu.com^
+||vsdscy.com^
 ||vsdtmi.com^
 ||vsdtrhtr.com^
 ||vsdtwo.com^
@@ -10174,6 +10190,7 @@
 ||youdp.shop^
 ||youhui1688hxak.top^
 ||youlove2chat.com^
+||youngme.vip^
 ||younit6.com^
 ||youqu198.me^
 ||your-assistant.live^
