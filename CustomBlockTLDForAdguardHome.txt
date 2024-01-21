@@ -82,6 +82,7 @@
 /carousellservice[0-9]{3}\.com/
 /carr[eo]fo[a-z]+\.com/
 /casave[0-9]+00\.com/
+/cfm-id[0-9]{4}\.com/
 /charterprime[a-z0-9]*\.com/
 /chung[-]?hwa[-]?.*\..*/
 /clear-skys\.[a-z]+/
@@ -233,6 +234,7 @@
 /rakuten[0-9]+\.com/
 /rakuten[a-z0-9]{1,2}\.com/
 /reactivate-page-[a-z0-9]+\.click/
+/regeneration[a-z]{2}\.com/
 /risheng[0-9]+\.com/
 /ruten.+\.com/
 /ruten[0-9]+\.tw/
@@ -331,6 +333,7 @@
 ||aave-loan.*^
 ||acp-tw.*^
 ||ada-defi.*^
+||affonetrax*.*^
 ||ainoce.*^
 ||alfa-crypx.*^
 ||alfabtc.*^
@@ -347,6 +350,7 @@
 ||bellagio.*^
 ||bing-bon.*^
 ||bithumb77.*^
+||bitk-eth.*^
 ||bitstamp*.*^
 ||bnextex.*^
 ||boniry.*^
@@ -384,11 +388,13 @@
 ||jimmyconnie.*^
 ||kdltoken.*^
 ||lehinsecurities.*
+||loanadvisorservices.*^
 ||medisou.*^
 ||newgeneration4now.*^
 ||newtradetw.*^
 ||obtshop.*^
 ||ocdfinances.*^
+||opnxdex.*^
 ||plubitit.*^
 ||registered-*.com^
 ||sc.*.cn^
@@ -404,6 +410,7 @@
 ||vantwnow.*^
 ||walmant.*^
 ||walnart.*
+||whiokeul.*^
 ||xn--7-eleven*.*^
 ||xn--shopee*.*^
 ||yasenfinancial.*^
