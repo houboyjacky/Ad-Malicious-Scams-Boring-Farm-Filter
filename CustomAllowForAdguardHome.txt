@@ -241,3 +241,4 @@
 @@||maicoin.com^
 @@||opentix.life^$important
 @@||eth.link^
+@@||gomypay.asia^
