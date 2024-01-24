@@ -138,6 +138,7 @@
 /ethminer-[a-z]+\.com/
 /etimtoken[0-9-]{1,2}\.com/
 /etimtoken[0-9]+\.com/
+/etxcapitalh[a-z]{3}\.com/
 /exness[0-9]+\.com/
 /expecta[a-z]+\.com/
 /f.m.store\.xyz/
@@ -211,6 +212,7 @@
 /mfp[a-z]{3,4}\.com/
 /mgs1[0-9]88\.(vip|com)/
 /miracle[a-z]{3,4}\.com/
+/mitsubishicorphk[0-9]*\.(com|xyz)/
 /money\d{4}\.com/
 /moxc[a-z0-9]{2,3}\.com/
 /mycoin[a-z0-9]+\.net/
@@ -359,6 +361,7 @@
 ||boniry.*^
 ||brk.*
 ||btoplus.*^
+||builfcollapsuilding.*^
 ||bullish*.com^
 ||buyer-work.*^
 ||cbn-tw.*^
@@ -402,6 +405,7 @@
 ||registered-*.com^
 ||sc.*.cn^
 ||sfexpress-help.*^
+||starbucksvip*.com^
 ||stenbit.*^
 ||tokocrypto-defi.*^
 ||traweb3.*^

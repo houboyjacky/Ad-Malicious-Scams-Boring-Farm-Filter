@@ -21,6 +21,7 @@
 #||easy.co^
 #||freebitco.in^
 #||fx110.com.tw^
+#||gate.io^
 #||github.io^
 #||google.com^
 #||lin.ee^
@@ -13812,7 +13813,6 @@
 ||gasochains.com^
 ||gastrade.company^
 ||gate-trade.xyz^
-||gate.io^
 ||gate168.com^
 ||gatecn.co^
 ||gatecng.com^
