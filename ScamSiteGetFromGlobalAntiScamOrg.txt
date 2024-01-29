@@ -21,6 +21,7 @@
 #||easy.co^
 #||freebitco.in^
 #||fx110.com.tw^
+#||fxtrading.com^
 #||gate.io^
 #||github.io^
 #||google.com^
@@ -30,6 +31,7 @@
 #||mystrikingly.com^
 #||okcoin.com^
 #||page.link^
+#||pangaea-global.com^
 #||payware.com.tw^
 #||pionex.com^
 #||pixnet.net^
@@ -13657,7 +13659,6 @@
 ||fxtradex.info^
 ||fxtrading-hk.com^
 ||fxtrading.best^
-||fxtrading.com^
 ||fxtradingbet.com^
 ||fxtradingbrokers.com^
 ||fxtradingclub.live^
@@ -20888,7 +20889,6 @@
 ||pandorainvestltds.com^
 ||pandorfx.com^
 ||panel-coinexi.com^
-||pangaea-global.com^
 ||panokc.com^
 ||pansh-twsstwo.com^
 ||pansh-twstwo.com^

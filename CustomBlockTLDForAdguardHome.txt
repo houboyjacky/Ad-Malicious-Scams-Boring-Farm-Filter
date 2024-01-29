@@ -184,9 +184,11 @@
 /goodluck9+8+\.com/
 /gyym[0-9]+\.com/
 /haitao[a-z]{3}\.com/
+/haorui[a-z]{3}\.com/
 /harord[a-z]\.com/
 /hivemall[a-z]\.com/
 /hkscc[a-z]{3}\.com/
+/hotcoin[a-z]{2,3}\.com/
 /hssui[0-9]+\.wixsite\.com/
 /huata[a-z]+\.com/
 /hv-t[a-z]\.cc/
@@ -198,6 +200,7 @@
 /idgcapital[a-z0-9]*\.com/
 /igmark[a-z0-9]*\.com/
 /information-pages-[0-9]+.webnode.co/
+/insterm[a-z]{3,4}\.com/
 /ioex[0-9]+\.com/
 /ioexx?[0-9]{1,2}\.com/
 /isnotdomain[0-9]+\.com/
@@ -270,6 +273,7 @@
 /spark[a-z]{3-5}\.com/
 /stablecoin.+\..+/
 /starexchang[a-z]{2,3}\.com/
+/starexchange[a-z]\.com/
 /starha[a-z]+\.com/
 /starhal[a-z]+\.com/
 /stellar[a-z]{3}\.com/
@@ -309,6 +313,7 @@
 /vip[a-z0-9]+fx\.com/
 /vipmexc[0-9]{3}\.com/
 /vipmining[0-9]{3,4}\.com/
+/walmartglobal[a-z]{1,2}\.com/
 /wandataw[a-z0-9]*\.com/
 /warrior[a-z]{2}\.com/
 /waytec.+\.com/
@@ -318,6 +323,7 @@
 /wns[0-9]+\.com/
 /wnsr[a-z0-9]*\.com/
 /worldfistw\.[a-z]+/
+/worldwide[a-z]{2,3}\.com/
 /worldwide[a-z]{3}\.com/
 /wsfl\w+gov\.xyz/
 /www-?post-?gov-?tw\.sytes\.net/
@@ -389,6 +395,7 @@
 ||engine6tw.*^
 ||eshop-tw.*^
 ||eurtwoxt.*^
+||ezsohomax.*^
 ||fanbtctw.*^
 ||flipster.*^
 ||foesrvnet.*^
