@@ -242,3 +242,4 @@
 @@||opentix.life^$important
 @@||eth.link^
 @@||gomypay.asia^
+@@||xbanxia.com^
