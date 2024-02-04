@@ -27,6 +27,7 @@
 #||huaweicloudwaf.com^
 #||ig.com^
 #||imgus.cc^
+#||lccnet.com.tw^
 #||lcnycoinj.com^
 #||linkfly.to^
 #||maac.io^
@@ -5464,7 +5465,6 @@
 ||lbtechn.com^
 ||lc-kd.top^
 ||lc.chat^
-||lccnet.com.tw^
 ||lcnycoinj.com^
 ||lcnycoinn.com^
 ||lcnycoinnd.com^
