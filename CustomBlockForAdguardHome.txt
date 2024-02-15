@@ -33,6 +33,7 @@
 #||linkfly.to^
 #||maac.io^
 #||mbobi.com^
+#||mp.weixin.qq.com^
 #||omygod.com.tw^
 #||onelink.me^
 #||pages-wildcard.weebly.com^
@@ -6334,7 +6335,6 @@
 ||mottbi.top^
 ||moviescreen.biz^
 ||movissfk.top^
-||mp.weixin.qq.com^
 ||mpassword.cc^
 ||mpay-etc.com^
 ||mpg1668.com^
