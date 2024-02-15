@@ -241,5 +241,6 @@
 @@||maicoin.com^
 @@||opentix.life^$important
 @@||eth.link^
-@@||gomypay.asia^
+@@||gomypay.asia^$important
 @@||xbanxia.com^
+@@||chainsecurity.asia^$important
