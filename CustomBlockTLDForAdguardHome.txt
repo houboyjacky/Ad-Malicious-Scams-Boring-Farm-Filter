@@ -34,9 +34,11 @@
 /aclar.+\.com/
 /agencyo[a-z]\.com/
 /ai-international[a-z0-9]+\.com/
+/aidhscwy[a-z]+[0-9]\.com/
 /aisme.+\.com/
 /aismex[a-z0-9]+.com/
 /aitechstock\.(co|tw|vip)/
+/aiyfpro[a-z]{1,2}\.com/
 /alliancegrowth.+\.[a-z]+/
 /alphafinace[a-z0-9]+\.com/
 /alvexo[a-z]{3}\.com/
@@ -57,7 +59,7 @@
 /bellagio\.(casa|fun|today|work)/
 /binarium[a-z]+\.com/
 /bitcores[0-9]+\.com/
-/bitget[a-z]{3}\.com/
+/bitget[a-z]{2,3}\.com/
 /bithumb[0-9]+\.(com|me|xyz)/
 /bitkonan[a-z0-9]{3}\.com/
 /bitmax[a-z0-9]+\.com/
@@ -68,8 +70,10 @@
 /bjwex[0-9]+\.com/
 /bkex[a-z]{3}\.com/
 /bl[0-9]{3}\.net/
+/blish[a-z]{1,2}\.com/
 /blueberrypro\..+/
 /bnwreder[a-z]{2}\.com/
+/bnwreus[a-z]{3}\.com/
 /booking-\w+\.cloud/
 /breakout[a-z]{2}\.com/
 /btc[0-9]{4}\.com/
@@ -103,7 +107,6 @@
 /coincheck[a-z]+\.com/
 /coincheck\.[a-z]+/
 /coindex.*\..*/
-/coinjar[0-9]\.com/
 /coinjar[0-9]+\.com/
 /coinmama[a-z]+\.com/
 /coinmamam[a-z]+\.com/
@@ -123,6 +126,7 @@
 /dbag[a-z]{3}\.com/
 /dbgmarke[a-z0-9]*\.com/
 /dbyl[0-9]+\.com/
+/dbyl1[0-9]{3}\.com/
 /deeigp[a-z]{3}\.vip/
 /defiflexpool-vip-[a-z0-9]*\.com/
 /defiflexpool.*\.com$/
@@ -141,10 +145,12 @@
 /dwgj[0-9]{3-4}\.com/
 /dxd[a-z]{3}\.vip/
 /dxm[0-9]*.com/
+/dyadi[a-z]{2,4}\.com/
 /earningso[a-z]\.com/
 /ebay-comerc[a-z]*\.com/
 /ee[0-9]+\.com/
 /em[a-z][a-z]\.xyz/
+/energy[a-z]{2,3}\.com/
 /eth-cvc[0-9]*\.com/
 /ethminer-[a-z]+\.com/
 /etimtoken[0-9-]{1,2}\.com/
@@ -157,6 +163,7 @@
 /fantom[a-z]{2,3}\.com/
 /fasonlacrm\.[a-z]+/
 /faste[a-z]{4,5}\.com/
+/fastex[a-z]{3}\.com/
 /fchange[a-z0-9]*\.xyz/
 /felixo[a-z]{2}\.com/
 /fenglong[0-9]+.xyz/
@@ -193,6 +200,7 @@
 /haitao[a-z]{3,4}\.com/
 /haorui[a-z]{3}\.com/
 /harord[a-z]\.com/
+/hash[a-z]{3}\.com/
 /hivemall[a-z]\.com/
 /hkscc[a-z]{3}\.com/
 /hotcoin[a-z]{2,3}\.com/
@@ -206,6 +214,7 @@
 /idfpower[a-z0-9]*\.com/
 /idgcapital[a-z0-9]*\.com/
 /igmark[a-z0-9]*\.com/
+/imcmax-[a-z]{2,3}\.com/
 /imxmj[a-z]\.com/
 /information-pages-[0-9]+.webnode.co/
 /insterm[a-z]{3,4}\.com/
@@ -215,9 +224,12 @@
 /jrs1[0-9]+\.com/
 /js[0-9]+\.cn/
 /jumster[a-z]+\.com/
+/kaken[a-z]{3}\.com/
 /kavala[a-z0-9]{0-2}\.com/
+/kepin[a-z]{2,3}\.com/
 /kicurency.+\..+/
 /kimomi\.[a-z]+/
+/koko[a-z]{3}\.vip/
 /kokou[a-z]{2}\.vip/
 /kpcb[a-z0-9]*\.com/
 /kwai[a-z]+\.com/
@@ -239,6 +251,7 @@
 /money\d{4}\.com/
 /moneypt[a-z]{2,3}\.com/
 /moxc[a-z0-9]{2,3}\.com/
+/mtooe[a-z]{2,3}\.com/
 /mycoin[a-z0-9]+\.net/
 /mycoinps[0-9]+\.(com|net)/
 /mypass-wor[a-z]+\.cc/
@@ -249,8 +262,10 @@
 /oandg[a-z0-9]*\.com/
 /odintw[a-z0-9]*\.com/
 /ofa[0-9]77\.net/
+/osig[a-z]{5,6}\.com/
 /pages-[0-9]+\.pw/
 /pageverification[a-z0-9]+\.co\.vu/
+/paxos[a-z]{3}\.com/
 /peeba[0-9]\.com/
 /peicheng[a-z]{2,3}\.com/
 /peicheng[a-z0-9]+\.com/
@@ -278,6 +293,7 @@
 /shopee-[a-z0-9]+\.tw/
 /shopping-[a-z]+\.com/
 /shoppingmall[0-9]*\.xyz/
+/shoptw[a-z]\.com/
 /shopvip-?[a-z]{0-2}\.[a-z]+/
 /sichcapital[a-z0-9]+\.com/
 /snx.+\.com/
@@ -314,6 +330,7 @@
 /track-tw[0-9]+\.com/
 /trade[0-9]+\.xyz/
 /tradenation[a-z]{1,2}\.(tw|com)/
+/trcoe[a-z]{2,3}\.com/
 /tron[a-z]{3,4}\.com/
 /truefizz[a-z]+\.com/
 /tw-shopify[a-z0-9]+\.com/
@@ -327,6 +344,7 @@
 /usdter.?\..*/
 /vacation-id[0-9]+.eu/
 /vaticapit[a-z]{2,4}\.com/
+/viahtgogo[a-z]{2,3}\.com/
 /videshivyaapaar[0-9]\.shop/
 /view[0-9]{2,3}\.bid/
 /vip[a-z0-9]+fx\.com/
@@ -357,6 +375,7 @@
 /ypscsho[a-z0-9]+tw\.com/
 /yulonfo[a-z0-9]*\.com/
 /yundin[a-z0-9]*\.com/
+/zenexc[a-z]\.com/
 /zghk[0-9]+ex\.com/
 /ziiea[a-z]+\.com/
 #||*.online^$denyallow=pestyle.online
@@ -380,6 +399,7 @@
 ||acp-tw.*^
 ||ada-defi.*^
 ||affonetrax*.*^
+||agbarnse.*^
 ||ainoce.*^
 ||alfa-crypx.*^
 ||alfabtc.*^
@@ -394,6 +414,7 @@
 ||atgmyyy.*^
 ||bankcex.*^
 ||bellagio.*^
+||bfkhj.*^
 ||bing-bon.*^
 ||bithumb77.*^
 ||bitk-eth.*^
@@ -415,6 +436,7 @@
 ||difcinvestment.*^
 ||ebay-tw.*^
 ||ellandroadcapital.*^
+||emperor-medie.*^
 ||engine6tw.*^
 ||eshop-tw.*^
 ||eurtwoxt.*^
@@ -439,6 +461,7 @@
 ||jimmyconnie.*^
 ||joom.*^
 ||kdltoken.*^
+||laza-dasg.*^
 ||lehinsecurities.*
 ||loanadvisorservices.*^
 ||medisou.*^
@@ -454,9 +477,11 @@
 ||sfexpress-help.*^
 ||shopingcentrale.*^
 ||shoppinggiftcom.*^
+||sinoclick.*^
 ||starbucksvip.+.com^
 ||stenbit.*^
 ||tk-shop.*^
+||tkocryptocurrency.*^
 ||tokocrypto-defi.*^
 ||traweb3.*^
 ||treasuremax.*^
