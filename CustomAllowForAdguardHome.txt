@@ -244,3 +244,5 @@
 @@||gomypay.asia^$important
 @@||xbanxia.com^
 @@||chainsecurity.asia^$important
+@@||dometaipei.taipei^
+@@||harry-marketing.com^

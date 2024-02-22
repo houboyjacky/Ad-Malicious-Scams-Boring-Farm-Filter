@@ -916,6 +916,7 @@
 ||asia-shopify.com^
 ||asialawyer1.com^
 ||asianherald.mystrikingly.com^
+||asiapacnetmedialtd.com^
 ||asiatargettwm.com^
 ||asiatargettwn.com^
 ||asics-store.com.tw^
@@ -1437,6 +1438,7 @@
 ||blackgood.tw^
 ||blacktech.me^
 ||blanketgraze.top^
+||blasterswap.com^
 ||blendedsearch.com^
 ||blenderelements.com^
 ||blessrepressive.top^
@@ -2396,6 +2398,7 @@
 ||crownhappier.top^
 ||crrent.top^
 ||crscapital.top^
+||crypacific.com^
 ||crypacific.vip^
 ||cryptagbt.vip^
 ||cryptagroz.vip^
@@ -2472,6 +2475,7 @@
 ||cubamos.buzz^
 ||cuiaethebcr.com^
 ||cuicfif.cn^
+||cuisjz.com^
 ||cultivaterenet.top^
 ||cumenod.com^
 ||currencyinfo.net^
@@ -2655,6 +2659,7 @@
 ||defimeta30.world^
 ||defimetavip6.com^
 ||deflawfirm.com^
+||degenbase.trade^
 ||degetau.com^
 ||dehooshop.com^
 ||deikwf.com^
@@ -2850,7 +2855,6 @@
 ||dollarvigilante.lt.acemlnb.com^
 ||domaincntrol.com^
 ||domall.world^
-||dometaipei.taipei^
 ||donnyollinge.com^
 ||donorcomms.asia^
 ||dossd.shop^
@@ -2859,6 +2863,7 @@
 ||douyin8798.com^
 ||douyin89.com^
 ||douyintw.com^
+||dovvj.com^
 ||dp369.net^
 ||dpcg.vip^
 ||dpmisoa.com^
@@ -3265,6 +3270,7 @@
 ||etrysters.com^
 ||etscapitalhncs.com^
 ||etsyller.com^
+||etsyrj.shop^
 ||eturl.cn^
 ||etxcapitaldi.com^
 ||etxcapitalhncs.com^
@@ -4332,6 +4338,7 @@
 ||haiwaiquanqiugou.tw^
 ||haldiramcontact.com^
 ||hallrelec.site^
+||hamncjtw.shop^
 ||hamxns.top^
 ||hana_xb.com^
 ||hanacastlestore.com^
@@ -5144,6 +5151,7 @@
 ||jisonxse.com^
 ||jiuawpoa.com^
 ||jiulaishop-asia.com^
+||jjball178.com^
 ||jjball999.com^
 ||jjeez.com^
 ||jjhrt.net^
@@ -5498,6 +5506,8 @@
 ||kobye.store^
 ||koebui.vip^
 ||koicpl.vip^
+||kokocav.vip^
+||kokociv.vip^
 ||kokouas.vip^
 ||kokoubp.vip^
 ||kokoubs.vip^
@@ -5654,6 +5664,7 @@
 ||laws0800.com^
 ||laza-dasg.com^
 ||laza-dasg.top^
+||lazad-asg.cc^
 ||lazada886tw.com^
 ||lazadaidlj.com^
 ||lazadanet.com^
@@ -6521,6 +6532,7 @@
 ||mtyhce.store^
 ||mu-coin.info^
 ||mua5588.com^
+||mubefeos.vip^
 ||mudis-tw.icu^
 ||mummylove.top^
 ||mumu-coin.com^
@@ -10470,6 +10482,7 @@
 ||wellview.com.tw^
 ||welove888.com^
 ||welovetrump.lt.acemlnb.com^
+||wen.exchange^
 ||wenda.buzz^
 ||wenhualnvestment.com^
 ||wenqiliang.com^
