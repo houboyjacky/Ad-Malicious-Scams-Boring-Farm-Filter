@@ -168,6 +168,7 @@
 /etimtoken[0-9]+\.com/
 /etxcapital[a-z]{4}\.com/
 /etxcapitalh[a-z]{3}\.com/
+/exnesjx[a-z]{2,3}\.com/
 /exness[0-9]+\.com/
 /expecta[a-z]+\.com/
 /f.m.store\.xyz/
