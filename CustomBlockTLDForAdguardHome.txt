@@ -45,7 +45,7 @@
 /alphafinace[a-z0-9]+\.com/
 /alvexo[a-z]{3}\.com/
 /amazon[0-9]+\.mobi/
-/animoca[a-z]{3}\.com/
+/animoca[a-z]{2,3}\.com/
 /ankr[a-z]{3}\.com/
 /antsforex[a-z0-9]*\.com/
 /apid-tw[a-z]+\.cc/
@@ -61,12 +61,14 @@
 /bdswiss[a-z]{3}\.com/
 /beanfun[a-z]\.com/
 /bellagio\.(casa|fun|today|work)/
+/binaceys[a-z]\.com/
 /binarium[a-z]+\.com/
 /bitcores[0-9]+\.com/
 /bitget[a-z]{2,3}\.com/
 /bithumb[0-9]+\.(com|me|xyz)/
 /bitkonan[a-z0-9]{3}\.com/
 /bitmart[a-z]+\.com/
+/bitmatm[a-z]{2}\.com/
 /bitmax[a-z0-9]+\.com/
 /bitmex[a-z0-9]+\.com/
 /bitonic[a-z]+\.com/
@@ -88,6 +90,7 @@
 /bullish[a-z]{1,2}\.com/
 /bycp[a-z0-9]*\.com/
 /c[a-z]2024[0-9]{2}\.store/
+/cadinb[a-z]\.com/
 /caifuyiha[a-z0-9]*\.club/
 /caijing/
 /caixin[0-9]+yule\.com/
@@ -114,6 +117,7 @@
 /coinbase.+\..+$/
 /coincheck[a-z]+\.com/
 /coincheck\.[a-z]+/
+/coindcx[a-z]{3,4}\.com/
 /coindex.*\..*/
 /coinjar[0-9]+\.com/
 /coinmama[a-z]+\.com/
@@ -208,6 +212,7 @@
 /gleneagle[a-z]{3,4}\.com/
 /gleneagle[a-z]{3}\.com/
 /global-exp[a-z0-9]+rade\.com/
+/globalshop[a-z]{2,3}\.com/
 /goldc[a-z]{2}\.cc/
 /goldmansachs[0-9]*\.[a-z]+/
 /goodluck9+8+\.com/
@@ -281,8 +286,10 @@
 /oandg[a-z0-9]*\.com/
 /odintw[a-z0-9]*\.com/
 /ofa[0-9]77\.net/
+/orsted-[a-z]{2,3}\.com/
 /osig[a-z]{5,6}\.com/
 /osig[a-z]{6}\.com/
+/ottoshop[a-z]{2}\.com/
 /pages-[0-9]+\.pw/
 /pageverification[a-z0-9]+\.co\.vu/
 /paxos[a-z]{3}\.com/
@@ -312,6 +319,7 @@
 /service-id[0-9]+\.shop/
 /sfexpress-.+\.(com|info)/
 /sgx[0-9a-z]+\.cyou/
+/shjs[0-9]{3}\.com/
 /shopee-[a-z0-9]+\.tw/
 /shopping-[a-z]+\.com/
 /shoppingmall[0-9]*\.xyz/
@@ -366,7 +374,7 @@
 /tw[a-z0-9-]*carousel[a-z0-9-]*\.(com|xyz|tw)/
 /twpldr[a-z]\.com/
 /ubsex[a-z0-9]{1,2}\.com/
-/uphold[a-z]{3}\.com/
+/uphold[a-z]{3,4}\.com/
 /usdter.?\..*/
 /vacation-id[0-9]+.eu/
 /vaticapit[a-z]{2,4}\.com/
@@ -486,6 +494,7 @@
 ||gstha.*^
 ||hispeedtrading0728.*^
 ||imtoken*.*^
+||instabank*.com^
 ||inverbid.*^
 ||jimmyconnie.*^
 ||joom.*^
@@ -518,6 +527,7 @@
 ||traweb3.*^
 ||treasuremax.*^
 ||treasuremaxs.*^
+||trust-amm.*^
 ||trustcoin-exchange.*^
 ||tu123.*^
 ||tw-sia.*^

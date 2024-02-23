@@ -30,6 +30,7 @@
 #||imyfone.com^
 #||lccnet.com.tw^
 #||lcnycoinj.com^
+#||learningpa.cc^
 #||linkfly.to^
 #||maac.io^
 #||mbobi.com^
@@ -5708,7 +5709,6 @@
 ||leadquizzes.com^
 ||leanote.xyz^
 ||learnguitarplaying.com^
-||learningpa.cc^
 ||lebmall.shop^
 ||leckfnthecu.christmas^
 ||ledgiit.com^
