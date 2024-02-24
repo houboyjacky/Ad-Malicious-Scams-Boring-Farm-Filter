@@ -28,6 +28,7 @@
 #||ig.com^
 #||imgus.cc^
 #||imyfone.com^
+#||king108.com^
 #||lccnet.com.tw^
 #||lcnycoinj.com^
 #||learningpa.cc^
@@ -5445,7 +5446,6 @@
 ||kindou-jp.com^
 ||king-lineage.com^
 ||king-salt.com^
-||king108.com^
 ||king168.co^
 ||king88.tw^
 ||king888.one^
