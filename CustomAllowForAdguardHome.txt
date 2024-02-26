@@ -249,7 +249,6 @@
 @@||bugcatcapoo.store^$important
 @@||bitopro.com^$important
 ! 阻礙使用者體驗
-@@||douyincdn.com^$important
 @@||apple.com^$important
 @@||icloud.com^$important
 @@||line.biz^$important
