@@ -345,7 +345,7 @@
 /svj[\-a-z0-9]\.com/
 /swissborg[a-z]+\.(cc|com)/
 /taiwan-[a-z]+\.(com|tw)/
-/taiwanmobile[a-z]{3}\.com/
+/taiwanmobile[a-z]{3}\.(com|cc|life|cyou)/
 /taiwanstartr.+\.com/
 /tanaka[a-z]+\.com/
 /tesseract[0-9]{3}\.top/
@@ -450,8 +450,10 @@
 ||bellagio.*^
 ||bfkhj.*^
 ||bing-bon.*^
+||bitercoin.*^
 ||bithumb77.*^
 ||bitk-eth.*^
+||bitopro.*^
 ||bitstamp*.*^
 ||bnextex.*^
 ||boniry.*^
@@ -466,6 +468,7 @@
 ||coingrew.*^
 ||coinlead.*^
 ||coinparks.*^
+||coinrisen.*^
 ||crossglobal*.*^
 ||crypacific.*^
 ||dbg-coltdfx.*^
@@ -477,6 +480,7 @@
 ||engine6tw.*^
 ||eshop-tw.*^
 ||eurtwoxt.*^
+||ezsoholl.*^
 ||ezsohomax.*^
 ||fanbtctw.*^
 ||flipster.*^
@@ -520,6 +524,7 @@
 ||sinoclick.*^
 ||starbucksvip.+.com^
 ||stenbit.*^
+||taiwanmodlie.*^
 ||tk-shop.*^
 ||tkocryptocurrency.*^
 ||tokocrypto-defi.*^
