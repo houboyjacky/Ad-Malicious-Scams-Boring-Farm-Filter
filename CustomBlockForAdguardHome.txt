@@ -37,6 +37,7 @@
 #||maac.io^
 #||mbobi.com^
 #||mp.weixin.qq.com^
+#||mydiscussion.net^
 #||omygod.com.tw^
 #||onelink.me^
 #||pages-wildcard.weebly.com^
@@ -6756,7 +6757,6 @@
 ||mycoinps667.net^
 ||mycollection.shop^
 ||mycurrency.net^
-||mydiscussion.net^
 ||myemployee.shop^
 ||myfany.cc^
 ||myfany.cyou^
