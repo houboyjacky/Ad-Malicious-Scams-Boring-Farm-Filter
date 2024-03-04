@@ -46,6 +46,7 @@
 /alphafinace[a-z0-9]+\.com/
 /alvexo[a-z]{3}\.com/
 /amazon[0-9]+\.mobi/
+/amtop[a-z]{2,4}\.com/
 /animoca[a-z]{2,3}\.com/
 /ankr[a-z]{3}\.com/
 /antsforex[a-z0-9]*\.com/
@@ -85,6 +86,7 @@
 /bmd[a-z]{3}\.com/
 /bnwreder[a-z]{2}\.com/
 /bnwreus[a-z]{3}\.com/
+/bnwreus[a-z]{3}\.com/
 /booking-\w+\.cloud/
 /breakout[a-z]{2}\.com/
 /btc[0-9]{4}\.com/
@@ -106,6 +108,7 @@
 /carousell[0-9][0-9]kf\.tw/
 /carousell[a-z][0-9]+\.com/
 /carousellattest[a-z0-9]+\.com/
+/carousellidentify[0-9]{2}\.com/
 /carousellservice[0-9]{3}\.com/
 /carr[eo]fo[a-z]+\.com/
 /casave[0-9]+00\.com/
@@ -129,6 +132,7 @@
 /coinrule.*\.*/
 /coinvv[a-z0-9]+\.com/
 /com-id\w+.cloud/
+/cometh[a-z]\.com/
 /costco.+\.com/
 /cpatex[a-z]+\.com./
 /crex24[a-z]{1,2}\.com/
@@ -161,6 +165,7 @@
 /dxd[a-z]{3}\.vip/
 /dxm[0-9]*.com/
 /dyadi[a-z]{2,4}\.com/
+/e-?b-?a-?y-?o-?f-?f-?i-?c-?i-?a-?l-?\.com/
 /earningso[a-z]\.com/
 /earningsx[a-z]\.com/
 /ebay-[official-]{9}\.com/
@@ -223,7 +228,7 @@
 /haitao[a-z]{3,4}\.com/
 /haorui[a-z]{3}\.com/
 /harord[a-z]\.com/
-/hash[a-z]{3}\.com/
+/hashs[a-z]{2}\.com/
 /hashtrading[a-z0-9]\.com/
 /heliojexchangge[a-z]{1,3}\.com/
 /hivemall[a-z]\.com/
@@ -246,6 +251,7 @@
 /ioex[0-9]+\.com/
 /ioexx?[0-9]{1,2}\.com/
 /isnotdomain[0-9]+\.com/
+/jarvis[a-z]{3}\.com/
 /jjball[0-9]{3}\.com/
 /jrs1[0-9]+\.com/
 /js[0-9]+\.cn/
@@ -256,18 +262,18 @@
 /kicurency.+\..+/
 /kimomi\.[a-z]+/
 /koko[a-z]{3}\.vip/
-/kokou[a-z]{2}\.vip/
 /kpcb[a-z0-9]*\.com/
 /kwai[a-z]+\.com/
 /lba[a-z]{4}\.vip/
 /linebank\.(beauty|click|homes|lol|one|mom|xyz|pics|skin|hair|shop)/
+/linebiz[a-z]-tw\.com/
 /linedown.(beauty|click|homes|lol|one|mom|xyz|pics|skin|hair|shop)/
 /linetw\.(beauty|click|homes|lol|one|mom|xyz|pics|skin|hair|shop)/
 /liquiditypool-.+\.com/
 /lirunps[a-z]{2,4}\.com/
 /long[0-9]\.net/
 /market[a-z]{3}\.com/
-/maticax[a-z]\.com/
+/matic[a-z]{3}\.com/
 /mercadolibre[a-z0-9-]+\.com/
 /meta[a-z0-9-]+\.onrender\.com/
 /metoocofstimrgpaged-[a-z0-9]+\.online/
@@ -278,6 +284,7 @@
 /momotw[a-z]{4}\.(store|shop)/
 /money\d{4}\.com/
 /moneypt[a-z]{2,3}\.com/
+/moscow[a-z]{3}\.com/
 /moxc[a-z0-9]{2,3}\.com/
 /mtooe[a-z]{2,3}\.com/
 /mtooex[a-z]{1,2}\.com/
@@ -289,9 +296,10 @@
 /news-spe\d+\.com/
 /nymex.+tw\.com/
 /oandg[a-z0-9]*\.com/
+/oceane[a-z]{2}\.com/
 /odintw[a-z0-9]*\.com/
 /ofa[0-9]77\.net/
-/okb[a-z]{3}\.com/
+/okb[a-z]{3,4}\.com/
 /orsted-[a-z]{2,3}\.com/
 /osig[a-z]{5,6}\.com/
 /osig[a-z]{6}\.com/
@@ -308,6 +316,7 @@
 /prettya[a-z]{3}-my\.com/
 /psychologis-\w+.com/
 /pty[a-z]{4}-my\/com/
+/pundi[a-z]{3}\.com/
 /qeic[a-z0-9]+w\.net/
 /qfii[a-z0-9]*\.com/
 /qh...\.tw/
@@ -359,6 +368,7 @@
 /tesseract[0-9]{3}\.top/
 /tethermw[a-z]\.com/
 /tezos[a-z]{3}\.com/
+/tezosys[a-z]\.com/
 /tgr[0-9]{5}\.com/
 /tgr[0-9]+\.com/
 /thig[a-z]{3}\.com/
@@ -447,8 +457,6 @@
 ||alfabtc.*^
 ||alpemarket.*^
 ||amgmall.*^
-||amtop.*^
-||amtopcotd.*^
 ||ankex-btc.*^
 ||anybuyshops.*^
 ||apexcoin.*^
@@ -492,6 +500,7 @@
 ||ezsoholl.*^
 ||ezsohomax.*^
 ||fanbtctw.*^
+||fcollapsuilding.*^
 ||flipster.*^
 ||foesrvnet.*^
 ||foxglobal.*^
@@ -517,6 +526,7 @@
 ||loanadvisorservices.*^
 ||mc-globaltechleaders.*^
 ||medisou.*^
+||myfany.*^
 ||newgeneration4now.*^
 ||newtradetw.*^
 ||obtshop.*^
@@ -554,4 +564,5 @@
 ||xn--7-eleven*.*^
 ||xn--shopee*.*^
 ||yasenfinancial.*^
+||zalando-*.*^
 ||zhy*.com^
