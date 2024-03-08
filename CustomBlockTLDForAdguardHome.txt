@@ -469,7 +469,7 @@
 ||bitercoin.*^
 ||bithumb77.*^
 ||bitk-eth.*^
-||bitopro.*^
+||bitopro.*^$denyallow=bitopro.com|*.bitopro.com
 ||bitstamp*.*^
 ||bnextex.*^
 ||boniry.*^
