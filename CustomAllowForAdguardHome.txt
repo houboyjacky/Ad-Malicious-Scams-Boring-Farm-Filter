@@ -247,10 +247,11 @@
 @@||dometaipei.taipei^
 @@||harry-marketing.com^
 @@||bugcatcapoo.store^$important
-@@||bitopro.com^$important
 ! 阻礙使用者體驗
 @@||apple.com^$important
 @@||icloud.com^$important
-@@||line.biz^$important
 @@||alphaloan.co^$important
 @@||supr.link^
+@@||coinmarketcap.com^$important
+@@||kunjk.top^$important
+@@||iobit.com^$important

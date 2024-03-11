@@ -253,6 +253,7 @@
 ||8legend.online^
 ||8m6.cc^
 ||8net.co^
+||8vdz6.com^
 ||900256.com^
 ||9086659.site^
 ||9087721.site^
@@ -347,6 +348,7 @@
 ||acenteex.com^
 ||acentglobal.com^
 ||acentpro.cc^
+||acentt.cc^
 ||acenttw.pro^
 ||acenttw.us^
 ||acentvip.com^
@@ -467,6 +469,7 @@
 ||ai-internationalxe.com^
 ||aibiad.com^
 ||aicmks.com^
+||aicontract.info^
 ||aidapp.link^
 ||aidefx.com^
 ||aidhscapp.com^
@@ -536,6 +539,7 @@
 ||aitechstock.vip^
 ||aitopit.com^
 ||aiubs.net^
+||aiwisecoin.com^
 ||aixsshop.com^
 ||aiyfpro.com^
 ||aiyfproe.com^
@@ -588,6 +592,7 @@
 ||aliexpressmxz.vip^
 ||aliexprestw.com^
 ||aliexpshool.vip^
+||aliexpsshoo.vip^
 ||alisoso-shop.com^
 ||alksg.com^
 ||allbycoin.com^
@@ -881,6 +886,7 @@
 ||assets.co^
 ||asso.ci^
 ||astarcc.tw^
+||astarn.cc^
 ||asunmt4.com^
 ||aswibm.com^
 ||at019.icu^
@@ -1224,6 +1230,7 @@
 ||bgkgueujrws.com^
 ||bgkuewierhjx.com^
 ||bgurwquwejas.com^
+||bgyck.space^
 ||bh1788.co^
 ||bhdsbghf.com^
 ||bhg.world^
@@ -1400,6 +1407,7 @@
 ||bitekrc.com^
 ||bitercoin.com^
 ||bitercoin.online^
+||bitermarket.shop^
 ||bitermt.com^
 ||biteuse.com^
 ||bitewbn.com^
@@ -1435,6 +1443,7 @@
 ||bitget-maxtsi.com^
 ||bitgetah.com^
 ||bitgetai.com^
+||bitgetakd.com^
 ||bitgetar.com^
 ||bitgetdh.com^
 ||bitgetev.com^
@@ -1501,6 +1510,7 @@
 ||bitmexx02.com^
 ||bitmexx03.com^
 ||bitmexx24.com^
+||bitmhf8e.com^
 ||bitmillion.cc^
 ||bitmillion.one^
 ||bitmillion.vip^
@@ -1615,6 +1625,8 @@
 ||bitturkeh.com^
 ||bitturker.com^
 ||bitturkes.com^
+||bitunix-b.com^
+||bitunix-c.com^
 ||bitvab.com^
 ||bitvaj.com^
 ||bitvavo.asia^
@@ -2803,6 +2815,7 @@
 ||crazyonline-go.com^
 ||crazyonlinego.com^
 ||crazyonlineshop.net^
+||creditdikd.com^
 ||crex24d.com^
 ||crex24i.net^
 ||crex24ims.com^
@@ -3172,6 +3185,7 @@
 ||dex-dt.com^
 ||dex-dydx.net^
 ||dex-ls.com^
+||dex-otc.com^
 ||dex-qs.net^
 ||dex-sk.com^
 ||dex-tx.com^
@@ -3490,6 +3504,7 @@
 ||e-buys.top^
 ||e-sell.cc^
 ||e-vastintel.com^
+||e-world.life^
 ||e-world.live^
 ||eabuiopiiy.com^
 ||eaiphf777.cyou^
@@ -3726,6 +3741,7 @@
 ||eth-wintermute.cc^
 ||eth.limo^
 ||ethbkb.com^
+||ethcnc.com^
 ||ethcoinmar.com^
 ||ethdefie.com^
 ||ether-bk.biz^
@@ -3825,6 +3841,7 @@
 ||evocoin.top^
 ||ewueqyy.com^
 ||ewweex.com^
+||ex-nft.com^
 ||exaschange.com^
 ||exbellmont.com^
 ||exbit161.xyz^
@@ -4984,6 +5001,7 @@
 ||grovpon.life^
 ||grovpon.org^
 ||growndech.com^
+||growyourapp.cc^
 ||grtgd.com^
 ||grueryghqwq.com^
 ||gs1658.com^
@@ -4999,6 +5017,7 @@
 ||gsjuy.xyz^
 ||gss8.com^
 ||gssdfc.com^
+||gsshop-tw.com^
 ||gsshoponlines.com^
 ||gsshoptw.com^
 ||gsygdm.com^
@@ -5742,6 +5761,7 @@
 ||imtokenso.com^
 ||imtokenstc.com^
 ||imtokentws.com^
+||imtorn.com^
 ||imtrom.com^
 ||imtrone.com^
 ||imxmji.com^
@@ -6095,6 +6115,7 @@
 ||jnmosterexc.com^
 ||jnulouis.com^
 ||jnvenqnda.com^
+||jobglobal1101.com^
 ||jobs456.com^
 ||jobs789.co^
 ||jobscoiin.com^
@@ -6975,6 +6996,7 @@
 ||maf999.com^
 ||magalu.one^
 ||magicorchard.top^
+||magnum58.cc^
 ||maicoincake.com^
 ||maicoincase.com^
 ||maicoindb.com^
@@ -7430,6 +7452,7 @@
 ||msgjgloint.com^
 ||mshfurmiture.com^
 ||mshgdv.top^
+||mshoping.xyz^
 ||msjhfue.xyz^
 ||mskrkqjwje.com^
 ||msndgj.sbs^
@@ -8138,6 +8161,7 @@
 ||ouger-shop.com^
 ||oulianfx.com^
 ||oumvcoqzqkvtumh.com^
+||ourbit.vip^
 ||ourmomo.com^
 ||ourteashow.com^
 ||owaoigfh.com^
@@ -8565,6 +8589,7 @@
 ||pzcoins.net^
 ||pzcoins.org^
 ||pzkd3.com^
+||pznee.xyz^
 ||q-mechanicg.com^
 ||q58h2p.com^
 ||q58ph5.icu^
@@ -8826,6 +8851,7 @@
 ||revolutrvi.vip^
 ||rexcn.live^
 ||reziti.com^
+||rf.gd^
 ||rfndg.com^
 ||rfvcn.online^
 ||rfvcn.xyz^
@@ -9065,6 +9091,7 @@
 ||sanldj668.com^
 ||sanliglobalsl.com^
 ||sanliglow.com^
+||sannjing3c.com^
 ||santndafq.com^
 ||sanyum.com^
 ||saodisof.com^
@@ -9356,6 +9383,7 @@
 ||shopingcentrale.com^
 ||shopingcentrale.shop^
 ||shopingcentrale.top^
+||shopingcentrale.xyz^
 ||shopingmai.com^
 ||shopjjj.com^
 ||shopliss.com^
@@ -10315,6 +10343,7 @@
 ||tmao168.com^
 ||tmao219.xyz^
 ||tmao818.xyz^
+||tmao9847.xyz^
 ||tmarkets.icu^
 ||tmaxih.com^
 ||tmaxji.com^
@@ -10338,6 +10367,7 @@
 ||tnmghu.online^
 ||tnnnkasndq.com^
 ||tnsiu3c.com^
+||tnydf.life^
 ||tnyjlo.top^
 ||tnze.asia^
 ||toastpay.com.tw^
@@ -12068,6 +12098,7 @@
 ||yield-farmingmax-pro.com^
 ||yieldfarming-marketplus.com^
 ||yieldfarmingmax.com^
+||yields-ai.com^
 ||yieldsai.net^
 ||yihui-goods.com^
 ||yihui-shop.com^
@@ -12088,6 +12119,7 @@
 ||yiopqmu.com^
 ||yiowss.com^
 ||yisdjd.com^
+||yixbit.com^
 ||yizikaijzen.xyz^
 ||yjemdz.top^
 ||ykfygg.top^
@@ -12148,6 +12180,7 @@
 ||youcoedx.cc^
 ||youcopn.vip^
 ||youhui1688hxak.top^
+||youhui1688kkhk.top^
 ||yourctc.com^
 ||youtaosc.vip^
 ||youtiao.info^
