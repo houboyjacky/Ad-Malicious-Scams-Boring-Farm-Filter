@@ -297,6 +297,7 @@
 /mina[a-z]{3}\.com/
 /miracle[a-z]{3,4}\.com/
 /mitsubishicorphk[0-9]*\.(com|xyz)/
+/momoshop[a-z]+\.com/
 /momotw[a-z]{4}\.(store|shop)/
 /money\d{4}\.com/
 /moneypt[a-z]{2,3}\.com/
@@ -430,6 +431,7 @@
 /week-tradepro\..+/
 /weisen[a-z0-9]*\.com/
 /whgj[0-6]+\.(com|cc)/
+/wjer24[0-9]{2}\.site/
 /wns[0-9]+\.com/
 /wnsr[a-z0-9]*\.com/
 /worldfistw\.[a-z]+/
