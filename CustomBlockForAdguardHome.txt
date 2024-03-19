@@ -4,6 +4,7 @@
 ! 過度引用 www.tradingview-widget.com
 ! 疑似詐騙或不良的網站
 #||11st.co.kr^
+#||44-aiai.com^
 #||518fb.com^
 #||aka.ms^
 #||beats.com.tw^
@@ -31,6 +32,7 @@
 #||ig.com^
 #||imgus.cc^
 #||imyfone.com^
+#||jiesyun.com.tw^
 #||king108.com^
 #||lccnet.com.tw^
 #||lcnycoinj.com^
@@ -239,7 +241,6 @@
 ||3xhq13r.top^
 ||41nv.top^
 ||43.134.100.133^
-||44-aiai.com^
 ||4466yy7.com^
 ||45573me.com^
 ||46.250.252.60^
@@ -5534,7 +5535,6 @@
 ||jiangcaijing.top^
 ||jianno.top^
 ||jieerfd.asia^
-||jiesyun.com.tw^
 ||jihua2.vip^
 ||jii.li^
 ||jijiany.cn^
