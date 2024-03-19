@@ -69,6 +69,7 @@
 /binarium[a-z]+\.com/
 /bitcores[0-9]+\.com/
 /bitget[a-z]{2,3}\.com/
+/bitgetyc[a-z]\.com/
 /bithumb[0-9]+\.(com|me|xyz)/
 /bitkonan[a-z0-9]{3}\.com/
 /bitmart[a-z]+\.com/
