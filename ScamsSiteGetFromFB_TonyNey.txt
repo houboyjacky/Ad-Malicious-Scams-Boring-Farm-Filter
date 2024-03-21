@@ -1,6 +1,7 @@
 
 ! 取自FB https://www.facebook.com/groups/1141798046611751/user/100001471821039/
 ! Update to 2024/03/18 23:59
+#||bitget.com^
 #||cex.io^
 #||cloudfront.net^
 #||easy.co^
@@ -3879,7 +3880,6 @@
 ||bitget.bond^
 ||bitget.cloud^
 ||bitget.com.sg^
-||bitget.com^
 ||bitget.market^
 ||bitgeta.com^
 ||bitgetab.vip^

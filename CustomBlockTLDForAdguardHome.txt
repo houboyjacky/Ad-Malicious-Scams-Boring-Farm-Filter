@@ -1,3 +1,5 @@
+!
+! (需要配合CustomAllowForAdguardHome.txt)
 ! 封鎖國家網域 it、pl
 ! 封鎖詐騙網站常用網域 cyou、top、vip
 ! 封鎖觀察 xyz
@@ -290,6 +292,7 @@
 /liquiditypool-.+\.com/
 /lirunps[a-z]{2,4}\.com/
 /long[0-9]\.net/
+/mainneti[a-z]\.com/
 /malls-sh[a-z]{2}\.com/
 /market[a-z]{3}\.com/
 /matic[a-z]{3}\.com/
@@ -388,7 +391,7 @@
 /svj[\-a-z0-9]\.com/
 /swissborg[a-z]+\.(cc|com)/
 /taiwan-[a-z]+\.(com|tw)/
-/taiwanmobile[a-z]{3}\.(com|cc|life|cyou)/
+/taiwanmobile[a-z]+\.(com|cc|life|cyou|lat)/
 /taiwanstartr.+\.com/
 /tanaka[a-z]+\.com/
 /tesseract[0-9]{3}\.top/

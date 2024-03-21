@@ -1,4 +1,4 @@
-! 自訂允許清單
+! 自訂允許清單(需要配合CustomBlockForAdguardHome.txt)
 !
 ! 特別解放MOPTT
 @@||moptt.tw^
@@ -257,3 +257,5 @@
 @@||iobit.com^$important
 @@||zrbros.com.tw^
 @@||qleshop.com^$important
+@@||ett-tw.biz^$important
+@@||taiwanmobile.com^$important

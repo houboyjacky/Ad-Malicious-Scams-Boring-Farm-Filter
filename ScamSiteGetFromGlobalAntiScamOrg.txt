@@ -12,6 +12,7 @@
 #||apple.com^
 #||bingx.com^
 #||bitfinex.com^
+#||bitget.com^
 #||bitmart.com^
 #||business.site^
 #||bznk.com^
@@ -3996,7 +3997,6 @@
 ||bitget-trade.com^
 ||bitget.cloud^
 ||bitget.com.sg^
-||bitget.com^
 ||bitget.market^
 ||bitgeta.com^
 ||bitgetab.vip^
