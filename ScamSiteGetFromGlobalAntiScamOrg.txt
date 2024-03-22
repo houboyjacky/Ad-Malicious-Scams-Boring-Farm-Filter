@@ -14,6 +14,7 @@
 #||bitfinex.com^
 #||bitget.com^
 #||bitmart.com^
+#||bitunix.com^
 #||business.site^
 #||bznk.com^
 #||cex.io^
@@ -4755,7 +4756,6 @@
 ||bitturkott.com^
 ||bittvalue.ltd^
 ||bitultratrade.com^
-||bitunix.com^
 ||bitunt.com^
 ||bituo7234.com^
 ||bitup24max.com^

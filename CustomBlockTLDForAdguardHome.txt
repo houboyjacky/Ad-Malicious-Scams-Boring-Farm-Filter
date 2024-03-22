@@ -57,6 +57,7 @@
 /app[0-9]+\.xyz/
 /approvedurls[0-9]+.info/
 /ascendex.*\.com/
+/atfx[a-z]{2,3}\.com/
 /avastone[a-z]{3}\.com/
 /avatrade.*\.com/
 /axt[a-z]{3,4}\.com/
@@ -67,6 +68,7 @@
 /bdswiss[a-z]{3}\.com/
 /beanfun[a-z]\.com/
 /bellagio\.(casa|fun|today|work)/
+/bhwjs[0-9]{3}\.com/
 /binaceys[a-z]\.com/
 /binarium[a-z]+\.com/
 /bitcores[0-9]+\.com/
@@ -97,6 +99,7 @@
 /booking-\w+\.cloud/
 /bqcity[0-9]{3}\.com/
 /breakout[a-z]{2}\.com/
+/bsto[a-z]{2}smart.com/
 /btc[0-9]{4}\.com/
 /btcbox[a-z]{1,3}\.com/
 /bullish[a-z]{1,2}\.com/
