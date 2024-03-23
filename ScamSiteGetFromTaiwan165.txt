@@ -335,6 +335,7 @@
 ||abunshop.com^
 ||abunshope.com^
 ||abwhqnjandsaj.com^
+||ac-markets.net^
 ||acafae.top^
 ||acasirt.top^
 ||accessdijv.com^
@@ -653,10 +654,12 @@
 ||amazomn.cc^
 ||amazon-official.com^
 ||amazon.cn^
+||amazon19100.com^
 ||amazon24.vip^
 ||amazon315.top^
 ||amazon5228.top^
 ||amazon5236.top^
+||amazon99.bio^
 ||amazondlj.com^
 ||amazonfbajp.com^
 ||amazonfire3.com^
@@ -831,6 +834,7 @@
 ||aqn666.net^
 ||aqq778.com^
 ||aqw886.cn^
+||aramaxcol.com^
 ||arbitrons.ai^
 ||arbukhsye.com^
 ||arbutuse.com^
@@ -963,6 +967,7 @@
 ||ava-loading1.com^
 ||avabroker-tw.com^
 ||avabrokertrade.com^
+||avacoin.top^
 ||avaetmaxbtc.com^
 ||avalanidc.com^
 ||avant-vip.online^
@@ -1482,6 +1487,7 @@
 ||bitgetev.com^
 ||bitgetgpx.com^
 ||bitgetmfw.com^
+||bitgetscn.com^
 ||bitgetsco.com^
 ||bitgetwvz.com^
 ||bitgetzc.com^
@@ -2928,6 +2934,7 @@
 ||crownhappier.top^
 ||crscapital.top^
 ||crvtt.com^
+||crypacific.vip^
 ||cryptagbt.vip^
 ||cryptage.vip^
 ||cryptagrbt.vip^
@@ -3074,12 +3081,14 @@
 ||cyouclout.xyz^
 ||cys88vc.net^
 ||cysj9.net^
+||czafx.club^
 ||czshopee.cn^
 ||d2h0yxhlh75xmn.cloudfront.net^
 ||d3272.top^
 ||d3826.com^
 ||d3897.com^
 ||d5289.com^
+||d8ckyf0u1o.xyz^
 ||daasomes.com^
 ||daasomtm.com^
 ||daasoomes.com^
@@ -3546,6 +3555,7 @@
 ||dunicorn.co^
 ||duobitx.com^
 ||duopq.top^
+||dusmallshop.site^
 ||duxgoldingltd.com^
 ||duyxvj.top^
 ||dvfvds.com^
@@ -3600,6 +3610,7 @@
 ||dz57.com.tw^
 ||e-bav.top^
 ||e-bayofficial.com^
+||e-bayofficial.top^
 ||e-buys.net^
 ||e-buys.top^
 ||e-sell.cc^
@@ -3754,6 +3765,7 @@
 ||emtakego.com^
 ||enciuf.com^
 ||encrypt-trc.com^
+||encryptednnerd.com^
 ||encunh.com^
 ||endjwbdbw.world^
 ||enegaas.click^
@@ -4031,6 +4043,7 @@
 ||ezsoho.store^
 ||ezsoho.xyz^
 ||ezsoholl.site^
+||ezsoholl.store^
 ||ezsohomax.live^
 ||ezsohomax.online^
 ||ezsohomax.site^
@@ -4344,6 +4357,7 @@
 ||flyxiang3.com^
 ||fm2566.com^
 ||fm8qc.xyz^
+||fmallex.cloud^
 ||fmallshop.com^
 ||fmallshoping.com^
 ||fmallshopping.one^
@@ -4473,6 +4487,7 @@
 ||ftapp223.com^
 ||ftecg.com^
 ||fth5h5.com^
+||ftiksios.com^
 ||ftkinvest.com^
 ||ftlmine.org^
 ||ftmhi.com^
@@ -4778,6 +4793,7 @@
 ||geminital.com^
 ||geminiup-vrfs.top^
 ||geminived.com^
+||gemis.buzz^
 ||gemnsff.com^
 ||gemoini.co^
 ||gendaeaertxagcweal.com^
@@ -4810,6 +4826,7 @@
 ||get4seed.win^
 ||get4seed.world^
 ||get4seed.xyz^
+||getfallinlove.com^
 ||geughb.com^
 ||gevgold.com^
 ||gexcoin.co^
@@ -4953,6 +4970,7 @@
 ||gmiusd.me^
 ||gmiusfx.com^
 ||gmkcz.top^
+||gmlbate.xyz^
 ||gmo.com.tw^
 ||gmofirst.com^
 ||gmoglobal.com.tw^
@@ -5007,6 +5025,7 @@
 ||golaman.com^
 ||golbshop.com^
 ||golchange.com^
+||gold-moveshop.com^
 ||gold-supermall.com^
 ||gold8financialexchange.com^
 ||gold8institute.com^
@@ -5324,6 +5343,7 @@
 ||heishijituan888.top^
 ||heiudiguo.com^
 ||hejlho.top^
+||helidailicai.com^
 ||helioj.com^
 ||heliojexchangge.com^
 ||heliojexchanggein.com^
@@ -6465,6 +6485,7 @@
 ||jzmarkets.com^
 ||jzs833.com^
 ||k0vhp9.com^
+||k0w6.com^
 ||k2sm.net^
 ||k69937.com^
 ||k7nxs.com^
@@ -7035,6 +7056,7 @@
 ||liquiditypoolflow.com^
 ||liquisojt.com^
 ||lirunetyro.com^
+||lirunex.me^
 ||lirunexpro.com^
 ||lirungsasee.com^
 ||lirunpsbvcs.com^
@@ -7208,6 +7230,7 @@
 ||magalu.one^
 ||magicorchard.top^
 ||magnum58.cc^
+||maicoin.com^
 ||maicoincake.com^
 ||maicoincase.com^
 ||maicoindb.com^
@@ -7225,11 +7248,13 @@
 ||maincaixing01.com^
 ||mainnetie.com^
 ||mainnetig.com^
+||mainnetio.com^
 ||maitr.com^
 ||majsdyhw.com^
 ||make8.xyz^
 ||makerdpp.com^
 ||makerometa.net^
+||makeyouhappiness.com^
 ||mall-ebay.com^
 ||mall-lazada.com^
 ||mall-pg.tw^
@@ -7492,6 +7517,7 @@
 ||mgsd88.com^
 ||mgt-capital.com^
 ||mgttc.top^
+||mgwang.top^
 ||mgxbby.top^
 ||mhex88.net^
 ||mhrc.tw^
@@ -8894,6 +8920,7 @@
 ||qhjxld.top^
 ||qhsh2.com^
 ||qhuif.com^
+||qhxhjw1hvt.xyz^
 ||qianff14.xyz^
 ||qianxz217.xyz^
 ||qianying.co^
@@ -9317,6 +9344,7 @@
 ||s66bx.com^
 ||s8fnrg.tw^
 ||sa-platform.com^
+||saberhub.xyz^
 ||sachsvip.org^
 ||sachtip.com^
 ||sachtips.top^
@@ -9666,6 +9694,7 @@
 ||shopingcentral.top^
 ||shopingcentral.vip^
 ||shopingcentral.xyz^
+||shopingcentrale.bond^
 ||shopingcentrale.com^
 ||shopingcentrale.shop^
 ||shopingcentrale.top^
@@ -11091,6 +11120,7 @@
 ||txanys.com^
 ||txcoinn.com^
 ||txgroup.top^
+||txhantip.top^
 ||txlyy.xyz^
 ||txnnezsf.com^
 ||txpkw.com^
@@ -11312,6 +11342,7 @@
 ||user.bdgvip.com^
 ||usgforex.com^
 ||usgfx.global^
+||ushantip.top^
 ||ushiuks.com^
 ||usieo.top^
 ||usmarketex.com^
@@ -11445,6 +11476,7 @@
 ||venvirtx.com^
 ||vepji.com^
 ||vernasijewelry.com^
+||versevip.top^
 ||vertexxs.com^
 ||veshappyenterprise.com^
 ||vfgroups.com^
@@ -11961,6 +11993,7 @@
 ||wiueo.com^
 ||wiyugh.com^
 ||wjaosfjkg.com^
+||wjer2431.site^
 ||wjiajkgfg.com^
 ||wjkgt.xyz^
 ||wkfunds.com^
@@ -12199,6 +12232,7 @@
 ||xioiwe.com^
 ||xioiwrg.com^
 ||xiolohg.com^
+||xiosif.com^
 ||xitca.co^
 ||xitca.site^
 ||xitca.website^
@@ -12474,6 +12508,7 @@
 ||yh22222.xyz^
 ||yh26789.xyz^
 ||yh3588.xyz^
+||yh66989.com^
 ||yh88888.xyz^
 ||yhgj.hk^
 ||yhgoxa.cn^
@@ -12828,6 +12863,7 @@
 ||zldjgiyhg.com^
 ||zldshop.online^
 ||zliaoe.com^
+||zliofli.com^
 ||zlrshop886.com^
 ||zltbt.site^
 ||zltet.fyi^
