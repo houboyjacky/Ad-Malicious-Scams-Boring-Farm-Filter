@@ -3,6 +3,7 @@
 ! Update to 2024/03/25 23:59
 #||bitget.com^
 #||bitunix.com^
+#||bybit.com^
 #||cex.io^
 #||cloudfront.net^
 #||easy.co^
@@ -6437,7 +6438,6 @@
 ||bybit-logi.com^
 ||bybit-opt.com^
 ||bybit.cc^
-||bybit.com^
 ||bybit.us^
 ||bybit200.com^
 ||bybit666.com^
