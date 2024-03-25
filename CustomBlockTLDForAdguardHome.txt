@@ -97,7 +97,7 @@
 /bnwreder[a-z]{2}\.com/
 /bnwreus[a-z]{3}\.com/
 /booking-\w+\.cloud/
-/bqcity[0-9]{3}\.com/
+/bqcity[0-9]{3,4}\.com/
 /breakout[a-z]{2}\.com/
 /bsto[a-z]{2}smart.com/
 /btc[0-9]{4}\.com/
@@ -380,12 +380,14 @@
 /sotck[a-z]+\.com/
 /souhu8[0-9]{1}\.com/
 /spark[a-z]{3-5}\.com/
+/spxu[a-z]{2}\.com/
 /stablecoin.+\..+/
 /starexchang[a-z]{2,3}\.com/
 /starexchange[a-z]\.com/
 /starha[a-z]+\.com/
 /starhal[a-z]+\.com/
 /startrader[0-9]\.tw/
+/steglobal[a-z]{2}\.com/
 /stellar[a-z]{3}\.com/
 /stepup[a-z0-9]*\.com/
 /successfull-[a-z0-9]+\.online/
@@ -397,9 +399,11 @@
 /taiwanmobile[a-z]+\.(com|cc|life|cyou|lat)/
 /taiwanstartr.+\.com/
 /tanaka[a-z]+\.com/
+/telfor[a-z]\.shop/
 /tesseract[0-9]{3}\.top/
 /tethermw[a-z]\.com/
 /tezos[a-z]{3}\.com/
+/tezosy[a-z]{2}\.com/
 /tgr[0-9]{5}\.com/
 /tgr[0-9]+\.com/
 /thig[a-z]{3}\.com/
@@ -502,6 +506,7 @@
 ||bankcex.*^
 ||bellagio.*^
 ||bfkhj.*^
+||binam2link.*^
 ||bing-bon.*^
 ||bitercoin.*^
 ||bitfinex-*.*^
@@ -519,10 +524,12 @@
 ||cbn-tw.*^
 ||coinbasewallet.*^
 ||coinex*.*^
+||coinfalcon.*^
 ||coingrew.*^
 ||coinlead.*^
 ||coinparks.*^
 ||coinrisen.*^
+||cointaste.*^
 ||crossglobal*.*^
 ||crypacific.*^
 ||dbg-coltdfx.*^
@@ -536,6 +543,7 @@
 ||eshop-tw.*^
 ||etmaltw*.*^
 ||eurtwoxt.*^
+||exmodex.*^
 ||ezsoholl.*^
 ||ezsohomax.*^
 ||fanbtctw.*^

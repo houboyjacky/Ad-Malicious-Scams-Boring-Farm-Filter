@@ -259,3 +259,5 @@
 @@||qleshop.com^$important
 @@||ett-tw.biz^$important
 @@||taiwanmobile.com^$important
+@@||beats.com.tw^
+@@||crush40.tw^
