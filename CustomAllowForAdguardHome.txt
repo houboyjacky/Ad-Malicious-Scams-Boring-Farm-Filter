@@ -261,3 +261,10 @@
 @@||taiwanmobile.com^$important
 @@||beats.com.tw^
 @@||crush40.tw^
+@@||xn--6fr5vu82dc9k.net^
+@@||fubonlife.tw^
+@@||fxcm.com^$important
+@@||fxpro.com.tw^$important
+@@||homeworkify.st^
+@@||payez.tw^$important
+@@||tickmill.com^$important
