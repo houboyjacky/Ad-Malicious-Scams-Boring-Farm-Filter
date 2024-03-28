@@ -3,6 +3,7 @@
 ! Update to 2024/03/25 23:59
 #||bitget.com^
 #||bitunix.com^
+#||btcc.com^
 #||cex.io^
 #||cloudfront.net^
 #||easy.co^
@@ -6020,7 +6021,6 @@
 ||btcbxsk.com^
 ||btcbxwi.com^
 ||btcc-otc.com^
-||btcc.com^
 ||btcc.cyou^
 ||btcc.wang^
 ||btcc2022.com^

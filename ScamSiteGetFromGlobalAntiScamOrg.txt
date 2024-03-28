@@ -15,6 +15,7 @@
 #||bitget.com^
 #||bitmart.com^
 #||bitunix.com^
+#||btcc.com^
 #||business.site^
 #||bznk.com^
 #||cex.io^
@@ -5405,7 +5406,6 @@
 ||btcc-otc.com^
 ||btcc.academy^
 ||btcc.cloud^
-||btcc.com^
 ||btcc.cyou^
 ||btcc.wang^
 ||btcc2022.com^

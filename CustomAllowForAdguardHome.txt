@@ -268,3 +268,4 @@
 @@||homeworkify.st^
 @@||payez.tw^$important
 @@||tickmill.com^$important
+@@||pcloud.com^$important
