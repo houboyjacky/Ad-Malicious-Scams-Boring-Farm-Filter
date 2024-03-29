@@ -333,6 +333,7 @@
 ||7-11eleven.click^
 ||7-11eleven.quest^
 ||7-11mallship.shop^
+||7-11mallshopx.xyz^
 ||7-11mybuyshop.shop^
 ||7-11myshipcms.com^
 ||7-11myshipmall.shop^
@@ -1213,6 +1214,7 @@
 ||batecoin.com^
 ||batecoin.net^
 ||batesune.cc^
+||batonexuid.com^
 ||battle1688.com^
 ||batues.cc^
 ||baziyun.top^
@@ -1920,6 +1922,7 @@
 ||buyer-work.one^
 ||buyglobally.vip^
 ||buyingtw.com^
+||buylnothing.click^
 ||buymd.online^
 ||bv888.cc^
 ||bv977.com^
@@ -2126,6 +2129,7 @@
 ||cash17888.com^
 ||casino365.tw^
 ||casino543.com^
+||caskchronicles.com^
 ||casualmeet.click^
 ||catalogleagues.site^
 ||catcarry-tw.info^
@@ -3797,6 +3801,7 @@
 ||fair.markets^
 ||fairdeskdct.com^
 ||fairdeskenv.com^
+||fairdragon.biz^
 ||fairmarketscampaign.com^
 ||faizoeker.com^
 ||faksmb.top^
@@ -4009,6 +4014,7 @@
 ||financialmkf.com^
 ||financialnum.xyz^
 ||finbary.online^
+||fincake.co^
 ||find-you.xyz^
 ||findpretties.com^
 ||fine-art.ge^
@@ -4379,6 +4385,7 @@
 ||gc168.cc^
 ||gc5899.net^
 ||gccasect.com^
+||gccasess.com^
 ||gcese.com^
 ||gconlineshop.buzz^
 ||gconlineshop.life^
@@ -5161,6 +5168,7 @@
 ||hskdsne424837.com^
 ||hskgov.xyz^
 ||hsllfz.top^
+||hsportmarket.com^
 ||hsqupq.top^
 ||hsrd.shop^
 ||hssosh.top^
@@ -5601,6 +5609,7 @@
 ||ivideo247.com^
 ||ividim.top^
 ||ivmgemini.com^
+||ivokbcoin.com^
 ||ivorinfor.online^
 ||iwantu.com^
 ||iwmqa.asia^
@@ -5912,6 +5921,7 @@
 ||kakenpqe.com^
 ||kakenwlu.com^
 ||kakenxyz.com^
+||kakenykh.com^
 ||kakkucb0209.com^
 ||kakrenakl.com^
 ||kamask.online^
@@ -6241,6 +6251,7 @@
 ||kxg.io^
 ||kxhj.online^
 ||kyazgh.top^
+||kybcp.com^
 ||kyberswap.com^
 ||kybnets.vip^
 ||kyc.credit^
@@ -6628,6 +6639,7 @@
 ||ltdd0.top^
 ||ltmaslhl.com^
 ||ltsly.top^
+||ltte.shop^
 ||lttgov.tv^
 ||luanphonimedyto.pages.net.br^
 ||lubu888.mystrikingly.com^
@@ -7008,6 +7020,7 @@
 ||missos.shop^
 ||misstsai77.blog^
 ||misswang4456.blog^
+||mitaeik.buzz^
 ||mitrade.icu^
 ||mitradefoex5.com^
 ||mitradefx.com^
@@ -7370,6 +7383,7 @@
 ||mypass-word.cc^
 ||mypass-wore.cc^
 ||mypass-worg.cc^
+||mypass-worh.cc^
 ||mypass-wori.cc^
 ||mypass-worj.cc^
 ||mypass-work.cc^
@@ -7547,6 +7561,7 @@
 ||nibley.me^
 ||nicebuypay.online^
 ||niceday-shopping.com^
+||nicedayvip.com^
 ||nicegifting.com^
 ||nicolecoo.top^
 ||nigerballs.com^
@@ -7852,6 +7867,7 @@
 ||onada.top^
 ||onada13.com^
 ||onademaxs.top^
+||onbizx.com^
 ||onboebank.top^
 ||onboebina.top^
 ||onboecbd.top^
@@ -8146,6 +8162,7 @@
 ||petsoasis.com^
 ||pfe01.com^
 ||pfjpco.com^
+||pfkbd.shop^
 ||pfl178.cc^
 ||pfl188.cc^
 ||pfl777.cc^
@@ -8407,6 +8424,7 @@
 ||ptpst.top^
 ||pttcom.top^
 ||pttkargo.tech^
+||ptyacemy.com^
 ||ptyadd-my.com^
 ||ptydsdw-my.com^
 ||ptygfby-my.com^
@@ -8418,6 +8436,7 @@
 ||pubingress-feedback-974d66e8c1341bf9.elb.ap-southeast-1.amazonaws.com^
 ||public-sd.com^
 ||pucvmv.top^
+||puerhk.com^
 ||puerstea.top^
 ||pulse-panel.xyz^
 ||pulsepanel.info^
@@ -8631,6 +8650,7 @@
 ||rakutens-supermall.com^
 ||rakutentt.com^
 ||rakutentvs.com^
+||rakutenvst.com^
 ||rakutenw3.com^
 ||rakutenxet.com^
 ||rakutenxi.com^
@@ -8912,6 +8932,8 @@
 ||rv3y.top^
 ||rvegov.com^
 ||rvxrtv.top^
+||rwdqk.today^
+||rwdqk.xyz^
 ||rxyhqdo.com^
 ||ryghd.xyz^
 ||ryudas.xyz^
@@ -10266,6 +10288,7 @@
 ||thecasetales.com^
 ||thefinsrame.com^
 ||thefreeman-store.com^
+||thegutryew.buzz^
 ||thejamestrades.com^
 ||thelikooei.xyz^
 ||theloveofever.com^
@@ -11666,6 +11689,8 @@
 ||wellsfargoice.top^
 ||wellsfargotw.com^
 ||wellview.com.tw^
+||welove588.com^
+||welove777.com^
 ||welove888.com^
 ||welovetrump.lt.acemlnb.com^
 ||wen.exchange^
@@ -11977,6 +12002,7 @@
 ||xggkimixu.com^
 ||xghshop.online^
 ||xgrakj.shop^
+||xgzbwdj.com^
 ||xhby16888.com^
 ||xhjuhe.com^
 ||xhsofficial.com^
@@ -12010,6 +12036,7 @@
 ||xinzhongbo.tw^
 ||xinzhongs.shop^
 ||xiosyo.com^
+||xiowps.com^
 ||xiunjmi.com^
 ||xivr.tw^
 ||xiyoushoushenc.top^
