@@ -1,6 +1,7 @@
 
 ! 取自FB https://www.facebook.com/groups/1141798046611751/user/100001471821039/
 ! Update to 2024/03/29 23:59
+#||apple.com^
 #||bitget.com^
 #||bitunix.com^
 #||btcc.com^
@@ -1533,7 +1534,6 @@
 ||appjun.com^
 ||appk21030.top^
 ||appk31245.xyz^
-||apple.com^
 ||applecryptocoinexchange.com^
 ||appleotws.com^
 ||applettwts.com^
