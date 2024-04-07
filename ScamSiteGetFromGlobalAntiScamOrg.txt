@@ -10,6 +10,7 @@
 #||accupass.com^
 #||aliyuncs.com^
 #||apple.com^
+#||ascendex.com^
 #||bingx.com^
 #||bitfinex.com^
 #||bitget.com^
@@ -2100,7 +2101,6 @@
 ||ascendex-index.com^
 ||ascendex-miningdefi.com^
 ||ascendex-miningweb.com^
-||ascendex.com^
 ||ascendexaudius.com^
 ||ascendexcfx.com^
 ||ascendexep.com^

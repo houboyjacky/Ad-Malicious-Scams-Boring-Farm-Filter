@@ -41,6 +41,7 @@
 /ai-international[a-z0-9]+\.com/
 /aidhscwy[a-z]+[0-9]\.com/
 /aigrid[a-z]{2,3}\.com/
+/aines[a-z]{3,4}\.com/
 /aisme.+\.com/
 /aismex[a-z0-9]+.com/
 /aitechstock\.(co|tw|vip)/
@@ -58,6 +59,7 @@
 /app[0-9]+\.xyz/
 /approvedurls[0-9]+.info/
 /ascendex.*\.com/
+/atfk[a-z]{3}\.com/
 /atfx[a-z]{2,3}\.com/
 /avastone[a-z]{3}\.com/
 /avatrade.*\.com/
@@ -98,6 +100,7 @@
 /blish[a-z]{1,2}\.com/
 /blueberrypro\..+/
 /bmd[a-z]{3}\.com/
+/bntrade[a-z]{3}\.com/
 /bnwreder[a-z]{2}\.com/
 /bnwreus[a-z]{3}\.com/
 /booking-\w+\.cloud/
@@ -182,7 +185,6 @@
 /dongsen[a-z0-9]*\.com/
 /douyin[0-9]{2,4}\.com/
 /downloadc[0-9]*\.com/
-/jse[a-z]{3}\.com/
 /dsglobalyl[l]?\.com/
 /dwgj[0-9]{3-4}\.com/
 /dxd[a-z]{3}\.vip/
@@ -289,7 +291,9 @@
 /jjball[0-9]{3}\.com/
 /jrs1[0-9]+\.com/
 /js[0-9]+\.cn/
+/jse[a-z]{3}\.com/
 /jumster[a-z]+\.com/
+/kaibang[a-z]{3}\.com/
 /kaken[a-z]{3}\.com/
 /kavala[a-z0-9]{0-2}\.com/
 /kepin[a-z]{2,3}\.com/
@@ -349,6 +353,7 @@
 /pageverification[a-z0-9]+\.co\.vu/
 /pass-wor[a-z]{2}\.cc/
 /paxos[a-z]{3}\.com/
+/paxosi[a-z]{1,2}\.com/
 /peeba[0-9]\.com/
 /peicheng[a-z]{2,3}\.com/
 /peicheng[a-z0-9]+\.com/
@@ -405,12 +410,14 @@
 /successfull-[a-z0-9]+\.online/
 /superfinanc[a-z]\.com/
 /supportteam[0-9]+\.asia/
+/sushipp[a-z]\.com/
 /svj[\-a-z0-9]\.com/
 /swissborg[a-z]+\.(cc|com)/
 /taiwan-[a-z]+\.(com|tw)/
 /taiwanmobile[a-z]+\.(com|cc|life|cyou|lat)/
 /taiwanstartr.+\.com/
 /tanaka[a-z]+\.com/
+/telfor[0-9]\.shop/
 /telfor[a-z]\.shop/
 /tesseract[0-9]{3}\.top/
 /tethermw[a-z]\.com/
@@ -503,6 +510,7 @@
 ||0xboost.*^
 ||8ct2*.site^
 ||aave-loan.*^
+||acceptll.*^
 ||acp-tw.*^
 ||ada-defi.*^
 ||affonetrax*.*^
@@ -510,6 +518,7 @@
 ||ainoce.*^
 ||alfa-crypx.*^
 ||alfabtc.*^
+||aliexp-shop.*^
 ||alpemarket.*^
 ||amgmall.*^
 ||ankex-btc.*^
@@ -551,6 +560,7 @@
 ||dbg-coltdfx.*^
 ||dgbaccarat.*^
 ||difcinvestment.*^
+||dusmallshop.*^
 ||ebay-tw.*^
 ||eecoins.*^
 ||ellandroadcapital.*^
@@ -588,6 +598,7 @@
 ||laza-dasg.*^
 ||lehinsecurities.*
 ||loanadvisorservices.*^
+||luxurymartplace.*^
 ||mc-globaltechleaders.*^
 ||medisou.*^
 ||myfany.*^
@@ -613,6 +624,7 @@
 ||taiwanmodlie.*^
 ||tk-shop.*^
 ||tkocryptocurrency.*^
+||tokenlon.*^
 ||tokocrypto-defi.*^
 ||topmall.*^
 ||traweb3.*^
