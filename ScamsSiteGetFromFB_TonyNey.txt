@@ -5,6 +5,7 @@
 #||bitget.com^
 #||bitunix.com^
 #||btcc.com^
+#||bybit.com^
 #||cex.io^
 #||cloudfront.net^
 #||easy.co^
@@ -6498,7 +6499,6 @@
 ||bybit-logi.com^
 ||bybit-opt.com^
 ||bybit.cc^
-||bybit.com^
 ||bybit.us^
 ||bybit200.com^
 ||bybit666.com^

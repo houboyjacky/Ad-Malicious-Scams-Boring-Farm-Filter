@@ -18,6 +18,7 @@
 #||bitunix.com^
 #||btcc.com^
 #||business.site^
+#||bybit.com^
 #||bznk.com^
 #||cex.io^
 #||cloudfront.net^
@@ -5760,7 +5761,6 @@
 ||bybit-crypto.store^
 ||bybit-exchange.pro^
 ||bybit-logi.com^
-||bybit.com^
 ||bybit666.com^
 ||bybitant.com^
 ||bybitcc.com^
