@@ -104,7 +104,7 @@
 /bnwreder[a-z]{2}\.com/
 /bnwreus[a-z]{3}\.com/
 /booking-\w+\.cloud/
-/bqcity[0-9]{3,4}\.com/
+/bqcity[0-9]{3,4}\.(com|net)/
 /breakout[a-z]{2}\.com/
 /bsto[a-z]{2}smart.com/
 /btc[0-9]{4}\.com/
@@ -119,12 +119,8 @@
 /cali[0-9]{3}\.net/
 /cali1356[a-z]\.net/
 /camely[a-z]{2}\.com/
-/camelys[a-z]\.com/
 /capita[a-z0-9]*\.com/
 /carousel[a-z0-9-]*tw\.(com|xyz)/
-/carousel[a-z0-9]+[-]?tw\.com/
-/carousel[a-z0-9]+[-]?tw\.xyz/
-/carousell-tw[a-z0-9]+\.xyz/
 /carousell[0-9][0-9]kf\.tw/
 /carousell[a-z][0-9]+\.com/
 /carousellattest[a-z0-9]+\.com/
@@ -158,6 +154,7 @@
 /cometh[a-z]\.com/
 /costco.+\.com/
 /cpatex[a-z]+\.com./
+/credit[a-z]{3,4}\.com/
 /crex24[a-z]{1,2}\.com/
 /crmqointechex[a-z]*\.com/
 /cronos[a-z]{3}\.com/
@@ -289,6 +286,7 @@
 /jewelr[a-z]{3}\.com/
 /jewelry[a-z]{2,3}\.com/
 /jjball[0-9]{3}\.com/
+/jpgoonet[a-z]\.com/
 /jrs1[0-9]+\.com/
 /js[0-9]+\.cn/
 /jse[a-z]{3}\.com/
@@ -317,6 +315,7 @@
 /matica[a-z]{2}\.com/
 /mercadolibre[a-z0-9-]+\.com/
 /meta[a-z0-9-]+\.onrender\.com/
+/metispl[a-z]\.com/
 /metoocofstimrgpaged-[a-z0-9]+\.online/
 /mfp[a-z]{3,4}\.com/
 /mgs1[0-9]88\.(vip|com)/
@@ -418,7 +417,7 @@
 /taiwanstartr.+\.com/
 /tanaka[a-z]+\.com/
 /telfor[0-9]\.shop/
-/telfor[a-z]\.shop/
+/telfor[a-z]\.(shop|top)/
 /tesseract[0-9]{3}\.top/
 /tethermw[a-z]\.com/
 /tezos[a-z]{3}\.com/
@@ -613,6 +612,7 @@
 ||pgule.*^
 ||plubitit.*^
 ||realizeideal.*^
+||realizeideal*.*^
 ||registered-*.com^
 ||sc.*.cn^
 ||sfexpress-help.*^

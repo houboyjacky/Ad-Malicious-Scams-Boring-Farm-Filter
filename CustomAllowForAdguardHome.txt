@@ -273,3 +273,7 @@
 @@||dadi.com.tw^
 @@||globalantiscam.org^
 @@||qiyicrystal.com^
+@@||digifaculty.com^$important
+@@||bybit.biz^$important
+@@||btdx8.vip^$important
+@@||goodsmile.jp^$important
