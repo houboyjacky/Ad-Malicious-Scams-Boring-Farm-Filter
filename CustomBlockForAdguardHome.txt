@@ -40,6 +40,7 @@
 #||learningpa.cc^
 #||linkfly.to^
 #||maac.io^
+#||mapleland113.com^
 #||mbobi.com^
 #||mp.weixin.qq.com^
 #||mydiscussion.net^
@@ -298,6 +299,7 @@
 ||58888.tw^
 ||588vip.net^
 ||588win.net^
+||58d.tw^
 ||58tha.net^
 ||594po.com^
 ||59it.com.tw^
@@ -620,6 +622,7 @@
 ||admin-login-booking.com^
 ||adna.store^
 ||adsrich.life^
+||adssobf.com^
 ||adsv.svc.litv.tv^
 ||adsx1a.xyz^
 ||adtradeforex.com^
@@ -823,6 +826,7 @@
 ||alphapal.co^
 ||alphazmq.com^
 ||alphazmw.com^
+||alsfound.com^
 ||alternativesalary.online^
 ||altoops.com^
 ||altrev.online^
@@ -847,6 +851,7 @@
 ||amazon24.mobi^
 ||amazon315.top^
 ||amazon5235.top^
+||amazonofficial.top^
 ||amazonviews.me^
 ||amberowigho.click^
 ||ambrosect.online^
@@ -1123,6 +1128,7 @@
 ||aurora86.shop^
 ||aurplus.com^
 ||auscposta.xyz^
+||auspost-xsk.xyz^
 ||auspostaunet.xyz^
 ||authority-twatasi.top^
 ||autoloanabc123.weebly.com^
@@ -1433,6 +1439,7 @@
 ||bisampfdsz.top^
 ||bishengems.top^
 ||bistamgyf.com^
+||bit-ee.top^
 ||bit-exvavo.com^
 ||bit259mk.cyou^
 ||bit569nhm.xyz^
@@ -1544,6 +1551,7 @@
 ||bitonicrbf.com^
 ||bitonicyh.com^
 ||bitonicynf.com^
+||bitop-king.com^
 ||bitopro-ex.com^
 ||bitopro-trade.com^
 ||bitopro-vip.com^
@@ -1669,6 +1677,7 @@
 ||blacktech.me^
 ||blanchea.online^
 ||blanchemacdonald.com^
+||blancheporte.top^
 ||blanketgraze.top^
 ||blasterswap.com^
 ||bldlc.xyz^
@@ -1785,6 +1794,7 @@
 ||bookishive.com^
 ||booklng-reservatlon-n670511.info^
 ||books-compy.com^
+||bookshome-tw.com^
 ||bookxess.com^
 ||bopoed.com^
 ||bopsei.com^
@@ -2384,6 +2394,7 @@
 ||chudian-sg.com^
 ||chunghwataiwan.com^
 ||chungyi2chen.top^
+||chuntianyy.com^
 ||chxduj.top^
 ||chyhbn.com^
 ||ciccvip.work^
@@ -3282,6 +3293,7 @@
 ||dosobex.top^
 ||dossd.shop^
 ||dotcoin.top^
+||douyin0868.com^
 ||douyin598.com^
 ||douyin68.com^
 ||douyin68.online^
@@ -3888,6 +3900,7 @@
 ||facelab.1shop.tw^
 ||fae88a.com^
 ||faeboser-storyresver19848.io.vn^
+||fafa258mmbn.xyz^
 ||fafa8569.cyou^
 ||fafajtud.xyz^
 ||fagre.shop^
@@ -4201,6 +4214,7 @@
 ||fm888.tw^
 ||fmallex.cloud^
 ||fmallshopping.com^
+||fmcpaybop.com^
 ||fmcpaynno.com^
 ||fmfeiu.com^
 ||fmfwed.com^
@@ -4640,6 +4654,7 @@
 ||global-shopping.buzz^
 ||global-ub02.com^
 ||globalcargoshippingcompany.com^
+||globalfinery.shop^
 ||globalkkmiuseonooline.com^
 ||globallogistic-express.com^
 ||globalm88.top^
@@ -4946,6 +4961,7 @@
 ||haigoubet.top^
 ||haigouvip.top^
 ||haimeet.com^
+||haipaiyiuvf.com^
 ||haipaiyived.com^
 ||haitao-tw.com^
 ||haitaohdko.com^
@@ -5420,6 +5436,7 @@
 ||hxtjj.com^
 ||hxty-agent.com^
 ||hyadmin.info^
+||hyagebeva02.com^
 ||hyfayhhjnb.com^
 ||hyhsdsb.com^
 ||hyqq99.com^
@@ -5893,6 +5910,7 @@
 ||jisonx.com^
 ||jisonxse.com^
 ||jiuawpoa.com^
+||jiufus.com^
 ||jiulaishop-asia.com^
 ||jjball178.com^
 ||jjball999.com^
@@ -6200,6 +6218,7 @@
 ||kidscostco.com^
 ||kiekeiha.buzz^
 ||kijhyd.top^
+||kikiwes.buzz^
 ||kilby.buzz^
 ||killingworkers.club^
 ||kilowl.com^
@@ -6208,7 +6227,6 @@
 ||kindou-jp.com^
 ||king-lineage.com^
 ||king-salt.com^
-||king108.com^
 ||king168.co^
 ||king88.tw^
 ||king888.one^
@@ -6377,6 +6395,7 @@
 ||kvmc.top^
 ||kvt68.net^
 ||kvtb.top^
+||kvyr.top^
 ||kwai-vip.com^
 ||kwaibio.com^
 ||kwaidny.com^
@@ -6588,9 +6607,10 @@
 ||lindayang725.com^
 ||line-bnm4.xyz^
 ||line-etsy.com^
-||line-mkbh3.icu^
 ||line-me-ah.com^
 ||line-mkbh1.icu^
+||line-mkbh3.icu^
+||line-mkbh4.icu^
 ||line-mkyn.icu^
 ||line-mnk2.xyz^
 ||line-pay.cc^
@@ -6927,7 +6947,6 @@
 ||manuskripedia.id^
 ||manycoin.com^
 ||maoyou85.com^
-||mapleland113.com^
 ||maplife.1shop.tw^
 ||maria-wu.com^
 ||market4global.shop^
@@ -7179,6 +7198,7 @@
 ||minesweeperplay.online^
 ||minfrve.cc^
 ||mingchaowang.com^
+||mingwei-loan.com^
 ||mingwl.cyou^
 ||mingyuann.com^
 ||mingzheninves.com^
@@ -7223,6 +7243,7 @@
 ||mitsubishicorphk.com^
 ||mitsubishicorphk.xyz^
 ||mitsubishicorphk1.xyz^
+||mitsubishijpn.com^
 ||mitsuimalls.com^
 ||miwooth.com^
 ||mixue-global.com^
@@ -7344,6 +7365,7 @@
 ||moneyptvf.com^
 ||moneyptvy.com^
 ||moneysqurejv.com^
+||moneysqurewg.com^
 ||monezina.com^
 ||monksec.tk^
 ||monthly-giveaway.net^
@@ -7560,6 +7582,7 @@
 ||mycollection.shop^
 ||mycurrency.net^
 ||myemployee.shop^
+||myfans.asia^
 ||myfany.cc^
 ||myfany.cyou^
 ||myfany.xyz^
@@ -7606,6 +7629,7 @@
 ||myromanceradar.life^
 ||mysanhk.com^
 ||myship-7-11.webnode.tw^
+||myship-711-tw.top^
 ||myship-711.top^
 ||myship7-11.club^
 ||myship7-11.vip^
@@ -8520,6 +8544,7 @@
 ||polyx-top.com^
 ||polyxit.com^
 ||poolqkiqna.shop^
+||poontpayto.com^
 ||poontpaytw.com^
 ||popchillservice999.com^
 ||popline.work^
@@ -8946,6 +8971,7 @@
 ||red-mall.shop^
 ||redaplellz.vip^
 ||redcc.org^
+||redfg.net^
 ||redfg.top^
 ||redgp.net^
 ||redize.top^
@@ -9373,6 +9399,7 @@
 ||sendo.tw^
 ||sendo.us^
 ||sensuallove.cc^
+||sentasa-e.com^
 ||seripage-2024.pages.net.br^
 ||serkbjko.me^
 ||servermain.vip^
@@ -9528,6 +9555,7 @@
 ||shopingcentral.vip^
 ||shopingcentrale.bond^
 ||shopingcentrale.com^
+||shopingcentrale.site^
 ||shopingcentrale.top^
 ||shopingcentrale.xyz^
 ||shopiuq.com^
@@ -9912,6 +9940,7 @@
 ||starbucksvvippmoneyawardmoney.com^
 ||starcitizen.pub^
 ||starcoin.one^
+||stardayapp.com^
 ||stardayshops.com^
 ||starexchangeg.com^
 ||starexg.com^
@@ -9924,6 +9953,7 @@
 ||startingedu.tw^
 ||startloveforyou.com^
 ||startrader1.tw^
+||startraderees.cc^
 ||startthetrade.com^
 ||startvvm.com^
 ||starz168.cc^
@@ -10175,6 +10205,7 @@
 ||t-ofupako.online^
 ||t0808.cc^
 ||t0jedbz.xyz^
+||t1p2.top^
 ||t248.com^
 ||t719wl.top^
 ||t7l9wl.top^
@@ -10684,6 +10715,7 @@
 ||titigogo.blogspot.com^
 ||tjchl.shop^
 ||tjngdw432.top^
+||tjvcf.world^
 ||tk-shop.click^
 ||tk-shop.homes^
 ||tk-shop.info^
@@ -11088,6 +11120,7 @@
 ||tw165.tw^
 ||tw1988.link^
 ||tw1vodeplay.xyz^
+||tw2vodeplay.xyz^
 ||tw555.vip^
 ||tw6397.top^
 ||tw666.vip^
@@ -11147,6 +11180,7 @@
 ||twetco.top^
 ||twetcv.top^
 ||twetf.site^
+||tweths.com^
 ||twezloan.com^
 ||twfantasticdating.com^
 ||twfeedhouse.ubpages.com^
@@ -11345,6 +11379,7 @@
 ||ubs-exc.com^
 ||ubsexgk.com^
 ||ubsexgw.com^
+||uc7w.com^
 ||ucexcoin.top^
 ||ucgvtz.top^
 ||uchdk.top^
@@ -11552,6 +11587,7 @@
 ||v4vipuni.com^
 ||v63b.ink^
 ||v7-bet.net^
+||v7k9.com^
 ||v88.com.tw^
 ||v88t1ktokvip.com^
 ||v995.tw^
@@ -11800,7 +11836,9 @@
 ||vsdtrhtr.com^
 ||vsdtvw.com^
 ||vsdtwo.com^
+||vse3f.icu^
 ||vsgny.xyz^
+||vshe.shop^
 ||vsitfwqug15.pro^
 ||vsomye.com^
 ||vstgov.com^
@@ -11914,6 +11952,7 @@
 ||watermelongame.org^
 ||waterov.buzz^
 ||watgerov.buzz^
+||watsone.store^
 ||watteara.top^
 ||wattnosea.top^
 ||watw-cat.top^
@@ -12250,9 +12289,9 @@
 ||wxkitopxw.com^
 ||wxoso.ink^
 ||wyd2.com.tw^
-||wyn777.vip^
 ||wyn666.cc^
 ||wyn777.cc^
+||wyn777.vip^
 ||wyney88.top^
 ||wytfbg.com^
 ||wyygi.club^
@@ -12457,6 +12496,7 @@
 ||xn--7-eleven9527-9o9ug00czm4bki2e.lol^
 ||xn--7-eleven9537-7q1w9d979nqpe.lol^
 ||xn--7-eleven9537-9o9ug00czm4bki2e.lol^
+||xn--7-eleven9907-9o9ug00czm4bki2e.lol^
 ||xn--7-eleven9973-9o9ug00czm4bki2e.lol^
 ||xn--7-elvevn9119-9o9ug00czm4bki2e.lol^
 ||xn--711-bs0fh75bgmuixpf5pf95a.lol^
@@ -13131,6 +13171,7 @@
 ||zxd-d.top^
 ||zxjnn.xyz^
 ||zxor7.com^
+||zxushop.com^
 ||zxw-tw.cn^
 ||zxwman.com^
 ||zxwqjn.com^
