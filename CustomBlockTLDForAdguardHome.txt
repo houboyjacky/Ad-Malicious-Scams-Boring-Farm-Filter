@@ -73,6 +73,7 @@
 /bellagio\.(casa|fun|today|work)/
 /bhwjs[0-9]{3}\.com/
 /biconom[a-z]s\.vip/
+/bience[a-z0-9]{2}\.cc/
 /binaceys[a-z]\.com/
 /binarium[a-z]+\.com/
 /birui[a-z]{2}\.vip/
@@ -203,6 +204,7 @@
 /etimtoken[0-9]+\.com/
 /etxcapital[a-z]{4}\.com/
 /etxcapitalh[a-z]{3}\.com/
+/euroasis[a-z]{2}\.com/
 /exchangei[a-z]\.com/
 /exnesjx[a-z]{2,3}\.com/
 /exness[0-9]+\.com/
@@ -343,6 +345,7 @@
 /ofa[0-9]77\.net/
 /okb[a-z]{3,4}\.com/
 /opens[a-z]{3}\.com/
+/operatetradetw[a-z]\.com/
 /orsted-[a-z]{2,3}\.com/
 /osig[a-z]{5,6}\.com/
 /osig[a-z]{6}\.com/
