@@ -510,6 +510,7 @@
 ||*.pl^$denyallow=org.pl|edu.pl|com.pl|gov.pl
 ||*.vip^
 ||0xboost.*^
+||2812510016.*^
 ||8ct2*.site^
 ||aave-loan.*^
 ||acceptll.*^

@@ -32,6 +32,7 @@
 #||huaweicloudwaf.com^
 #||ig.com^
 #||imgus.cc^
+#||imob.tw^
 #||imyfone.com^
 #||jiesyun.com.tw^
 #||king108.com^
@@ -144,6 +145,7 @@
 ||168nana168.com^
 ||168vip168.com^
 ||168xykai.com^
+||16amazon.xyz^
 ||1711hy.com^
 ||1766hy.com^
 ||1768hi.com^
@@ -193,6 +195,7 @@
 ||277sy.com^
 ||27a8.site^
 ||27f.com.tw^
+||2812510016.cc^
 ||2812510016.fit^
 ||2812510016.ltd^
 ||2812510016.vip^
@@ -537,6 +540,7 @@
 ||a0i3x.top^
 ||a18b5zg9.com^
 ||a1f3777dfa6416ee9714da3c7f3a55cd.rgft.sbs^
+||a1gv4b.xyz^
 ||a1h.net^
 ||a3jpxvo.com^
 ||a4d37f.myshopify.com^
@@ -1380,6 +1384,7 @@
 ||bgcgrrg.icu^
 ||bghsghd.xyz^
 ||bgoani.co^
+||bgw8888.net^
 ||bhbv.asia^
 ||bhhyhsds.com^
 ||bhilbc.com^
@@ -1894,6 +1899,7 @@
 ||bsiat.top^
 ||bsjchats.win^
 ||bsqyly.top^
+||bsqzc.buzz^
 ||bstaceusdt.com^
 ||bstdtmeth.com^
 ||bsterceth20.com^
@@ -3376,6 +3382,7 @@
 ||dusmallshop.fit^
 ||dusmallshop.site^
 ||dutils.com^
+||duxiaoshop.site^
 ||duyel.shop^
 ||dvchx.ink^
 ||dvfvds.com^
@@ -3391,6 +3398,7 @@
 ||dwqtsm.top^
 ||dwqvhf.asia^
 ||dwwrud.top^
+||dxdaooof.com^
 ||dxdaoplf.com^
 ||dxdcoin.com^
 ||dxddnb.vip^
@@ -3514,6 +3522,7 @@
 ||ebill-update.info^
 ||ebnibp3.xyz^
 ||ebuyshop.xyz^
+||ec21.shop^
 ||eca688.com^
 ||ecarmor.cc^
 ||ecctw.top^
@@ -3804,6 +3813,7 @@
 ||eudkclaw2a.lol^
 ||eulaaj.buzz^
 ||eurfc.top^
+||euroasisto.com^
 ||euroasistw.com^
 ||euroasisup.com^
 ||euroasisus.com^
@@ -3814,6 +3824,7 @@
 ||ev-shancp.com^
 ||ev5ty.xyz^
 ||everri.ch^
+||everrich.vip^
 ||everythingmallo.com^
 ||evlmvev.com^
 ||evocoin.top^
@@ -5731,6 +5742,7 @@
 ||ioexx300.com^
 ||ioha.store^
 ||ione.tw^
+||ioopper.site^
 ||ios-defence.com^
 ||ios-protector.com^
 ||ios528.net^
@@ -6866,6 +6878,7 @@
 ||lsfyqvex.com^
 ||lskdi.xyz^
 ||ltapvu2.xyz^
+||ltcrrc.com^
 ||ltdd0.top^
 ||ltmaslhl.com^
 ||ltsly.top^
@@ -6897,11 +6910,14 @@
 ||lunaslot888.com^
 ||lunchactuallys.com^
 ||lunohwl.com^
+||lunowrb.com^
 ||lusciousn.com^
 ||luxurymartplace.online^
 ||luxuryshop.ltd^
 ||lvdsr.top^
 ||lvshi123.vip^
+||lvshi221.top^
+||lvshi222.top^
 ||lvytw.com^
 ||lw-lifewinner.com^
 ||lwords-man.xyz^
@@ -7101,6 +7117,7 @@
 ||meeting-love.com^
 ||meetingtt.com^
 ||meetlove2.com^
+||meetlovelive.com^
 ||meetourlove.com^
 ||mefgrt.cyou^
 ||megacourierdelivery.com^
@@ -7344,6 +7361,7 @@
 ||mobiletoearn.homes^
 ||mobiletw.net^
 ||modalove.shop^
+||modena116.com^
 ||modest-freesia-fm6ccl.mystrikingly.com^
 ||modiwgou.top^
 ||moeii.shop^
@@ -7458,6 +7476,7 @@
 ||msollen.top^
 ||msollen.vip^
 ||msr.com.tw^
+||msseone.com^
 ||mstlove.com^
 ||msttechnologyacademy.com^
 ||mt-max-suppott.pages.mus.br^
@@ -7774,6 +7793,7 @@
 ||newhoteccaq.com^
 ||newhoteqqff.com^
 ||newidea.tips^
+||newls.top^
 ||newmall.info^
 ||newrocostco.com^
 ||news-spe63.com^
@@ -9527,6 +9547,8 @@
 ||shentoken.com^
 ||shentzongjade.com^
 ||shfecn88.com^
+||shhkss.com^
+||shhlts.com^
 ||shieryuepop.com^
 ||shifuclasss.cyou^
 ||shifuniushi.com^
@@ -9791,6 +9813,7 @@
 ||sms666.live^
 ||sms6789.top^
 ||smsk.tw^
+||smtbs321.com^
 ||smtecommece.com^
 ||smvip.brasilia.me^
 ||smvip.ddns.net^
@@ -10775,6 +10798,7 @@
 ||tkmarks.shop^
 ||tkmcln.asia^
 ||tkocryptocurrency.pro^
+||tkshopadmin.top^
 ||tkshopvnm.com^
 ||tktkshops.com^
 ||tkzbmshop.com^
@@ -11242,6 +11266,7 @@
 ||twftecop.icu^
 ||twfxpro.tw^
 ||twfyuit.buzz^
+||twginzashop.com^
 ||twgiugeyaacai.com^
 ||twgiuswsfacai.com^
 ||twglk.xyz^
@@ -11793,6 +11818,7 @@
 ||visitstore.bio^
 ||visiud.xyz^
 ||visojioq.shop^
+||vista-trading.xyz^
 ||vistacoinbvp.com^
 ||vistacoinevp.com^
 ||vistacoingvp.com^
@@ -12149,6 +12175,7 @@
 ||whiokeul.icu^
 ||whiokeul.top^
 ||whispy.org^
+||whitmanysyibm.wixsite.com^
 ||wholefamily.click^
 ||wholefamily.lat^
 ||wholesaler-mail.com^
@@ -12545,6 +12572,7 @@
 ||xn--7-eleven833-xp2u5d258m0fe.lol^
 ||xn--7-eleven868-gl1ts97bh32bsq1e.lol^
 ||xn--7-eleven919-xp2u5d258m0fe.lol^
+||xn--7-eleven9229-9o9ug00czm4bki2e.lol^
 ||xn--7-eleven9523-9o9ug00czm4bki2e.lol^
 ||xn--7-eleven9527-7q1w9d979nqpe.lol^
 ||xn--7-eleven9527-9o9ug00czm4bki2e.lol^
@@ -12769,9 +12797,11 @@
 ||yahigk.com^
 ||yahiie.com^
 ||yahiivk.com^
+||yahiuc.com^
 ||yahiue.com^
 ||yahivo.com^
 ||yahjio.com^
+||yahjos.com^
 ||yahjve.com^
 ||yahkfe.com^
 ||yahlju.com^
@@ -12865,6 +12895,7 @@
 ||yggaming.net^
 ||ygvz.top^
 ||ygysc.shop^
+||ygze2516.site^
 ||ygzkfr.top^
 ||yh22222.xyz^
 ||yh26789.xyz^
