@@ -346,6 +346,7 @@
 ||6wfafafa.shop^
 ||7-11-eleven.shop^
 ||7-11-shop.top^
+||7-11-tw1.top^
 ||7-11-tw2.top^
 ||7-11eleven.click^
 ||7-11eleven.quest^
@@ -383,6 +384,7 @@
 ||711-tw7.top^
 ||7112.cn^
 ||711chat.club^
+||711i.icu^
 ||711mallshop.shop^
 ||711mellshop.shop^
 ||711shopmalle.fun^
@@ -438,6 +440,7 @@
 ||800notes.com^
 ||8033515.com^
 ||808lll.xyz^
+||8165977.com^
 ||81gold.com^
 ||8282019.com^
 ||82vw4.com^
@@ -639,6 +642,7 @@
 ||adking.club^
 ||admin-login-booking.com^
 ||adna.store^
+||adspeedup.com^
 ||adsrich.life^
 ||adssobf.com^
 ||adsv.svc.litv.tv^
@@ -1586,6 +1590,7 @@
 ||bitopro-vip.com^
 ||bitopro.cc^
 ||bitopro.cyou^
+||bitopro.me^
 ||bitopro.org^
 ||bitopro.top^
 ||bitopro.trade^
@@ -1991,6 +1996,7 @@
 ||buniek.icu^
 ||burrito-craft.com^
 ||buschex.com^
+||buschexd.com^
 ||buschx.com^
 ||bushearnpalm.live^
 ||bushplysky.live^
@@ -2001,6 +2007,7 @@
 ||busnss.top^
 ||bussiness-suite.com^
 ||bussiness-suite.live^
+||bussws.shop^
 ||bust-rc.top^
 ||bust-yz.top^
 ||butomongs.com^
@@ -2302,6 +2309,7 @@
 ||centralshoping.top^
 ||centralshoping.vip^
 ||centralworldlands.com^
+||centralworlducity.com^
 ||centralworldvip.com^
 ||cepismen.com^
 ||certificatecn.com^
@@ -2549,6 +2557,7 @@
 ||coin-ayo.cc^
 ||coin-basepro.net^
 ||coin-bns.cc^
+||coin-cow.io^
 ||coin-dc81.site^
 ||coin-hub.pro^
 ||coin-hub.pw^
@@ -2934,6 +2943,7 @@
 ||cwenm.asia^
 ||cwexin.com^
 ||cwexit.com^
+||cwgch.com^
 ||cwgmarkets.com^
 ||cwhl.asia^
 ||cwli.top^
@@ -3004,6 +3014,7 @@
 ||daimensi.xyz^
 ||daimi2.vip^
 ||daiquiri.easy.co^
+||daisenhinomaru.tw^
 ||dakappart.com^
 ||dan289.com^
 ||danarx.com^
@@ -3232,6 +3243,7 @@
 ||dgxin168.com^
 ||dhcmar.com^
 ||dhcord.com^
+||dhcvji.com^
 ||dhdarkbhu.com^
 ||dhdarkdrtw.com^
 ||dhdarkibd.com^
@@ -4452,6 +4464,7 @@
 ||fw99a9c.com^
 ||fwger.asia^
 ||fwmcp.com^
+||fx-trading.club^
 ||fx6.xyz^
 ||fx6demo.cc^
 ||fxcm62525.cc^
@@ -6111,6 +6124,7 @@
 ||jvadbpcozm.xyz^
 ||jveeix.com^
 ||jvjl8.vip^
+||jvtgqm.top^
 ||jwab9sasocrx.com^
 ||jxagc.com^
 ||jxj5.top^
@@ -7170,8 +7184,10 @@
 ||melany-stream.com^
 ||melobee.top^
 ||melumisc.com^
+||memetw.top^
 ||mengcaijing.top^
 ||menupc24.com^
+||mercadolibrec.com^
 ||mercadolibredencom-tw.com^
 ||mercuryo.io^
 ||mercuryy1357.com^
@@ -7749,6 +7765,7 @@
 ||myzj1588.cc^
 ||n-berman.com^
 ||n-x-x-shop.com^
+||n2h8z.com^
 ||n4r3qn25d.cc^
 ||n5avayhmom.lol^
 ||n89pkh.top^
@@ -8076,6 +8093,7 @@
 ||odmqq.asia^
 ||odnwjh.buzz^
 ||odornegligible.top^
+||odpsssiz.com^
 ||oebuy.shop^
 ||oecvvsz.vip^
 ||oefw-iwwwt.top^
@@ -8462,6 +8480,7 @@
 ||pcashedu.com^
 ||pcasheif.com^
 ||pcashrbc.com^
+||pcashubr.com^
 ||pcashvrj.com^
 ||pcgameslab.net^
 ||pcgws.com^
@@ -8870,6 +8889,7 @@
 ||qfsca.com^
 ||qfyhtw.com^
 ||qgetdaarr3.lol^
+||qgxuecunstore.site^
 ||qh5339.com^
 ||qh8965.com^
 ||qhgrchae.com^
@@ -9293,6 +9313,7 @@
 ||ruilizhibo.com^
 ||ruix336da.xyz^
 ||ruixin935da.xyz^
+||ruljd.xyz^
 ||ruma88vip.buzz^
 ||rummage8.wixsite.com^
 ||runwinoaes.com^
@@ -9503,6 +9524,7 @@
 ||select2014.com^
 ||selinaclass.com^
 ||sellercommunity.com^
+||semiconductorcvi.com^
 ||sendgrid.net^
 ||sendo.cn^
 ||sendo.tw^
@@ -10473,6 +10495,7 @@
 ||taiwannmobile.co.uk^
 ||taiwannobllehelp.top^
 ||taiwanpasata.de^
+||taiwanpfizer.online^
 ||taiwans.tech^
 ||taiwansports.webnode.tw^
 ||taiwantnews.top^
@@ -10517,6 +10540,7 @@
 ||tamia.shopping^
 ||tamotebin-tw.cc^
 ||tanakatr.com^
+||tando888.com^
 ||tane1985.com^
 ||tannakaw.com^
 ||tao-1688.com^
@@ -10567,6 +10591,7 @@
 ||tcwyvh.com^
 ||tcxjte.top^
 ||tdaex.cyou^
+||tdaex.xyz^
 ||tdame.cyou^
 ||tdameritrade-apac.com^
 ||tdca.org.tw^
@@ -10860,6 +10885,7 @@
 ||tlhunl.top^
 ||tlmyk.com^
 ||tloa0827fvlapnsr.pro^
+||tlomls.com^
 ||tlpoy.top^
 ||tlxgvt.top^
 ||tm-tn.cc^
@@ -11243,6 +11269,7 @@
 ||tw1vodeplay.xyz^
 ||tw2vodeplay.xyz^
 ||tw4vodeplay.shop^
+||tw4vodeplay.xyz^
 ||tw555.vip^
 ||tw6397.top^
 ||tw666.vip^
@@ -11852,6 +11879,7 @@
 ||vipmexc002.com^
 ||vipokb.top^
 ||vipsg.shop^
+||vipshoushen.online^
 ||vipsop01.com^
 ||vipstore-tw.com^
 ||vipstoretw.com^
@@ -11869,10 +11897,12 @@
 ||visitstore.bio^
 ||visiud.xyz^
 ||visojioq.shop^
+||vista-trading.io^
 ||vista-trading.xyz^
 ||vistacoinbvp.com^
 ||vistacoinevp.com^
 ||vistacoingvp.com^
+||vistacoinjvp.com^
 ||vistova-bxcrm.com^
 ||vistovamarkets.com.tw^
 ||vistovamarkets.com^
@@ -12085,6 +12115,7 @@
 ||waterov.buzz^
 ||watgerov.buzz^
 ||watsone.store^
+||watstes.store^
 ||watteara.top^
 ||wattnosea.top^
 ||watw-cat.top^
@@ -12352,6 +12383,7 @@
 ||worldzaers.com^
 ||worldze.com^
 ||worldzers.com^
+||wortenapp.com^
 ||wortenshop.online^
 ||worthlover.com^
 ||wow168.tw^
@@ -13239,6 +13271,7 @@
 ||zhongyzz.com^
 ||zhozux.top^
 ||zhuichadaodi.com^
+||zhxiaoer.com^
 ||ziboduomu.com^
 ||ziiatua.com^
 ||zilingota.shop^
