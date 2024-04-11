@@ -617,6 +617,7 @@
 ||plubitit.*^
 ||realizeideal.*^
 ||realizeideal*.*^
+||realizeideals.*^
 ||registered-*.com^
 ||sc.*.cn^
 ||sfexpress-help.*^
