@@ -156,6 +156,7 @@
 /costco.+\.com/
 /cpatex[a-z]+\.com./
 /credit[a-z]{3,4}\.com/
+/creditji[a-z]\.com/
 /crex24[a-z]{1,2}\.com/
 /crmqointechex[a-z]*\.com/
 /cronos[a-z]{3}\.com/
@@ -186,6 +187,7 @@
 /dsglobalyl[l]?\.com/
 /dwgj[0-9]{3-4}\.com/
 /dxd[a-z]{3}\.vip/
+/dxdaopl[a-z]\.com/
 /dxm[0-9]*.com/
 /dyadi[a-z]{2,4}\.com/
 /dyakoi[a-z]{3,}\.com/
@@ -356,6 +358,7 @@
 /pass-wor[a-z]{2}\.cc/
 /paxos[a-z]{3}\.com/
 /paxosi[a-z]{1,2}\.com/
+/paymium[0-9]{1,2}\.buzz/
 /peeba[0-9]\.com/
 /peicheng[a-z]{2,3}\.com/
 /peicheng[a-z0-9]+\.com/
@@ -566,6 +569,7 @@
 ||dusmallshop.*^
 ||ebay-tw.*^
 ||eecoins.*^
+||elegancepicks.*^
 ||ellandroadcapital.*^
 ||emperor-medie.*^
 ||engine6tw.*^
