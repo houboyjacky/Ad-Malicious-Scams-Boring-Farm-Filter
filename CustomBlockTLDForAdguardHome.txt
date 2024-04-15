@@ -26,6 +26,7 @@
 /24pchome[a-z0-9]*\.com/
 /3456[0-9]+\.xyz/
 /6[0Oo]{3}(?:gov)?\.tw/
+/7-11sevenmyship[a-z]\.com/
 /7-eleven-[a-z]+\.homes/
 /7-eleven\w+\.cc/
 /711-tw[0-9]+.tech/
@@ -66,6 +67,7 @@
 /axt[a-z]{3,4}\.com/
 /b9b[a-z0-9]+\.cc/
 /bagmiomio[0-9]*\.com/
+/batonex[a-z]{3}\.com/
 /bay-e\.(net|shop|xyz)/
 /bck[a-z0-9]vip\.com/
 /bdswiss[a-z]{3}\.com/
@@ -194,6 +196,7 @@
 /e-?b-?a-?y-?o-?f-?f-?i-?c-?i-?a-?l-?\.com/
 /earningso[a-z]\.com/
 /earningsx[a-z]\.com/
+/earthpooir[a-z]\.com/
 /ebay-[official-]{9}\.com/
 /ebay-comerc[a-z]*\.com/
 /ee[0-9]+\.com/
@@ -252,6 +255,7 @@
 /global-ub0[0-9]\.com/
 /globalshop[a-z]{2,3}\.com/
 /globalshopm[a-z]{2}\.com/
+/globaltren[a-z]\.com/
 /goldc[a-z]{2}\.cc/
 /goldmansachs[0-9]*\.[a-z]+/
 /goodluck9+8+\.com/
@@ -514,6 +518,7 @@
 ||*.vip^
 ||0xboost.*^
 ||2812510016.*^
+||711myshupbuy.*^
 ||8ct2*.site^
 ||aave-loan.*^
 ||acceptll.*^

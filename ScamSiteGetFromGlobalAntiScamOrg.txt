@@ -25,6 +25,7 @@
 #||digitalocean.com^
 #||easy.co^
 #||freebitco.in^
+#||ftmo.com^
 #||fx110.com.tw^
 #||fxtrading.com^
 #||gate.io^
@@ -12908,7 +12909,6 @@
 ||ftmbitex.com^
 ||ftmcryptoearn.com^
 ||ftmex.net^
-||ftmo.com^
 ||ftonlins.com^
 ||ftps.link^
 ||ftscoin.net^
