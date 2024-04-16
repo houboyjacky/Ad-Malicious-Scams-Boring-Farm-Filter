@@ -283,3 +283,8 @@
 @@||ffe390afd658c19dcbf707e0597b846d.de^$important
 @@||ffbbbdc6d3c353211fe2ba39c9f744cd.com^$important
 @@||haiwealth.com.tw^
+@@||userleap.com^$important
+@@||sprig.com^$important
+@@||amplitude.com^$important
+@@||buyca.top^$important
+@@||devitalia.it^$important
