@@ -255,7 +255,7 @@
 /global-ub0[0-9]\.com/
 /globalshop[a-z]{2,3}\.com/
 /globalshopm[a-z]{2}\.com/
-/globaltren[a-z]\.com/
+/globaltren[a-z]+\.com/
 /goldc[a-z]{2}\.cc/
 /goldmansachs[0-9]*\.[a-z]+/
 /goodluck9+8+\.com/
@@ -357,6 +357,7 @@
 /osig[a-z]{6}\.com/
 /osigit[a-z]{4,5}\.com/
 /ottoshop[a-z]{2}\.com/
+/ottoshops[a-z]\.com/
 /pages-[0-9]+\.pw/
 /pageverification[a-z0-9]+\.co\.vu/
 /pass-wor[a-z]{2}\.cc/
@@ -390,6 +391,7 @@
 /schw[a-z]+\.com/
 /screrth[a-z]{3}\.com/
 /seipr[a-z]\.com/
+/semiconductor[a-z]{3}\.com/
 /service-id[0-9]+\.shop/
 /sfexpress-.+\.(com|info)/
 /sgx[0-9a-z]+\.cyou/
@@ -632,6 +634,7 @@
 ||sfexpress-help.*^
 ||shopingcentrale.*^
 ||shoppinggiftcom.*^
+||short2tradingnow.*^
 ||sinoclick.*^
 ||starbucksvip.+.com^
 ||stenbit.*^

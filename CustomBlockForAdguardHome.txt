@@ -352,6 +352,7 @@
 ||7-11-tw1.top^
 ||7-11-tw11.top^
 ||7-11-tw2.top^
+||7-11-tw5.top^
 ||7-11eleven.click^
 ||7-11eleven.quest^
 ||7-11mallship.shop^
@@ -394,6 +395,7 @@
 ||711mallshop.shop^
 ||711mellshop.shop^
 ||711mymallshop.shop^
+||711mymell.shop^
 ||711mymellshop.shop^
 ||711myshupbuy.life^
 ||711myshupbuy.shop^
@@ -723,6 +725,7 @@
 ||ahesisadec.gq^
 ||aheuigj.com^
 ||aholicment.top^
+||ai-crypto.ltd^
 ||ai-crypto.shop^
 ||ai-internationalae.com^
 ||ai-internationalcd.com^
@@ -1367,6 +1370,7 @@
 ||becnetss.com^
 ||beef-yz.top^
 ||beichong.shop^
+||beilavip.com^
 ||belanjatupperware.com^
 ||belavip.vip^
 ||belgamgiaes.com^
@@ -1441,6 +1445,7 @@
 ||biasyoga.com^
 ||bibideng.com^
 ||bibnay.xyz^
+||biconombr.vip^
 ||biconombs.vip^
 ||biconomys.vip^
 ||biconomyx.com^
@@ -1806,6 +1811,7 @@
 ||bntradeute.com^
 ||bntradeyu.com^
 ||bnvckliugo.com^
+||bnwaencion.com^
 ||bnwgk.online^
 ||bnwredereh.com^
 ||bnwrederik.com^
@@ -2085,6 +2091,7 @@
 ||byarcthk.com^
 ||bybio.co^
 ||bybith5.com^
+||bybitkor.com^
 ||bydfi.club^
 ||bydfi.finance^
 ||bydfi.top^
@@ -3210,6 +3217,7 @@
 ||deveent.top^
 ||devilkittgo.com^
 ||deviltoolee.com^
+||devitalia.it^
 ||dew168.top^
 ||dewudewu.com^
 ||dex-a.org^
@@ -3311,6 +3319,7 @@
 ||diamondsrich.com^
 ||diandainwei.xyz^
 ||didogroup.net^
+||diet-premium.tw^
 ||difirety.com^
 ||difiroxe.com^
 ||difither.com^
@@ -3454,6 +3463,7 @@
 ||dusmallshop.fit^
 ||dusmallshop.site^
 ||dutils.com^
+||duxiaodian.live^
 ||duxiaoshop.site^
 ||duyel.shop^
 ||dvchx.ink^
@@ -3637,6 +3647,7 @@
 ||eerrr.asia^
 ||eetc-tw.com^
 ||eewit.com^
+||efnnd.shop^
 ||eft-pay-refund.cc^
 ||efw92.com^
 ||efwefkvd.com^
@@ -4486,6 +4497,7 @@
 ||fullerweb.com^
 ||fulong.asia^
 ||fun2chatx.xyz^
+||funday.asia^
 ||fundebug.cn^
 ||fundrichs.com^
 ||funny-buy.shop^
@@ -4781,6 +4793,7 @@
 ||global-eths.eth.limo^
 ||global-shopping.buzz^
 ||global-ub02.com^
+||globalbusinesspays.com^
 ||globalcargoshippingcompany.com^
 ||globalfinery.shop^
 ||globalkkmiuseonooline.com^
@@ -4799,6 +4812,7 @@
 ||globaltren.com^
 ||globaltrenm.com^
 ||globaltrenn.com^
+||globaltrentd.com^
 ||globaltwmall.com^
 ||glodvdc.com^
 ||glogisticsco-fr.online^
@@ -6311,6 +6325,7 @@
 ||keixiantuijian6.top^
 ||kelbyone.lt.acemlnb.com^
 ||kelylegroup.com^
+||ken-exit.com^
 ||kentodefe.com^
 ||kentodefg.com^
 ||kentodejp.com^
@@ -6415,6 +6430,7 @@
 ||kk978.top^
 ||kkakd.com^
 ||kkdu.asia^
+||kkji.top^
 ||kkkuav.com^
 ||kkloginstoreapple.com^
 ||kkman.online^
@@ -6543,6 +6559,7 @@
 ||kvbnhn.xyz^
 ||kvfz.top^
 ||kvgcrxzh.buzz^
+||kvgj.top^
 ||kvhr.xyz^
 ||kviy.top^
 ||kvlx.top^
@@ -6706,6 +6723,7 @@
 ||leomab.com^
 ||leomaf.com^
 ||leoplace.com^
+||leotoday.com^
 ||leots88.com.tw^
 ||leoysu.com^
 ||leoysy.com^
@@ -6774,6 +6792,7 @@
 ||line-bnm4.xyz^
 ||line-etsy.com^
 ||line-me-ah.com^
+||line-me-auth.com^
 ||line-mkbh1.icu^
 ||line-mkbh3.icu^
 ||line-mkbh4.icu^
@@ -7012,6 +7031,7 @@
 ||lskdi.xyz^
 ||ltapvu2.xyz^
 ||ltcrrc.com^
+||ltcrre.com^
 ||ltdd0.top^
 ||ltmaslhl.com^
 ||ltsly.top^
@@ -8098,6 +8118,7 @@
 ||nswau.link^
 ||ntertoday.shop^
 ||ntmla.com^
+||ntswvbilt.com^
 ||ntswzhdil.com^
 ||nubee.ai^
 ||nufmaio.life^
@@ -8464,6 +8485,7 @@
 ||ottoshoppf.com^
 ||ottoshopsk.com^
 ||ottoshopsn.com^
+||ottoshopss.com^
 ||ottoshopsx.com^
 ||ottospro.com^
 ||otw.cc^
@@ -9001,6 +9023,7 @@
 ||qdtech.ai^
 ||qeadws00000.pixnet.net
 ||qedtyyk.com^
+||qedw.store^
 ||qengogrlag.click^
 ||qey.buzz^
 ||qfengtw.com^
@@ -9421,6 +9444,7 @@
 ||rs6.net^
 ||rs777.net^
 ||rscga.com^
+||rseqa.shop^
 ||rseqa.xyz^
 ||rsg-games.com^
 ||rsgaming888.com^
@@ -9602,6 +9626,7 @@
 ||sdftg.oss-ap-southeast-1.aliyuncs.com^
 ||sdfw.shop^
 ||sdhj.cc^
+||sdhw.pw^
 ||sdifs.shop^
 ||sdj3ksdh.com^
 ||sdjsfgyu.com^
@@ -9655,6 +9680,7 @@
 ||sellercommunity.com^
 ||semiconductorcvi.com^
 ||semiconductorecb.com^
+||semiconductorofe.com^
 ||sendgrid.net^
 ||sendo.cn^
 ||sendo.tw^
@@ -9762,6 +9788,7 @@
 ||shkg.com^
 ||shonko.vip^
 ||shop-beo.com^
+||shop-bnmk1.cyou^
 ||shop-ego.com^
 ||shop-tianxia.com^
 ||shop.hongkong.puyansh.com^
@@ -9887,6 +9914,7 @@
 ||shopvipmanufacturers.com^
 ||shopxcuwhn.store^
 ||short2tradingnow.shop^
+||short2tradingnow.site^
 ||short2tradingnow.xyz^
 ||shortcut.tw^
 ||shortof.com^
@@ -10895,6 +10923,7 @@
 ||thefreeman-store.com^
 ||thegutryew.buzz^
 ||thejamestrades.com^
+||thekingslife.com^
 ||thelikooei.xyz^
 ||theloveofever.com^
 ||thelundian.com^
@@ -10945,6 +10974,7 @@
 ||tiffijnsute.com^
 ||tiffinse.com^
 ||tiffinsute.com^
+||tigerfscrm.com^
 ||tigwhubw.com^
 ||tiigov.tv^
 ||tijajz.com^
@@ -11253,6 +11283,7 @@
 ||trkilo.top^
 ||trkwis.com^
 ||tron-doubler.com^
+||tronera.art^
 ||tronmarket.top^
 ||tropicalhorizonext.com^
 ||trrgov.com^
@@ -12130,6 +12161,7 @@
 ||volatilio.com^
 ||volatilkt.com^
 ||volo.finance^
+||vomk.top^
 ||vomsn.com^
 ||vonots.com^
 ||vopisfo.com^
@@ -12238,6 +12270,7 @@
 ||walnant.live^
 ||walnant.net^
 ||walterj.club^
+||waltily.tw^
 ||wanggezhinengjiaoyi.design^
 ||wangyi-mart.com^
 ||wangyi-shop.com^
@@ -12873,6 +12906,7 @@
 ||xn--famishop599-gl1ts97bh32bsq1e.lol^
 ||xn--famishop622-xp2u5d258m0fe.lol^
 ||xn--famishop773-gl1ts97bh32bsq1e.lol^
+||xn--famishop7733-7q1w9d979nqpe.lol^
 ||xn--famistore-yb6nf73bi72d867c.beauty^
 ||xn--famistore-yb6nf73bi72d867c.shop^
 ||xn--fhq00jkxvbqv.beauty^
@@ -13311,6 +13345,7 @@
 ||yuanqishenlin.top^
 ||yuanta81.site^
 ||yuanta81.top^
+||yuantatw.shop^
 ||yuantong5888.com^
 ||yubfx6.asia^
 ||yudelshopping.com^
