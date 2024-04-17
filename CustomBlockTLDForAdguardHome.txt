@@ -47,7 +47,6 @@
 /aismex[a-z0-9]+.com/
 /aitechstock\.(co|tw|vip)/
 /aiyfpro[a-z]{1,2}\.com/
-/aliexp[a-z-]{4,5}\.(com|vip)/
 /alliancegrowth.+\.[a-z]+/
 /alphafinace[a-z0-9]+\.com/
 /alvexo[a-z]{3}\.com/
