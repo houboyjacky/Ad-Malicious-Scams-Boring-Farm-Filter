@@ -36,6 +36,7 @@
 #||imob.tw^
 #||imyfone.com^
 #||jiesyun.com.tw^
+#||kaik.network^
 #||king108.com^
 #||lccnet.com.tw^
 #||lcnycoinj.com^
@@ -6241,7 +6242,6 @@
 ||kaidexifc.top^
 ||kaidexltc.top^
 ||kaiinr.site^
-||kaik.network^
 ||kaile.hair^
 ||kaiping.app^
 ||kaiuo.shop^
