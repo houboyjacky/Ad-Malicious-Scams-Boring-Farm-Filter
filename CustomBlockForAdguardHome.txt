@@ -395,6 +395,8 @@
 ||711i.icu^
 ||711mallshop.shop^
 ||711mellshop.shop^
+||711mgllshop.live^
+||711mkllship.xyz^
 ||711mymallshop.shop^
 ||711mymell.shop^
 ||711mymellshop.shop^
@@ -611,6 +613,7 @@
 ||acadme.co^
 ||accent-gate.com^
 ||accept-reservation.com^
+||acceptll.life^
 ||acceptll.online^
 ||acceptll.site^
 ||acceptll.xyz^
@@ -1160,6 +1163,7 @@
 ||ats4shop.live^
 ||atseunr.cc^
 ||atwear.top^
+||atzd.site^
 ||au8tw.net^
 ||auausposting.xyz^
 ||auchan-shop.tw^
@@ -1456,6 +1460,7 @@
 ||biehi.world^
 ||biemexdfk9.top^
 ||biemexf9eb.top^
+||biemsxhyd.com^
 ||bience86.cc^
 ||bienceex.cc^
 ||biesthgc.com^
@@ -1627,6 +1632,7 @@
 ||bitopro.top^
 ||bitopro.trade^
 ||bitopro.tw^
+||bitopro88.club^
 ||bitoproex.vip^
 ||bitoproglobal.com^
 ||bitopromax.com^
@@ -1887,6 +1893,7 @@
 ||botdynofication.fun^
 ||boutique-shop4.com^
 ||boviose.com^
+||bovny.shop^
 ||boweihq.com^
 ||box-surprize.online^
 ||box.com^
@@ -2332,6 +2339,7 @@
 ||cdcamop.com^
 ||cdcvdsb.com^
 ||cderyg.xyz^
+||cdexin.com^
 ||cdg-kh.cc^
 ||cdggary.com^
 ||cdonse.com^
@@ -2551,6 +2559,7 @@
 ||click-win.club^
 ||click.promote.weebly.com^
 ||click2s.me^
+||clickconsultentire.com^
 ||clickconsultglobal.com^
 ||clickfunnels.com^
 ||clickmoney.club^
@@ -2969,6 +2978,7 @@
 ||cuanthebcr.com^
 ||cubaefw.buzz^
 ||cubamos.buzz^
+||cucsz.com^
 ||cuiaethebcr.com^
 ||cuicfif.cn^
 ||cuiliangecommerce.work^
@@ -3005,6 +3015,7 @@
 ||cwhl.asia^
 ||cwli.top^
 ||cwlottery.com^
+||cwpronz.vip^
 ||cwqcq.asia^
 ||cwschool.top^
 ||cwx88.com^
@@ -3273,6 +3284,7 @@
 ||dfswas.world^
 ||dftraderamm.pro^
 ||dfveplk.com^
+||dfvss.live^
 ||dfx111.top^
 ||dfx168.top^
 ||dfx288.top^
@@ -3804,6 +3816,7 @@
 ||erekanecor.live^
 ||ergdgnt.top^
 ||erghgj.club^
+||erisj.store^
 ||erjha.com^
 ||ernmvx.com^
 ||err98112.com^
@@ -3910,6 +3923,7 @@
 ||etsyrj.shop^
 ||etsyusds.com^
 ||etsyusdt.com^
+||etsyusdv.com^
 ||eturl.cn^
 ||etxcapitaldi.com^
 ||etxcapitalhncs.com^
@@ -5563,8 +5577,10 @@
 ||huizhirongwt.top^
 ||huizhrongus.top^
 ||hujsrz.top^
+||hukce.com^
 ||hukea.com^
 ||hukmarket.com^
+||hukoffical.com^
 ||humanflies.xyz^
 ||huntuer.top^
 ||huobi.com.bo^
@@ -6194,6 +6210,7 @@
 ||jsnanw.vip^
 ||jsunnet.com^
 ||jsyl198.com^
+||jszbjc.com^
 ||jtimetrader.com^
 ||jtkhmc.fun^
 ||jtobonus.com^
@@ -7196,6 +7213,7 @@
 ||marketdui.com^
 ||marketjhb.com^
 ||marketjrv.com^
+||marketkoc.com^
 ||marketkvc.com^
 ||marketokv.com^
 ||marketplace-listings.com^
@@ -7826,6 +7844,7 @@
 ||mwbscjdsb.com^
 ||mx124.cn^
 ||mxcz.cc^
+||mxfaka.net^
 ||mxhbuydf.com^
 ||my-board.org^
 ||my-line.vip^
@@ -8056,6 +8075,7 @@
 ||nhscf2x.xyz^
 ||nianfall.com^
 ||nibley.me^
+||nic.vip^
 ||nicebuypay.online^
 ||niceday-shopping.com^
 ||nicedayvip.com^
@@ -8798,6 +8818,7 @@
 ||plusjof.com^
 ||plusonenative.com^
 ||pluspof.com^
+||pluss700.com^
 ||pluszipz.com^
 ||plyox.xyz^
 ||pmjl-register.com^
@@ -9492,6 +9513,7 @@
 ||rte8w.com^
 ||rthrfxc.com^
 ||rtpkubutogel.org^
+||rttmlx.top^
 ||rtx-coin.com^
 ||rtx-trading-pro.com^
 ||rtx-trading.com^
@@ -9622,6 +9644,7 @@
 ||savccvip.org^
 ||savegas.ai^
 ||savrem.com^
+||saxobaoflnusd.xyz^
 ||sayhehe.com^
 ||sayloveclub.com^
 ||sbayfbjfd.com^
@@ -9669,6 +9692,7 @@
 ||sdhj.cc^
 ||sdhw.pw^
 ||sdifs.shop^
+||sdiyw.store^
 ||sdj3ksdh.com^
 ||sdjsfgyu.com^
 ||sdkalle77326.com^
@@ -9944,6 +9968,8 @@
 ||shopsupre.com^
 ||shopswfrfbh.shop^
 ||shoptianxia.com^
+||shoptw851j.cyou^
+||shoptw853f.cyou^
 ||shoptwq.com^
 ||shoptyu.com^
 ||shoputgkf.shop^
@@ -10093,6 +10119,7 @@
 ||smvip.brasilia.me^
 ||smvip.ddns.net^
 ||smvip.hopto.me^
+||sndons.com^
 ||sneii.com^
 ||snlake.top^
 ||snpdl.xyz^
@@ -10195,6 +10222,7 @@
 ||spirfirst.com^
 ||spirit-markets.com^
 ||spk3296.com^
+||spoaoshechipin.com.tw^
 ||spongetoken.vip^
 ||spooklenv.com^
 ||spookletxir.com^
@@ -10533,6 +10561,7 @@
 ||syungo-shop.com^
 ||syycy.shop^
 ||syylcs.com^
+||sz-djmf.com^
 ||sz17888.com^
 ||sz7777.vip^
 ||sz999.biz^
@@ -10938,6 +10967,7 @@
 ||tghi.shop^
 ||tgkitrpe.com^
 ||tgkktt.com^
+||tgknscontg.top^
 ||tgkuvape.com^
 ||tgkuveros.com^
 ||tgkuvsa.com^
@@ -11156,6 +11186,7 @@
 ||todo-today.co.uk^
 ||toidsfg.com^
 ||toiucostco.com^
+||token-folio.com^
 ||tokenlon.info^
 ||tokenlove.cc^
 ||tokentool.app^
@@ -11331,10 +11362,12 @@
 ||trkilo.top^
 ||trkwis.com^
 ||tron-doubler.com^
+||tron.casa^
 ||tronera.art^
 ||tronmarket.top^
 ||tropicalhorizonext.com^
 ||trrgov.com^
+||trubituyt.com^
 ||trucoinex.com^
 ||truefi.io^
 ||truefipef.com^
@@ -11362,6 +11395,7 @@
 ||trxcnio.com^
 ||trxewmv.com^
 ||trxoper.com^
+||trxresidences-klcc.com^
 ||tryy2.com^
 ||ts-778.com^
 ||ts178.com.tw^
@@ -11882,6 +11916,7 @@
 ||upholdgib.com^
 ||upholdjiu.com^
 ||upholdrgi.com^
+||uploadedbyarhat.com^
 ||upsddaa.top^
 ||uqgkqdaw.com^
 ||uqmgggs.com^
@@ -12538,6 +12573,7 @@
 ||win85.net^
 ||wind-coin.com^
 ||windcjn.com^
+||windcxu.com^
 ||windflv.com^
 ||windhxi.com^
 ||windjxm.com^
@@ -12915,6 +12951,7 @@
 ||xn--7-eleven6933-7q1w9d979nqpe.lol^
 ||xn--7-eleven6977-7q1w9d979nqpe.lol^
 ||xn--7-eleven733-gl1ts97bh32bsq1e.lol^
+||xn--7-eleven7555-9o9ug00czm4bki2e.lol^
 ||xn--7-eleven7733-7q1w9d979nqpe.lol^
 ||xn--7-eleven833-xp2u5d258m0fe.lol^
 ||xn--7-eleven868-gl1ts97bh32bsq1e.lol^
