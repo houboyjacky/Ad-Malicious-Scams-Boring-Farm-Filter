@@ -22,6 +22,7 @@
 #||bznk.com^
 #||cex.io^
 #||cloudfront.net^
+#||coingecko.com^
 #||digitalocean.com^
 #||easy.co^
 #||freebitco.in^
@@ -7340,7 +7341,6 @@
 ||coingateos.vip^
 ||coingblock.com^
 ||coingcx.com^
-||coingecko.com^
 ||coingeckoxcryptoexperts.online^
 ||coingiproat.com^
 ||coingiprocn.com^

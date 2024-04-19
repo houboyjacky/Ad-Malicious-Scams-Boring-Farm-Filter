@@ -118,6 +118,7 @@
 /caifuyiha[a-z0-9]*\.club/
 /caijing/
 /caixin[0-9]+yule\.com/
+/caixing[0-9]{1,3}\.com/
 /cali[0-9]{3}\.net/
 /cali1356[a-z]\.net/
 /camely[a-z]{2}\.com/
@@ -233,6 +234,7 @@
 /fmfw[a-z]+\.com/
 /fnline\.(info|xyz|vip)/
 /fpmarket[a-z0-9]+.com/
+/freepo[a-z]{3,4}\.com/
 /fssend[0-9]+bv\.com/
 /fua[0-9]+\.com/
 /fxcap[0-9]+\.com/
