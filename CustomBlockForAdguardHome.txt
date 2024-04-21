@@ -11820,7 +11820,7 @@
 ||uczcoumr.com^
 ||udhxyq.top^
 ||udkmio.info^
-||udn.com^
+#||udn.com^
 ||udptiktokshop.com^
 ||udtwshop.com^
 ||ueex-top.com^
