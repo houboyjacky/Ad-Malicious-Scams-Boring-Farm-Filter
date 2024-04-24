@@ -263,6 +263,7 @@
 /goldmansachs[0-9]*\.[a-z]+/
 /goodluck9+8+\.com/
 /gyym[0-9]+\.com/
+/haipaiyi[a-z]{3}\.com/
 /haitao[a-z]{3,4}\.com/
 /haorui[a-z]{3}\.com/
 /harord[a-z]\.com/
@@ -399,6 +400,7 @@
 /service-id[0-9]+\.shop/
 /sfexpress-.+\.(com|info)/
 /sgx[0-9a-z]+\.cyou/
+/shengwanlia[0-9]{3,4}\..*/
 /shjs[0-9]{3}\.com/
 /shopee-[a-z0-9]+\.tw/
 /shopping-[a-z]+\.com/
@@ -637,7 +639,6 @@
 ||registered-*.com^
 ||sc.*.cn^
 ||sfexpress-help.*^
-||shengwanlia001.*^
 ||shopingcentrale.*^
 ||shoppinggiftcom.*^
 ||short2tradingnow.*^
