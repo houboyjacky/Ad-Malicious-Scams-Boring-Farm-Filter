@@ -36,6 +36,7 @@
 #||mitrade.com^
 #||my.id^
 #||mystrikingly.com^
+#||oanda.com^
 #||okcoin.com^
 #||page.link^
 #||pangaea-global.com^
@@ -20351,7 +20352,6 @@
 ||oamdi.vip^
 ||oamdi.xyz^
 ||oamdiap.vip^
-||oanda.com^
 ||oanda.me^
 ||oandafxinvest.com^
 ||oandagjaadd.com^

@@ -40,7 +40,6 @@
 #||king108.com^
 #||lccnet.com.tw^
 #||lcnycoinj.com^
-#||learningpa.cc^
 #||linkfly.to^
 #||maac.io^
 #||mapleland113.com^
@@ -6864,7 +6863,6 @@
 ||leadquizzes.com^
 ||leanote.xyz^
 ||learnguitarplaying.com^
-||learningpa.cc^
 ||lebmall.shop^
 ||leckfnthecu.christmas^
 ||ledgiit.com^
