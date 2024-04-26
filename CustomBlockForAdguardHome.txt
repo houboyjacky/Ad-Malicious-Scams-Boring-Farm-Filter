@@ -380,6 +380,7 @@
 ||7-11sevenmyshipa.com^
 ||7-11sevenmyshipo.com^
 ||7-11sevenmyshipr.com^
+||7-11sevenmyshipx.com^
 ||7-11tw.cn^
 ||7-eleven-au.homes^
 ||7-eleven-in.homes^
@@ -1440,6 +1441,7 @@
 ||beratrail.io^
 ||bernice.fyi^
 ||bertnet.online^
+||bertogrooming.com^
 ||best-stream.com^
 ||bestbest-supermall.top^
 ||bestbuy-ap.com^
@@ -1462,6 +1464,8 @@
 ||bewin.ai^
 ||beyondpeak168.com^
 ||bfe7nukgne.lol^
+||bfemax.com^
+||bfiyer.com^
 ||bfkhj.fyi^
 ||bfkhj.site^
 ||bflcxyy.com^
@@ -3921,6 +3925,7 @@
 ||essonne-2-roues.fr^
 ||estw-cat.com^
 ||esunbk.top^
+||esunlbk.top^
 ||eswjf.online^
 ||eszdoand.jp^
 ||etag-cars.com^
@@ -4572,6 +4577,7 @@
 ||freeportm.com^
 ||freeportmtr.com^
 ||freeposjhs.com^
+||freeposjob.com^
 ||freestepfamgames.com^
 ||freestickershop.com^
 ||freestryff.com^
@@ -4694,6 +4700,7 @@
 ||fychnb.xyz^
 ||fyhfrhjqwsd.com^
 ||fyr.at^
+||fyrmul.site^
 ||fytcvtych.com^
 ||fyzfu.click^
 ||fyzxzro.xyz^
@@ -4735,6 +4742,7 @@
 ||gamebest7.net^
 ||gamebook.com.tw^
 ||gamebox333.net^
+||gamell711.cn^
 ||gamepro.today^
 ||games3128.com^
 ||gamezonew.com^
@@ -8308,7 +8316,6 @@
 ||nnssddkk.com^
 ||nntoto.com^
 ||nnywnekaog.xyz^
-||no8.io^
 ||noahpb.club^
 ||nocks-ex.cc^
 ||nocks.cc^
@@ -8340,6 +8347,7 @@
 ||novadaxexs.cc^
 ||novadex.vip^
 ||novelview.tw^
+||novex.cc^
 ||nowtalk.me^
 ||npbo.top^
 ||npkka.top^
@@ -8825,6 +8833,7 @@
 ||pawee.top^
 ||paxoinx.com^
 ||paxos.vip^
+||paxoscon.com^
 ||paxosguc.com^
 ||paxosirt.com^
 ||paxosniy.com^
@@ -9074,6 +9083,7 @@
 ||potudtwt.top^
 ||potudwtw.top^
 ||poutlinbep.vip^
+||power-king.top^
 ||powerbgf.top^
 ||powerbig888.com^
 ||powertgw.blogspot.com^
@@ -11319,6 +11329,7 @@
 ||tikosoay.com^
 ||tikshop.biz^
 ||tiktok-mall.cn^
+||tiktok-outlet.tw^
 ||tiktok-shop.beauty^
 ||tiktok-shop.club^
 ||tiktok-shop6.club^
@@ -12299,6 +12310,7 @@
 ||v88t1ktokvip.com^
 ||v995.tw^
 ||vacation-id64134123.eu^
+||vaeeleran.site^
 ||vagv.tw^
 ||vahz6a9.top^
 ||valnevaes.com^
@@ -13425,6 +13437,7 @@
 ||xubig.fyi^
 ||xudkshop.com^
 ||xueanxi.asia^
+||xuisd.top^
 ||xunighe.com^
 ||xurl.es^
 ||xuw.one^
@@ -13438,6 +13451,7 @@
 ||xwbig.xyz^
 ||xxcolq.top^
 ||xxhswapi.icu^
+||xxlcbest.top^
 ||xxlovechat.com^
 ||xxxcontrol.com^
 ||xxzypcy.vip^
