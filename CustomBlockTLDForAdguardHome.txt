@@ -234,6 +234,7 @@
 /flexji[a-z]\.com/
 /fmfw[a-z]+\.com/
 /fnline\.(info|xyz|vip)/
+/focus[a-z]{3}\.com/
 /fpmarket[a-z0-9]+.com/
 /freepo[a-z]{3,4}\.com/
 /fssend[0-9]+bv\.com/
