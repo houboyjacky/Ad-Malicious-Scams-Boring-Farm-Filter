@@ -291,3 +291,7 @@
 @@||devitalia.it^$important
 @@||learningpa.cc^
 @@||linkup.top^$important
+@@||click.discord.com^$important
+@@||kuioo.tw^
+@@||okbank.com^
+@@||fincake.co^
