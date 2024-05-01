@@ -52,11 +52,13 @@
 #||pepperstone.com^
 #||phicdn.net^
 #||portaly.cc^
+#||quickper.com^
 #||safepal.com^
 #||sedu.tw^
 #||shop2000.com.tw^
 #||shopline.tw^
 #||sinyicharity.org.tw^
+#||steprimo.com^
 #||survey.gs^
 #||tg.pe^
 #||tpglobalwallet.net^
@@ -67,6 +69,7 @@
 #||udn.com^
 #||ufcfan.org^
 #||wix.com^
+#||wootalk.today^
 #||wshifen.com^
 ||00000255123135324.ml^
 ||0041.online^
@@ -379,6 +382,7 @@
 ||7-11myshopbuy.icu^
 ||7-11myshopbuy.site^
 ||7-11myshopcms.com^
+||7-11paymallr.cyou^
 ||7-11sevenmyship.com^
 ||7-11sevenmyshipa.com^
 ||7-11sevenmyshipo.com^
@@ -491,6 +495,7 @@
 ||8688881.com^
 ||86wealth.com^
 ||86wiu.com^
+||8767332.com^
 ||88666b.com^
 ||88833001.cc^
 ||8885hw.com^
@@ -589,6 +594,7 @@
 ||a0903032821.wixsite.com^
 ||a0c8.ink^
 ||a0i3x.top^
+||a16zpro.net^
 ||a18b5zg9.com^
 ||a1f3777dfa6416ee9714da3c7f3a55cd.rgft.sbs^
 ||a1gv4b.xyz^
@@ -2267,6 +2273,7 @@
 ||camenp.top^
 ||caminers.pro^
 ||campsite.bio^
+||campsite.to^
 ||camteke.com^
 ||canadavisas.net^
 ||canbe.life^
@@ -2684,6 +2691,7 @@
 ||club668.net^
 ||club688.net^
 ||clubcasino666.com^
+||clubhouse.tw^
 ||clubs2.com^
 ||clurth5kjzcs.com^
 ||cm2c89.com^
@@ -3299,6 +3307,7 @@
 ||decredgpt.com^
 ||decredla.com^
 ||dectrofx.com^
+||decxeauai.com^
 ||dedwow.com^
 ||deeigecpu.vip^
 ||deeigpovu.vip^
@@ -4148,6 +4157,7 @@
 ||exnesjxjd.com^
 ||exnessgdj.com^
 ||exnessid.com^
+||exnessnjd.com^
 ||exnestr.com^
 ||exnomycosa.com^
 ||exodus-travels.online^
@@ -4299,6 +4309,7 @@
 ||fblqs.top^
 ||fbmebuy.com^
 ||fbshoptw.online^
+||fbshuiv.com^
 ||fbuetiwi.icu^
 ||fbw6.top^
 ||fbxuxx.top^
@@ -4583,12 +4594,14 @@
 ||foiwjsc.com^
 ||fokisl.com^
 ||folois.com^
+||folpff.com^
 ||fomecard.com^
 ||fonderex.com^
 ||fongir.shop^
 ||foodpaanda.pro^
 ||foodpads.online^
 ||foodpanba.com.tw^
+||foodplatform.online^
 ||foot-mu.top^
 ||footrongyi.com^
 ||fopesc.com^
@@ -5200,6 +5213,7 @@
 ||gpcchain.online^
 ||gpnrhq.com^
 ||gpt6.tw^
+||gptgo.tw^
 ||gptw.cc^
 ||gr6678.com^
 ||gr7autocom.com.br^
@@ -5335,6 +5349,7 @@
 ||habpl.com^
 ||hackear-cuenta.com^
 ||hackpulse.net^
+||haeimalan.com^
 ||haenqo.top^
 ||hagjjrtw.com^
 ||hagjtw-tww.com^
@@ -5450,6 +5465,7 @@
 ||hee77ee.com^
 ||heexcellentt.com^
 ||hegic-vip.com^
+||hehume.com^
 ||heibaifushi.com^
 ||heiu.shop^
 ||heiuynh.com^
@@ -5699,6 +5715,7 @@
 ||hqskv.ltd^
 ||hqsxw.net^
 ||hqtoshop.com^
+||hqwav.info^
 ||hrbkf.info^
 ||hrblnrdx.com^
 ||hrenblack.shop^
@@ -8876,6 +8893,7 @@
 ||oupeideifb.com^
 ||oupeideiif.com^
 ||oupeidejus.com^
+||oupeidevkm.com^
 ||ourlove.biz^
 ||ourmomo.com^
 ||outlet.win^
@@ -8992,10 +9010,12 @@
 ||pcasheif.com^
 ||pcashejor.com^
 ||pcashrbc.com^
+||pcashsbt.com^
 ||pcashsjh.com^
 ||pcashubr.com^
 ||pcashvrj.com^
 ||pcbonl.xyz^
+||pcearnweb3.com^
 ||pcgameslab.net^
 ||pcgws.com^
 ||pcschool.com.tw^
@@ -9127,6 +9147,7 @@
 ||plant-shops.net^
 ||plantshops.net^
 ||plantshops.top^
+||plasmaovir.com^
 ||play-dasai.com^
 ||play-jingsai.com^
 ||playpcesor.bar^
@@ -9178,6 +9199,7 @@
 ||poijsa.world^
 ||point-yh.top^
 ||point.top^
+||pointsev.link^
 ||poitoponeex.com^
 ||poizom.com^
 ||pokdkd.com^
@@ -9521,7 +9543,6 @@
 ||qufjniyutg.com^
 ||quick-buyer.com^
 ||quickfox.com.cn^
-||quickper.com^
 ||quidax.app^
 ||quidax.finance^
 ||quidax.xyz^
@@ -10480,6 +10501,7 @@
 ||slgrat.com^
 ||slm386.shop^
 ||slm386.top^
+||slnnft.com^
 ||slothana.com^
 ||slothful.com.tw^
 ||slowjam.com.tw^
@@ -10754,7 +10776,6 @@
 ||stenbitvip.top^
 ||stenstuns.com^
 ||stephanieczajkowski.com^
-||steprimo.com^
 ||stewan.top^
 ||stgtrust.com^
 ||stickerlines.com^
@@ -10930,6 +10951,7 @@
 ||sway.kr^
 ||swdf.shop^
 ||sweet-bacon.one^
+||sweetdate69.com^
 ||sweethugforg.com^
 ||sweethugfrog.com^
 ||sweetlovel.com^
@@ -10942,6 +10964,7 @@
 ||swqnli.com^
 ||sx17pve91k.xyz^
 ||sxguangyu.com^
+||sxkls.cyou^
 ||sxkls.sbs^
 ||sxonv.com^
 ||sxwl.vip^
@@ -11278,6 +11301,7 @@
 ||teashoptttea.com^
 ||teateaup.com^
 ||teatoper.com^
+||tebame.buzz^
 ||tec896.com^
 ||techloadzz.com^
 ||techloky.com^
@@ -12927,6 +12951,7 @@
 ||webone-coin.com^
 ||webone-otc.com^
 ||webseaksn.com^
+||webseanos.com^
 ||websecurity.co.in^
 ||webshopclub.net^
 ||webstibons.com^
@@ -13016,6 +13041,7 @@
 ||whiokeul.top^
 ||whispy.org^
 ||whitmanysyibm.wixsite.com^
+||whoistpp.com^
 ||wholefamily.click^
 ||wholefamily.lat^
 ||wholesaler-mail.com^
@@ -13126,7 +13152,6 @@
 ||wonleeatedly.xyz^
 ||woofr3e.xyz^
 ||woosmttranscompany.com^
-||wootalk.today^
 ||wootlove.com^
 ||wootxshop.pw^
 ||wopeeucdhs.shop^
@@ -13587,6 +13612,7 @@
 ||xpstarss.com^
 ||xqtflap.asia^
 ||xrexdown.com^
+||xrexdown66s.com^
 ||xrexweb.com^
 ||xrhtk2j6g3i9ha.xyz^
 ||xround.shop^
