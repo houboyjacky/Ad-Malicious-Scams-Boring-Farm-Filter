@@ -50,6 +50,7 @@
 #||t.me^
 #||tmall.com^
 #||tmall.hk^
+#||top1markets.com^
 #||tradingview.com^
 #||twca.com.tw^
 #||url.cn^
@@ -24516,7 +24517,6 @@
 ||tonmek.com^
 ||top-notchinvestment.org^
 ||top-vt.com^
-||top1markets.com^
 ||top1sanfxvn.site^
 ||top1trading.com^
 ||top5058.com^
