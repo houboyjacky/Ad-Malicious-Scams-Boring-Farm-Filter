@@ -1359,7 +1359,7 @@
 ! 詐騙交易所 https://www.dcard.tw/f/anti_fraud/p/242332433
 ||g-e-min-cxl.com^
 ! 詐騙遊戲 https://www.dcard.tw/f/anti_fraud/p/242323006
-||hoyoverse.com^
+#||hoyoverse.com^
 ! 詐騙罰單 https://www.dcard.tw/f/talk/p/242343670
 ||nqyz.tw^
 ! 詐騙eTag https://www.dcard.tw/f/anti_fraud/p/242353549

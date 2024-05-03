@@ -298,3 +298,5 @@
 @@||campsite.bio^
 @@||campsite.to^
 @@||gomarketing.com.tw^
+@@||discord.gg^
+@@||blocktempo.com^
