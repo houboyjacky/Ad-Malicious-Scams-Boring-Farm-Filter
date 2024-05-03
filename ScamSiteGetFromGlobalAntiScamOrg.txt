@@ -23,6 +23,7 @@
 #||cex.io^
 #||cloudfront.net^
 #||coingecko.com^
+#||comnowallet.^
 #||digitalocean.com^
 #||easy.co^
 #||freebitco.in^
@@ -7967,7 +7968,6 @@
 ||commonwealthfnltd.online^
 ||communityminer.fun^
 ||comning6688.com^
-||comnowallet.^
 ||compadb.com^
 ||companiesline.me^
 ||companyghj.com^
