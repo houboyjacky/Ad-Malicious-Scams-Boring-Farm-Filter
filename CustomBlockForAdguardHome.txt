@@ -9453,7 +9453,6 @@
 ||ptyxhb-my.com^
 ||pu77.net^
 ||pubg.fit^
-||pubingress-feedback-974d66e8c1341bf9.elb.ap-southeast-1.amazonaws.com^
 ||public-sd.com^
 ||pucvmv.top^
 ||puerhk.com^
