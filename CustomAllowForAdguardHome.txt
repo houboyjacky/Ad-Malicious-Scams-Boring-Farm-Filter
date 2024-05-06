@@ -298,5 +298,8 @@
 @@||campsite.bio^
 @@||campsite.to^
 @@||gomarketing.com.tw^
+@@||4rich.org^
+@@||enermax.life^$important
+@@||maba.today^
 @@||discord.gg^
 @@||blocktempo.com^
