@@ -8,10 +8,12 @@
 #||bybit.com^
 #||cex.io^
 #||cloudfront.net^
+#||duckdns.org^
 #||easy.co^
 #||fxtrading.com^
 #||github.io^
 #||icmarkets.com^
+#||moonpay.com^
 #||t.co^
 #||trustwallet.com^
 #||web.app^
@@ -12095,7 +12097,6 @@
 ||duaujjjd.com^
 ||dubaicoin.wtf^
 ||duchardeau-investissement.com^
-||duckdns.org^
 ||duelbits.com^
 ||duemarkets.com^
 ||dufrex.com^
@@ -20707,7 +20708,6 @@
 ||mooniswapsol.com^
 ||moonlebit.com^
 ||moonmine.space^
-||moonpay.com^
 ||moontokens.shop^
 ||mopsid.com^
 ||morebit247.com^

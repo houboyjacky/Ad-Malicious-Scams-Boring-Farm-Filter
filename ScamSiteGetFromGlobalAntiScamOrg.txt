@@ -35,6 +35,7 @@
 #||google.com^
 #||lin.ee^
 #||mitrade.com^
+#||moonpay.com^
 #||my.id^
 #||mystrikingly.com^
 #||oanda.com^
@@ -19497,7 +19498,6 @@
 ||mooniswapltc.com^
 ||mooniswapsol.com^
 ||moonlebit.com^
-||moonpay.com^
 ||moontokens.shop^
 ||moonvextrade.com^
 ||more-achievertrading.online^

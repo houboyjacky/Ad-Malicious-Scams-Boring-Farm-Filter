@@ -4,6 +4,7 @@
 @@||bittrex.com^$important
 @@||fpmarkets.com^$important
 #||cdn77.org^
+#||duckdns.org^
 #||fx110.com^
 #||github.io^
 #||i-gamer.net^
@@ -3872,7 +3873,6 @@
 ||dtkdbd.com^
 ||dtnez001s.com^
 ||duaujjjd.com^
-||duckdns.org^
 ||duiopax.com^
 ||dunhuanggou.com^
 ||dunicorn.co^
