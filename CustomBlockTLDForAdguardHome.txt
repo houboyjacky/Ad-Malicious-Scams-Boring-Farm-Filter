@@ -500,6 +500,7 @@
 /ya[0-9]{6}\.xyz/
 /yah[a-z]{3,4}\.com/
 /yearn-finance[a-z]\.com/
+/ygze[0-9]{4}\.site/
 /yh[0-9]{5}\.xyz/
 /yinhe[a-z0-9]*\.com/
 /ylhg[0-9]{2}\.xyz/
