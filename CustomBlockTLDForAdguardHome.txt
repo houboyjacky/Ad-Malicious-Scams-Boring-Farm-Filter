@@ -99,7 +99,7 @@
 /bjwex[0-9]+\.com/
 /bkex[a-z]{3}\.com/
 /bl[0-9]{3}\.net/
-/blish[a-z]{1,2}\.com/
+/blish[a-z]{1,3}\.com/
 /blueberrypro\..+/
 /bmd[a-z]{3}\.com/
 /bntrade[a-z]{3}\.com/
@@ -124,6 +124,7 @@
 /camel[a-z]{3}\.com/
 /capita[a-z0-9]*\.com/
 /carousel[a-z0-9-]*tw\.(com|xyz)/
+/carousell.+\.(com|site|cyou)/
 /carousell[0-9][0-9]kf\.tw/
 /carousell[a-z][0-9]+\.com/
 /carousellattest[a-z0-9]+\.com/
