@@ -310,3 +310,5 @@
 @@||egg-autonomy.com^$important
 @@||puffmoney.com.tw^$important
 @@||hentai.name^
+@@||ecarmor.cc^
+@@||ecsoga.com^
