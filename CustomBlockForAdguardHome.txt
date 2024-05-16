@@ -45,6 +45,7 @@
 #||mbobi.com^
 #||mp.weixin.qq.com^
 #||mydiscussion.net^
+#||netlify.app^
 #||omygod.com.tw^
 #||onelink.me^
 #||pages-wildcard.weebly.com^
@@ -8829,7 +8830,6 @@
 ||netease-shopping.com^
 ||netfllx.weebly.com^
 ||netfltiw.com^
-||netlify.app^
 ||nets-for.store^
 ||new-etc.casa^
 ||new-etc.icu^
