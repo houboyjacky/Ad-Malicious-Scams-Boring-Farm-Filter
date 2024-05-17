@@ -2942,6 +2942,7 @@
 ||coincheckedd.com^
 ||coincheckh.com^
 ||coinchecktrb.com^
+||coincow.org^
 ||coindcxbcv.com^
 ||coindcxdcd.com^
 ||coindcxibjd.com^
@@ -4959,6 +4960,7 @@
 ||freeportm.com^
 ||freeportmtr.com^
 ||freeportoindonesia.com^
+||freeportuindonesia.com^
 ||freeportxindonesia.com^
 ||freeposjhs.com^
 ||freeposjob.com^
@@ -5549,6 +5551,7 @@
 ||gradio.live^
 ||graexr.com^
 ||grapeking.com.tw^
+||grasscollege.com.tw^
 ||grasstw.com^
 ||gratifiedsacrificetransformation.com^
 ||graviex-defi.com^
@@ -6459,7 +6462,6 @@
 ||inlorx2.vip^
 ||innerb.tw^
 ||insanony.com^
-||insideout2-quiz.tw^
 ||insightfuldigitalvault.blog^
 ||insin.com.tw^
 ||instabankbitmax.com^
@@ -7207,6 +7209,8 @@
 ||knnexse.com^
 ||knnexsm.com^
 ||knnexzz.com^
+||kntz.ltd^
+||kntz.pro^
 ||knwdlw.top^
 ||knxu.store^
 ||knzgsm.icu^
@@ -7894,6 +7898,7 @@
 ||lunchactuallys.com^
 ||lunohwl.com^
 ||lunojss.com^
+||lunojsw.com^
 ||lunoufj.com^
 ||lunowrb.com^
 ||luongvangiau.cfd^
@@ -8824,6 +8829,7 @@
 ||natuzay.com^
 ||natuzoey.com^
 ||natuzooy.com^
+||natuzoy.com^
 ||natuzx.com^
 ||natuzxy.com^
 ||natuzxyz.com^
@@ -9292,6 +9298,7 @@
 ||omen4btc.cyou^
 ||omen4btc.shop^
 ||omen4btc.top^
+||omf-markeettt.com^
 ||omhiwoq.buzz^
 ||omia7b.top^
 ||omichatprivacy.com^
@@ -11218,6 +11225,7 @@
 ||smcxvkg.com^
 ||smerbakt.cc^
 ||smeu.top^
+||smkl.xyz^
 ||smnspcltdy.com^
 ||smone.ddns.me^
 ||smone.loginto.me^
@@ -11366,6 +11374,7 @@
 ||spsxcv.com^
 ||sptradebew.com^
 ||sptradewht.com^
+||spu4info.buzz^
 ||spuclient.top^
 ||spuinc.buzz^
 ||spulep.buzz^
@@ -12256,6 +12265,7 @@
 ||tikksc75tok.xyz^
 ||tikkvip3tok.cc^
 ||tiklive.live^
+||tiklive.xyz^
 ||tikmail.shop^
 ||tikoaes.com^
 ||tikosewad.org^
@@ -12561,6 +12571,7 @@
 ||trcoexsq.com^
 ||trcoexsw.com^
 ||trcoexz.com^
+||trcoin.cc^
 ||trcoin.tw^
 ||trcoin.vip^
 ||treasuremax.fun^
