@@ -34,6 +34,7 @@
 #||github.io^
 #||google.com^
 #||lin.ee^
+#||metatrader5.com^
 #||mitrade.com^
 #||moonpay.com^
 #||my.id^
@@ -18855,7 +18856,6 @@
 ||metatradepips.com^
 ||metatrader24x7.com^
 ||metatrader3-ex.com^
-||metatrader5.com^
 ||metatrader5expert.com^
 ||metatradergreylabel.com^
 ||metatraders6.site^
