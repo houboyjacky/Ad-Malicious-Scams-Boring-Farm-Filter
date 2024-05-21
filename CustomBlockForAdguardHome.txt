@@ -15,6 +15,7 @@
 #||bitly.li^
 #||bitly.ws^
 #||bitoex.com^
+#||bobibobi.tw^
 #||buffettonlineschool.com.tw^
 #||cht.com.tw^
 #||clubon.space^
@@ -409,6 +410,7 @@
 ||7-11paymallr.cyou^
 ||7-11sevenmyship.com^
 ||7-11sevenmyshipa.com^
+||7-11sevenmyshipd.com^
 ||7-11sevenmyshipl.com^
 ||7-11sevenmyshipo.com^
 ||7-11sevenmyshipr.com^
@@ -719,6 +721,7 @@
 ||accrvwtrat.nl^
 ||acdccollege.com^
 ||acdxex.com^
+||acdxexy.com^
 ||ace777.com^
 ||acefinance.asia^
 ||acemlnc.com^
@@ -1496,6 +1499,7 @@
 ||basefexapp.com^
 ||basefexs.com^
 ||basffs.com^
+||basicattenionrsx.com^
 ||basker.cyou^
 ||basmes.icu^
 ||basodias.baby^
@@ -2073,7 +2077,6 @@
 ||bo-get.com^
 ||boa5z4.com^
 ||boaa.it^
-||bobibobi.tw^
 ||bocontpro.com^
 ||bodyat.com^
 ||boehninghotel.com^
@@ -3265,6 +3268,7 @@
 ||crypto.servepics.com^
 ||cryptobch.xyz^
 ||cryptobrowser.site^
+||cryptocoredex.com^
 ||cryptocurrencyexchangenova.xyz^
 ||cryptodefibit.com^
 ||cryptoguru.money^
@@ -4137,6 +4141,7 @@
 ||ejdambvh0090.com^
 ||ejkbeh.top^
 ||ejonir.shopping^
+||ejsen.cn^
 ||ekcskad.buzz^
 ||ekcuci4.asia^
 ||ekcuci4.club^
@@ -5832,6 +5837,7 @@
 ||haowan.com.tw^
 ||haoyuelove.com^
 ||haoyye.shop^
+||happierdate.com^
 ||happinessuni.org^
 ||happygo.life^
 ||happyschool.fun^
@@ -6294,6 +6300,7 @@
 ||huti-gv.cc^
 ||hutigejing.com^
 ||hutigrnewo.com^
+||huuushop.com^
 ||huwguan.com^
 ||huwkf.info^
 ||huwnll.com^
@@ -6540,6 +6547,7 @@
 ||infinitefortunefeast.lol^
 ||infinitystakechain.com^
 ||infinitytraffic.net^
+||influbit.shop^
 ||info-bounty.com^
 ||info-okx.com^
 ||info-verifycenter.com^
@@ -8957,6 +8965,7 @@
 ||natuzooy.com^
 ||natuzoy.com^
 ||natuzuy.com^
+||natuzuyx.com^
 ||natuzx.com^
 ||natuzxy.com^
 ||natuzxyz.com^
@@ -10482,6 +10491,7 @@
 ||redleapr.vip^
 ||redleapv.vip^
 ||redooton.com^
+||redress-centre.site^
 ||redrkcc.cc^
 ||reeacd.com^
 ||reeada.com^
@@ -12280,6 +12290,7 @@
 ||tendermums.com^
 ||tengpingq.com^
 ||tenhua.life^
+||tenit3344.com^
 ||tepay-tw.com^
 ||tereiswathday.shop^
 ||tergether.com^
@@ -13730,6 +13741,7 @@
 ||vk6536.net^
 ||vkaj.top^
 ||vkam.top^
+||vkeo.top^
 ||vkergfd.shop^
 ||vkge.top^
 ||vkgs.top^
@@ -15274,6 +15286,7 @@
 ||zgrshop.online^
 ||zgsdgdg.live^
 ||zgsit.cn^
+||zgtro.site^
 ||zgwhapp13.xyz^
 ||zhaijidian618.com^
 ||zhanbu168.com^
