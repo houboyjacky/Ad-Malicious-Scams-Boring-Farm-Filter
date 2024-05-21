@@ -59,6 +59,7 @@
 #||quickper.com^
 #||safepal.com^
 #||sedu.tw^
+#||sendgrid.net^
 #||shop2000.com.tw^
 #||shopline.tw^
 #||sinyicharity.org.tw^
@@ -452,6 +453,7 @@
 ||711j.icu^
 ||711m.icu^
 ||711mallshop.shop^
+||711mallshope.cyou^
 ||711mallshrp.tw^
 ||711mellshop.shop^
 ||711mgllshop.live^
@@ -712,6 +714,7 @@
 ||acceptll.shop^
 ||acceptll.site^
 ||acceptll.xyz^
+||acceptls.xyz^
 ||accesscs06.com^
 ||accessivw.com^
 ||accesso-meta-notify-jvn48.web.app^
@@ -933,6 +936,7 @@
 ||alcoaiesr.com^
 ||alconaseou.com^
 ||alconasisr.com^
+||alcopark.co^
 ||alcotjyst.com^
 ||alcotuyt.com^
 ||alcotuytye.com^
@@ -1550,6 +1554,7 @@
 ||bdd666.vip^
 ||bdd777.org^
 ||bdeoisl.com^
+||bdeporting.com^
 ||bdfpfb2x.com^
 ||bdmbbj.com^
 ||bdnapn.top^
@@ -2273,6 +2278,7 @@
 ||btsex.top^
 ||btsex.xyz^
 ||btsunaf.cc^
+||bttkw.buzz^
 ||bu1788.com^
 ||bu1888.com^
 ||buanld.online^
@@ -4320,6 +4326,7 @@
 ||esunbonk.vip^
 ||esunbrnk.cc^
 ||esunebk.top^
+||esunjk.top^
 ||esunkk.top^
 ||esunlbk.top^
 ||esunlk.top^
@@ -5322,6 +5329,7 @@
 ||genuined.shop^
 ||gepud.top^
 ||geqianff129.xyz^
+||geqianff315.xyz^
 ||geqianxz302.xyz^
 ||geraldineshop.com^
 ||gerenlicai.top^
@@ -7167,6 +7175,7 @@
 ||ken-exit.com^
 ||kentodefe.com^
 ||kentodefg.com^
+||kentodefl.com^
 ||kentodejp.com^
 ||kenzotw.com.tw^
 ||kephiris.fr^
@@ -7445,6 +7454,7 @@
 ||kvrz.top^
 ||kvt68.net^
 ||kvtb.top^
+||kvtc.top^
 ||kvtv.top^
 ||kvyc.top^
 ||kvyd.top^
@@ -8230,7 +8240,6 @@
 ||mc-globaltechmaster.com^
 ||mc1933.com^
 ||mccdn.me^
-||mcdelivery.com.tw^
 ||mcdexit.com^
 ||mcdexpro.com^
 ||mchr.life^
@@ -8387,6 +8396,7 @@
 ||mghuks.cyou^
 ||mgjswq.site^
 ||mgmgshop.com^
+||mgt1.cc^
 ||mgwang.top^
 ||mgxsks.cyou^
 ||mhchif.com^
@@ -9133,6 +9143,7 @@
 ||njhdxy.top^
 ||njhi.top^
 ||njibke.top^
+||njifr.shop^
 ||njshopee.icu^
 ||njxaw.com^
 ||nk472.top^
@@ -9864,6 +9875,7 @@
 ||pinnacle.com^
 ||pintianxiayouxuan.com^
 ||pinyoujin.com^
+||pionexbest.com^
 ||pionexbtno.com^
 ||pionexep.com^
 ||pionexo.top^
@@ -10732,6 +10744,7 @@
 ||ruihejade.com^
 ||ruiku.io^
 ||ruilizhibo.com^
+||ruis58.com^
 ||ruix336da.xyz^
 ||ruixin935da.xyz^
 ||ruljd.xyz^
@@ -10994,7 +11007,6 @@
 ||semiconductorofe.com^
 ||semiconductorsiv.com^
 ||semrush-tw.com^
-||sendgrid.net^
 ||sendo.cn^
 ||sendo.tw^
 ||sendo.us^
@@ -12834,6 +12846,7 @@
 ||trustcoin-exchange.com^
 ||trustedtmnpromo.com^
 ||trustex.one^
+||trustpad-su.com^
 ||trutrade.land^
 ||trutrade.online^
 ||trutrade.top^
@@ -13272,6 +13285,7 @@
 ||ubggiraes.com^
 ||ubghaeops.com^
 ||ubisstred.com^
+||ubiteanc.xyz^
 ||ubjgwwtw.buzz^
 ||ubone.top^
 ||ubox-white.com^
@@ -14174,6 +14188,7 @@
 ||windjxm.com^
 ||windkjv.com^
 ||windnfr.com^
+||windrat.com^
 ||winduied.com^
 ||winfuzhong.xyz^
 ||wing1688.co^
