@@ -53,6 +53,7 @@
 #||t.me^
 #||tmall.com^
 #||tmall.hk^
+#||token.im^
 #||top1markets.com^
 #||tradingview.com^
 #||twca.com.tw^
@@ -24472,7 +24473,6 @@
 ||togoingmomo.com^
 ||token-center.com^
 ||token-tesla.com^
-||token.im^
 ||tokencs.net^
 ||tokenex24.com^
 ||tokeni.bet^
