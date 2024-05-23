@@ -324,3 +324,5 @@
 @@||converga.com.au^
 @@||afp.gov.au^
 @@||asf.org.au^
+@@||openawaken.com^
+@@||etu.tw^

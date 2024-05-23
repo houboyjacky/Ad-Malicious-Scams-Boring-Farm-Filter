@@ -22,6 +22,7 @@
 #||bznk.com^
 #||cex.io^
 #||cloudfront.net^
+#||coincarp.com^
 #||coingecko.com^
 #||comnowallet.^
 #||digitalocean.com^
@@ -7121,7 +7122,6 @@
 ||coincapitalexchangeltd.com^
 ||coincapitalinvest.com^
 ||coincapsex.com^
-||coincarp.com^
 ||coincarpep.com^
 ||coincascade.org^
 ||coincasinojp.com^
