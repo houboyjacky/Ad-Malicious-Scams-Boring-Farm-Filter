@@ -457,6 +457,7 @@
 ||711gomalle.icu^
 ||711i.icu^
 ||711j.icu^
+||711l.icu^
 ||711m.icu^
 ||711mallshop.shop^
 ||711mallshope.cyou^
@@ -546,6 +547,7 @@
 ||808lll.xyz^
 ||8165977.com^
 ||81gold.com^
+||8264331.com^
 ||826535.com^
 ||8282019.com^
 ||82vw4.com^
@@ -798,6 +800,7 @@
 ||aeprosome.es^
 ||aerdus.mystrikingly.com^
 ||aeroplanemelody.cn^
+||aethx.com^
 ||aeto.xyz^
 ||aetons.com^
 ||aex-china.com^
@@ -1229,6 +1232,7 @@
 ||ar777.net^
 ||arabprintmedia.com^
 ||aradandranapp.com^
+||arbijwa.com^
 ||arbjive.com^
 ||arbmineresowes.com^
 ||arbmve.com^
@@ -1992,6 +1996,7 @@
 ||bitvfb.com^
 ||bitvip-king.com^
 ||bitvip-makt.com^
+||bitwallet.finance^
 ||bitwiner1.com^
 ||bitxoasis.com^
 ||bitypro.cc^
@@ -2117,6 +2122,7 @@
 ||bnvckliugo.com^
 ||bnwaencion.com^
 ||bnwaencshi.com^
+||bnwaencshp.com^
 ||bnwgk.online^
 ||bnwredereh.com^
 ||bnwrederik.com^
@@ -3648,6 +3654,7 @@
 ||deeznnzb.vip^
 ||deffnft.com^
 ||defi-pcs.com^
+||defi2-connect.com^
 ||defiapp.site^
 ||defiapp.world^
 ||defibot.online^
@@ -4404,6 +4411,7 @@
 ||esunbanking.top^
 ||esunbcnk.cc^
 ||esunbk.top^
+||esunbnek.cc^
 ||esunbnuk.cc^
 ||esunbonk.cc^
 ||esunbonk.top^
@@ -4689,6 +4697,7 @@
 ||fami.life^
 ||familportmall.top^
 ||familportmalla.cyou^
+||familymart-tw.space^
 ||familymart-tw.store^
 ||familymart-tw.website^
 ||familyshopapp.com^
@@ -6182,6 +6191,7 @@
 ||hkssq.com^
 ||hktcx.info^
 ||hktcx.site^
+||hktex.site^
 ||hkvip001.top^
 ||hleu.asia^
 ||hllrx.xyz^
@@ -6504,6 +6514,7 @@
 ||ice.io^
 ||icelandmarts.com^
 ||icetrandgo.com^
+||icetrandtw.com^
 ||ichatlink.net^
 ||iclick.club^
 ||iclick.team^
@@ -8582,6 +8593,7 @@
 ||minesweeperplay.online^
 ||minfrve.cc^
 ||mingchaowang.com^
+||mingdalesa.vip^
 ||mingwei-loan.com^
 ||mingwl.cyou^
 ||mingyuann.com^
@@ -8690,6 +8702,7 @@
 ||mnc8q1b0vu.com^
 ||mnksht.com^
 ||mnolews.weebly.com^
+||mo0yxs.top^
 ||moap.shop^
 ||moaw.shop^
 ||mob-iosguard.com^
@@ -9392,6 +9405,7 @@
 ||nutribio-expert.fr^
 ||nuvaclass.com^
 ||nuyin.cloud^
+||nuymy.cloud^
 ||nvbhdfs.com^
 ||nvidia.limited^
 ||nvjdnbak.com^
@@ -9939,6 +9953,7 @@
 ||pcashubr.com^
 ||pcashvrj.com^
 ||pcbonl.xyz^
+||pcbuy.shop^
 ||pcearnweb3.com^
 ||pcgameslab.net^
 ||pcgws.com^
@@ -10140,6 +10155,7 @@
 ||podcastdw.com^
 ||podcastqw.com^
 ||podfcom.top^
+||podjbi.sbs^
 ||poeax.xyz^
 ||poekeareath.click^
 ||poenins.com^
@@ -10181,6 +10197,7 @@
 ||poseidon.network^
 ||posgls.top^
 ||posgs.xyz^
+||posigs.sbs^
 ||posij.sbs^
 ||posilr.life^
 ||positon.top^
@@ -11095,6 +11112,7 @@
 ||sc1yl3.top^
 ||sc22.cc^
 ||sc55.cc^
+||sc68.net^
 ||sc88dny.cc^
 ||scacrow.top^
 ||scaleonlinecourse.com^
@@ -11167,6 +11185,7 @@
 ||seccure-wallets-id44.com^
 ||secjh.xyz^
 ||secrelove.com^
+||secretsafedomain.com^
 ||security-coin.com^
 ||security-pc.com^
 ||security16.com^
@@ -13772,6 +13791,7 @@
 ||uwin-casino.com^
 ||uxcia.com^
 ||uxfj.top^
+||uxgi.shop^
 ||uxgryv3wgs.lol^
 ||uyadan.site^
 ||uyl.buzz^
@@ -13920,6 +13940,7 @@
 ||vindaxep.com^
 ||vinmart-tw.com^
 ||vinmartt-tw.com^
+||vioc.top^
 ||viodaatomicswap.com^
 ||viodabasis.com^
 ||viodamax.com^
@@ -13938,6 +13959,7 @@
 ||vipfsx.com^
 ||viphao263.com^
 ||viphao301.com^
+||viphao817.com^
 ||viphtu.com^
 ||vipip01.com^
 ||vipkea.com^
@@ -14131,6 +14153,7 @@
 ||vxxtyygydd.world^
 ||vxxva.com^
 ||vycz.top^
+||vyjl.top^
 ||vykuggt.com^
 ||vymyr.com^
 ||vytuy.shop^
@@ -15217,6 +15240,7 @@
 ||ycoipto.com^
 ||ycsnbv.com^
 ||ycuese.top^
+||ycwoqqaf.com^
 ||ycxgov.tv^
 ||yd887.top^
 ||ydfb.store^
