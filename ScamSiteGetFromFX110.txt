@@ -3,7 +3,6 @@
 @@||metamask.io^
 #||ftmo.com^
 #||kraken.com^
-#||tfxi.com^
 #||webnode.tw^
 #||wixsite.com^
 ||00fa.com^
@@ -6626,6 +6625,7 @@
 ||tfmarketsgl.com^
 ||tfpforex.com^
 ||tfxbroker.com^
+||tfxi.com^
 ||tfxi2.com^
 ||tfyforex.com^
 ||tgcgroupfx.com^
