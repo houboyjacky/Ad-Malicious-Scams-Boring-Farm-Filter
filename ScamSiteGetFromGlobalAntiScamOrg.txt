@@ -52,6 +52,7 @@
 #||surveycake.com^
 #||t.co^
 #||t.me^
+#||tfxi.com^
 #||tmall.com^
 #||tmall.hk^
 #||token.im^
@@ -24150,7 +24151,6 @@
 ||tfshop.shop^
 ||tfx.market^
 ||tfxcontinuum.com^
-||tfxi.com^
 ||tfxi.sc^
 ||tfxi2.com^
 ||tfxlegitmining.com^
