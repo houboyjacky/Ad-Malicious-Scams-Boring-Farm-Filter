@@ -10,6 +10,7 @@
 #||aka.ms^
 #||alipay.com^
 #||anyaherb.com.tw^
+#||app.link^
 #||binance.com^
 #||bio.site^
 #||bitly.li^
@@ -1177,7 +1178,6 @@
 ||apowercheck.com^
 ||app-rewards.com^
 ||app-rush.com^
-||app.link^
 ||app1086.com^
 ||app719.net^
 ||app725.net^
