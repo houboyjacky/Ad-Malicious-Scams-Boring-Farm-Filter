@@ -1125,7 +1125,7 @@
 ! 詐騙廣告 https://www.dcard.tw/f/mood/p/241693892
 ||mjf7d47gz31se9f0h38fdjiw8i3uh5hf6f5geh3ufhd7d.com^
 ! 詐騙和潤 https://www.dcard.tw/f/talk/p/241695119
-||ep1.tw^
+#||ep1.tw^
 ! 詐騙蝦皮 https://www.dcard.tw/f/anti_fraud/p/241695162
 ||shopee89.shop^
 ! 詐騙購物 https://www.dcard.tw/f/talk/p/238609021
