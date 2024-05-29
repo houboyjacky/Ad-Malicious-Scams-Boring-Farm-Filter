@@ -5,6 +5,7 @@
 ! 封鎖觀察 xyz
 ! 封鎖HaGeZi's The World's Most Abused TLD 已定義bar、online、ml
 ! TLD直接封鎖(建議放在Adguard Home最末端)
+!/market[a-z]{3}\.com/
 /.*nanotch.com/
 /.+etc.+\.oss-ap-\w+-1\.aliyuncs\.com/
 /[0-9]+chat\.win/
@@ -324,7 +325,6 @@
 /long[0-9]\.net/
 /mainneti[a-z]\.com/
 /malls-sh[a-z]{2}\.com/
-/market[a-z]{3}\.com/
 /matic[a-z]{3}\.com/
 /matica[a-z]{2}\.com/
 /mercadolibre[a-z0-9-]+\.com/
