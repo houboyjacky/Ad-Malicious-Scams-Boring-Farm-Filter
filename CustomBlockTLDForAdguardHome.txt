@@ -456,6 +456,7 @@
 /track-tw[0-9]+\.com/
 /trade[0-9]+\.xyz/
 /tradenation[a-z]{1,2}\.(tw|com)/
+/travelifys-[a-z]+\.com/
 /trcoe[a-z]{2,3}\.com/
 /trcoex[a-z]{1,2}\.com/
 /tron[a-z]{3,4}\.com/
