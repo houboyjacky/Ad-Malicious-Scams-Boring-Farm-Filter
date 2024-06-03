@@ -333,3 +333,4 @@
 @@||skin.club^$important
 @@||myppt.cc^
 @@||nhk.or.jp^
+@@||kahoot.it^$important
