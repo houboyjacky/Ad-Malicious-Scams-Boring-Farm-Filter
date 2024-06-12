@@ -793,6 +793,7 @@
 ||activitytwcht.com^
 ||acvd.site^
 ||acxamex.com^
+||acyasia-cn.com^
 ||ad-specs.guoshipartners.com^
 ||ad.setn.com^
 ||adam.com.au^
@@ -2559,6 +2560,7 @@
 ||byt.com.tw^
 ||bytecdntp.com^
 ||bytrack.com^
+||bytrack01.xyz^
 ||c-ibc000.com^
 ||c-ta.ru^
 ||c014.site^
@@ -4079,12 +4081,14 @@
 ||domaincntrol.com^
 ||domainforsw.com^
 ||domall.world^
+||domfw.cfd^
 ||dongjiahao.top^
 ||dongri8.com^
 ||donnyollinge.com^
 ||donorcomms.asia^
 ||dora.run^
 ||doraemon100.com^
+||dosng.com^
 ||dosobex.top^
 ||dossd.shop^
 ||dotcoin.top^
@@ -4743,7 +4747,6 @@
 ||euroasistw.com^
 ||euroasisup.com^
 ||euroasisus.com^
-||euromonitor.com^
 ||euronext-portcoins.top^
 ||euronext-transcoins.top^
 ||eusanbak.top^
@@ -5734,6 +5737,7 @@
 ||ghiqjoa.shop^
 ||ghiqoqa.shop^
 ||ghjeu.com^
+||ghtde245dewss.icu^
 ||gi4n2.school^
 ||giantripod.com^
 ||gidgsia.top^
@@ -7864,6 +7868,7 @@
 ||koxxn.wordpress.com^
 ||kp-apk.com^
 ||kpaterassoc.shop^
+||kpchux.com^
 ||kpoesd.com^
 ||kpty008.com^
 ||kracqwrb.com^
@@ -8188,6 +8193,7 @@
 ||lifeshop2.com^
 ||lifeshopfac.com^
 ||lifesparktrust.com^
+||liffeteo.com^
 ||light4tradetw.top^
 ||light4tradetw.xyz^
 ||lightinthebox.b2clitb.puyansh.com^
@@ -8448,6 +8454,7 @@
 ||lotterybaby.tw^
 ||lotterysky8.com^
 ||lotteshopidc.com^
+||louisacoffecashmoney.com^
 ||louisacoffeevipcash.com^
 ||louisacoffemoney.com^
 ||louisacoffevip.com^
