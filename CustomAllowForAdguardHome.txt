@@ -334,3 +334,4 @@
 @@||myppt.cc^
 @@||nhk.or.jp^
 @@||kahoot.it^$important
+@@||0x1.academy^$important
