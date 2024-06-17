@@ -336,3 +336,4 @@
 @@||kahoot.it^$important
 @@||0x1.academy^$important
 @@||pegatroncorp.com^
+@@||dolfan.club^$important
