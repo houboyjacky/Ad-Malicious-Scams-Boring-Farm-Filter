@@ -32,6 +32,6 @@ filtered_df = df[(df['通報日期'] >= three_days_ago) & (df['通報日期'] <=
 accounts = filtered_df['帳號'].tolist()
 
 # 將帳號以換行分隔輸出
-with open('GetFromGovernmentInf_LineID.txt', 'w', encoding="utf-8") as file:
+with open('GetFrom165_LineID_CSV.txt', 'w', encoding="utf-8") as file:
     for account in accounts:
         file.write(account + '\n')
