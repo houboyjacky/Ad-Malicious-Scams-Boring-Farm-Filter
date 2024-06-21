@@ -44,6 +44,7 @@
 /aidhscwy[a-z]+[0-9]\.com/
 /aigrid[a-z]{2,3}\.com/
 /aines[a-z]{3,4}\.com/
+/airdropvt[a-z]\.com/
 /aisme.+\.com/
 /aismex[a-z0-9]+.com/
 /aitechstock\.(co|tw|vip)/
@@ -51,6 +52,7 @@
 /alliancegrowth.+\.[a-z]+/
 /alphafinace[a-z0-9]+\.com/
 /alvexo[a-z]{3}\.com/
+/alvot[a-z]ck\.com/
 /amazon[0-9]+\.mobi/
 /amtop[a-z]{2,4}\.com/
 /animoca[a-z]{2,3}\.com/
@@ -154,6 +156,7 @@
 /coinmamama[a-z]+\.com/
 /coinme[0-9]{2,3}\.cc/
 /coinrule.*\.*/
+/coinspro[a-z]{3}\.com/
 /coinut[a-z]{3}\.com/
 /coinvv[a-z0-9]+\.com/
 /coinw[a-z]{3,4}\.com/
@@ -206,7 +209,9 @@
 /ee[0-9]+\.com/
 /em[a-z][a-z]\.xyz/
 /energy[a-z]{2,3}\.com/
+/energy[a-z]{2,3}\.com/
 /eoiso[a-z]\.com/
+/eosnetworke[a-z]{2}\.com/
 /eth-cvc[0-9]*\.com/
 /ethminer-[a-z]+\.com/
 /etimtoken[0-9-]{1,2}\.com/
@@ -236,6 +241,7 @@
 /fitbelaepro\.[a-z]+/
 /fk[0-9]+\.com/
 /flexji[a-z]\.com/
+/flourish[a-z]{3}\.com/
 /fmfw[a-z]+\.com/
 /fnline\.(info|xyz|vip)/
 /focus[a-z]{3}\.com/
@@ -292,6 +298,7 @@
 /igmark[a-z0-9]*\.com/
 /imcmax-[a-z]{2,3}\.com/
 /imxmj[a-z]\.com/
+/independenth[a-z]{2}\.com/
 /information-pages-[0-9]+.webnode.co/
 /instabank[a-z]{3,5}\.com/
 /insterm[a-z]{3,4}\.com/
@@ -325,6 +332,7 @@
 /liquiditypool-.+\.com/
 /lirunps[a-z]{2,4}\.com/
 /long[0-9]\.net/
+/lunojs[a-z]\.com/
 /mainneti[a-z]\.com/
 /malls-sh[a-z]{2}\.com/
 /matic[a-z]{3}\.com/
@@ -367,6 +375,7 @@
 /osigit[a-z]{4,5}\.com/
 /ottoshop[a-z]{2}\.com/
 /ottoshops[a-z]\.com/
+/oupeide[a-z]{3}\.com/
 /pages-[0-9]+\.pw/
 /pageverification[a-z0-9]+\.co\.vu/
 /pass-wor[a-z]{2}\.cc/
