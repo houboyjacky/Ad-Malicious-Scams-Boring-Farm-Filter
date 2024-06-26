@@ -262,6 +262,7 @@
 /gbay-?shop.*\..+/
 /gdf999.[a-z]+/
 /gemini[a-z]{2,3}\.com/
+/geqianff[0-9]{3}\.xyz/
 /gexcoin\.(co|io|me)/
 /gleneagle[a-z]{3,4}\.com/
 /gleneagle[a-z]{3}\.com/
