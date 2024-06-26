@@ -2310,7 +2310,6 @@
 ||atfx-gm.com^
 ||atfx-kaihu.com^
 ||atfx-tw.net^
-||atfx.com^
 ||atfxint.buzz^
 ||atfxmart.co.uk^
 ||atfxstafy.com^
