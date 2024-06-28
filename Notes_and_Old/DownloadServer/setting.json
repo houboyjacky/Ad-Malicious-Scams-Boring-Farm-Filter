@@ -1,9 +1,9 @@
 {
-    "CONFIG_BACKUP":"",
-    "CONFIG_ORIGIN":"",
-    "CONFIG_SIGN":"",
-    "PEM_DIR":"",
-    "CERT":"",
-    "PRIVKEY":"",
-	"LOGFILE":""
+    "CONFIG_BACKUP": "",
+    "CONFIG_ORIGIN": "",
+    "CONFIG_SIGN": "",
+    "CERT_DIR": "",
+    "CERT_FULLCHAIN": "",
+    "CERT_PRIVKEY": "",
+    "LOGFILE": ""
 }

@@ -32,11 +32,12 @@ with open('setting.json', 'r') as f:
 BackupDIR = setting['CONFIG_BACKUP']
 MobileConfigDIR = setting['CONFIG_ORIGIN']
 TARGET_DIR = setting['CONFIG_SIGN']
-PEM_DIR = setting['PEM_DIR']
+CERT_DIR = setting['CERT_DIR']
+
 
 def SignMobileconfig():
-    if not os.path.isdir(PEM_DIR):
-        logger.info(f'The {PEM_DIR} is NOT exist in your system.')
+    if not os.path.isdir(CERT_DIR):
+        logger.info(f'The {CERT_DIR} is NOT exist in your system.')
         return False
 
     if os.path.isdir(BackupDIR):
@@ -49,13 +50,15 @@ def SignMobileconfig():
         logger.info(f'The {MobileConfigDIR} is NOT exist in your system.')
         return False
 
-    subprocess.run(['openssl', 'ec', '-in', f'{PEM_DIR}/privkey.pem', '-out', f'{TARGET_DIR}/Self_Key.key'], check=True)
+    subprocess.run(['openssl', 'ec', '-in', f'{CERT_DIR}/privkey.pem', '-out', f'{
+                   TARGET_DIR}/Self_Key.key'], check=True)
 
     filelist = os.listdir(MobileConfigDIR)
     for filename in filelist:
         extension = filename.split('.')[-1]
         if extension == 'mobileconfig':
             logger.info(f'Sign {filename} Start')
-            subprocess.run(['openssl', 'smime', '-sign', '-in', f'{MobileConfigDIR}/{filename}', '-out', f'{TARGET_DIR}/{filename}', '-signer', f'{PEM_DIR}/fullchain.pem', '-inkey', f'{TARGET_DIR}/Self_Key.key', '-certfile', f'{PEM_DIR}/chain.pem', '-outform', 'der', '-nodetach'], check=True)
+            subprocess.run(['openssl', 'smime', '-sign', '-in', f'{MobileConfigDIR}/{filename}', '-out', f'{TARGET_DIR}/{filename}', '-signer', f'{
+                           CERT_DIR}/fullchain.pem', '-inkey', f'{TARGET_DIR}/Self_Key.key', '-certfile', f'{CERT_DIR}/chain.pem', '-outform', 'der', '-nodetach'], check=True)
             logger.info(f'Sign {TARGET_DIR}/{filename} Finish')
     return True

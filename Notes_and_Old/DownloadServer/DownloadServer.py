@@ -45,20 +45,24 @@ app = Flask(__name__)
 # 設定允許下載的檔案類型
 ALLOWED_EXTENSIONS = {'mobileconfig'}
 
+
 @app.before_request
 def limit_remote_addr():
     global cf_ips
     for cf_ip in cf_ips:
         if ipaddress.IPv4Address(request.remote_addr) in ipaddress.ip_network(cf_ip):
             return None
-    log_message = '403 Error: %s %s %s' % (request.remote_addr, request.method, request.url)
+    log_message = '403 Error: %s %s %s' % (
+        request.remote_addr, request.method, request.url)
     logger.error(log_message)
     return "Forbidden", 403
+
 
 def allowed_file(filename):
     # 檢查檔案類型是否合法
     return '.' in filename and \
            filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+
 
 @app.route('/<filename>')
 def download(filename):
@@ -82,17 +86,20 @@ def download(filename):
         logger.info("Not allowed file")
         return render_template('404.html'), 404
 
+
 def Logger_schedule(stop_event):
     schedule.every().day.at("23:00").do(Logger_Transfer, pre_close=False)
     while not stop_event.is_set():
         schedule.run_pending()
         time.sleep(1)
 
+
 def signal_handler(sig, frame):
     logger.info('Received signal : ' + str(sig))
     stop_event.set()
     Logger_Transfer()
     sys.exit(0)
+
 
 if __name__ == '__main__':
 
@@ -108,13 +115,15 @@ if __name__ == '__main__':
     logger.info("Finish SignMobileconfig")
 
     # 建立 thread
-    logger_thread = threading.Thread(target=Logger_schedule, args=(stop_event,))
+    logger_thread = threading.Thread(
+        target=Logger_schedule, args=(stop_event,))
 
     # 啟動 thread
     logger_thread.start()
 
     download_cf_ips()
-    app.run(host='0.0.0.0', port=8443, ssl_context=(setting['CERT'], setting['PRIVKEY']), threaded=True)
+    app.run(host='0.0.0.0', port=8443, ssl_context=(
+        setting['CERT_FULLCHAIN'], setting['CERT_PRIVKEY']), threaded=True)
 
     # 等待 thread 結束
     logger_thread.join()
