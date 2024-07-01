@@ -14,6 +14,7 @@
 #||github.io^
 #||icmarkets.com^
 #||moonpay.com^
+#||seekingalpha.com^
 #||t.co^
 #||trustwallet.com^
 #||web.app^
@@ -25227,7 +25228,6 @@
 ||seecurejdb.com^
 ||seecurejdo.com^
 ||seeingshop.com^
-||seekingalpha.com^
 ||seeltron.com^
 ||seemlesstrades.com^
 ||seenerindex.com^

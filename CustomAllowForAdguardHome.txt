@@ -345,3 +345,5 @@
 @@||tanping.com.tw^
 @@||sensepeer.com.tw^
 @@||hbr.quest^
+@@||shosho.app^$important
+@@||notion.site^$important
