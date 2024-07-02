@@ -11,6 +11,7 @@
 #||mystrikingly.com^
 #||weebly.com^
 #||zapto.org^
+#||zendesk.com^
 ||0066666.co^
 ||006buy.store^
 ||00888.tw^
@@ -15910,7 +15911,6 @@
 ||zealmarketfx.com^
 ||zealminers.com^
 ||zealotfinacialincome.net^
-||zendesk.com^
 ||zenex.club^
 ||zenex.site^
 ||zenexc.com^
