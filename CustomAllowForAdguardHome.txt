@@ -347,3 +347,4 @@
 @@||hbr.quest^
 @@||shosho.app^$important
 @@||notion.site^$important
+@@||bmai.app^$important
