@@ -629,6 +629,7 @@
 ||aircash.cc^
 ||aircash.club^
 ||airdroparbcoir.com^
+||airdroparbitbab.com^
 ||airdropvti.com^
 ||airdropvtu.com^
 ||airdropvty.com^
@@ -744,6 +745,7 @@
 ||aliexpresst.com^
 ||aliexpresswhole.com^
 ||aliexpresswholept.com^
+||aliexpresswholes.com^
 ||aliexpresswholesa.com^
 ||aliexprestw.com^
 ||aliexprestwo.vip^
@@ -983,6 +985,7 @@
 ||apexcoins.club^
 ||apexcoins.net^
 ||apexcoins.online^
+||apexglobal.market^
 ||apgo88.com^
 ||aphshop.com^
 ||apkejf.com^
@@ -2858,6 +2861,7 @@
 ||cbxcoinex.com^
 ||cbxcoins.vip^
 ||cbyaskf.com^
+||cbyyl.com^
 ||cc7xiqjf.top^
 ||cc8g8.com^
 ||cccaseayu.com^
@@ -3399,6 +3403,7 @@
 ||coinsitmwl.com^
 ||coinsitmwz.com^
 ||coinsitu.com^
+||coinspace-co.com^
 ||coinspace-tw.com^
 ||coinsproidl.com^
 ||coinsprosiv.com^
@@ -8417,6 +8422,7 @@
 ||koelid.com^
 ||koexchange.tw^
 ||kofexweb.com^
+||kohvtuc.com^
 ||koicpl.vip^
 ||koimallshop.com^
 ||koisep.com^
@@ -9110,6 +9116,7 @@
 ||mansa.site^
 ||mansionno8.cc^
 ||manycoin.com^
+||maple-flow.com^
 ||market4global.shop^
 ||marketbfi.com^
 ||marketbtc.vip^
@@ -9280,6 +9287,7 @@
 ||memebbi.com^
 ||memehma.com^
 ||memehmb.com^
+||memenry.com^
 ||memhds.com^
 ||menfoudation1.com^
 ||menfoudation3.com^
@@ -9584,6 +9592,7 @@
 ||momotofun.com^
 ||momotwafvb.store^
 ||momowell.com^
+||monarchlibertygroup.cc^
 ||monexgroups.com^
 ||monexgroupsx.com^
 ||money-es.cfd^
@@ -9667,6 +9676,7 @@
 ||mrioz.com^
 ||mrkglrv.com^
 ||mrnbqkjeqnkw.com^
+||ms-brokerfbs.com^
 ||ms86.cn^
 ||msbayfdu.com^
 ||msbpit.top^
@@ -11279,6 +11289,7 @@
 ||quantitative.com.tw^
 ||quantitativea.com^
 ||quantitativetw.net^
+||quantomcapitals.com^
 ||quantvine.com^
 ||qucmal.top^
 ||quedex-io.com^
@@ -12364,6 +12375,7 @@
 ||skiws.xyz^
 ||skjhjfijdwk.com^
 ||skkskd.com^
+||sklao.xyz^
 ||sklbank.com^
 ||skshoptw.com^
 ||skshoptw886.com^
@@ -13686,6 +13698,7 @@
 ||trading-coin-edge.store^
 ||trading-coin-edge.world^
 ||trading-ebay.com^
+||tradingroom84-18.com^
 ||tradingspfx.com^
 ||tradingview258.top^
 ||tradingview5.top^
@@ -14872,6 +14885,7 @@
 ||warrioroz.com^
 ||warriorxg.com^
 ||warriorxs.com^
+||wass1.cn^
 ||waton.shop^
 ||watsone.store^
 ||wausdy.xyz^
