@@ -348,3 +348,4 @@
 @@||shosho.app^$important
 @@||notion.site^$important
 @@||bmai.app^$important
+@@||fuhui-official.com^
