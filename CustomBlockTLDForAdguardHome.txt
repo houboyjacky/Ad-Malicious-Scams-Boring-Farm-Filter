@@ -209,7 +209,6 @@
 /ee[0-9]+\.com/
 /em[a-z][a-z]\.xyz/
 /energy[a-z]{2,3}\.com/
-/energy[a-z]{2,3}\.com/
 /eoiso[a-z]\.com/
 /eosnetworke[a-z]{2}\.com/
 /eth-cvc[0-9]*\.com/
@@ -539,6 +538,7 @@
 ||*.lol^
 ||*.pages.*.br^
 ||*.pl^$denyallow=org.pl|edu.pl|com.pl|gov.pl
+||*.ubpages.com^
 ||*.vip^
 ||0xboost.*^
 ||2812510016.*^

@@ -349,3 +349,4 @@
 @@||notion.site^$important
 @@||bmai.app^$important
 @@||fuhui-official.com^
+@@||smarturl.it^$important
