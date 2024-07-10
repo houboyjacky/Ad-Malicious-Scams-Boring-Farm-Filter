@@ -3,6 +3,27 @@ import os
 import json
 
 
+def clear_files_in_directory(directory, extension):
+    # Ensure the extension starts with a dot
+    if not extension.startswith('.'):
+        extension = '.' + extension
+
+    # Iterate over all files in the directory
+    for root, dirs, files in os.walk(directory):
+        for file in files:
+            # Check if the file has the specified extension
+            if file.endswith(extension):
+                file_path = os.path.join(root, file)
+                # Check if the file is non-empty
+                if os.path.getsize(file_path) > 0:
+                    # Clear the content of the file
+                    with open(file_path, 'w') as f:
+                        f.write('')
+                    print(f"Cleared content of file: {file_path}")
+                else:
+                    pass
+
+
 def convert_to_lf_and_save(file_path):
     with open(file_path, 'rb') as file:
         content = file.read()
@@ -48,4 +69,5 @@ def generate_hash_json(directory):
 
 # 執行範例
 directory_path = '..'
+clear_files_in_directory(".", "txt")
 generate_hash_json(directory_path)

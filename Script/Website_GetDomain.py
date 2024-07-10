@@ -3,7 +3,7 @@ import string
 
 input_file_path = "Website_input.txt"
 output_file_path = "Website_output.txt"
-subwebsite_file_path = "SubWebsite.txt"
+subwebsite_file_path = "SubWebsite"
 
 SUBWEBSITE = []
 
