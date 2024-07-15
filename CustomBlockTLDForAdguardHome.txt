@@ -540,6 +540,7 @@
 ||*.pl^$denyallow=org.pl|edu.pl|com.pl|gov.pl
 ||*.ubpages.com^
 ||*.vip^
+||*7eleven.pse.is^
 ||0xboost.*^
 ||2812510016.*^
 ||711myshupbuy.*^
