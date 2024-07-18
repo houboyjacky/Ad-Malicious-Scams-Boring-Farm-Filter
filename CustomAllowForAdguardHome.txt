@@ -351,3 +351,5 @@
 @@||fuhui-official.com^
 @@||smarturl.it^$important
 @@||linee.io^
+@@||canva.site^$important
+@@||app.shopback.com^$important
