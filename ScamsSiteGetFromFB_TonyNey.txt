@@ -26356,6 +26356,7 @@
 ||ssfrk.com^
 ||ssfxpro.com^
 ||sshopgivebacking.com^
+||sso.teachable.com^
 ||sspappfx.com^
 ||sss-chat.net^
 ||sssccgfdgjcostcoo.com^
@@ -27175,7 +27176,6 @@
 ||tea-buytea.com^
 ||tea-pin.com^
 ||teabuyandsell.com^
-||teachable.com^
 ||teachersfx.com^
 ||teacupsbuy.com^
 ||teacupsbuys.com^
