@@ -27,7 +27,7 @@
 /24pchome[a-z0-9]*\.com/
 /3456[0-9]+\.xyz/
 /6[0Oo]{3}(?:gov)?\.tw/
-/7-11sevenmyship[a-z]\.com/
+/7-11sevenmyship[a-z]+\.com/
 /7-eleven-[a-z]+\.homes/
 /7-eleven\w+\.cc/
 /711-tw[0-9]+.tech/
