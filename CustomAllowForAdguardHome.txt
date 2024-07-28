@@ -354,3 +354,6 @@
 @@||canva.site^$important
 @@||app.shopback.com^$important
 @@||skyisland.tw^
+@@||cmy.tw^
+@@||chinaq.club^
+@@||linshin.com.tw^
