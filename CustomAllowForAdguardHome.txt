@@ -354,6 +354,9 @@
 @@||canva.site^$important
 @@||app.shopback.com^$important
 @@||skyisland.tw^
+@@||ooopenlab.cc^$important
+@@||esimgo.store^$important
+@@||dewx.top^$important
 @@||cmy.tw^
 @@||chinaq.club^
 @@||linshin.com.tw^
