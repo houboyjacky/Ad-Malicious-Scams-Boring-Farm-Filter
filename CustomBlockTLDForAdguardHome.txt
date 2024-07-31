@@ -139,6 +139,7 @@
 /casave[0-9]+00\.com/
 /cfm-id[0-9]+\.com/
 /charterprime[a-z0-9]*\.com/
+/chingua[0-9]+\.wixsite\.com/
 /chung[-]?hwa[-]?.*\..*/
 /cj2024[0-9]{2}\.store/
 /clear-skys\.[a-z]+/

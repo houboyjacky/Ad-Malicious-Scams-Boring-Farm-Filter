@@ -362,3 +362,6 @@
 @@||linshin.com.tw^
 @@||ccesince2018.app^
 @@||esimgo.store^
+@@||kdpic.pchome.com.tw^$important
+@@||lixiaofei2yy.website^$important
+@@||funday.asia^$important
