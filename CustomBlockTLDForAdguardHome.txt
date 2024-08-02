@@ -16,6 +16,7 @@
 /[a-z0-9]+gov.(tw|xyz|me|tv|store|shop|com)/
 /[a-z0-9]+hotshop\.com/
 /[a-z0-9]+xakcqzj\.cn/
+/^shopping-[a-z]+\.com/
 /11st[a-z]\.com/
 /11st[a-z0-9]{1,2}\.com/
 /11streetth[a-z]\.com/
@@ -420,7 +421,6 @@
 /shengwanlia[0-9]{3,4}\..*/
 /shjs[0-9]{3}\.com/
 /shopee-[a-z0-9]+\.tw/
-/shopping-[a-z]+\.com/
 /shoppingmall[0-9]*\.xyz/
 /shoptw[a-z]\.com/
 /shopvip-?[a-z]{0-2}\.[a-z]+/
