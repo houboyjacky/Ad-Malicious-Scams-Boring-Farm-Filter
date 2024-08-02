@@ -333,6 +333,7 @@
 /liquiditypool-.+\.com/
 /lirunps[a-z]{2,4}\.com/
 /long[0-9]\.net/
+/lowearthorbitc[a-z]\.com/
 /lunojs[a-z]\.com/
 /mainneti[a-z]\.com/
 /malls-sh[a-z]{2}\.com/
@@ -354,6 +355,7 @@
 /moneysqure[a-z]{2}\.com/
 /moscow[a-z]{3}\.com/
 /moxc[a-z0-9]{2,3}\.com/
+/mrkexchang[a-z]{1,2}\.com/
 /mtooe[a-z]{2,3}\.com/
 /mtooex[a-z]{1,2}\.com/
 /mycoin[a-z0-9]+\.net/
@@ -407,6 +409,7 @@
 /ruten.+\.com/
 /ruten[0-9]+\.tw/
 /saintrich[a-z0-9]*\.com/
+/sbgexchangesw[a-z]\.com/
 /schw[a-z]+\.com/
 /screrth[a-z]{3}\.com/
 /seipr[a-z]\.com/
@@ -499,6 +502,7 @@
 /waytec.+\.com/
 /week-tradepro\..+/
 /weisen[a-z0-9]*\.com/
+/whastapp-[a-z]{2}\.com/
 /whgj[0-6]+\.(com|cc)/
 /wjer24[0-9]{2}\.site/
 /wns[0-9]+\.com/
@@ -584,6 +588,7 @@
 ||buyer-work.*^
 ||cbn-tw.*^
 ||coinbasewallet.*^
+||coinbte.*^
 ||coinex*.*^
 ||coinfalcon.*^
 ||coingrew.*^
@@ -663,6 +668,7 @@
 ||starbucksvip.+.com^
 ||stenbit.*^
 ||taiwanmodlie.*^
+||tapbit-link.*^
 ||tk-shop.*^
 ||tkocryptocurrency.*^
 ||tokenlon.*^
