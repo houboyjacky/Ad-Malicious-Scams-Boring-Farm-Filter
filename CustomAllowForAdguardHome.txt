@@ -367,3 +367,7 @@
 @@||funday.asia^$important
 @@||69shuba.cx^
 @@||mez.ink^
+@@||tradingview.com^$important
+@@||69shuba.cx^$important
+@@||aave.com^$important
+@@||instabio.cc^$important
