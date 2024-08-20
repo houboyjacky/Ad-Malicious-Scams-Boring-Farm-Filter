@@ -372,3 +372,7 @@
 @@||aave.com^$important
 @@||instabio.cc^$important
 @@||1000sunnytour.com.tw^
+@@||dosi.world^$important
+@@||coinall.ltd^$important
+@@||app-analytics-services.com$important
+@@||eromcn.com^$important
