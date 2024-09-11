@@ -392,3 +392,5 @@
 @@||buyandship.today^$important
 @@||quantumgraph.com^$important
 @@||linegames.org^
+@@||swap.work^$important
+@@||roo.cash^$important
