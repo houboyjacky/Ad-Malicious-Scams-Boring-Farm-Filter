@@ -394,3 +394,6 @@
 @@||linegames.org^
 @@||swap.work^$important
 @@||roo.cash^$important
+@@||exness.com^$important
+@@||apple.co^$important
+@@||blockcast.it^$important
