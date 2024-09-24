@@ -397,3 +397,5 @@
 @@||exness.com^$important
 @@||apple.co^$important
 @@||blockcast.it^$important
+@@||lcstw.com.tw^
+@@||t9y3c.com^
