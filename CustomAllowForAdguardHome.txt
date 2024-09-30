@@ -400,4 +400,6 @@
 @@||lcstw.com.tw^
 @@||t9y3c.com^
 @@||hidol.fan^$important
-@@||on-taiwan.com.tw^
+@@||on-taiwan.com.tw^$important
+@@||vrbrothers.com^$important
+@@||futurelink.com.tw^
