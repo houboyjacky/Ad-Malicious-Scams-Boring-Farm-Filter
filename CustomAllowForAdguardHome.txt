@@ -403,3 +403,5 @@
 @@||on-taiwan.com.tw^$important
 @@||vrbrothers.com^$important
 @@||futurelink.com.tw^
+@@||koc.com.tw^
+@@||mycard24.tw^$important
