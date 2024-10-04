@@ -405,3 +405,5 @@
 @@||futurelink.com.tw^
 @@||koc.com.tw^
 @@||mycard24.tw^$important
+@@||redd.it^$important
+@@||docj27ko03fnu.cloudfront.net^$important

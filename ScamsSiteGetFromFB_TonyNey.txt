@@ -1,6 +1,7 @@
 
 ! 取自FB https://www.facebook.com/groups/1141798046611751/user/100001471821039/
 ! Update to 2024/04/24 23:59
+#||amazonaws.com^
 #||apple.com^
 #||bitget.com^
 #||bitunix.com^
@@ -1495,7 +1496,6 @@
 ||amazon5228.top^
 ||amazon5236.top^
 ||amazon8786.top^
-||amazonaws.com^
 ||amazoncryptominers.com^
 ||amazondlj.com^
 ||amazonfbajp.com^
