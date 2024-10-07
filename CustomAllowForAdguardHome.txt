@@ -407,3 +407,5 @@
 @@||mycard24.tw^$important
 @@||redd.it^$important
 @@||docj27ko03fnu.cloudfront.net^$important
+@@||nidin.shop^$important
+@@||csp-reporting.cloudflare.com^$important
