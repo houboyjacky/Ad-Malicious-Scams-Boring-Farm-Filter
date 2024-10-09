@@ -410,3 +410,5 @@
 @@||nidin.shop^$important
 @@||csp-reporting.cloudflare.com^$important
 @@||ryostudio.com.tw^
+@@||elliepets.com.tw^
+@@||coinbase.com^$important
