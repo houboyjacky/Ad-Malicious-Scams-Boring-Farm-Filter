@@ -413,3 +413,8 @@
 @@||elliepets.com.tw^
 @@||coinbase.com^$important
 @@||playreal.city^$important
+@@||waltily.tw^
+@@||vitabox.com.tw^
+@@||vitabox.info^
+@@||apple-dns.net^$important
+@@||urdate.com.tw^
