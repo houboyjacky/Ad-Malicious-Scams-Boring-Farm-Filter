@@ -418,3 +418,7 @@
 @@||vitabox.info^
 @@||apple-dns.net^$important
 @@||urdate.com.tw^
+@@||capitalcouple.com.tw^$important
+@@||capitalfund.com.tw^$important
+@@||lifepro.com.tw^$important
+@@||esimconnect.com.tw^
