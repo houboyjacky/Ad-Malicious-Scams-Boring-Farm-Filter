@@ -422,3 +422,5 @@
 @@||capitalfund.com.tw^$important
 @@||lifepro.com.tw^$important
 @@||esimconnect.com.tw^
+@@||buyca.shop^$important
+@@||oook.com.tw^
