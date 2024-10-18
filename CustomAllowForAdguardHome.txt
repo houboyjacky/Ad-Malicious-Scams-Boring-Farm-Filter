@@ -425,3 +425,4 @@
 @@||buyca.shop^$important
 @@||oook.com.tw^
 @@||hunterage.com^
+@@||cmegroup.com^$important
