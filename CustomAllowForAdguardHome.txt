@@ -428,3 +428,4 @@
 @@||cmegroup.com^$important
 @@||go.edh.tw^$important
 @@||imtoken.fans^$important
+@@||startingedu.tw^
