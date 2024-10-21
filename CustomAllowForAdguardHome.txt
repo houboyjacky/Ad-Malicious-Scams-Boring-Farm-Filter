@@ -426,3 +426,5 @@
 @@||oook.com.tw^
 @@||hunterage.com^
 @@||cmegroup.com^$important
+@@||go.edh.tw^$important
+@@||imtoken.fans^$important
