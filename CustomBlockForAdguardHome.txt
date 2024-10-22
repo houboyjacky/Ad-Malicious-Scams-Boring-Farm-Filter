@@ -12710,6 +12710,7 @@
 ||mefgrt.cyou^
 ||megacourierdelivery.com^
 ||megazenitheconline.com^
+||megcxbit.com^
 ||mehooapp.com^
 ||mehzkk.com^
 ||meianc.online^
@@ -17674,6 +17675,8 @@
 ||smartsyntax.xyz^
 ||smarttiktok.net^
 ||smarturl.it^
+||smartvision-com.tw^
+||smartvisiontw.com^
 ||smbcklwjqe.top^
 ||smbcnikko.tw^
 ||smbcnikko1.tw^
