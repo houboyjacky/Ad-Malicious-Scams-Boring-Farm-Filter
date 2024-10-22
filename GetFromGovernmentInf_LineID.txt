@@ -39,6 +39,7 @@ _zhen._.1214
 _zhu.0522
 _zn.153
 _zs888
+-chenjh
 -zyx0516
 ! 網址來源 https://165.npa.gov.tw/#/lineid
 ! 網址來源 https://data.gov.tw/dataset/78432
@@ -588,10 +589,12 @@ _zs888
 @402jimfg
 @402xeadb
 @404ygjcl
+@405aftkj
 @405mynld
 @405qhyne
 @407iukwo
 @407tuhle
+@409vfyci
 @409zygrn
 @410bvppq
 @411lgiik
@@ -621,6 +624,7 @@ _zs888
 @426whcmo
 @427xsulj
 @428gmdpm
+@430ajlsw
 @430sehok
 @431dmunw
 @431xoxqb
@@ -659,6 +663,7 @@ _zs888
 @461yltvn
 @461zofcl
 @462hvcgj
+@463crbsj
 @463gmozp
 @463iigg7w
 @464iular
@@ -731,6 +736,7 @@ _zs888
 @514waptp
 @515ibdtj
 @516idxxa
+@517uzorq
 @518jgjuq
 @518qiang
 @519odjy
@@ -906,6 +912,7 @@ _zs888
 @644alxn
 @644alxnx
 @645gwbnp
+@645qjbna
 @646hrvra
 @647nzxuy
 @649jiyom
@@ -1384,6 +1391,7 @@ _zs888
 @bitexchange
 @bitproowner
 @books.c2c
+@bookstw.c2c
 @brown0610
 @buu5852r
 @buytickets
@@ -1958,6 +1966,7 @@ _zs888
 0955801058
 0955888207
 0956128896
+0956729126
 0956786786
 0956941888
 0957293411
@@ -2209,6 +2218,7 @@ _zs888
 10669652
 1075389
 107578xin
+10800666
 10806666
 1084293228
 10909999
@@ -3267,6 +3277,7 @@ _zs888
 5425854
 5426411
 5429999
+54366443
 54385437
 54415980
 5445ccyou
@@ -3826,6 +3837,7 @@ _zs888
 7715392
 77187
 7722266
+77236688
 77263
 7739530
 77476231
@@ -6640,6 +6652,7 @@ au09913
 au141082
 au939
 aua1357
+aug6687
 august699
 august78nan
 aun12767
@@ -6785,6 +6798,7 @@ aza159
 azaz26985
 azaz6985
 azaz88446
+azazqq5566
 aze1130000
 azj223
 azmk1688
@@ -8762,6 +8776,7 @@ chian01717
 chiaoo1210
 chiau1788
 chic1225
+chich521314
 chichi_1009
 chichi57777
 chichi7918
@@ -10272,6 +10287,7 @@ dissent0628
 dit8866
 diy0328
 diy12138
+diya2260
 dj142
 dj1886
 dj19851026
@@ -10738,6 +10754,7 @@ en99en
 enai1314
 enana0806
 encounter0999
+eneil_35711
 enen258
 ener0315
 eneryu0315
@@ -11639,6 +11656,7 @@ gan20089925
 gang06280
 gang131400
 gangj76
+gao_51660
 gao_xiang
 gao.yu51688
 gao138
@@ -12042,6 +12060,7 @@ gt9987
 gtc6689
 gtf2356
 gtr778
+gtry678
 gtsh01
 gtsh888
 gtx1163
@@ -13243,6 +13262,7 @@ hxy559300
 hxy588
 hxy7483
 hxy7699
+hxz0911
 hxz188
 hxzb888
 hy-0819
@@ -13564,6 +13584,7 @@ it8530
 ita99
 itbit005
 iteglobal
+itistw1688
 itp8888
 its478
 itty6
@@ -14718,6 +14739,7 @@ ka9864
 kaay77
 kab886
 kabo1029
+kaboxvipb
 kad009
 kadia05125
 kae1225
@@ -15747,6 +15769,7 @@ l78eooo
 l8023111
 l830327
 l8427
+l8701025
 l886370
 l887501
 l888759
@@ -17418,6 +17441,7 @@ love10_0112
 love10223014
 love103423
 love11_17
+love11111166666
 love13148800
 love1314like
 love1314pao
@@ -17925,6 +17949,7 @@ lxm0510
 lxn1989
 lxn58
 lxn668999
+lxq552200
 lxr0219
 lxr816
 lxr8834
@@ -20189,6 +20214,7 @@ ppp734688
 ppp8851
 ppppp21917
 ppta99
+pptt0901
 ppy273
 ppy336
 ppyuu20
@@ -22358,6 +22384,7 @@ ss668ss
 ss718211
 ss72909
 ss77880
+ss779963
 ss810122
 ss810815
 ss82914
@@ -26531,6 +26558,7 @@ xt122823
 xt151
 xt19830
 xt19982
+xt19983
 xt4561
 xt477
 xt5208777
@@ -30408,6 +30436,7 @@ zzy0718
 zzy112211
 zzy19881021
 zzy388
+zzy486099
 zzy5201314a
 zzy817
 zzya9
