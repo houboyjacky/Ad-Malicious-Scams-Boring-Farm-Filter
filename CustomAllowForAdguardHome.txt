@@ -435,3 +435,6 @@
 @@||cathayunitedbank.sc.omtrdc.net^$important
 @@||cathayunitedbank.tt.omtrdc.net^$important
 @@||iopenmall.tw^$important
+@@||globalsdigital.com^
+@@||tianyuan168.com.tw^
+@@||flipster.io^$important
