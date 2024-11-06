@@ -122,6 +122,7 @@
 /breakout[a-z]{2}\.com/
 /bsfexchange[a-z]\.com/
 /bsto[a-z]{2}smart.com/
+/bsvyq[a-z]\.com/
 /btc[0-9]{4}\.com/
 /btcbox[a-z]{1,3}\.com/
 /bullish[a-z]{1,2}\.com/
@@ -348,6 +349,7 @@
 /linetw\.(beauty|click|homes|lol|one|mom|xyz|pics|skin|hair|shop)/
 /liquiditypool-.+\.com/
 /lirunps[a-z]{2,4}\.com/
+/littleredbooktw[a-z]+\.com/
 /long[0-9]\.net/
 /louisacoffeetw[a-z]+\.com/
 /lowearthorbitc[a-z]\.com/
@@ -355,6 +357,7 @@
 /lunojs[a-z]\.com/
 /mainneti[a-z]\.com/
 /malls-sh[a-z]{2}\.com/
+/manavm[a-z]\.com/
 /marketv[a-z]{2,3}\.com/
 /matic[a-z]{3}\.com/
 /matica[a-z]{2}\.com/
