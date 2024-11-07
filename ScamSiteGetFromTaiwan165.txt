@@ -4903,6 +4903,7 @@
 ||deecen.online^
 ||deeigpovu.vip^
 ||deeigpupo.vip^
+||deepcoined.com^
 ||deeplbloom.org^
 ||deeplcoin.link^
 ||deeplwallet.com^
@@ -5495,12 +5496,14 @@
 ||e-buys.top^
 ||e-can.cc^
 ||e-can.wang^
+||e-canc.tw^
 ||e-sell.cc^
 ||e-vastintel.com^
 ||e-world.life^
 ||e-world.live^
 ||e2ajjqrep.com^
 ||e6500.com^
+||eaamjn.com^
 ||eabuiopiiy.com^
 ||eabyeol.com^
 ||eabyol.com^
@@ -5589,6 +5592,7 @@
 ||ebsexchange.plus^
 ||ebsexchange.pro^
 ||ebuyshop.xyz^
+||ec-shots.com^
 ||ec21.one^
 ||ec21.shop^
 ||ec21.site^
@@ -5622,6 +5626,7 @@
 ||edxmarkets.top^
 ||edxtrade.top^
 ||edxtredemarkets.top^
+||ee-canb.com^
 ||ee-com89678.xyz^
 ||ee5577.net^
 ||eecoins.com^
@@ -11224,6 +11229,7 @@
 ||marketcapce.com^
 ||marketcfjh.com^
 ||marketdod.com^
+||marketdou.com^
 ||marketdui.com^
 ||marketicl.com^
 ||marketjhb.com^
@@ -11239,6 +11245,7 @@
 ||marketokv.com^
 ||marketokx.com^
 ||marketokz.com^
+||marketowb.com^
 ||marketowe.com^
 ||marketowj.com^
 ||marketowq.com^
@@ -12810,6 +12817,7 @@
 ||okxaba.com^
 ||okxaex.com^
 ||okxbit.store^
+||okxbit.top^
 ||okxbit8.com^
 ||okxfui.com^
 ||okxkyx.com^
@@ -13153,6 +13161,7 @@
 ||p2bcc.shop^
 ||p2bdwq.top^
 ||p2boo.online^
+||p2paps.com^
 ||p2pexapp.com^
 ||p2pwebs.com^
 ||p4oqa.top^
@@ -13292,6 +13301,7 @@
 ||pdncip.vip^
 ||pdoraafx.com^
 ||pdsg-exchange.com^
+||pdsg-extziomcim.com^
 ||pdsqt.com^
 ||pdtchv.com^
 ||pdtgh.com^
@@ -14358,6 +14368,7 @@
 ||rmhqgx.top^
 ||rmiex.com^
 ||rmjhmf.top^
+||rmsgdwd.cfd^
 ||rmsygj.com^
 ||rmtczk.sbs^
 ||rncjnajq.com^
@@ -15244,6 +15255,7 @@
 ||sincexw.com^
 ||sinchuang.com^
 ||sinebuy.shop^
+||sinetw.shop^
 ||sinevip.shop^
 ||sing-rong.com^
 ||singrung.com^
@@ -16571,6 +16583,7 @@
 ||tiktoki.live^
 ||tiktoking.top^
 ||tiktokins.shop^
+||tiktokiv.com^
 ||tiktokkoppushop.com^
 ||tiktokliveshop.vip^
 ||tiktokmal.com^
@@ -18229,6 +18242,7 @@
 ||vmalltwwn.com^
 ||vmcapitals.com^
 ||vmfxteam.com^
+||vmiadministrations.com^
 ||vmklt.com^
 ||vmlsle.com^
 ||vmlsoke.com^
@@ -20262,6 +20276,7 @@
 ||zpyrgs.top^
 ||zpzzth.lol^
 ||zqfycm.top^
+||zqtvrjmlp.me^
 ||zrgjkk.com^
 ||zrmlad.top^
 ||zrtot.live^
