@@ -442,3 +442,7 @@
 @@||dradvice.asia^$important
 @@||picsee.ltd^$important
 @@||webnode.page^$important
+@@||happybooks.com.tw^
+@@||jpjlb.com.tw^
+@@||tnews.cc^$important
+@@||transit.finance^$important
