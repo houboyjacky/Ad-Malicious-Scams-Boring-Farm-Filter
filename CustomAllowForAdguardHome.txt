@@ -446,3 +446,6 @@
 @@||jpjlb.com.tw^
 @@||tnews.cc^$important
 @@||transit.finance^$important
+@@||pixo.style^$important
+@@||btcc.limited^$important
+@@||tee.style^$important
