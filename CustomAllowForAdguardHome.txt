@@ -457,3 +457,5 @@
 @@||lactomedi.tw^$important
 @@||ebd.tw^$important
 @@||taiwan-tameco.com^$important
+@@||sec.ventures^$important
+@@||vsassets.io^$important
