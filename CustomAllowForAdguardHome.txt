@@ -459,3 +459,8 @@
 @@||taiwan-tameco.com^$important
 @@||sec.ventures^$important
 @@||vsassets.io^$important
+@@||mygoodstw.com^$important
+@@||os-market.store^$important
+@@||ledger.com^$important
+@@||vpn.net^$important
+@@||officecdn.microsoft.com^$important

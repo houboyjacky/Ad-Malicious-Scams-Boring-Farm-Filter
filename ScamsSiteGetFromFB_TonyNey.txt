@@ -2686,7 +2686,6 @@
 ||aztrading.live^
 ||aztrading24.com^
 ||aztudb.com^
-||azureedge.net^
 ||azurefxglobe.com^
 ||azxbigiig.com^
 ||azystw.co^
@@ -24177,6 +24176,7 @@
 ||mitakecap.tw^
 ||mitecoin.space^
 ||mitokenex.com^
+||mitradev.azureedge.net^
 ||mitsubishicorphk.com^
 ||mitsubishicorphk.xyz^
 ||mitsubishicorphk1.xyz^
@@ -31321,6 +31321,7 @@
 ||tjitoken.com^
 ||tjkfj.com^
 ||tjxvgnkbtchjxkrg.com^
+||tk-mall.azureedge.net^
 ||tk-mall.tv^
 ||tk-shop.homes^
 ||tk-shop.online^
