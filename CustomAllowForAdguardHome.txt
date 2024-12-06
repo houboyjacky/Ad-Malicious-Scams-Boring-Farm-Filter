@@ -464,3 +464,4 @@
 @@||ledger.com^$important
 @@||vpn.net^$important
 @@||officecdn.microsoft.com^$important
+@@||itravelgo.tw^
