@@ -465,3 +465,8 @@
 @@||vpn.net^$important
 @@||officecdn.microsoft.com^$important
 @@||itravelgo.tw^
+@@||byebyeblues.com.tw^
+@@||fartrust.tw^
+@@||mingfood.com.tw^
+@@||irf.biz^$important
+@@||freshstar-tw.com^
