@@ -1,11 +1,19 @@
 import tldextract
 import string
+import re
+import idna
 
 input_file_path = "Website_input.txt"
 output_file_path = "Website_output.txt"
 subwebsite_file_path = "SubWebsite"
 
 SUBWEBSITE = []
+
+
+def has_non_alphanumeric(text):
+    pattern = re.compile(r'[^A-Za-z0-9\s\W]')
+    return bool(re.search(pattern, text))
+
 
 with open(subwebsite_file_path, "r", encoding='UTF-8') as subwebsite_file:
     for line in subwebsite_file:
@@ -25,6 +33,10 @@ with open(input_file_path, "r", encoding='UTF-8') as input_file, open(output_fil
 
         extracted = tldextract.extract(line)
         domain_with_suffix = extracted.domain + "." + extracted.suffix
+
+        if has_non_alphanumeric(domain_with_suffix):
+            domain_with_suffix = idna.encode(
+                domain_with_suffix).decode('utf-8')
 
         # 检查是否在 SUBWEBSITE 列表中
         if domain_with_suffix in SUBWEBSITE:
