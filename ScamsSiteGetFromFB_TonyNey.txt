@@ -2703,7 +2703,7 @@
 ||aztrading.live^
 ||aztrading24.com^
 ||aztudb.com^
-||azureedge.net^
+||tok-maill.azureedge.net^
 ||azurefxglobe.com^
 ||azxbigiig.com^
 ||azystw.co^

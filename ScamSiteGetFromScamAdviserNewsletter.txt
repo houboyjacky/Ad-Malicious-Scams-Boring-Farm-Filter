@@ -5,6 +5,7 @@
 #||digitaloceanspaces.com^
 #||godaddysites.com^
 #||rb.gy^
+#||translate.goog^
 #||windows.net^
 ||135.148.27.211^
 ||15.204.30.184^
@@ -298,7 +299,6 @@
 ||testes-glasses.com^
 ||tightyghoul.com^
 ||torezar-logistic.com^
-||translate.goog^
 ||traplightly.com^
 ||traun-logistic.com^
 ||trendytrainer.com^

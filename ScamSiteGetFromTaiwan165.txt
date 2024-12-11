@@ -1639,7 +1639,6 @@
 ||aztradedb.com^
 ||aztudb.com^
 ||aztvp.com^
-||azureedge.net^
 ||azxbigiig.com^
 ||azygww.com^
 ||azyshopping.tw^
