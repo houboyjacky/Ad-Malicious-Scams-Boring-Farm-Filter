@@ -471,3 +471,12 @@
 @@||irf.biz^$important
 @@||freshstar-tw.com^
 @@||saltshaq.com.tw^
+@@||165dashboard.tw^
+@@||glx.tw^
+@@||yuzan.com.tw^
+@@||translate.goog^$important
+@@||saltshaq.com.tw^$important
+@@||goodinfo.tw^$important
+@@||wechat.com^$important
+@@||opendata.vip^$important
+@@||onus.vip^$important
