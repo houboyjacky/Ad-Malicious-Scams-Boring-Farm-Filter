@@ -480,3 +480,4 @@
 @@||wechat.com^$important
 @@||opendata.vip^$important
 @@||onus.vip^$important
+@@||linscam.shop^$important
