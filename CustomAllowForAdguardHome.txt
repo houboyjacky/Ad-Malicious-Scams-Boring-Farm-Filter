@@ -481,3 +481,4 @@
 @@||opendata.vip^$important
 @@||onus.vip^$important
 @@||linscam.shop^$important
+@@||sangu.com.tw^
