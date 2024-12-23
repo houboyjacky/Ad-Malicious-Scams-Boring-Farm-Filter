@@ -8749,7 +8749,6 @@
 ||cloudcoininvestors.com^
 ||cloudcoinltd.com^
 ||cloudexchanges.net^
-||cloudflare.net^
 ||cloudfx.online^
 ||cloudfxcoin.com^
 ||cloudfxmarket.com^

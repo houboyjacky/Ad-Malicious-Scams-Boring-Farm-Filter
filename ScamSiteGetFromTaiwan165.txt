@@ -4049,7 +4049,6 @@
 ||cloud-bitcoin.club^
 ||cloud-bitcoin.com^
 ||cloud-bitcoin.vip^
-||cloudflare.net^
 ||cloudwirex.com^
 ||cloudwirex.net^
 ||clpowiss.com^
