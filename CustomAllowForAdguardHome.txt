@@ -483,3 +483,12 @@
 @@||linscam.shop^$important
 @@||sangu.com.tw^
 @@||nightingaleai.fund^$important
+@@||linscam.shop^$important
+@@||sangu.com.tw^
+@@||mrpolar.com.tw^
+@@||icook.market^$important
+@@||wubuntu.org^$important
+@@||sat.cool^$important
+@@||taiwan-cartour.com.tw^
+@@||birdyride.com^
+@@||demonpet.com.tw^
