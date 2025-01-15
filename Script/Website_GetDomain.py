@@ -32,16 +32,30 @@ with open(input_file_path, "r", encoding='UTF-8') as input_file, open(output_fil
             continue
 
         extracted = tldextract.extract(line)
-        domain_with_suffix = extracted.domain + "." + extracted.suffix
+        subdomain = extracted.subdomain
+        domain = extracted.domain
+        suffix = extracted.suffix
 
-        if has_non_alphanumeric(domain_with_suffix):
-            domain_with_suffix = idna.encode(
-                domain_with_suffix).decode('utf-8')
+        if has_non_alphanumeric(subdomain):
+            subdomain = idna.encode(subdomain).decode('utf-8')
+
+        if has_non_alphanumeric(domain):
+            domain = idna.encode(domain).decode('utf-8')
+
+        if has_non_alphanumeric(suffix):
+            suffix = idna.encode(suffix).decode('utf-8')
+
+        domain_with_suffix = f"{domain}.{suffix}"
+
+        if "my.canca" in domain_with_suffix and "." in subdomain:
+            parts = subdomain.split('.')
+            if parts:
+                subdomain = parts[-1]  # 提取最後一段
 
         # 检查是否在 SUBWEBSITE 列表中
         if domain_with_suffix in SUBWEBSITE:
-            root_domain = "||" + extracted.subdomain + "." + domain_with_suffix + "^"
+            root_domain = f"||{subdomain}.{domain}.{suffix}^"
         else:
-            root_domain = "||" + domain_with_suffix + "^"
+            root_domain = f"||.{domain}.{suffix}^"
 
-        output_file.write(root_domain + "\n")
+        output_file.write(f"{root_domain}\n")
