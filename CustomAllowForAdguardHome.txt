@@ -483,8 +483,6 @@
 @@||linscam.shop^$important
 @@||sangu.com.tw^
 @@||nightingaleai.fund^$important
-@@||linscam.shop^$important
-@@||sangu.com.tw^
 @@||mrpolar.com.tw^
 @@||icook.market^$important
 @@||wubuntu.org^$important
@@ -494,3 +492,9 @@
 @@||demonpet.com.tw^
 @@||homdgcat.wiki^$important
 @@||bookstw.link^$important
+@@||richbank.com.tw^$important
+@@||bluexocean.com^$important
+@@||delegate.cash^$important
+@@||track.tw^$important
+@@||gradient.network^$important
+@@||evolvvip.com^
