@@ -23,7 +23,6 @@
 #||xingyun-shop.com^
 #||zapto.org^
 #||zendesk.com^
-||.myshopify.com^
 ||0-casinos.org^
 ||004l.com^
 ||0066666.co^
@@ -25558,6 +25557,7 @@
 ||myship7-11-com.site^
 ||myshop-mall.com^
 ||myshopever.com^
+||myshopify.com^
 ||mysmartcoin.net^
 ||mysmartcoinss.com^
 ||mysmartscoins17.com^

@@ -56,6 +56,6 @@ with open(input_file_path, "r", encoding='UTF-8') as input_file, open(output_fil
         if domain_with_suffix in SUBWEBSITE:
             root_domain = f"||{subdomain}.{domain}.{suffix}^"
         else:
-            root_domain = f"||.{domain}.{suffix}^"
+            root_domain = f"||{domain}.{suffix}^"
 
         output_file.write(f"{root_domain}\n")
