@@ -620,6 +620,7 @@
 ||bithumb77.*^
 ||bitk-eth.*^
 ||bitstamp*.*^
+||blockstreampro.*^
 ||bnextex.*^
 ||boniry.*^
 ||booking-hk.*^
@@ -643,6 +644,7 @@
 ||crypacific.*^
 ||cryptomatrixdex.*^
 ||cryptotrading-hub.*^
+||datanodedex.*^
 ||dbg-coltdfx.*^
 ||dgbaccarat.*^
 ||difcinvestment.*^
