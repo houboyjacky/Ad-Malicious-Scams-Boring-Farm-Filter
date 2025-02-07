@@ -14702,7 +14702,6 @@
 ||longbridge-shop1.sbs^
 ||longbridge.sbs^
 ||longislandhomecenter.com^
-||longlaitanji.com^
 ||longons.com^
 ||lonyady.com^
 ||loof888.com^
