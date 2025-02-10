@@ -70,6 +70,7 @@
 /artificialtelligence[a-z]{2,3}\.com/
 /ascendex.*\.com/
 /ashfjshost[a-z]{0,2}\.com/
+/asosmall-[a-z]\.com/
 /atfk[a-z]{3}\.com/
 /atfx[a-z]{2,3}\.com/
 /avastone[a-z]{3}\.com/
@@ -446,6 +447,7 @@
 /schw[a-z]+\.com/
 /screrth[a-z]{3}\.com/
 /seipr[a-z]\.com/
+/selfhelp[0-9]{4}\.com/
 /semiconductor[a-z]{3}\.com/
 /service-id[0-9]+\.shop/
 /sfexpress-.+\.(com|info)/
@@ -514,6 +516,7 @@
 /trcoex[a-z]{1,2}\.com/
 /tron[a-z]{3,4}\.com/
 /truefizz[a-z]+\.com/
+/trusttoken[a-z]{1,3}\.(com|site|fun|top|pro|shop)/
 /tw-shopify[a-z0-9]+\.com/
 /tw[-]?carousel[a-z0-9]+\.com/
 /tw[-]?carousel[a-z0-9]+\.tw/
@@ -597,6 +600,7 @@
 ||affonetrax*.*^
 ||agbarnse.*^
 ||ainoce.*^
+||aircashweb3.*^
 ||alfa-crypx.*^
 ||alfabtc.*^
 ||aliexp-app.*^
@@ -736,7 +740,7 @@
 ||vantwnow.*^
 ||vhpmi.*^
 ||walmant.*^
-||walnart.*
+||walnart.*^
 ||whiokeul.*^
 ||xn--7-eleven*.*^
 ||xn--shopee*.*^

@@ -503,8 +503,11 @@
 @@||ayca.info^
 @@||dappportal.io^
 @@||kgil.tw^$important
-@@||lovethelife.shop^$important
 @@||menforce.com.tw^
 @@||shopnex.tw^
 @@||soulful.idv.tw^
 @@||thirdeyeethnic.com^
+@@||showmore.cc^
+@@||bsms.tw^
+@@||celladix.tw^$important
+@@||dweam.xyz^
