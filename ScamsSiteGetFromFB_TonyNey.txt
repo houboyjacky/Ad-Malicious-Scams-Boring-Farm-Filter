@@ -17,6 +17,7 @@
 #||longlaitanji.com^
 #||moonpay.com^
 #||seekingalpha.com^
+#||shopmore.com.tw^
 #||t.co^
 #||trustwallet.com^
 #||web.app^
@@ -30530,7 +30531,6 @@
 ||shopmall-inworld.com^
 ||shopmarket.club^
 ||shopmeitwdownload.com^
-||shopmore.com.tw^
 ||shopnns.com^
 ||shopnowa.xyz^
 ||shoponasia.com^

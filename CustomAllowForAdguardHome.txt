@@ -511,3 +511,6 @@
 @@||bsms.tw^
 @@||celladix.tw^$important
 @@||dweam.xyz^
+@@||salomontaiwan.com.tw^
+@@||pizza.tw^$important
+@@||kkbox.events^$important
