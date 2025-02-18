@@ -514,3 +514,4 @@
 @@||salomontaiwan.com.tw^
 @@||pizza.tw^$important
 @@||kkbox.events^$important
+@@||giadiamond.com.tw^$important
