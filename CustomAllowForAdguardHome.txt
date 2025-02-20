@@ -515,3 +515,4 @@
 @@||pizza.tw^$important
 @@||kkbox.events^$important
 @@||giadiamond.com.tw^$important
+@@||yuantafunds.com^$important
