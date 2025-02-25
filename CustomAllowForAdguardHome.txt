@@ -516,3 +516,7 @@
 @@||kkbox.events^$important
 @@||giadiamond.com.tw^$important
 @@||yuantafunds.com^$important
+@@||coolwallet.io^$important
+@@||iqie.top^$important
+@@||mixpanel.com^$important
+@@||kevintsengtw.blogspot.com^$important
