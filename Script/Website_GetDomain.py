@@ -15,6 +15,13 @@ def has_non_alphanumeric(text):
     return bool(re.search(pattern, text))
 
 
+def extract_last_subdomain(subdomain):
+    parts = subdomain.split('.')
+    if parts:
+        return parts[-1]  # 提取最後一段
+    return None  # 如果 subdomain 為空，返回 None
+
+
 with open(subwebsite_file_path, "r", encoding='UTF-8') as subwebsite_file:
     for line in subwebsite_file:
         clean_line = line.strip().lower()
@@ -46,11 +53,11 @@ with open(input_file_path, "r", encoding='UTF-8') as input_file, open(output_fil
             suffix = idna.encode(suffix).decode('utf-8')
 
         domain_with_suffix = f"{domain}.{suffix}"
+        NotUseList = ["my.canva", "amazonaws.com"]
 
-        if "my.canca" in domain_with_suffix and "." in subdomain:
-            parts = subdomain.split('.')
-            if parts:
-                subdomain = parts[-1]  # 提取最後一段
+        if subdomain and domain_with_suffix in SUBWEBSITE:
+            if "." in subdomain and not any(NotUse in domain_with_suffix for NotUse in NotUseList):
+                subdomain = extract_last_subdomain(subdomain)
 
         # 检查是否在 SUBWEBSITE 列表中
         if domain_with_suffix in SUBWEBSITE:
