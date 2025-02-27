@@ -16,6 +16,7 @@
 #||icmarkets.com^
 #||longlaitanji.com^
 #||moonpay.com^
+#||myshopify.com^
 #||seekingalpha.com^
 #||shopmore.com.tw^
 #||t.co^
@@ -26081,7 +26082,6 @@
 ||myship7-11-com.site^
 ||myshop-mall.com^
 ||myshopever.com^
-||myshopify.com^
 ||mysmartcoin.net^
 ||mysmartcoinss.com^
 ||mysmartscoins17.com^

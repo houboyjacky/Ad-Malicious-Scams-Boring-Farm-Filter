@@ -10,6 +10,7 @@
 #||github.io^
 #||i-gamer.net^
 #||longlaitanji.com^
+#||myshopify.com^
 #||mystrikingly.com^
 #||weebly.com^
 #||zapto.org^
@@ -13819,7 +13820,6 @@
 ||mysande.com^
 ||myselfshopgo.com^
 ||myshop-mall.com^
-||myshopify.com^
 ||mysmartcoin.net^
 ||mysmartcoinss.com^
 ||mysmartscoins17.com^

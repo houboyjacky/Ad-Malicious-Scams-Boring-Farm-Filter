@@ -520,3 +520,4 @@
 @@||iqie.top^$important
 @@||mixpanel.com^$important
 @@||kevintsengtw.blogspot.com^$important
+@@||histock.tw^$important
