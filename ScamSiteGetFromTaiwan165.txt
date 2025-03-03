@@ -12,6 +12,7 @@
 #||longlaitanji.com^
 #||myshopify.com^
 #||mystrikingly.com^
+#||twincn.com^
 #||weebly.com^
 #||zapto.org^
 #||zendesk.com^
@@ -19813,7 +19814,6 @@
 ||twicpro.com^
 ||twicpro.shop^
 ||twicpro.vip^
-||twincn.com^
 ||twincnpro.tw^
 ||twjeeror.com^
 ||twjobjeeror.xyz^

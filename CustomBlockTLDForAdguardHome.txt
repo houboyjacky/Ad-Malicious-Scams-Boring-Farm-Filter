@@ -116,7 +116,6 @@
 /bjwex[0-9]+\.com/
 /bkex[a-z]{3}\.com/
 /bkmh[a-z]{2}\.com/
-/bkmh[a-z]{2}\.com/
 /bl[0-9]{3}\.net/
 /blish[a-z]{1,3}\.com/
 /blueberrypro\..+/
@@ -629,6 +628,7 @@
 ||bing-bon.*^
 ||bitercoin.*^
 ||bitfinex-*.*^
+||bitgin.*^
 ||bithumb77.*^
 ||bitk-eth.*^
 ||bitstamp*.*^
