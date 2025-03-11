@@ -28,9 +28,28 @@ with open(subwebsite_file_path, "r", encoding='UTF-8') as subwebsite_file:
         if clean_line:
             SUBWEBSITE.append(clean_line)
 
-with open(input_file_path, "r", encoding='UTF-8') as input_file, open(output_file_path, "w", encoding='UTF-8', newline='') as output_file:
-    for line in input_file:
+with open(input_file_path, "r", encoding='UTF-8') as input_file:
+    input_lines = input_file.readlines()  # 將檔案內容讀取到列表中
+
+with open(output_file_path, "w", encoding='UTF-8', newline='') as output_file:
+    for line in input_lines:
         line = line.strip().lower()
+    if '\t' in input_lines[0]:
+        # 先去除每行末尾的數字，處理除最後一行外的所有行
+        input_lines = [re.sub(r'\t\d+\n', '', line)
+                       for line in input_lines]  # 處理所有行，除了最後一行
+
+        # 再去除每行開頭的字串和tab
+        input_lines = [re.sub(r'.+\t', '', line) for line in input_lines]
+
+    elif ',' in input_lines[0] and ' ' in input_lines[0]:
+        # 將每行中的 , 替換為 .
+        input_lines = [line.replace(',', '.') for line in input_lines]
+
+        # 移除行開頭的字串和空格
+        input_lines = [re.sub(r'.+ ', '', line) for line in input_lines]
+
+    for line in input_lines:
         if not line:
             continue
 

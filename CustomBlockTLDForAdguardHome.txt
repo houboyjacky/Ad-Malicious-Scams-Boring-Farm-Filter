@@ -45,6 +45,7 @@
 /aegonx[a-z]{4}\.com/
 /agencyo[a-z]\.com/
 /ai-international[a-z0-9]+\.com/
+/aicryptoex[a-z]\.com/
 /aidhscwy[a-z]+[0-9]\.com/
 /aigrid[a-z]{2,3}\.com/
 /aines[a-z]{3,4}\.com/
