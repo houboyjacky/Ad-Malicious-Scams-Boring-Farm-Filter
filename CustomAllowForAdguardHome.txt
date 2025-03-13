@@ -523,3 +523,9 @@
 @@||histock.tw^$important
 @@||picapicabooth.com^
 @@||trpu.org.tw^
+@@||aifian.com^
+@@||vesper.finance^$important
+@@||ash.tw^
+@@||unlash.tw^
+@@||xn--qqx811h.tw^
+@@||yuetian.com.tw^

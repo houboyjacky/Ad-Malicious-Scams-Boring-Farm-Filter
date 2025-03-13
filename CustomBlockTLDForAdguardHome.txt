@@ -40,6 +40,7 @@
 /aaex\.(asia|club|in|win)/
 /aava-[a-z]+\.[a-z]/
 /aavaepro[0-9]+\.xyz
+/abakkanetwent[a-z]\.com/
 /aclar.+\.com/
 /addm6[0-9]8\.com/
 /aegonx[a-z]{4}\.com/
