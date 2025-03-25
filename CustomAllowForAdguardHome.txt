@@ -535,3 +535,5 @@
 @@||happywork.tw^
 @@||icatalog.com.tw^
 @@||stockbox.com.tw^
+@@||teamplus.tech^
+@@||pinfo.io^$important

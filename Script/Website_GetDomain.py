@@ -44,6 +44,9 @@ with open(output_file_path, "w", encoding='UTF-8', newline='') as output_file:
 
     elif ',' in input_lines[0] and ' ' in input_lines[0]:
         # 將每行中的 , 替換為 .
+
+        input_lines = [line.replace(', ', '.') for line in input_lines]
+        input_lines = [line.replace(' ,', '.') for line in input_lines]
         input_lines = [line.replace(',', '.') for line in input_lines]
 
         # 移除行開頭的字串和空格
@@ -55,6 +58,12 @@ with open(output_file_path, "w", encoding='UTF-8', newline='') as output_file:
 
         if not all(char.isalnum() or char.isspace() or char in string.punctuation for char in line):
             # 如果包含非英文數字字符，則跳過這一行
+            continue
+
+        if match := re.search(r'((?:\d{1,3}\.){3}\d{1,3})', line):
+            IP = match.group(1)
+            IP_domain = f"||{IP}^"
+            output_file.write(f"{IP_domain}\n")
             continue
 
         extracted = tldextract.extract(line)
