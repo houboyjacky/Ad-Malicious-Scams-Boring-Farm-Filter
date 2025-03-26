@@ -53,10 +53,6 @@ Standalone from CustomBlockForAdguardHome.txt as a last resort filter.<br/>
 取自165警方的黑名單銀行帳戶。<br/>
 Taken from 165 police blacklisted bank accounts.<br/>
 
-### GetFromGovernmentInf_LineID.txt
-取自165警方的黑名單LINE ID帳戶。<br/>
-Blacklisted LINE ID account taken from 165 police.<br/>
-
 ### GetFromGovernmentInf_Telephone.txt
 取自165警方的黑名單電話。<br/>
 Taken from the 165 police blacklist phone number.<br/>
