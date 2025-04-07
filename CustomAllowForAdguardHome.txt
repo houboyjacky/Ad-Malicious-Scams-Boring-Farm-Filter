@@ -537,3 +537,10 @@
 @@||stockbox.com.tw^
 @@||teamplus.tech^
 @@||pinfo.io^$important
+@@||ourtaiwan.tw^
+@@||cryptowesearch.com^
+@@||coincarp.com^$important
+@@||holiucreative.com.tw^
+@@||sundaytour.com.tw^
+@@||talentfinder.com.tw^
+@@||twots.top^
