@@ -8,6 +8,7 @@
 #||btcc.com^
 #||bybit.com^
 #||cex.io^
+#||cix3752i.com^
 #||cloudfront.net^
 #||duckdns.org^
 #||easy.co^
@@ -9076,7 +9077,6 @@
 ||cityvaluetrust.com^
 ||cityworktw.com^
 ||ciwklos.com^
-||cix3752i.com^
 ||cizenex.vip^
 ||cj-one-style-store.com^
 ||cj-onestyle-store.com^
