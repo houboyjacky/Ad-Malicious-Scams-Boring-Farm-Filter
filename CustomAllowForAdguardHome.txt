@@ -545,3 +545,6 @@
 @@||talentfinder.com.tw^
 @@||twots.top^
 @@||xq66888.com.tw^
+@@||oaktreecapital.com^$important
+@@||moneydj.com^$important
+@@||marketingplatform.google.com^$important
