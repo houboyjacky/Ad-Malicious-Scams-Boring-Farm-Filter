@@ -549,3 +549,6 @@
 @@||moneydj.com^$important
 @@||marketingplatform.google.com^$important
 @@||zxsj.com.tw^
+@@||wangza.tw^
+@@||matters.town^$important
+@@||cloudflare-dns.com^$important

@@ -52,6 +52,7 @@
 /aines[a-z]{3,4}\.com/
 /aiozyt[a-z]\.com/
 /airdropvt[a-z]\.com/
+/aisemiconductor[a-z]\.com/
 /aisme.+\.com/
 /aismex[a-z0-9]+.com/
 /aitechstock\.(co|tw|vip)/
@@ -232,6 +233,7 @@
 /earthpooir[a-z]\.com/
 /ebay-[official-]{9}\.com/
 /ebay-comerc[a-z]*\.com/
+/ecpay[a-z]tw.com/
 /ee[0-9]+\.com/
 /em[a-z][a-z]\.xyz/
 /energy[a-z]{2,3}\.com/
@@ -252,6 +254,7 @@
 /exness[0-9]+\.com/
 /expecta[a-z]+\.com/
 /f.m.store\.xyz/
+/famipor[a-z]{3}\.(sbs|shop|cyou)/
 /fantom[a-z]{2,3}\.com/
 /fasonlacrm\.[a-z]+/
 /faste[a-z]{4,5}\.com/
@@ -320,6 +323,7 @@
 /huata[a-z]+\.com/
 /huigumaket[a-z]{2,3}\.com/
 /hv-t[a-z]\.cc/
+/hydrogen[a-z]{1,3}\.com/
 /ibitmin.+\..+/
 /ic-program[a-z]+\.com/
 /ic-techelem[a-z]{2}\.com/
@@ -360,7 +364,9 @@
 /linebank\.(beauty|click|homes|lol|one|mom|xyz|pics|skin|hair|shop)/
 /linebiz[a-z]-tw\.com/
 /linedown.(beauty|click|homes|lol|one|mom|xyz|pics|skin|hair|shop)/
+/linetw-wenjuanapq[a-z]\.shop/
 /linetw\.(beauty|click|homes|lol|one|mom|xyz|pics|skin|hair|shop)/
+/linevoom(-tw|tw-)wenjuan[a-z]{2}\.shop/
 /liquiditypool-.+\.com/
 /lirunps[a-z]{2,4}\.com/
 /littleredbooktw[a-z]+\.com/
@@ -376,6 +382,7 @@
 /marketv[a-z]{2,3}\.com/
 /matic[a-z]{3}\.com/
 /matica[a-z]{2}\.com/
+/megfaly[a-z]{1,2}\.com/
 /mercadolibre[a-z0-9-]+\.com/
 /meta[a-z0-9-]+\.onrender\.com/
 /metispl[a-z]\.com/
@@ -423,11 +430,13 @@
 /pass-wor[a-z]{2}\.cc/
 /paxos[a-z]{3}\.com/
 /paxosi[a-z]{1,2}\.com/
+/payhawkforextrad[a-z]{2,3}\.com/
 /paymium[0-9]{1,2}\.buzz/
 /peeba[0-9]\.com/
 /peicheng[a-z]{2,3}\.com/
 /peicheng[a-z0-9]+\.com/
 /podcast[a-z]{2}\.com/
+/poyabuyf[a-z]{2,3}\.com/
 /pretty[a-z]*\-my\.com/
 /prettya[a-z]{3}-my\.com/
 /privatece[0-9]\.tw/
@@ -487,6 +496,7 @@
 /successfull-[a-z0-9]+\.online/
 /superfinanc[a-z]\.com/
 /supportteam[0-9]+\.asia/
+/surfsharkde[a-z]{2,4}\.com/
 /surfsharkdex[a-z]{1,3}\.com/
 /surfsharkdex[a-z]{2,4}\.com/
 /surfsharkdex[a-z]\.com/
@@ -497,6 +507,7 @@
 /taiwanmobile[a-z]+\.(com|cc|life|cyou|lat)/
 /taiwanstartr.+\.com/
 /tanaka[a-z]+\.com/
+/telescopeex[a-z]{1,2}\.com/
 /telfor[0-9]\.shop/
 /telfor[a-z]\.(shop|top)/
 /tesseract[0-9]{3}\.top/
@@ -552,6 +563,7 @@
 /waytec.+\.com/
 /week-tradepro\..+/
 /weisen[a-z0-9]*\.com/
+/wenjuan-linevoom[a-z]{2}\.shop/
 /whastapp-[a-z]{2}\.com/
 /whatsapp-[a-z]{1,3}\.com/
 /whgj[0-6]+\.(com|cc)/
@@ -589,6 +601,7 @@
 ||*.club^
 ||*.cyou^
 ||*.dreamwp.com^
+||*.gr-site.com^
 ||*.icu^
 ||*.it^$denyallow=org.it|edu.it|com.it|gov.it|mitm.it
 ||*.lol^
@@ -708,6 +721,7 @@
 ||medisou.*^
 ||monopolys.*^
 ||myfany.*^
+||mytwshoip.*^
 ||newgeneration4now.*^
 ||newtradetw.*^
 ||obtshop.*^
@@ -725,6 +739,7 @@
 ||registered-*.com^
 ||sc.*.cn^
 ||sfexpress-help.*^
+||shopback-online.*^
 ||shopcentralem.*^
 ||shopingcentrale.*^
 ||shoppinggiftcom.*^
