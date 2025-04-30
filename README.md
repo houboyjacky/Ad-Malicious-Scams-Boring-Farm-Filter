@@ -73,7 +73,7 @@ Medium : https://medium.com/@shutterhouboy<br/>
 🔗 https://www.fx110.com/
 
 ### ScamSiteGetFromGlobalAntiScamOrg.txt
-取自Global Anti Scam
+取自Global Anti Scam<br/>
 ✅ **Collected from Global Anti Scam Organization.**<br/>
 🔗 https://www.globalantiscam.org/
 
