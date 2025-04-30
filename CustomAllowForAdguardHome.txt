@@ -552,3 +552,7 @@
 @@||wangza.tw^
 @@||matters.town^$important
 @@||cloudflare-dns.com^$important
+@@||dooprime.com^
+@@||kauri.finance^
+@@||yunlin-luckydraw.net^
+@@||yunlinluckydraw.net^

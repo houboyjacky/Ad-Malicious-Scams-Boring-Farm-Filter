@@ -73,6 +73,7 @@
 /artificialtelligence[a-z]{2,3}\.com/
 /ascendex.*\.com/
 /ashfjshost[a-z]{0,2}\.com/
+/asos-tk[a-z]\.com/
 /asosmall-[a-z]\.com/
 /atfk[a-z]{3}\.com/
 /atfx[a-z]{2,3}\.com/
@@ -80,6 +81,7 @@
 /avatrade.*\.com/
 /axt[a-z]{3,4}\.com/
 /b9b[a-z0-9]+\.cc/
+/baex[a-z]{3}\.vip/
 /bagmiomio[0-9]*\.com/
 /bananaat[a-z]\.com/
 /batonex[a-z]{3}\.com/
@@ -92,6 +94,7 @@
 /biconom[a-z]s\.vip/
 /bience[a-z0-9]{2}\.cc/
 /bigone[a-z]{3}\.com/
+/bigonebr[a-z]\.com/
 /binaceys[a-z]\.com/
 /binarium[a-z]+\.com/
 /bingtopji[a-z]\.com/
@@ -156,6 +159,7 @@
 /carousellservice[0-9]{3}\.com/
 /carr[eo]fo[a-z]+\.com/
 /casave[0-9]+00\.com/
+/cdktradingplatfor[a-z]{2}\.com/
 /cfm-id[0-9]+\.com/
 /charterprime[a-z0-9]*\.com/
 /chingua[0-9]+\.wixsite\.com/
@@ -218,6 +222,7 @@
 /dongsen[a-z0-9]*\.com/
 /douyin[0-9]{2,4}\.com/
 /downloadc[0-9]*\.com/
+/dreammall-?shop\..*/
 /dsglobalyl[l]?\.com/
 /dtcpayli[a-z]+\.com/
 /dwgj[0-9]{3-4}\.com/
@@ -239,6 +244,7 @@
 /energy[a-z]{2,3}\.com/
 /eoiso[a-z]\.com/
 /eosnetworke[a-z]{2}\.com/
+/equitradec[a-z]{1,2}\.com/
 /eth-cvc[0-9]*\.com/
 /ethminer-[a-z]+\.com/
 /etimtoken[0-9-]{1,2}\.com/
