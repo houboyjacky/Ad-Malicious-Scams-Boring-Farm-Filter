@@ -557,3 +557,6 @@
 @@||yunlin-luckydraw.net^
 @@||yunlinluckydraw.net^
 @@||twpathfinder.org^$important
+@@||maohouse.com.tw^
+@@||saf.tw^
+@@||xplatform.world^$important
