@@ -51,6 +51,7 @@
 /aigrid[a-z]{2,3}\.com/
 /aines[a-z]{3,4}\.com/
 /aiozyt[a-z]\.com/
+/aipublicglobal[a-z]{2}\.com/
 /airdropvt[a-z]\.com/
 /aisemiconductor[a-z]\.com/
 /aisme.+\.com/
@@ -58,6 +59,7 @@
 /aitechstock\.(co|tw|vip)/
 /aiyfpro[a-z]{1,2}\.com/
 /alliancegrowth.+\.[a-z]+/
+/allianze[a-z]\.com/
 /alphafinace[a-z0-9]+\.com/
 /alvexo[a-z]{3}\.com/
 /alvot[a-z]{1,2}\.com/
@@ -398,6 +400,7 @@
 /mina[a-z]{3}\.com/
 /miracle[a-z]{3,4}\.com/
 /mitsubishicorphk[0-9]*\.(com|xyz)/
+/mk-backstage[0-9]{1,2}\.com/
 /momoshop[a-z]+\.com/
 /momotw[a-z]{4}\.(store|shop)/
 /money\d{4}\.com/
@@ -590,6 +593,7 @@
 /ygze[0-9]{4}\.site/
 /yh[0-9]{5}\.xyz/
 /yinhe[a-z0-9]*\.com/
+/yishengan[a-z]\.com/
 /ylhg[0-9]{2}\.xyz/
 /ypscsho[a-z0-9]+tw\.com/
 /yulonfo[a-z0-9]*\.com/
@@ -681,6 +685,7 @@
 ||dbg-coltdfx.*^
 ||dgbaccarat.*^
 ||difcinvestment.*^
+||digi-dexchange.*^
 ||dusmallshop.*^
 ||ebay-tw.*^
 ||eecoins.*^
