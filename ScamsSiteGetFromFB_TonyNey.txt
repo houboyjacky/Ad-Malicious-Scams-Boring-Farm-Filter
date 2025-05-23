@@ -9441,7 +9441,6 @@
 ||cloudcoininvestors.com^
 ||cloudcoinltd.com^
 ||cloudexchanges.net^
-||cloudflare.net^
 ||cloudfx.online^
 ||cloudfxcoin.com^
 ||cloudfxmarket.com^
@@ -21910,6 +21909,7 @@
 ||hysappfx.com^
 ||hyssel.com^
 ||hystoc.life^
+||hyttl.cn10.life.cdn.cloudflare.net^
 ||hyvudrb.com^
 ||hyxkftue.buzz^
 ||hyxxal.xyz^
@@ -27139,6 +27139,7 @@
 ||msyxhz.xyz^
 ||mt-crm.com^
 ||mt10.live^
+||mt10w.com.u30.store.cdn.cloudflare.net^
 ||mt4tradingalliance.com^
 ||mt5downls.com^
 ||mt5pr0.top^
