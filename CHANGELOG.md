@@ -1,5 +1,8 @@
 # 歷史更新 History Update
 
+* 20250526 Update
+  * 修復 錯誤封鎖
+
 * 20250523 Update
   * 修復 錯誤封鎖
 
