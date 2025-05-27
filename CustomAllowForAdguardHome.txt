@@ -566,3 +566,9 @@
 @@||tcool.cc^
 @@||yiwulife.tw^
 @@||zoom.us^
+@@||twex.tw^
+@@||jackyhou.idv.tw^$important
+@@||noip.com^$important
+@@||eneba.games^$important
+@@||matters.town^$important
+@@||cloudflare-dns.com^$important
