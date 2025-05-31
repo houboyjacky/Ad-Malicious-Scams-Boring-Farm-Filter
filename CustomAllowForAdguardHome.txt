@@ -572,3 +572,5 @@
 @@||eneba.games^$important
 @@||matters.town^$important
 @@||cloudflare-dns.com^$important
+@@||fastlaw.tw^$important
+@@||lifelong-learning-voucher.com^$important
