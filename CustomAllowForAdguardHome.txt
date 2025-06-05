@@ -574,3 +574,4 @@
 @@||cloudflare-dns.com^$important
 @@||fastlaw.tw^$important
 @@||lifelong-learning-voucher.com^$important
+@@||artale.tw^
