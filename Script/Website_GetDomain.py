@@ -2,6 +2,7 @@ import tldextract
 import string
 import re
 import idna
+import sys
 
 input_file_path = "Website_input.txt"
 output_file_path = "Website_output.txt"
@@ -9,6 +10,7 @@ subwebsite_file_path = "SubWebsite"
 
 SUBWEBSITE = []
 
+tldextract.TLDExtract.update
 
 def has_non_alphanumeric(text):
     pattern = re.compile(r'[^A-Za-z0-9\s\W]')
@@ -31,9 +33,15 @@ with open(subwebsite_file_path, "r", encoding='UTF-8') as subwebsite_file:
 with open(input_file_path, "r", encoding='UTF-8') as input_file:
     input_lines = input_file.readlines()  # 將檔案內容讀取到列表中
 
+
+if len(input_lines) == 0:
+    print("資料為空，不繼續執行")
+    sys.exit(0)
+
 with open(output_file_path, "w", encoding='UTF-8', newline='') as output_file:
     for line in input_lines:
         line = line.strip().lower()
+
     if '\t' in input_lines[0]:
         # 先去除每行末尾的數字，處理除最後一行外的所有行
         input_lines = [re.sub(r'\t\d+\n', '', line)
