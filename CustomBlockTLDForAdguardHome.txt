@@ -54,6 +54,7 @@
 /aiozyt[a-z]\.com/
 /aipublicglobal[a-z]{2}\.com/
 /airdropvt[a-z]\.com/
+/aisemiconductor[a-z]{1,2}\.com/
 /aisemiconductor[a-z]\.com/
 /aisme.+\.com/
 /aismex[a-z0-9]+.com/
@@ -70,6 +71,7 @@
 /animoca[a-z]{2,3}\.com/
 /ankr[a-z]{3}\.com/
 /antsforex[a-z0-9]*\.com/
+/aokoio[a-z]{1,3}\.com/
 /apid-tw[a-z]+\.cc/
 /app[0-9]+\.xyz/
 /approvedurls[0-9]+.info/
@@ -169,6 +171,7 @@
 /chingua[0-9]+\.wixsite\.com/
 /chung[-]?hwa[-]?.*\..*/
 /citiqx[a-z]\.com/
+/citytrad[a-z]+\.com/
 /cj2024[0-9]{2}\.store/
 /clear-skys\.[a-z]+/
 /climpup[a-z0-9]*\.com/
@@ -243,10 +246,12 @@
 /earthpooir[a-z]\.com/
 /ebay-[official-]{9}\.com/
 /ebay-comerc[a-z]*\.com/
+/ecpay[a-z]?tw[a-z]?\.com/
 /ecpay[a-z]tw.com/
 /ee[0-9]+\.com/
 /em[a-z][a-z]\.xyz/
 /energy[a-z]{2,3}\.com/
+/enterpriseons[a-z]\.com/
 /eoiso[a-z]\.com/
 /eosnetworke[a-z]{2}\.com/
 /equitradec[a-z]{1,2}\.com/
@@ -274,6 +279,8 @@
 /felixo[a-z]{2}\.com/
 /fenglong[0-9]+.xyz/
 /ferrari[0-9]*\.net/
+/fetc-net[a-z]\.[a-z]+/
+/fetc[a-z]{1,3}\.(shop|top/buzz)/
 /fhglobalzh[a-z]+\.com/
 /financesnew\.[a-z]+/
 /financia1[a-z0-9]*\.com/

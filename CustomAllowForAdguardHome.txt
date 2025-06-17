@@ -570,8 +570,11 @@
 @@||jackyhou.idv.tw^$important
 @@||noip.com^$important
 @@||eneba.games^$important
-@@||matters.town^$important
-@@||cloudflare-dns.com^$important
 @@||fastlaw.tw^$important
 @@||lifelong-learning-voucher.com^$important
 @@||artale.tw^
+@@||68666.tw^
+@@||i-dle.com^
+@@||snoopyrun.tw^
+@@||utaggo.com.tw^
+@@||yimang.tw^
