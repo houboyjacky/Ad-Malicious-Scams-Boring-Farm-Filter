@@ -10,6 +10,8 @@ def clear_files_in_directory(directory, extension):
 
     # Iterate over all files in the directory
     for root, dirs, files in os.walk(directory):
+        if ".venv" in root:
+            continue
         for file in files:
             # Check if the file has the specified extension
             if file.endswith(extension):
