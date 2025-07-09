@@ -584,3 +584,5 @@
 @@||uggaustraliaclassic.com.au^
 @@||yuantafinance.com.tw^
 @@||1655.tw^
+@@||netflix.shop^
+@@||openvpn.net^$important
