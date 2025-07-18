@@ -251,6 +251,7 @@
 /earthpooir[a-z]\.com/
 /ebay-[official-]{9}\.com/
 /ebay-comerc[a-z]*\.com/
+/ecolog[a-z]{2}\.com/
 /ecpay[a-z]?tw[a-z]?\.com/
 /ecpay[a-z]tw.com/
 /ee[0-9]+\.com/
@@ -626,7 +627,7 @@
 /ygze[0-9]{4}\.site/
 /yh[0-9]{5}\.xyz/
 /yinhe[a-z0-9]*\.com/
-/yishengan[a-z]\.com/
+/yishengan[a-z]{1,2}\.com/
 /ylhg[0-9]{2}\.xyz/
 /ypscsho[a-z0-9]+tw\.com/
 /yulonfo[a-z0-9]*\.com/
