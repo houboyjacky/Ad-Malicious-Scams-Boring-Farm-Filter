@@ -89,7 +89,7 @@ with open(output_file_path, "w", encoding='UTF-8', newline='') as output_file:
             suffix = idna.encode(suffix).decode('utf-8')
 
         domain_with_suffix = f"{domain}.{suffix}"
-        NotUseList = ["my.canva", "amazonaws.com"]
+        NotUseList = ["my.canva", "amazonaws.com", "cloudflare.net"]
 
         if subdomain and domain_with_suffix in SUBWEBSITE:
             if "." in subdomain and not any(NotUse in domain_with_suffix for NotUse in NotUseList):

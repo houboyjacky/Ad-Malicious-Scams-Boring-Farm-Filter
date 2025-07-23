@@ -43,6 +43,7 @@
 /aava-[a-z]+\.[a-z]/
 /aavaepro[0-9]+\.xyz
 /abakkanetwent[a-z]\.com/
+/abracadabra[a-z]{2}\.com/
 /aclar.+\.com/
 /addm6[0-9]8\.com/
 /aegonx[a-z]{4}\.com/
@@ -63,6 +64,7 @@
 /aitechstock\.(co|tw|vip)/
 /aixeblackswan[0-9]{4}\.com/
 /aiyfpro[a-z]{1,2}\.com/
+/aliexpr[a-z]+sale\.com/
 /alliancegrowth.+\.[a-z]+/
 /allianze[a-z]\.com/
 /alphafinace[a-z0-9]+\.com/
@@ -91,6 +93,7 @@
 /b9b[a-z0-9]+\.cc/
 /baex[a-z]{3}\.vip/
 /bagmiomio[0-9]*\.com/
+/baiapp[0-9]{2}\.xyz/
 /bananaat[a-z]\.com/
 /batonex[a-z]{3}\.com/
 /bay-e\.(net|shop|xyz)/
@@ -254,6 +257,7 @@
 /ecolog[a-z]{2}\.com/
 /ecpay[a-z]?tw[a-z]?\.com/
 /ecpay[a-z]tw.com/
+/edgetw[a-z]\.com/
 /ee[0-9]+\.com/
 /em[a-z][a-z]\.xyz/
 /energy[a-z]{2,3}\.com/
@@ -327,6 +331,7 @@
 /global-tw[0-9]{2}\.store/
 /global-ub[0-2]{2}\.com/
 /global-ub0[0-9]\.com/
+/globalexk[a-z]\.com/
 /globalshop[a-z]{2,3}\.com/
 /globalshopm[a-z]{2}\.com/
 /globaltren[a-z]+\.com/
@@ -344,6 +349,7 @@
 /hivemall[a-z]\.com/
 /hkscc[a-z]{2,3}\.com/
 /hngjny[0-9]{3}\.vip/
+/hngjny[0-9]+\.vip/
 /hotcoin[a-z]{2,3}\.com/
 /hrt[a-z]{3}\.com/
 /hssui[0-9]+\.wixsite\.com/
@@ -683,6 +689,7 @@
 ||as8899.*^
 ||atgmyyy.*^
 ||bankcex.*^
+||basex.*^
 ||bellagio.*^
 ||bfkhj.*^
 ||bibipaibank-*.com^
@@ -707,6 +714,7 @@
 ||builfcollapsuilding.*^
 ||bullish*.com^
 ||buyer-work.*^
+||bvifinanceinv*.*^
 ||cbn-tw.*^
 ||coinbasewallet.*^
 ||coinbte.*^
