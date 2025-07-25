@@ -4962,7 +4962,6 @@
 ||cloud-bitcoin.vip^
 ||cloudcart.fun^
 ||cloudcart.tech^
-||cloudflare.net^
 ||cloudhotel.cc^
 ||cloudwirex.com^
 ||cloudwirex.net^
