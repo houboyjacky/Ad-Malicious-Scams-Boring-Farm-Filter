@@ -183,6 +183,7 @@
 /climpup[a-z0-9]*\.com/
 /cme[0-9]{4}\.cc/
 /cmegrou[a-z0-9]+\.com/
+/coimmarketcap[a-z]{3}\.com/
 /coinbase-[a-z]+\.[a-z]+/
 /coinbase.+\..+$/
 /coinbase[a-z]{3}[0-9]?\.com/
@@ -670,6 +671,7 @@
 ||acceptll.*^
 ||acp-tw.*^
 ||ada-defi.*^
+||adds-verse-*.*^
 ||adscloud-pro.*^
 ||affonetrax*.*^
 ||agbarnse.*^
