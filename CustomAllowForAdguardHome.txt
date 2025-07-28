@@ -598,3 +598,5 @@
 @@||crazy-games.com.tw^
 @@||mumoon.idv.tw^
 @@||mumupet.tw^
+@@||netsafer.tw^$important
+@@||netsafer.org^$important
