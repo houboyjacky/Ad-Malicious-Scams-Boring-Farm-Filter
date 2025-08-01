@@ -1,4 +1,3 @@
-!
 ! (需要配合CustomAllowForAdguardHome.txt)
 ! 封鎖國家網域 it、pl
 ! 封鎖詐騙網站常用網域 cyou、top、vip
