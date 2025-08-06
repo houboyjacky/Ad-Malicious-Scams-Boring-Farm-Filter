@@ -38,6 +38,7 @@
 /8ct20[0-9]+\.site/
 /8legend\.[a-z]+/
 /aaelex[a-z]{2,3}\.com/
+/aaelexchange[a-z]\.com/
 /aaex\.(asia|club|in|win)/
 /aava-[a-z]+\.[a-z]/
 /aavaepro[0-9]+\.xyz
@@ -70,6 +71,7 @@
 /alvexo[a-z]{3}\.com/
 /alvot[a-z]{1,2}\.com/
 /alvot[a-z]ck\.com/
+/amazon[0-9]+\.com/
 /amazon[0-9]+\.mobi/
 /amtop[a-z]{2,4}\.com/
 /animoca[a-z]{2,3}\.com/
@@ -82,7 +84,7 @@
 /artificialtelligence[a-z]{2,3}\.com/
 /ascendex.*\.com/
 /ashfjshost[a-z]{0,2}\.com/
-/asos-tk[a-z]\.com/
+/asos-tk[a-z0-9]+\.com/
 /asosmall-[a-z]\.com/
 /atfk[a-z]{3}\.com/
 /atfx[a-z]{2,3}\.com/
@@ -93,11 +95,14 @@
 /baex[a-z]{3}\.vip/
 /bagmiomio[0-9]*\.com/
 /baiapp[0-9]{2}\.xyz/
+/baiapp[0-9]{2}\.xzy/
 /bananaat[a-z]\.com/
+/basindefi[a-z]{2}\.com/
 /batonex[a-z]{3}\.com/
 /bay-e\.(net|shop|xyz)/
 /bck[a-z0-9]vip\.com/
 /bdswiss[a-z]{3}\.com/
+/beanfun[a-z]{1,2}\.com/
 /beanfun[a-z]\.com/
 /bellagio\.(casa|fun|today|work)/
 /bhwjs[0-9]{3}\.com/
@@ -135,6 +140,7 @@
 /bkmh[a-z]{2}\.com/
 /bl[0-9]{3}\.net/
 /blish[a-z]{1,3}\.com/
+/blockrisex[a-z]\.com/
 /blueberrypro\..+/
 /bmd[a-z]{3}\.com/
 /bntrade[a-z]{3}\.com/
@@ -143,12 +149,14 @@
 /booking-\w+\.cloud/
 /bqcity[0-9]{3,4}\.(com|net)/
 /breakout[a-z]{2}\.com/
+/bright[0-9]{3}\.one/
 /bsfexchange[a-z]\.com/
 /bsto[a-z]{2}smart.com/
 /bsvyq[a-z]\.com/
 /btc[0-9]{4}\.com/
 /btcbox[a-z]{1,3}\.com/
 /bullish[a-z]{1,2}\.com/
+/byboo-de[a-z]\..+/
 /bycp[a-z0-9]*\.com/
 /c[a-z]2024[0-9]{2}\.store/
 /cadinb[a-z]\.com/
@@ -213,10 +221,12 @@
 /cronos[a-z]{3}\.com/
 /crossglobal(mall|shop)\.\w+/
 /cryptagr[a-z]{2}\.vip/
+/cryptocov[a-z]{3}\.com/
 /cryptoq[a-z]{2}\.com/
 /crystalchipst[a-z]{2}\.com/
 /curve[a-z]{3}\.com/
 /cwgforexp[a-z0-9]*\.com/
+/daisojapa[a-z]{2}\.com/
 /daisojapan[a-z]\.com/
 /dbag[a-z]{3}\.com/
 /dbgmarke[a-z0-9]*\.com/
@@ -230,6 +240,7 @@
 /dfi-money[a-z0-9]+\.com/
 /dfimoneyz[a-z]+\.com/
 /dforece[a-z]{3}\.com/
+/dgdhgatetw[a-z]\.com/
 /dhdark[a-z]{2,4}\.com/
 /diamond[a-z0-9]*\.com/
 /ditok[0-9]*\.com/
@@ -249,13 +260,14 @@
 /dyakoi[a-z]{3,}\.com/
 /e-?b-?a-?y-?o-?f-?f-?i-?c-?i-?a-?l-?\.com/
 /e-can[a-z]\.com/
+/e[a-z]pay[a-z]?tw[a-z]?\.com/
 /earningso[a-z]\.com/
 /earningsx[a-z]\.com/
 /earthpooir[a-z]\.com/
 /ebay-[official-]{9}\.com/
 /ebay-comerc[a-z]*\.com/
+/ebcib[a-z]\.com/
 /ecolog[a-z]{2}\.com/
-/ecpay[a-z]?tw[a-z]?\.com/
 /ecpay[a-z]tw.com/
 /edgetw[a-z]\.com/
 /ee[0-9]+\.com/
@@ -396,6 +408,7 @@
 /kucoim[a-z]{3}\.com/
 /kwai[a-z]+\.com/
 /lba[a-z]{4}\.vip/
+/lineardifi[a-z]\.com/
 /linebank\.(beauty|click|homes|lol|one|mom|xyz|pics|skin|hair|shop)/
 /linebiz[a-z]-tw\.com/
 /linedown.(beauty|click|homes|lol|one|mom|xyz|pics|skin|hair|shop)/
@@ -509,6 +522,7 @@
 /selfhelp[0-9]{4}\.com/
 /semiconductor[a-z]{3}\.com/
 /service-id[0-9]+\.shop/
+/sey[0-9]{4}\.com/
 /sfexpr[a-z]{3}\.com/
 /sfexpress-.+\.(com|info)/
 /sgx[0-9a-z]+\.cyou/
@@ -534,6 +548,7 @@
 /starhal[a-z]+\.com/
 /startrader[0-9]\.tw/
 /steglobal[a-z]{2}\.com/
+/stellalk[a-z]\.com/
 /stellar[a-z]{3}\.com/
 /stepup[a-z0-9]*\.com/
 /stfexchangei[a-z]{1,2}\.com/
@@ -572,6 +587,7 @@
 /tmao[0-9]{3,4}\.xyz/
 /tmao[0-9]{4}\.vip/
 /tmao[0-9]\.xyz/
+/tmtg[a-z0-9]{1,2}\.com/
 /tokpie[a-z]{3}\.com/
 /track-tw[0-9]+\.com/
 /trade[0-9]+\.xyz/
@@ -602,6 +618,7 @@
 /vistacoin[a-z]{2}p\.com/
 /vistacoin[a-z]vp\.com/
 /vmalltw[a-z]{2}\.shop/
+/wall[ae]t[a-z]{3}\.com/
 /wallat[a-z]{3}\.com/
 /walletaa[a-z]\.com/
 /walmartglobal[a-z]{1,3}\.com/
@@ -624,8 +641,10 @@
 /wsfl\w+gov\.xyz/
 /www-?post-?gov-?tw\.sytes\.net/
 /wz[a-z]gold\.com/
+/xoxoex[a-z]\.com/
 /xpj[0-9]{4,5}\.com/
 /xpromarkets\.[a-z]+/
+/xunmi[a-z]\.cc/
 /xw[a-z0-9]+vv\.xyz/
 /ya[0-9]{6}\.xyz/
 /yah[a-z]{3,4}\.com/
@@ -638,8 +657,10 @@
 /ypscsho[a-z0-9]+tw\.com/
 /yulonfo[a-z0-9]*\.com/
 /yundin[a-z0-9]*\.com/
+/zbtcex[a-z]{3}\.com/
 /zbzbuq[a-z]\.vip/
 /zenexc[a-z]{1,2}\.com/
+/zerolend[a-z]{3}\.com/
 /zghk[0-9]+ex\.com/
 /ziiea[a-z]+\.com/
 #||*.online^$denyallow=pestyle.online
@@ -661,8 +682,11 @@
 ||*.ubpages.com^
 ||*.vip^
 ||*7eleven.pse.is^
+||090bag.*^
 ||0xboost.*^
 ||2812510016.*^
+||7-11-eleven*.*^
+||7-eleven-shop*.*^
 ||7-eleven-tw.*^
 ||711myshupbuy.*^
 ||8ct2*.site^
@@ -730,12 +754,14 @@
 ||crypacific.*^
 ||cryptomatrixdex.*^
 ||cryptotrading-hub.*^
+||daoxcryptoweb3.*^
 ||datanodedex.*^
 ||dbg-coltdfx.*^
 ||dgbaccarat.*^
 ||difcinvestment.*^
 ||digi-dexchange.*^
 ||dreamall-shop*.*^
+||dreamshop*.com^
 ||dusmallshop.*^
 ||ebay-tw.*^
 ||eecoins.*^
@@ -769,6 +795,7 @@
 ||hispeedtrading0728.*^
 ||hongbulin.*
 ||hsjpartnersjpx.*^
+||hyluckya.*^
 ||imtoken*.*^
 ||instabank*.com^
 ||inverbid.*^
@@ -778,10 +805,12 @@
 ||laza-dasg.*^
 ||lehinsecurities.*
 ||loanadvisorservices.*^
+||lumcomput.*^
 ||luxurymartplace.*^
 ||marketaeg.*^
 ||mc-globaltechleaders.*^
 ||medisou.*^
+||mitsubishi*.*^
 ||monopolys.*^
 ||myfany.*^
 ||mytwshoip.*^
@@ -796,6 +825,8 @@
 ||persontrad5.*^
 ||pgule.*^
 ||plubitit.*^
+||procoin-tradingx.*^
+||rarible.*^
 ||realizeideal.*^
 ||realizeideal*.*^
 ||realizeideals.*^
@@ -824,6 +855,7 @@
 ||trust-amm.*^
 ||trustcoin-exchange.*^
 ||tu123.*^
+||tw-linevoom*-wenjuan.*^
 ||tw-sia.*^
 ||twcaijin.*^
 ||vantwnow.*^
@@ -831,6 +863,7 @@
 ||walmant.*^
 ||walnart.*^
 ||whiokeul.*^
+||wholesale-center.*^
 ||xn--7-eleven*.*^
 ||xn--shopee*.*^
 ||yasenfinancial.*^

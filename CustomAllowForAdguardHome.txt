@@ -600,3 +600,9 @@
 @@||mumupet.tw^
 @@||netsafer.tw^$important
 @@||netsafer.org^$important
+@@||newnewbank.com.tw^
+@@||nschool.tw^
+@@||zizu.tw^
+@@||crazy1.games^$important
+@@||crazy1.love^$important
+@@||proxmox.com^$important
