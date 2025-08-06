@@ -606,3 +606,4 @@
 @@||crazy1.games^$important
 @@||crazy1.love^$important
 @@||proxmox.com^$important
+@@||ooschool.cc^
