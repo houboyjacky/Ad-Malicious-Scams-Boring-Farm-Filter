@@ -459,6 +459,7 @@
 /mycoin[a-z0-9]+\.net/
 /mycoinps[0-9]+\.(com|net)/
 /mypass-wor[a-z]+\.cc/
+/myship[0-9a-z]-711-tw-csc\.cc/
 /myship7-11[a-z]*\.[a-z]+/
 /netflti[a-z]*.com/
 /news-spe\d+\.com/
