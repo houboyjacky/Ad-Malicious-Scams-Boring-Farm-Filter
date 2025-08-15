@@ -360,7 +360,6 @@
 @@||cmy.tw^
 @@||chinaq.club^
 @@||linshin.com.tw^
-@@||ccesince2018.app^
 @@||esimgo.store^
 @@||kdpic.pchome.com.tw^$important
 @@||lixiaofei2yy.website^$important
@@ -614,3 +613,5 @@
 @@||todesktop.com^$important
 @@||lsjgcx.com^$important
 @@||gamersky.com^$important
+@@||blackhammer.com.tw^
+@@||starlink1.tw^
