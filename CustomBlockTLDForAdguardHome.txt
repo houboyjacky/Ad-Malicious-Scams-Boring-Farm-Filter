@@ -884,3 +884,11 @@
 ||yasenfinancial.*^
 ||zalando-*.*^
 ||zhy*.com^
+||adds-verse-adv.*^
+||auroracrypto.*^
+/axiomaxio[a-z]?\.com/
+/fxm[a-z]{3}\.com/
+/worldpayxtrad[a-z]{4,5}\.com/
+||wholesale-center.*^
+/wallatp[a-z]{3}\.com/
+/iwcop[a-z]{2}\.com/
