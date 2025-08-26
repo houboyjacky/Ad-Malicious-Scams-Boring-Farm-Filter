@@ -35,6 +35,7 @@
 /7-eleven\w+\.cc/
 /7-elevenz[a-z]{2,3}\.shop/
 /711-tw[0-9]+.tech/
+/88win[0-8]\.com/
 /8ct20[0-9]+\.site/
 /8legend\.[a-z]+/
 /aaelex[a-z]{2,3}\.com/
@@ -47,6 +48,7 @@
 /aclar.+\.com/
 /addm6[0-9]8\.com/
 /aegonx[a-z]{4}\.com/
+/aespa[0-9]{3}\.vip/
 /agencyo[a-z]\.com/
 /ai-international[a-z0-9]+\.com/
 /aicryptoex[a-z]\.com/
@@ -66,6 +68,7 @@
 /aiyfpro[a-z]{1,2}\.com/
 /albbyhj[0-9]{6}\.com/
 /aliexpr[a-z]+sale\.com/
+/aliexpresswho[a-z]{3,4}\.com/
 /alliancegrowth.+\.[a-z]+/
 /allianze[a-z]\.com/
 /alphafinace[a-z0-9]+\.com/
@@ -111,7 +114,6 @@
 /biconom[a-z]s\.vip/
 /bience[a-z0-9]{2}\.cc/
 /bigone[a-z]{3}\.com/
-/bigonebr[a-z]\.com/
 /binaceys[a-z]\.com/
 /binarium[a-z]+\.com/
 /bingtopji[a-z]\.com/
@@ -475,8 +477,8 @@
 /mycoin[a-z0-9]+\.net/
 /mycoinps[0-9]+\.(com|net)/
 /mypass-wor[a-z]+\.cc/
+/myship[0-9]?7-11[a-z-]*\.[a-z]+/
 /myship[0-9a-z]-711-tw-csc\.cc/
-/myship7-11[a-z]*\.[a-z]+/
 /naver[a-z]?-shop[a-z]*\.(top|com|cc|shop)/
 /netflti[a-z]*.com/
 /news-spe\d+\.com/
@@ -755,6 +757,7 @@
 ||bitgin.*^
 ||bithumb77.*^
 ||bitk-eth.*^
+||bitland-sho.*^
 ||bitstamp*.*^
 ||blockstreampro.*^
 ||bnextex.*^
