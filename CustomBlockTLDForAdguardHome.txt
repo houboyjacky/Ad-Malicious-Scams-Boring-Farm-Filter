@@ -640,6 +640,7 @@
 /vistacoin[a-z]{2}p\.com/
 /vistacoin[a-z]vp\.com/
 /vmalltw[a-z]{2}\.shop/
+/votel[0-9]z[0-9]\.com/
 /wall[ae]t[a-z]{3}\.com/
 /wallat[a-z]{3}\.com/
 /wallatb[a-z]{2}\.com/
