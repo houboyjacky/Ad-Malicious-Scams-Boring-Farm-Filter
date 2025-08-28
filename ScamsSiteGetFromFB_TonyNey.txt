@@ -17342,7 +17342,6 @@
 ||exactgoldtrading.com^
 ||exanteplatform.com^
 ||exantewin.com^
-||exantewin.com^
 ||exbellmont.com^
 ||exbit161.xyz^
 ||exbit163.xyz^
@@ -41534,7 +41533,6 @@
 ||xa852.com^
 ||xabatex-coin.ltd^
 ||xacoinbase.vip^
-||xadro.vip^
 ||xadro.vip^
 ||xaerunaf.xyz^
 ||xafexbit.com^
