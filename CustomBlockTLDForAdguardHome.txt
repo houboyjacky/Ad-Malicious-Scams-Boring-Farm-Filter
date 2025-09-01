@@ -441,12 +441,15 @@
 /lowearthorbito[a-z]\.com/
 /ltbltr[a-z]p\.vip/
 /lunojs[a-z]\.com/
+/maicoin[a-z]{2,3}\.com/
 /mainneti[a-z]\.com/
 /malls-sh[a-z]{2}\.com/
 /manavm[a-z]\.com/
+/marketsotc[a-z]\.(cc|vip)/
 /marketv[a-z]{2,3}\.com/
 /matic[a-z]{3}\.com/
 /matica[a-z]{2}\.com/
+/megabit[a-z]{3}\.com/
 /megfaly[a-z]{1,2}\.com/
 /mercadolibre[a-z0-9-]+\.com/
 /meta[a-z0-9-]+\.onrender\.com/
@@ -462,6 +465,7 @@
 /mitsubishiasi[0-9]{2}\.com/
 /mitsubishicorphk[0-9]*\.(com|xyz)/
 /mk-backstage[0-9]{1,2}\.com/
+/modulin[a-z]{2}\.com/
 /modulink[a-z]\.com/
 /momoshop[a-z]+\.com/
 /momotw[a-z]{4}\.(store|shop)/
@@ -516,6 +520,7 @@
 /prettya[a-z]{3}-my\.com/
 /privatece[0-9]\.tw/
 /psychologis-\w+.com/
+/ptud[a-z]{2}\.com/
 /pty[a-z]{4}-my\/com/
 /pundi[a-z]{3}\.com/
 /qeic[a-z0-9]+w\.net/
@@ -603,6 +608,7 @@
 /thinkmark.+\.com/
 /tickmilltw.*\.xyz/
 /tiktok-wholesale[a-z]{1,2}\.com/
+/timeswap[a-z]{3}\.com/
 /tk[0-9]\.shop/
 /tmao[0-9]{3,4}\.(xyz|com)/
 /tmao[0-9]{3,4}\.xyz/
@@ -642,9 +648,7 @@
 /vmalltw[a-z]{2}\.shop/
 /votel[0-9]z[0-9]\.com/
 /wall[ae]t[a-z]{3}\.com/
-/wallat[a-z]{3}\.com/
-/wallatb[a-z]{2}\.com/
-/wallatp[a-z]{3}\.com/
+/wallat[a-z]{3,4}\.com/
 /walletaa[a-z]\.com/
 /walmartglobal[a-z]{1,3}\.com/
 /wandataw[a-z0-9]*\.com/
@@ -685,7 +689,6 @@
 /yulonfo[a-z0-9]*\.com/
 /yundin[a-z0-9]*\.com/
 /zbtcex[a-z]{3}\.com/
-/zbtcexrq[a-z]\.com/
 /zbzbuq[a-z]\.vip/
 /zenexc[a-z]{1,2}\.com/
 /zerolend[a-z]{3}\.com/
@@ -764,6 +767,7 @@
 ||bnextex.*^
 ||boniry.*^
 ||booking-(hk|tw)\.*^
+||booking-com.*^
 ||booking-hk.*^
 ||brainswavecryptos.*^
 ||brk.*
@@ -850,6 +854,7 @@
 ||newtradetw.*^
 ||obtshop.*^
 ||ocdfinances.*^
+||omnios.*^
 ||open-ex.*^
 ||opensky.*^
 ||opnxdex.*^
@@ -881,6 +886,7 @@
 ||tkocryptocurrency.*^
 ||tokenlon.*^
 ||tokocrypto-defi.*^
+||tokyofinancialexchange.*^
 ||topmall.*^
 ||traweb3.*^
 ||treasuremax.*^
