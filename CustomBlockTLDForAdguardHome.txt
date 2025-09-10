@@ -103,7 +103,6 @@
 /baiapp[0-9]{2}\.xyz/
 /bananaat[a-z]\.com/
 /basindefi[a-z]{2}\.com/
-/basindefia[a-z]\.com/
 /batonex[a-z]{3}\.com/
 /bay-e\.(net|shop|xyz)/
 /bck[a-z0-9]vip\.com/
@@ -401,6 +400,7 @@
 /ioexx?[0-9]{1,2}\.com/
 /isnotdomain[0-9]+\.com/
 /iwco[a-z]{2}\.com/
+/iwcol[a-z]\.com/
 /iwcop[a-z]{2}\.com/
 /japan-[0-9]{2}\.shop/
 /jarvis[a-z]{3}\.com/
@@ -640,6 +640,7 @@
 /ubsex[a-z0-9]{1,2}\.com/
 /uphold[a-z]{3,4}\.com/
 /usdter.?\..*/
+/uujj[a-z]\.asia/
 /vacation-id[0-9]+.eu/
 /vaticapit[a-z]{2,4}\.com/
 /viahtgogo[a-z]{2,3}\.com/
@@ -817,6 +818,7 @@
 ||exmodex.*^
 ||ezsoholl.*^
 ||ezsohomax.*^
+||famiporfou.*^
 ||fanbtctw.*^
 ||fcollapsuilding.*^
 ||flipster.*^
@@ -835,6 +837,7 @@
 ||grovpon.*^
 ||gstha.*^
 ||gtjiz.*^
+||hct-tw.*^
 ||hispeedtrading0728.*^
 ||hongbulin.*
 ||hsjpartnersjpx.*^
