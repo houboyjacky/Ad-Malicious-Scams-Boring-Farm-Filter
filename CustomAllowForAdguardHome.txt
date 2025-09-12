@@ -638,3 +638,4 @@
 @@||nordvpn.com^$important
 @@||16personalitylab.ai^$important
 @@||retrogames.onl^$important
+@@||ark.casa^$important
