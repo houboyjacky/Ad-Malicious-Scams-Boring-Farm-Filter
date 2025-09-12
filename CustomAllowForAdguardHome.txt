@@ -600,7 +600,6 @@
 @@||netsafer.tw^$important
 @@||netsafer.org^$important
 @@||newnewbank.com.tw^
-@@||nschool.tw^
 @@||zizu.tw^
 @@||crazy1.games^$important
 @@||crazy1.love^$important
@@ -632,13 +631,10 @@
 @@||hahamate.com^
 @@||u68.top^$important
 @@||7-11.com.tw^$important
-@@||cht.com.tw^
-@@||gmail.com^
 @@||portaly.cc^
-@@||twm.tw^
-@@||twm5g.co^
-@@||twmrbt.com^
-@@||wootalk.today^
 @@||dreammallshop.com.tw^
 @@||so5.tw^
 @@||dongchengtool.com.tw^
+@@||nordvpn.com^$important
+@@||16personalitylab.ai^$important
+@@||retrogames.onl^$important

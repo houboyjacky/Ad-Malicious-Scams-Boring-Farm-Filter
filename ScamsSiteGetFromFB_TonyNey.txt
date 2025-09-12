@@ -13,6 +13,7 @@
 #||easy.co^
 #||fxtrading.com^
 #||github.io^
+#||gomining.com^
 #||icmarkets.com^
 #||longlaitanji.com^
 #||moonpay.com^
@@ -21219,7 +21220,6 @@
 ||gomeshopec.com^
 ||gomeshoptw.com^
 ||gominerx.com^
-||gomining.com^
 ||gomkinvest.com^
 ||gomkinvest.site^
 ||gomkinvest.vip^

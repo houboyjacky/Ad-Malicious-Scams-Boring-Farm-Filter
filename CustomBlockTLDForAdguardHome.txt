@@ -728,6 +728,7 @@
 ||7-eleven-shop*.*^
 ||7-eleven-tw.*^
 ||711myshupbuy.*^
+||7eleven-tw.*^
 ||8ct2*.site^
 ||aave-loan.*^
 ||acceptll.*^
@@ -800,6 +801,7 @@
 ||daoxcryptoweb3.*^
 ||datanodedex.*^
 ||dbg-coltdfx.*^
+||dewushopping.*^
 ||dgbaccarat.*^
 ||difcinvestment.*^
 ||digi-dexchange.*^
@@ -860,6 +862,7 @@
 ||mitsubishi*.*^
 ||monopolys.*^
 ||myfany.*^
+||myship--711-tw.*^
 ||mytwshoip.*^
 ||newgeneration4now.*^
 ||newtradetw.*^
@@ -908,6 +911,8 @@
 ||tw-linevoom*-wenjuan.*^
 ||tw-sia.*^
 ||twcaijin.*^
+||twoe.*^
+||twoi.*^
 ||vantwnow.*^
 ||vhpmi.*^
 ||walmant.*^
