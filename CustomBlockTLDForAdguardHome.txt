@@ -68,6 +68,7 @@
 /aixeblackswan[0-9]{4}\.com/
 /aiyfpro[a-z]{1,2}\.com/
 /albbyhj[0-9]{6}\.com/
+/albbyhj[0-9]+\.com/
 /aliexpr[a-z]+sale\.com/
 /aliexpresswho[a-z]{3,4}\.com/
 /alliancegrowth.+\.[a-z]+/
@@ -259,6 +260,7 @@
 /douyin[0-9]{2,4}\.com/
 /downloadc[0-9]*\.com/
 /dreammall-?shop\..*/
+/dsgj[0-9]{3,4}\.com/
 /dsglobalyl[l]?\.com/
 /dtcpayli[a-z]+\.com/
 /dwgj[0-9]{3-4}\.com/
@@ -389,6 +391,7 @@
 /id\d+\.(date|com)/
 /idfpower[a-z0-9]*\.com/
 /idgcapital[a-z0-9]*\.com/
+/iffep[a-z]\.com/
 /igmark[a-z0-9]*\.com/
 /imcmax-[a-z]{2,3}\.com/
 /imxmj[a-z]\.com/
@@ -536,12 +539,14 @@
 /rakuten[a-z0-9]{2,3}\.com/
 /reactivate-page-[a-z0-9]+\.click/
 /realizeideal[a-z]\.[a-z]+/
+/redwoodcapitar[a-z]{1,2}\.com/
 /regeneration[a-z]{2}\.com/
 /richcontracting[0-9]{1,2}\.buzz/
 /risheng[0-9]+\.com/
 /rubiccq[a-z]\.com/
 /ruten.+\.com/
 /ruten[0-9]+\.tw/
+/safetycoin-[a-z]+\.online/
 /saintrich[a-z0-9]*\.com/
 /sbgexchangesw[a-z]\.com/
 /schw[a-z]+\.com/
@@ -563,6 +568,7 @@
 /shopvip-?[a-z]{0-2}\.[a-z]+/
 /shss[a-z]{2}\.com/
 /sichcapital[a-z0-9]+\.com/
+/singapore[0-9]\.cc/
 /snx.+\.com/
 /so[0-9]+\.com/
 /sotck[a-z]+\.com/
@@ -614,7 +620,7 @@
 /tiktok-wholesale[a-z]{1,2}\.com/
 /timeswap[a-z]{3}\.com/
 /tk[0-9]\.shop/
-/tmall[0-9]{4}\.vip/
+/tmall[0-9]{4,5}\.vip/
 /tmao[0-9]{3,4}\.(xyz|com)/
 /tmao[0-9]{3,4}\.xyz/
 /tmao[0-9]{4}\.vip/
@@ -636,6 +642,7 @@
 /tw[-]?carousel[a-z0-9]+\.xyz/
 /tw[a-z0-9-]*carousel[a-z0-9-]*\.(com|xyz|tw)/
 /twpldr[a-z]\.com/
+/twshop-[a-z]+.store/
 /tych[a-z]{4}\.com/
 /ubsex[a-z0-9]{1,2}\.com/
 /uphold[a-z]{3,4}\.com/
@@ -700,6 +707,7 @@
 /zenexc[a-z]{1,2}\.com/
 /zerolend[a-z]{3}\.com/
 /zghk[0-9]+ex\.com/
+/zghnjt[0-9]{3}\.vip/
 /ziiea[a-z]+\.com/
 #||*.online^$denyallow=pestyle.online
 #||bar^
@@ -784,6 +792,7 @@
 ||bullish*.com^
 ||buyer-work.*^
 ||bvifinanceinv*.*^
+||byboo-dex.*^
 ||cbn-tw.*^
 ||coinbasewallet.*^
 ||coinbte.*^
@@ -798,6 +807,7 @@
 ||crypacific.*^
 ||cryptomatrixdex.*^
 ||cryptotrading-hub.*^
+||cryptovibe-tradingx.*^
 ||daoxcryptoweb3.*^
 ||datanodedex.*^
 ||dbg-coltdfx.*^
@@ -841,6 +851,7 @@
 ||gtjiz.*^
 ||hct-tw.*^
 ||hispeedtrading0728.*^
+||hivemicro.*^
 ||hongbulin.*
 ||hsjpartnersjpx.*^
 ||hyluckya.*^
@@ -887,6 +898,7 @@
 ||sfexpress-help.*^
 ||shopback-online.*^
 ||shopcentralem.*^
+||shopdokdoems.*^
 ||shopingcentrale.*^
 ||shoppinggiftcom.*^
 ||short2tradingnow.*^
