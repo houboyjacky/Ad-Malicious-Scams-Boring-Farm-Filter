@@ -7,8 +7,6 @@
 ! Apple官方購物，網頁刷卡無回應，但交易有成功(解決無回應)
 @@||securemvt.apple.com^
 @@||appleglobal.102.112.2o7.net^
-! Line點擊連結
-@@|lap-click.tr.line.me^
 ! 解放Biggo樂天連結
 @@||affiliate.api.rakuten.com.tw^
 ! 縮圖片縮影片無法看
@@ -44,8 +42,6 @@
 @@||fls-na.amazon.com
 ! Apple 網頁元件
 @@||securemetrics.apple.com^
-! Line Pay 公告
-@@||torimochi.line-apps.com^
 ! 台灣樂透
 @@||www.taiwanlottery.com.tw^
 ! Yahoo! 新聞影片
@@ -71,8 +67,6 @@
 ! 常用排除
 @@||messaging-router.useinsider.com^$important
 @@||safely-web.com^$important
-@@||shopline.tw^$important
-@@||ts.line-apps.com^$important
 @@||lihi3.cc^$important
 @@||onelink.me^$important
 ! 其他排除
@@ -170,7 +164,6 @@
 @@||shope.ee^
 @@||foodomo.com^
 @@||linkbio.co^$important
-@@||crs-event.line.me^$important
 @@||appbankee.com.tw^
 @@||cmoney.tw^
 @@||taplink.cc^
@@ -204,7 +197,6 @@
 @@||shopdisney.asia^
 @@||similarweb.com^$important
 @@||umdc.aliapp.org^$important
-@@||nelo2-col.linecorp.com^$important
 @@||avatrade.com.tw^
 @@||funlikev.com^
 @@||otthree.com^
