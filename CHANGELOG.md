@@ -1,6 +1,7 @@
 # 歷史更新 History Update
 
 * 20250918 Update
+  * 調整 白名單
   * 調整 LINE規則
 
 * 20250917 Update

@@ -631,3 +631,4 @@
 @@||16personalitylab.ai^$important
 @@||retrogames.onl^$important
 @@||ark.casa^$important
+@@||revoke.cash^$important
