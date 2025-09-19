@@ -632,3 +632,5 @@
 @@||retrogames.onl^$important
 @@||ark.casa^$important
 @@||revoke.cash^$important
+@@||calendly.com^$important
+@@||nielseniq.com^$important
