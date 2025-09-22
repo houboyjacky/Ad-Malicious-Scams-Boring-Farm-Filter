@@ -36876,7 +36876,6 @@
 ||workwiseway.online^
 ||world-data.cfd^
 ||world-pro.top^
-||world.org^
 ||worldantifraud.com^
 ||worldbesthero.com^
 ||worldcoin35.com^
