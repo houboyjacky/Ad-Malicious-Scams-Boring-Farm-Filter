@@ -636,3 +636,5 @@
 @@||nielseniq.com^$important
 @@||pcsdance.tw^
 @@||coupa.ng^$important
+@@||next.at^$important
+@@||next.pl^$important
