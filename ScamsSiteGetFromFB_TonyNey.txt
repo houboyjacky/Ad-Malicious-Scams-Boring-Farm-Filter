@@ -15,6 +15,7 @@
 #||github.io^
 #||gomining.com^
 #||icmarkets.com^
+#||interactivebrokers.com^
 #||longlaitanji.com^
 #||moonpay.com^
 #||myshopify.com^
@@ -23597,7 +23598,6 @@
 ||inter-investissement.com^
 ||interactive-trade.pro^
 ||interactive-trading.online^
-||interactivebrokers.com^
 ||interactivefxbrokers.com^
 ||interactivetrade.ltd^
 ||interarcham.com^
