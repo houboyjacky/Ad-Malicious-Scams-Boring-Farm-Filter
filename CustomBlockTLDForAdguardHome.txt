@@ -80,6 +80,7 @@
 /amazon[0-9]+\.com/
 /amazon[0-9]+\.mobi/
 /amtop[a-z]{2,4}\.com/
+/anchorage[a-z]\.(cc|com)/
 /animoca[a-z]{2,3}\.com/
 /ankr[a-z]{3}\.com/
 /antsforex[a-z0-9]*\.com/
@@ -94,6 +95,7 @@
 /asosmall-[a-z]\.com/
 /atfk[a-z]{3}\.com/
 /atfx[a-z]{2,3}\.com/
+/atfxweb[a-z0-9]{1,2}\.com/
 /avastone[a-z]{3}\.com/
 /avatrade.*\.com/
 /axiomaxio[a-z]?\.com/
@@ -118,6 +120,7 @@
 /binaceys[a-z]\.com/
 /binarium[a-z]+\.com/
 /bingtopji[a-z]\.com/
+/bingz[a-z]{2}\.com/
 /birui[a-z]{2}\.vip/
 /bitceig[a-z]\.com/
 /bitcores[0-9]+\.com/
@@ -144,6 +147,7 @@
 /bkex[a-z]{3}\.com/
 /bkmh[a-z]{2}\.com/
 /bl[0-9]{3}\.net/
+/blibli[a-z]{5,8}\.com/
 /blish[a-z]{1,3}\.com/
 /blockrisex[a-z]\.com/
 /blueberrypro\..+/
@@ -220,6 +224,7 @@
 /coinw[a-z]{3,4}\.com/
 /com-id\w+.cloud/
 /cometh[a-z]\.com/
+/convex[a-z]{4}\.com/
 /core-smith[a-z]+\.com/
 /costco.+\.com/
 /cpatex[a-z]+\.com./
@@ -237,6 +242,7 @@
 /curve[a-z]{3}\.com/
 /cwgforexp[a-z0-9]*\.com/
 /daisojapa[a-z]{2}\.com/
+/databas[a-z]{3}\.com/
 /dbag[a-z]{3}\.com/
 /dbgmarke[a-z0-9]*\.com/
 /dbyl[0-9]{4}\.com/
@@ -472,12 +478,12 @@
 /mitsubishicorphk[0-9]*\.(com|xyz)/
 /mk-backstage[0-9]{1,2}\.com/
 /modulin[a-z]{2}\.com/
-/modulink[a-z]\.com/
 /momoshop[a-z]+\.com/
 /momotw[a-z]{4}\.(store|shop)/
 /money\d{4}\.com/
 /moneypt[a-z]{2,3}\.com/
 /moneysqure[a-z]{2}\.com/
+/moonwell[a-z]{3}\.com/
 /moscow[a-z]{3}\.com/
 /moxc[a-z0-9]{2,3}\.com/
 /mrkexchang[a-z]{1,2}\.com/
@@ -877,6 +883,7 @@
 ||mytwshoip.*^
 ||newgeneration4now.*^
 ||newtradetw.*^
+||nexustrades.*^
 ||obtshop.*^
 ||ocdfinances.*^
 ||omnios.*^
