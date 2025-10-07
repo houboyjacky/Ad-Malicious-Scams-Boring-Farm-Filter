@@ -155,7 +155,7 @@
 /bntrade[a-z]{3}\.com/
 /bnwreder[a-z]{2}\.com/
 /bnwreus[a-z]{3}\.com/
-/booking-\w+\.cloud/
+/booking-(tw|hk|user)\.(shop|com|net|org|cc|co|vip)/
 /bqcity[0-9]{3,4}\.(com|net)/
 /breakout[a-z]{2}\.com/
 /bright[0-9]{3}\.one/
@@ -478,6 +478,7 @@
 /mitsubishicorphk[0-9]*\.(com|xyz)/
 /mk-backstage[0-9]{1,2}\.com/
 /modulin[a-z]{2}\.com/
+/modulink[a-z]\.com/
 /momoshop[a-z]+\.com/
 /momotw[a-z]{4}\.(store|shop)/
 /money\d{4}\.com/
@@ -498,6 +499,7 @@
 /naver[a-z]?-shop[a-z]*\.(top|com|cc|shop)/
 /netflti[a-z]*.com/
 /news-spe\d+\.com/
+/newxny[0-9]{3}\.com/
 /nymex.+tw\.com/
 /oandg[a-z0-9]*\.com/
 /oceane[a-z]{2}\.com/
@@ -648,7 +650,7 @@
 /tw[-]?carousel[a-z0-9]+\.xyz/
 /tw[a-z0-9-]*carousel[a-z0-9-]*\.(com|xyz|tw)/
 /twpldr[a-z]\.com/
-/twshop-[a-z]+.store/
+/twshop-[a-z]+\.store/
 /tych[a-z]{4}\.com/
 /ubsex[a-z0-9]{1,2}\.com/
 /uphold[a-z]{3,4}\.com/
@@ -806,6 +808,7 @@
 ||coinfalcon.*^
 ||coingrew.*^
 ||coinlead.*^
+||coinminius-tradingx.*^
 ||coinparks.*^
 ||coinrisen.*^
 ||cointaste.*^
@@ -920,6 +923,7 @@
 ||tokenlon.*^
 ||tokocrypto-defi.*^
 ||tokyofinancialexchange.*^
+||tokyofinancialxchange.*^
 ||topmall.*^
 ||traweb3.*^
 ||treasuremax.*^
