@@ -639,3 +639,5 @@
 @@||next.at^$important
 @@||next.pl^$important
 @@||gooptions.cc^$important
+@@||kevin888.com.tw^
+@@||nantouluckygo.tw^
