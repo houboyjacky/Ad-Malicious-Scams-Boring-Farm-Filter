@@ -641,3 +641,7 @@
 @@||gooptions.cc^$important
 @@||kevin888.com.tw^
 @@||nantouluckygo.tw^
+@@||dottedsign.com^
+@@||coreynote.life^$important
+@@||fetnet.net^$important
+@@||beptt.cc^$important
