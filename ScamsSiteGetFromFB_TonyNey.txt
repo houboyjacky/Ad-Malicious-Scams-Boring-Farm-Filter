@@ -9,8 +9,11 @@
 #||cex.io^
 #||cix3752i.com^
 #||cloudfront.net^
+#||coinbase.com^
+#||coinrule.com^
 #||duckdns.org^
 #||easy.co^
+#||fpmarkets.com^
 #||fxtrading.com^
 #||github.io^
 #||gomining.com^
@@ -10397,7 +10400,6 @@
 ||coinbase-web3.xyz^
 ||coinbase-x.com^
 ||coinbase-z.com^
-||coinbase.com^
 ||coinbase.cq.cn^
 ||coinbase.photo^
 ||coinbase.space^
@@ -11335,7 +11337,6 @@
 ||coinrule-web3.today^
 ||coinrule-web3.work^
 ||coinrule-web3.xyz^
-||coinrule.com^
 ||coinrulee.top^
 ||coinrulem.vip^
 ||coinrulen.com^
@@ -19252,7 +19253,6 @@
 ||fpmarketcp.com^
 ||fpmarketes.com^
 ||fpmarketest.com^
-||fpmarkets.com^
 ||fpmarkets.live^
 ||fpmarkets1.com^
 ||fpmarketsmed.com^
@@ -29927,7 +29927,6 @@
 ||oecvnci.vip^
 ||oecvvsi.vip^
 ||oedvr.com^
-||oen.tw^
 ||oenons.com^
 ||oepmgr.top^
 ||oerzvv.com^
@@ -39341,6 +39340,7 @@
 ||ulxtrades.com^
 ||uma-coin.xyz^
 ||umatoafi.com^
+||umbrella-boutique.oen.twoen.tw^
 ||umetaswap.com^
 ||unblock.exchange^
 ||unccoin.best^

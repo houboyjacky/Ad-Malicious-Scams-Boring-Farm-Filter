@@ -1,11 +1,6 @@
 ! 2023/05/08 Update
 ! Dcard JasonY https://www.dcard.tw/@yen7716888
 ! Global-Anti-Scam-Org-全球反詐騙組織 https://www.globalantiscam.org/
-@@||coinbase.com^$important
-@@||coinrule.com^$important
-@@||lithiumbatteryrepaircenter.business.site^$important
-@@||uniswap.org^$important
-@@||upbit.com^$important
 #||ac.cn^
 #||accupass.com^
 #||aliyuncs.com^
@@ -15,13 +10,14 @@
 #||bitfinex.com^
 #||bitget.com^
 #||bitmart.com^
+#||bittrex.com.tw^
 #||bitunix.com^
 #||btcc.com^
-#||business.site^
 #||bybit.com^
 #||bznk.com^
 #||cex.io^
 #||cloudfront.net^
+#||coinbase.com^
 #||coincarp.com^
 #||coingecko.com^
 #||comnowallet.^
@@ -4750,7 +4746,6 @@
 ||bittradingexchange.ltd^
 ||bittradingoption.com^
 ||bittrdecap.com^
-||bittrex.com.tw^
 ||bittrex.ws^
 ||bittrex168.com^
 ||bittrex66.com^
@@ -6945,7 +6940,6 @@
 ||coinbase-wallet.info^
 ||coinbase-walletdefi.com^
 ||coinbase-web3.com^
-||coinbase.com^
 ||coinbase.cq.cn^
 ||coinbase.photo^
 ||coinbase.space^
@@ -7627,7 +7621,6 @@
 ||coinrule-web3.shop^
 ||coinrule-web3.work^
 ||coinrule-web3.xyz^
-||coinrule.com^
 ||coinrulem.vip^
 ||coinrulen.com^
 ||coinrulen.vip^
@@ -25618,7 +25611,6 @@
 ||uniswap.cool^
 ||uniswap.fashion^
 ||uniswap.llc^
-||uniswap.org^
 ||uniswap.win^
 ||uniswap*.*^
 ||uniswapcoins.com^

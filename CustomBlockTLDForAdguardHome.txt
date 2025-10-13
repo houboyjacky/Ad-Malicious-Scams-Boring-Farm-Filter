@@ -71,6 +71,7 @@
 /albbyhj[0-9]+\.com/
 /aliexpr[a-z]+sale\.com/
 /aliexpresswho[a-z]{3,4}\.com/
+/allbet.*\.(net|online)/
 /alliancegrowth.+\.[a-z]+/
 /allianze[a-z]\.com/
 /alphafinace[a-z0-9]+\.com/
@@ -98,6 +99,7 @@
 /atfxweb[a-z0-9]{1,2}\.com/
 /avastone[a-z]{3}\.com/
 /avatrade.*\.com/
+/avg[0-9]{3}\.net/
 /axiomaxio[a-z]?\.com/
 /axt[a-z]{3,4}\.com/
 /b9b[a-z0-9]+\.cc/
@@ -312,6 +314,7 @@
 /f.m.store\.xyz/
 /fackbk[0-9]\.com/
 /famipor[a-z]{3}\.(sbs|shop|cyou)/
+/famiport-tw-fmec-[a-z]{3}.cyou/
 /fantom[a-z]{2,3}\.com/
 /fasonlacrm\.[a-z]+/
 /faste[a-z]{4,5}\.com/
@@ -828,6 +831,7 @@
 ||dreamshop*.com^
 ||dusmallshop.*^
 ||ebay-tw.*^
+||edexlaron.*^
 ||eecoins.*^
 ||elegancepicks.*^
 ||ellandroadcapital.*^
@@ -836,6 +840,7 @@
 ||eshop-tw.*^
 ||etmaltw*.*^
 ||eurtwoxt.*^
+||ewrtgc.*^
 ||exmodex.*^
 ||ezsoholl.*^
 ||ezsohomax.*^
@@ -934,6 +939,7 @@
 ||tw-linevoom*-wenjuan.*^
 ||tw-sia.*^
 ||twcaijin.*^
+||twod.*^
 ||twoe.*^
 ||twoi.*^
 ||vantwnow.*^

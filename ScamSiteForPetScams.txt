@@ -1,8 +1,5 @@
 ! Pet Scams List 2022/12/09 on https://petscams.com/
 ! Puppy Scams List 2023/04/20 on https://puppyscams.org/
-# ||google.com^
-# ||wixsite.com^ 適用子網域
-#||business.site^
 ||12weeksoldmaltipoopuppies.com^
 ||1goldenretrieverpuppyspot.com^
 ||1rhodesianridgeback.com^

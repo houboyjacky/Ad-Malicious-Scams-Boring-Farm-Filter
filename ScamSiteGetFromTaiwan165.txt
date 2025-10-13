@@ -1,21 +1,7 @@
 ! 民眾通報假投資(博弈)詐騙網站 https://165.npa.gov.tw
 ! 網站連結 https://data.gov.tw/dataset/160055
 ! jasony https://www.dcard.tw/@yen7716888
-@@||bittrex.com^$important
-@@||fpmarkets.com^$important
-#||azureedge.net^
-#||cdn77.org^
-#||duckdns.org^
-#||fx110.com^
-#||github.io^
-#||i-gamer.net^
 #||longlaitanji.com^
-#||myshopify.com^
-#||mystrikingly.com^
-#||twincn.com^
-#||weebly.com^
-#||zapto.org^
-#||zendesk.com^
 ||004l.com^
 ||0066666.co^
 ||006buy.store^
@@ -1124,6 +1110,7 @@
 ||alassistant.online^
 ||alassistant.top^
 ||alb85.com^
+||albb.azureedge.net^
 ||albb33615.com^
 ||albb8324.vip^
 ||albb8596.com^
@@ -1741,6 +1728,7 @@
 ||ascendextoken.cc^
 ||asdfgbcn.com^
 ||asdnbx.com^
+||aseanabs.mystrikingly.com^
 ||asede.cc^
 ||aseiruu.com^
 ||asende.cc^
@@ -6120,6 +6108,7 @@
 ||cqja.tw^
 ||cqkokibw.com^
 ||cqqq6666.com^
+||cr1688.duckdns.org^
 ||crateis.vip^
 ||crayon3.com^
 ||crazy-go.com^
@@ -9509,7 +9498,6 @@
 ||fpmarketcp.com^
 ||fpmarketes.com^
 ||fpmarketest.com^
-||fpmarkets.com^
 ||fpmarkets1.com^
 ||fpmarketsmed.com^
 ||fpmarketsmeh.com^
@@ -16266,6 +16254,7 @@
 ||mitokenex.com^
 ||mitotal.com^
 ||mitrade.world^
+||mitradev.azureedge.net^
 ||mitsubishi886.com^
 ||mitsubishiasi.com^
 ||mitsubishiasi01.com^
@@ -23157,6 +23146,7 @@
 ||tk-appdownloads.sbs^
 ||tk-asiashop.com^
 ||tk-mall-tw.com^
+||tk-mall.azureedge.net^
 ||tk-mall.tv^
 ||tk-shoopb.top^
 ||tk-shoopl.cc^
