@@ -1,4 +1,4 @@
-####### 2020/03/26 ~ 2025/10/01 #######
+####### 2020/03/26 ~ 2025/10/08 #######
 # 僅移除重複字串
 # https://data.moi.gov.tw/MoiOD/System/DownloadFile.aspx?DATA=3BB8E3CE-8223-43AF-B1AB-5824FA889883
 0857娛樂城	www.0857.games	1
@@ -180,9 +180,11 @@
 8V	www.veightgsg.com	1
 8V	www.veightmka.com	2
 8V	www.veightmpx.com	1
+8V	www.veightmpx.com	1
 8V	www.veightzaw.com	2
 8方娛樂城	kn0727.meta1788.com	1
 8號公館	mansionno8.cc	1
+9158	bit-9158.net	1
 918博天堂	www.ts775.com	1
 91shop	www.91shopes.com	2
 938購物中心	www.938gw.cc	1
@@ -248,6 +250,7 @@ AAVE	www.taaveo.com	1
 AAVE	www.waavea.com	1
 AAVEM	www.rawaave.com	1
 AAVEM	www.twfiveaave.com	1
+AAVEM	www.twoavevn.com	1
 ABC	abce-commerce.com	1
 ABC	abce-commerce.net	1
 ABC	abce-commerce.shop	1
@@ -425,6 +428,7 @@ AEMD	mkp.aemda.com	4
 AEO	app.aeool.cc	1
 AEO	app.foranny.com	1
 AEO	app.foranny.com	1
+AEO	h5.aeool.com	1
 AEO	m.aeool.cc	1
 AEO	www.aeocc.qpon	1
 AEO	www.aeosvip.cyou	1
@@ -608,6 +612,7 @@ AIG	www.aigcoinop.com	1
 AIG	www.aigcoinoup.com	1
 AIG	www.aigcoinrpp.com	5
 AIG	www.aigcoinyanm.com	1
+AIGOU	www.aigoushopping.com	1
 AIMELIKE	aimelike.com	1
 AIMS	aims-tw.com	1
 AIMS	m.aimsfxe.cc	1
@@ -683,6 +688,7 @@ AIverseatech	aiverseatech.plus	1
 AIverseatech	aiverseatech.plus	1
 AI智慧科技	app.hutsty.com	1
 AI智慧科技	www.hbvsgd.com	1
+AI智慧科技	www.hkutdp.com	1
 AI智慧科技	www.inejer.com	4
 AI智慧科技	www.myrtdh.com	1
 AI智慧科技	www.ryrewt.com	2
@@ -1162,6 +1168,7 @@ AURA	www.aurayqb.com	3
 AURA	www.aurayqk.com	1
 AURA	www.aurayqo.com	6
 AURA	www.aurayqq.com	1
+AUREVIA	app.aurevia	3
 AUREVIA	app.aurevia.sbs	3
 AUREVIA	app.aurevia.sbs	8
 AUREVIA	us.aurevia.sbs	3
@@ -1281,6 +1288,7 @@ AZY-Shpooing	www.azyshopping.tw	2
 AZY-Shpooing	www.azytws.com	2
 AaelExChang	www.aaelexpt.com	1
 AaelExChang	www.aaelexpt.com	1
+AaelExChang	www.aaelexpt.com	1
 AaelExChange	www.aaelex.com	1
 AaelExChange	www.aaelex.com	1
 AaelExChange	www.aaelex.com	1
@@ -1295,6 +1303,7 @@ AaelExChange	www.aaelexchs.com/wap	1
 AaelExChange	www.aaelexmax.com	2
 AaelExChange	www.aaelexmax.com	2
 AaelExChange	www.aaelexmax.com	4
+AaelExChange	www.aaelexmv.com	1
 AaelExChange	www.aaelexpro.com/wap	2
 AaelExChange	www.aaelexzt.com	1
 Aavae	aava5defi.xyz	3
@@ -1900,6 +1909,7 @@ Amazon	www.buyamzz.com	8
 Amazon	www.buyamzz.com	8
 Amazon	www.buyamzz.com	9
 Amazon	www.couponsuv.com	2
+Amazon	www.coupontwh.com	5
 Amazon	www.couponusp.com	3
 Amazon	www.hceo-group.help	1
 Amazon	www.hceo-group.lat	1
@@ -2361,6 +2371,7 @@ AvaTrade	crypgapetc.com	1
 AvaTrade	kvictor.bleava.com	2
 AvaTrade	link.megmgulk.vip	2
 AvaTrade	m.ackkdjfdk.shop	1
+AvaTrade	m.avatradeex.cc	1
 AvaTrade	www.avauur.com	2
 AvaTrade	www.avauur.com	2
 Avalanche	avalanidc.com	1
@@ -2426,6 +2437,7 @@ BAEX	www.baextbs.vip	1
 BAEX	www.baextbs.vip	1
 BAEX	www.baextcp.vip	2
 BAEX	www.baexzuw.vip	1
+BAICION	web.fourbiwin.pro	1
 BAICOIN	www.biacoin.net	1
 BAICOIN	www.biacoin.net	2
 BAIGOU Mall	www.lipairc.com	1
@@ -2505,6 +2517,7 @@ BBAET	www.baetft.top	2
 BBC	bb.okkvvt.com	1
 BBC	bbc.okkvvt.com	1
 BBDT	sqsoa.ljfjybbf.com/cmmb4dr2	1
+BBIN	6255379.com	1
 BBIN	6518526.com	1
 BBIN	www.6722391.com	1
 BBIN	www.6887311.com	2
@@ -3054,6 +3067,7 @@ BP Exchange	bpfuelst.com	1
 BP Exchange	bptugos.xyz	1
 BP Exchange	bptugos.xyz	1
 BP Exchange	bptugos.xyz	1
+BP Exchange	bptuone.xyz	1
 BPH Exchange	www.bph-exchange.com	2
 BPL	bplstick.xyz	1
 BPL	bplwater.com	1
@@ -3144,6 +3158,7 @@ BTCC	vlp.twbtcc.qpon	5
 BTCC	vlp.twbtcc.qpon	1
 BTCC	vlp.twbtcc.qpon	1
 BTCC	www.apporg.qpon	1
+BTCC	www.btccorg.qpon	2
 BTCC	www.icyzj.com	1
 BTCC	www.orgbtcc.cyou	2
 BTCH	d.appk56728.xyz/?id=bed56bcc1a1c5212ccaa8a3ab7e96324	3
@@ -3306,6 +3321,7 @@ BXIBIT	m.bxibitgold.com	1
 BXIBIT	www.bxibitpro.com	2
 BXLR	bxlr.pegys.com/wap	1
 BXLR	www.bxlrcoex.com	1
+BXLR	www.bxlrex.com	1
 BXLR	www.bxlrex.com	3
 BXLR	www.bxlrin.com	1
 BXLR	www.bxlrmax.com/wap	1
@@ -3446,6 +3462,7 @@ Basex	www.basex.one	2
 Basex	www.basex.one	1
 Basex	www.basex.today	1
 Basin	trade.basindefiaa.com	1
+Basin	trade.basindefiag.com	1
 Basin	trade.basindefial.com	1
 Basin	trade.basindefiam.com	1
 Basin	trade.basindefias.com	2
@@ -3651,6 +3668,7 @@ Bietoac	pc.bietoac.com	1
 Bietoac	pc.bietoac.com	2
 Bietoac	pc.bietoac.com	1
 Bietrade	bccgrtyd.vip	1
+Bietrade	us.beidouyun.vip	1
 Big Cartel	www.bigcartel.click	1
 Big Uncle	m.bigunclewd.com	2
 Big Uncle	m.bigunclewd.com	4
@@ -3771,6 +3789,7 @@ Binance	app.geqianx280.top/s/GmaH	3
 Binance	www.aasoxa.cyou	1
 Binance	www.aasoxa.cyou	1
 Binance	www.aasoxa.cyou	1
+Binance	www.aasoxa.cyou	1
 Binance	www.bbaifina.cyou	3
 Binance	www.bbaifina.cyou	1
 Binance	www.binaceysy.com	1
@@ -3790,6 +3809,7 @@ Binance	www.zdiws.top	1
 Binance Gold	app.bngex.cc	1
 Binance Gold	binancegolds.app	1
 Binance Gold	www.bngoldex.app/7047346916/7047346916_content.html	1
+Binance Gold	www.bscgoldx.cc	1
 Binance Gold	www.bscgoldx.cc	1
 Binance Gold	www.gicgold-app.com	1
 Binance TR	www.binancetr-otc.com	1
@@ -3942,6 +3962,7 @@ Bit Wallet	mobile.bitwallet.finance	1
 Bit panda	chainhub.bond	1
 Bit panda	chainhub.top	1
 Bit panda	www.hashrex.top	1
+Bit(SecMarket)	www.bitsgetgo.cc	1
 Bit-Bank	ab93.site	1
 Bit-C	bit-c.co	1
 Bit-C	www.bit-c.co	2
@@ -4070,6 +4091,7 @@ BitCoit	www.biticlon.com	2
 BitCoit	www.biticlon.com	3
 BitCoke	www.bitcokeb.top	3
 BitCoke	www.bitcokeb.top	3
+BitCome	adnins.cloud	3
 BitCome	bitcome.pro	1
 BitCome	bitcome.pro	1
 BitCome	bitcome.pro	1
@@ -4116,6 +4138,7 @@ BitDELTA	www.bit-delta.net	2
 BitDa	bitdav.vip	1
 BitDa	bitdav.vip	2
 BitDa	bitdav.vip	1
+BitDa	bitdave.fun	1
 BitDa	bitdave.icu	1
 BitDa	bitdave.icu	1
 BitEx	bitex01.bitextech.com	4
@@ -4444,6 +4467,7 @@ Bitcealg	www.bitceaig.com	2
 Bitcealg	www.bitceaig.com	6
 Bitcealg	www.bitcect.com	4
 Bitcia	www.bitciaex.com	1
+Bitcia	www.bitciaex.com	1
 Bitcoin	bit.coin-en.net	1
 Bitcoin	bit58hh.icu	1
 Bitcoin	mobile.bitcrypt0.top	1
@@ -4457,6 +4481,7 @@ Bitcoin ETN	bitcoinetn.vip	1
 Bitcoin ETN	bitcoinetn.vip	4
 Bitcoin ETN	btcetn.one	4
 Bitcoin2024	bitcoin2024.net	2
+BitcoinCash	bit-coin-cash.asia	1
 BitcoinCash	bit-coin-cash.asia	1
 BitcoinCash	bit-coin-cash.asia	2
 BitcoinCash	bit-coin-cash.online	4
@@ -4563,6 +4588,7 @@ Bitdeer	yk02.zhybcw.com	2
 Bitdogs	bitdogspro.com	1
 Bitdu	www.bitdudex.com/appff	1
 Bitegoo	d.shopxianzai.site	2
+Bitemh	m.bit-emhhhvivi.com	1
 Bitemh	m.bite-mhavip.com	1
 Bitemh	m.bite-mhavip.com	1
 Bitemh	profile.bitemha.com	1
@@ -4892,6 +4918,7 @@ Bits	app.qianff14.xyz/s/GwIP	1
 Bits	bits-tw.buzz	1
 Bits	h5.taobao-6.top	1
 Bitsfort	www.bitsfort.cc	3
+Bitsfort	www.bitsfort.shop	4
 Bitsheng	tst.bitshengems.top	1
 Bitsheng	tst.bitshengs.top	1
 Bitsheng	tst.bitshengs.top	2
@@ -5198,6 +5225,7 @@ Boxcoin	www.boxxcoin.top	2
 Boyner	www.boyner.bar	1
 Boyner	www.boyner.bar	1
 Boyner	www.boyner.tv	1
+Bozei	bozei.top	1
 Bozei	www.bozei.org	1
 Brainwave	www.brainwavecrypto.com	1
 Brainwave	www.brainwavecrypto.tw	1
@@ -5318,6 +5346,7 @@ Bullion	bullionqwin.com	2
 Bullion	www.bullionfzyn.com	2
 Bullion	www.bullionwegp.com	2
 BullionVault	www.bullionvault.cc	1
+BullionVault	www.sunny0905.shop	2
 Bullionzs	bullionzs.com	1
 Bullish	bullishb.com	2
 Bullish	bullishd.com	3
@@ -5714,6 +5743,7 @@ CH訂單中心	www.chorderxi.com	4
 CH訂單中心	www.satbfdx.com	2
 CH訂單中心	www.satbfdx.com	1
 CH訂單中心	www.satbfdx.com	2
+CIAN	cianwallet.com	1
 CIBC	cibc.cixxxbbc.top	1
 CIBC	p.djjpla.xyz	1
 CIBC	ucibcxx.net	1
@@ -5822,6 +5852,7 @@ CMC	www.cmchighs.com	4
 CMC	www.cmcwgie.com	5
 CMC	www.cmcwgie.com	2
 CMC	www.cmcwxgr.com	2
+CMC Index	www.cmexprowebs.com	1
 CMC Index	www.cmexprowebs.com	3
 CMC Index	www.cmiclubdex.com	1
 CMC Index	www.cmintopdex.com	1
@@ -5901,6 +5932,7 @@ CME	www.coinme680.cc	2
 CME	www.edgecrypto-v.com	2
 CME	x.v-destinydater.com/V8Xs	1
 CME	x.v-destinydater.com/pwkf	1
+CME Group	mobile.nsdkmhy.xyz	1
 CME Group（芝商所）	www.cmegwebsite.com	1
 CME Group（芝商所）	www.cmeuwq.com	5
 CMEG	groupbload.cc	1
@@ -5999,6 +6031,7 @@ COINSEE	ai-coinsee.cc	1
 COINSEE	www.ai-coinsee.cc	1
 COINTASTE	app.yyapp88.top/kqn7rm	1
 COMEX	comex-vip.com	1
+COMEX	comexlv.com	1
 COMEX	comexlv.com	1
 COMEX	comexwallet.com/ff/	1
 COMEXTW	america.comextw.com	2
@@ -6298,6 +6331,7 @@ Central購物	centralshoping.com	1
 Central購物	centralshoping.com	1
 Central購物	www.central886.com	2
 Cetus	www.cetushrj.com	3
+Cetus	www.cetusjsc.com	1
 Cetus	www.cetustqgg.com	1
 Cetus	www.cetusyrhh.com	4
 Cetus	www.cetusyzye.com	1
@@ -6371,6 +6405,7 @@ Christian	mhneome.ysrws.buzz	1
 Christian	mhneome.ysrws.buzz	1
 Christian	mhneome.yunabol.buzz	4
 Christian	tokenx.wecdkm.com	1
+Chrono Capital	chronocapitalbitstamp.com	3
 CinEX	dolo.coine-x.top	1
 CinEX	dolo.coine-x.top	3
 CinEX	dolo.coinnx.top	1
@@ -6484,6 +6519,7 @@ Clyptaex	xxgalaxy.info	1
 Clyra	app.clyra.sbs	1
 Clyra	app.clyra.sbs	7
 Clyra	tw.clyra.sbs	10
+Clyra	tw.clyrau.top	1
 Clyra	us.clyra.lat	6
 Clyra	us.clyra.lat	1
 Clyra	us.clyra.sbs	2
@@ -6499,6 +6535,7 @@ Coatue	d2owmmtdaxqv4y.cloudfront.net	1
 Coatue	d2owmmtdaxqv4y.cloudfront.net	2
 Coatue	d9cu1q8tndv16.cloudfront.net	26
 Coatue	d9cu1q8tndv16.cloudfront.net	2
+CodeGTP	cgtp-ai.vip	1
 CodeGTP	code-tw.top	1
 CodeGTP	cweb-ai.top	2
 Coin Ant	pc.coinant.cc	1
@@ -6625,6 +6662,7 @@ CoinBase	www.fjuwn.top	1
 CoinBase	www.fjuwn.top	2
 CoinBase	www.gbywx.top	2
 CoinBase	www.ggybx.top	1
+CoinBase	www.ggybx.top	1
 CoinBase	www.gupnec.shop	1
 CoinBase	www.inex-gemin.vip	2
 CoinBase	www.iucoinbase.com	1
@@ -6729,6 +6767,7 @@ CoinEx	www.coinex666.com	1
 CoinEx	www.coinex889.com	1
 CoinEx	www.coinuog.com	1
 CoinEx	www.gemoini.co	2
+CoinEz	coinezff.com	1
 CoinEz	coinezff.com	1
 CoinEz	ezocoin.com	1
 CoinEz	hc.ezocoinez.com	1
@@ -6839,6 +6878,7 @@ CoinW	h5.singapore5.cc	1
 CoinW	h5.singapore6.cc	1
 CoinW	h5.singapore8.cc	2
 CoinW	h5.singapore8.cc	1
+CoinW	h5.singapore9.shop	1
 CoinW	www.coinw-max.com	1
 CoinW	www.coinw-maxprodefi.com	1
 CoinW	www.coinw.icu	1
@@ -7710,6 +7750,7 @@ Cryptopro	cryptoprox.website	1
 Cryptovibe	cryptovibe-tradingx.xin	1
 Cryptovibe	www.cryptovibe-tradingx.fun	2
 Cryptovibe	www.cryptovibe-tradingx.top	1
+Cryptoworld	www.cryptoworldsdf.com	2
 CrystalChipSmart	crystalchipstti.com	2
 CrystalChipSmart	crystalchipstti.com	1
 CrystalChipSmart	crystalchipstti.com	2
@@ -7770,6 +7811,7 @@ Curve Finance	www.curveqwo.com	1
 Curve Finance	www.curveqwq.com	1
 Curve Finance	www.curveqwt.com	1
 Curve Finance	www.curveqwy.com	1
+Cutes	www.wgalu.com	1
 Cutory	www.cutory-crypto.com	1
 Cutory	www.cutory-crypto.com	1
 CuttingEdge	www.cuttingedgepc.com	1
@@ -7785,6 +7827,7 @@ Cyber nexus	www.cybernexuss.top	1
 Cyber nexus	www.cybernexuss.top	1
 Cyberonlineshop	www.cyberolshop.com	1
 Cyberonlineshop	www.cyberonlineshop.com	1
+Cybra	app.scybra.xyz	3
 Cybra	cya.acybra.xyz	1
 Cybra	cya.cybra.xyz	1
 Cybra	cyd.cybra.xyz	2
@@ -7908,6 +7951,7 @@ DAOX	www.daoxcryptoweb3.tw	2
 DAPP	wmsko.com	1
 DART	www.daptabc.com	1
 DASH	dch.dashdeexi.com	1
+DATA PLUS	www.dataplustw.com	1
 DATA+	www.authcrty.com	3
 DATA+	www.authcrty.com	1
 DATA+	www.careerbonus.xyz	1
@@ -8110,6 +8154,7 @@ DESK	desksh.com	1
 DESK	desksh.com	12
 DESK	deskwa.com	10
 DESK	deskzb.com	1
+DEV	m.fxcmcoinss.com	1
 DEW	dew111.top	2
 DEW	dew222.top	3
 DEW	dew333.top	1
@@ -8377,6 +8422,7 @@ DXQBN	www.dxqbn.pro	1
 DXQBN	www.dxqbn.pro	1
 DXY	chinazds.com	1
 DXY	dxymarket.com	1
+DXY	mosmini.com	1
 DXY	thingtied.com	1
 DYADIC	www.dyadicgt.com	1
 DYADIC	www.dyadicgt.com	31
@@ -8440,12 +8486,14 @@ Dasom	wwwi.daasomtm.com	2
 Data Eternal	www.safety613.xyz	4
 Database	www.chasethwin.com	1
 Database	www.chasethwin.com	1
+Database	www.databasesl.com	2
 Database	www.databasetw.com	1
 Database	www.databasetw.com	1
 Database	www.databasetw.com	2
 Database	www.databasetw.com	3
 Database	www.databastcw.com	1
 Database	www.databastcw.com	1
+Datalytix	www.datalytixca.com	2
 Datameer	datameer-shop.org	1
 Datameer	datameer.net	1
 Datameer	www.data-meer.vip	1
@@ -8668,6 +8716,7 @@ Dex-Trade	dextravsivp.com	2
 Dex-Trade	dextraxg.com	2
 Dex-Trade	dextrcme.com	4
 Dex-Trade	edexlar011.tt23.life.cdn.cloudflare.net	2
+Dex-Trade	edexlaron.tt23.life.cdn.cloudflare.net	8
 Dex-Trade	edexlearin.tt23.life.cdn.cloudflare.net	8
 Dex-Trade	edexlearn.u917.xyz.cdn.cloudflare.net	3
 Dex-Trade	edextadre.cn10.life.cdn.cloudflare.net	1
@@ -9019,6 +9068,7 @@ EDGE	edge.edgetwd.com	4
 EDGE	edge.edgetwi.com	1
 EDGE	edge.edgetwi.com	1
 EDGE	edge.edgetws.com	1
+EDGE	edge.edgewb.com	1
 EDGE	edge.edgewb.com	2
 EDGE	edge.edgewb.com	2
 EDGE	edge.edgezl.com	1
@@ -9654,6 +9704,7 @@ EthNano	ethnano.finance	2
 EthanUSDT	www.coinoix.com	1
 EthanUSDT	www.coinoix.com	1
 Etharca	gsolco.com	1
+Etharca	www.etharca.com	1
 Ether	www.etherehx.xyz	1
 Ethera	w.etaptai.com	1
 Etherbk	ether-bk.biz	1
@@ -9709,6 +9760,7 @@ Etoro	eto6888.com	1
 Etoro	etoraieryos.com	1
 Etoro	etoro-teh.live	2
 Etoro	fff8888.etorackctory.com	1
+Etoro	h5.sylvex.icu	1
 Etoro	honey789.top	3
 Etoro	myth.etoraeotes.com	3
 Etoro	myth.etoraeotes.com	4
@@ -9952,6 +10004,7 @@ FC	www.fckzoie.vip	1
 FC	www.fckzoie.vip	2
 FC	www.fcoecxe.vip	1
 FC SHOP	www.fc-shop.club	1
+FC SHOP	www.fc-shop.tw	2
 FC SHOP	www.fc-shop.tw	2
 FC SHOP	www.fc-shop.tw	5
 FC SHOP	www.fc-shop.vip	2
@@ -10383,6 +10436,7 @@ FX-TMO	fxmnvg.com	1
 FX-TMO	fxmoyg.com	1
 FX-TMO	fxmoyg.com	1
 FX-TMO	www.fuietkg.com	1
+FX-TMO	www.fxearing.com	1
 FX7	www.fx-cm.fit	1
 FXCAP	www.fxcabat.com	2
 FXCC	pc.fxccgroup.com	1
@@ -11002,6 +11056,7 @@ Fnxbon Nnxm+	fnxboennxem.com	3
 Fnxbon Nnxm+	www.gldotcdoenn.com	1
 Foamo	kucmarkt.com	1
 Fogee	www.fog-eefx.com	2
+Folks Finance	www.folksquw.com	1
 Folks Finance	www.folksrqf.com	3
 FoodNEXT	taiwan.foodnaxt.com	1
 FoodNEXT	taiwan.foodnaxt.com	1
@@ -11430,6 +11485,7 @@ GETKISSME	getkissme.com	1
 GETTKL	www.gettki.com	1
 GETTKL	www.gettkl.com	1
 GETTKL	www.gettklapp.com	1
+GFT Crypto	gftcrypto.com	1
 GF克里夫曼	www.cfint.net	2
 GGCoin	www.wook.top/h5	1
 GHANF	gxnanfa.com	1
@@ -11796,7 +11852,9 @@ GTM LTRO	app.xiosvs.com	2
 GTM LTRO	app.xiosvs.com	1
 GTM LTRO	app.xiosvs.com	2
 GTW	www.gwiqz.com	2
+GU SHOP	www.fc-shop.app	1
 GU SHOP	www.fc-shop.app	2
+GU-Shop	www.fc-shop.cc	2
 GUARDIANPROJECT	traoe.cc	1
 GUED	www.guedw.com	1
 GUED	www.guedw.com	6
@@ -11821,6 +11879,7 @@ GaiTame	wap.gaitameonline.net	2
 Gaitame Finest	www.marketpz.com	1
 Gaitame Finest	www.marketpz.com	1
 Gaitame Finest	www.marketysx.com	2
+GalaxiEX	www.ck-galaxiex.xin	1
 Galaxy	04800.cn	2
 Galaxy Digital	www.galaxygoldtraders.com	1
 GalaxyBe	www.galaxybe.top	1
@@ -12220,6 +12279,7 @@ Global Prime	glohblprme.com	1
 Global Prime	hrtyjdca.com	2
 Global Prime	hrtyjdca.com	1
 Global Prime	www.giekxpcdl.com	1
+Global Prime	www.giekxpcdl.com	1
 Global Prime	www.glohblprme.com	1
 Global Shop	avavshop.com	1
 Global Shopping	global-shopmu.com	1
@@ -12467,6 +12527,7 @@ Goldenx	ns0728.discover0626.xyz	1
 Goldenx	ns0728.discover0626.xyz	1
 Goldenx	web.goldenx.cc	2
 Goldenx	web.goldenx.co	1
+Goldenx	web.goldenx.sbs	1
 Goldenx	web.goldenx.vip	2
 Goldenx	web.goldenx.vip	5
 Goldenx	web.goldenx.vip	2
@@ -12848,6 +12909,7 @@ HNMKF	www.hnmkf.live	3
 HNT	www.hntcoin.club	2
 HNT	www.hntgdt.com	3
 HNT	www.hntihs.com	1
+HNT	www.hntujm.com	5
 HNYKF	www.hnykf.shop	1
 HNYKF	www.hnykf.shop	3
 HNYKF	www.hnykf.shop	2
@@ -13334,6 +13396,7 @@ Hongzhi	vip.hanqzl.com	2
 Hoodde	buy.hoodde.com	2
 Hook up	w1.gvhbhfbxe24.cc	1
 Hook up	w1.hhdsjfhd.cc	9
+Hook up	w1.wrhxe24kx.cc	3
 HopFist	www.hopfist.com	3
 HopFist	www.hopfista.com	2
 HopFist	www.hopfista.com	5
@@ -13477,6 +13540,7 @@ IBKR	bi.ibkrus.top	1
 IBKR	bi.ibkrus.top	1
 IBKR	bi.ibkrus.top	3
 IBKR	bi.ibkrus.top	3
+IBKR	www.ibkrclubs.com	1
 IBKR	www.intebrokersclubs.com	1
 IBKR	www.intebrokerswebs.com	4
 IBKR	www.intebrokerswebs.com	1
@@ -13698,6 +13762,7 @@ IG	www.igctb.com	1
 IG	www.igctb.online	2
 IG	www.igex.online	2
 IG	www.igex.pro	2
+IG	www.igjjq.com	1
 IG	www.igkgi.com	4
 IG	www.igkgj.com	2
 IG	www.igktaq.com	2
@@ -13861,6 +13926,7 @@ IRENA	www.airena.top	1
 IRON Pay	www.payironn.com	2
 ISE	isejnm.com	1
 ISE	www.isejnm.com	1
+ITG COIN	itg-trading.com	1
 ITG COIN	itgcoinex.com	1
 ITIC	tw-itic.com	1
 ITIC	ww.itic-stock.com	6
@@ -13884,6 +13950,7 @@ IWC	ooo68888.iwcocr.com	1
 IWC	ooo68888.iwcocx.com	1
 IWC	ooo68888.iwcocy.com	5
 IWC	ooo68888.iwcoll.com	1
+IWC	ooo68888.iwconline.co	1
 IWC	ooo68888.iwconline.co	1
 IWC	ooo68888.iwconline.co	2
 IWC	ooo68888.iwconline.co	1
@@ -14321,6 +14388,7 @@ JS求職服務	www.starzectuy.xyz	1
 JS求職服務	www.thirdmachine.xyz	1
 JS求職服務	www.thirdmachine.xyz	1
 JS求職服務	www.thirdmachine.xyz	1
+JTO Platform	dapp.wqewaefgoo.com	1
 JTO Platform	m.twqyrgskajcnym.cfd	1
 JTO Platform	ooo1.danimabiddns.com	1
 JTO Platform	ooo2.danimabiddns.com	1
@@ -14428,6 +14496,7 @@ Jonsu	prtscn.vipjsinters.com	2
 Jonsu	prtscn.vipjsinters.com	2
 Jovik	jovikmax.com	1
 Jovik	jovikpro.com	1
+Jovik	joviktrding.com	2
 Js pro	www.gisooe.com	1
 Js pro	www.peridt.com	1
 Jsun Exchange	jihsunmkt.com	7
@@ -14494,6 +14563,7 @@ KABOX	kabox.pro	4
 KABOX	kabox.pro	2
 KABOX	kaboxtw.pro	6
 KADDEX	agoz12.jfbdesa.com/pycfnp	1
+KADDEX	bdntv5.jfbdesa.com/clLT03	1
 KADDEX	bru357.jfbdesa.com/hijrtK	1
 KADDEX	fsaejt.jfbdesa.com/imcipw	1
 KADDEX	gvlqr9.jfbdesa.com/begf03	1
@@ -14846,6 +14916,7 @@ KSVR	www.ksvr.pro	1
 KSVR	www.ksvr.pro	1
 KSVR	www.ksvr.pro	1
 KSVR	www.ksvr.pro	1
+KSWAP	xzks.shop	1
 KSWAP	xzks.shop	1
 KSWAP	xzks.shop/appdown_c	1
 KTDR	www.ktdrshopwinea.com	1
@@ -15301,6 +15372,7 @@ KuCoin	www.kucoimvbf.com	1
 KuCoin	www.kucoin135.com	1
 KuCoin	www.kucoineex.com	2
 KuCoin	www.kucoineex.com	2
+KuCoin	www.kucoingex.com	1
 KuCoin	www.kucoinikc.com	1
 KuCoin	www.kucoinikf.com	2
 KuCoin	www.kucointw.com	1
@@ -15439,6 +15511,7 @@ LFEX	www.cryptopraebce.com	1
 LFEX	www.cryptopraebce.com	1
 LG	lgcfe.com	2
 LG	lgdwr.com	3
+LG	lgeni.com	5
 LG	lgsjw.com	2
 LG	lgtwe.com	2
 LG	lgtwi.com	4
@@ -15507,6 +15580,7 @@ LL Shop	llgjscshop-tw.com	2
 LL Shop	www.llshopping-tw.com	2
 LL Shop	www.llsspshop-tw.com	2
 LL Shop	www.lltnwshop-tw.com	2
+LMAX	bqzue.xyz	1
 LMAX	d1k8m.xyz	1
 LMAX	digit.lmaxfinmaa.com	1
 LMAX	digitaleano.com	3
@@ -15617,6 +15691,7 @@ LPG	www.lpggame.com	2
 LPKUV	www.lpkuvin.com	1
 LPT	www.lptapb.com	3
 LPT	www.lptapef.com	3
+LPT	www.lptapyf.com	1
 LPT	www.lptapyj.com	1
 LPT	www.lptjlf.com	1
 LPT	www.lptjuey.com	1
@@ -16328,6 +16403,7 @@ MDCG	mdcg.mimasuo.top	1
 MDCG	mdcglvbo.top	1
 MDEX	www.mdexaeq.com	3
 MDEX	www.mdexbxm.com	1
+MDEX	www.mdexfvc.com	1
 MDEX	www.mdexjbh.com	2
 MDEX	www.mdexjbt.com	3
 MDEX	www.mdexnhe.com	1
@@ -17055,6 +17131,7 @@ MaxCoin	jo.maxi.it.com	1
 MaxCoin	wk.maxi.it.com	5
 MaxNFTtw	2.maxnfttw.com	3
 MaxNFTtw	sx09.maxnfttw.com	2
+Maxcybavo	www.maxcybavo-tradingx.fun	1
 Maxcybavo	www.maxcybavo-tradingx.top	1
 Maxshop	shop.ottoshop.xyz	2
 Maxshop	store.eamgg.xyz	1
@@ -17119,7 +17196,9 @@ Mercado Libre	mercadolibreplm-tw.com	1
 Mercado Libre	mercadolibresdf.com	1
 Mercado Libre	tw-mercadolibretell.com	1
 Mercado Shop	www.mercadolibrm.com	2
+Mercado livre	www.mercadolive.cc	2
 Mercari	global.mercaritw.shop	1
+Mercari	www.ecomnnerce.com	1
 Mercari	www.mercariceo.com	1
 Mercari	www.mercarsishop.com	1
 Mercari	www.pointsbak.com	1
@@ -17472,6 +17551,7 @@ MoeeQay Exchange	www.moeeqayexchange.com	1
 MoeeQay Exchange	www.moeeqayexchange.com	4
 MoeeQay Exchange	www.woeebayexchange.com	1
 MoeeQay Exchange	www.woeebayexchange.com	6
+Moette	www.mutilift.shop	1
 Molson Mall	www.molsonmall.vip	1
 Molson Mall	www.pdctiktokshop.com	1
 Molson Mall	www.qdzqrg.com	1
@@ -17527,6 +17607,7 @@ Monopoly	www.monopolys.top	1
 Monopoly	www.monopolys365.shop	2
 Monster	monstercoin.cc	1
 Monster	monstercoin.net	1
+Monte Carlo	app.mtclsapp.cc	1
 Monte Carlo	www.mtcarloapp.com	2
 MooEX	www.mooex.click	1
 MooEX	www.mooex.click	2
@@ -17822,6 +17903,7 @@ NATUZ	natuzuyx.com	1
 NATUZ	www.natuzuya.com	1
 NATUZ	www.natuzuya.com	8
 NATUZ	www.natuzuyx.com	6
+NATUZ	www.natuzuyx.com	6
 NATUZ	www.natuzuyx.com	2
 NATUZ	www.natuzuyx.com	6
 NATUZ	www.natuzuyx.com	16
@@ -17959,6 +18041,7 @@ NHSZ	www.nhszn.com	2
 NIA	nia-finance.com	2
 NIA	nia-trade.com	1
 NIA	niaex.com	1
+NIA	nivcryptofinance.com	2
 NIBC	www.lmbgkeq.top	3
 NIBC	www.nibcice.net	2
 NIPF	www.nismf.com	1
@@ -18195,6 +18278,7 @@ News	newsmarketltd.com	2
 News	www.newsmarkett.cc	1
 NexData	www.canexdata.com	1
 NexData	www.nexdataca.com	2
+NexData	www.nexdataln.com	1
 NexFi	nexfie.com	1
 NexFi	nexfie.xyz	1
 Nexperts	trading.ne-xperts.com	1
@@ -18316,6 +18400,7 @@ OAK操盤	www.ttwvstock.com	5
 OAK操盤	www.twvstock.com	1
 OAK操盤	www.twvstock.com	1
 OAK操盤	www.twvstockk.com	4
+OAM	app.oliveam.net	4
 OANDA	angoand.com	1
 OANDA	foxtwd.com	1
 OANDA	hugoanda.com	3
@@ -18377,6 +18462,7 @@ OANDA	www.oandapgg.com	1
 OANDA	www.oandapib.com	2
 OANDA	www.oandauyo.com	2
 OANDA	www.razr-plus.com	2
+OANDA	zetgnboa.com	1
 OASIS	www.oasis.ceo	1
 OASIS	www.oasis.ceo	1
 OAX	oaxed.com	1
@@ -19017,6 +19103,7 @@ Open Innovation AI	openivaia.com	1
 Open Innovation AI	openivaia.com	1
 Open Innovation AI	openivaib.com	1
 Open Innovation AI	openivaic.com	3
+Open Innovation AI	openivaid.com	1
 OpenEx	www.open-ex.pro	1
 OpenEx	www.open-ex.top	1
 OpenEx	www.open-ex.xyz	2
@@ -19179,6 +19266,7 @@ P2B	www.paitbeis.com	5
 P2B	www.paitbewr.com	4
 P2P	krainnerglobal.com	3
 P2P	p2pexxsapp.com	1
+P2P	p2pproweb.com	5
 P2P	www.bigxwebs.com	1
 P2P	www.bitcloub.com	4
 P2P	www.bitgetts.com	1
@@ -19383,6 +19471,7 @@ PChome	gopcshopping.com	3
 PChome	showtimepchome.com	4
 PD shopping	saqlyct.com	3
 PD shopping	www.hbgih.com	1
+PD shopping	www.hkityc.com	1
 PD shopping	www.hkityc.com	1
 PD shopping	www.lsocton.com	1
 PD shopping	www.lsocton.com	1
@@ -19752,6 +19841,7 @@ Pan Gold	www.twxauxjpsecod.com	3
 Pan Gold	www.twxauxjpsecod.com	2
 Pan Gold	www.twxauxthd.com	2
 Pan Gold	www.twxauxthd.com	1
+Pan Gold	www.twxauxthrd.com	1
 Panasonic	appwap.futurex-vip.com	1
 Panasonic	www.panasonic-elite.vip	1
 Panasonic	www.panasonic-vip.club	1
@@ -20359,6 +20449,7 @@ Protoss	protossgroup.com.tw	2
 Protoss	protosstock.com	6
 Protoss	protossup.com	2
 Protoss	www.protosscap.com	2
+Providend	aiisaacom.com	1
 Psinxo	www.psinxo.com	1
 Ptt Shop	prettytask-my.com	1
 Ptt Shop	prettytwshop-my.com	3
@@ -20476,6 +20567,7 @@ Qirion	qirionk.com	1
 Qliuy	qliuy.ink	1
 Qliuy	qliuy.ink	1
 Qliuy	qliuy.xyz	1
+Qliuy	qliuy.xyz	1
 Qliuy	qliuy.xyz	3
 Qmall Exchange	www.fehqmall.com	3
 Qmall Exchange	www.fehqmall.com	3
@@ -20580,6 +20672,7 @@ Quotizando	www.quotilkj.com	1
 Quotizando	www.quotilkx.com	1
 Quotizando	www.quotizandouyc.com	1
 QwMall（Gome）	gomecntw.com	2
+Qyntrd	qyndra.click	1
 Qyntrd	qyntrd.cloud	1
 Qyntrd	qyntrd.cloud	4
 Qyntrd	www.qyndra.click	1
@@ -20707,6 +20800,7 @@ RDVADOATIN	www.rdavtoaeco.com	1
 RDVATOATIN	www.rdavtoaecc.com	2
 RDVATOATIN	www.rdavtoaecc.com	1
 RDVATOATIN	www.rdavtoaecc.com	3
+RE	roaming-theearth.com	1
 RED APPLE	www.redaplellz.vip	1
 RED APPLE	www.redaplellz.vip	1
 RED APPLE	www.redleapc.vip	2
@@ -20745,6 +20839,7 @@ REVA LINK	reva6.com/down/re	1
 REVA LINK	reva8.com/down/r	1
 REXCN	www.rexcn.live	1
 REXCN	www.rexcn.live	1
+REXIQ	rexiqside.com	2
 REXIQ	www.rexiqa.com	1
 REXIQ	www.rexiqac.com	1
 REXIQ	www.rexiqec.com	1
@@ -21077,6 +21172,7 @@ Rarible	www.rariblejkd.com	2
 RaribleX	rarible.beauty	1
 RaribleX	rarible.club	1
 RaribleX	rarible.quest	1
+Raydium Pro	web3.swap-raydim.com	1
 Rcity	m.445566.xin	1
 Rcity	m.445566.xin	1
 Rcity	m.pcddgame.shop	1
@@ -21227,6 +21323,7 @@ Robinhood	app.solysx.com	3
 Robinhood	app.solysx.com	3
 Robinhood	app.solysx.com	4
 Robinhood	app.solysx.com	1
+Robinhood	robbbinhodd.com	1
 Robinhood	robinhooder.co	1
 Robinhood	robinhool.com	1
 Robinhood	robinhool.com	1
@@ -21425,6 +21522,7 @@ SANTOSS	www.santoshy.vip	1
 SANYUM	www.sanyum.com	2
 SANYUM	yunqichuang.com	2
 SAP	sapsapsa.com	1
+SAP	sapsapsaps.com	1
 SASA福袋交易商城	55.sasa.sale/maintenance	2
 SAT多元中心	satmltey.com	2
 SAT多元中心	satmpoma.com	6
@@ -21461,6 +21559,7 @@ SBI	www.sbiofficial.com	4
 SBI	www.sbiokewiuqjd.com	1
 SBI NEOMOBILE SECURITIES CO	www.sbintf.com	1
 SBI NEOMOBILE SECURITIES CO	www.sbintf.com	2
+SBIMAX	sbimax.net	1
 SBIMAX	www.sbiaibc.net	1
 SBITO	www.sbitoofficialwebsite.com	2
 SBITO	www.sbitoofficialwebsite.com	2
@@ -21557,6 +21656,7 @@ SENDAK	huangchaomuye.com	3
 SENDAK	jszbjc.com/h5	3
 SENbit	www.senbitap.vip	2
 SEO	bitseoextw.pro	3
+SEO	bitseotw.pro	2
 SEO	bitsetw.pro	3
 SEO	bitsetw.pro	3
 SEO	www.bitseo.tw	1
@@ -21565,6 +21665,7 @@ SERC Capital	serc.serccapital.cc	1
 SERTA舒達	tw1.goobbb.com	1
 SERTA舒達	tw24.goommm.com	3
 SERTA舒達	tw40.goobbb.com	1
+SERTA舒達	tw49.goommm.com	1
 SERTA舒達	tw51.goobbb.com	2
 SERTA舒達	tw54.goommm.com	2
 SERTA舒達	tw62.goobbb.com	1
@@ -21714,6 +21815,7 @@ SHEIN	zh.shein-tw.net	1
 SHEIN	zh.shein-tw.top	1
 SHEIN	zh.sheinapp.org	1
 SHEIN	zh.sheintwshop.top	4
+SHEIN	zh.storecenter.shop	6
 SHEIN	zh.wholesale-center.cc	3
 SHEIN	zh.wholesale-center.icu	2
 SHEIN	zh.wholesale-center.icu	1
@@ -21797,6 +21899,7 @@ SKT shopping	www.sktshopping.vip	4
 SKXB	skxbcoin.com	3
 SKXB	www.skxbcoin.com	3
 SKXB	www.skxbcoin.com	2
+SKXB	www.skxbuk.com	4
 SKXB	www.skxbuk.com	3
 SKYCITY	www.skycitysapp.com	1
 SKYCITY	www.skycitysapp.com	1
@@ -22141,6 +22244,7 @@ SXE	www.sxexvuiqob.com	1
 SXKFJ	dynamicshoppers.com	1
 SXKFJ	xyijun.com	2
 SXOFX	webtrader.sxoglobal.com	1
+SXT	www.sxtagl.com	1
 SXT	www.sxtagw.com	1
 SXT	www.sxtagyb.com	2
 SX內部行銷	www.sx-inc.shop	1
@@ -22563,6 +22667,7 @@ Shopify	www.cxddxpw.cn	2
 Shopify	www.fantasyshopes.shop	2
 Shopify	www.fantasyshopes.shop	2
 Shopify	www.findshopselles.store	6
+Shopify	www.somhulaibuy.shop	1
 Shopify	www.tysfcy.cn	1
 Shopify	www.tysfcy.cn	1
 Shopify（京喜購）	bxow618.com	1
@@ -22629,6 +22734,7 @@ Shopping Central	shopingcentralx.top	6
 Shopping Central	shopingcentralx.top	3
 Shopping Gift	www.shopping-gift.xyz	1
 Shopping mall	amazonvip001.xyz	1
+Shopping mall	shop.eakmyazz.cn	1
 Shop優惠商城	www.yhshops.com	1
 Shop購物	36.shopyyf.com	1
 Shop購物	shopckk.com	2
@@ -23099,6 +23205,7 @@ StarExchange	www.starexpro.com	1
 StarExchange	www.starexr.com/wap	1
 StarExchange	www.starexus.com	3
 StarSharks	star-sharks.com	1
+Starbox	www.starbox-max.fun	1
 Starbox	www.starbox-max.fun	2
 Starbox	www.starbox.cyou	1
 Starbox	www.starbox.cyou	1
@@ -23348,6 +23455,7 @@ SuperDelivery	supergiftvoucher.uk	1
 SuperDelivery	www.super-deiiverf.com	1
 SuperLend	www.ercsuperlend.com	1
 SuperLend	www.ethsuperlend.com	2
+SuperLend	www.wealthsuperlend.com	1
 SuperNFT	a.supernft.cloud	1
 SuperNFT	a.supernft.rent	1
 SuperNFT	a.supernft.space	1
@@ -23520,6 +23628,7 @@ Synquotes	www.synquotescrm.com	2
 Synquotes	www.synquotescrma.com	2
 Synquotes	www.synquotescrma.com	2
 Synthetix	www.finsynthetix.com	1
+Synthetix	www.synthetixerc.com	2
 Synthetix	www.synthetixerc.com	1
 Synthetix	www.synthetixfin.com	2
 Synthetix	www.synthetixfly.com	1
@@ -23560,6 +23669,7 @@ T-Pro	t-prolbg.com	2
 T-Pro	t-proldf.com	2
 T-Pro	t-proled.com	1
 T-Pro	t-prolmu.com	1
+T-Pro	t-prolzx.com	1
 T-Pro	t-promst.com	1
 T-Pro	t-proqmk.com	2
 T-Pro	t-protom.com	1
@@ -23679,6 +23789,7 @@ TATUNG	www.etungoshop.store	1
 TATUNG	www.tatung-elite.com	1
 TATUNG	www.tatung-elite.com	1
 TATUNG	www.tatung-elite.com	2
+TATUNG	www.tatung-pro.com	1
 TATUNG	www.tatung-pro.online	1
 TB SHOP內部營銷平台	www.aas9999l.cn	2
 TB3	www.tbtansk.com	1
@@ -24077,6 +24188,7 @@ TM SHOP	tmvipon.cc	1
 TM SHOP	tmvipon.cc	1
 TM SHOP	tmvipon.cc	2
 TM SHOP	tmvipon.cc	1
+TM SHOP	vip-tmsvonline.com	2
 TM Shop	vip-tmsvonline.com	1
 TM-MALL	dpapneis.com	1
 TME	tmeoffical.com	2
@@ -24470,6 +24582,7 @@ TU娛樂城	tu6888.com	1
 TVL	tvles.com	1
 TVL	tvles.com	1
 TVL	tvles.com/main.html	1
+TW Market	www.twshop-choice.store	13
 TW Market	www.twshop-depot.store	16
 TW Market	www.twshop-depot.store	11
 TW Market	www.twshop-eshop.store	6
@@ -24948,6 +25061,7 @@ TikTok	tk-appdownloads.sbs	2
 TikTok	tk-mall.azureedge.net	12
 TikTok	tk-shoopb.top	8
 TikTok	tk-shoopl.cc	11
+TikTok	tk-shopss.com	6
 TikTok	tk-shopss.com	9
 TikTok	tk-shopss.com	13
 TikTok	tk.tnsa.top	6
@@ -25134,6 +25248,7 @@ TimeeCoin	kyctimecoin.com	1
 TimeeCoin	kyctimecoin.com	1
 TimeeCoin	kyctimecoin.com	1
 TimeeCoin	kyctimecoin.com	1
+TimeeCoin	kyctimecoin.com	1
 Times	www.testop.live	3
 Times	www.tinvest.life	1
 Times	www.tinvest.live	1
@@ -25245,6 +25360,7 @@ Tokocrypto	tokocrypto.club	1
 Tokocrypto	tokocrypto.top	1
 Tokocrypto	tokocryptodefi.pro	1
 Tokocrypto	tokocryptodefi.pro	2
+Tongrui Huida	www.hyqnnrdqv.com	1
 Toobit	h5.toobit.top	1
 Toobit	h5.toobit.top	2
 Toobit	pc.toobit.top	1
@@ -25307,6 +25423,7 @@ TornBank	tornbanka.top	2
 TornBank	tornbankwi.cc/38ea85cc	1
 TornBank	tornbankwi.top/main.html	1
 TornBank	tornbankwi.top/main.html	2
+TornBank	tornibank.com	3
 TornBank	tornibank.com/e3f696df	1
 Toronto Exchange	torontoexchange-16.top	1
 Totmas	www.totmask.ink	1
@@ -25487,6 +25604,7 @@ Tribedex	tribedex.top	1
 Tripadvisor	tripaadvisorvip.net	1
 Tripadvisor	tripadvisocvip.net	3
 Tripadvisor	tripadvisorvip.net	1
+Tripadvisor	tripadvisoxvip.net	2
 Tripadvisor	tripadvisoxvip.net	1
 Trive	trievn-tw.com	1
 Trive	trievn-tw.com	1
@@ -25565,6 +25683,7 @@ TrustFunds	js-fx.com	2
 TrustFunds	linkfx.net	2
 TrustFunds	trustsfund.net	2
 TrustFunds	tw-fxmart.com	2
+TrustFunds	tw-fxmart.top	2
 TrustFunds	tw-fxmart.top	2
 TrustGain	dnf8qp5ds93ne.cloudfront.net/4hon7b	1
 TrustGain	www.trustgaiinn.com	1
@@ -26076,6 +26195,7 @@ Undefined	m.lumeweb3.art	1
 Undefined	m.purse-x.xyz	1
 Undefined	m.web3-chain.blog	2
 Undefined	socialseovip.com	2
+Undefined	www.maicoinrqe.com	4
 Unicom	speedyiigenl.com	3
 Unicom	unicomgiop.com	1
 Unicom	unicomgiop.com	6
@@ -26214,6 +26334,7 @@ Uswap Tube	www.utubebp.vip	1
 Uswap Tube	www.utubedha.vip	1
 Uswap Tube	www.utubedha.vip	1
 Uswap Tube	www.utubedha.vip	2
+Uswap Tube	www.utubedp.vip	1
 Uswap Tube	www.utubedp.vip	2
 Uswap Tube	www.utusvcu.vip	2
 Uswap Tube	www.utuxspa.vip	2
@@ -26511,6 +26632,7 @@ VentiFX	ventifxp.com	2
 VentiFX	ventifxq.com	2
 VentiFX	ventifxr.com	2
 Venture Beat	www.usvwork.xyz	1
+Ventus	ventus.ink	1
 Ventus	www.ventus.lol	2
 Venus Protocol	venuspro	1
 Venus Protocol	www.venus-financek.com	1
@@ -26711,6 +26833,7 @@ Vm Markets Ltd	www.thickguibao.com	1
 Vm Markets Ltd	www.vmfxteam.com	2
 Vm Markets Ltd	www.vmfxteam.com	2
 Vocekoo	vocekoo.com	1
+Vogue Mall	mall.vogue-ag-tw.top	2
 Vogue Mall	mall.vogue-m2.com	1
 Vogue Mall	mall.vogue-m2.com	1
 Vogue Mall	mall.vogue-m2.com	1
@@ -26739,6 +26862,7 @@ Vulcanus	www.vulcanus.pro	1
 W coin	defi.wind-coin.com	1
 W coin	trade.wind-coin.com	2
 W coin	trade.wind-coin.com	1
+W-International-Holdings	trade.w-international-holdings.com	1
 WAIMAOMIKE	bit.waimao.it.com	18
 WAIMAOMIKE	e.educm.it.com	11
 WAIMAOMIKE	ft.educa.it.com	1
@@ -26905,6 +27029,7 @@ WEPNR	www.wepnr.com	5
 WERUX	www.weruxma.com	1
 WERUX	www.weruxma.com	1
 WEUKX	www.weukxbv.com	2
+WEURX	www.weurxjk.com	5
 WEXKE	www.wexke.com	1
 WEXKE	www.wexke.com	1
 WEZCU	m.wezcu.com	2
@@ -27042,6 +27167,7 @@ Wallet	www.wallatpqs.com	1
 Wallet	www.wallatpts.com	5
 Wallet	www.wallatpts.com	2
 Wallet	www.wallatptz.com	4
+Wallet	www.wallatrbd.com	1
 Wallet	www.walletaaa.com	1
 Wallet	www.walletaab.com	2
 Wallet	www.walletaac.com	1
@@ -27265,6 +27391,7 @@ Wealth Bank	wealth-era.com	1
 Wealth Box	h5.wealthbox.cc	2
 WealthChange	weal.goinp.com	1
 WealthChange	weal.goinp.com	1
+WealthChange	weal.hehiw.com	1
 WealthChange	weal.hehiw.com	3
 WealthChange	weal.jyegt.com	2
 WealthChange	weal.kuiegv.com	1
@@ -27871,6 +27998,7 @@ XPS	app.xpsturs.com	1
 XPS	app.xpsturs.com	1
 XPS	app.xpsturs.com	1
 XPS	app.xpsturs.com	1
+XPS	app.xpstwes.com	1
 XPS	www.xpstwrs.com	1
 XProMarkets	fubaba.online/news/?subid=wv6nuiv2q1a3cg9fi06rib9e&aff_id=1#registration-form1	3
 XProMarkets	https://fubaba.online/news/?subid=wv6nuiv2q1a3cg9fi06rib9e&aff_id=1#registration-form1	3
@@ -28009,6 +28137,7 @@ XWBIG	www.xwbig.xyz	1
 XWBIG	www.xwbig.xyz	1
 XWBIG	www.xwbig.xyz	1
 XWSEX	coinxwsex.com	3
+XWSEX	www.xwsexcoin.com	6
 XWSEX	www.xwsexio.com	9
 XWSEX	www.xwsexus.com	4
 XWSEX	www.xwsexvip.com	6
@@ -28031,6 +28160,7 @@ Xeggex	www.xeggex-vip.com	1
 Xeggex	www.xeggex-vip.com	1
 Xeggex	www.xeggexvip.com	1
 Xeggex	www.xeggexvip.com	2
+Xellencex	xellencexfinanace.com	1
 Xenocryptexchange	xenocryptexchange.com	1
 Xenoip	pienoxbank.top	1
 Xenoip	pienoxbina.top	1
@@ -28159,6 +28289,7 @@ YING交易所	www.yingck.com	8
 YING交易所	www.yinglp.com	10
 YING交易所	www.yingtw.com	4
 YING交易所	www.yingyk.com	5
+YING交易所	www.yingzoc.com	3
 YIYISHOP	www.weozshop.com/index	1
 YIYISHOP內部營銷平台	www.zzhouyishop.org	1
 YIYISHOP內部營銷平台	www.zzhouyishop.org/index	1
@@ -28303,6 +28434,7 @@ Yearn	www.yearnme.com	1
 Yearn	www.yearnme.com	1
 Yearn	www.yearnme.com	1
 Yearn	www.yearnme.com	1
+Yearn	www.yearnme.org	3
 Yearn	www.yearnme.org	2
 Yearn	www.yearnme.org	1
 Yearn	www.yearnme.org	1
@@ -28331,6 +28463,7 @@ Yifang	www.yfassets.com	3
 Yifang	www.yfassets.com	3
 Yifang	www.yfglobals.com	2
 Yifang	www.yfglobals.com	8
+Yliuq	yliuq.cc	1
 Yliuq	yliuq.cc	4
 Yliuq	yliuq.pro	1
 Yliuq	yliuq.pro	1
@@ -28342,6 +28475,7 @@ YooKeo	www.yookeoblk.com	1
 YooKeo	www.yookeoiob.com	1
 YooKeo	www.yookeokhi.com	1
 YooKeo	www.yookeoluj.com	1
+YooKeo	www.yookeoppl.com	1
 Yostlm	www.crmyslm.com	3
 Yostlm	www.crmyslm.com	7
 Yostlm	www.crmyslm.com	5
@@ -28474,6 +28608,7 @@ ZBTCEX	www.zbtcexbqf.com	1
 ZBTCEX	www.zbtcexffp.com	3
 ZBTCEX	www.zbtcexikw.com	1
 ZBTCEX	www.zbtcexlab.com	1
+ZBTCEX	www.zbtcexlfi.com	1
 ZBTCEX	www.zbtcexpwp.com	2
 ZBTCEX	www.zbtcexrqo.com	1
 ZBTCEX	www.zbtcexrqq.com	1
@@ -28704,6 +28839,7 @@ ZUJPY	www.zujpyin.com	1
 ZUSFA	www.zusfaqz.com	2
 ZUSFA	www.zusfaqz.com	1
 ZUXCY	www.zuxcyin.com	1
+ZUXCY	www.zuxcyin.com	1
 ZVFPE	www.zvfpe.com	1
 ZVFPE	www.zvfpe.com	1
 ZVRYE	www.zvrye.com	1
@@ -28771,11 +28907,13 @@ ZapCoinova	us.zapcoinov.top	7
 Zapcoinova	us.zapcoinov.top	1
 Zapcoinova	us.zapcoinova.vip	11
 Zapcoinova	us.zapcoinova.vip	2
+Zapcoinova	www.zapcoinov.top/kyc	2
 Zarnegar	www.zoniwoom.com	1
 Zarnegar	zoniwom.com	1
 Zarnegar	zoniwom.com	4
 ZeNix	kshkshksh.com	1
 ZeNix	zenixzenix.com	1
+Zenfinex	pc.zenfinex.vip	1
 ZenithIndex	www.zenithindexfxcrmtw.com	2
 ZenithTrade	coretradezenith.com	1
 ZenithTrade	coretradezenithgroup.com	1
@@ -28901,6 +29039,7 @@ byboo-des	byboo-dex.shop	5
 byboo-des	byboo-dex.top	3
 coinW	www.coinwblob.com	1
 coinlion	www.coinlionr.com	7
+coresmithex	core-smithexchange.com	1
 daiether	www.daiethermaxpro.com	2
 danawa	e.danawa.pro	2
 danawa	ft.danawa.it.com	1
@@ -28917,6 +29056,7 @@ e-Toro Coin	etoro-et.online	2
 e-Toro Coin	etoro-et.online	3
 e-Toro Coin	etoro-et.online	2
 e-Toro Coin	etoro-et.online	2
+eBay	aiofalysetbaay.com	2
 eBay	ap.shenghongcn.com/h5	3
 eBay	app.proofebaymall.top	1
 eBay	app.telegra.live	3
@@ -29141,6 +29281,7 @@ iPhone	kcbs.synachip.com	1
 iPhone	sert.philochip.com	2
 iPhone	sharenanoai.com	1
 iPhone	ter.docuzchip.com	3
+iPhone	tu.benefundmech.com	2
 iTaobao	app.howtotaobao.com	1
 iTaobao	seller.itaobao.app	1
 iZUMi	www.izumiipp.com	1
@@ -29328,6 +29469,7 @@ xzboxx-dee	xzboxx-dee.top	3
 xzboxx-dee	xzboxx-deex.life	2
 xzboxx-dee	xzboxx-deex.today	2
 xzboxx-dee	xzboxx-deex.top	1
+xzboxx-dee	xzboxx-dex.today	2
 xzboxx-dee	xzboxx-dex.today	1
 xzboxx-dee	xzboxx-dex.today	3
 xzboxx-dee	xzboxxx-dee.top	1
@@ -29593,6 +29735,7 @@ zomtowe	www.zfthydedgeenens.com	2
 上海期貨交易所	zxl.stsait.co	2
 上海證券交易所	mcdeezts.direnave.cn	1
 上海證券交易所	www.98021061.vip	1
+上海黃金交易所	www.sgexlcm.vip	1
 不詳	btcxz.app	1
 不詳	sports-xh.com	1
 不詳	sports-xh.com	1
@@ -29714,6 +29857,7 @@ zomtowe	www.zfthydedgeenens.com	2
 中國福利國彩	www.guocai558.cyou	1
 中國航天	d3rvlnfgdn2cew.cloudfront.net	1
 中國航天	hat.zghtian.cn	1
+中國華能集團有限公司	www.hnjt131.vip	1
 中國華能集團有限公司	www.zghnjt252.vip	1
 中國華能集團有限公司	www.zghnjt253.vip	1
 中國華能集團有限公司	www.zghnjt255.vip	1
@@ -30007,6 +30151,7 @@ zomtowe	www.zfthydedgeenens.com	2
 京町娛樂城	rr69.gintfim168.com	3
 京町娛樂城	y38.gintfim58.net	2
 京鴻	app.hprted.com	1
+什麼值得買	smzdestore.com	1
 什麼值得買	smzdmmart.com	1
 什麼值得買	smzdonline.com	2
 仁德公益基金會	688588.icu	1
@@ -31336,6 +31481,7 @@ zomtowe	www.zfthydedgeenens.com	2
 卡利系統（CaliBet、CaliGroup）	www.cali777.net	3
 卡利系統（CaliBet、CaliGroup）	www.cali818.net	1
 卡利系統（CaliBet、CaliGroup）	www.cali818.net	1
+卡利系統（CaliBet、CaliGroup）	www.cali828.net	2
 卡利系統（CaliBet、CaliGroup）	www.cali828.net	4
 卡利系統（CaliBet、CaliGroup）	www.cali828.net	1
 卡利系統（CaliBet、CaliGroup）	www.cali828.net	2
@@ -31711,6 +31857,7 @@ zomtowe	www.zfthydedgeenens.com	2
 哈佛國際投資	www.gnrthre.com	3
 哈佛國際投資	www.jiekos.com	2
 哈佛國際投資	www.oadjb.com	1
+哈佛國際投資	www.oadjb.com	1
 哈佛國際投資	www.qyvass.com	4
 哈佛國際投資	www.tukheus.com	1
 哈佛國際投資	www.tukheus.com	2
@@ -31720,6 +31867,7 @@ zomtowe	www.zfthydedgeenens.com	2
 哈佛國際投資	www.twmilsv.com	1
 員工專用系統	pn3.cxsbomh.com	3
 員工專用系統	www.cxsbomh.com	4
+哲翰國際	www.qyvdva.com	1
 哲翰國際	www.twystz.com	1
 哲翰國際	www.twystz.com	1
 哲翰國際	www.twystz.com	3
@@ -31871,6 +32019,7 @@ zomtowe	www.zfthydedgeenens.com	2
 啟航e投	app.haenqo.top/haenqo/	1
 啟航e投	app.haenqo.top/haenqo/	1
 啟航e投	app.haenqo.top/haenqo/	1
+啪友	friendgo1.cc	3
 啪友	friendgo2.cc	2
 啪脫約會吧	aespa888.vip	5
 啪脫約會吧	aespa888.vip	3
@@ -32247,6 +32396,7 @@ zomtowe	www.zfthydedgeenens.com	2
 國際娛樂城	wap.wns4489.xyz	1
 國際娛樂城	wap.wns4489.xyz	1
 國際娛樂城	wap.wns5169.xyz	1
+國際娛樂城	www.947877.cc	1
 國際建盞官方協會	h.euroasin.com	1
 國際建盞官方協會	h.euroasin.com	4
 國際建盞官方協會	h.euroasin.com	2
@@ -32515,6 +32665,7 @@ zomtowe	www.zfthydedgeenens.com	2
 大昕國際	www.dasxinyhnqnijum.com	2
 大業證券	taiyiptrade.com	1
 大河智?	xy.yunxz74.top/WCcw	1
+大河智贏	h417y310n7.4gi8zu6cmc.com	1
 大河證券	daheasset.com	1
 大疆商城	store.djiiiitw.com	1
 大疆商城	www.asiatwdjii.com	1
@@ -32790,6 +32941,7 @@ zomtowe	www.zfthydedgeenens.com	2
 天貓（阿里巴巴、Tmall、Time Square、Ttmall、Meta Universe）	tmalldlinstall.com	3
 天貓（阿里巴巴、Tmall、Time Square、Ttmall、Meta Universe）	tmallinstall.com	6
 天貓（阿里巴巴、Tmall、Time Square、Ttmall、Meta Universe）	tmallinstall.com	1
+天貓（阿里巴巴、Tmall、Time Square、Ttmall、Meta Universe）	tmallsh.com	3
 天貓（阿里巴巴、Tmall、Time Square、Ttmall、Meta Universe）	tmallshmall.com	2
 天貓（阿里巴巴、Tmall、Time Square、Ttmall、Meta Universe）	tmallshtw.com	1
 天貓（阿里巴巴、Tmall、Time Square、Ttmall、Meta Universe）	tmallsumarket.com	2
@@ -32927,6 +33079,7 @@ zomtowe	www.zfthydedgeenens.com	2
 如億	www.pocsvl.com	2
 如億	www.xbzujie.com	2
 如億	www.xbzujie.com	9
+威士忌	www.gsshz.cn	1
 威士忌	www.gsshz.cn	1
 威士忌	www.gsshz.cn	1
 威士忌	yosgu.cn	1
@@ -33747,6 +33900,7 @@ zomtowe	www.zfthydedgeenens.com	2
 富邦信貸	yluimdxnnd.dd.ai.uvxlf.com/#/register/AFcuMMWD	2
 富邦證券	a.qh3689.xyz	1
 富邦證券	a.qh3689.xyz	1
+富邦證券	a.qt2699.net	1
 富邦證券	a.qt5566.net	2
 富邦證券	a.qt5725.net	1
 富邦證券	a.tog765.cfd	2
@@ -33948,6 +34102,7 @@ zomtowe	www.zfthydedgeenens.com	2
 尋覓	xunmim100i.cc	2
 尋覓	xunmimi.cc	1
 小楊臻?	laimiapp.top	1
+小狐狸客服	mctudfe.wrlfuntitnaipi.top/index?key=6c5ac75d80f732d7d7ed696a6a275dc0&lang	1
 小紅書	cowbuycow.com	3
 小紅書	littleredbookbuy.com	2
 小紅書	littleredbookc.com	1
@@ -34770,6 +34925,7 @@ zomtowe	www.zfthydedgeenens.com	2
 愛侶社團	www.lovecclubs.com	1
 愛侶社團	www.lovecclubs.com	1
 愛妹花園	a-peeloffsexvip.com	1
+愛妹花園	love189.cc	3
 愛妹花園	love287.cc	5
 愛妹花園	love525.cc	3
 愛妹花園	love714.cc	1
@@ -34919,6 +35075,7 @@ zomtowe	www.zfthydedgeenens.com	2
 技術科技	altrmedicp.com	1
 技術科技	curephazix.com	1
 技術科技	fd.silikomdonor.com	1
+技術科技	healpicrdx.com	2
 技術科技	healpicrdx.com	1
 技鑫（JI XIN）	www.jixinjvr.com	1
 技鑫（JI XIN）	www.jixinjvr.com	2
@@ -35140,6 +35297,7 @@ zomtowe	www.zfthydedgeenens.com	2
 數位雲端	www.twkdtu.com	1
 數字地球	ecologky.com	4
 數字地球	ecologno.com	14
+數字地球	ecolognv.com	1
 數字地球	ecologrf.com	2
 數字地球	ecologrf.com	11
 數字地球	ecologrs.com	7
@@ -35325,6 +35483,7 @@ zomtowe	www.zfthydedgeenens.com	2
 新葡京娛樂城	heiudiguo.com	1
 新葡京娛樂城	heiudiguo.com	3
 新葡京娛樂城	hgz569.com	3
+新葡京娛樂城	k9856825.com	1
 新葡京娛樂城	m.2682533.com	1
 新葡京娛樂城	m.5201221.cn	6
 新葡京娛樂城	m.6152262.com	1
@@ -36941,6 +37100,7 @@ zomtowe	www.zfthydedgeenens.com	2
 永陞信託	www.yongshengdownload.com	2
 永陞信託	www.yongshengfund.com	1
 永陞信託	www.yongshenginvest.com	2
+永陞信託	www.yshengtrust.com	2
 永陞信託	www.yshengtrust.com	1
 求職服務中心	sdf888.realizeideal.online	1
 求職服務中心	sdf888.realizeideals.xyz	1
@@ -36975,6 +37135,7 @@ zomtowe	www.zfthydedgeenens.com	2
 沉香產品中心	cxgw06.cc	1
 沉香產品中心	cxgw06.cc	1
 沉香產品中心	cxgw1.cc	1
+沉香產品中心	qncxgw06.com	1
 沉香產品中心	qncxgw08.cc	1
 沉香產品中心	qncxgw6.cc	1
 沉香產品中心	zgcxgw.cc	1
@@ -37393,6 +37554,7 @@ zomtowe	www.zfthydedgeenens.com	2
 潤盈	www.tyoldfv.com	1
 潤盈	www.tyoldfv.com	3
 潤盈	www.tyoldfv.com	2
+澀約	sexy6688.vip	1
 澀約	sey3368.com	1
 澀約	sey3368.com	1
 澀約	sey5168.com	2
@@ -37695,6 +37857,7 @@ zomtowe	www.zfthydedgeenens.com	2
 玉石直播	abroad-liveshop-h5.jinhaoyang.top	1
 王者娛樂城	kingsgambler.com	1
 王道e動網	app.pkhutdr.com	1
+王道e動網	tw.wdexd.com	1
 王道e動網	www.bdbdxg.com	1
 王道e動網	www.iosfma.com	1
 王道e動網	www.rgspbjg.com	1
@@ -37744,6 +37907,7 @@ zomtowe	www.zfthydedgeenens.com	2
 理財快速貸	henhaodai.click	3
 理財慧投家	app.fgyfte.com	2
 理財慧投家	app.fgyfte.com	1
+理財慧投家	twfiosn.com	1
 理財慧投家	www.giuiwq.icu	1
 理財慧投家	www.jtyer.com	3
 理財慧投家	www.mtyed.com	2
@@ -38133,6 +38297,7 @@ zomtowe	www.zfthydedgeenens.com	2
 盛鼎國際	www.shengdin88.com	2
 盟享E+	app.hktpdn.com	1
 盟享E+	app.hktpdn.com	1
+監控處理系統	ecologcs.com	1
 監控處理系統	greenhydas.com	2
 盲金喜	pg.lfcy888.com/blind	2
 直播平台	abroad-h5.dongjiahao.top	1
@@ -38609,6 +38774,7 @@ zomtowe	www.zfthydedgeenens.com	2
 約愛俱樂部	cd9jr3kegh.com	2
 約愛俱樂部	w1.huhuvgvfxe23.cc	1
 約愛俱樂部	w1.huhuvgvfxe23.cc	1
+約愛俱樂部	w1.uuyshfsxe23.cc	1
 約愛俱樂部	www.qpfbxz.com	1
 約愛俱樂部	www.uqbbsa.com	2
 約愛俱樂部	wzmgvvrszyvwcpub.com	3
@@ -38627,6 +38793,7 @@ zomtowe	www.zfthydedgeenens.com	2
 紅杉資本	redwoodcapitark.com	1
 紅杉資本	redwoodcapitark.com	1
 紅杉資本	redwoodcapitark.com	1
+紅杉資本	redwoodcapitarlr.com	1
 紅杉資本	redwoodcapitarlr.com	1
 紅杉資本	redwoodcapitarlr.com	1
 紅杉資本	sequoiacapitale.com	1
@@ -38760,6 +38927,7 @@ zomtowe	www.zfthydedgeenens.com	2
 維也納	www.vien888.com	1
 維也納	www.vien888.com	3
 維也納	www.vienna1088.com	4
+維加斯國際	m.wjs1618.com	1
 維品購跨境電商	www.wpg2.net	2
 維恩女性公益基金會	www.wfound02.com	2
 維恩女性公益基金會	www.wfound02.com	4
@@ -38924,6 +39092,7 @@ zomtowe	www.zfthydedgeenens.com	2
 美廉優品	www.mlyptw.com	2
 美廉社	www.simmplemart.com.tw	5
 美廉社	www.simplemarts.com.tw	9
+美廉社	www.simpllemart.com.tw	5
 美廉社	www.ssimplemart.com.tw	2
 美廉社	www.ssimplemart.com.tw	2
 美敦力（Medtronic）	www.mdtrnics.com	1
@@ -39618,6 +39787,7 @@ zomtowe	www.zfthydedgeenens.com	2
 臺聯國際	www.tktwdr.com	5
 臺聯國際	www.twnkds.com	2
 臺聯國際	www.twptud.com	3
+臺船環海	www.tcfh.club/mobile	2
 臺視國際	tw1234.com	1
 臺視國際	tw1234.com	1
 臺視國際	tw6688.cc	1
@@ -40092,6 +40262,7 @@ zomtowe	www.zfthydedgeenens.com	2
 華茂隨身行	www.giuqwey.com	2
 華茂隨身行	www.gycunz.icu	1
 華茂隨身行	www.hkdute.com	1
+華茂隨身行	www.hkdute.com	1
 華茂隨身行	www.ueyaus.icu	2
 華茂隨身行	www.xtaisk.com	2
 華譽娛樂城	www.huayu5391.top	1
@@ -40409,6 +40580,7 @@ zomtowe	www.zfthydedgeenens.com	2
 蜂匯	www.cjnfbjehqjhe.com	4
 蜂匯	www.jhqisgrjz.com	2
 蜂匯	www.sfhjnvcx.com	2
+蜜圈	pre.aee3r.cc	2
 蜜圈	www.rretut6.cc	1
 蜜柚優選	sdgundamcards.com	1
 蜜柚優選	sdgundamcards.com	1
@@ -40841,6 +41013,7 @@ zomtowe	www.zfthydedgeenens.com	2
 超揚行動VIP	www.nnmkf.com	4
 超揚行動VIP	www.nnmkf.com	1
 超揚行動VIP	www.phkutd.com	2
+超揚行動VIP	www.xbkdff.com	1
 超揚證券	app.isxflop.com	1
 超揚證券	app.isxflop.com	1
 超揚證券	app.isxflop.com	6
@@ -40891,6 +41064,7 @@ zomtowe	www.zfthydedgeenens.com	2
 輝德基金會	www.mgfoun02.com	1
 輝立國際	www.cewqw.com	1
 輝立國際	www.fmccu.com	1
+輝立國際	www.qwstw.com	1
 輝立國際	www.rhxrw.com	1
 輝立國際	www.rhxrw.com	2
 輝立國際	www.rhxrw.com	1
@@ -41146,6 +41320,7 @@ zomtowe	www.zfthydedgeenens.com	2
 遠東購物（Fareast）	dx.886fareast.com	2
 遠東購物（Fareast）	dx.886fareast.com/app/index.php?i=2&c=entry&m=ewei_shopv2&do=mobile	3
 遠東購物（Fareast）	dx.tw-fareast.com	3
+遠航團隊	www.longjour.com	2
 遠航證券	www.godtwyh.com	2
 遠航證券	www.tcwyvh.com	2
 遠航證券	www.tcwyvh.com	2
@@ -41530,6 +41705,7 @@ zomtowe	www.zfthydedgeenens.com	2
 銓誠	app.lforki.com	1
 銓誠	www.psdijkd.com	1
 銓誠	www.psdijkd.com	2
+銷售平台	market-shops.shop	1
 銷售平台	marketshopping.site	1
 銷售平台	sales-shopping.store	2
 銷售平台	sales-shopping.store	2
@@ -41755,6 +41931,7 @@ zomtowe	www.zfthydedgeenens.com	2
 長興證券	www.shkaghgf.com	3
 閃學通	bubu68.com	1
 閃配	w1.yeygpbt.cc	3
+閃配	w1.zcxe21opr.cc	5
 開元	app.vkjsakjaks.com	1
 開元	app.vkjsakjaks.com	4
 開元	app.vkjsakjaks.com	4
@@ -41815,6 +41992,7 @@ zomtowe	www.zfthydedgeenens.com	2
 阿里巴巴	www.albbyhj666.com	1
 阿里巴巴	www.albbyhj888888.com	1
 阿里巴巴	www.ali96558.top	1
+阿里巴巴	www.taobao116688.com	4
 阿里巴巴	www.taobao116688.com	2
 阿里巴巴	www.taobao11688.com	1
 阿里巴巴	www.taobao666111888.com	2
@@ -42044,6 +42222,7 @@ zomtowe	www.zfthydedgeenens.com	2
 電力系統	stfexchangeirs.com	2
 電力系統	stfexchangeiru.com	2
 電力系統	stfexchangeirw.com	1
+電通台灣	dentsu-tw.cc	1
 電通台灣	dentsu-tw.cc	1
 電通台灣	dentsu-tw.cc	3
 電通台灣	dentsu-tw.cc	1

@@ -6,6 +6,7 @@
 #||aliyuncs.com^
 #||apple.com^
 #||ascendex.com^
+#||atfx-gm.com^
 #||bingx.com^
 #||bitfinex.com^
 #||bitget.com^
@@ -2304,7 +2305,6 @@
 ||ateck-fx.com^
 ||atfker.com^
 ||atfker.me^
-||atfx-gm.com^
 ||atfx-kaihu.com^
 ||atfx-tw.net^
 ||atfxint.buzz^
