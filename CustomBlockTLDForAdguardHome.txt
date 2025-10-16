@@ -679,7 +679,6 @@
 /vmalltw[a-z]{2}\.shop/
 /votel[0-9]z[0-9]\.com/
 /wall[ae]t[a-z]{3}\.com/
-/wall[ae]t[a-z]{3}\com/
 /wallat[a-z]{3,4}\.com/
 /walletaa[a-z]\.com/
 /walmartglobal[a-z]{1,3}\.com/
