@@ -294,6 +294,7 @@
 /ee[0-9]+\.com/
 /em[a-z][a-z]\.xyz/
 /energy[a-z]{2,3}\.com/
+/eni[a-z]{3}ice-natgov-tw\.com/
 /enterpriseons[a-z]\.com/
 /eoiso[a-z]\.com/
 /eosnetworke[a-z]{2}\.com/
@@ -413,6 +414,7 @@
 /insterm[a-z]{3,4}\.com/
 /ioex[0-9]+\.com/
 /ioexx?[0-9]{1,2}\.com/
+/ipass-[a-z]+\.(com|cloud)/
 /isnotdomain[0-9]+\.com/
 /iwco[a-z]{2}\.com/
 /iwcol[a-z]\.com/
