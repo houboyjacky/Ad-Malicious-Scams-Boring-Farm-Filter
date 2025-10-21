@@ -231,6 +231,7 @@
 /convex[a-z]{4}\.com/
 /core-smith[a-z]+\.com/
 /costco.+\.com/
+/coupont[a-z]{2}\.com.
 /cpatex[a-z]+\.com./
 /cpay[a-z]tw\.com/
 /credit[a-z]{3,4}\.com/
@@ -460,9 +461,7 @@
 /lowearthorbito[a-z]\.com/
 /ltbltr[a-z]p\.vip/
 /lunojs[a-z]\.com/
-/maicoin[a-z]{1,3}\.com/
-/maicoin[a-z]{2,3}\.com/
-/maicoin[a-z]{2,4}\.com/
+/maicoin[a-z]{1,4}\.com/
 /mainneti[a-z]\.com/
 /malls-sh[a-z]{2}\.com/
 /manavm[a-z]\.com/
@@ -473,6 +472,7 @@
 /mdex[a-z]{3}\.com/
 /megabit[a-z]{3}\.com/
 /megfaly[a-z]{1,2}\.com/
+/mellon[a-z]{2}\.com/
 /mercadolibre[a-z0-9-]+\.com/
 /meta[a-z0-9-]+\.onrender\.com/
 /metispl[a-z]\.com/
@@ -725,6 +725,7 @@
 /zbtcex[a-z]{3}\.com/
 /zbzbuq[a-z]\.vip/
 /zenexc[a-z]{1,2}\.com/
+/zentrax?-[a-z]{1,4}\.com/
 /zerolend[a-z]{3}\.com/
 /zghk[0-9]+ex\.com/
 /zghnjt[0-9]{3}\.vip/
@@ -834,6 +835,7 @@
 ||datanodedex.*^
 ||dbg-coltdfx.*^
 ||dewushopping.*^
+||dex-tradingx.*^
 ||dgbaccarat.*^
 ||difcinvestment.*^
 ||digi-dexchange.*^
