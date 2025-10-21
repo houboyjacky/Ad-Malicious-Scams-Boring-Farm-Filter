@@ -20,6 +20,7 @@
 #||cloudfront.net^
 #||coinbase.com^
 #||coincarp.com^
+#||coinex.com^
 #||coingecko.com^
 #||comnowallet.^
 #||digitalocean.com^
@@ -7249,7 +7250,6 @@
 ||coinex-tradings.ltd^
 ||coinex.asia^
 ||coinex.cloud^
-||coinex.com^
 ||coinex.land^
 ||coinex2023.com^
 ||coinexamm.com^

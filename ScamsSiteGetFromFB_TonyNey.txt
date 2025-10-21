@@ -10,6 +10,7 @@
 #||cix3752i.com^
 #||cloudfront.net^
 #||coinbase.com^
+#||coinex.com^
 #||coinrule.com^
 #||duckdns.org^
 #||easy.co^
@@ -10743,7 +10744,6 @@
 ||coinex.asia^
 ||coinex.cloud^
 ||coinex.college^
-||coinex.com^
 ||coinex.mobi^
 ||coinex.social^
 ||coinex.today^
