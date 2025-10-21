@@ -71,6 +71,7 @@
 #||shop2000.com.tw^
 #||shopline.tw^
 #||sinyicharity.org.tw^
+#||starwvr.com^
 #||steprimo.com^
 #||survey.gs^
 #||tg.pe^
@@ -29969,7 +29970,6 @@
 ||starweak.com^
 ||starwic.xyz^
 ||starwol.xyz^
-||starwvr.com^
 ||starwwo.com^
 ||starxcls.com^
 ||starz168.cc^
