@@ -20,6 +20,8 @@
 #||gomining.com^
 #||icmarkets.com^
 #||interactivebrokers.com^
+#||law111.org.tw^
+#||law8595.org.tw^
 #||longlaitanji.com^
 #||moonpay.com^
 #||myshopify.com^
@@ -25818,7 +25820,6 @@
 ||lavishtradeo.com^
 ||lavtrade-fx.com^
 ||law-v.com.tw^
-||law111.org.tw^
 ||lawcaz.top^
 ||lawfgz.top^
 ||lawyer2invest.com^

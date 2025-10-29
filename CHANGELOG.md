@@ -1,5 +1,8 @@
 # 歷史更新 History Update
 
+* 20251028 Update
+  * 調整 白名單
+
 * 20251027 Update
   * 調整 白名單
 
