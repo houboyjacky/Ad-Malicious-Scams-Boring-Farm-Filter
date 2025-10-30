@@ -681,3 +681,4 @@
 @@||teaches.cc^$important
 @@||l-pa.cc^$important
 @@||mibole.cc^$important
+@@||yt1s.ai^$important

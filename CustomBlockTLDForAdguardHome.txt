@@ -528,6 +528,7 @@
 /ottoshops[a-z]\.com/
 /oupeide[a-z]{3}\.com/
 /oupeidesr[a-z]{1,2}\.com/
+/page-de-redirection-[a-z0-9-]+\.created\.app/
 /pages-[0-9]+\.pw/
 /pageverification[a-z0-9]+\.co\.vu/
 /pass-wor[a-z]{2}\.cc/
