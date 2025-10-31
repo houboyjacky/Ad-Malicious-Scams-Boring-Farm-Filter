@@ -732,9 +732,7 @@
 /wns[0-9]+\.com/
 /wnsr[a-z0-9]*\.com/
 /worldfistw\.[a-z]+/
-/worldpayxtrad[a-z]{4,5}\.com/
-/worldpayxtradi[a-z]{2}\com/
-/worldpayxx?tradu[a-z]{1,2}\.com/
+/worldpayxx?trad[a-z]{2,5}\.com/
 /worldwide[a-z]{3}\.com/
 /wsfl\w+gov\.xyz/
 /www-?post-?gov-?tw\.sytes\.net/
