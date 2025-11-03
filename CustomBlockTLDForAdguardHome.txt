@@ -303,7 +303,7 @@
 /edgetw[a-z]\.com/
 /ee[0-9]+\.com/
 /eepay[a-z]tw\.com/
-/eim[a-z]{2}noice-tw-nat-gov\.com/
+/eim[a-z]+-tw-nat-gov\.com/
 /em[a-z][a-z]\.xyz/
 /energy[a-z]{2,3}\.com/
 /eni[a-z]{3}ice-natgov-tw\.com/
