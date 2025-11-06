@@ -226,7 +226,6 @@
 /coinmama[a-z]+\.com/
 /coinmamam[a-z]+\.com/
 /coinmamama[a-z]+\.com/
-/coinme[0-9]{2,3}\.cc/
 /coinme[0-9]+\.cc/
 /coinrule.*\.*/
 /coinspro[a-z]{3}\.com/
@@ -238,6 +237,7 @@
 /convex[a-z]{4}\.com/
 /core-smith[a-z]+\.com/
 /costco.+\.com/
+/coupon[a-z]{3}\.com/
 /coupont[a-z]{2}\.com.
 /coupont[a-z]{2}\.com/
 /cpatex[a-z]+\.com./
@@ -829,12 +829,14 @@
 ||bit-bridge.*^
 ||bit-coin-cash*.*^
 ||bit-node.*^
+||bitdava.*^
 ||bitercoin.*^
 ||bitfinex-*.*^
 ||bitgin.*^
 ||bithumb77.*^
 ||bitk-eth.*^
 ||bitland-sho.*^
+||bitopros.*^
 ||bitstamp*.*^
 ||blockstreampro.*^
 ||bnextex.*^
@@ -868,6 +870,7 @@
 ||cryptomatrixdex.*^
 ||cryptotrading-hub.*^
 ||cryptovibe-tradingx.*^
+||cryptoworldsdf.*^
 ||cryptoworldsdf.*^
 ||daoxcryptoweb3.*^
 ||datanodedex.*^

@@ -683,3 +683,4 @@
 @@||mibole.cc^$important
 @@||yt1s.ai^$important
 @@||coloradosos.gov^
+@@||coinday.cc^$important
