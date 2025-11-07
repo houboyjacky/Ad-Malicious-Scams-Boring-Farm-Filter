@@ -5897,7 +5897,6 @@
 ||buniek.icu^
 ||bunmk2539.icu^
 ||bunny.cash^
-||bunnyann.tw^
 ||bunnyfairy.com^
 ||buno.tw^
 ||buno.world^
@@ -22684,7 +22683,6 @@
 ||minilog.life^
 ||mining-in-plus.xin^
 ||miningdifi.com^
-||miniretrolife.com^
 ||ministerheart.com^
 ||minm.com^
 ||minmai01.top^
