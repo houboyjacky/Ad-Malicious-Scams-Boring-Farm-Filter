@@ -695,3 +695,4 @@
 @@||projext.cc^
 @@||tsa1.cc^
 @@||ubereats-9th-anniversary.com.tw^
+@@||mmt.finance^$important
