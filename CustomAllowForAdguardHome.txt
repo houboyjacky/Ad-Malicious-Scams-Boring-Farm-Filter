@@ -712,3 +712,4 @@
 @@||virdep.cc^$important
 @@||lamocha.com.tw^$important
 @@||imageproxy.pixnet.cc^$important
+@@||tzuchi.info^$important
