@@ -713,3 +713,15 @@
 @@||lamocha.com.tw^$important
 @@||imageproxy.pixnet.cc^$important
 @@||tzuchi.info^$important
+@@||worldcoin.org^$important
+@@||emv.cool^$important
+@@||ezbundle.cc^$important
+@@||kktix.cc^$important
+@@||jinrong.studio^$important
+@@||shake-cat.com^$important
+@@||unii.vip^$important
+@@||minerva.devices.a2z.com^$important
+@@||dns.google^$important
+@@||165antifraud.org^
+@@||esimart.cc^$important
+@@||knownhostlink.com^
