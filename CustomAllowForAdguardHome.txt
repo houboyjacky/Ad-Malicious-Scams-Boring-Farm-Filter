@@ -725,3 +725,7 @@
 @@||165antifraud.org^
 @@||esimart.cc^$important
 @@||knownhostlink.com^
+@@||niurl.cc^$important
+@@||oshigrid.me^
+@@||tvbs.events^$important
+@@||waca.shop^$important
