@@ -737,3 +737,4 @@
 @@||weijecoffee.com.tw^
 @@||wshifen.com^$important
 @@||visaselectrewardtw.com^$important
+@@||plex.it^$important
