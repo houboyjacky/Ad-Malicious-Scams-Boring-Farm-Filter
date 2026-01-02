@@ -736,3 +736,4 @@
 @@||pancakeswap.finance^$important
 @@||weijecoffee.com.tw^
 @@||wshifen.com^$important
+@@||visaselectrewardtw.com^$important
