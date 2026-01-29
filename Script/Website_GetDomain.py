@@ -89,15 +89,14 @@ with open(output_file_path, "w", encoding='UTF-8', newline='') as output_file:
             suffix = idna.encode(suffix).decode('utf-8')
 
         domain_with_suffix = f"{domain}.{suffix}"
-        NotUseList = ["my.canva", "amazonaws.com", "cloudflare.net"]
-
-        if subdomain and domain_with_suffix in SUBWEBSITE:
-            if "." in subdomain and not any(NotUse in domain_with_suffix for NotUse in NotUseList):
-                subdomain = extract_last_subdomain(subdomain)
 
         # 检查是否在 SUBWEBSITE 列表中
         if domain_with_suffix in SUBWEBSITE:
-            root_domain = f"||{subdomain}.{domain}.{suffix}^"
+            # 如果在列表中且有 subdomain，保留完整的網址
+            if subdomain:
+                root_domain = f"||{subdomain}.{domain}.{suffix}^"
+            else:
+                root_domain = f"||{domain}.{suffix}^"
         else:
             root_domain = f"||{domain}.{suffix}^"
 
