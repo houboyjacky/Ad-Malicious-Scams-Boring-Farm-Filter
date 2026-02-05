@@ -728,7 +728,6 @@
 @@||niurl.cc^$important
 @@||oshigrid.me^
 @@||tvbs.events^$important
-@@||waca.shop^$important
 @@||doce.cc^$important
 @@||gotaipei.taipei^$important
 @@||litv.tv^$important
@@ -750,3 +749,19 @@
 @@||jiladamomaster.com.tw^
 @@||zivleverage.com^
 @@||d-l.cc^important
+@@||girlsmonday.com.tw^$important
+@@||girlsmonday.com.my^$important
+@@||docs.google.com^$important
+@@||chinaq.fun^$important
+@@||reena.com.tw^$important
+@@||hino.com.tw^$important
+@@||toyotacv.com.tw^$important
+@@||waca.shop^$important
+@@||account.topmediai.com^$important
+@@||wlai.vip^$important
+@@||maju-web.club^$important
+@@||securitybrief.asia^$important
+@@||sangu.vip^$important
+@@||mopix.cc^$important
+@@||videohost.top^$important
+@@||imghost.club^$important
