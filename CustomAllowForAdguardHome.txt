@@ -765,3 +765,6 @@
 @@||mopix.cc^$important
 @@||videohost.top^$important
 @@||imghost.club^$important
+@@||quickclick.cc^$important
+@@||manuals.plus^$important
+@@||coinex.com^$important
