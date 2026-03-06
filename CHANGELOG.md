@@ -1,5 +1,8 @@
 # 歷史更新 History Update
 
+* 20260306 Update
+  * 更新 FB網友提供清單(03/04)
+
 * 20260304 Update
   * 調整 黑名單
 
