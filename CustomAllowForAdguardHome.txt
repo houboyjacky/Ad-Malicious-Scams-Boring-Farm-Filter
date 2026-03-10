@@ -770,3 +770,4 @@
 @@||coinex.com^$important
 @@||thepersonalitylab.org^$important
 @@||monday.com^$important
+@@||16personalitylab.ai^$important
