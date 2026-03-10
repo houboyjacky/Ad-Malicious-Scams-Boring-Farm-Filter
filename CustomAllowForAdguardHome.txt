@@ -769,3 +769,4 @@
 @@||manuals.plus^$important
 @@||coinex.com^$important
 @@||thepersonalitylab.org^$important
+@@||monday.com^$important
