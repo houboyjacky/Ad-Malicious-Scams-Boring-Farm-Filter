@@ -778,3 +778,10 @@
 @@||petpark.cc^$important
 @@||tktw.cc^$important
 @@||flyingv.cc^$important
+@@||peek-a-bootw.com^$important
+@@||pei.com.tw^$important
+@@||1shop-app.com^
+@@||a-pi.life^$important
+@@||chiayistay.com.tw^$important
+@@||dialed.gg^$important
+@@||flyingv.asia^$important
