@@ -785,3 +785,4 @@
 @@||chiayistay.com.tw^$important
 @@||dialed.gg^$important
 @@||flyingv.asia^$important
+@@||tnkdt.com^
