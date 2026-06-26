@@ -770,7 +770,6 @@
 @@||coinex.com^$important
 @@||thepersonalitylab.org^$important
 @@||monday.com^$important
-@@||16personalitylab.ai^$important
 @@||gomkt.cc^$important
 @@||400m.work^$important
 @@||aimommywisdom.work^$important
@@ -787,7 +786,6 @@
 @@||flyingv.asia^$important
 @@||tnkdt.com^
 @@||0calfood.tw^
-@@||7-11.com.tw^$important
 @@||aed.org.tw^
 @@||aiai.com.tw^
 @@||alicebeauty.com.tw^
@@ -812,3 +810,7 @@
 @@||kochava.com^$important
 @@||2026tpe-nightmarket-festival.com^
 @@||whocall.cc^$important
+@@||beephone3c.com^
+@@||fufoodtw.com^
+@@||invos.com.tw^$important
+@@||manus.im^$important
